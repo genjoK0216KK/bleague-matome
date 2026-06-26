@@ -12,9 +12,13 @@ img{max-width:100%;display:block}
 /* header */
 .hdr{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff}
 .hdr-in{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:20px;padding:12px 18px}
-.logo{font-weight:900;font-size:21px;letter-spacing:.02em;display:flex;align-items:center;gap:9px}
-.logo .b{background:var(--brand);color:#fff;border-radius:8px;padding:2px 9px;font-size:19px;font-weight:900}
-.logo .sub{font-weight:600;font-size:12px;color:#9fb0c3;letter-spacing:.06em}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+.logo .mk{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,#ff7a3d,#e2360b);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(226,54,11,.45);flex:0 0 auto}
+.logo .mk svg{width:24px;height:24px}
+.logo .wm{display:flex;flex-direction:column;line-height:1.05}
+.logo .wm .t{font-weight:900;font-size:20px;letter-spacing:.01em;color:#fff}
+.logo .wm .t em{font-style:normal;color:#ff7a3d}
+.logo .wm .sub{font-weight:700;font-size:10.5px;color:#8aa0b6;letter-spacing:.14em;margin-top:2px}
 .gnav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
 .gnav a{font-size:14px;font-weight:700;color:#cdd8e4;padding:7px 13px;border-radius:8px}
 .gnav a:hover,.gnav a.on{background:rgba(255,255,255,.12);color:#fff}
