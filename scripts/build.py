@@ -60,6 +60,124 @@ def fmt_date(iso):
         return iso or ""
 
 
+# --------------------------------------------------- 手書き記事（article-*.html）
+
+def _attr(tag, name):
+    m = re.search(name + r'="([^"]*)"', tag)
+    return m.group(1) if m else ""
+
+
+def read_articles():
+    """article-*.html を走査し、各記事のメタ情報（タイトル・カテゴリ・日付・
+    サムネ）を記事ファイル自身から読み取って一覧化用のデータにする。"""
+    items = []
+    for fn in sorted(os.listdir(ROOT)):
+        if not (fn.startswith("article-") and fn.endswith(".html")):
+            continue
+        try:
+            with open(os.path.join(ROOT, fn), encoding="utf-8") as f:
+                t = f.read()
+        except OSError:
+            continue
+
+        h1 = re.search(r"<h1[^>]*>(.*?)</h1>", t, re.DOTALL)
+        title = re.sub(r"<[^>]+>", "", h1.group(1)).strip() if h1 else ""
+        if not title:
+            log(f"   {fn}: <h1> が無いため一覧化をスキップ")
+            continue
+
+        pm = re.search(r'<div class="pmeta">(.*?)</div>', t, re.DOTALL)
+        pmeta = pm.group(1) if pm else ""
+        tagm = re.search(r'<span class="tag (\w+)"[^>]*>(.*?)</span>', pmeta, re.DOTALL)
+        cat = tagm.group(1) if tagm else "sokuho"
+        label = (re.sub(r"<[^>]+>", "", tagm.group(2)).strip()
+                 if tagm else CATEGORY_LABEL.get(cat, "速報"))
+        datem = re.search(r"\d{4}\.\d{2}\.\d{2}", pmeta)
+        date = datem.group(0) if datem else ""
+        extra = ""
+        for s in re.findall(r"<span[^>]*>(.*?)</span>", pmeta, re.DOTALL):
+            txt = re.sub(r"<[^>]+>", "", s).strip()
+            if txt and txt != label and not re.fullmatch(r"\d{4}\.\d{2}\.\d{2}", txt):
+                extra = txt
+
+        imgm = re.search(r'<img[^>]*class="eyecatch"[^>]*>', t)
+        thumb = _attr(imgm.group(0), "src") if imgm else ""
+        alt = _attr(imgm.group(0), "alt") if imgm else ""
+
+        items.append({
+            "href": fn, "title": title, "cat": cat, "label": label,
+            "date": date, "extra": extra, "thumb": thumb, "alt": alt or title,
+        })
+
+    items.sort(key=lambda a: a["date"] or "0000.00.00", reverse=True)
+    return items
+
+
+def render_articles(articles, category=None):
+    """記事カードを既存デザイン（.item）と同じマークアップで生成する。"""
+    rows = [a for a in articles if category is None or a["cat"] == category]
+    if not rows:
+        return '<p class="note">この分類の記事はまだありません。</p>'
+
+    out = []
+    for a in rows:
+        meta = esc(a["date"])
+        if a["extra"]:
+            meta = f'{meta} ・ {esc(a["extra"])}'
+        out.append(
+            '<a class="item" href="{href}">'
+            '<div class="thumb"><img src="{thumb}" alt="{alt}" loading="lazy"></div>'
+            '<div class="c">'
+            '<span class="tag {cat}">{label}</span>'
+            '<h3>{title}</h3>'
+            '<div class="meta">{meta}</div>'
+            '</div></a>'.format(
+                href=esc(a["href"]), thumb=esc(a["thumb"]), alt=esc(a["alt"]),
+                cat=esc(a["cat"]), label=esc(a["label"]), title=esc(a["title"]),
+                meta=meta,
+            )
+        )
+    return "\n".join(out)
+
+
+def _matching_div_close(text, open_pos):
+    """open_pos の <div ...> に対応する </div> の開始位置を返す。"""
+    depth = 0
+    for m in re.finditer(r"<div\b[^>]*>|</div>", text[open_pos:]):
+        if m.group().startswith("</div"):
+            depth -= 1
+            if depth == 0:
+                return open_pos + m.start()
+        else:
+            depth += 1
+    return -1
+
+
+def ensure_article_markers(text, heading):
+    """<h2>{heading}...</h2> という見出しの直後にある記事用 <div class="feed">
+    の中身を AUTO:ARTICLES マーカーに置き換える（未挿入なら）。見出しは前方一致
+    で探すので「順位・日程」→「順位・日程・データ」のような表記揺れも拾う。
+    既存の手書きカードはここで一度だけ除去され、以降は build が自動生成する。"""
+    if "<!-- AUTO:ARTICLES:START -->" in text:
+        return text
+    m = re.search(r"<h2>\s*" + re.escape(heading), text)
+    if not m:
+        log(f"   記事見出し「{heading}」が見つかりません（ARTICLESマーカー挿入をスキップ）")
+        return text
+    feed_open = text.find('<div class="feed">', m.start())
+    if feed_open == -1:
+        return text
+    close = _matching_div_close(text, feed_open)
+    if close == -1:
+        return text
+    inner = feed_open + len('<div class="feed">')
+    return (
+        text[:inner]
+        + "\n<!-- AUTO:ARTICLES:START -->\n<!-- AUTO:ARTICLES:END -->\n"
+        + text[close:]
+    )
+
+
 # ------------------------------------------------------------ marker replace
 
 def replace_region(text, name, body):
@@ -118,7 +236,7 @@ def ensure_markers(text, with_standings=False):
     return text.replace(anchor, anchor + block, 1)
 
 
-def update_file(filename, regions, with_standings=False):
+def update_file(filename, regions, with_standings=False, article_heading=None):
     path = os.path.join(ROOT, filename)
     try:
         with open(path, encoding="utf-8") as f:
@@ -128,6 +246,8 @@ def update_file(filename, regions, with_standings=False):
         return False
 
     text = ensure_css(ensure_markers(original, with_standings))
+    if article_heading:
+        text = ensure_article_markers(text, article_heading)
     hit = False
     for name, body in regions.items():
         text, ok = replace_region(text, name, body)
@@ -340,26 +460,32 @@ def main():
 
     log(f"ニュース {len(news)}件 / 更新日時 {updated}")
 
+    articles = read_articles()
+    log(f"手書き記事 {len(articles)}件を一覧化")
+
     changed = False
 
     # トップページ
     changed |= update_file("index.html", {
         "TICKER": render_ticker(news),
         "FEED": render_feed(news, limit=12),
+        "ARTICLES": render_articles(articles),
         "STANDINGS": render_standings_card(standings),
         "UPDATED": esc(updated),
-    })
+    }, article_heading="編集部まとめ記事")
 
     # カテゴリページ
     for cat, page in CATEGORY_PAGE.items():
         subset = [n for n in news if n.get("category") == cat]
         regions = {
             "FEED": render_feed(subset, limit=40),
+            "ARTICLES": render_articles(articles, category=cat),
             "UPDATED": esc(updated),
         }
         if cat == "data":
             regions["STANDINGS_FULL"] = render_standings_table(standings)
-        changed |= update_file(page, regions, with_standings=(cat == "data"))
+        changed |= update_file(page, regions, with_standings=(cat == "data"),
+                               article_heading=CATEGORY_LABEL[cat])
 
     # 新着一覧ページ
     changed |= write_news_page(news, updated)
