@@ -1,0 +1,51 @@
+name: サイト自動更新
+
+on:
+  schedule:
+    # GitHub Actions のcronはUTC。日本時間 07:00 / 12:00 / 21:00 に相当。
+    - cron: "0 22 * * *"   # JST 07:00（前日22:00 UTC）
+    - cron: "0 3 * * *"    # JST 12:00
+    - cron: "0 12 * * *"   # JST 21:00
+  workflow_dispatch:        # 手動実行用
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+
+      - name: Pythonを準備
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 依存パッケージをインストール
+        run: pip install --quiet requests beautifulsoup4
+
+      - name: ニュース・順位表を取得
+        run: python scripts/fetch.py
+
+      - name: HTMLを生成
+        run: python scripts/build.py
+
+      - name: 差分があればコミット
+        run: |
+          git config user.name  "bleague-matome-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "更新なし"
+            exit 0
+          fi
+          git add -A
+          git commit -m "自動更新: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M')"
+          git push

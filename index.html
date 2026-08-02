@@ -9,8 +9,10 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Bリーグ まとめ｜試合結果・速報・移籍情報">
 <meta property="og:description" content="B.LEAGUEの最新情報を見やすくまとめ。1日3回更新。">
-<meta property="og:url" content="https://example.com/">
-<link rel="stylesheet" href="style.css?v=4">
+<meta property="og:url" content="https://genjok0216kk.github.io/bleague-matome/">
+<link rel="canonical" href="https://genjok0216kk.github.io/bleague-matome/">
+<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="auto.css?v=1">
 </head>
 <body>
 
@@ -31,6 +33,7 @@
   <div class="ticker-in">
     <span class="lbl">速報</span>
     <div class="roll">
+<!-- AUTO:TICKER:START -->
       <a href="article-fiba-top10.html">FIBA「注目の10選手」に富永啓生が選出</a>
       <a href="article-bpremier-open.html">新リーグ「Bプレミア」9月22日開幕</a>
       <a href="article-window3-camp.html">代表、Window3へ強化合宿23名を発表</a>
@@ -41,6 +44,7 @@
       <a href="article-window3-camp.html">代表、Window3へ強化合宿23名を発表</a>
       <a href="article-iseki-late-june.html">6月下旬の移籍まとめ：千葉が菅原を獲得</a>
       <a href="article-nagasaki-champ.html">長崎ヴェルカが初の年間王者に</a>
+<!-- AUTO:TICKER:END -->
     </div>
   </div>
 </div>
@@ -58,6 +62,15 @@
           <div class="meta">2026.05.26 ・ チャンピオンシップ</div>
         </div>
       </article>
+
+      <!-- 自動更新セクション -->
+      <div class="sec-h"><span class="bar"></span><h2>公式・メディアの新着</h2><a class="more" href="news.html">もっと見る ›</a></div>
+      <p class="note auto-note">B.LEAGUE公式サイトとバスケ専門メディアの新着見出しを1日3回自動で収集しています。見出しをタップすると配信元の記事が開きます。</p>
+      <div class="feed">
+<!-- AUTO:FEED:START -->
+        <p class="note">まもなく自動更新が始まります。</p>
+<!-- AUTO:FEED:END -->
+      </div>
 
       <!-- pickup -->
       <div class="sec-h"><span class="bar"></span><h2>ピックアップ</h2></div>
@@ -80,7 +93,7 @@
       <div style="position:relative;padding-bottom:56.25%;height:0;margin:4px 0 6px;border-radius:12px;overflow:hidden;background:#000"><iframe src="https://www.youtube-nocookie.com/embed/krN7K6O0LAg" title="日本×台湾 FIBAワールドカップ予選 ハイライト" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
       <p style="font-size:12.5px;color:#5c6672;margin:0 0 22px">▲ 日本×チャイニーズ・タイペイ／FIBAワールドカップ予選ハイライト（日テレスポーツ公式・YouTube）</p>
 
-      <div class="sec-h"><span class="bar"></span><h2>最新ニュース</h2><a class="more" href="cat-sokuho.html">もっと見る ›</a></div>
+      <div class="sec-h"><span class="bar"></span><h2>編集部まとめ記事</h2><a class="more" href="cat-sokuho.html">もっと見る ›</a></div>
       <div class="feed">
 
         <a class="item" href="article-fiba-top10.html">
@@ -181,6 +194,13 @@
       <div class="adbox">広告スペース（AdSense）</div>
 
       <div class="card">
+        <h4>B.PREMIER 順位表</h4>
+<!-- AUTO:STANDINGS:START -->
+        <p class="note">順位表は取得待ちです。</p>
+<!-- AUTO:STANDINGS:END -->
+      </div>
+
+      <div class="card">
         <h4>W杯予選パワーランキング</h4>
         <div class="stand">
           <div class="row"><span class="r">1</span><span class="nm">オーストラリア</span><span class="mv">±0</span></div>
@@ -203,6 +223,7 @@
 
       <div class="card">
         <h4>カテゴリ</h4>
+        <div class="rank"><span class="n">›</span><a href="news.html">新着ニュース一覧</a></div>
         <div class="rank"><span class="n">›</span><a href="cat-kekka.html">試合結果</a></div>
         <div class="rank"><span class="n">›</span><a href="cat-sokuho.html">速報</a></div>
         <div class="rank"><span class="n">›</span><a href="cat-iseki.html">移籍情報</a></div>
@@ -211,6 +232,8 @@
       <div class="adbox">広告スペース（AdSense）</div>
     </aside>
   </div>
+
+  <div class="upd">最終更新: <!-- AUTO:UPDATED:START -->—<!-- AUTO:UPDATED:END --></div>
 </main>
 
 <footer class="ft">

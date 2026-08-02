@@ -1,0 +1,144 @@
+/* ------------------------------------------------------------------
+   自動更新エリア用のスタイル
+   （scripts/build.py が生成するマークアップ向け。既存 style.css を補う）
+   ------------------------------------------------------------------ */
+
+.auto-note {
+  font-size: 12.5px;
+  color: #5c6672;
+  margin: 2px 0 14px;
+  line-height: 1.7;
+}
+
+/* --- 外部リンクのニュース項目（サムネイルなし） --- */
+.feed .item.ext {
+  display: block;
+  padding: 13px 14px;
+  border: 1px solid #e6e9ee;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  background: #fff;
+  text-decoration: none;
+  transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+
+.feed .item.ext:hover {
+  border-color: #ffc7b3;
+  box-shadow: 0 2px 10px rgba(226, 54, 11, .08);
+  transform: translateY(-1px);
+}
+
+.feed .item.ext .c {
+  display: block;
+}
+
+.feed .item.ext h3 {
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 7px 0 6px;
+  color: #14202e;
+  font-weight: 700;
+}
+
+.feed .item.ext .meta {
+  font-size: 12px;
+  color: #6b7684;
+}
+
+/* 出典バッジ */
+.src {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 4px;
+  background: #f1f3f7;
+  color: #4a5563;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+/* 外部リンクであることを示す小さな印 */
+.feed .item.ext h3::after {
+  content: " ↗";
+  font-size: 11px;
+  color: #9aa4b1;
+  font-weight: 400;
+}
+
+/* --- 最終更新の表示 --- */
+.upd {
+  margin: 18px 0 6px;
+  font-size: 12px;
+  color: #7a838f;
+  text-align: right;
+}
+
+.upd a {
+  color: #7a838f;
+}
+
+/* --- サイドバー順位表の地区名 --- */
+.gname {
+  font-size: 12px;
+  font-weight: 700;
+  color: #e2360b;
+  margin: 10px 0 4px;
+  letter-spacing: .02em;
+}
+
+.gname:first-child {
+  margin-top: 0;
+}
+
+/* --- フル順位表 --- */
+.tblwrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 0 22px;
+  border: 1px solid #e6e9ee;
+  border-radius: 10px;
+}
+
+table.stdtbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 560px;
+  background: #fff;
+}
+
+table.stdtbl th {
+  background: #0d1b2a;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 9px 8px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+table.stdtbl td {
+  padding: 9px 8px;
+  border-top: 1px solid #eef0f4;
+  text-align: center;
+  white-space: nowrap;
+  color: #2b3644;
+}
+
+table.stdtbl td:nth-child(2) {
+  text-align: left;
+  font-weight: 600;
+  color: #14202e;
+}
+
+table.stdtbl tbody tr:nth-child(odd) td {
+  background: #fafbfc;
+}
+
+table.stdtbl tbody tr:hover td {
+  background: #fff6f3;
+}
+
+@media (max-width: 640px) {
+  .feed .item.ext h3 { font-size: 14.5px; }
+  table.stdtbl { font-size: 12px; }
+}
