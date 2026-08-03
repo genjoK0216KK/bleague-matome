@@ -213,13 +213,17 @@ STANDINGS_BLOCK = """  <div class="sec-h"><span class="bar"></span><h2>B.PREMIER
 """
 
 
-CSS_LINK = '<link rel="stylesheet" href="auto.css?v=1">'
+CSS_VER = 2
+CSS_LINK = f'<link rel="stylesheet" href="auto.css?v={CSS_VER}">'
 
 
 def ensure_css(text):
-    """自動更新エリア用のCSSが読み込まれていなければ <head> に追加する。"""
-    if "auto.css" in text or "</head>" not in text:
+    """自動更新エリア用のCSSを読み込ませる。未挿入なら <head> に追加し、
+    既に入っていればバージョン番号を最新へ更新してキャッシュを確実に切り替える。"""
+    if "</head>" not in text:
         return text
+    if "auto.css" in text:
+        return re.sub(r"auto\.css\?v=\d+", f"auto.css?v={CSS_VER}", text)
     return text.replace("</head>", CSS_LINK + "\n</head>", 1)
 
 
@@ -265,30 +269,44 @@ def update_file(filename, regions, with_standings=False, article_heading=None):
 
 # ---------------------------------------------------------------- rendering
 
-def render_feed(items, limit=None):
-    """外部ニュースの一覧。見出しとリンクのみを掲載する。"""
+def _feed_item(it):
+    cat = it.get("category", "sokuho")
+    return (
+        '<a class="item ext" href="{url}" target="_blank" rel="noopener nofollow">'
+        '<div class="c">'
+        '<span class="tag {cat}">{label}</span>'
+        '<h3>{title}</h3>'
+        '<div class="meta">{date} ・ <span class="src">{source}</span></div>'
+        '</div></a>'.format(
+            url=esc(it.get("url")),
+            cat=esc(cat),
+            label=esc(CATEGORY_LABEL.get(cat, "速報")),
+            title=esc(it.get("title")),
+            date=esc(fmt_date(it.get("date"))),
+            source=esc(it.get("source")),
+        )
+    )
+
+
+def render_feed(items, limit=None, grouped=False):
+    """外部ニュースの一覧。見出しとリンクのみを掲載する。
+    grouped=True のときは日付ごとに見出しを付けてダイジェスト風に整理する。"""
     items = items[:limit] if limit else items
     if not items:
         return '<p class="note">現在取得できた新着はありません。</p>'
 
+    if not grouped:
+        return "\n".join(_feed_item(it) for it in items)
+
+    rows = sorted(items, key=lambda it: it.get("date") or "", reverse=True)
     out = []
-    for it in items:
-        cat = it.get("category", "sokuho")
-        out.append(
-            '<a class="item ext" href="{url}" target="_blank" rel="noopener nofollow">'
-            '<div class="c">'
-            '<span class="tag {cat}">{label}</span>'
-            '<h3>{title}</h3>'
-            '<div class="meta">{date} ・ <span class="src">{source}</span></div>'
-            '</div></a>'.format(
-                url=esc(it.get("url")),
-                cat=esc(cat),
-                label=esc(CATEGORY_LABEL.get(cat, "速報")),
-                title=esc(it.get("title")),
-                date=esc(fmt_date(it.get("date"))),
-                source=esc(it.get("source")),
-            )
-        )
+    current = None
+    for it in rows:
+        d = fmt_date(it.get("date"))
+        if d != current:
+            current = d
+            out.append(f'<div class="feed-date">{esc(d)}</div>')
+        out.append(_feed_item(it))
     return "\n".join(out)
 
 
@@ -386,7 +404,7 @@ NEWS_PAGE = """<!DOCTYPE html>
 <link rel="canonical" href="{site}news.html">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230d1b2a'/><circle cx='16' cy='16' r='9' fill='%23ff5a1f'/><path d='M16 7v18M7 16h18M10 8.4a13 13 0 000 15.2M22 8.4a13 13 0 010 15.2' stroke='%230d1b2a' stroke-width='1.4' fill='none'/></svg>">
 <link rel="stylesheet" href="style.css?v=5">
-<link rel="stylesheet" href="auto.css?v=1">
+<link rel="stylesheet" href="auto.css?v={ver}">
 </head>
 <body>
 <header class="hdr"><div class="hdr-in"><a class="logo" href="index.html"><span class="mk"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" fill="#fff"/><path d="M12 3v18M3 12h18M6.2 5.2a13 13 0 000 13.6M17.8 5.2a13 13 0 010 13.6" stroke="#e2360b" stroke-width="1.3"/></svg></span><span class="wm"><span class="t">Bリーグ<em>まとめ</em></span><span class="sub">非公式ファンサイト</span></span></a><nav class="gnav"><a href="index.html">最新</a><a href="cat-kekka.html">試合結果</a><a href="cat-sokuho.html">速報</a><a href="cat-iseki.html">移籍情報</a><a href="cat-data.html">順位・日程</a></nav></div></header>
@@ -410,8 +428,9 @@ def write_news_page(news, updated):
     path = os.path.join(ROOT, "news.html")
     content = NEWS_PAGE.format(
         site=SITE_URL,
-        feed=render_feed(news, limit=120),
+        feed=render_feed(news, limit=120, grouped=True),
         updated=esc(updated),
+        ver=CSS_VER,
     )
     old = ""
     if os.path.exists(path):
@@ -478,7 +497,7 @@ def main():
     for cat, page in CATEGORY_PAGE.items():
         subset = [n for n in news if n.get("category") == cat]
         regions = {
-            "FEED": render_feed(subset, limit=40),
+            "FEED": render_feed(subset, limit=40, grouped=True),
             "ARTICLES": render_articles(articles, category=cat),
             "UPDATED": esc(updated),
         }
