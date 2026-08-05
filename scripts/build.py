@@ -140,6 +140,29 @@ def render_articles(articles, category=None):
     return "\n".join(out)
 
 
+def render_video():
+    """トップの「注目の公式動画」。data/featured_video.json の id があれば
+    その動画を埋め込み、無ければ公式チャンネルへのリンクを出す（古い動画が
+    残らないようにする）。JSON は毎日のタスクが最新に更新する。"""
+    v = load("featured_video.json", {})
+    vid = (v or {}).get("id")
+    if not vid:
+        return ('<p class="note" style="margin:4px 0 22px">'
+                '<a href="https://www.youtube.com/@B.LEAGUE" target="_blank" '
+                'rel="noopener nofollow">B.LEAGUE公式YouTubeチャンネルで最新動画を見る ›</a></p>')
+    cap = v.get("caption") or v.get("title") or "B.LEAGUE公式動画"
+    return (
+        '<div style="position:relative;padding-bottom:56.25%;height:0;margin:4px 0 6px;'
+        'border-radius:12px;overflow:hidden;background:#000">'
+        '<iframe src="https://www.youtube-nocookie.com/embed/{id}" title="{title}" '
+        'style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" '
+        'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; '
+        'picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>'
+        '<p style="font-size:12.5px;color:#5c6672;margin:0 0 22px">▲ {cap}</p>'.format(
+            id=esc(vid), title=esc(v.get("title", "B.LEAGUE公式動画")), cap=esc(cap))
+    )
+
+
 def render_hero(articles):
     """トップ最上部のヒーロー枠。最新の記事1本を大きく出す。"""
     if not articles:
@@ -534,6 +557,7 @@ def main():
         "TICKER": render_ticker(news),
         "FEED": render_feed(news, limit=12),
         "HERO": render_hero(articles),
+        "VIDEO": render_video(),
         "ARTICLES": render_articles(articles),
         "PICKS": render_picks(articles),
         "STANDINGS": render_standings_card(standings),
