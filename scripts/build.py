@@ -140,6 +140,51 @@ def render_articles(articles, category=None):
     return "\n".join(out)
 
 
+def render_hero(articles):
+    """トップ最上部のヒーロー枠。最新の記事1本を大きく出す。"""
+    if not articles:
+        return ('<article class="hero"><div class="body">'
+                '<h3>記事はまだありません。</h3></div></article>')
+    a = articles[0]
+    meta = esc(a["date"])
+    if a["extra"]:
+        meta = f'{meta} ・ {esc(a["extra"])}'
+    return (
+        '<article class="hero">'
+        '<div class="ph"><img src="{thumb}" alt="{alt}"></div>'
+        '<div class="body">'
+        '<span class="cat">{label}</span>'
+        '<h3><a href="{href}">{title}</a></h3>'
+        '<div class="meta">{meta}</div>'
+        '</div></article>'.format(
+            thumb=esc(a["thumb"]), alt=esc(a["alt"]), label=esc(a["label"]),
+            href=esc(a["href"]), title=esc(a["title"]), meta=meta,
+        )
+    )
+
+
+def render_picks(articles, n=3):
+    """トップの「ピックアップ」枠。新しい記事 n 本を pick カードで出す。"""
+    rows = articles[:n]
+    if not rows:
+        return '<p class="note">記事はまだありません。</p>'
+    out = []
+    for a in rows:
+        title = a["title"]
+        if len(title) > 34:
+            title = title[:33] + "…"
+        out.append(
+            '<a class="pick" href="{href}">'
+            '<div class="pimg"><img src="{thumb}" alt="{alt}" loading="lazy"></div>'
+            '<div class="pbody"><span class="tag {cat}">{label}</span><h3>{title}</h3></div>'
+            '</a>'.format(
+                href=esc(a["href"]), thumb=esc(a["thumb"]), alt=esc(a["alt"]),
+                cat=esc(a["cat"]), label=esc(a["label"]), title=esc(title),
+            )
+        )
+    return "\n".join(out)
+
+
 def _matching_div_close(text, open_pos):
     """open_pos の <div ...> に対応する </div> の開始位置を返す。"""
     depth = 0
@@ -488,7 +533,9 @@ def main():
     changed |= update_file("index.html", {
         "TICKER": render_ticker(news),
         "FEED": render_feed(news, limit=12),
+        "HERO": render_hero(articles),
         "ARTICLES": render_articles(articles),
+        "PICKS": render_picks(articles),
         "STANDINGS": render_standings_card(standings),
         "UPDATED": esc(updated),
     }, article_heading="編集部まとめ記事")
