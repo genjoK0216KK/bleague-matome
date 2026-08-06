@@ -1,0 +1,16 @@
+{
+  "pr_label": "PR",
+  "note": "当サイトはアフィリエイトプログラムにより収益を得ています。リンク先で購入・登録があった場合、運営者に報酬が支払われることがあります。",
+  "heading": "バスケをもっと楽しむ",
+  "streaming_heading": "配信・放送で見る",
+  "goods_heading": "関連グッズ・書籍",
+  "streaming": [
+    {"name": "ABEMAプレミアム", "desc": "日本代表戦や関連番組を配信", "cta": "ABEMAで見る", "url": "", "enabled": false},
+    {"name": "U-NEXT", "desc": "SPOTV NOWでバスケ配信（見放題）", "cta": "U-NEXTを試す", "url": "", "enabled": false},
+    {"name": "WOWOW", "desc": "NBAを放送・配信", "cta": "WOWOWで見る", "url": "", "enabled": false}
+  ],
+  "goods": [
+    {"name": "Amazon", "desc": "バスケ用品・書籍を探す", "cta": "Amazonで見る", "url": "", "enabled": false},
+    {"name": "楽天市場", "desc": "Bリーググッズ・シューズ", "cta": "楽天で見る", "url": "", "enabled": false}
+  ]
+}

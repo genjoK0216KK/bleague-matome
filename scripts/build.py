@@ -208,6 +208,76 @@ def render_picks(articles, n=3):
     return "\n".join(out)
 
 
+def load_affiliates():
+    return load("affiliates.json", {}) or {}
+
+
+def _aff_enabled(cfg, key):
+    return [x for x in (cfg.get(key) or []) if x.get("enabled") and x.get("url")]
+
+
+def _aff_buttons(items):
+    out = []
+    for i in items:
+        out.append(
+            '<a class="aff-btn" href="{url}" target="_blank" rel="nofollow sponsored noopener">'
+            '<span class="aff-cta">{cta}</span>'
+            '<span class="aff-sub">{desc}</span></a>'.format(
+                url=esc(i["url"]),
+                cta=esc(i.get("cta") or i.get("name")),
+                desc=esc(i.get("desc") or ""),
+            ))
+    return "\n".join(out)
+
+
+def render_affiliate():
+    """アフィリエイト枠。data/affiliates.json に有効なリンクが無ければ何も出さない。
+    ステマ規制対応で必ずPR表記と広告利用の注記を付ける。"""
+    cfg = load_affiliates()
+    stream = _aff_enabled(cfg, "streaming")
+    goods = _aff_enabled(cfg, "goods")
+    if not stream and not goods:
+        return ""
+    pr = esc(cfg.get("pr_label", "PR"))
+    parts = ['<aside class="affbox" aria-label="広告">',
+             '<div class="aff-h"><span class="aff-pr">{}</span>{}</div>'.format(
+                 pr, esc(cfg.get("heading", "バスケをもっと楽しむ")))]
+    if stream:
+        parts.append('<div class="aff-sec">{}</div>'.format(
+            esc(cfg.get("streaming_heading", "配信・放送で見る"))))
+        parts.append('<div class="aff-row">' + _aff_buttons(stream) + '</div>')
+    if goods:
+        parts.append('<div class="aff-sec">{}</div>'.format(
+            esc(cfg.get("goods_heading", "関連グッズ"))))
+        parts.append('<div class="aff-row">' + _aff_buttons(goods) + '</div>')
+    parts.append('<p class="aff-note">{}</p>'.format(esc(cfg.get("note", ""))))
+    parts.append('</aside>')
+    return "\n".join(parts)
+
+
+def ensure_marker_before(text, anchor, name):
+    """anchor の（最後の）直前に AUTO:name マーカー対を一度だけ挿入する。"""
+    if "<!-- AUTO:{}:START -->".format(name) in text:
+        return text
+    idx = text.rfind(anchor)
+    if idx == -1:
+        return text
+    block = "<!-- AUTO:{n}:START -->\n<!-- AUTO:{n}:END -->\n".format(n=name)
+    return text[:idx] + block + text[idx:]
+
+
+def ensure_marker_after(text, anchor, name):
+    """anchor の（最初の）直後に AUTO:name マーカー対を一度だけ挿入する。"""
+    if "<!-- AUTO:{}:START -->".format(name) in text:
+        return text
+    idx = text.find(anchor)
+    if idx == -1:
+        return text
+    pos = idx + len(anchor)
+    block = "\n<!-- AUTO:{n}:START -->\n<!-- AUTO:{n}:END -->".format(n=name)
+    return text[:pos] + block + text[pos:]
+
+
 def _matching_div_close(text, open_pos):
     """open_pos の <div ...> に対応する </div> の開始位置を返す。"""
     depth = 0
@@ -308,7 +378,8 @@ def ensure_markers(text, with_standings=False):
     return text.replace(anchor, anchor + block, 1)
 
 
-def update_file(filename, regions, with_standings=False, article_heading=None):
+def update_file(filename, regions, with_standings=False, article_heading=None,
+                extra_markers=None, manage_feed=True):
     path = os.path.join(ROOT, filename)
     try:
         with open(path, encoding="utf-8") as f:
@@ -317,9 +388,16 @@ def update_file(filename, regions, with_standings=False, article_heading=None):
         log(f"!! {filename} が存在しません（スキップ）")
         return False
 
-    text = ensure_css(ensure_markers(original, with_standings))
+    text = ensure_css(original)
+    if manage_feed:
+        text = ensure_markers(text, with_standings)
     if article_heading:
         text = ensure_article_markers(text, article_heading)
+    for em in (extra_markers or []):
+        if em["mode"] == "after":
+            text = ensure_marker_after(text, em["anchor"], em["name"])
+        else:
+            text = ensure_marker_before(text, em["anchor"], em["name"])
     hit = False
     for name, body in regions.items():
         text, ok = replace_region(text, name, body)
@@ -561,8 +639,11 @@ def main():
         "ARTICLES": render_articles(articles),
         "PICKS": render_picks(articles),
         "STANDINGS": render_standings_card(standings),
+        "AFFILIATE": render_affiliate(),
         "UPDATED": esc(updated),
-    }, article_heading="編集部まとめ記事")
+    }, article_heading="編集部まとめ記事",
+        extra_markers=[{"mode": "after", "anchor": '<aside class="side">',
+                        "name": "AFFILIATE"}])
 
     # カテゴリページ
     for cat, page in CATEGORY_PAGE.items():
@@ -576,6 +657,16 @@ def main():
             regions["STANDINGS_FULL"] = render_standings_table(standings)
         changed |= update_file(page, regions, with_standings=(cat == "data"),
                                article_heading=CATEGORY_LABEL[cat])
+
+    # 記事ページにアフィリエイト枠を差し込む（全 article-*.html。手書き本文は保持）
+    aff_html = render_affiliate()
+    for fn in sorted(os.listdir(ROOT)):
+        if fn.startswith("article-") and fn.endswith(".html"):
+            changed |= update_file(
+                fn, {"AFFILIATE": aff_html},
+                manage_feed=False,
+                extra_markers=[{"mode": "before", "anchor": "</article>",
+                                "name": "AFFILIATE"}])
 
     # 新着一覧ページ
     changed |= write_news_page(news, updated)
