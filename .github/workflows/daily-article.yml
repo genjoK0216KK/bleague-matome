@@ -1,0 +1,54 @@
+name: 毎日まとめ記事(クラウド生成)
+
+on:
+  schedule:
+    - cron: "0 23 * * *"   # 日本時間 08:00（前日23:00 UTC）
+  workflow_dispatch:        # 手動実行用
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-article
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+
+      - name: Pythonを準備
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 依存パッケージをインストール
+        run: pip install --quiet requests beautifulsoup4 anthropic
+
+      - name: 最新ニュースを取得
+        run: python scripts/fetch.py
+
+      - name: まとめ記事を生成
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: claude-sonnet-5
+        run: python scripts/daily_article.py
+
+      - name: サイトを再生成
+        run: python scripts/build.py
+
+      - name: 差分があればコミット
+        run: |
+          git config user.name  "bleague-matome-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet && [ -z "$(git status --porcelain)" ]; then
+            echo "更新なし"
+            exit 0
+          fi
+          git add -A
+          git commit -m "自動まとめ(クラウド): $(TZ=Asia/Tokyo date '+%Y-%m-%d')"
+          git push
