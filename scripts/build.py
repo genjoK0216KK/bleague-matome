@@ -20,7 +20,7 @@ JST = timezone(timedelta(hours=9))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(ROOT, "data")
 
-SITE_URL = "https://genjok0216kk.github.io/bleague-matome/"
+SITE_URL = "https://basuke-matome.jp/"
 
 CATEGORY_LABEL = {
     "kekka": "試合結果",

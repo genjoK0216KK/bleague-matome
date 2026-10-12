@@ -33,7 +33,7 @@ STATE_PATH = os.path.join(STATS_DIR, "state.json")
 SCHEDULE_URL = "https://www.bleague.jp/schedule/"
 GAME_URL = "https://www.bleague.jp/game_detail/?ScheduleKey={key}"
 UA = ("Mozilla/5.0 (compatible; BleagueMatomeBot/1.0; "
-      "+https://genjok0216kk.github.io/bleague-matome/about.html)")
+      "+https://basuke-matome.jp/about.html)")
 HEADERS = {"User-Agent": UA, "Accept-Language": "ja,en;q=0.8"}
 SLEEP = 2.0
 LOOKBACK_DAYS = 3          # これより古い未確定日は諦める
@@ -234,7 +234,7 @@ FAVICON = (
     "cy='16' r='9' fill='%23ff5a1f'/><path d='M16 7v18M7 16h18M10 8.4a13 13 0 000 15.2M22 8.4a13 "
     "13 0 010 15.2' stroke='%230d1b2a' stroke-width='1.4' fill='none'/></svg>\">"
 )
-SITE_URL = "https://genjok0216kk.github.io/bleague-matome/"
+SITE_URL = "https://basuke-matome.jp/"
 LEADER_LABEL = {"pts": "得点", "reb": "リバウンド", "ast": "アシスト",
                 "stl": "スティール", "blk": "ブロック"}
 

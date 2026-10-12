@@ -41,7 +41,7 @@ scripts/build.py              ← 新規（HTMLの生成）
 1. **Actions** タブ → 左メニューの **サイト自動更新**
 2. 右側の **Run workflow** → 緑のボタンを押す
 3. 1〜2分で完了。緑のチェックが付けばOK
-4. https://genjok0216kk.github.io/bleague-matome/ を開いて
+4. https://basuke-matome.jp/ を開いて
    「公式・メディアの新着」に記事が並んでいれば成功
 
 うまくいかない場合は、Actionsの実行ログを開くと

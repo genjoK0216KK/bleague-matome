@@ -36,7 +36,7 @@ DATA_DIR = os.path.join(ROOT, "data")
 
 UA = (
     "Mozilla/5.0 (compatible; BleagueMatomeBot/1.0; "
-    "+https://genjok0216kk.github.io/bleague-matome/about.html)"
+    "+https://basuke-matome.jp/about.html)"
 )
 HEADERS = {"User-Agent": UA, "Accept-Language": "ja,en;q=0.8"}
 TIMEOUT = 25
