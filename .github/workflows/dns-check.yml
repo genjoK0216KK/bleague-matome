@@ -7,13 +7,11 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: dig
+      - name: http
         run: |
-          for d in basuke-matome.jp www.basuke-matome.jp xn--o9j0bk3qmb7i.jp; do
-            echo "===== $d"
-            echo "-- NS";    dig +short NS "$d"
-            echo "-- A";     dig +short A "$d"
-            echo "-- AAAA";  dig +short AAAA "$d"
-            echo "-- CNAME"; dig +short CNAME "$d"
-            echo "-- A @8.8.8.8"; dig +short A "$d" @8.8.8.8
+          for u in http://basuke-matome.jp/ https://basuke-matome.jp/ http://www.basuke-matome.jp/ https://genjok0216kk.github.io/bleague-matome/ https://genjok0216kk.github.io/bleague-matome/stats.html; do
+            echo "===== $u"
+            curl -sS -o /dev/null -m 20 -w "%{http_code} -> %{redirect_url}\n" "$u" || true
           done
+          echo "===== title"
+          curl -sSL -m 20 http://basuke-matome.jp/ | grep -o "<title>[^<]*</title>" || true
