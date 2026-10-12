@@ -366,6 +366,14 @@ def main():
     else:
         log("順位表は取得できなかったため、既存データを維持します")
 
+    # 一時的な調査（ボックススコアのページ構造をログに出すだけ。何も保存しない）
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import probe_boxscore
+        probe_boxscore.main()
+    except Exception as e:  # noqa: BLE001
+        log(f"!! probe失敗: {e}")
+
     log(f"完了（新規 {added}件）")
     return 0
 
