@@ -375,6 +375,13 @@ def main():
     except Exception as e:  # noqa: BLE001
         log(f"!! スタッツ集計に失敗: {e}")
 
+    # 一時的な調査（card.bleaguepark.jp の構造をログに出すだけ。何も保存しない）
+    try:
+        import probe_card
+        probe_card.main()
+    except Exception as e:  # noqa: BLE001
+        log(f"!! probe失敗: {e}")
+
     log(f"完了（新規 {added}件）")
     return 0
 
