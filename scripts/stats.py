@@ -114,7 +114,8 @@ def player_rows(rows, team_short, opp_short, won, key):
     for r in rows or []:
         if num(r.get("Category")) != 1 or num(r.get("PeriodCategory")) != TOTAL_PERIOD:
             continue
-        if not flag(r.get("PlayingFlg")) or mmss_to_min(r.get("PlayTime")) <= 0:
+        # PlayingFlg は「試合終了時にコート上にいたか」なので使わない。出場時間で判定する
+        if mmss_to_min(r.get("PlayTime")) <= 0:
             continue
         name = (r.get("PlayerNameJ") or "").strip()
         if not name:
