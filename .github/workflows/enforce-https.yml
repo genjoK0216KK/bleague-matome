@@ -1,0 +1,33 @@
+name: Enforce HTTPS（一時）
+
+on:
+  workflow_dispatch:
+
+permissions:
+  pages: write
+  contents: read
+
+jobs:
+  enforce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: 現在の設定
+        run: gh api repos/${{ github.repository }}/pages | jq '{cname, https_enforced, https_certificate}'
+
+      - name: 証明書の発行を待ってオンにする
+        run: |
+          for i in $(seq 1 55); do
+            if curl -sS -o /dev/null -m 15 https://basuke-matome.jp/; then
+              echo "証明書OK（${i}回目）"
+              gh api -X PUT repos/${{ github.repository }}/pages -F https_enforced=true && break
+              echo "!! PUT失敗。1分後に再試行"
+            else
+              echo "証明書まだ（${i}回目）"
+            fi
+            sleep 60
+          done
+          gh api repos/${{ github.repository }}/pages | jq '{cname, https_enforced, https_certificate}'
+          curl -sS -o /dev/null -w "http -> %{http_code} %{redirect_url}\n" http://basuke-matome.jp/
