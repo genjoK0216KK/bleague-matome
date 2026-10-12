@@ -1,0 +1,782 @@
+{
+ "_note": "選手の国籍（B.LEAGUE公式の選手ページ roster_detail の「リーグ登録国籍」欄）。key は PlayerID。stats.py が未登録の選手だけ取得して追記する。ここにない選手は「未確認」扱い。公式ページには「リーグ登録国籍は選手が有する国籍と異なる場合がございます」と注記がある。",
+ "players": {
+  "8482": {
+   "name": "藤井 祐眞",
+   "team": "群馬",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=8482",
+   "checked": "2026-10-13"
+  },
+  "8487": {
+   "name": "辻 直人",
+   "team": "群馬",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=8487",
+   "checked": "2026-10-13"
+  },
+  "8500": {
+   "name": "古川 孝敏",
+   "team": "信州",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=8500",
+   "checked": "2026-10-13"
+  },
+  "8582": {
+   "name": "荒尾 岳",
+   "team": "千葉J",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=8582",
+   "checked": "2026-10-13"
+  },
+  "8584": {
+   "name": "原 修太",
+   "team": "千葉J",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=8584",
+   "checked": "2026-10-13"
+  },
+  "8649": {
+   "name": "ライアン・ロシター",
+   "team": "A東京",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=8649",
+   "checked": "2026-10-13"
+  },
+  "9031": {
+   "name": "ザック・バランスキー",
+   "team": "A東京",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=9031",
+   "checked": "2026-10-13"
+  },
+  "9033": {
+   "name": "竹内 譲次",
+   "team": "大阪",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=9033",
+   "checked": "2026-10-13"
+  },
+  "9055": {
+   "name": "富樫 勇樹",
+   "team": "千葉J",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=9055",
+   "checked": "2026-10-13"
+  },
+  "9345": {
+   "name": "ウィリアムス ニカ",
+   "team": "千葉J",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=9345",
+   "checked": "2026-10-13"
+  },
+  "9369": {
+   "name": "河田 チリジ",
+   "team": "信州",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=9369",
+   "checked": "2026-10-13"
+  },
+  "9405": {
+   "name": "森川 正明",
+   "team": "長崎",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=9405",
+   "checked": "2026-10-13"
+  },
+  "9435": {
+   "name": "カイル・リチャードソン",
+   "team": "横浜BC",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=9435",
+   "checked": "2026-10-13"
+  },
+  "9489": {
+   "name": "並里 成",
+   "team": "横浜BC",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=9489",
+   "checked": "2026-10-13"
+  },
+  "10258": {
+   "name": "土屋 アリスター時生",
+   "team": "長崎",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=10258",
+   "checked": "2026-10-13"
+  },
+  "10297": {
+   "name": "田原 隆徳",
+   "team": "滋賀",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=10297",
+   "checked": "2026-10-13"
+  },
+  "10815": {
+   "name": "安藤 周人",
+   "team": "A東京",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=10815",
+   "checked": "2026-10-13"
+  },
+  "10851": {
+   "name": "森井 健太",
+   "team": "横浜BC",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=10851",
+   "checked": "2026-10-13"
+  },
+  "10893": {
+   "name": "松本 健児リオン",
+   "team": "長崎",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=10893",
+   "checked": "2026-10-13"
+  },
+  "12577": {
+   "name": "馬場 雄大",
+   "team": "長崎",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=12577",
+   "checked": "2026-10-13"
+  },
+  "12605": {
+   "name": "髙比良 寛治",
+   "team": "長崎",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=12605",
+   "checked": "2026-10-13"
+  },
+  "15756": {
+   "name": "阿部 諒",
+   "team": "佐賀",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=15756",
+   "checked": "2026-10-13"
+  },
+  "15811": {
+   "name": "佐藤 卓磨",
+   "team": "横浜BC",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=15811",
+   "checked": "2026-10-13"
+  },
+  "15826": {
+   "name": "飯田 遼",
+   "team": "A東京",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=15826",
+   "checked": "2026-10-13"
+  },
+  "15838": {
+   "name": "平岩 玄",
+   "team": "A東京",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=15838",
+   "checked": "2026-10-13"
+  },
+  "18148": {
+   "name": "寺園 脩斗",
+   "team": "神戸",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=18148",
+   "checked": "2026-10-13"
+  },
+  "18441": {
+   "name": "トレイ・ジョーンズ",
+   "team": "群馬",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=18441",
+   "checked": "2026-10-13"
+  },
+  "18461": {
+   "name": "岸田 篤生",
+   "team": "佐賀",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=18461",
+   "checked": "2026-10-13"
+  },
+  "19957": {
+   "name": "熊谷 航",
+   "team": "長崎",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=19957",
+   "checked": "2026-10-13"
+  },
+  "20031": {
+   "name": "中野 司",
+   "team": "神戸",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=20031",
+   "checked": "2026-10-13"
+  },
+  "20034": {
+   "name": "木下 誠",
+   "team": "大阪",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=20034",
+   "checked": "2026-10-13"
+  },
+  "22401": {
+   "name": "岡田 泰希",
+   "team": "滋賀",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=22401",
+   "checked": "2026-10-13"
+  },
+  "22405": {
+   "name": "鶴巻 啓太",
+   "team": "群馬",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=22405",
+   "checked": "2026-10-13"
+  },
+  "22497": {
+   "name": "コー・フリッピン",
+   "team": "群馬",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=22497",
+   "checked": "2026-10-13"
+  },
+  "26888": {
+   "name": "井上 諒汰",
+   "team": "佐賀",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=26888",
+   "checked": "2026-10-13"
+  },
+  "30348": {
+   "name": "小酒部 泰暉",
+   "team": "A東京",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=30348",
+   "checked": "2026-10-13"
+  },
+  "30349": {
+   "name": "中村 浩陸",
+   "team": "A東京",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=30349",
+   "checked": "2026-10-13"
+  },
+  "30351": {
+   "name": "大倉 颯太",
+   "team": "A東京",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=30351",
+   "checked": "2026-10-13"
+  },
+  "30398": {
+   "name": "牧 隼利",
+   "team": "大阪",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=30398",
+   "checked": "2026-10-13"
+  },
+  "30437": {
+   "name": "山口 颯斗",
+   "team": "神戸",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=30437",
+   "checked": "2026-10-13"
+  },
+  "30519": {
+   "name": "細川 一輝",
+   "team": "群馬",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=30519",
+   "checked": "2026-10-13"
+  },
+  "32952": {
+   "name": "パブロ・アギラール",
+   "team": "長崎",
+   "nationality": "スペイン",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=32952",
+   "checked": "2026-10-13"
+  },
+  "32956": {
+   "name": "須藤 昂矢",
+   "team": "横浜BC",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=32956",
+   "checked": "2026-10-13"
+  },
+  "32983": {
+   "name": "駒水 大雅 ジャック",
+   "team": "滋賀",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=32983",
+   "checked": "2026-10-13"
+  },
+  "32984": {
+   "name": "エリエット・ドンリー",
+   "team": "信州",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=32984",
+   "checked": "2026-10-13"
+  },
+  "42539": {
+   "name": "小栗 瑛哉",
+   "team": "信州",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=42539",
+   "checked": "2026-10-13"
+  },
+  "43452": {
+   "name": "ダモンテ・ドッド",
+   "team": "大阪",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=43452",
+   "checked": "2026-10-13"
+  },
+  "51000101": {
+   "name": "ライアン・クリーナー",
+   "team": "滋賀",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000101",
+   "checked": "2026-10-13"
+  },
+  "51000108": {
+   "name": "星野 京介",
+   "team": "信州",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000108",
+   "checked": "2026-10-13"
+  },
+  "51000111": {
+   "name": "角田 太輝",
+   "team": "佐賀",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000111",
+   "checked": "2026-10-13"
+  },
+  "51000145": {
+   "name": "ケリー・ブラックシアー・ジュニア",
+   "team": "群馬",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000145",
+   "checked": "2026-10-13"
+  },
+  "51000172": {
+   "name": "ジェームズ・ベル",
+   "team": "横浜BC",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000172",
+   "checked": "2026-10-13"
+  },
+  "51000188": {
+   "name": "高橋 快成",
+   "team": "大阪",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000188",
+   "checked": "2026-10-13"
+  },
+  "51000232": {
+   "name": "淺野 ケニー",
+   "team": "群馬",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000232",
+   "checked": "2026-10-13"
+  },
+  "51000239": {
+   "name": "東海林 奨",
+   "team": "信州",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000239",
+   "checked": "2026-10-13"
+  },
+  "51000267": {
+   "name": "金近 廉",
+   "team": "千葉J",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000267",
+   "checked": "2026-10-13"
+  },
+  "51000271": {
+   "name": "デイビッド・ダジンスキー",
+   "team": "佐賀",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000271",
+   "checked": "2026-10-13"
+  },
+  "51000301": {
+   "name": "エージェー・エドゥ",
+   "team": "群馬",
+   "nationality": "フィリピン",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000301",
+   "checked": "2026-10-13"
+  },
+  "51000304": {
+   "name": "ジャレル・ブラントリー",
+   "team": "長崎",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000304",
+   "checked": "2026-10-13"
+  },
+  "51000312": {
+   "name": "ザック・オーガスト",
+   "team": "滋賀",
+   "nationality": "ギリシャ",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000312",
+   "checked": "2026-10-13"
+  },
+  "51000317": {
+   "name": "ヨーリ・チャイルズ",
+   "team": "神戸",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000317",
+   "checked": "2026-10-13"
+  },
+  "51000343": {
+   "name": "江原 信太朗",
+   "team": "滋賀",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000343",
+   "checked": "2026-10-13"
+  },
+  "51000344": {
+   "name": "永野 威旺",
+   "team": "長崎",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000344",
+   "checked": "2026-10-13"
+  },
+  "51000353": {
+   "name": "内尾 聡理",
+   "team": "佐賀",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000353",
+   "checked": "2026-10-13"
+  },
+  "51000365": {
+   "name": "佐藤 武",
+   "team": "大阪",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000365",
+   "checked": "2026-10-13"
+  },
+  "51000374": {
+   "name": "ルーク・メイ",
+   "team": "千葉J",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000374",
+   "checked": "2026-10-13"
+  },
+  "51000382": {
+   "name": "游 艾喆",
+   "team": "滋賀",
+   "nationality": "チャイニーズタイペイ",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000382",
+   "checked": "2026-10-13"
+  },
+  "51000383": {
+   "name": "佐藤 巧",
+   "team": "千葉J",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000383",
+   "checked": "2026-10-13"
+  },
+  "51000394": {
+   "name": "マイク・コッツァー",
+   "team": "横浜BC",
+   "nationality": "エストニア",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000394",
+   "checked": "2026-10-13"
+  },
+  "51000428": {
+   "name": "渡邊 雄太",
+   "team": "千葉J",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000428",
+   "checked": "2026-10-13"
+  },
+  "51000430": {
+   "name": "ディー・ジェイ・ホグ",
+   "team": "A東京",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000430",
+   "checked": "2026-10-13"
+  },
+  "51000440": {
+   "name": "富山 仁貴",
+   "team": "佐賀",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000440",
+   "checked": "2026-10-13"
+  },
+  "51000467": {
+   "name": "瀬川 琉久",
+   "team": "千葉J",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000467",
+   "checked": "2026-10-13"
+  },
+  "51000470": {
+   "name": "西田 陽成",
+   "team": "滋賀",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000470",
+   "checked": "2026-10-13"
+  },
+  "51000502": {
+   "name": "須藤 タイレル拓",
+   "team": "滋賀",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000502",
+   "checked": "2026-10-13"
+  },
+  "51000517": {
+   "name": "ナシール・リトル",
+   "team": "佐賀",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000517",
+   "checked": "2026-10-13"
+  },
+  "51000518": {
+   "name": "加藤 ダニエル",
+   "team": "信州",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000518",
+   "checked": "2026-10-13"
+  },
+  "51000528": {
+   "name": "マイク・ダウム",
+   "team": "信州",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000528",
+   "checked": "2026-10-13"
+  },
+  "51000529": {
+   "name": "スタンリー・ジョンソン",
+   "team": "群馬",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000529",
+   "checked": "2026-10-13"
+  },
+  "51000547": {
+   "name": "中島 三千哉",
+   "team": "神戸",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000547",
+   "checked": "2026-10-13"
+  },
+  "51000561": {
+   "name": "デイミアン・ドットソン",
+   "team": "佐賀",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000561",
+   "checked": "2026-10-13"
+  },
+  "51000590": {
+   "name": "田中 流嘉州",
+   "team": "長崎",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000590",
+   "checked": "2026-10-13"
+  },
+  "51000591": {
+   "name": "新井 楽人",
+   "team": "横浜BC",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000591",
+   "checked": "2026-10-13"
+  },
+  "51000605": {
+   "name": "佐藤 瑠一シャンドレイ",
+   "team": "滋賀",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000605",
+   "checked": "2026-10-13"
+  },
+  "51000612": {
+   "name": "ゼイビア・スニード",
+   "team": "滋賀",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000612",
+   "checked": "2026-10-13"
+  },
+  "51000620": {
+   "name": "ソン ギョチャン",
+   "team": "大阪",
+   "nationality": "大韓民国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000620",
+   "checked": "2026-10-13"
+  },
+  "51000622": {
+   "name": "ルーカス・サレー",
+   "team": "神戸",
+   "nationality": "レバノン",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000622",
+   "checked": "2026-10-13"
+  },
+  "51000625": {
+   "name": "ジェイムズ・パルマージュニア",
+   "team": "大阪",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000625",
+   "checked": "2026-10-13"
+  },
+  "51000635": {
+   "name": "ファーダウス・アイマク",
+   "team": "神戸",
+   "nationality": "カナダ",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000635",
+   "checked": "2026-10-13"
+  },
+  "51000636": {
+   "name": "ジェイレン・マクダニエルズ",
+   "team": "神戸",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000636",
+   "checked": "2026-10-13"
+  },
+  "51000641": {
+   "name": "ネイト・ウィリアムズ",
+   "team": "千葉J",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000641",
+   "checked": "2026-10-13"
+  },
+  "51000647": {
+   "name": "キヨンテ・ジョンソン",
+   "team": "A東京",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000647",
+   "checked": "2026-10-13"
+  },
+  "51000658": {
+   "name": "キーボン・ハリス",
+   "team": "信州",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000658",
+   "checked": "2026-10-13"
+  },
+  "51000659": {
+   "name": "マーカス・リー",
+   "team": "信州",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000659",
+   "checked": "2026-10-13"
+  },
+  "51000670": {
+   "name": "リーヴァイ・ランドルフ",
+   "team": "長崎",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000670",
+   "checked": "2026-10-13"
+  },
+  "51000675": {
+   "name": "アイザイア・リバース",
+   "team": "横浜BC",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000675",
+   "checked": "2026-10-13"
+  },
+  "51000683": {
+   "name": "デリック・マイケル・エクスザビエロ",
+   "team": "佐賀",
+   "nationality": "インドネシア",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000683",
+   "checked": "2026-10-13"
+  },
+  "51000715": {
+   "name": "エルジー・ギル",
+   "team": "千葉J",
+   "nationality": "アメリカ合衆国",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000715",
+   "checked": "2026-10-13"
+  },
+  "55000981": {
+   "name": "プラット 聖也",
+   "team": "長崎",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=55000981",
+   "checked": "2026-10-13"
+  },
+  "5100000016": {
+   "name": "八村 阿蓮",
+   "team": "神戸",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=5100000016",
+   "checked": "2026-10-13"
+  },
+  "5100000017": {
+   "name": "土家 大輝",
+   "team": "信州",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=5100000017",
+   "checked": "2026-10-13"
+  },
+  "5100000021": {
+   "name": "星川 堅信",
+   "team": "長崎",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=5100000021",
+   "checked": "2026-10-13"
+  },
+  "5100000023": {
+   "name": "中村 拓人",
+   "team": "群馬",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=5100000023",
+   "checked": "2026-10-13"
+  },
+  "5100000027": {
+   "name": "坂本 聖芽",
+   "team": "大阪",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=5100000027",
+   "checked": "2026-10-13"
+  },
+  "5100000028": {
+   "name": "野本 大智",
+   "team": "滋賀",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=5100000028",
+   "checked": "2026-10-13"
+  },
+  "5100000030": {
+   "name": "植松 義也",
+   "team": "大阪",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=5100000030",
+   "checked": "2026-10-13"
+  },
+  "5100000031": {
+   "name": "金田 龍弥",
+   "team": "神戸",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=5100000031",
+   "checked": "2026-10-13"
+  },
+  "5100000032": {
+   "name": "駒沢 颯",
+   "team": "滋賀",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=5100000032",
+   "checked": "2026-10-13"
+  },
+  "5100000033": {
+   "name": "小川 麻斗",
+   "team": "神戸",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=5100000033",
+   "checked": "2026-10-13"
+  },
+  "5100000066": {
+   "name": "木村 圭吾",
+   "team": "神戸",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=5100000066",
+   "checked": "2026-10-13"
+  },
+  "5100000087": {
+   "name": "トビン マーカス海舟",
+   "team": "信州",
+   "nationality": "日本",
+   "source": "https://www.bleague.jp/roster_detail/?PlayerID=5100000087",
+   "checked": "2026-10-13"
+  }
+ }
+}

@@ -40,8 +40,12 @@ LOOKBACK_DAYS = 3          # これより古い未確定日は諦める
 TOTAL_PERIOD = 18          # ボックススコアの「試合合計」行
 TOP_N = 10
 
-# 登録名に漢字・ひらがなを含む選手を日本人選手とみなす（公式データに国籍項目がないため）
-JP_NAME_RE = re.compile(r"[぀-ゟ一-鿿々]")
+# 日本人選手かどうかは名前から推測しない。B.LEAGUE公式の選手ページ（roster_detail）の
+# 「リーグ登録国籍」を data/players.json に記録して使い、確認できない選手は「未確認」として扱う。
+PLAYERS_PATH = os.path.join(ROOT, "data", "players.json")
+ROSTER_URL = "https://www.bleague.jp/roster_detail/?PlayerID={pid}"
+JAPAN = {"日本", "JPN", "Japan", "JAPAN"}
+PLAYERS_NOTE = ("選手の国籍（B.LEAGUE公式の選手ページ roster_detail の「リーグ登録国籍」欄）。key は PlayerID。stats.py が未登録の選手だけ取得して追記する。ここにない選手は「未確認」扱い。公式ページには「リーグ登録国籍は選手が有する国籍と異なる場合がございます」と注記がある。")
 
 
 def log(msg):
@@ -131,7 +135,8 @@ def player_rows(rows, team_short, opp_short, won, key):
             "opp": opp_short,
             "won": won,
             "key": key,
-            "jp": bool(JP_NAME_RE.search(name)),
+            "pid": str(r.get("PlayerID") or ""),
+            "jp": None,                     # 国籍は apply_nationality() で公式登録から付ける
             "min": mmss_to_min(r.get("PlayTime")),
             "pts": num(r.get("Point")),
             "reb": num(r.get("RB_TOT")),
@@ -197,8 +202,50 @@ def rank(players, key, n=TOP_N):
     return sorted(players, key=lambda p: (-p[key], -p["eff"], -p["pts"], -p["min"]))[:n]
 
 
+def parse_nationality(page):
+    """roster_detail の HTML から「リーグ登録国籍」欄の値を取り出す。見つからなければ None。"""
+    text = re.sub(r"<script.*?</script>|<style.*?</style>", " ", page, flags=re.S)
+    text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", text))
+    # 「リーグ登録国籍 アメリカ合衆国」の形。注記文「リーグ登録国籍は〜」は値として拾わない
+    for m in re.finditer(r"リーグ登録国籍\s*[:：]?\s*([^\s/｜|]{1,20})", text):
+        if not m.group(1).startswith("は"):
+            return m.group(1)
+    return None
+
+
+def is_japanese(nationality):
+    """True=日本国籍、False=日本以外、None=未確認。"""
+    if not nationality:
+        return None
+    return nationality in JAPAN
+
+
+def apply_nationality(players, registry, fetch=None, today=None):
+    """registry（data/players.json の players）で各選手の jp を決める。
+    未登録の選手は fetch(pid) で公式ページから国籍を取り、registry に追記する。"""
+    today = today or datetime.now(JST).strftime("%Y-%m-%d")
+    for p in players:
+        pid = p.get("pid")
+        rec = registry.get(pid) if pid else None
+        if pid and rec is None and fetch:
+            nat = None
+            try:
+                nat = parse_nationality(fetch(pid))
+            except Exception as e:  # noqa: BLE001
+                log(f"!! 国籍の取得に失敗 {pid} {p['name']}: {e}")
+            if nat:
+                rec = registry[pid] = {"name": p["name"], "team": p["team"],
+                                       "nationality": nat,
+                                       "source": ROSTER_URL.format(pid=pid),
+                                       "checked": today}
+        p["nationality"] = rec.get("nationality") if rec else None
+        p["jp"] = is_japanese(p["nationality"])
+    return players
+
+
 def summarise(date, games):
     players = [p for g in games for p in g["players"]]
+    unknown = [p for p in players if p.get("jp") is None]
     return {
         "date": date,
         "generated": datetime.now(JST).strftime("%Y-%m-%d %H:%M"),
@@ -206,9 +253,17 @@ def summarise(date, games):
                                      "home_score", "away_score", "ot", "stadium")}
                   for g in games],
         "eff_top": rank(players, "eff"),
-        "eff_top_jp": rank([p for p in players if p["jp"]], "eff"),
+        "eff_top_jp": rank([p for p in players if p.get("jp") is True], "eff"),
+        # 出場選手全員の国籍が公式登録で確認できたときだけ「日本人トップ」と書く
+        "jp_complete": not unknown,
+        "jp_unknown": [{k: p.get(k) for k in ("name", "team", "pid", "eff")}
+                       for p in rank(unknown, "eff", len(unknown))],
         "leaders": {k: rank(players, k, 3) for k in ("pts", "reb", "ast", "stl", "blk")},
         "player_count": len(players),
+        # 出場した全選手（集計漏れ・同点・国籍の確認用）
+        "players": [{k: p.get(k) for k in ("pid", "name", "team", "key", "min", "pts", "eff",
+                                           "nationality", "jp")}
+                    for p in rank(players, "eff", len(players))],
     }
 
 
@@ -298,7 +353,7 @@ def body_sections(s):
             f"ボックススコアから、貢献度（EFF）の上位選手をまとめました。この日の貢献度1位は"
             f"{esc(first['team'])}の{esc(first['name'])}で、{first['pts']}得点・{first['reb']}リバウンド・"
             f"{first['ast']}アシストを記録し、貢献度{first['eff']}をマークしました。")
-    if jp:
+    if jp and s.get("jp_complete"):
         lead += (f"日本人選手のトップは{esc(jp[0]['team'])}の{esc(jp[0]['name'])}（貢献度{jp[0]['eff']}）"
                  f"でした。")
     return f"""<p class="lead">{lead}</p>
@@ -306,9 +361,9 @@ def body_sections(s):
     <h2>貢献度ランキング TOP{TOP_N}</h2>
     {eff_table(top)}
 
-    <h2>日本人選手 貢献度ランキング TOP{TOP_N}</h2>
+    <h2>日本人選手 貢献度ランキング TOP{TOP_N}{"" if s.get("jp_complete") else "（国籍確認済みの選手のみ）"}</h2>
     {eff_table(jp)}
-    <div class="note">公式データには国籍の項目がないため、登録名に漢字・ひらがなを含む選手を日本人選手として集計しています。帰化選手やカタカナ表記の日本人選手は含まれない場合があります。</div>
+    {jp_note(s)}
 
     <h2>部門別リーダー</h2>
     {leaders_table(s['leaders'])}
@@ -317,6 +372,17 @@ def body_sections(s):
     {games_table(s['games'])}
 
     <div class="note"><p style="margin:0"><strong>Q. 貢献度（EFF）とは？</strong><br>A. 得点・リバウンド・アシスト・スティール・ブロックの合計から、外したシュート数（フィールドゴール・フリースロー）とターンオーバーを引いた指標です。B.LEAGUE公式記録の値をそのまま掲載しています。</p></div>"""
+
+
+def jp_note(s):
+    base = ("日本人選手かどうかは、B.LEAGUE公式サイトの選手ページの「リーグ登録国籍」で判定しています"
+            "（名前の表記からは推測していません）。")
+    if s.get("jp_complete"):
+        return f'<div class="note">{base}この日の出場選手全員の国籍を確認済みです。</div>'
+    names = "、".join(f"{esc(p['name'])}（{esc(p['team'])}）" for p in s.get("jp_unknown", []))
+    return (f'<div class="note">{base}次の選手は国籍を確認できていない（未確認）ため集計から外しており、'
+            f'順位が変わる可能性があります。そのため「日本人トップ」とは断定していません。'
+            f'未確認：{names}</div>')
 
 
 def page(title, desc, url, body):
@@ -352,7 +418,7 @@ def page(title, desc, url, body):
 def article_title(s):
     top, jp = s["eff_top"][0], s["eff_top_jp"][:1]
     t = f"{jp_date(s['date'])}の貢献度ランキング 1位は{top['name']}（{top['team']}）の{top['eff']}"
-    if jp:
+    if jp and s.get("jp_complete"):
         t += f" 日本人トップは{jp[0]['name']}"
     return t
 
@@ -403,7 +469,7 @@ def thumbnail(s):
         "headline": "貢献度ランキング",
         "sub": f"1位 {top['name']}（{top['team']}） EFF {top['eff']}",
         "facts": ([["日本人1位", f"{jp[0]['name']}（{jp[0]['team']}） {jp[0]['eff']}"]]
-                  if jp else [["集計", f"{s['player_count']}人"]]),
+                  if jp and s.get("jp_complete") else [["集計", f"{s['player_count']}人"]]),
     }
     return thumbgen.render(d)
 
@@ -473,6 +539,7 @@ def run():
 
     new_pending = {}
     latest = None
+    registry = load_json(PLAYERS_PATH, {}).get("players", {})
     for date, day_games in sorted(by_date.items()):
         expected = {k for g in day_games for k in g["same_day"]} | {g["key"] for g in day_games}
         expected = {k for k in expected
@@ -485,6 +552,9 @@ def run():
             log(f"{date}: 未確定の試合があるため次回に持ち越し")
             continue
         day_games.sort(key=lambda g: g["key"])
+        apply_nationality([p for g in day_games for p in g["players"]], registry,
+                          fetch=lambda pid: get(ROSTER_URL.format(pid=pid)))
+        save_json(PLAYERS_PATH, {"_note": PLAYERS_NOTE, "players": registry})
         summary = summarise(date, day_games)
         if not summary["eff_top"]:
             continue
@@ -505,5 +575,28 @@ def run():
     save_json(STATE_PATH, state)
 
 
+def regenerate(date, keys):
+    """公開済みの日を公式ボックススコアから作り直す（state.json は変えない）。
+    例: python scripts/stats.py --regen 2026-10-12 506459,506460,506461,506462,506463"""
+    registry = load_json(PLAYERS_PATH, {}).get("players", {})
+    games = []
+    for key in keys:
+        g = parse_game(key, get(GAME_URL.format(key=key)))
+        if not g or not (g["ended"] and g["fixed"] and g["players"]) or g["date"] != date:
+            raise SystemExit(f"!! {key} は {date} の確定済みの試合ではありません")
+        games.append(g)
+    games.sort(key=lambda g: g["key"])
+    apply_nationality([p for g in games for p in g["players"]], registry,
+                      fetch=lambda pid: get(ROSTER_URL.format(pid=pid)))
+    save_json(PLAYERS_PATH, {"_note": PLAYERS_NOTE, "players": registry})
+    summary = summarise(date, games)
+    save_json(os.path.join(STATS_DIR, f"{date}.json"), summary)
+    return summary
+
+
 if __name__ == "__main__":
-    run()
+    import sys
+    if len(sys.argv) == 4 and sys.argv[1] == "--regen":
+        print(json.dumps(regenerate(sys.argv[2], sys.argv[3].split(",")), ensure_ascii=False))
+    else:
+        run()
