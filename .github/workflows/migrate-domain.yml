@@ -23,9 +23,9 @@ jobs:
       - name: URLを置き換えてCNAMEを追加
         run: |
           echo "basuke-matome.jp" > CNAME
-          grep -rlZ "https://genjok0216kk.github.io/bleague-matome/" --exclude-dir=.git . \
+          grep -rlZ "https://genjok0216kk.github.io/bleague-matome/" --exclude-dir=.git --exclude-dir=.github . \
             | xargs -0 -r sed -i "s#https://genjok0216kk.github.io/bleague-matome/#https://basuke-matome.jp/#g"
-          echo "残り: $(grep -rl 'genjok0216kk.github.io' --exclude-dir=.git . | wc -l) ファイル"
+          echo "残り: $(grep -rl 'genjok0216kk.github.io' --exclude-dir=.git --exclude-dir=.github . | wc -l) ファイル"
           git status --short | wc -l
 
       - name: コミット
