@@ -31,7 +31,7 @@ import build  # noqa: E402  記事の読み取りを共通化
 JST = timezone(timedelta(hours=9))
 POSTED_PATH = os.path.join(ROOT, "data", "posted.json")
 SITE_URL = build.SITE_URL
-DAILY_LIMIT = 5
+DAILY_LIMIT = 6          # 1日5本＋貢献度ランキング
 MAX_AGE_DAYS = 3
 URL_WEIGHT = 23          # X は URL を一律 23 文字として数える
 MAX_WEIGHT = 280
