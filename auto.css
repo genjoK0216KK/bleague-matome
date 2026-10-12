@@ -250,3 +250,14 @@ table.stdtbl tbody tr:hover td {
 
 /* --- 記事の閲覧数（pmeta 内） --- */
 .pmeta .pv { color: #6b7684; }
+
+/* --- 古い記事の「時点」注記 --- */
+.asof {
+  margin: 8px 0 14px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #5b6470;
+  background: #f4f6f8;
+  border-left: 3px solid #b8c0ca;
+  border-radius: 4px;
+}

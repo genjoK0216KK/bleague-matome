@@ -16,7 +16,31 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # キーの有無だけを確かめる。未設定なら次のジョブは「skipped」になり、成功（緑）とは区別される
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      ready: ${{ steps.c.outputs.ready }}
+    steps:
+      - id: c
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        run: |
+          if [ -n "$X_API_KEY" ] && [ -n "$X_API_SECRET" ] && [ -n "$X_ACCESS_TOKEN" ] && [ -n "$X_ACCESS_TOKEN_SECRET" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "### Xへの投稿: スキップ" >> "$GITHUB_STEP_SUMMARY"
+            echo "X の API キーが未設定のため実行しませんでした（投稿していません）。" >> "$GITHUB_STEP_SUMMARY"
+            echo "::warning::X の API キーが未設定のため投稿をスキップしました"
+          fi
+
   post:
+    needs: check
+    if: needs.check.outputs.ready == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
@@ -25,32 +49,21 @@ jobs:
       X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
       X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
     steps:
-      - name: キーが未設定なら何もしない
-        id: check
-        run: |
-          if [ -z "$X_API_KEY" ] || [ -z "$X_API_SECRET" ] || [ -z "$X_ACCESS_TOKEN" ] || [ -z "$X_ACCESS_TOKEN_SECRET" ]; then
-            echo "X の API キーが未設定のためスキップします"
-            echo "skip=1" >> "$GITHUB_OUTPUT"
-          fi
-
       - uses: actions/checkout@v4
-        if: steps.check.outputs.skip != '1'
         with:
           ref: main
 
       - uses: actions/setup-python@v5
-        if: steps.check.outputs.skip != '1'
         with:
           python-version: "3.12"
 
-      - name: 投稿
-        if: steps.check.outputs.skip != '1'
+      - name: 投稿（結果は Summary に「投稿／見送り／失敗」を分けて記録）
         run: |
           pip install --quiet requests requests-oauthlib
           python scripts/post_x.py
 
       - name: 投稿記録をコミット
-        if: always() && steps.check.outputs.skip != '1'
+        if: always()
         run: |
           git config user.name  "bleague-matome-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

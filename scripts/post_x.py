@@ -139,7 +139,17 @@ def save_posted(data):
         json.dump(data, f, ensure_ascii=False, indent=1)
 
 
+def summary(lines):
+    """GitHub Actions の Summary に結果を書く（ローカルでは何もしない）。"""
+    path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if not path:
+        return
+    with open(path, "a", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+
+
 def main():
+    """終了コード: 0 … 投稿した／対象なし、2 … キー未設定でスキップ、1 … 投稿に失敗。"""
     articles = build.read_articles()
     posted = load_posted()
     now = datetime.now(JST)
@@ -147,12 +157,15 @@ def main():
     if posted is None:
         save_posted({"posted": {a["href"]: "initial" for a in articles}})
         log(f"初回: 既存の {len(articles)} 本を投稿済みとして記録しました（投稿はしません）")
+        summary(["### Xへの投稿: 初回記録のみ",
+                 f"既存の {len(articles)} 本を投稿済みとして記録しました（投稿 0 件）。"])
         return 0
 
     keys = {k: os.environ.get(k, "").strip() for k in ENV_KEYS}
     if not all(keys.values()):
-        log("X の API キーが未設定のため何もしません")
-        return 0
+        log("スキップ: X の API キーが未設定のため何もしません")
+        summary(["### Xへの投稿: スキップ", "X の API キーが未設定のため投稿していません。"])
+        return 2
 
     done = posted.setdefault("posted", {})
     today = now.strftime("%Y-%m-%d")
@@ -162,30 +175,47 @@ def main():
             if a["href"] not in done and (a["date"] or "") >= oldest]
     if not todo:
         log("新しい記事はありません")
+        summary(["### Xへの投稿: 対象なし", "新しい記事がないため投稿 0 件です。"])
         return 0
 
     from requests_oauthlib import OAuth1Session
     session = OAuth1Session(keys["X_API_KEY"], keys["X_API_SECRET"],
                             keys["X_ACCESS_TOKEN"], keys["X_ACCESS_TOKEN_SECRET"])
-    for a in todo:
+    ok, too_long, deferred, failed = [], [], [], []
+    for i, a in enumerate(todo):
         if used >= DAILY_LIMIT:
-            log(f"1日の上限 {DAILY_LIMIT} 件に達したので、残りは翌日に回します")
+            deferred = [x["href"] for x in todo[i:]]
+            log(f"1日の上限 {DAILY_LIMIT} 件に達したので、残り {len(deferred)} 本は翌日に回します")
             break
         text = compose(a)
         if tweet_weight(text) > MAX_WEIGHT:
             log(f"!! 文字数超過のためスキップ: {a['href']}")
             done[a["href"]] = "skipped-too-long"
+            too_long.append(a["href"])
             continue
         r = session.post(TWEET_URL, json={"text": text}, timeout=30)
         if r.status_code not in (200, 201):
             log(f"!! 投稿に失敗: {a['href']} {r.status_code} {r.text[:300]}")
-            save_posted(posted)
-            return 1
+            failed.append(f"{a['href']}（HTTP {r.status_code}）")
+            break
         done[a["href"]] = now.isoformat(timespec="seconds")
         used += 1
+        ok.append(a["href"])
         log(f"投稿: {a['href']}")
         save_posted(posted)
-    return 0
+    save_posted(posted)
+
+    head = "失敗あり" if failed else ("投稿" if ok else "見送りのみ")
+    lines = [f"### Xへの投稿: {head}",
+             f"- 投稿: {len(ok)} 件",
+             f"- 見送り（文字数超過）: {len(too_long)} 件",
+             f"- 見送り（1日の上限 {DAILY_LIMIT} 件・翌日に回す）: {len(deferred)} 件",
+             f"- 失敗: {len(failed)} 件"]
+    for label, items in (("投稿", ok), ("文字数超過", too_long),
+                         ("翌日に回す", deferred), ("失敗", failed)):
+        lines += [f"  - {label}: {h}" for h in items]
+    summary(lines)
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":

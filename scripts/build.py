@@ -566,6 +566,7 @@ def site_config():
     return {
         "ga4_id": (cfg.get("ga4_id") or "").strip(),
         "x_list_url": (cfg.get("x_list_url") or "").strip(),
+        "recommended": cfg.get("recommended") or None,
     }
 
 
@@ -842,7 +843,10 @@ def ensure_ga(text, ga_id):
 
 def load_pv():
     pv = load("pv.json", {}) if os.path.exists(os.path.join(DATA_DIR, "pv.json")) else {}
-    return {"total": (pv or {}).get("total") or {}, "week": (pv or {}).get("week") or {}}
+    pv = pv or {}
+    return {"total": pv.get("total") or {}, "week": pv.get("week") or {},
+            "week_start": pv.get("week_start"), "week_end": pv.get("week_end"),
+            "updated": pv.get("updated")}
 
 
 def pv_of(table, fn):
@@ -865,18 +869,40 @@ def ensure_pv(text, views):
                   text, count=1, flags=re.DOTALL)
 
 
-def render_popular(articles, week, n=5):
-    """サイドバー「人気記事ランキング（週間）」。PVデータが無ければ None。"""
-    ranked = sorted(((pv_of(week, a["href"]), a) for a in articles),
-                    key=lambda x: -x[0])
+# PVデータが無い間に出す「編集部のおすすめ」（順位は付けない）。data/site_config.json の recommended で変更可
+DEFAULT_RECOMMENDED = [
+    "article-nagasaki-champ.html", "article-fiba-top10.html", "article-bpremier-open.html",
+    "article-iseki-late-june.html", "article-fiba-ranking.html",
+]
+
+
+def _short(title, n=30):
+    return title if len(title) <= n else title[:n - 1] + "…"
+
+
+def render_popular(articles, pv, recommended=None, n=5):
+    """サイドバーの記事カード。
+    GA4の実測データがあれば「人気記事ランキング（週間）」を集計期間・更新時刻つきで出す。
+    無ければ順位を付けずに「編集部のおすすめ」を出す（実測でない並びを人気順と見せない）。"""
+    week = pv.get("week") or {}
+    ranked = sorted(((pv_of(week, a["href"]), a) for a in articles), key=lambda x: -x[0])
     ranked = [(v, a) for v, a in ranked if v > 0][:n]
-    if not ranked:
-        return None
-    rows = ['<h4>人気記事ランキング（週間）</h4>']
-    for i, (v, a) in enumerate(ranked, 1):
-        title = a["title"] if len(a["title"]) <= 30 else a["title"][:29] + "…"
-        rows.append('<div class="rank"><span class="n{top}">{i}</span><a href="{href}">{t}</a></div>'
-                    .format(top=" top" if i == 1 else "", i=i, href=esc(a["href"]), t=esc(title)))
+    if ranked:
+        rows = ['<h4>人気記事ランキング（週間）</h4>']
+        for i, (v, a) in enumerate(ranked, 1):
+            rows.append('<div class="rank"><span class="n{top}">{i}</span><a href="{href}">{t}</a></div>'
+                        .format(top=" top" if i == 1 else "", i=i, href=esc(a["href"]),
+                                t=esc(_short(a["title"]))))
+        period = ""
+        if pv.get("week_start") and pv.get("week_end"):
+            period = f'集計期間 {esc(pv["week_start"])}〜{esc(pv["week_end"])}・'
+        rows.append(f'<div class="upd">{period}{esc(pv.get("updated") or "")} 更新（Google アナリティクスの閲覧数）</div>')
+        return "\n".join(rows)
+    by_href = {a["href"]: a for a in articles}
+    picks = [by_href[h] for h in (recommended or DEFAULT_RECOMMENDED) if h in by_href][:n]
+    rows = ['<h4>編集部のおすすめ</h4>']
+    rows += ['<div class="rank"><span class="n">›</span><a href="{href}">{t}</a></div>'.format(
+        href=esc(a["href"]), t=esc(_short(a["title"]))) for a in picks]
     return "\n".join(rows)
 
 
@@ -960,7 +986,7 @@ def write_sitemap():
 
 
 def finalize_pages(cfg, pv):
-    """全ページ共通の後処理：グローバルナビ・GA4タグ・記事の閲覧数。"""
+    """全ページ共通の後処理：グローバルナビ・GA4タグ・canonical/og:url・記事の閲覧数。"""
     changed = False
     for fn in site_pages():
         path = os.path.join(ROOT, fn)
@@ -968,6 +994,8 @@ def finalize_pages(cfg, pv):
             original = f.read()
         text = ensure_nav(original, bool(cfg["x_list_url"]))
         text = ensure_ga(text, cfg["ga4_id"])
+        # canonical と og:url を自分自身の正式URLにそろえる（example.com などの仮URLを残さない）
+        text = set_canonical(text, fn)
         if fn.startswith("article-"):
             text = ensure_pv(text, pv_of(pv["total"], fn))
         if text != original:
@@ -1013,9 +1041,7 @@ def main():
         "XSIDE": render_x_side(cfg["x_list_url"]),
         "UPDATED": esc(updated),
     }
-    popular = render_popular(articles, pv["week"])
-    if popular:
-        index_regions["POPULAR"] = popular
+    index_regions["POPULAR"] = render_popular(articles, pv, cfg.get("recommended"))
     changed |= update_file("index.html", index_regions,
                            article_heading="編集部まとめ記事",
                            extra_markers=[{"mode": "after", "anchor": '<aside class="side">',

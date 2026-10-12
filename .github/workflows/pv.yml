@@ -13,42 +13,64 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # キーの有無だけを確かめる。未設定なら次のジョブは「skipped」になり、成功（緑）とは区別される
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      ready: ${{ steps.c.outputs.ready }}
+    steps:
+      - id: c
+        env:
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GA4_SA_KEY: ${{ secrets.GA4_SA_KEY }}
+        run: |
+          if [ -n "$GA4_PROPERTY_ID" ] && [ -n "$GA4_SA_KEY" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "### 閲覧数の取得: スキップ" >> "$GITHUB_STEP_SUMMARY"
+            echo "GA4_PROPERTY_ID / GA4_SA_KEY が未設定のため実行しませんでした（成功ではありません）。" >> "$GITHUB_STEP_SUMMARY"
+            echo "::warning::GA4 のキーが未設定のため閲覧数の取得をスキップしました"
+          fi
+
   pv:
+    needs: check
+    if: needs.check.outputs.ready == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
       GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
       GA4_SA_KEY: ${{ secrets.GA4_SA_KEY }}
     steps:
-      - name: 鍵が未設定なら何もしない
-        id: check
-        run: |
-          if [ -z "$GA4_PROPERTY_ID" ] || [ -z "$GA4_SA_KEY" ]; then
-            echo "GA4_PROPERTY_ID / GA4_SA_KEY が未設定のためスキップします"
-            echo "skip=1" >> "$GITHUB_OUTPUT"
-          fi
-
       - uses: actions/checkout@v4
-        if: steps.check.outputs.skip != '1'
 
       - uses: actions/setup-python@v5
-        if: steps.check.outputs.skip != '1'
         with:
           python-version: "3.12"
 
-      - name: 取得して記事に反映
-        if: steps.check.outputs.skip != '1'
+      - name: GA4 から取得（失敗したらこのジョブは失敗になる）
         run: |
           pip install --quiet google-analytics-data
+          set +e
           python scripts/pv.py
-          python scripts/build.py
+          code=$?
+          set -e
+          case $code in
+            0) echo "### 閲覧数の取得: 成功" >> "$GITHUB_STEP_SUMMARY";
+               python -c "import json;d=json.load(open('data/pv.json'));print(f\"集計期間 {d['week_start']}〜{d['week_end']} / 更新 {d['updated']} / 累計 {len(d['total'])}ページ・週間 {len(d['week'])}ページ\")" >> "$GITHUB_STEP_SUMMARY" ;;
+            *) echo "### 閲覧数の取得: 失敗（終了コード $code）" >> "$GITHUB_STEP_SUMMARY";
+               echo "既存の data/pv.json は更新していません。ログを確認してください。" >> "$GITHUB_STEP_SUMMARY";
+               exit 1 ;;
+          esac
+
+      - name: 記事に反映
+        run: python scripts/build.py
 
       - name: 差分があればコミット
-        if: steps.check.outputs.skip != '1'
         run: |
           git config user.name  "bleague-matome-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet && [ -z "$(git status --porcelain data/pv.json)" ]; then
+          if [ -z "$(git status --porcelain)" ]; then
             echo "更新なし"; exit 0
           fi
           git add -A
