@@ -220,19 +220,20 @@ table.stdtbl tbody tr:hover td {
 }
 
 /* ------------------------------------------------------------------
-   スポーツ誌スタイルへの上書き（style.css の配色に合わせる）
+   クリーン・リーグスタイルへの上書き（style.css の配色に合わせる）
    ------------------------------------------------------------------ */
-.feed-date{font-family:"Dela Gothic One","Noto Sans JP",sans-serif;font-weight:400;font-size:14px;color:#000;letter-spacing:.02em;border-bottom:2px solid #000;margin:22px 0 2px}
-.feed .item.ext{border:0;border-bottom:1px solid #dfe3ea;border-radius:0;margin-bottom:0;padding:13px 0;background:transparent}
-.feed .item.ext:hover{border-color:#dfe3ea;box-shadow:none;transform:none}
-.feed .item.ext h3{color:#000;font-weight:900}
-.feed .item.ext:hover h3{color:#1b2a8f;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
-.src{border-radius:0;background:#eef1f5;color:#1c2230;font-weight:700}
-.affbox{border:2px solid #000;border-radius:0;background:#fff}
-.affbox .aff-pr{border-radius:0}
-.affbox .aff-btn{border-radius:0;background:#f05a1a}
-.affbox .aff-btn:hover{background:#c94310;filter:none}
-.gname{color:#1b2a8f;font-weight:900}
-.tblwrap{border:2px solid #000;border-radius:0}
-table.stdtbl th{background:#1b2a8f;font-weight:900}
-table.stdtbl tbody tr:hover td{background:#fff3ec}
+.auto-note{background:transparent;padding:0;margin:-4px 0 12px;color:#6f7e90}
+.feed-date{font-family:"Barlow Condensed","Noto Sans JP",sans-serif;font-size:16px;font-weight:700;color:#27313c;letter-spacing:.04em;border-bottom:1px solid #e3e5e8;margin:14px 0 0;padding:4px 0 6px}
+.feed .item.ext{border:0;border-bottom:1px solid #e3e5e8;border-radius:0;margin-bottom:0;padding:14px 0;background:transparent}
+.feed .item.ext:last-child{border-bottom:0}
+.feed .item.ext:hover{border-color:#e3e5e8;box-shadow:none;transform:none}
+.feed .item.ext h3{color:#27313c;font-weight:700}
+.feed .item.ext:hover h3{color:#c8441e}
+.src{border-radius:3px;background:#f2f2f2;color:#3a4552;font-weight:700}
+.affbox{border:1px solid #e3e5e8;border-radius:10px;background:#fff}
+.affbox .aff-btn{border-radius:8px;background:#e8552b}
+.affbox .aff-btn:hover{background:#c8441e;filter:none}
+.gname{color:#27313c;font-weight:700;background:#f2f2f2;border-radius:4px;padding:2px 8px}
+.tblwrap{border:0;border-radius:10px;background:#fff}
+table.stdtbl th{background:#27313c}
+table.stdtbl tbody tr:hover td{background:#fdeee8}
