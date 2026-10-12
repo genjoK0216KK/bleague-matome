@@ -222,7 +222,7 @@ HEADER = (
     'class="t">バスケ<em>まとめ</em></span><span class="sub">非公式ファンサイト</span></span>'
     '</a><nav class="gnav"><a href="index.html">最新</a><a href="cat-kekka.html">試合結果</a>'
     '<a href="cat-sokuho.html">速報</a><a href="cat-iseki.html">移籍情報</a>'
-    '<a href="cat-data.html">順位・日程</a></nav></div></header>'
+    '<a href="cat-data.html">順位・日程</a><a href="matome.html">まとめ</a></nav></div></header>'
 )
 FOOTER = (
     '<footer class="ft"><div class="ft-in"><a href="about.html">このサイトについて</a>'
