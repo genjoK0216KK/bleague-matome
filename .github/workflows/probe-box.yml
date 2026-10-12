@@ -1,35 +1,38 @@
-name: ボックススコア調査（一時）
+name: 貢献度集計の修正適用（一時）
 
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  probe:
+  apply:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - run: pip install --quiet requests beautifulsoup4
-      - name: probe
+      - name: stats.py を修正し、10/12 を再集計対象に戻す
         run: |
-          cd scripts
           python - <<'EOF'
-          import collections, stats
-          for key in ("506460", "506461"):
-              page = stats.get(f"https://www.bleague.jp/game_detail/?ScheduleKey={key}&tab=2")
-              ctx = stats.extract_context(page)
-              print("=====", key, "ctx keys:", sorted(ctx.keys()) if ctx else None)
-              for side in ("HomeBoxscores", "AwayBoxscores"):
-                  rows = ctx.get(side) or []
-                  print("--", side, "rows:", len(rows))
-                  print("   combos (Category, PeriodCategory, PlayingFlg):",
-                        collections.Counter((r.get("Category"), r.get("PeriodCategory"), r.get("PlayingFlg")) for r in rows).most_common(12))
-                  if rows:
-                      print("   sample keys:", sorted(rows[0].keys()))
-                  for r in rows:
-                      if str(r.get("PeriodCategory")) == str(stats.TOTAL_PERIOD):
-                          print("   ", r.get("Category"), r.get("PlayingFlg"), r.get("StartingFlg"), r.get("PlayerNameJ"),
-                                r.get("PlayTime"), "EFF", r.get("EFF"), "PTS", r.get("Point"))
+          import json
+          p = "scripts/stats.py"
+          s = open(p, encoding="utf-8").read()
+          old = '''        if not flag(r.get("PlayingFlg")) or mmss_to_min(r.get("PlayTime")) <= 0:
+                      continue'''.replace("\n                      ", "\n            ")
+          new = '''        # PlayingFlg は「試合終了時にコート上にいたか」なので使わない。出場時間で判定する
+                  if mmss_to_min(r.get("PlayTime")) <= 0:
+                      continue'''.replace("\n                  ", "\n        ").replace("\n                      ", "\n            ")
+          assert s.count(old) == 1, "patch target not found"
+          open(p, "w", encoding="utf-8").write(s.replace(old, new))
+          st = {"pending": {k: "2026-10-12" for k in ["506459", "506460", "506461", "506462", "506463"]},
+                "published": []}
+          open("data/stats/state.json", "w", encoding="utf-8").write(json.dumps(st, ensure_ascii=False, indent=1) + "\n")
           EOF
+          git diff
+      - name: コミット
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/stats.py data/stats/state.json
+          git commit -m "貢献度ランキング: 出場した全選手を集計対象に（PlayingFlgの誤用を修正）し10/12を再集計"
+          git push
