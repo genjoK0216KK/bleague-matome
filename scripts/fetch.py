@@ -366,13 +366,14 @@ def main():
     else:
         log("順位表は取得できなかったため、既存データを維持します")
 
-    # 一時的な調査（ボックススコアのページ構造をログに出すだけ。何も保存しない）
+    # 当日の全試合の記録が確定していれば、貢献度ランキングを生成する
     try:
+        sys.dont_write_bytecode = True
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-        import probe_boxscore
-        probe_boxscore.main()
+        import stats
+        stats.run()
     except Exception as e:  # noqa: BLE001
-        log(f"!! probe失敗: {e}")
+        log(f"!! スタッツ集計に失敗: {e}")
 
     log(f"完了（新規 {added}件）")
     return 0
