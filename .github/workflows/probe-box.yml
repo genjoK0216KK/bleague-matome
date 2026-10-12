@@ -1,0 +1,35 @@
+name: ボックススコア調査（一時）
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet requests beautifulsoup4
+      - name: probe
+        run: |
+          cd scripts
+          python - <<'EOF'
+          import collections, stats
+          for key in ("506460", "506461"):
+              page = stats.get(f"https://www.bleague.jp/game_detail/?ScheduleKey={key}&tab=2")
+              ctx = stats.extract_context(page)
+              print("=====", key, "ctx keys:", sorted(ctx.keys()) if ctx else None)
+              for side in ("HomeBoxscores", "AwayBoxscores"):
+                  rows = ctx.get(side) or []
+                  print("--", side, "rows:", len(rows))
+                  print("   combos (Category, PeriodCategory, PlayingFlg):",
+                        collections.Counter((r.get("Category"), r.get("PeriodCategory"), r.get("PlayingFlg")) for r in rows).most_common(12))
+                  if rows:
+                      print("   sample keys:", sorted(rows[0].keys()))
+                  for r in rows:
+                      if str(r.get("PeriodCategory")) == str(stats.TOTAL_PERIOD):
+                          print("   ", r.get("Category"), r.get("PlayingFlg"), r.get("StartingFlg"), r.get("PlayerNameJ"),
+                                r.get("PlayTime"), "EFF", r.get("EFF"), "PTS", r.get("Point"))
+          EOF
