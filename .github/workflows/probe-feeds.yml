@@ -1,0 +1,40 @@
+name: まとめブログ取得確認（一時）
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: matome-wip
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet requests beautifulsoup4
+      - name: robots.txt
+        run: |
+          for u in https://basketballbbs.com/robots.txt http://nbama.blog.fc2.com/robots.txt https://hibisyoujin.jp/robots.txt https://b-arekore.net/robots.txt; do
+            echo "===== $u"; curl -sSL -m 20 -A "Mozilla/5.0 (compatible; BleagueMatomeBot/1.0)" "$u" | head -40 || true
+          done
+      - name: feeds
+        run: |
+          cd scripts
+          python - <<'EOF'
+          import fetch, requests
+          extra = [("NBA・バスケまとめ日誌", "https://hibisyoujin.jp/feed/"),
+                   ("バスケまとめ・COM（Bリーグ）", "https://basketballbbs.com/category/bleague/feed/"),
+                   ("Bあれこれ", "https://b-arekore.net/feed/")]
+          for name, url in fetch.MATOME_FEEDS + extra:
+              print("=" * 10, name, url, "robots:", fetch.robots_allows(url))
+              try:
+                  r = fetch.get(url)
+                  print("status", r.status_code, r.headers.get("content-type"), r.content[:200])
+              except Exception as e:
+                  print("!!", e); continue
+              allitems = fetch.fetch_feed_items(name, url, lambda t: True)
+              for it in allitems[:40]:
+                  print("  ", "採用" if fetch.matome_relevant(it["title"]) else "除外", it["date"], it["title"])
+          EOF
