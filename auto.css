@@ -218,3 +218,21 @@ table.stdtbl tbody tr:hover td {
   .feed .item.ext h3 { font-size: 14.5px; }
   table.stdtbl { font-size: 12px; }
 }
+
+/* ------------------------------------------------------------------
+   スポーツ誌スタイルへの上書き（style.css の配色に合わせる）
+   ------------------------------------------------------------------ */
+.feed-date{font-family:"Dela Gothic One","Noto Sans JP",sans-serif;font-weight:400;font-size:14px;color:#000;letter-spacing:.02em;border-bottom:2px solid #000;margin:22px 0 2px}
+.feed .item.ext{border:0;border-bottom:1px solid #dfe3ea;border-radius:0;margin-bottom:0;padding:13px 0;background:transparent}
+.feed .item.ext:hover{border-color:#dfe3ea;box-shadow:none;transform:none}
+.feed .item.ext h3{color:#000;font-weight:900}
+.feed .item.ext:hover h3{color:#1b2a8f;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.src{border-radius:0;background:#eef1f5;color:#1c2230;font-weight:700}
+.affbox{border:2px solid #000;border-radius:0;background:#fff}
+.affbox .aff-pr{border-radius:0}
+.affbox .aff-btn{border-radius:0;background:#f05a1a}
+.affbox .aff-btn:hover{background:#c94310;filter:none}
+.gname{color:#1b2a8f;font-weight:900}
+.tblwrap{border:2px solid #000;border-radius:0}
+table.stdtbl th{background:#1b2a8f;font-weight:900}
+table.stdtbl tbody tr:hover td{background:#fff3ec}
