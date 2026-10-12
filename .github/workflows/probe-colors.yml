@@ -1,0 +1,86 @@
+name: チームカラー確認（一時）
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet requests beautifulsoup4
+      - name: probe
+        run: |
+          python - <<'EOF'
+          import re, collections, time, requests
+          from urllib.parse import urljoin
+          UA = {"User-Agent": "Mozilla/5.0 (compatible; BleagueMatomeBot/1.0; +https://basuke-matome.jp/about.html)"}
+          CLUBS = {
+            "北海道": ["https://www.levanga.com/lp/rebranding/", "https://www.levanga.com/"],
+            "仙台": ["https://www.89ers.jp/team/", "https://www.89ers.jp/"],
+            "秋田": ["https://www.northern-happinets.com/team/", "https://www.northern-happinets.com/"],
+            "茨城": ["https://www.ibarakirobots.win/team/", "https://www.ibarakirobots.win/"],
+            "宇都宮": ["https://www.utsunomiyabrex.com/team/concept/", "https://www.utsunomiyabrex.com/"],
+            "群馬": ["https://g-crane-thunders.jp/team/newlogo/", "https://g-crane-thunders.jp/"],
+            "A千葉": ["https://www.altiri.jp/club/", "https://www.altiri.jp/"],
+            "千葉J": ["https://chibajets.jp/team/", "https://chibajets.jp/"],
+            "A東京": ["https://www.alvark-tokyo.jp/team/", "https://www.alvark-tokyo.jp/"],
+            "東京SR": ["https://www.sunrockers.jp/", "https://www.sunrockers.jp/team/"],
+            "川崎": ["https://kawasaki-bravethunders.com/team/about/", "https://kawasaki-bravethunders.com/"],
+            "横浜BC": ["https://b-corsairs.com/team/", "https://b-corsairs.com/"],
+            "富山": ["https://grouses.jp/team/", "https://grouses.jp/"],
+            "信州": ["https://www.b-warriors.net/team_new/", "https://www.b-warriors.net/"],
+            "三遠": ["https://www.neophoenix.jp/about/", "https://www.neophoenix.jp/"],
+            "三河": ["https://go-seahorses.jp/team/teamcolor/", "https://go-seahorses.jp/"],
+            "名古屋D": ["https://nagoya-dd.com/team/", "https://nagoya-dd.com/"],
+            "滋賀": ["https://www.shigalakes.com/team/", "https://www.shigalakes.com/"],
+            "京都": ["https://hannaryz.jp/team/", "https://hannaryz.jp/"],
+            "大阪": ["https://www.evessa.com/lp/guide/", "https://www.evessa.com/"],
+            "神戸": ["https://www.storks.jp/team/", "https://www.storks.jp/"],
+            "島根": ["https://www.susanoo-m.com/lp_page/rebranding", "https://www.susanoo-m.com/"],
+            "広島": ["https://www.hiroshimadragonflies.com/team/", "https://www.hiroshimadragonflies.com/"],
+            "佐賀": ["https://ballooners.jp/team/", "https://ballooners.jp/"],
+            "長崎": ["https://velca.jp/team/", "https://velca.jp/"],
+            "琉球": ["https://goldenkings.jp/team/", "https://goldenkings.jp/"],
+          }
+          HEX = re.compile(r"#[0-9A-Fa-f]{6}\b")
+          RGB = re.compile(r"(R\s*[:：]?\s*\d{1,3}\s*[/／,、\s]\s*G\s*[:：]?\s*\d{1,3}\s*[/／,、\s]\s*B\s*[:：]?\s*\d{1,3})")
+          NAME = re.compile(r"(カラー|COLOR|Color|color|グリーン|レッド|ブルー|イエロー|ゴールド|ネイビー|ブラック|ピンク|パープル|バイオレット|VIOLET|RED|BLUE|GREEN|GOLD|NAVY|BLACK)")
+          def get(u):
+              try:
+                  r = requests.get(u, headers=UA, timeout=20); time.sleep(1)
+                  r.encoding = r.apparent_encoding or r.encoding
+                  return r
+              except Exception as e:
+                  print("   !!", u, e); return None
+          for club, urls in CLUBS.items():
+              print("=" * 12, club)
+              css_counter = collections.Counter()
+              for u in urls:
+                  r = get(u)
+                  if r is None: continue
+                  print("  GET", u, r.status_code, len(r.text))
+                  if r.status_code != 200: continue
+                  text = re.sub(r"<script.*?</script>|<style.*?</style>", " ", r.text, flags=re.S)
+                  plain = re.sub(r"<[^>]+>", " ", text); plain = re.sub(r"\s+", " ", plain)
+                  for m in list(HEX.finditer(plain))[:12]:
+                      print("   本文HEX:", plain[max(0, m.start()-50):m.end()+5])
+                  for m in list(RGB.finditer(plain))[:8]:
+                      print("   本文RGB:", plain[max(0, m.start()-50):m.end()+5])
+                  # CSS（インラインとリンク）で使われている色の頻度
+                  css_texts = re.findall(r"<style[^>]*>(.*?)</style>", r.text, flags=re.S)
+                  for href in re.findall(r'<link[^>]+href="([^"]+\.css[^"]*)"', r.text)[:6]:
+                      cr = get(urljoin(u, href))
+                      if cr is not None and cr.status_code == 200:
+                          css_texts.append(cr.text)
+                  for css in css_texts:
+                      for h in HEX.findall(css):
+                          h = h.upper()
+                          if h not in ("#FFFFFF", "#000000"):
+                              css_counter[h] += 1
+                      for m in re.finditer(r"--[\w-]*(?:main|primary|team|key|brand|club|color)[\w-]*\s*:\s*(#[0-9A-Fa-f]{3,6})", css):
+                          print("   CSS変数:", m.group(0)[:80])
+              print("  CSS頻出色:", css_counter.most_common(8))
+          EOF
