@@ -389,25 +389,23 @@ def write_article(s):
 
 
 def thumbnail(s):
+    """スコアボード風サムネ（scripts/thumbgen.py の「速報など」デザイン）。"""
+    import thumbgen
+    if not thumbgen.FONT:
+        thumbgen.FONT = thumbgen.embed_font()
     top = s["eff_top"][0]
-    font = "'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif"
-    line1 = f"{jp_date(s['date'])} 貢献度ランキング"
-    line2 = f"1位 {top['name']} EFF{top['eff']}"
-    return f"""<svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{esc(line1)} {esc(line2)}">
-<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2b705"/><stop offset="1" stop-color="#b8860b"/></linearGradient></defs>
-<rect width="480" height="300" fill="url(#g)"/>
-<g stroke="#ffffff" stroke-width="3" fill="none" opacity="0.12">
-<circle cx="384" cy="252" r="84"/><line x1="300" y1="120" x2="300" y2="300"/>
-<path d="M300 168 a64 64 0 0 1 0 128"/><rect x="-30" y="46" width="118" height="150"/><circle cx="29" cy="121" r="48"/>
-</g>
-<g transform="translate(398,74)" opacity="0.16"><circle r="74" fill="#ffffff"/><path d="M-74 0H74 M0 -74V74 M-52 -52Q0 0 52 52 M52 -52Q0 0 -52 52" stroke="#0d1b2a" stroke-width="4" fill="none"/></g>
-<rect x="28" y="26" rx="16" ry="16" width="116" height="34" fill="#ffffff"/>
-<text x="86.0" y="49" font-family="{font}" font-weight="800" font-size="17" fill="#9a7400" text-anchor="middle" letter-spacing="1">スタッツ</text>
-<text x="30" y="192" font-family="{font}" font-weight="900" font-size="28" fill="#ffffff">{esc(line1)}</text>
-<text x="30" y="230" font-family="{font}" font-weight="700" font-size="18" fill="#ffffff" opacity="0.94">{esc(line2)}</text>
-<text x="454" y="284" font-family="{font}" text-anchor="end" font-weight="800" font-size="13" fill="#ffffff" opacity="0.65">バスケまとめ</text>
-</svg>
-"""
+    jp = s["eff_top_jp"][:1]
+    d = {
+        "type": "news",
+        "label": "スタッツ",
+        "team": f"B.PREMIER {jp_date(s['date'])} 全{len(s['games'])}試合",
+        "team_color": thumbgen.team_color(top["team"]),
+        "headline": "貢献度ランキング",
+        "sub": f"1位 {top['name']}（{top['team']}） EFF {top['eff']}",
+        "facts": ([["日本人1位", f"{jp[0]['name']}（{jp[0]['team']}） {jp[0]['eff']}"]]
+                  if jp else [["集計", f"{s['player_count']}人"]]),
+    }
+    return thumbgen.render(d)
 
 
 def write_stats_page(s, published):
