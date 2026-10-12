@@ -1,0 +1,5 @@
+{
+ "_note": "サイト全体の設定。ga4_id に GA4 の測定ID（G-XXXXXXXXXX）を入れると全ページに計測タグが入る。x_list_url に X の公開リストURL（https://x.com/i/lists/...）を入れると x.html とサイドバーの埋め込みが有効になる。空欄なら何もしない。",
+ "ga4_id": "",
+ "x_list_url": ""
+}
