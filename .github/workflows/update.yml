@@ -2,10 +2,11 @@ name: サイト自動更新
 
 on:
   schedule:
-    # GitHub Actions のcronはUTC。日本時間 07:00 / 12:00 / 21:00 に相当。
+    # GitHub Actions のcronはUTC。日本時間 07:00 / 12:00 / 21:00 / 23:00 に相当。
     - cron: "0 22 * * *"   # JST 07:00（前日22:00 UTC）
     - cron: "0 3 * * *"    # JST 12:00
     - cron: "0 12 * * *"   # JST 21:00
+    - cron: "0 14 * * *"   # JST 23:00（全試合終了後の貢献度ランキング用）
   workflow_dispatch:        # 手動実行用
 
 permissions:
