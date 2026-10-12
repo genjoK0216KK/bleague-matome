@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Bリーグまとめ - 当日のスタッツリーダー（貢献度ランキング）生成
+バスケまとめ - 当日のスタッツリーダー（貢献度ランキング）生成
 
 B.LEAGUE公式の試合詳細ページに埋め込まれたボックススコア（JSON）を集計し、
 その日のB.PREMIER全試合の記録が確定した時点で次を生成する。
@@ -218,7 +218,7 @@ HEADER = (
     '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" '
     'cy="12" r="9" fill="#fff"/><path d="M12 3v18M3 12h18M6.2 5.2a13 13 0 000 13.6M17.8 5.2a13 '
     '13 0 010 13.6" stroke="#e2360b" stroke-width="1.3"/></svg></span><span class="wm"><span '
-    'class="t">Bリーグ<em>まとめ</em></span><span class="sub">非公式ファンサイト</span></span>'
+    'class="t">バスケ<em>まとめ</em></span><span class="sub">非公式ファンサイト</span></span>'
     '</a><nav class="gnav"><a href="index.html">最新</a><a href="cat-kekka.html">試合結果</a>'
     '<a href="cat-sokuho.html">速報</a><a href="cat-iseki.html">移籍情報</a>'
     '<a href="cat-data.html">順位・日程</a></nav></div></header>'
@@ -226,7 +226,7 @@ HEADER = (
 FOOTER = (
     '<footer class="ft"><div class="ft-in"><a href="about.html">このサイトについて</a>'
     '<a href="privacy.html">プライバシーポリシー</a><a href="contact.html">お問い合わせ</a>'
-    '<span class="cp">© 2026 Bリーグ まとめ（非公式）.</span></div></footer>'
+    '<span class="cp">© 2026 バスケまとめ（非公式）.</span></div></footer>'
 )
 FAVICON = (
     "<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' "
@@ -324,7 +324,7 @@ def page(title, desc, url, body):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{esc(title)}｜Bリーグ まとめ</title>
+<title>{esc(title)}｜バスケまとめ</title>
 <meta name="description" content="{esc(desc)}">
 {FAVICON}
 <meta property="og:type" content="article">
@@ -404,7 +404,7 @@ def thumbnail(s):
 <text x="86.0" y="49" font-family="{font}" font-weight="800" font-size="17" fill="#9a7400" text-anchor="middle" letter-spacing="1">スタッツ</text>
 <text x="30" y="192" font-family="{font}" font-weight="900" font-size="28" fill="#ffffff">{esc(line1)}</text>
 <text x="30" y="230" font-family="{font}" font-weight="700" font-size="18" fill="#ffffff" opacity="0.94">{esc(line2)}</text>
-<text x="454" y="284" font-family="{font}" text-anchor="end" font-weight="800" font-size="13" fill="#ffffff" opacity="0.65">Bリーグ まとめ</text>
+<text x="454" y="284" font-family="{font}" text-anchor="end" font-weight="800" font-size="13" fill="#ffffff" opacity="0.65">バスケまとめ</text>
 </svg>
 """
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Bリーグまとめ - HTML生成スクリプト
+バスケまとめ - HTML生成スクリプト
 
 data/*.json を読み、既存ページの
     <!-- AUTO:名前:START --> ～ <!-- AUTO:名前:END -->
@@ -544,7 +544,7 @@ NEWS_PAGE = """<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>新着ニュース一覧｜Bリーグ まとめ</title>
+<title>新着ニュース一覧｜バスケまとめ</title>
 <meta name="description" content="B.LEAGUE公式・バスケ専門メディアの最新ニュースを自動でまとめた一覧。1日3回更新。">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{site}news.html">
@@ -553,7 +553,7 @@ NEWS_PAGE = """<!DOCTYPE html>
 <link rel="stylesheet" href="auto.css?v={ver}">
 </head>
 <body>
-<header class="hdr"><div class="hdr-in"><a class="logo" href="index.html"><span class="mk"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" fill="#fff"/><path d="M12 3v18M3 12h18M6.2 5.2a13 13 0 000 13.6M17.8 5.2a13 13 0 010 13.6" stroke="#e2360b" stroke-width="1.3"/></svg></span><span class="wm"><span class="t">Bリーグ<em>まとめ</em></span><span class="sub">非公式ファンサイト</span></span></a><nav class="gnav"><a href="index.html">最新</a><a href="cat-kekka.html">試合結果</a><a href="cat-sokuho.html">速報</a><a href="cat-iseki.html">移籍情報</a><a href="cat-data.html">順位・日程</a></nav></div></header>
+<header class="hdr"><div class="hdr-in"><a class="logo" href="index.html"><span class="mk"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" fill="#fff"/><path d="M12 3v18M3 12h18M6.2 5.2a13 13 0 000 13.6M17.8 5.2a13 13 0 010 13.6" stroke="#e2360b" stroke-width="1.3"/></svg></span><span class="wm"><span class="t">バスケ<em>まとめ</em></span><span class="sub">非公式ファンサイト</span></span></a><nav class="gnav"><a href="index.html">最新</a><a href="cat-kekka.html">試合結果</a><a href="cat-sokuho.html">速報</a><a href="cat-iseki.html">移籍情報</a><a href="cat-data.html">順位・日程</a></nav></div></header>
 <main class="wrap">
   <div class="sec-h"><span class="bar"></span><h2>新着ニュース一覧</h2></div>
   <p class="note">B.LEAGUE公式サイトとバスケ専門メディアの新着を自動で収集しています。見出しをタップすると配信元の記事が開きます。</p>
@@ -564,7 +564,7 @@ NEWS_PAGE = """<!DOCTYPE html>
   </div>
   <div class="upd">最終更新: <!-- AUTO:UPDATED:START -->{updated}<!-- AUTO:UPDATED:END --></div>
 </main>
-<footer class="ft"><div class="ft-in"><a href="about.html">このサイトについて</a><a href="privacy.html">プライバシーポリシー</a><a href="contact.html">お問い合わせ</a><span class="cp">© 2026 Bリーグ まとめ（非公式）. 見出しと出典リンクのみを掲載しています。</span></div></footer>
+<footer class="ft"><div class="ft-in"><a href="about.html">このサイトについて</a><a href="privacy.html">プライバシーポリシー</a><a href="contact.html">お問い合わせ</a><span class="cp">© 2026 バスケまとめ（非公式）. 見出しと出典リンクのみを掲載しています。</span></div></footer>
 </body>
 </html>
 """
