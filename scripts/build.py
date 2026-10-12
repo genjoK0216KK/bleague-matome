@@ -80,6 +80,7 @@ def read_articles():
         except OSError:
             continue
 
+        t = re.sub(r"<!-- AUTO:PV:START -->.*?<!-- AUTO:PV:END -->", "", t, flags=re.DOTALL)
         h1 = re.search(r"<h1[^>]*>(.*?)</h1>", t, re.DOTALL)
         title = re.sub(r"<[^>]+>", "", h1.group(1)).strip() if h1 else ""
         if not title:
@@ -109,8 +110,16 @@ def read_articles():
             "date": date, "extra": extra, "thumb": thumb, "alt": alt or title,
         })
 
-    items.sort(key=lambda a: a["date"] or "0000.00.00", reverse=True)
+    items.sort(key=article_order, reverse=True)
     return items
+
+
+def article_order(a):
+    """新しい順に並べるためのキー。同じ日付なら article-daily-YYYYMMDD-3 → -2 → 無印
+    の順（1日に複数本書いた日は後から書いた記事を上に）。"""
+    m = re.search(r"-(\d+)\.html$", a["href"])
+    seq = int(m.group(1)) if m and not re.search(r"\d{8}\.html$", a["href"]) else 1
+    return (a["date"] or "0000.00.00", seq, a["href"])
 
 
 def render_articles(articles, category=None):
@@ -187,8 +196,8 @@ def render_hero(articles):
 
 
 def render_picks(articles, n=3):
-    """トップの「ピックアップ」枠。新しい記事 n 本を pick カードで出す。"""
-    rows = articles[:n]
+    """トップの「ピックアップ」枠。ヒーローに出した最新1本を除く新しい記事 n 本。"""
+    rows = articles[1:n + 1]
     if not rows:
         return '<p class="note">記事はまだありません。</p>'
     out = []
@@ -351,7 +360,7 @@ STANDINGS_BLOCK = """  <div class="sec-h"><span class="bar"></span><h2>B.PREMIER
 """
 
 
-CSS_VER = 2
+CSS_VER = 3
 CSS_LINK = f'<link rel="stylesheet" href="auto.css?v={CSS_VER}">'
 
 
@@ -379,7 +388,7 @@ def ensure_markers(text, with_standings=False):
 
 
 def update_file(filename, regions, with_standings=False, article_heading=None,
-                extra_markers=None, manage_feed=True):
+                extra_markers=None, manage_feed=True, canonical=None, index_page=False):
     path = os.path.join(ROOT, filename)
     try:
         with open(path, encoding="utf-8") as f:
@@ -389,6 +398,13 @@ def update_file(filename, regions, with_standings=False, article_heading=None,
         return False
 
     text = ensure_css(original)
+    if index_page:
+        text = ensure_matome_section(text)
+        text = ensure_popular_marker(text)
+        text = text.replace('<h2>編集部まとめ記事</h2><a class="more" href="cat-sokuho.html">',
+                            '<h2>編集部まとめ記事</h2><a class="more" href="articles.html">')
+    if canonical:
+        text = set_canonical(text, canonical)
     if manage_feed:
         text = ensure_markers(text, with_standings)
     if article_heading:
@@ -538,30 +554,128 @@ def render_standings_table(standings):
     return "\n".join(out)
 
 
-# ----------------------------------------------------------------- news page
+# ------------------------------------------------------------- site config
 
-NEWS_PAGE = """<!DOCTYPE html>
+def site_config():
+    """data/site_config.json（無ければ既定値）。
+      ga4_id      … GA4 の測定ID（G-XXXX）。空なら計測タグを入れない
+      x_list_url  … クラブ公式XのリストURL。空なら x.html を作らない"""
+    cfg = load("site_config.json", {}) or {}
+    return {
+        "ga4_id": (cfg.get("ga4_id") or "").strip(),
+        "x_list_url": (cfg.get("x_list_url") or "").strip(),
+    }
+
+
+PER_PAGE = 20          # 一覧ページ1ページあたりの件数
+TOP_ARTICLES = 20      # トップの「編集部まとめ記事」の件数
+TOP_MATOME = 10        # トップの「ファンの反応・まとめブログ」の件数
+
+
+# ------------------------------------------------------------------ paging
+
+def page_file(base, n):
+    return f"{base}.html" if n == 1 else f"{base}-{n}.html"
+
+
+def chunk(items, per=PER_PAGE):
+    return [items[i:i + per] for i in range(0, len(items), per)] or [[]]
+
+
+def render_pager(base, n, total):
+    """前へ／次へとページ番号。1ページしかなければ何も出さない。"""
+    if total <= 1:
+        return ""
+    out = ['<nav class="pager" aria-label="ページ送り">']
+    if n > 1:
+        out.append(f'<a class="pg-prev" href="{page_file(base, n - 1)}" rel="prev">‹ 前へ</a>')
+    for k in range(1, total + 1):
+        if k == n:
+            out.append(f'<span class="pg-cur" aria-current="page">{k}</span>')
+        else:
+            out.append(f'<a href="{page_file(base, k)}">{k}</a>')
+    if n < total:
+        out.append(f'<a class="pg-next" href="{page_file(base, n + 1)}" rel="next">次へ ›</a>')
+    out.append("</nav>")
+    return "".join(out)
+
+
+def remove_stale_pages(base, total):
+    """ページ数が減ったときに残った {base}-N.html を消す（自動生成分のみ）。"""
+    pat = re.compile(re.escape(base) + r"-(\d+)\.html$")
+    for fn in os.listdir(ROOT):
+        m = pat.fullmatch(fn)
+        if m and int(m.group(1)) > total:
+            os.remove(os.path.join(ROOT, fn))
+            log(f"削除: {fn}")
+
+
+def write_if_changed(filename, content):
+    path = os.path.join(ROOT, filename)
+    old = ""
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            old = f.read()
+    if old != content:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(content)
+        log(f"更新: {filename}")
+        return True
+    return False
+
+
+def set_canonical(text, filename):
+    """canonical と og:url を自分自身のURLにする（無ければ canonical を追加）。"""
+    url = SITE_URL + ("" if filename == "index.html" else filename)
+    if re.search(r'<link rel="canonical"[^>]*>', text):
+        text = re.sub(r'<link rel="canonical"[^>]*>', f'<link rel="canonical" href="{url}">', text)
+    elif "</head>" in text:
+        text = text.replace("</head>", f'<link rel="canonical" href="{url}">\n</head>', 1)
+    return re.sub(r'<meta property="og:url"[^>]*>', f'<meta property="og:url" content="{url}">', text)
+
+
+def page_title(text, n):
+    if n == 1:
+        return text
+    return re.sub(r"<title>(.*?)｜", lambda m: f"<title>{m.group(1)}（{n}ページ目）｜", text, count=1)
+
+
+# ------------------------------------------------------------ list pages
+
+HEADER_HTML = (
+    '<header class="hdr"><div class="hdr-in"><a class="logo" href="index.html"><span class="mk">'
+    '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" '
+    'r="9" fill="#fff"/><path d="M12 3v18M3 12h18M6.2 5.2a13 13 0 000 13.6M17.8 5.2a13 13 0 010 13.6" '
+    'stroke="#e2360b" stroke-width="1.3"/></svg></span><span class="wm"><span class="t">バスケ<em>まとめ'
+    '</em></span><span class="sub">非公式ファンサイト</span></span></a><nav class="gnav">'
+    '<a href="index.html">最新</a><a href="cat-kekka.html">試合結果</a><a href="cat-sokuho.html">速報</a>'
+    '<a href="cat-iseki.html">移籍情報</a><a href="cat-data.html">順位・日程</a>'
+    '<a href="matome.html">まとめ</a></nav></div></header>'
+)
+
+LIST_PAGE = """<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>新着ニュース一覧｜バスケまとめ</title>
-<meta name="description" content="B.LEAGUE公式・バスケ専門メディアの最新ニュースを自動でまとめた一覧。1日3回更新。">
+<title>{title}｜バスケまとめ</title>
+<meta name="description" content="{desc}">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="{site}news.html">
+<link rel="canonical" href="{site}{file}">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230d1b2a'/><circle cx='16' cy='16' r='9' fill='%23ff5a1f'/><path d='M16 7v18M7 16h18M10 8.4a13 13 0 000 15.2M22 8.4a13 13 0 010 15.2' stroke='%230d1b2a' stroke-width='1.4' fill='none'/></svg>">
 <link rel="stylesheet" href="style.css?v=5">
 <link rel="stylesheet" href="auto.css?v={ver}">
 </head>
 <body>
-<header class="hdr"><div class="hdr-in"><a class="logo" href="index.html"><span class="mk"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" fill="#fff"/><path d="M12 3v18M3 12h18M6.2 5.2a13 13 0 000 13.6M17.8 5.2a13 13 0 010 13.6" stroke="#e2360b" stroke-width="1.3"/></svg></span><span class="wm"><span class="t">バスケ<em>まとめ</em></span><span class="sub">非公式ファンサイト</span></span></a><nav class="gnav"><a href="index.html">最新</a><a href="cat-kekka.html">試合結果</a><a href="cat-sokuho.html">速報</a><a href="cat-iseki.html">移籍情報</a><a href="cat-data.html">順位・日程</a></nav></div></header>
+{header}
 <main class="wrap">
-  <div class="sec-h"><span class="bar"></span><h2>新着ニュース一覧</h2></div>
-  <p class="note">B.LEAGUE公式サイトとバスケ専門メディアの新着を自動で収集しています。見出しをタップすると配信元の記事が開きます。</p>
+  <div class="sec-h"><span class="bar"></span><h2>{heading}</h2></div>
+  <p class="note">{note}</p>
   <div class="feed">
 <!-- AUTO:FEED:START -->
 {feed}
 <!-- AUTO:FEED:END -->
   </div>
+{pager}
   <div class="upd">最終更新: <!-- AUTO:UPDATED:START -->{updated}<!-- AUTO:UPDATED:END --></div>
 </main>
 <footer class="ft"><div class="ft-in"><a href="about.html">このサイトについて</a><a href="privacy.html">プライバシーポリシー</a><a href="contact.html">お問い合わせ</a><span class="cp">© 2026 バスケまとめ（非公式）. 見出しと出典リンクのみを掲載しています。</span></div></footer>
@@ -570,33 +684,264 @@ NEWS_PAGE = """<!DOCTYPE html>
 """
 
 
-def write_news_page(news, updated):
-    path = os.path.join(ROOT, "news.html")
-    content = NEWS_PAGE.format(
-        site=SITE_URL,
-        feed=render_feed(news, limit=120, grouped=True),
-        updated=esc(updated),
-        ver=CSS_VER,
+def write_list_pages(base, rows, render, title, desc, heading, note, updated):
+    """rows を PER_PAGE 件ずつ {base}.html, {base}-2.html … に書き出す。"""
+    pages = chunk(rows)
+    changed = False
+    for n, part in enumerate(pages, 1):
+        fn = page_file(base, n)
+        t = title if n == 1 else f"{title}（{n}ページ目）"
+        content = LIST_PAGE.format(
+            title=esc(t), desc=esc(desc), site=SITE_URL, file=fn, ver=CSS_VER,
+            header=HEADER_HTML, heading=esc(heading), note=note, feed=render(part),
+            pager=render_pager(base, n, len(pages)), updated=esc(updated),
+        )
+        changed |= write_if_changed(fn, content)
+    remove_stale_pages(base, len(pages))
+    return changed
+
+
+def write_news_pages(news, updated):
+    return write_list_pages(
+        "news", news, lambda part: render_feed(part, grouped=True),
+        "新着ニュース一覧",
+        "B.LEAGUE公式・バスケ専門メディアの最新ニュースを自動でまとめた一覧。1日4回更新。",
+        "新着ニュース一覧",
+        "B.LEAGUE公式サイトとバスケ専門メディアの新着を自動で収集しています。"
+        "見出しをタップすると配信元の記事が開きます。",
+        updated)
+
+
+def write_matome_pages(matome, updated):
+    return write_list_pages(
+        "matome", matome, lambda part: render_matome(part, grouped=True),
+        "ファンの反応・まとめブログ新着",
+        "バスケ系まとめブログの新着見出しへのリンク集。国内バスケ中心、海外は日本人選手と"
+        "スター選手の話題のみ。本文は転載していません。",
+        "ファンの反応・まとめブログ",
+        "バスケ系まとめブログの新着見出しへのリンクです（本文は転載していません）。"
+        "国内バスケの話題と、海外は日本人選手・スター選手の話題だけを載せています。"
+        "見出しをタップすると配信元のブログが開きます。",
+        updated)
+
+
+def write_article_pages(articles, updated):
+    return write_list_pages(
+        "articles", articles, render_articles,
+        "編集部まとめ記事 一覧",
+        "バスケまとめ編集部が書いたまとめ記事の一覧（新しい順）。",
+        "編集部まとめ記事 一覧",
+        "試合結果・速報・移籍情報・データのまとめ記事を新しい順に並べています。",
+        updated)
+
+
+def render_matome(items, limit=None, grouped=False):
+    """まとめブログの見出し一覧（.item.ext と同じ見た目。出典ブログ名を表示）。"""
+    if not items:
+        return '<p class="note">現在取得できた新着はありません。</p>'
+    html_ = render_feed(items, limit=limit, grouped=grouped)
+    return html_.replace('rel="noopener nofollow"', 'rel="nofollow noopener"')
+
+
+MATOME_SECTION = """      <!-- ファンの反応・まとめブログ（scripts/build.py が生成） -->
+      <div class="sec-h"><span class="bar"></span><h2>ファンの反応・まとめブログ</h2><a class="more" href="matome.html">もっと見る ›</a></div>
+      <p class="note auto-note">バスケ系まとめブログの新着見出しへのリンクです（本文は転載していません）。タップすると配信元が開きます。</p>
+      <div class="feed">
+<!-- AUTO:MATOME:START -->
+<!-- AUTO:MATOME:END -->
+      </div>
+
+"""
+
+
+def ensure_matome_section(text):
+    if "<!-- AUTO:MATOME:START -->" in text:
+        return text
+    anchor = "      <!-- pickup -->"
+    if anchor not in text:
+        return text
+    return text.replace(anchor, MATOME_SECTION + anchor, 1)
+
+
+# ------------------------------------------------- category pages (paged)
+
+def update_category(cat, page, news, articles, standings, updated):
+    subset = [n for n in news if n.get("category") == cat]
+    rows = [a for a in articles if a["cat"] == cat]
+    parts = chunk(rows)
+    base = page[:-5]
+    total = len(parts)
+
+    def regions(n):
+        r = {
+            "FEED": render_feed(subset, limit=40, grouped=True) if n == 1 else
+            ('<p class="note">最新ニュースは<a href="{}">1ページ目</a>に載せています。</p>'.format(page)),
+            "ARTICLES": (render_articles(parts[n - 1], category=cat)
+                         + "\n" + render_pager(base, n, total)),
+            "UPDATED": esc(updated),
+        }
+        if cat == "data":
+            r["STANDINGS_FULL"] = render_standings_table(standings)
+        return r
+
+    changed = update_file(page, regions(1), with_standings=(cat == "data"),
+                          article_heading=CATEGORY_LABEL[cat], canonical=page)
+    with open(os.path.join(ROOT, page), encoding="utf-8") as f:
+        first = f.read()
+    for n in range(2, total + 1):
+        text = first
+        for name, body in regions(n).items():
+            text, _ = replace_region(text, name, body)
+        fn = page_file(base, n)
+        changed |= write_if_changed(fn, set_canonical(page_title(text, n), fn))
+    remove_stale_pages(base, total)
+    return changed
+
+
+# ------------------------------------------------- nav / GA / PV / popular
+
+NAV_EXTRA = [("matome.html", "まとめ")]
+
+
+def ensure_nav(text, x_enabled):
+    """全ページ共通のグローバルナビに「まとめ」（と設定時は「クラブX」）を入れる。"""
+    m = re.search(r'(<nav class="gnav">)(.*?)(\s*)(</nav>)', text, re.DOTALL)
+    if not m:
+        return text
+    inner = m.group(2)
+    ws = m.group(3)
+    indent = ws if "\n" in ws else ""
+    links = list(NAV_EXTRA) + ([("x.html", "クラブX")] if x_enabled else [])
+    if not x_enabled:
+        inner = re.sub(r'\s*<a href="x\.html"[^>]*>[^<]*</a>', "", inner)
+    for href, label in links:
+        if f'href="{href}"' not in inner:
+            inner += (indent + "  " if indent else "") + f'<a href="{href}">{label}</a>'
+    return text[:m.start()] + m.group(1) + inner + ws + m.group(4) + text[m.end():]
+
+
+def ga_snippet(ga_id):
+    return (
+        '<!-- AUTO:GA:START -->\n'
+        f'<script async src="https://www.googletagmanager.com/gtag/js?id={esc(ga_id)}"></script>\n'
+        '<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}'
+        f"gtag('js',new Date());gtag('config','{esc(ga_id)}');</script>\n"
+        '<!-- AUTO:GA:END -->\n'
     )
-    old = ""
-    if os.path.exists(path):
-        with open(path, encoding="utf-8") as f:
-            old = f.read()
-    if old != content:
-        with open(path, "w", encoding="utf-8") as f:
-            f.write(content)
-        log("更新: news.html")
-        return True
-    return False
+
+
+def ensure_ga(text, ga_id):
+    """GA4 の計測タグ。測定IDが設定されていれば head に入れ、無ければ取り除く。"""
+    text = re.sub(r"<!-- AUTO:GA:START -->.*?<!-- AUTO:GA:END -->\n?", "", text, flags=re.DOTALL)
+    if ga_id and "</head>" in text:
+        text = text.replace("</head>", ga_snippet(ga_id) + "</head>", 1)
+    return text
+
+
+def load_pv():
+    pv = load("pv.json", {}) if os.path.exists(os.path.join(DATA_DIR, "pv.json")) else {}
+    return {"total": (pv or {}).get("total") or {}, "week": (pv or {}).get("week") or {}}
+
+
+def pv_of(table, fn):
+    return int(table.get("/" + fn, 0)) + int(table.get(fn, 0))
+
+
+def ensure_pv(text, views):
+    """記事の pmeta（日付の横）に閲覧数を差し込む。本文には触れない。"""
+    body = f'<span class="pv">{views:,} views</span>' if views else ""
+    if "<!-- AUTO:PV:START -->" not in text:
+        if not body:
+            return text
+        m = re.search(r'(<div class="pmeta">.*?)(</div>)', text, re.DOTALL)
+        if not m:
+            return text
+        text = (text[:m.end(1)] + "<!-- AUTO:PV:START --><!-- AUTO:PV:END -->"
+                + text[m.end(1):])
+    return re.sub(r"<!-- AUTO:PV:START -->.*?<!-- AUTO:PV:END -->",
+                  lambda _: f"<!-- AUTO:PV:START -->{body}<!-- AUTO:PV:END -->",
+                  text, count=1, flags=re.DOTALL)
+
+
+def render_popular(articles, week, n=5):
+    """サイドバー「人気記事ランキング（週間）」。PVデータが無ければ None。"""
+    ranked = sorted(((pv_of(week, a["href"]), a) for a in articles),
+                    key=lambda x: -x[0])
+    ranked = [(v, a) for v, a in ranked if v > 0][:n]
+    if not ranked:
+        return None
+    rows = ['<h4>人気記事ランキング（週間）</h4>']
+    for i, (v, a) in enumerate(ranked, 1):
+        title = a["title"] if len(a["title"]) <= 30 else a["title"][:29] + "…"
+        rows.append('<div class="rank"><span class="n{top}">{i}</span><a href="{href}">{t}</a></div>'
+                    .format(top=" top" if i == 1 else "", i=i, href=esc(a["href"]), t=esc(title)))
+    return "\n".join(rows)
+
+
+def ensure_popular_marker(text):
+    """index.html の人気記事カードを AUTO:POPULAR で囲む（一度だけ）。"""
+    if "<!-- AUTO:POPULAR:START -->" in text:
+        return text
+    m = re.search(r'(<div class="card">\s*)(<h4>人気記事ランキング.*?)(\s*</div>\s*\n\s*<div class="card">)',
+                  text, re.DOTALL)
+    if not m:
+        return text
+    return (text[:m.start(2)] + "<!-- AUTO:POPULAR:START -->\n" + m.group(2)
+            + "\n<!-- AUTO:POPULAR:END -->" + text[m.end(2):])
+
+
+# ---------------------------------------------------------------- X list
+
+X_PAGE_BODY = """  <div class="sec-h"><span class="bar"></span><h2>クラブ公式Xの最新ポスト</h2></div>
+  <p class="note">B.PREMIER全クラブの公式アカウントと注目選手のポストを、X公式の埋め込みで表示しています。表示されない場合は<a href="{url}" target="_blank" rel="nofollow noopener">Xでリストを開く</a>からご覧ください。</p>
+  <a class="twitter-timeline" data-lang="ja" data-height="1600" data-dnt="true" href="{url}">クラブ公式Xのリストを見る</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+"""
+
+
+def write_x_page(url, updated):
+    """クラブ公式Xのリストを埋め込んだ x.html。リストURL未設定なら作らない（あれば消す）。"""
+    path = os.path.join(ROOT, "x.html")
+    if not url:
+        if os.path.exists(path):
+            os.remove(path)
+            log("削除: x.html（リストURL未設定）")
+        return False
+    content = LIST_PAGE.format(
+        title="クラブ公式Xの最新ポスト", site=SITE_URL, file="x.html", ver=CSS_VER,
+        desc="B.PREMIER全クラブ公式と注目選手のXの最新ポストをまとめて表示。",
+        header=HEADER_HTML, heading="クラブ公式Xの最新ポスト", note="", feed="", pager="",
+        updated=esc(updated))
+    content = re.sub(
+        r'  <div class="sec-h">.*?</div>\n  <p class="note"></p>\n  <div class="feed">.*?  </div>\n',
+        lambda _: X_PAGE_BODY.format(url=esc(url)), content, count=1, flags=re.DOTALL)
+    return write_if_changed("x.html", content)
+
+
+def render_x_side(url):
+    if not url:
+        return ""
+    return (
+        '<div class="card"><h4>クラブ公式Xの最新ポスト</h4>'
+        f'<a class="twitter-timeline" data-lang="ja" data-tweet-limit="5" data-chrome="noheader nofooter" '
+        f'data-dnt="true" href="{esc(url)}">クラブ公式Xのポストを見る</a>'
+        '<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
+        f'<div style="margin-top:8px"><a class="more" href="x.html" style="font-size:13px">もっと見る ›</a> ・ '
+        f'<a href="{esc(url)}" target="_blank" rel="nofollow noopener" style="font-size:13px">Xでリストを開く</a></div>'
+        '</div>'
+    )
 
 
 # --------------------------------------------------------------- sitemap etc
 
+def site_pages():
+    """公開ページ（Search Console の確認用ファイルなどは除く）。"""
+    return sorted(f for f in os.listdir(ROOT)
+                  if f.endswith(".html") and not f.startswith("google"))
+
+
 def write_sitemap():
-    pages = sorted(
-        f for f in os.listdir(ROOT)
-        if f.endswith(".html")
-    )
+    pages = site_pages()
     today = datetime.now(JST).strftime("%Y-%m-%d")
     urls = "\n".join(
         f"  <url><loc>{SITE_URL}{p}</loc><lastmod>{today}</lastmod></url>"
@@ -612,18 +957,40 @@ def write_sitemap():
     log(f"更新: sitemap.xml（{len(pages)}ページ）")
 
 
+def finalize_pages(cfg, pv):
+    """全ページ共通の後処理：グローバルナビ・GA4タグ・記事の閲覧数。"""
+    changed = False
+    for fn in site_pages():
+        path = os.path.join(ROOT, fn)
+        with open(path, encoding="utf-8") as f:
+            original = f.read()
+        text = ensure_nav(original, bool(cfg["x_list_url"]))
+        text = ensure_ga(text, cfg["ga4_id"])
+        if fn.startswith("article-"):
+            text = ensure_pv(text, pv_of(pv["total"], fn))
+        if text != original:
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(text)
+            changed = True
+    return changed
+
+
 # --------------------------------------------------------------------- main
 
 def main():
     news = load("news.json", [])
+    matome = load("matome.json", []) if os.path.exists(
+        os.path.join(DATA_DIR, "matome.json")) else []
     standings = load("standings.json", {})
+    cfg = site_config()
+    pv = load_pv()
     updated = datetime.now(JST).strftime("%Y年%m月%d日 %H:%M")
 
     if not news:
         log("!! ニュースデータが空です。生成を中止します")
         return 1
 
-    log(f"ニュース {len(news)}件 / 更新日時 {updated}")
+    log(f"ニュース {len(news)}件 / まとめブログ {len(matome)}件 / 更新日時 {updated}")
 
     articles = read_articles()
     log(f"手書き記事 {len(articles)}件を一覧化")
@@ -631,32 +998,33 @@ def main():
     changed = False
 
     # トップページ
-    changed |= update_file("index.html", {
+    index_regions = {
         "TICKER": render_ticker(news),
         "FEED": render_feed(news, limit=12),
+        "MATOME": render_matome(matome, limit=TOP_MATOME),
         "HERO": render_hero(articles),
         "VIDEO": render_video(),
-        "ARTICLES": render_articles(articles),
+        "ARTICLES": render_articles(articles[:TOP_ARTICLES]),
         "PICKS": render_picks(articles),
         "STANDINGS": render_standings_card(standings),
         "AFFILIATE": render_affiliate(),
+        "XSIDE": render_x_side(cfg["x_list_url"]),
         "UPDATED": esc(updated),
-    }, article_heading="編集部まとめ記事",
-        extra_markers=[{"mode": "after", "anchor": '<aside class="side">',
-                        "name": "AFFILIATE"}])
+    }
+    popular = render_popular(articles, pv["week"])
+    if popular:
+        index_regions["POPULAR"] = popular
+    changed |= update_file("index.html", index_regions,
+                           article_heading="編集部まとめ記事",
+                           extra_markers=[{"mode": "after", "anchor": '<aside class="side">',
+                                           "name": "AFFILIATE"},
+                                          {"mode": "before", "anchor": '      <div class="card">\n        <h4>カテゴリ</h4>',
+                                           "name": "XSIDE"}],
+                           index_page=True)
 
-    # カテゴリページ
+    # カテゴリページ（記事は20本ずつページ分け）
     for cat, page in CATEGORY_PAGE.items():
-        subset = [n for n in news if n.get("category") == cat]
-        regions = {
-            "FEED": render_feed(subset, limit=40, grouped=True),
-            "ARTICLES": render_articles(articles, category=cat),
-            "UPDATED": esc(updated),
-        }
-        if cat == "data":
-            regions["STANDINGS_FULL"] = render_standings_table(standings)
-        changed |= update_file(page, regions, with_standings=(cat == "data"),
-                               article_heading=CATEGORY_LABEL[cat])
+        changed |= update_category(cat, page, news, articles, standings, updated)
 
     # 記事ページにアフィリエイト枠を差し込む（全 article-*.html。手書き本文は保持）
     aff_html = render_affiliate()
@@ -668,9 +1036,13 @@ def main():
                 extra_markers=[{"mode": "before", "anchor": "</article>",
                                 "name": "AFFILIATE"}])
 
-    # 新着一覧ページ
-    changed |= write_news_page(news, updated)
+    # 一覧ページ（20件ずつ）
+    changed |= write_news_pages(news, updated)
+    changed |= write_matome_pages(matome, updated)
+    changed |= write_article_pages(articles, updated)
+    changed |= write_x_page(cfg["x_list_url"], updated)
 
+    changed |= finalize_pages(cfg, pv)
     write_sitemap()
 
     log("完了" if changed else "完了（内容に変化なし）")
