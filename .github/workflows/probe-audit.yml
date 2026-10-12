@@ -9,76 +9,33 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: claude/scoreboard-thumbs
+          ref: claude/quality-audit
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install --quiet requests beautifulsoup4
-      - name: probe
+      - name: regen
         run: |
-          cd scripts
+          python scripts/stats.py --regen 2026-10-12 506459,506460,506461,506462,506463 > /tmp/regen.json
+          echo "=== REGEN_START"
+          cat /tmp/regen.json
+          echo "=== REGEN_END"
+          git status --short
+      - name: fiba
+        run: |
           python - <<'EOF'
-          import re, json, time, requests, stats
-          UA = {"User-Agent": stats.UA}
-          def get(u):
-              r = requests.get(u, headers=UA, timeout=25); time.sleep(1.2)
-              r.encoding = r.apparent_encoding or r.encoding
-              return r
-          def plain(html):
-              t = re.sub(r"<script.*?</script>|<style.*?</style>", " ", html, flags=re.S)
-              return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", t))
-          players = {}
-          for key in ["506459", "506460", "506461", "506462", "506463"]:
-              ctx = stats.extract_context(get(stats.GAME_URL.format(key=key)).text)
-              g = ctx["Game"]
-              for side, team in (("HomeBoxscores", g.get("HomeTeamShortNameJ")), ("AwayBoxscores", g.get("AwayTeamShortNameJ"))):
-                  for r in ctx.get(side) or []:
-                      if stats.num(r.get("Category")) == 1 and stats.num(r.get("PeriodCategory")) == 18 and stats.mmss_to_min(r.get("PlayTime")) > 0:
-                          players[str(r.get("PlayerID"))] = {"name": r.get("PlayerNameJ"), "team": team, "eff": stats.num(r.get("EFF")), "key": key}
-          print("出場選手数:", len(players))
-          first = True
-          out = {}
-          for pid, p in players.items():
-              url = f"https://www.bleague.jp/roster_detail/?PlayerID={pid}"
+          import re, requests
+          UA = {"User-Agent": "Mozilla/5.0 (compatible; BleagueMatomeBot/1.0; +https://basuke-matome.jp/about.html)"}
+          base = "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/fiba-basketball-world-cup-2027-asian-qualifiers-smart-power-rankings-volume-"
+          for v in (5, 8):
               try:
-                  html = get(url).text
+                  r = requests.get(base + str(v), headers=UA, timeout=25)
+                  t = re.sub(r"<script.*?</script>|<style.*?</style>", " ", r.text, flags=re.S)
+                  t = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", t))
+                  print("[fiba]", v, r.status_code, len(t))
+                  for k in ("Published", "published", "2026", "1. ", "Australia", "Japan", "New Zealand", "China", "Korea"):
+                      for m in list(re.finditer(re.escape(k), t))[:2]:
+                          print("  [fiba]", v, k, "|", t[max(0, m.start()-100):m.end()+160])
               except Exception as e:
-                  print("!!", pid, e); continue
-              txt = plain(html)
-              if first:
-                  for m in list(re.finditer("国籍|出身|NATIONALITY|Nationality", txt))[:6]:
-                      print("  [sample]", txt[max(0, m.start()-80):m.end()+80])
-                  first = False
-              m = re.search(r"国籍\s*[:：]?\s*([^\s/｜|]{1,20})", txt)
-              nat = m.group(1) if m else None
-              note = []
-              for k in ("帰化", "アジア特別枠", "外国籍", "Asia"):
-                  if k in txt: note.append(k)
-              out[pid] = {**p, "nationality": nat, "flags": note, "url": url}
-              print(json.dumps(out[pid], ensure_ascii=False))
-          print("=== JSON_START")
-          print(json.dumps(out, ensure_ascii=False))
-          print("=== JSON_END")
-          # ロシター（アルバルク東京公式）
-          try:
-              t = plain(get("https://www.alvark-tokyo.jp/player_lp/ryan_rossiter/").text)
-              for k in ("国籍", "帰化", "日本"):
-                  for m in list(re.finditer(k, t))[:3]:
-                      print("  [rossiter]", t[max(0, m.start()-80):m.end()+80])
-          except Exception as e:
-              print("!! rossiter", e)
-          # 順位表（名古屋Dの地区）
-          t = plain(get("https://www.bleague.jp/standings/").text)
-          for k in ("東地区", "西地区", "名古屋ダイヤモンドドルフィンズ"):
-              for m in list(re.finditer(k, t))[:2]:
-                  print("  [standings]", t[max(0, m.start()-40):m.end()+120])
-          # FIBA パワーランキング（一次資料の候補）
-          for u in ["https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers",
-                    "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news"]:
-              try:
-                  h = get(u).text
-                  links = sorted(set(re.findall(r'href="([^"]*power[^"]*)"', h, flags=re.I)))
-                  print("  [fiba]", u, len(h), links[:10])
-              except Exception as e:
-                  print("!! fiba", u, e)
+                  print("!! fiba", v, e)
           EOF
