@@ -1,0 +1,66 @@
+name: 新記事をXに投稿
+
+on:
+  push:
+    branches: [main]
+    paths: ["article-*.html"]
+  schedule:
+    - cron: "40 */3 * * *"   # 3時間おき（ボットのコミットでは push が起動しないため）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: post-x
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      X_API_KEY: ${{ secrets.X_API_KEY }}
+      X_API_SECRET: ${{ secrets.X_API_SECRET }}
+      X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+      X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+    steps:
+      - name: キーが未設定なら何もしない
+        id: check
+        run: |
+          if [ -z "$X_API_KEY" ] || [ -z "$X_API_SECRET" ] || [ -z "$X_ACCESS_TOKEN" ] || [ -z "$X_ACCESS_TOKEN_SECRET" ]; then
+            echo "X の API キーが未設定のためスキップします"
+            echo "skip=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.check.outputs.skip != '1'
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        if: steps.check.outputs.skip != '1'
+        with:
+          python-version: "3.12"
+
+      - name: 投稿
+        if: steps.check.outputs.skip != '1'
+        run: |
+          pip install --quiet requests requests-oauthlib
+          python scripts/post_x.py
+
+      - name: 投稿記録をコミット
+        if: always() && steps.check.outputs.skip != '1'
+        run: |
+          git config user.name  "bleague-matome-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -z "$(git status --porcelain data/posted.json)" ]; then
+            echo "更新なし"; exit 0
+          fi
+          git add data/posted.json
+          git commit -m "Xへの投稿記録を更新"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1

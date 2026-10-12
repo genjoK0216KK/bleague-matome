@@ -218,3 +218,35 @@ table.stdtbl tbody tr:hover td {
   .feed .item.ext h3 { font-size: 14.5px; }
   table.stdtbl { font-size: 12px; }
 }
+
+/* --- ページ送り（一覧・カテゴリの2ページ目以降） --- */
+.pager {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 18px 0 8px;
+  font-size: 14px;
+}
+.pager a,
+.pager .pg-cur {
+  min-width: 36px;
+  padding: 7px 10px;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: #14202e;
+  background: #fff;
+}
+.pager a:hover { border-color: #e2360b; color: #e2360b; }
+.pager .pg-cur {
+  background: #14202e;
+  border-color: #14202e;
+  color: #fff;
+  font-weight: 800;
+}
+
+/* --- 記事の閲覧数（pmeta 内） --- */
+.pmeta .pv { color: #6b7684; }

@@ -1,0 +1,60 @@
+name: 閲覧数（PV）の取得
+
+on:
+  schedule:
+    - cron: "20 18 * * *"   # JST 03:20（1日1回）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-update
+  cancel-in-progress: false
+
+jobs:
+  pv:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+      GA4_SA_KEY: ${{ secrets.GA4_SA_KEY }}
+    steps:
+      - name: 鍵が未設定なら何もしない
+        id: check
+        run: |
+          if [ -z "$GA4_PROPERTY_ID" ] || [ -z "$GA4_SA_KEY" ]; then
+            echo "GA4_PROPERTY_ID / GA4_SA_KEY が未設定のためスキップします"
+            echo "skip=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.check.outputs.skip != '1'
+
+      - uses: actions/setup-python@v5
+        if: steps.check.outputs.skip != '1'
+        with:
+          python-version: "3.12"
+
+      - name: 取得して記事に反映
+        if: steps.check.outputs.skip != '1'
+        run: |
+          pip install --quiet google-analytics-data
+          python scripts/pv.py
+          python scripts/build.py
+
+      - name: 差分があればコミット
+        if: steps.check.outputs.skip != '1'
+        run: |
+          git config user.name  "bleague-matome-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet && [ -z "$(git status --porcelain data/pv.json)" ]; then
+            echo "更新なし"; exit 0
+          fi
+          git add -A
+          git commit -m "閲覧数を更新: $(TZ=Asia/Tokyo date '+%Y-%m-%d')"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1

@@ -43,7 +43,7 @@ jobs:
         run: |
           git config user.name  "bleague-matome-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet; then
+          if [ -z "$(git status --porcelain)" ]; then   # 新規ファイル（matome.json 等）も検出する
             echo "更新なし"
             exit 0
           fi
