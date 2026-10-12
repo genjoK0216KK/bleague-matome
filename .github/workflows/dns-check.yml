@@ -1,0 +1,19 @@
+name: DNS反映確認（一時）
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: dig
+        run: |
+          for d in basuke-matome.jp www.basuke-matome.jp xn--o9j0bk3qmb7i.jp; do
+            echo "===== $d"
+            echo "-- NS";    dig +short NS "$d"
+            echo "-- A";     dig +short A "$d"
+            echo "-- AAAA";  dig +short AAAA "$d"
+            echo "-- CNAME"; dig +short CNAME "$d"
+            echo "-- A @8.8.8.8"; dig +short A "$d" @8.8.8.8
+          done
