@@ -115,10 +115,12 @@ def read_articles():
 
 
 def article_order(a):
-    """新しい順に並べるためのキー。同じ日付なら article-daily-YYYYMMDD-3 → -2 → 無印
-    の順（1日に複数本書いた日は後から書いた記事を上に）。"""
+    """新しい順に並べるためのキー。同じ日付なら 貢献度ランキング → article-daily-YYYYMMDD-3
+    → -2 → 無印 の順（1日に複数本書いた日は後から書いた記事を上に）。"""
     m = re.search(r"-(\d+)\.html$", a["href"])
     seq = int(m.group(1)) if m and not re.search(r"\d{8}\.html$", a["href"]) else 1
+    if a["href"].startswith("article-stats-"):
+        seq = 99  # 貢献度ランキングは全試合終了後（夜）に出るので、その日の記事の中で最新
     return (a["date"] or "0000.00.00", seq, a["href"])
 
 
