@@ -45,8 +45,15 @@ LOOKBACK_DAYS = 3          # これより古い未確定日は諦める
 TOTAL_PERIOD = 18          # ボックススコアの「試合合計」行
 TOP_N = 10
 
-# 登録名に漢字・ひらがなを含む選手を日本人選手とみなす（公式データに国籍項目がないため）
-JP_NAME_RE = re.compile(r"[぀-ゟ一-鿿々]")
+# The boxscore adapter has no verified nationality field. Names are never evidence.
+def verified_japanese(player):
+    return (player.get('nationality') == 'JPN'
+            and player.get('nationality_verified') is True
+            and str(player.get('nationality_source','')).startswith('https://www.bleague.jp/'))
+
+
+def verified_japanese_rows(summary):
+    return [p for p in summary.get('eff_top_jp',[]) if verified_japanese(p)]
 
 
 def log(msg):
@@ -136,7 +143,7 @@ def player_rows(rows, team_short, opp_short, won, key):
             "opp": opp_short,
             "won": won,
             "key": key,
-            "jp": bool(JP_NAME_RE.search(name)),
+            "jp": None, "nationality": None, "nationality_verified": False,
             "min": mmss_to_min(r.get("PlayTime")),
             "pts": num(r.get("Point")),
             "reb": num(r.get("RB_TOT")),
@@ -211,7 +218,7 @@ def summarise(date, games):
                                      "home_score", "away_score", "ot", "stadium")}
                   for g in games],
         "eff_top": rank(players, "eff"),
-        "eff_top_jp": rank([p for p in players if p["jp"]], "eff"),
+        "eff_top_jp": rank([p for p in players if verified_japanese(p)], "eff"),
         "leaders": {k: rank(players, k, 3) for k in ("pts", "reb", "ast", "stl", "blk")},
         "player_count": len(players),
     }
@@ -283,7 +290,7 @@ def source_links(games):
 
 
 def body_sections(s):
-    top, jp = s["eff_top"], s["eff_top_jp"]
+    top, jp = s["eff_top"], verified_japanese_rows(s)
     first = top[0]
     lead = (f"{jp_date(s['date'])}に行われたりそなB.LEAGUE PREMIER(Bプレミア){len(s['games'])}試合の"
             f"ボックススコアから、貢献度（EFF）の上位選手をまとめました。この日の貢献度1位は"
@@ -292,14 +299,13 @@ def body_sections(s):
     if jp:
         lead += (f"日本人選手のトップは{esc(jp[0]['team'])}の{esc(jp[0]['name'])}（貢献度{jp[0]['eff']}）"
                  f"でした。")
+    nationality = (f'<h2>公式国籍確認済み・日本人選手 TOP{TOP_N}</h2>' + eff_table(jp) if jp else '<p class="note">国籍別ランキングは未掲載です。公式国籍情報を確認できない選手を名前から分類しません。</p>')
     return f"""<p class="lead">{lead}</p>
 
     <h2>貢献度ランキング TOP{TOP_N}</h2>
     {eff_table(top)}
 
-    <h2>日本人選手 貢献度ランキング TOP{TOP_N}</h2>
-    {eff_table(jp)}
-    <div class="note">公式データには国籍の項目がないため、登録名に漢字・ひらがなを含む選手を日本人選手として集計しています。帰化選手やカタカナ表記の日本人選手は含まれない場合があります。</div>
+    {nationality}
 
     <h2>部門別リーダー</h2>
     {leaders_table(s['leaders'])}
@@ -343,7 +349,7 @@ def page(title, desc, url, body):
 
 
 def article_title(s):
-    top, jp = s["eff_top"][0], s["eff_top_jp"][:1]
+    top, jp = s["eff_top"][0], verified_japanese_rows(s)[:1]
     t = f"{jp_date(s['date'])}の貢献度ランキング 1位は{top['name']}（{top['team']}）の{top['eff']}"
     if jp:
         t += f" 日本人トップは{jp[0]['name']}"
@@ -356,7 +362,7 @@ def write_article(s):
     title = article_title(s)
     dot = s["date"].replace("-", ".")
     desc = (f"{jp_date(s['date'])}のB.LEAGUE PREMIER全{len(s['games'])}試合のボックススコアから、"
-            f"貢献度（EFF）TOP{TOP_N}、日本人選手TOP{TOP_N}、得点・リバウンド・アシストなどの"
+            f"貢献度（EFF）TOP{TOP_N}、得点・リバウンド・アシストなどの"
             f"部門別リーダーを公式記録をもとにまとめました。")
     body = f"""    <div class="breadcrumb"><a href="index.html">ホーム</a> ／ <a href="cat-data.html">順位・日程</a></div>
     <h1>{esc(title)}</h1>
