@@ -1,0 +1,11 @@
+/* Compact navigation and dated score entrance. Article imagery is unchanged. */
+.feed .compact-item{display:block;padding:12px 4px;min-height:44px;border-bottom:1px dotted #bbb}
+.feed .compact-item h3{font-size:16px;line-height:1.5;margin:4px 0}
+.feed .compact-item .meta{font-size:12px}.feed .compact-item .tag{font-size:10px}
+.wrap .feed .item.ext{padding:10px 4px;border:0;border-bottom:1px dotted #bbb;border-radius:0;box-shadow:none;background:transparent}.wrap .feed .item.ext h3{font-size:15px;line-height:1.5;margin:3px 0}
+.date-chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}
+.date-chips a,.day-detail{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;font-weight:700}
+.date-chips a{border:1px solid #bbb;border-radius:6px}.date-chips a[aria-current]{background:#CCF43B;color:#151A18}
+.date-panel[hidden]{display:none}.date-panel h2,.home-games h2{font-size:20px;margin:10px 0}.league-heading{font-size:15px;margin:14px 0 4px}
+.match-row{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;text-align:center;align-items:center;border-bottom:1px solid #ddd;padding:10px 4px;color:inherit;min-height:44px}
+.match-row strong{font-size:21px;white-space:nowrap}.match-row small{grid-column:1/-1;font-size:11px;color:#606860}.empty-games{font-size:13px;margin:6px 0}.home-games{margin-bottom:18px}.home-games h3{font-size:15px;margin:12px 0 0}

@@ -24,16 +24,13 @@ def render(state, now, *, failed=False, offline=False):
     fetched_label = datetime.fromisoformat(fetched).astimezone(data.JST).strftime('%Y-%m-%d %H:%M JST') if fetched else '未取得'
     notice = records[0]['notice_date'] if records else '未確認'
     body = '<div class="breadcrumb"><a href="index.html">ホーム</a> ／ IL・復帰情報</div><h1>インジュアリーリスト・復帰情報</h1>'
-    body += '<p class="lead">公式ILの登録中の選手と、抹消の公示を分けて確認できます。</p>'
-    body += '<div class="note"><strong>最終取得：' + esc(fetched_label) + '</strong><br>公式ページの公示日：' + esc(notice) + '<br>取得予定：毎日 07:00 / 12:00 / 21:00 / 23:00（日本時間）。実行・公開の遅延があります。瞬時更新ではありません。</div>'
+    body += '<p class="source">最終取得：' + esc(fetched_label) + ' ／ <a href="' + URL + '">公式IL</a></p>'
     warning = '最新取得に失敗しました。前回取得の情報です。公式ページで現在の状況をご確認ください。' if failed else ''
     if age is None or age > STALE_HOURS:
         warning += ' 最終取得から12時間超、または取得時刻未確認です。古い情報の可能性があります。'
     if offline:
         warning += ' 保存した公式データによるローカル検証版です。'
     body += '<div class="note il-warning" id="il-freshness" data-retrieved="' + esc(fetched or '') + '"' + ('' if warning else ' hidden') + '>' + esc(warning) + '</div>'
-    body += '<p>' + articles.link(URL, '最新の公式IL公示を開く') + '</p>'
-    body += '<p>IL抹消は実戦復帰・次戦出場の確定ではありません。再登録不可期日を過ぎても、抹消公示がない選手は登録中です。傷病の詳細・診断の推定は掲載しません。</p>'
     body += '<h2>取得時点のIL登録中 <span class="il-count">' + str(len(active)) + '人</span></h2>'
     if not records:
         body += '<p>公式一覧を取得できていません。登録者がいないという意味ではありません。</p>'
@@ -44,7 +41,7 @@ def render(state, now, *, failed=False, offline=False):
         badge = '現在IL登録中（抹消履歴あり）' if history else 'IL登録中'
         body += '<section class="il-card"><span class="il-badge">' + badge + '</span><h3>' + esc(row['name']) + '</h3><p>' + esc(row['team']) + ' ／ ' + esc(row['league']) + '</p>'
         body += '<dl><dt>リスト登録日</dt><dd>' + esc(row['registered_date']) + '</dd><dt>公示日</dt><dd>' + esc(row['announced_date']) + '</dd><dt>抹消日</dt><dd>公示なし</dd><dt>再登録不可期日</dt><dd>' + esc(row['unavailable_until']) + '</dd></dl></section>'
-    body += '</div><h2>抹消・再登録の確認</h2><p>公式掲載順の抹消履歴から5件。日付に年の表記がないため、当年・今季の復帰とは断定しません。IL抹消後の選手登録日・実戦復帰はこの公示だけでは確認できません。</p><div class="il-grid">'
+    body += '</div><details><summary>IL・抹消情報の見方</summary><p>IL抹消は実戦復帰・次戦出場の確定ではありません。再登録不可期日を過ぎても、抹消公示がない選手は登録中です。傷病の詳細・診断の推定は掲載しません。</p></details><h2>抹消・再登録の確認</h2><p>公式掲載順の抹消履歴から5件。日付に年の表記がないため、当年・今季の復帰とは断定しません。IL抹消後の選手登録日・実戦復帰はこの公示だけでは確認できません。</p><div class="il-grid">'
     for row in removed:
         registered_again = any(r['active'] and r['name'] == row['name'] and r['team'] == row['team'] for r in records)
         status = '抹消履歴あり／現在は再びIL登録中' if registered_again else 'IL抹消／選手再登録・出場は未確認'

@@ -17,9 +17,11 @@ import sys
 from datetime import datetime, timedelta, timezone
 
 try:
-    from . import site_header
+    from . import site_header, browse_ui
 except ImportError:
     import site_header
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from scripts import browse_ui
 
 JST = timezone(timedelta(hours=9))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -149,11 +151,8 @@ def render_articles(articles, category=None):
     out = []
     for a in rows:
         meta = esc(a["date"])
-        if a["extra"]:
-            meta = f'{meta} ・ {esc(a["extra"])}'
         out.append(
-            '<a class="item" href="{href}">'
-            '<div class="thumb"><img src="{thumb}" alt="{alt}" loading="lazy"></div>'
+            '<a class="item compact-item" href="{href}">'
             '<div class="c">'
             '<span class="tag {cat}">{label}</span>'
             '<h3>{title}</h3>'
@@ -691,9 +690,9 @@ LIST_PAGE = """<!DOCTYPE html>
 """
 
 
-def write_list_pages(base, rows, render, title, desc, heading, note, updated):
+def write_list_pages(base, rows, render, title, desc, heading, note, updated, per=PER_PAGE):
     """rows を PER_PAGE 件ずつ {base}.html, {base}-2.html … に書き出す。"""
-    pages = chunk(rows)
+    pages = chunk(rows, per)
     changed = False
     for n, part in enumerate(pages, 1):
         fn = page_file(base, n)
@@ -717,7 +716,7 @@ def write_news_pages(news, updated):
         "B.LEAGUE公式・バスケ専門メディアの最新ニュースを自動でまとめた一覧。1日4回更新。",
         "新着ニュース一覧",
         "",
-        updated)
+        updated, per=10)
 
 
 def write_matome_pages(matome, updated):
@@ -727,9 +726,7 @@ def write_matome_pages(matome, updated):
         "バスケ系まとめブログの新着見出しへのリンク集。国内バスケ中心、海外は日本人選手と"
         "スター選手の話題のみ。本文は転載していません。",
         "ファンの反応・まとめブログ",
-        "バスケ系まとめブログの新着見出しへのリンクです（本文は転載していません）。"
-        "国内バスケの話題と、海外は日本人選手・スター選手の話題だけを載せています。"
-        "見出しをタップすると配信元のブログが開きます。",
+        "",
         updated)
 
 
@@ -739,7 +736,7 @@ def write_article_pages(articles, updated):
         "編集部まとめ記事 一覧",
         "バスケまとめ編集部が書いたまとめ記事の一覧（新しい順）。",
         "編集部まとめ記事 一覧",
-        "試合結果・速報・移籍情報・データのまとめ記事を新しい順に並べています。",
+        "",
         updated)
 
 
@@ -774,35 +771,23 @@ def ensure_matome_section(text):
 # ------------------------------------------------- category pages (paged)
 
 def update_category(cat, page, news, articles, standings, updated):
-    subset = [n for n in news if n.get("category") == cat]
     rows = [a for a in articles if a["cat"] == cat]
     parts = chunk(rows)
     base = page[:-5]
-    total = len(parts)
-
-    def regions(n):
-        r = {
-            "FEED": render_feed(subset, limit=40, grouped=True) if n == 1 else
-            ('<p class="note">最新ニュースは<a href="{}">1ページ目</a>に載せています。</p>'.format(page)),
-            "ARTICLES": (render_articles(parts[n - 1], category=cat)
-                         + "\n" + render_pager(base, n, total)),
-            "UPDATED": esc(updated),
-        }
-        if cat == "data":
-            r["STANDINGS_FULL"] = render_standings_table(standings)
-        return r
-
-    changed = update_file(page, regions(1), with_standings=(cat == "data"),
-                          article_heading=CATEGORY_LABEL[cat], canonical=page)
-    with open(os.path.join(ROOT, page), encoding="utf-8") as f:
-        first = f.read()
-    for n in range(2, total + 1):
-        text = first
-        for name, body in regions(n).items():
-            text, _ = replace_region(text, name, body)
-        fn = page_file(base, n)
-        changed |= write_if_changed(fn, set_canonical(page_title(text, n), fn))
-    remove_stale_pages(base, total)
+    changed = False
+    for n, part in enumerate(parts, 1):
+        lead = ''
+        if n == 1 and cat == 'kekka':
+            lead = browse_ui.results(ROOT)
+        if n == 1 and cat == 'data':
+            lead = render_standings_table(standings)
+        content = LIST_PAGE.format(title=esc(CATEGORY_LABEL[cat]), desc=esc(CATEGORY_LABEL[cat]),
+            site=SITE_URL, file=page_file(base,n), ver=CSS_VER, header=HEADER_HTML,
+            heading=esc(CATEGORY_LABEL[cat]), note='', feed=lead+render_articles(part),
+            pager=render_pager(base,n,len(parts)), updated=esc(updated))
+        content = content.replace('  <p class="note"></p>\n','')
+        changed |= write_if_changed(page_file(base,n),content)
+    remove_stale_pages(base,len(parts))
     return changed
 
 
@@ -810,7 +795,11 @@ def update_category(cat, page, news, articles, standings, updated):
 
 def ensure_nav(text, x_enabled, filename=''):
     """Keep every generated and existing page on the same accessible header."""
-    return site_header.enhance(text, filename, x_enabled)
+    text = site_header.enhance(text, filename, x_enabled)
+    if filename == 'index.html' or filename.startswith(('cat-', 'news', 'articles', 'matome')):
+        if 'href="compact.css?v=1"' not in text:
+            text = text.replace('</head>', '<link rel="stylesheet" href="compact.css?v=1">\n</head>', 1)
+    return text
 
 
 def ga_snippet(ga_id):
@@ -972,6 +961,8 @@ def finalize_pages(cfg, pv):
 
 def main():
     news = load("news.json", [])
+    from scripts.fetch import categorise
+    news = [dict(item, category=categorise(item.get("title", ""))) for item in news]
     matome = load("matome.json", []) if os.path.exists(
         os.path.join(DATA_DIR, "matome.json")) else []
     standings = load("standings.json", {})
@@ -993,7 +984,7 @@ def main():
     # トップページ
     index_regions = {
         "TICKER": render_ticker(news),
-        "FEED": render_feed(news, limit=12),
+        "FEED": render_feed(news, limit=5),
         "MATOME": render_matome(matome, limit=TOP_MATOME),
         "HERO": render_hero(articles),
         "VIDEO": render_video(),
@@ -1013,7 +1004,27 @@ def main():
                                            "name": "AFFILIATE"},
                                           {"mode": "before", "anchor": '      <div class="card">\n        <h4>カテゴリ</h4>',
                                            "name": "XSIDE"}],
-                           index_page=True)
+                           index_page=True, manage_feed=False)
+
+    # Replace the homepage main column deterministically; keep the shared sidebar.
+    from bs4 import BeautifulSoup
+    home_path = os.path.join(ROOT, 'index.html')
+    with open(home_path, encoding='utf-8') as f:
+        soup = BeautifulSoup(f.read(), 'html.parser')
+    layout = soup.select_one('main > .layout')
+    if layout:
+        for sibling in list(layout.previous_siblings):
+            sibling.extract()
+    column = soup.select_one('div.main')
+    if column:
+        column.clear()
+        body = browse_ui.home(ROOT)
+        body += '<div class="sec-h"><h2>最新の記事</h2><a class="more" href="articles.html">記事一覧 ›</a></div><div class="feed">'+render_articles(articles[:8])+'</div>'
+        body += '<div class="sec-h"><h2>外部ニュース</h2><a class="more" href="news.html">もっと見る ›</a></div><div class="feed">'+render_feed(news,limit=5)+'</div>'
+        column.append(BeautifulSoup(body,'html.parser'))
+    for ticker in soup.select('.ticker'):
+        ticker.decompose()
+    changed |= write_if_changed('index.html',str(soup))
 
     # カテゴリページ（記事は20本ずつページ分け）
     for cat, page in CATEGORY_PAGE.items():
