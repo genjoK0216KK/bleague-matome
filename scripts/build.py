@@ -85,6 +85,11 @@ def read_articles():
         except OSError:
             continue
 
+        dated = re.fullmatch(r'article-games-(\d{8})\.html', fn)
+        if dated:
+            release = datetime.strptime(dated.group(1), '%Y%m%d').replace(tzinfo=JST) - timedelta(hours=1)
+            if datetime.now(JST) < release:
+                continue
         if 'name="article-alias"' in t or 'name="article-detail"' in t:
             continue
         t = re.sub(r"<!-- AUTO:PV:START -->.*?<!-- AUTO:PV:END -->", "", t, flags=re.DOTALL)
@@ -121,14 +126,18 @@ def read_articles():
     return items
 
 
-def article_order(a):
+def article_order(a, now=None):
     """新しい順に並べるためのキー。同じ日付なら 貢献度ランキング → article-daily-YYYYMMDD-3
     → -2 → 無印 の順（1日に複数本書いた日は後から書いた記事を上に）。"""
     m = re.search(r"-(\d+)\.html$", a["href"])
     seq = int(m.group(1)) if m and not re.search(r"\d{8}\.html$", a["href"]) else 1
     if a["href"].startswith("article-stats-"):
         seq = 99  # 貢献度ランキングは全試合終了後（夜）に出るので、その日の記事の中で最新
-    return (a["date"] or "0000.00.00", seq, a["href"])
+    today = (now or datetime.now(JST)).strftime("%Y.%m.%d")
+    date = a["date"] or "0000.00.00"
+    if date > today:
+        return (1, -int(date.replace(".", "")), seq, a["href"])
+    return (2 if date == today else 0, int(date.replace(".", "")), seq, a["href"])
 
 
 def render_articles(articles, category=None):

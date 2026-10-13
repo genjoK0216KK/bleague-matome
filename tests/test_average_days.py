@@ -48,7 +48,7 @@ class AveragesAndDays(unittest.TestCase):
             html=(root/name).read_text();soup=BeautifulSoup(html,'html.parser')
             self.assertEqual(len(soup.select('details.day-rankings')),1)
             self.assertIn('34.7',soup.get_text())
-            self.assertIn('公式IL情報の照合が未完了',soup.select_one('details').get_text())
+            self.assertIn('公式IL情報の照合が未完了',soup.select_one('details.day-rankings').get_text())
             self.assertIn('article-alias',old.read_text())
             self.assertIn(name,old.read_text())
             self.assertIn('dt=avg',html)

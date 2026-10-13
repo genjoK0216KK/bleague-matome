@@ -3,7 +3,8 @@ import hashlib
 import json
 import re
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
+JST = timezone(timedelta(hours=9))
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from urllib.parse import urlencode, urlparse
@@ -276,6 +277,9 @@ def fetch_day(client, year, league, date):
                 g['status'] = plan['notices'][key]
                 if key in plan['notice_dates']:
                     g['official_date'] = plan['notice_dates'][key]
+            actual_date = g.get('official_date') if g['status'] in ('cancelled', 'postponed') else None
+            if (actual_date or datetime.fromisoformat(g['starts_at']).astimezone(JST).date().isoformat()) != date:
+                raise DataError('Schedule fallback returned a different actual game date')
             games.append(g)
         except (ValueError, requests.RequestException) as exc:
             errors.append(str(exc))

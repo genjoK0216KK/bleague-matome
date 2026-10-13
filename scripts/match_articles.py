@@ -184,7 +184,7 @@ def render_notable(game, *, date, updated):
 
 
 def write_thumbnail(output, filename, label, teams, date):
-    svg = thumbgen.render(dict(type='news', label=label, team=teams, headline='試合一覧・結果' if label == '試合一覧' else '試合結果まとめ' if label == '試合結果' else '今季平均EFF', sub=date, facts=[]))
+    svg = thumbgen.render(dict(type='news', label=label, team=teams, headline=label if label in ('試合予定','試合結果・予定') else '試合一覧・結果' if label == '試合一覧' else '試合結果まとめ' if label == '試合結果' else '今季平均EFF', sub=date, facts=[]))
     (output / filename.replace('article-', 'thumb-').replace('.html', '.svg')).write_text(svg, encoding='utf-8')
 
 
@@ -293,6 +293,7 @@ def generate(client, *, year, date, preview_keys, output, editorial=None, as_of=
     confirmation_path = Path(__file__).resolve().parent.parent / 'data' / 'il-return-confirmations.json'
     return_confirmations = json.loads(confirmation_path.read_text()) if confirmation_path.exists() else {}
     totals_cache = {}
+    player_data = {}
     for key in preview_keys:
         try:
             game = official.parse_game(client.get(f'{official.BASE}/game_detail/?ScheduleKey={key}'), key, year)
@@ -321,6 +322,9 @@ def generate(client, *, year, date, preview_keys, output, editorial=None, as_of=
                 p.update(metric='EFF', aggregation='average', average=total.get('average'),
                          games=total.get('games'), stats_source=total.get('stats_source'),
                          coverage_complete=bool(total))
+            player_urls = {p.get(k) for p in players for k in ('position_source','stats_source')}
+            fetched = [s['retrieved_at'] for s in client.sources if s['url'] in player_urls]
+            player_data[key] = {'game': game, 'players': players, 'retrieved_at': min(fetched) if fetched else as_of.isoformat()}
             name, html = render_preview(game, players, updated=source_time(client, updated), warnings=warnings,
                                         extra_sources=[official.stats_url(year, league, aggregation='avg'), official.BASE + '/news/injury.html'])
             (output / name).write_text(annotate_provenance(html, client), encoding='utf-8')
@@ -328,9 +332,9 @@ def generate(client, *, year, date, preview_keys, output, editorial=None, as_of=
             artifacts.append(name)
         except (ValueError, official.requests.RequestException) as exc:
             errors.append(f'Preview {key}: {exc}')
-    report = {'artifacts': artifacts, 'removed': removed, 'errors': errors, 'results_status': summary['status'],
+    report = {'player_data': player_data, 'artifacts': artifacts, 'removed': removed, 'errors': errors, 'results_status': summary['status'],
               'schedule_complete': complete, 'sources': client.sources, 'offline': client.offline}
-    (output / 'generation-report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
+    (output / 'generation-report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2, default=str), encoding='utf-8')
     return report
 
 
@@ -358,7 +362,7 @@ def main():
     result = generate(client, year=args.season_year,
                       date=args.date, preview_keys=list(dict.fromkeys(preview_keys)), output=args.output_root, as_of=cutoff,
                       editorial=json.loads(Path(args.editorial_json).read_text()) if args.editorial_json else None)
-    print(json.dumps(result, ensure_ascii=False, indent=2))
+    print(json.dumps(result, ensure_ascii=False, indent=2, default=str))
     return 1 if result['errors'] else 0
 
 
