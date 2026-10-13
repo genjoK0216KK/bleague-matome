@@ -960,5 +960,10 @@
     "https://www.bleague.jp/schedule/?tab=2&year=2026&mon=10&day=13",
     "https://www.bleague.jp/schedule/?tab=3&year=2026&mon=10&day=13"
   ],
-  "errors": []
+  "errors": [],
+  "lineups": {
+    "B1": {
+      "error": "全対戦チームの選手データが未取得"
+    }
+  }
 }

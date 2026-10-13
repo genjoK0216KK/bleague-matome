@@ -273,3 +273,13 @@ table.stdtbl tbody tr:hover td {
 .day-rankings summary:focus-visible{outline:3px solid #1457d6;outline-offset:2px}
 .day-rankings h4{font-size:18px;margin:24px 0 10px;border-left:4px solid #ff5a1f;padding-left:10px}
 .game-status{font-weight:700}
+
+/* Daily five-player overview fits phone widths. */
+.daily-lineups table{min-width:0;table-layout:fixed;font-size:13px}
+.daily-lineups th,.daily-lineups td{padding:10px 7px;overflow-wrap:anywhere}
+.daily-lineups th:first-child{width:12%}
+.daily-lineups th:nth-child(2){width:52%}
+.daily-lineups th:nth-child(3),.daily-lineups th:nth-child(4){width:18%}
+.daily-lineups small{font-size:11px;color:#5c6672}
+.lineup-rule summary{cursor:pointer;font-size:13px;text-decoration:underline}
+.lineup-rule p{font-size:13px}

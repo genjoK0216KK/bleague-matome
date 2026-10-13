@@ -37,7 +37,7 @@ def promote(stage, root, report):
 
 def render_next(now, tomorrow, day_states, games, errors):
     date = tomorrow.isoformat()
-    body = '<div class="breadcrumb"><a href="index.html">ホーム</a> ／ 次戦</div><h1>明日の試合・次の開催日</h1><p>更新：' + now.strftime('%Y-%m-%d %H:%M JST') + '。取得予定は日本時間07:00 / 12:00 / 21:00 / 23:00です。</p>'
+    body = '<div class="breadcrumb"><a href="index.html">ホーム</a> ／ 次戦</div><h1>明日の試合・次の開催日</h1><p>更新：' + now.strftime('%Y-%m-%d %H:%M JST') + '。翌日プレビューは前日23:00 JSTの定期処理で公開します（処理・配信により遅れる場合があります）。</p>'
     body += '<p><a href="injury.html">現在のIL・抹消／復帰情報を見る</a></p><h2>' + date + '（日本時間・更新時点の翌日）の試合</h2>'
     for league, state in day_states.items():
         label = official.LEAGUES[league][3]
@@ -51,10 +51,10 @@ def render_next(now, tomorrow, day_states, games, errors):
                 start = datetime.fromisoformat(game['starts_at']).astimezone(data.JST).strftime('%H:%M') if game.get('starts_at') else '時刻未確認'
                 body += '<li>' + articles.esc(start) + ' ' + articles.link(game['source'], game['home'] + ' vs ' + game['away']) + '</li>'
             body += '</ul>'
-    dates = sorted({data.jst_date(g['starts_at']) for g in games} | {date, now.date().isoformat(), (now-timedelta(days=1)).date().isoformat()})
+    dates = sorted({data.jst_date(g['starts_at']) for g in games} | {now.date().isoformat(), (now-timedelta(days=1)).date().isoformat()} | ({date} if now.hour >= 23 else set()))
     body += '<h2>日付別の試合一覧・結果</h2><p>各日1記事でB.PREMIER・B.ONE・B.NEXTを分け、試合前の今季平均EFFと試合後の結果を確認できます。</p><ul>'
     for target_date in dates:
-        body += '<li><a href="' + day_articles.filename(target_date) + '">' + target_date + ' 試合一覧・結果</a></li>'
+        body += '<li><a href="' + day_articles.filename(target_date) + '">' + target_date + ' 試合情報</a></li>'
     body += '</ul>'
     if errors:
         body += '<div class="note">一部の公式情報を取得できませんでした。日程・出場状況は公式ページをご確認ください。</div>'
@@ -62,7 +62,21 @@ def render_next(now, tomorrow, day_states, games, errors):
     return stats.page('明日の試合・次の開催日', 'JSTの明日の日程と次戦プレビュー', 'next-games.html', body)
 
 
+def releasable_games(now, next_games, day_states):
+    now = now.astimezone(data.JST)
+    def on_date(g, date):
+        return (g.get('status') not in ('cancelled','postponed') and bool(g.get('starts_at'))
+                and data.jst_date(g['starts_at']) == date)
+    eligible = [g for g in next_games if on_date(g, now.date().isoformat())]
+    if now.hour >= 23:
+        tomorrow = (now + timedelta(days=1)).date().isoformat()
+        eligible += [g for state in day_states.values() for g in (state or [])
+                     if on_date(g, tomorrow)]
+    return list({g['game_id']:g for g in eligible}.values())
+
+
 def run(root, client, year, now):
+    now = now.astimezone(data.JST)
     root = Path(root); root.mkdir(parents=True, exist_ok=True)
     state_dir = root / 'data' / 'match_articles'; state_dir.mkdir(parents=True, exist_ok=True)
     errors = []
@@ -86,6 +100,8 @@ def run(root, client, year, now):
                 report = articles.generate(client, year=year, date=date, preview_keys=keys, output=stage, editorial=editorial, as_of=now)
                 promote(stage, root, report)
                 errors.extend(report['errors']); published.extend(report['artifacts'])
+                for key, bundle in report.get('player_data', {}).items():
+                    (state_dir / ('players-'+key+'.json')).write_text(json.dumps(bundle, ensure_ascii=False, indent=2, default=str), encoding='utf-8')
                 for path in stage.glob('article-results-one-next-*.json'):
                     shutil.copy2(path, state_dir / path.name)
             except (ValueError, official.requests.RequestException) as exc:
@@ -109,11 +125,13 @@ def run(root, client, year, now):
                 next_games.extend(official.fetch_next_games(client, year, league, now))
             except (ValueError, official.requests.RequestException) as exc:
                 errors.append('Next ' + league + ': ' + str(exc))
+        # Tomorrow becomes public at the existing 23:00 JST run; fixed date keys prevent duplicates.
+        next_games = releasable_games(now, next_games, day_states)
         generate_and_promote(now.date().isoformat(), [g['game_id'] for g in next_games])
         # Link only previews successfully generated in this run, not stale prior files.
         available = [g for g in next_games if f"article-preview-{g['game_id']}.html" in published]
         # One canonical article per actual date, with all three league sections.
-        dates = sorted({now.date().isoformat(), (now-timedelta(days=1)).date().isoformat(), tomorrow.isoformat()}
+        dates = sorted({now.date().isoformat(), (now-timedelta(days=1)).date().isoformat(), *( [tomorrow.isoformat()] if now.hour >= 23 else [])}
                        | {data.jst_date(g['starts_at']) for g in next_games})
         for target_date in dates:
             summary = day_articles.collect(client, year, target_date)
