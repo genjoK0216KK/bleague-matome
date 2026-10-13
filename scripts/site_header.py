@@ -6,12 +6,28 @@ LINKS = [('index.html', 'ホーム'), ('next-games.html', '次の試合'),
          ('cat-kekka.html', '試合結果'), ('injury.html', 'IL一覧'),
          ('cat-sokuho.html', '速報'), ('cat-iseki.html', '移籍情報'),
          ('cat-data.html', '順位・日程'), ('matome.html', 'まとめ')]
-LOGO = ('<a class="logo" href="index.html"><span class="mk">'
-        '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'
-        '<circle cx="12" cy="12" r="9" fill="#fff"/>'
-        '<path d="M12 3v18M3 12h18M6.2 5.2a13 13 0 000 13.6M17.8 5.2a13 13 0 010 13.6" stroke="#e2360b" stroke-width="1.3"/>'
-        '</svg></span><span class="wm"><span class="t">バスケ<em>まとめ</em></span>'
-        '<span class="sub">非公式ファンサイト</span></span></a>')
+LOGO = ('<a class="logo" href="index.html" aria-label="バスケまとめ ホーム">'
+        '<img class="brand-logo" src="basuke-matome-logo-dark.svg" width="240" height="45" alt="バスケまとめ">'
+        '<span class="brand-sub">非公式ファンサイト</span></a>')
+BRAND_HEAD = ('<link rel="icon" href="favicon.ico" sizes="any">\n'
+              '<link rel="icon" type="image/svg+xml" href="favicon.svg">\n'
+              '<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">\n'
+              '<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">\n'
+              '<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">\n'
+              '<link rel="manifest" href="site.webmanifest">\n'
+              '<meta name="theme-color" content="#151A18">\n')
+
+
+def brand_head(text):
+    # Match complete quoted attributes, including the old inline SVG data URI.
+    pattern = r"<(?:link|meta)\b(?:[^>\"']|\"[^\"]*\"|'[^']*')*>[ \t]*\n?"
+    def keep_or_remove(match):
+        tag = match.group(0)
+        if re.search(r"(?:rel=[\"'](?:icon|shortcut icon|apple-touch-icon|manifest)[\"']|name=[\"']theme-color[\"'])", tag, re.I):
+            return ''
+        return tag
+    text = re.sub(pattern, keep_or_remove, text, flags=re.I)
+    return text.replace('</head>', BRAND_HEAD + '</head>', 1)
 
 
 def current_section(filename, content=''):
@@ -51,6 +67,7 @@ def enhance(text, filename='', x_enabled=False):
     if not re.search(pattern, text, flags=re.DOTALL):
         return text
     text = re.sub(pattern, lambda _: render(filename, text, x_enabled), text, count=1, flags=re.DOTALL)
-    text = re.sub(r'style\.css(?:\?v=\d+)?', 'style.css?v=6', text)
+    text = re.sub(r'style\.css(?:\?v=\d+)?', 'style.css?v=7', text)
     text = re.sub(r'<script\b[^>]*src=["\']site-nav\.js(?:\?v=\d+)?["\'][^>]*>\s*</script>\s*', '', text)
+    text = brand_head(text)
     return text.replace('</head>', '<script src="site-nav.js?v=1" defer></script>\n</head>', 1)

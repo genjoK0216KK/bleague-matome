@@ -23,7 +23,7 @@ class Navigation(unittest.TestCase):
         self.assertEqual(result,site_header.enhance(result,'index.html'))
         soup=BeautifulSoup(result,'html.parser')
         self.assertEqual(len(soup.select('script[src*="site-nav"]')),1)
-        self.assertEqual(soup.select_one('link')['href'],'style.css?v=6')
+        self.assertEqual(soup.select_one('link')['href'],'style.css?v=7')
 
     def test_standalone_generated_pages_have_navigation(self):
         soup=BeautifulSoup(stats.page('T','D','injury.html','BODY'),'html.parser')

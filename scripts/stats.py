@@ -225,12 +225,7 @@ FOOTER = (
     '<a href="privacy.html">プライバシーポリシー</a><a href="contact.html">お問い合わせ</a>'
     '<span class="cp">© 2026 バスケまとめ（非公式）.</span></div></footer>'
 )
-FAVICON = (
-    "<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' "
-    "viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230d1b2a'/><circle cx='16' "
-    "cy='16' r='9' fill='%23ff5a1f'/><path d='M16 7v18M7 16h18M10 8.4a13 13 0 000 15.2M22 8.4a13 "
-    "13 0 010 15.2' stroke='%230d1b2a' stroke-width='1.4' fill='none'/></svg>\">"
-)
+FAVICON = site_header.BRAND_HEAD
 SITE_URL = "https://basuke-matome.jp/"
 LEADER_LABEL = {"pts": "得点", "reb": "リバウンド", "ast": "アシスト",
                 "stl": "スティール", "blk": "ブロック"}

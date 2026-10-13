@@ -1,6 +1,6 @@
 :root{
   --ink:#0d1219;--muted:#5c6672;--line:#e7eaee;--bg:#ffffff;--soft:#f5f7f9;
-  --brand:#ff5a1f;--brand2:#1457d6;--navy:#0d1b2a;--gold:#f2a900;
+  --brand:#ccf43b;--brand2:#1457d6;--navy:#151a18;--gold:#f2a900;
   --radius:14px;--maxw:1080px;
   --sans:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;
 }
@@ -12,13 +12,9 @@ img{max-width:100%;display:block}
 /* header */
 .hdr{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff}
 .hdr-in{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:20px;padding:12px 18px}
-.logo{display:flex;align-items:center;gap:11px;text-decoration:none}
-.logo .mk{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,#ff7a3d,#e2360b);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(226,54,11,.45);flex:0 0 auto}
-.logo .mk svg{width:24px;height:24px}
-.logo .wm{display:flex;flex-direction:column;line-height:1.05}
-.logo .wm .t{font-weight:900;font-size:20px;letter-spacing:.01em;color:#fff}
-.logo .wm .t em{font-style:normal;color:#ff7a3d}
-.logo .wm .sub{font-weight:700;font-size:10.5px;color:#8aa0b6;letter-spacing:.14em;margin-top:2px}
+.logo{display:flex;flex-direction:column;align-items:flex-start;gap:0;text-decoration:none}
+.brand-logo{display:block;width:240px;height:auto;max-width:100%}
+.brand-sub{padding-left:46px;font-size:10px;font-weight:700;color:#bdc6c0;line-height:1.3;letter-spacing:.12em}
 .gnav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
 .gnav a{font-size:14px;font-weight:700;color:#cdd8e4;padding:7px 13px;border-radius:8px}
 .gnav a:hover,.gnav a.on{background:rgba(255,255,255,.12);color:#fff}
@@ -157,9 +153,9 @@ tr:nth-child(even) td{background:var(--soft)}
 .logo{flex-shrink:0}
 .gnav{align-items:center;gap:2px;min-width:0}
 .gnav a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:9px 10px;font-size:13px;white-space:nowrap}
-.gnav a[aria-current]{background:#24384a;color:#fff;box-shadow:inset 0 -3px 0 #ff7a3d}
-.gnav a:focus-visible,.nav-toggle:focus-visible,.logo:focus-visible{outline:3px solid #ffba8f;outline-offset:3px}
-.nav-toggle{display:none;min-width:52px;min-height:48px;border:1px solid #526476;border-radius:8px;background:transparent;color:#fff;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto;padding:8px}
+.gnav a[aria-current]{background:#303a32;color:#fff;box-shadow:inset 0 -3px 0 var(--brand)}
+.gnav a:focus-visible,.nav-toggle:focus-visible,.logo:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+.nav-toggle{display:none;min-width:52px;min-height:48px;border:1px solid #67736b;border-radius:8px;background:transparent;color:#fff;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto;padding:8px}
 .nav-toggle[hidden]{display:none}
 .nav-toggle-lines{display:flex;flex-direction:column;gap:4px;width:22px}
 .nav-toggle-lines span{height:2px;width:100%;background:currentColor;border-radius:1px}
@@ -169,6 +165,12 @@ tr:nth-child(even) td{background:var(--soft)}
   .gnav{margin:0;width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
   .gnav a{justify-content:flex-start;white-space:normal;overflow-wrap:anywhere;border-radius:6px;font-size:14px;padding:10px 12px}
   .nav-enhanced .nav-toggle{display:flex}
-  .nav-enhanced .gnav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);padding:12px 16px 16px;border-top:1px solid #34485b;box-shadow:0 10px 16px rgba(0,0,0,.18);max-height:calc(100vh - 72px);max-height:calc(100dvh - 72px);overflow-y:auto}
+  .nav-enhanced .gnav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);padding:12px 16px 16px;border-top:1px solid #39453c;box-shadow:0 10px 16px rgba(0,0,0,.18);max-height:calc(100vh - 72px);max-height:calc(100dvh - 72px);overflow-y:auto}
   .nav-enhanced.nav-open .gnav{display:grid}
 }
+
+/* Approved lime identity: dark foreground on lime surfaces. */
+.hero .cat,.rank .n.top,.ticker,.ticker .roll a,.stand .row.jp .r{color:#151a18}
+.ticker .lbl{background:#151a18;color:#ccf43b}
+@media(min-width:900px) and (max-width:1050px){.brand-logo{width:200px}.gnav a{padding-left:7px;padding-right:7px}.hdr-in{gap:12px}}
+@media(max-width:899px){.brand-logo{width:200px}.brand-sub{padding-left:38px}.logo{max-width:calc(100% - 70px)}}
