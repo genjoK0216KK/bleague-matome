@@ -33,8 +33,8 @@ class OfficialAdapters(unittest.TestCase):
 
     def test_unplayed_distinct_from_missing(self):
         from test_preview_data import player, rank
-        self.assertEqual(rank([player(games=0,total=0)])['excluded'][0]['exclusion_reason'], 'no_appearance')
-        self.assertEqual(rank([player(games=None,total=None)])['excluded'][0]['exclusion_reason'], 'total_unverified')
+        self.assertEqual(rank([player(games=0,average=0)])['excluded'][0]['exclusion_reason'], 'no_appearance')
+        self.assertEqual(rank([player(games=None,average=None)])['excluded'][0]['exclusion_reason'], 'average_unverified')
 
     def test_next_game_skips_completed_and_uses_actual_time(self):
         from datetime import datetime, timezone

@@ -16,6 +16,11 @@ import re
 import sys
 from datetime import datetime, timedelta, timezone
 
+try:
+    from . import site_header
+except ImportError:
+    import site_header
+
 JST = timezone(timedelta(hours=9))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(ROOT, "data")
@@ -80,6 +85,8 @@ def read_articles():
         except OSError:
             continue
 
+        if 'name="article-alias"' in t or 'name="article-detail"' in t:
+            continue
         t = re.sub(r"<!-- AUTO:PV:START -->.*?<!-- AUTO:PV:END -->", "", t, flags=re.DOTALL)
         h1 = re.search(r"<h1[^>]*>(.*?)</h1>", t, re.DOTALL)
         title = re.sub(r"<[^>]+>", "", h1.group(1)).strip() if h1 else ""
@@ -644,16 +651,7 @@ def page_title(text, n):
 
 # ------------------------------------------------------------ list pages
 
-HEADER_HTML = (
-    '<header class="hdr"><div class="hdr-in"><a class="logo" href="index.html"><span class="mk">'
-    '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" '
-    'r="9" fill="#fff"/><path d="M12 3v18M3 12h18M6.2 5.2a13 13 0 000 13.6M17.8 5.2a13 13 0 010 13.6" '
-    'stroke="#e2360b" stroke-width="1.3"/></svg></span><span class="wm"><span class="t">バスケ<em>まとめ'
-    '</em></span><span class="sub">非公式ファンサイト</span></span></a><nav class="gnav">'
-    '<a href="index.html">最新</a><a href="cat-kekka.html">試合結果</a><a href="cat-sokuho.html">速報</a>'
-    '<a href="cat-iseki.html">移籍情報</a><a href="cat-data.html">順位・日程</a>'
-    '<a href="matome.html">まとめ</a></nav></div></header>'
-)
+HEADER_HTML = site_header.render()
 
 LIST_PAGE = """<!DOCTYPE html>
 <html lang="ja">
@@ -802,24 +800,9 @@ def update_category(cat, page, news, articles, standings, updated):
 
 # ------------------------------------------------- nav / GA / PV / popular
 
-NAV_EXTRA = [("matome.html", "まとめ"), ("next-games.html", "次戦"), ("injury.html", "IL・復帰")]
-
-
-def ensure_nav(text, x_enabled):
-    """全ページ共通のグローバルナビに「まとめ」（と設定時は「クラブX」）を入れる。"""
-    m = re.search(r'(<nav class="gnav">)(.*?)(\s*)(</nav>)', text, re.DOTALL)
-    if not m:
-        return text
-    inner = m.group(2)
-    ws = m.group(3)
-    indent = ws if "\n" in ws else ""
-    links = list(NAV_EXTRA) + ([("x.html", "クラブX")] if x_enabled else [])
-    if not x_enabled:
-        inner = re.sub(r'\s*<a href="x\.html"[^>]*>[^<]*</a>', "", inner)
-    for href, label in links:
-        if f'href="{href}"' not in inner:
-            inner += (indent + "  " if indent else "") + f'<a href="{href}">{label}</a>'
-    return text[:m.start()] + m.group(1) + inner + ws + m.group(4) + text[m.end():]
+def ensure_nav(text, x_enabled, filename=''):
+    """Keep every generated and existing page on the same accessible header."""
+    return site_header.enhance(text, filename, x_enabled)
 
 
 def ga_snippet(ga_id):
@@ -966,7 +949,7 @@ def finalize_pages(cfg, pv):
         path = os.path.join(ROOT, fn)
         with open(path, encoding="utf-8") as f:
             original = f.read()
-        text = ensure_nav(original, bool(cfg["x_list_url"]))
+        text = ensure_nav(original, bool(cfg["x_list_url"]), fn)
         text = ensure_ga(text, cfg["ga4_id"])
         if fn.startswith("article-"):
             text = ensure_pv(text, pv_of(pv["total"], fn))

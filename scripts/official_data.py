@@ -117,9 +117,11 @@ def parse_game(page, key, year, schedule_status=None):
     return game
 
 
-def stats_url(year, league, index=None):
+def stats_url(year, league, index=None, aggregation="tot"):
+    if aggregation not in ('tot', 'avg'):
+        raise DataError('Unsupported official aggregation')
     tab, target, event, _ = LEAGUES[league]
-    params = dict(year=year, tab=tab, target=target, value='EFF', o='desc', e=event, dt='tot')
+    params = dict(year=year, tab=tab, target=target, value='EFFPG' if aggregation == 'avg' else 'EFF', o='desc', e=event, dt=aggregation)
     if index is not None:
         params.update(data_format='json', index=index)
     return BASE + '/stats/?' + urlencode(params)
@@ -128,13 +130,13 @@ def stats_url(year, league, index=None):
 def stats_columns(page):
     soup = BeautifulSoup(page, 'html.parser')
     for head in soup.select('thead'):
-        if head.select_one('[data-sort-value="EFF"]'):
+        if head.select_one('[data-sort-value="EFF"], [data-sort-value="EFFPG"]'):
             cols = [th.get('data-sort-value') or 'rank' for th in head.select('th')
                     if th.has_attr('rowspan') or th.has_attr('data-sort-value')]
             if len(cols) != len(set(cols)) or 'GameCount' not in cols or 'PlayerNameJ' not in cols:
                 raise DataError('Ambiguous stats headers')
             return cols
-    raise DataError('Cumulative EFF header missing')
+    raise DataError('Official EFF header missing')
 
 
 def parse_stats_rows(topics, columns, url):
@@ -152,7 +154,7 @@ def parse_stats_rows(topics, columns, url):
                 raise DataError('Stats player identity missing')
             pid = re.search(r'PlayerID=(\d+)', link['href']).group(1)
             fields = dict(zip(columns, (c.get_text(' ', strip=True) for c in cells)))
-            raw = fields['EFF'].replace(',', '')
+            raw = fields['EFFPG' if 'EFFPG' in fields else 'EFF'].replace(',', '')
             try:
                 eff = Decimal(raw)
                 if not eff.is_finite():
@@ -183,20 +185,22 @@ def choose_totals(rows):
     return out
 
 
-def fetch_totals(client, year, league):
-    header_page = client.get(stats_url(year, league))
+def fetch_totals(client, year, league, aggregation="tot"):
+    header_page = client.get(stats_url(year, league, aggregation=aggregation))
     header_soup = BeautifulSoup(header_page, 'html.parser')
-    for field, expected in (('year', str(year)), ('data', 'tot'), ('event', str(LEAGUES[league][2]))):
+    for field, expected in (('year', str(year)), ('data', aggregation), ('event', str(LEAGUES[league][2]))):
         option = header_soup.select_one(f'select[name="{field}"] option[selected]')
         if option is None or option.get('value') != expected:
             raise DataError('Stats scope/aggregation not confirmed')
     columns = stats_columns(header_page)
+    if ('EFFPG' if aggregation == 'avg' else 'EFF') not in columns:
+        raise DataError('Official EFF column does not match aggregation')
     index, seen, rows = 0, set(), []
     for _ in range(100):
         if index in seen:
             raise DataError('Stats pagination loop')
         seen.add(index)
-        url = stats_url(year, league, index)
+        url = stats_url(year, league, index, aggregation=aggregation)
         payload = json.loads(client.get(url))
         topics = payload.get('topics')
         if not isinstance(topics, list):
@@ -207,12 +211,21 @@ def fetch_totals(client, year, league):
             totals = choose_totals(rows)
             for record in totals.values():
                 record['stats_payload_source'] = record['stats_source']
-                record['stats_source'] = stats_url(year, league)
+                record['stats_source'] = stats_url(year, league, aggregation=aggregation)
             return totals
         if following <= index:
             raise DataError('Stats pagination did not advance')
         index = following
     raise DataError('Stats pagination limit exceeded')
+
+
+def fetch_averages(client, year, league):
+    """Read official dt=avg values; never derive averages from totals or boxscores."""
+    records = fetch_totals(client, year, league, aggregation='avg')
+    for row in records.values():
+        row['average'] = row.pop('total')
+        row['aggregation'] = 'average'
+    return records
 
 
 def parse_schedule(page, league, date):

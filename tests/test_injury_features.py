@@ -60,7 +60,7 @@ class ILTests(unittest.TestCase):
 
     def test_top_three_including_boundary_ties(self):
         game = official.parse_game((Path(__file__).parent/'fixtures/game-506464.html').read_text(), '506464', 2026)
-        players = [dict(player_id=str(i), name='Player'+str(i), team='Team', season=game['season'], competition=game['competition'], positions=['PG'], position_source='https://www.bleague.jp/club_detail/', availability='unknown', metric='EFF', aggregation='total', total=score, games=4, stats_source='https://www.bleague.jp/stats/', coverage_complete=True) for i,score in enumerate([10,9,8,8,7])]
+        players = [dict(player_id=str(i), name='Player'+str(i), team='Team', season=game['season'], competition=game['competition'], positions=['PG'], position_source='https://www.bleague.jp/club_detail/', availability='unknown', metric='EFF', aggregation='average', average=score, games=4, stats_source='https://www.bleague.jp/stats/', coverage_complete=True) for i,score in enumerate([10,9,8,8,7])]
         _, html = articles.render_preview(game, players, updated='TEST')
         soup = BeautifulSoup(html,'html.parser')
         self.assertEqual(len(soup.select('table tr'))-1, 4)
@@ -88,13 +88,13 @@ class ILTests(unittest.TestCase):
         def day(client, year, league, date):
             calls.append(date)
             return [], True, '', []
-        with tempfile.TemporaryDirectory() as folder, patch.object(official, 'fetch_day', side_effect=day), patch.object(official, 'fetch_next_games', side_effect=lambda c,y,l,n: [future] if l == 'BP' else []), patch.object(official, 'fetch_totals', return_value={}), patch.object(official, 'fetch_roster', return_value=[]):
+        with tempfile.TemporaryDirectory() as folder, patch.object(official, 'fetch_day', side_effect=day), patch.object(official, 'fetch_next_games', side_effect=lambda c,y,l,n: [future] if l == 'BP' else []), patch.object(official, 'fetch_averages', return_value={}), patch.object(official, 'fetch_roster', return_value=[]):
             report = update.run(folder, C(), 2026, now.astimezone(articles.data.JST))
             self.assertEqual(report['errors'], [])
             self.assertTrue((Path(folder) / 'article-preview-506464.html').exists())
             self.assertTrue((Path(folder) / 'injury.html').exists())
             self.assertTrue((Path(folder) / 'next-games.html').exists())
-            self.assertEqual(calls[:4], ['2026-10-13','2026-10-13','2026-10-12','2026-10-12'])
+            self.assertEqual(calls[:6], ['2026-10-13']*3 + ['2026-10-12']*3)
             self.assertFalse((Path(folder) / 'generation-report.json').exists())
 
     def test_profile_failure_preserves_already_verified_il(self):

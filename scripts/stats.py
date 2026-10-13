@@ -25,6 +25,11 @@ from datetime import datetime, timedelta, timezone
 import requests
 from bs4 import BeautifulSoup
 
+try:
+    from . import site_header
+except ImportError:
+    import site_header
+
 JST = timezone(timedelta(hours=9))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATS_DIR = os.path.join(ROOT, "data", "stats")
@@ -214,16 +219,7 @@ def summarise(date, games):
 
 # --------------------------------------------------------------- rendering
 
-HEADER = (
-    '<header class="hdr"><div class="hdr-in"><a class="logo" href="index.html"><span class="mk">'
-    '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" '
-    'cy="12" r="9" fill="#fff"/><path d="M12 3v18M3 12h18M6.2 5.2a13 13 0 000 13.6M17.8 5.2a13 '
-    '13 0 010 13.6" stroke="#e2360b" stroke-width="1.3"/></svg></span><span class="wm"><span '
-    'class="t">バスケ<em>まとめ</em></span><span class="sub">非公式ファンサイト</span></span>'
-    '</a><nav class="gnav"><a href="index.html">最新</a><a href="cat-kekka.html">試合結果</a>'
-    '<a href="cat-sokuho.html">速報</a><a href="cat-iseki.html">移籍情報</a>'
-    '<a href="cat-data.html">順位・日程</a><a href="matome.html">まとめ</a></nav></div></header>'
-)
+HEADER = site_header.render()
 FOOTER = (
     '<footer class="ft"><div class="ft-in"><a href="about.html">このサイトについて</a>'
     '<a href="privacy.html">プライバシーポリシー</a><a href="contact.html">お問い合わせ</a>'
@@ -320,7 +316,7 @@ def body_sections(s):
 
 
 def page(title, desc, url, body):
-    return f"""<!DOCTYPE html>
+    result = f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -347,6 +343,8 @@ def page(title, desc, url, body):
 </body>
 </html>
 """
+
+    return site_header.enhance(result, url)
 
 
 def article_title(s):

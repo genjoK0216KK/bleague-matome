@@ -4,8 +4,8 @@ from scripts.preview_data import daily_results, jst_date, position_rankings
 
 def player(player_id="p1", **changes):
     p = dict(player_id=player_id, name="TEST PLAYER", positions=["SF", "PF"],
-             season="2026-27", competition="BP", metric="EFF", aggregation="total",
-             total=130, coverage_complete=True, availability="unknown",
+             season="2026-27", competition="BP", metric="EFF", aggregation="average",
+             average=130, coverage_complete=True, availability="unknown",
              stats_source="https://example.invalid/stats", position_source="https://example.invalid/player")
     return dict(p, **changes)
 
@@ -29,17 +29,17 @@ def results(games, **changes):
 
 class Rankings(unittest.TestCase):
     def test_missing_not_zero(self):
-        r = rank([player(total=None)])
+        r = rank([player(average=None)])
         self.assertEqual(r["positions"]["SF"], [])
-        self.assertEqual(r["excluded"][0]["exclusion_reason"], "total_unverified")
+        self.assertEqual(r["excluded"][0]["exclusion_reason"], "average_unverified")
 
     def test_ties_and_multiple_positions(self):
-        r = rank([player("a"), player("b"), player("c", total=129)])
+        r = rank([player("a"), player("b"), player("c", average=129)])
         self.assertEqual([p["rank"] for p in r["positions"]["SF"]], [1, 1, 3])
         self.assertEqual(len(r["positions"]["PF"]), 3)
 
     def test_no_average_conversion(self):
-        self.assertEqual(len(rank([player(aggregation="average", total=26)]) ["excluded"]), 1)
+        self.assertEqual(len(rank([player(aggregation="total", average=26)]) ["excluded"]), 1)
 
     def test_wrong_scope_and_partial_coverage(self):
         for changes in ({"season": "2025-26"}, {"competition": "B1"}, {"coverage_complete": False}):
@@ -55,13 +55,13 @@ class Rankings(unittest.TestCase):
 
     def test_invalid_and_zero_totals(self):
         for value in ("NaN", "Infinity", "bad", True):
-            self.assertEqual(len(rank([player(total=value)])["excluded"]), 1)
-        self.assertEqual(rank([player(total=0)])["positions"]["SF"][0]["total"], 0)
+            self.assertEqual(len(rank([player(average=value)])["excluded"]), 1)
+        self.assertEqual(rank([player(average=0)])["positions"]["SF"][0]["average"], 0)
 
     def test_duplicate_identity(self):
         self.assertEqual(len(rank([player(), player()])["positions"]["SF"]), 1)
         with self.assertRaises(ValueError):
-            rank([player(), player(total=131)])
+            rank([player(), player(average=131)])
 
     def test_positions_require_source(self):
         for changes in ({"positions": []}, {"position_source": None}, {"positions": ["F"]}):

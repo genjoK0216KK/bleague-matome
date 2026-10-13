@@ -8,13 +8,14 @@ import tempfile
 from datetime import datetime, timedelta
 from pathlib import Path
 try:
-    from . import official_data as official, preview_data as data, match_articles as articles, injury_page, stats
+    from . import official_data as official, preview_data as data, match_articles as articles, injury_page, stats, day_articles
 except ImportError:
     import official_data as official
     import preview_data as data
     import match_articles as articles
     import injury_page
     import stats
+    import day_articles
 
 ROOT = Path(__file__).resolve().parent.parent
 MANAGED = re.compile(r'(?:article-(?:results-one-next-\d{8}|result-highlight-\d+|preview-\d+)\.html|thumb-(?:results-one-next-\d{8}|result-highlight-\d+|preview-\d+)\.svg)$')
@@ -50,9 +51,10 @@ def render_next(now, tomorrow, day_states, games, errors):
                 start = datetime.fromisoformat(game['starts_at']).astimezone(data.JST).strftime('%H:%M') if game.get('starts_at') else '時刻未確認'
                 body += '<li>' + articles.esc(start) + ' ' + articles.link(game['source'], game['home'] + ' vs ' + game['away']) + '</li>'
             body += '</ul>'
-    body += '<h2>次の開催日プレビュー</h2><p>明日に試合がない場合も、実際の開催日を表示します。通算EFF上位3人（同点の3人目を含む）を比較し、出場未確認・IL情報を明示します。</p><ul>'
-    for g in games:
-        body += '<li><a href="article-preview-' + articles.esc(g['game_id']) + '.html">' + articles.esc(data.jst_date(g['starts_at']) + ' ' + g['home'] + ' vs ' + g['away']) + '</a></li>'
+    dates = sorted({data.jst_date(g['starts_at']) for g in games} | {date, now.date().isoformat(), (now-timedelta(days=1)).date().isoformat()})
+    body += '<h2>日付別の試合一覧・結果</h2><p>各日1記事でB.PREMIER・B.ONE・B.NEXTを分け、試合前の今季平均EFFと試合後の結果を確認できます。</p><ul>'
+    for target_date in dates:
+        body += '<li><a href="' + day_articles.filename(target_date) + '">' + target_date + ' 試合一覧・結果</a></li>'
     body += '</ul>'
     if errors:
         body += '<div class="note">一部の公式情報を取得できませんでした。日程・出場状況は公式ページをご確認ください。</div>'
@@ -110,7 +112,18 @@ def run(root, client, year, now):
         generate_and_promote(now.date().isoformat(), [g['game_id'] for g in next_games])
         # Link only previews successfully generated in this run, not stale prior files.
         available = [g for g in next_games if f"article-preview-{g['game_id']}.html" in published]
-        html = render_next(now, tomorrow, day_states, available, errors)
+        # One canonical article per actual date, with all three league sections.
+        dates = sorted({now.date().isoformat(), (now-timedelta(days=1)).date().isoformat(), tomorrow.isoformat()}
+                       | {data.jst_date(g['starts_at']) for g in next_games})
+        for target_date in dates:
+            summary = day_articles.collect(client, year, target_date)
+            errors.extend(summary['errors'])
+            written = day_articles.write(client, root, summary, published, now.strftime('%Y-%m-%d %H:%M JST'))
+            if written:
+                published.append(written)
+            else:
+                errors.append('Dated article retained after incomplete fetch: ' + target_date)
+        html = render_next(now, tomorrow, day_states, next_games, errors)
         if client.offline:
             html = html.replace('</head>', '<meta name="robots" content="noindex,nofollow"></head>').replace('<h1>', '<p class="note">保存データによるローカル検証版です。</p><h1>', 1)
         (root / 'next-games.html').write_text(html, encoding='utf-8')

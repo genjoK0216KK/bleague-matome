@@ -1,16 +1,15 @@
-# 次戦ランキング・B.ONE/B.NEXT日次結果：実装と検証
+# 次戦ランキング・3リーグ日付別記事：実装と検証
 
 ## 状態
 
-2026-10-13、`codex/preview-rankings-daily-results` で公式API接続・HTML生成・ローカルdry-runを実施。
-最新公開main `4507afc312849776344ae9fc6040c04ec4fcfd6e` まで作業ブランチをfast-forward済み。
-追加本人依頼により、独立レビュー後の本番公開を対象へ追加。cron時刻と資格情報は変更しない。
+初回機能はPR #3で公開済み。追加仕様は`codex/responsive-site-nav`で実装し、PR確認待ち（未公開）。
+最新仕様・検証は [navigation-and-average-update.md](navigation-and-average-update.md) を参照。cron時刻と資格情報は変更しない。
 元のClaude定期実行checkout `/Users/genjo/Claude/Scheduled/bleague-daily/clone` は変更していない。
 ローカルcloneの `origin` は元checkout、追加remote `github` は公開GitHub。originにpushしないこと。
 
 ## 追加・変更ファイル
 
-- `scripts/official_data.py`：公式HTML/JSON取得、ページング、シーズン・大会・合計列検証、日程、次戦探索、登録選手、IL照合。
+- `scripts/official_data.py`：公式HTML/JSON取得、ページング、シーズン・大会・平均/合計列検証、日程、次戦探索、登録選手、IL照合。
 - `scripts/preview_data.py`：副作用のない順位計算と日次結果判定。
 - `scripts/match_articles.py`：明示した別出力先へプレビュー・統合結果・特筆記事・サムネを生成するCLI。
 - `scripts/stats.py`：既存EFF説明を現行公式定義へ修正。既存BP集計の計算・公開フローは変更していない。
@@ -21,7 +20,7 @@
 自動実行はscripts/update_match_features.py。現在IL、当日/前日結果、翌日日程、次戦プレビューの順に実行する。
 生成記事を隔離コピーに置き既存buildを実行した場合の一覧・カテゴリ・sitemap連携は検証済み。
 
-## 実データで確認したこと
+## 初回公開時の実データ検証記録（当時は通算）
 
 - 公式公開データを認証なしで取得できた。sandbox内DNSは失敗したが、承認された読み取り専用実行では取得成功。
 - BP通算APIを終端まで取得。オーガスト PlayerID 51000312 は7試合・通算EFF243、ヴァン・タバーゲン 51000655 は5試合・130。
@@ -36,8 +35,8 @@
 
 ## データ・表示方針
 
-ランキングは次戦の両チーム内、2026-27レギュラーシーズンの公式通算EFF。
-平均×試合数は禁止。対象大会外・過年度・未取得を0で補わない。
+ランキングは次戦の両チーム内、2026-27レギュラーシーズンの公式今季平均EFF。
+平均は公式のdt=avg/EFFPG列を直接使用し、通算/Gで再計算しない。対象大会外・過年度・未取得を0で補わない。
 PlayerID単位で扱い、移籍のTOTALは一度だけ採用。所属別行しかなく合計を検証できない場合は未確認として除外。
 複数ポジションは各表へ一度ずつ掲載。同値順位は1,1,3。公式G=0の未出場と未取得は別状態。
 
@@ -47,10 +46,10 @@ PlayerID単位で扱い、移籍のTOTALは一度だけ採用。所属別行し�
 それ以外はunknown（出場未確認）と表示する。IL公示から削除された行は欠場根拠にしない。
 ILは取得時点の状態で、未来の試合時点の確定欠場として断定しない注記を表示。
 
-統合記事は `article-results-one-next-YYYYMMDD.html` の日付固定キー。
+統合記事は `article-games-YYYYMMDD.html` の日付固定キー。3リーグの予定・結果・平均ランキングを一つの記事内で表示。旧results URLはcanonical付き互換ページとして保持する。
 未確定・取得不完全なら途中版。全試合確定後は同じ記事を更新。公式訂正は再取得した値で上書き。
 取得失敗で前回の試合が消える場合は旧記事を保持しエラー報告する。
-試合なし日は新規記事を作らない。片方だけ試合がある場合はもう片方の「試合なし」を明示。
+対象日の3リーグを各節で表示し、完全取得済みのリーグだけ「試合なし」と明示。
 延期・中止はスコアを表示せず別状態。開始時刻不明の中止等に00:00を捏造しない。
 
 個別記事は編集者が検証済みの特筆理由と公式URLを `--editorial-json` で渡した場合だけ作成。
@@ -79,7 +78,7 @@ output-rootは必須。コードを起動するだけでリポジトリや公開
 python -m unittest discover -s tests -v
 ```
 
-## 検証記録・プレビュー
+## 初回公開時の検証記録・プレビュー（過去版）
 
 作業ルート `/Users/genjo/Documents/Codex/2026-10-13/task-3/` 内：
 
@@ -93,7 +92,7 @@ python -m unittest discover -s tests -v
 - `dry-run/article-*-mobile.png`, `dry-run/article-*-desktop.png`：headless Chromeによる全ページ画像。
 - `official-capture/`：再現用の公式レスポンス完全保存。公開repoには含めない。
 
-テストは欠損、負値/ゼロ、同順位、複数position、未出場、平均拒否、移籍TOTAL、重複、取得失敗、
+テストは欠損、負値/ゼロ、同順位、複数position、未出場、集計モード不一致拒否、移籍TOTAL、重複、取得失敗、
 日付JST境界、日程fallback、未開催と別試合スコア、延期/中止、訂正上書き、個別記事条件、
 既存PREMIER描画回帰、一覧・sitemap・再実行の重複なしを含む。
 
