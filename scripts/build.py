@@ -352,7 +352,6 @@ def replace_region(text, name, body):
 AUTO_BLOCK = """
   <!-- ここから自動更新エリア（scripts/build.py が生成。手で編集しても次回上書きされます） -->
 {standings}  <div class="sec-h"><span class="bar"></span><h2>公式・メディアの新着</h2><a class="more" href="news.html">もっと見る ›</a></div>
-  <p class="note auto-note">配信元の見出しとリンクのみを自動収集しています。タップすると元記事が開きます。</p>
   <div class="feed">
 <!-- AUTO:FEED:START -->
     <p class="note">まもなく自動更新が始まります。</p>
@@ -695,6 +694,8 @@ def write_list_pages(base, rows, render, title, desc, heading, note, updated):
             header=HEADER_HTML, heading=esc(heading), note=note, feed=render(part),
             pager=render_pager(base, n, len(pages)), updated=esc(updated),
         )
+        if not note:
+            content = content.replace('  <p class="note"></p>\n', '')
         changed |= write_if_changed(fn, content)
     remove_stale_pages(base, len(pages))
     return changed
@@ -706,8 +707,7 @@ def write_news_pages(news, updated):
         "新着ニュース一覧",
         "B.LEAGUE公式・バスケ専門メディアの最新ニュースを自動でまとめた一覧。1日4回更新。",
         "新着ニュース一覧",
-        "B.LEAGUE公式サイトとバスケ専門メディアの新着を自動で収集しています。"
-        "見出しをタップすると配信元の記事が開きます。",
+        "",
         updated)
 
 
