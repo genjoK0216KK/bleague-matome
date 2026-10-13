@@ -11,7 +11,7 @@ claude.ai の「ルーティン → バスケまとめ_自動更新 → 編集�
 - 海外は「日本人選手（八村塁・河村勇輝・富永啓生 など）」と「超有名選手（カリー、ヨキッチ、レブロン、ドンチッチ、ウェンバンヤマ など）」の話題だけ。それ以外のNBAネタは書かない。
 
 # 今日書く5本（話題が重ならないように）
-1. 国内の最重要トピック（前日の試合結果のまとめ など）
+1. 国内の最重要トピック（通常の日付別試合記事と重複しない特筆事項 など）
 2. 国内の別トピック（移籍・契約、負傷、日本代表 など）
 3. 国内の別トピック（Wリーグ、高校・大学、3x3、順位・日程やデータ など）
 4. 海外の日本人選手の話題（八村塁・河村勇輝・富永啓生 など）。無い日は国内の話題にする。
@@ -24,6 +24,22 @@ claude.ai の「ルーティン → バスケまとめ_自動更新 → 編集�
 - 【使うツール】公開は必ず【mcp__GitHUB__push_files】（コネクタ名『GitHUB』大文字のpush_files）を使い、書き上げた記事・サムネ＋build.pyが再生成した一覧ファイルを【1コミット】にまとめて送る。各ファイルは作業ディレクトリの現在の中身を Read して {path, content} で渡す。commitメッセージ『自動まとめ: <YYYY-MM-DD> <トピック1> ほか』。
 - 【小文字は使うな】mcp__github__（小文字)の push_files は別権限で 403(git/trees)になるため使わない。必ず mcp__GitHUB__（大文字)を使う。
 - 【フォールバック】万一 mcp__GitHUB__push_files が 403 等で失敗したら、テスト内容は送らず、手順の一覧ファイルを1つずつ mcp__GitHUB__create_or_update_file（実在の完全な中身)で順にコミットして全ファイルを反映する。それも 403 なら、エラー全文と作成ファイル名を報告し、件名『bleague routine publish result』のGmail下書きに残して終了。
+
+# 最新main・自動生成ページの保護
+- 作業開始時にGitHubの最新mainのコミットSHAとファイルを取得する。古いローカルcloneをそのまま公開元にしない。既存のローカル作業は退避・差分確認し、他の作業を上書きしない。
+- 公開直前にもmainのSHAを再確認する。開始時から進んでいれば最新mainへ今回の記事・サムネだけを適用し直し、最新のscripts/build.pyで一覧を再生成して差分を再確認する。競合を解消できない場合は公開せず完成原稿とエラーを報告する。この保護はpush_filesと1ファイルずつのフォールバックの両方に適用する。
+- 今回の記事・サムネと、それを最新main上でbuildした必要な一覧差分だけを公開する。git statusにあるファイルを無条件にすべて送らない。別作業の差分、古いスクリプト/CSS/JS、キャプチャ、一時JSONを送らない。
+- injury.html、next-games.html、article-games-*、article-preview-*、article-results-one-next-*、対応するthumb-*、data/match_articles/*、IL管理データは自動更新管理対象。今回の記事執筆で削除・手書き上書き・旧版復元しない。buildが共通ヘッダー等を更新した場合も、最新の本文・管理データを保持していることを確認する。
+- 共通ナビは最新のscripts/site_header.py、site-nav.js、style.cssを使用する。ホーム・次の試合・試合結果・IL一覧、スマホ開閉、現在地表示を古いヘッダーで戻さない。ロゴ・faviconも最新mainを維持する。
+- 既存の定期実行時刻・workflow・資格情報は変更しない。
+
+# 試合記事・平均EFF・ILの編集ルール
+- B.PREMIER／B.ONE／B.NEXTの通常の予定・結果は、JSTの実際の試合日ごとに1本のarticle-games-YYYYMMDD.htmlへ集約し、記事内を3リーグの節に分ける。ランキングも同じ日付記事内で表示する。旧article-results-one-next-*は互換URL、article-preview-*は詳細URLとして保持し、同内容の記事を別途作らない。
+- 次戦の順位は当該シーズンの公式今季平均EFF（1試合当たり）。公式statsのdt=avg・value=EFFPGおよびEFFPG列を使い、シーズン・リーグ区分を確認する。通算EFFや通算÷試合数で置き換えない。既存の当日B.PREMIER単試合EFF集計とは区別する。
+- 両チーム内のポジション別上位3人と3人目に並ぶ同点者を掲載し、出場試合数を併記。同順位は1,1,3、複数ポジションは各表へ1回ずつ掲載。未取得・G=0・移籍合算未確認は0で補わず未確認とする。
+- 公式日程URLが別日にfallbackしても、対象日の試合と扱わない。実際のJST試合日で判定する。完全取得済みの場合だけ「試合なし」とし、取得失敗・未完了は区別する。既知試合が欠ける取得失敗では前回確認済み記事と警告を保持し、旧URLにも同期する。予定に結果やスコアを捏造しない。
+- 現在IL登録、抹消履歴、公示日、取得日時を区別する。現在のクラブ登録やIL抹消だけで出場予定・実戦復帰・出場確定を断定しない。公式根拠で確認できない出場状況は未確認とし、取得失敗・古い情報の注意書きを残す。年のない日付から復帰年を推測しない。
+- 通常の試合結果や平均ランキングを5本のニュース枠で重複作成しない。個別記事は公式根拠で確認できる記録・節目等の特筆事項だけを扱い、既存記事を先に確認する。得点差や高EFFだけで自動的に特筆としない。自動の特筆記事を追加する場合は既存のdata/match-editorial.jsonの検証済み理由・公式URLの運用に従う。
 
 # 途中で失敗しても書けた分は公開する
 - 5本は【1本ずつ書き上げて】から次へ進む（1本の中で記事HTMLとサムネを両方作り終えてから次の記事へ）。
@@ -41,15 +57,15 @@ claude.ai の「ルーティン → バスケまとめ_自動更新 → 編集�
 3. WebSearch/WebFetch で当日〜前日の情報を収集。優先: bleague.jp, basketballking.jp, basket-count.com, sports.yahoo.co.jp/basket（海外の日本人選手・スターは nba.com/jp や各報道も可）。複数ソースで裏取りできた事実だけ。憶測は書かない。WebFetchが egress ブロックで開けない場合は WebSearch の要約スニペットで裏取りする。
    - 「いま何が話題か」の参考に、サイト内の data/matome.json（まとめブログの新着見出し）と各メディアのアクセスランキングを見てよい。ただし事実は必ず報道・公式発表で裏取りする。
 4. 各記事のカテゴリ(kekka/sokuho/iseki/data)を決める。
-5. 記事HTMLを作業ディレクトリに Write（article-iseki-august.html と同一構造: title末尾『｜バスケまとめ』、meta description、favicon、og:url（https://basuke-matome.jp/<ファイル名>）、style.css?v=4、header/nav/footer。本文は breadcrumb, h1, pmeta(tag/日付/補足), eyecatch(src=サムネのファイル名), adbox, lead, 複数h2, 出典ブロック(実在URLをrel=nofollow), 免責 note, 関連記事カード）。原文転載はせず自分の言葉で要約。
+5. 記事HTMLを作業ディレクトリに Write（article-iseki-august.html と同一構造: title末尾『｜バスケまとめ』、meta description、favicon、og:url（https://basuke-matome.jp/<ファイル名>）、最新mainのstyle.css参照、共通header/nav/footer（buildで共通ナビを適用）。本文は breadcrumb, h1, pmeta(tag/日付/補足), eyecatch(src=サムネのファイル名), adbox, lead, 複数h2, 出典ブロック(実在URLをrel=nofollow), 免責 note, 関連記事カード）。原文転載はせず自分の言葉で要約。
 6. サムネを scripts/thumbgen.py で作る。まず `pip install --quiet fonttools brotli`（失敗しても続行してよい。数字フォントが端末の字体になるだけ）。記事の種類に合わせてJSONを作り、`python3 scripts/thumbgen.py thumb.json thumb-daily-<YYYYMMDD>[-N].svg` を実行する。チームは略称（千葉J、A東京、滋賀 など）でよい。
    - 試合結果: {"type":"game","home":"滋賀","away":"信州","home_score":95,"away_score":76,"meta":"B.PREMIER  10.12  滋賀ダイハツアリーナ","star":"ザック・オーガスト","star_stat":"31PTS 8REB"}
    - 移籍: {"type":"transfer","name":"選手名","pos":"PG  /  POINT GUARD","from":"旧所属","to":"新所属","note":"一言"}
    - それ以外（速報・日本代表・海外の日本人選手・話題まとめ など）: {"type":"news","label":"速報","team":"チーム名や大会名","headline":"短い見出し(8字前後)","sub":"補足1行","facts":[["項目","値"],["項目","値"]]}（label は「速報」「日本代表」「NBA」「話題」など2〜4字）
    - 数字・事実は記事本文と一致させる。作ったJSONファイルは公開しない（削除する）。
 7. 一覧を再生成: `python3 scripts/build.py` を実行（新記事を含むよう index.html, cat-*.html, articles*.html, news*.html, matome*.html, sitemap.xml 等が更新される）。エラーが出たら全文を報告。
-8. 変更ファイルを把握: `git status --porcelain` を実行し、追加/変更された全ファイル（article-daily-*, thumb-daily-*, index.html, 変更された cat-*.html, articles*.html, sitemap.xml など）を列挙する。
-9. 【公開】上の『公開の絶対ルール』に従い、mcp__GitHUB__push_files で手順8の全ファイルを1コミットで main に公開する。
+8. 変更ファイルを把握: `git status --porcelain` を実行し、追加/変更されたファイルのうち今回の公開対象（article-daily-*, thumb-daily-*, index.html, 変更された cat-*.html, articles*.html, sitemap.xml など）を列挙し、上の保護ルールと照合する。
+9. 【公開】上の『公開の絶対ルール』に従い、最新mainの再確認と差分再検証を終えてから、mcp__GitHUB__push_files で手順8で選別した対象ファイルだけを1コミットで main に公開する。
 10. 最後に、公開の成否・使ったツール名・コミットに含めた全ファイル名・各記事のトピック・主なソースURLを報告。失敗時はエラー全文も。
 
 # 話題まとめの書き方（5本のうち1本まで）
@@ -61,8 +77,3 @@ claude.ai の「ルーティン → バスケまとめ_自動更新 → 編集�
 - pmeta の補足欄に「話題まとめ」と入れる（例: `<span>話題まとめ / 日本代表</span>`）。カテゴリは kekka / sokuho / iseki / data から選ぶ。
 
 ---ここまで---
-
-
-## B.ONE/B.NEXT試合結果の重複防止
-
-通常の試合結果は自動生成する日付固定のB.ONE/B.NEXT統合記事へ集約し、同じ内容の個別記事を追加しない。個別記事は公式根拠で確認できる記録・節目等の特筆事項だけを扱う。得点差や高EFFだけで自動的に特筆としない。IL抹消は実戦復帰や出場確定とは区別する。
