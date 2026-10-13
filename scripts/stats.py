@@ -316,7 +316,7 @@ def body_sections(s):
     <h2>この日の試合結果</h2>
     {games_table(s['games'])}
 
-    <div class="note"><p style="margin:0"><strong>Q. 貢献度（EFF）とは？</strong><br>A. 得点・リバウンド・アシスト・スティール・ブロックの合計から、外したシュート数（フィールドゴール・フリースロー）とターンオーバーを引いた指標です。B.LEAGUE公式記録の値をそのまま掲載しています。</p></div>"""
+    <div class="note"><p style="margin:0"><strong>Q. 貢献度（EFF）とは？</strong><br>A. 得点・リバウンド・アシスト・スティール・ブロック・被ファウルを加算し、外したシュート数（フィールドゴール・フリースロー）、ターンオーバー・被ブロック・ファウルを減算した指標です。B.LEAGUE公式記録の値をそのまま掲載しています。<a href="https://www.bleague.jp/glossary/" rel="noopener nofollow">公式用語集</a>を参照してください。</p></div>"""
 
 
 def page(title, desc, url, body):

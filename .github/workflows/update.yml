@@ -36,6 +36,9 @@ jobs:
       - name: ニュース・順位表を取得
         run: python scripts/fetch.py
 
+      - name: 公式IL・次戦・B.ONE/B.NEXT結果を更新
+        run: python scripts/update_match_features.py --season-year 2026
+
       - name: HTMLを生成
         run: python scripts/build.py
 

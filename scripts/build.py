@@ -802,7 +802,7 @@ def update_category(cat, page, news, articles, standings, updated):
 
 # ------------------------------------------------- nav / GA / PV / popular
 
-NAV_EXTRA = [("matome.html", "まとめ")]
+NAV_EXTRA = [("matome.html", "まとめ"), ("next-games.html", "次戦"), ("injury.html", "IL・復帰")]
 
 
 def ensure_nav(text, x_enabled):

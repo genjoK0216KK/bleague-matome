@@ -1,0 +1,135 @@
+#!/usr/bin/env python3
+"""Bounded scheduled integration. Cron is unchanged; publish only managed outputs."""
+import argparse
+import json
+import re
+import shutil
+import tempfile
+from datetime import datetime, timedelta
+from pathlib import Path
+try:
+    from . import official_data as official, preview_data as data, match_articles as articles, injury_page, stats
+except ImportError:
+    import official_data as official
+    import preview_data as data
+    import match_articles as articles
+    import injury_page
+    import stats
+
+ROOT = Path(__file__).resolve().parent.parent
+MANAGED = re.compile(r'(?:article-(?:results-one-next-\d{8}|result-highlight-\d+|preview-\d+)\.html|thumb-(?:results-one-next-\d{8}|result-highlight-\d+|preview-\d+)\.svg)$')
+
+
+def promote(stage, root, report):
+    for name in report['artifacts']:
+        for item in (name, name.replace('article-', 'thumb-').replace('.html', '.svg')):
+            if not MANAGED.fullmatch(item):
+                raise official.DataError('Unmanaged artifact refused')
+            shutil.copy2(stage / item, root / item)
+    for item in report['removed']:
+        if not MANAGED.fullmatch(item):
+            raise official.DataError('Unmanaged removal refused')
+        path = root / item
+        if path.exists():
+            path.unlink()
+
+
+def render_next(now, tomorrow, day_states, games, errors):
+    date = tomorrow.isoformat()
+    body = '<div class="breadcrumb"><a href="index.html">ホーム</a> ／ 次戦</div><h1>明日の試合・次の開催日</h1><p>更新：' + now.strftime('%Y-%m-%d %H:%M JST') + '。取得予定は日本時間07:00 / 12:00 / 21:00 / 23:00です。</p>'
+    body += '<p><a href="injury.html">現在のIL・抹消／復帰情報を見る</a></p><h2>' + date + '（日本時間・更新時点の翌日）の試合</h2>'
+    for league, state in day_states.items():
+        label = official.LEAGUES[league][3]
+        if state is None:
+            body += '<p>' + label + '：日程未確認</p>'
+        elif not state:
+            body += '<p>' + label + '：この日の試合はありません。</p>'
+        else:
+            body += '<h3>' + label + ' ' + str(len(state)) + '試合</h3><ul>'
+            for game in state:
+                start = datetime.fromisoformat(game['starts_at']).astimezone(data.JST).strftime('%H:%M') if game.get('starts_at') else '時刻未確認'
+                body += '<li>' + articles.esc(start) + ' ' + articles.link(game['source'], game['home'] + ' vs ' + game['away']) + '</li>'
+            body += '</ul>'
+    body += '<h2>次の開催日プレビュー</h2><p>明日に試合がない場合も、実際の開催日を表示します。通算EFF上位3人（同点の3人目を含む）を比較し、出場未確認・IL情報を明示します。</p><ul>'
+    for g in games:
+        body += '<li><a href="article-preview-' + articles.esc(g['game_id']) + '.html">' + articles.esc(data.jst_date(g['starts_at']) + ' ' + g['home'] + ' vs ' + g['away']) + '</a></li>'
+    body += '</ul>'
+    if errors:
+        body += '<div class="note">一部の公式情報を取得できませんでした。日程・出場状況は公式ページをご確認ください。</div>'
+    body += '<p class="source">' + ' ／ '.join(articles.link(official.BASE + '/schedule/?tab=' + str(official.LEAGUES[k][0]), official.LEAGUES[k][3] + '公式日程') for k in official.LEAGUES) + '</p>'
+    return stats.page('明日の試合・次の開催日', 'JSTの明日の日程と次戦プレビュー', 'next-games.html', body)
+
+
+def run(root, client, year, now):
+    root = Path(root); root.mkdir(parents=True, exist_ok=True)
+    state_dir = root / 'data' / 'match_articles'; state_dir.mkdir(parents=True, exist_ok=True)
+    errors = []
+    il_error = injury_page.generate(client, root, state_dir / 'injury.json', now)
+    if il_error:
+        errors.append('IL: ' + il_error)
+    editorial_path = root / 'data' / 'match-editorial.json'
+    editorial = json.loads(editorial_path.read_text()) if editorial_path.exists() else {}
+    tomorrow = (now + timedelta(days=1)).date()
+    published = []
+    with tempfile.TemporaryDirectory(prefix='bleague-match-') as temp:
+        stage = Path(temp)
+        for path in state_dir.glob('article-results-one-next-*.json'):
+            shutil.copy2(path, stage / path.name)
+        for path in root.iterdir():
+            if path.is_file() and MANAGED.fullmatch(path.name):
+                shutil.copy2(path, stage / path.name)
+
+        def generate_and_promote(date, keys):
+            try:
+                report = articles.generate(client, year=year, date=date, preview_keys=keys, output=stage, editorial=editorial, as_of=now)
+                promote(stage, root, report)
+                errors.extend(report['errors']); published.extend(report['artifacts'])
+                for path in stage.glob('article-results-one-next-*.json'):
+                    shutil.copy2(path, state_dir / path.name)
+            except (ValueError, official.requests.RequestException) as exc:
+                errors.append(str(exc))
+
+        # Secure current and prior-day results before expensive roster/profile work.
+        for offset in (0, 1):
+            generate_and_promote((now - timedelta(days=offset)).date().isoformat(), [])
+        day_states = {}
+        for league in official.LEAGUES:
+            try:
+                games, complete, _, problems = official.fetch_day(client, year, league, tomorrow.isoformat())
+                day_states[league] = games if complete else None
+                errors.extend(problems)
+            except (ValueError, official.requests.RequestException) as exc:
+                errors.append(str(exc)); day_states[league] = None
+        next_games = []
+        order = sorted(official.LEAGUES, key=lambda league: not bool(day_states.get(league)))
+        for league in order:
+            try:
+                next_games.extend(official.fetch_next_games(client, year, league, now))
+            except (ValueError, official.requests.RequestException) as exc:
+                errors.append('Next ' + league + ': ' + str(exc))
+        generate_and_promote(now.date().isoformat(), [g['game_id'] for g in next_games])
+        # Link only previews successfully generated in this run, not stale prior files.
+        available = [g for g in next_games if f"article-preview-{g['game_id']}.html" in published]
+        html = render_next(now, tomorrow, day_states, available, errors)
+        if client.offline:
+            html = html.replace('</head>', '<meta name="robots" content="noindex,nofollow"></head>').replace('<h1>', '<p class="note">保存データによるローカル検証版です。</p><h1>', 1)
+        (root / 'next-games.html').write_text(html, encoding='utf-8')
+    return {'errors': errors, 'artifacts': published, 'requests': client.request_count, 'sources': client.sources}
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--season-year', type=int, required=True)
+    parser.add_argument('--root', default=str(ROOT))
+    parser.add_argument('--capture-dir')
+    args = parser.parse_args()
+    result = run(args.root, official.Client(args.capture_dir), args.season_year, datetime.now(data.JST))
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    # Failures are visible in Actions; successfully refreshed IL/results may still build.
+    if result['errors']:
+        print('::warning::Some official match data unavailable; check report above')
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

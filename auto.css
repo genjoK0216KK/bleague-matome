@@ -250,3 +250,18 @@ table.stdtbl tbody tr:hover td {
 
 /* --- 記事の閲覧数（pmeta 内） --- */
 .pmeta .pv { color: #6b7684; }
+
+/* Official-data match articles: long timestamps and source URLs on mobile. */
+.match-article .pmeta { flex-wrap: wrap; }
+.match-article .source { overflow-wrap: anywhere; }
+.match-article .tablewrap { max-width: 100%; }
+
+/* Official IL overview: readable cards at phone widths. */
+.il-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:14px;margin:20px 0 32px}
+.il-card{border:1px solid #dfe5eb;border-radius:12px;padding:18px;background:#fff;min-width:0}
+.il-card h3{margin:12px 0 6px;font-size:20px;overflow-wrap:anywhere}
+.il-card p{margin:0 0 12px;font-size:13px;color:#64748b}
+.il-card dl{display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:13px;margin:0}
+.il-card dt{color:#64748b}.il-card dd{margin:0}.il-badge{font-size:12px;font-weight:700;background:#fff0e8;color:#943d16;padding:5px 8px;border-radius:5px;display:inline-block}
+.il-return{background:#eaf5f1;color:#23644c}.il-count{font-size:16px;color:#64748b}.il-warning{border-left-color:#d54b30!important}
+.match-article .table-hint{font-size:12px;color:#64748b;margin:8px 0}
