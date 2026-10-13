@@ -37,8 +37,8 @@ def promote(stage, root, report):
 
 def render_next(now, tomorrow, day_states, games, errors):
     date = tomorrow.isoformat()
-    body = '<div class="breadcrumb"><a href="index.html">ホーム</a> ／ 次戦</div><h1>明日の試合・次の開催日</h1><p>更新：' + now.strftime('%Y-%m-%d %H:%M JST') + '。翌日プレビューは前日23:00 JSTの定期処理で公開します（処理・配信により遅れる場合があります）。</p>'
-    body += '<p><a href="injury.html">現在のIL・抹消／復帰情報を見る</a></p><h2>' + date + '（日本時間・更新時点の翌日）の試合</h2>'
+    body = '<div class="breadcrumb"><a href="index.html">ホーム</a> ／ 次戦</div><h1>明日の試合・次の開催日</h1><p>更新：' + now.strftime('%Y-%m-%d %H:%M JST') + '</p>'
+    body += '<h2>' + date + '（日本時間・更新時点の翌日）の試合</h2>'
     for league, state in day_states.items():
         label = official.LEAGUES[league][3]
         if state is None:
@@ -52,7 +52,7 @@ def render_next(now, tomorrow, day_states, games, errors):
                 body += '<li>' + articles.esc(start) + ' ' + articles.link(game['source'], game['home'] + ' vs ' + game['away']) + '</li>'
             body += '</ul>'
     dates = sorted({data.jst_date(g['starts_at']) for g in games} | {now.date().isoformat(), (now-timedelta(days=1)).date().isoformat()} | ({date} if now.hour >= 23 else set()))
-    body += '<h2>日付別の試合一覧・結果</h2><p>各日1記事でB.PREMIER・B.ONE・B.NEXTを分け、試合前の今季平均EFFと試合後の結果を確認できます。</p><ul>'
+    body += '<h2>日付別の試合一覧・結果</h2><ul>'
     for target_date in dates:
         body += '<li><a href="' + day_articles.filename(target_date) + '">' + target_date + ' 試合情報</a></li>'
     body += '</ul>'
