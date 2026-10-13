@@ -2,7 +2,7 @@
 
 No fetching, publishing, file writes, or fallback metric calculation. Adapters must
 verify official season, competition, identities, positions, availability evidence,
-and cumulative metric coverage before passing records to these functions.
+and season-average metric coverage before passing records to these functions.
 """
 from datetime import datetime, timedelta, timezone
 from decimal import Decimal
@@ -21,9 +21,9 @@ def jst_date(timestamp):
 
 
 def position_rankings(players, *, season, competition, metric):
-    """Rank both next-game rosters by verified season totals, with competition ties.
+    """Rank both next-game rosters by verified season averages, with competition ties.
 
-    Missing/unverified totals stay out of rankings. Unknown availability remains
+    Missing/unverified averages stay out of rankings. Unknown availability remains
     explicitly unknown; confirmed absences are returned separately. A multi-position
     player appears once in each officially registered position. IDs, not names,
     identify players. Conflicting duplicate IDs fail closed.
@@ -54,31 +54,31 @@ def position_rankings(players, *, season, competition, metric):
             reason = "position_unknown"
         elif not p.get("position_source"):
             reason = "position_unverified"
-        elif (p.get("metric") != metric or p.get("aggregation") != "total"
-              or p.get("total") is None or p.get("coverage_complete") is not True
+        elif (p.get("metric") != metric or p.get("aggregation") != "average"
+              or p.get("average") is None or p.get("coverage_complete") is not True
               or not p.get("stats_source")):
-            reason = "total_unverified"
+            reason = "average_unverified"
         else:
             try:
-                total = Decimal(str(p["total"]))
+                total = Decimal(str(p["average"]))
             except Exception:
-                reason = "total_invalid"
+                reason = "average_invalid"
             else:
                 if not total.is_finite():
-                    reason = "total_invalid"
+                    reason = "average_invalid"
         if reason:
             excluded.append(dict(p, exclusion_reason=reason))
             continue
         for pos in dict.fromkeys(p["positions"]):
-            groups[pos].append(dict(p, total=total))
+            groups[pos].append(dict(p, average=total))
     for rows in groups.values():
-        rows.sort(key=lambda p: (-p["total"], p["player_id"]))
+        rows.sort(key=lambda p: (-p["average"], p["player_id"]))
         previous, rank = None, 0
         for index, p in enumerate(rows, 1):
-            if previous != p["total"]:
+            if previous != p["average"]:
                 rank = index
             p["rank"] = rank
-            previous = p["total"]
+            previous = p["average"]
     return {"positions": groups, "excluded": excluded}
 
 

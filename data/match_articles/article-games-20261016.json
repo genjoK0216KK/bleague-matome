@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-16",
+  "status": "pending",
+  "article_key": "article-results-one-next-20261016",
+  "games": [
+    {
+      "game_id": "506464",
+      "season": "2026-27",
+      "competition": "BP",
+      "starts_at": "2026-10-16T19:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506464",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "川崎",
+      "home_full": "川崎ブレイブサンダース",
+      "home_id": "727",
+      "home_score": null,
+      "away": "茨城",
+      "away_full": "茨城ロボッツ",
+      "away_id": "712",
+      "away_score": null
+    },
+    {
+      "game_id": "506465",
+      "season": "2026-27",
+      "competition": "BP",
+      "starts_at": "2026-10-16T19:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506465",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "横浜BC",
+      "home_full": "横浜ビー・コルセアーズ",
+      "home_id": "694",
+      "home_score": null,
+      "away": "琉球",
+      "away_full": "琉球ゴールデンキングス",
+      "away_id": "701",
+      "away_score": null
+    },
+    {
+      "game_id": "506466",
+      "season": "2026-27",
+      "competition": "BP",
+      "starts_at": "2026-10-16T19:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506466",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "佐賀",
+      "home_full": "佐賀バルーナーズ",
+      "home_id": "1638",
+      "home_score": null,
+      "away": "北海道",
+      "away_full": "レバンガ北海道",
+      "away_id": "702",
+      "away_score": null
+    }
+  ],
+  "individual_candidates": [],
+  "schedule_complete": {
+    "BP": true,
+    "B1": true,
+    "BN": true
+  },
+  "sources": [
+    "https://www.bleague.jp/schedule/?tab=1&year=2026&mon=10&day=16",
+    "https://www.bleague.jp/schedule/?tab=2&year=2026&mon=10&day=16",
+    "https://www.bleague.jp/schedule/?tab=3&year=2026&mon=10&day=16"
+  ],
+  "errors": []
+}

@@ -24,9 +24,9 @@ AVAILABILITY_LABELS = {'unknown': '出場未確認', 'unannounced': 'エント�
                        'entry_confirmed': 'エントリー確認済（出場保証ではありません）',
                        'expected': '公式の出場見込み', 'out': '公式欠場・IL登録', 'suspended': '公式出場停止'}
 EXCLUSIONS = {'out': '公式欠場・IL・停止', 'no_appearance': '今季未出場（公式G=0）',
-              'total_unverified': '通算記録未確認', 'scope_mismatch': '集計範囲不一致',
+              'average_unverified': '平均記録未確認', 'scope_mismatch': '集計範囲不一致',
               'position_unknown': '登録ポジション未確認', 'position_unverified': 'ポジション出典未確認',
-              'total_invalid': '通算記録未確認'}
+              'average_invalid': '平均記録未確認'}
 esc = stats.esc
 
 
@@ -38,7 +38,7 @@ def source_label(url):
     parsed = urlparse(url)
     query = parse_qs(parsed.query)
     if parsed.path == '/stats/':
-        return '公式スタッツ（今季合計・EFF）'
+        return '公式スタッツ（今季平均・EFF）' if query.get('dt') == ['avg'] else '公式スタッツ（今季合計・EFF）'
     if parsed.path == '/schedule/':
         label = {'1': 'B.PREMIER', '2': 'B.ONE', '3': 'B.NEXT'}.get(query.get('tab', [''])[0], '')
         return label + ' 公式日程・結果'
@@ -67,14 +67,14 @@ def page(title, date, category, body, filename, sources, updated):
 
 def render_preview(game, players, *, updated, extra_sources=(), warnings=()):
     rankings = data.position_rankings(players, season=game['season'], competition=game['competition'], metric='EFF')
-    title = f"{game['home']} vs {game['away']} 次戦プレビュー｜ポジション別・今季通算EFF"
+    title = f"{game['home']} vs {game['away']} 次戦プレビュー｜ポジション別・今季平均EFF"
     filename = f"article-preview-{game['game_id']}.html"
     date = data.jst_date(game['starts_at'])
     start = datetime.fromisoformat(game['starts_at']).astimezone(data.JST).strftime('%Y年%m月%d日 %H:%M JST')
-    body = f'<p class="lead">{esc(start)}予定。{esc(official.LEAGUES[game["competition"]][3])} {esc(game["season"])} レギュラーシーズンの公式通算EFFで、両チームの現在登録選手を比較します。</p>'
+    body = f'<p class="lead">{esc(start)}予定。{esc(official.LEAGUES[game["competition"]][3])} {esc(game["season"])} レギュラーシーズンの公式今季平均EFFで、両チームの現在登録選手を比較します。</p>'
     body += '<div class="note">現在の登録は当日のエントリー・出場確定を意味しません。出場情報を確認できない選手は「出場未確認」と表示します。各ポジション上位3人を表示します。同点で3人目に並ぶ選手も掲載します。複数ポジションは各表へ掲載し、同値は同順位とします。</div>'
     for warning in warnings:
-        body += f'<p class="note">{esc(warning)}</p>'
+        body += f'<p class="note preview-warning">{esc(warning)}</p>'
     body += '<p><a href="injury.html">現在のIL・抹消／再登録情報を見る</a></p>'
     returned = [p for p in players if p.get('il_removed_date') and p.get('availability') != 'out']
     if returned:
@@ -82,16 +82,17 @@ def render_preview(game, players, *, updated, extra_sources=(), warnings=()):
         for p in returned:
             body += '<li>' + esc(p['name']) + '（' + esc(p['team']) + '）：' + esc(p['availability_detail']) + '。' + link(p['il_source'], '公式IL') + ' ／ ' + link(p['position_source'], '公式登録一覧') + '</li>'
         body += '</ul>'
+    body += '<div class="match-rankings">'
     for position, rows in rankings['positions'].items():
         if len(rows) > 3:
-            cutoff = rows[2]['total']
-            rows = [p for p in rows if p['total'] >= cutoff]
-        body += f'<h2>{position}｜今季通算EFF</h2>'
+            cutoff = rows[2]['average']
+            rows = [p for p in rows if p['average'] >= cutoff]
+        body += f'<h2>{position}｜今季平均EFF</h2>'
         if not rows:
-            body += '<p>比較できる公式通算記録がありません。</p>'
+            body += '<p>比較できる公式平均記録がありません。</p>'
             continue
         body += '<p class="table-hint">表は横にスクロールできます。出場状況もご確認ください。</p>'
-        body += '<div class="tablewrap"><table><tr><th>順位</th><th>選手（所属）</th><th>通算EFF</th><th>出場試合数</th><th>出場状況</th></tr>'
+        body += '<div class="tablewrap"><table><tr><th>順位</th><th>選手（所属）</th><th>平均EFF</th><th>出場試合数</th><th>出場状況</th></tr>'
         for p in rows:
             availability = AVAILABILITY_LABELS[p['availability']]
             if p.get('il_removed_date'):
@@ -99,17 +100,19 @@ def render_preview(game, players, *, updated, extra_sources=(), warnings=()):
             if p.get('availability_source'):
                 availability = link(p['availability_source'], availability)
             body += (f'<tr><td>{p["rank"]}</td><td>{esc(p["name"])}（{esc(p["team"])}）</td>'
-                     f'<td>{esc(p["total"])}</td><td>{esc(p.get("games", "未確認"))}</td><td>{availability}</td></tr>')
+                     f'<td>{esc(p["average"])}</td><td>{esc(p.get("games", "未確認"))}</td><td>{availability}</td></tr>')
         body += '</table></div>'
     if rankings['excluded']:
         body += '<h2>欠場情報・ランキング対象外</h2><ul>'
         for p in rankings['excluded']:
             body += f'<li>{esc(p["name"])}（{esc(p["team"])}）：{esc(EXCLUSIONS[p["exclusion_reason"]])}。{esc(p.get("availability_detail", ""))}</li>'
         body += '</ul>'
-    body += '<p>通算EFFは公式の合計列を使用し、平均EFF×試合数では計算しません。移籍選手は同一リーグの公式TOTALが確認できた場合に採用し、所属別記録と二重加算しません。</p>'
+    body += '<p>平均EFFは公式の今季平均（dt=avg）を使用し、通算合計を試合数で割って作り直しません。移籍選手は同一リーグの公式TOTALが確認できた場合に採用し、所属別平均の単純平均や合算は行いません。</p>'
+    body += '</div>'
     sources = [game['source'], official.BASE + '/glossary/'] + list(extra_sources)
     sources += [p[k] for p in players for k in ('position_source', 'stats_source', 'availability_source') if p.get(k)]
-    return filename, page(title, date, 'data', body, filename, sources, updated)
+    html = page(title, date, 'data', body, filename, sources, updated)
+    return filename, html.replace('</head>', '<meta name="article-detail" content="next-game"></head>')
 
 
 def verified_recent_returns(players, confirmations, as_of):
@@ -139,13 +142,13 @@ def verified_recent_returns(players, confirmations, as_of):
 def render_results(summary, *, season, updated, schedule_sources):
     date = summary['date']
     filename = summary['article_key'] + '.html'
-    title = f'{date} B.ONE・B.NEXT 試合結果まとめ'
+    title = f'{date} B.PREMIER・B.ONE・B.NEXT 試合結果まとめ'
     if summary['status'] == 'pending':
         title += '（途中版）'
-    body = '<p class="lead">B.ONE・B.NEXTの当日結果を1記事にまとめます。日付は日本時間、対象は' + esc(season) + 'レギュラーシーズンです。</p>'
+    body = '<p class="lead">B.PREMIER・B.ONE・B.NEXTの当日結果を1記事にまとめます。日付は日本時間、対象は' + esc(season) + 'レギュラーシーズンです。</p>'
     if summary['status'] == 'pending':
         body += '<div class="note">途中版：未確定の試合または取得できていない記録があります。最終結果として扱わず、次回取得時に同じ記事を更新します。</div>'
-    for league in ('B1', 'BN'):
+    for league in official.LEAGUES:
         body += '<h2>' + official.LEAGUES[league][3] + '</h2>'
         rows = [g for g in summary['games'] if g['competition'] == league]
         if not rows:
@@ -181,7 +184,7 @@ def render_notable(game, *, date, updated):
 
 
 def write_thumbnail(output, filename, label, teams, date):
-    svg = thumbgen.render(dict(type='news', label=label, team=teams, headline='試合結果まとめ' if label == '試合結果' else '今季通算EFF', sub=date, facts=[]))
+    svg = thumbgen.render(dict(type='news', label=label, team=teams, headline='試合一覧・結果' if label == '試合一覧' else '試合結果まとめ' if label == '試合結果' else '今季平均EFF', sub=date, facts=[]))
     (output / filename.replace('article-', 'thumb-').replace('.html', '.svg')).write_text(svg, encoding='utf-8')
 
 
@@ -231,7 +234,7 @@ def generate(client, *, year, date, preview_keys, output, editorial=None, as_of=
     season = f'{year}-{str(year+1)[-2:]}'
     updated = datetime.now(data.JST).strftime('%Y-%m-%d %H:%M JST')
     games, complete, sources, errors = [], {}, [], []
-    for league in ('B1', 'BN'):
+    for league in official.LEAGUES:
         try:
             found, done, url, problems = official.fetch_day(client, year, league, date)
             games.extend(found); complete[league] = done; sources.append(url); errors.extend(problems)
@@ -246,7 +249,7 @@ def generate(client, *, year, date, preview_keys, output, editorial=None, as_of=
             # while the editor remains responsible for the semantic fact check.
             client.get(note['source'])
             game.update(notable_reason=note['reason'], notable_source=note['source'])
-    summary = data.daily_results(games, date=date, season=season, competitions=('B1', 'BN'), schedule_complete=complete)
+    summary = data.daily_results(games, date=date, season=season, competitions=tuple(official.LEAGUES), schedule_complete=complete)
     summary['schedule_complete'] = complete
     artifacts, removed = [], []
     state_path = output / (summary['article_key'] + '.json')
@@ -299,7 +302,7 @@ def generate(client, *, year, date, preview_keys, output, editorial=None, as_of=
             league = game['competition']
             warnings = []
             if league not in totals_cache:
-                totals_cache[league] = official.fetch_totals(client, year, league)
+                totals_cache[league] = official.fetch_averages(client, year, league)
             totals = totals_cache[league]
             players = []
             for side in ('home', 'away'):
@@ -315,11 +318,11 @@ def generate(client, *, year, date, preview_keys, output, editorial=None, as_of=
             verified_recent_returns(players, return_confirmations, as_of)
             for p in players:
                 total = totals.get(p['player_id'], {})
-                p.update(metric='EFF', aggregation='total', total=total.get('total'),
+                p.update(metric='EFF', aggregation='average', average=total.get('average'),
                          games=total.get('games'), stats_source=total.get('stats_source'),
                          coverage_complete=bool(total))
             name, html = render_preview(game, players, updated=source_time(client, updated), warnings=warnings,
-                                        extra_sources=[official.stats_url(year, league), official.BASE + '/news/injury.html'])
+                                        extra_sources=[official.stats_url(year, league, aggregation='avg'), official.BASE + '/news/injury.html'])
             (output / name).write_text(annotate_provenance(html, client), encoding='utf-8')
             write_thumbnail(output, name, '次戦プレビュー', game['home'] + ' vs ' + game['away'], data.jst_date(game['starts_at']))
             artifacts.append(name)
