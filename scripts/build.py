@@ -846,12 +846,14 @@ def ensure_pv(text, views):
 
 
 def render_popular(articles, week, n=5):
-    """サイドバー「人気記事ランキング（週間）」。PVデータが無ければ None。"""
+    """実測PVがある場合は人気順、なければ番号なしのおすすめ。"""
     ranked = sorted(((pv_of(week, a["href"]), a) for a in articles),
                     key=lambda x: -x[0])
     ranked = [(v, a) for v, a in ranked if v > 0][:n]
     if not ranked:
-        return None
+        return '<h4>おすすめ記事</h4>' + ''.join(
+            '<div class="rank"><a href="'+esc(a['href'])+'">'+esc(a['title'])+'</a></div>'
+            for a in articles[:n])
     rows = ['<h4>人気記事ランキング（週間）</h4>']
     for i, (v, a) in enumerate(ranked, 1):
         title = a["title"] if len(a["title"]) <= 30 else a["title"][:29] + "…"
