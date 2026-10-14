@@ -23,6 +23,42 @@ def select(players, season, league):
     return teams
 
 
+def player_bundle(client, root, game, date, now):
+    """Backfill exact-game rosters even after tipoff; never relabel another day."""
+    path = Path(root)/'data/match_articles'/('players-'+game['game_id']+'.json')
+    if path.exists():
+        bundle = json.loads(path.read_text())
+        saved = bundle['game']
+        identity = all(saved.get(k) == game.get(k) for k in ('game_id','competition','season','home_id','away_id'))
+        fresh = timedelta(0) <= now-datetime.fromisoformat(bundle['retrieved_at']) <= timedelta(hours=36)
+        roster_complete = {p.get('team_id') for p in bundle['players']} == {game.get('home_id'),game.get('away_id')} and all(p.get('competition')==game['competition'] and p.get('season')==game['season'] and p.get('aggregation')=='average' for p in bundle['players'])
+        if identity and roster_complete and data.jst_date(saved['starts_at']) == date and fresh:
+            return bundle
+    if client is None or not hasattr(client,'get'):
+        raise ValueError('全対戦チームの選手データが未取得')
+    year = int(game['season'][:4])
+    verified = official.parse_game(client.get(game['source']),game['game_id'],year)
+    if (data.jst_date(verified['starts_at']) != date or
+            any(verified.get(k) != game.get(k) for k in ('competition','season','home_id','away_id'))):
+        raise ValueError('公式試合の日時・リーグ・対戦チームが不一致')
+    averages = official.fetch_averages(client,year,game['competition'])
+    players = []
+    for side in ('home','away'):
+        players.extend(official.fetch_roster(client,game[side+'_id'],game[side],year,game['competition']))
+    for p in players:
+        stat = averages.get(p['player_id'],{})
+        p.update(metric='EFF',aggregation='average',average=stat.get('average'),games=stat.get('games'),
+                 stats_source=stat.get('stats_source'),coverage_complete=bool(stat))
+    urls={p[k] for p in players for k in ('position_source','stats_source') if p.get(k)}
+    times=[s['retrieved_at'] for s in client.sources if s['url'] in urls]
+    if not times:
+        raise ValueError('選手資料の取得時刻が未確認')
+    bundle={'game':verified,'players':players,'retrieved_at':min(times)}
+    path.parent.mkdir(parents=True,exist_ok=True)
+    path.write_text(json.dumps(bundle,ensure_ascii=False,indent=2,default=str),encoding='utf-8')
+    return bundle
+
+
 def collect(client, root, summary):
     now = datetime.now(data.JST)
     result = {}
@@ -35,15 +71,7 @@ def collect(client, root, summary):
                 raise ValueError('日程取得が未完了')
             bundles = []
             for game in games:
-                path = Path(root)/'data/match_articles'/('players-'+game['game_id']+'.json')
-                if not path.exists():
-                    raise ValueError('全対戦チームの選手データが未取得')
-                bundle = json.loads(path.read_text())
-                if bundle['game']['game_id'] != game['game_id'] or bundle['game']['competition'] != league or data.jst_date(bundle['game']['starts_at']) != summary['date']:
-                    raise ValueError('選手データの試合日・大会が不一致')
-                if now-datetime.fromisoformat(bundle['retrieved_at']) > timedelta(hours=36):
-                    raise ValueError('選手データが36時間を超過')
-                bundles.append(bundle)
+                bundles.append(player_bundle(client,root,game,summary['date'],now))
             records = official.injury_records(client.get(official.BASE+'/news/injury.html'))
             players, times = {}, []
             for bundle in bundles:

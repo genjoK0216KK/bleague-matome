@@ -67,7 +67,7 @@ def page(title, date, category, body, filename, sources, updated):
 
 def render_preview(game, players, *, updated, extra_sources=(), warnings=()):
     rankings = data.position_rankings(players, season=game['season'], competition=game['competition'], metric='EFF')
-    title = f"{game['home']} vs {game['away']} 次戦プレビュー｜ポジション別・今季平均EFF"
+    title = f"{game['home']} vs {game['away']}｜次戦の選手"
     filename = f"article-preview-{game['game_id']}.html"
     date = data.jst_date(game['starts_at'])
     start = datetime.fromisoformat(game['starts_at']).astimezone(data.JST).strftime('%Y年%m月%d日 %H:%M JST')
@@ -219,6 +219,39 @@ def annotate_provenance(html, client):
     return str(soup)
 
 
+def readable_match(html):
+    """Keep essential availability labels; consolidate detailed notes below content."""
+    soup=official.BeautifulSoup(html,'html.parser')
+    article=soup.select_one('article')
+    if not article:return html
+    notes=soup.select_one('.match-notes')
+    if notes is None:
+        notes=soup.new_tag('details',attrs={'class':'match-notes'})
+        heading=soup.new_tag('summary');heading.string='出典・選出ルール・注記';notes.append(heading)
+        article.append(notes)
+    for item in list(soup.select('.pmeta > span')):
+        if '取得' in item.get_text() and 'pv' not in item.get('class',[]):
+            item.name='p';notes.append(item.extract())
+    for item in list(article.select('.source, .note, .table-hint')):
+        if notes in item.parents or item is notes:continue
+        if any(c in item.get('class',[]) for c in ('preview-warning','schedule-warning')):continue
+        if '選手データ確認中' in item.get_text():continue
+        notes.append(item.extract())
+    for image in list(article.select('img.eyecatch')):
+        notes.append(image.extract())
+    for item in list(soup.select('.match-rankings > p')):
+        if '平均EFFは公式' in item.get_text():notes.append(item.extract())
+    for item in list(notes.find_all('p')):
+        if item.string and len(item.get_text())>100:
+            sentences=[v+'。' for v in item.get_text().split('。') if v]
+            for sentence in sentences:
+                para=soup.new_tag('p');para.string=sentence;item.insert_before(para)
+            item.decompose()
+    if not soup.select_one('link[href="match-reading.css?v=1"]'):
+        soup.head.append(soup.new_tag('link',attrs={'rel':'stylesheet','href':'match-reading.css?v=1'}))
+    return str(soup)
+
+
 def source_time(client, fallback):
     times = [s['retrieved_at'] for s in client.sources]
     return datetime.fromisoformat(max(times)).astimezone(data.JST).strftime('%Y-%m-%d %H:%M JST') if times else fallback
@@ -327,7 +360,7 @@ def generate(client, *, year, date, preview_keys, output, editorial=None, as_of=
             player_data[key] = {'game': game, 'players': players, 'retrieved_at': min(fetched) if fetched else as_of.isoformat()}
             name, html = render_preview(game, players, updated=source_time(client, updated), warnings=warnings,
                                         extra_sources=[official.stats_url(year, league, aggregation='avg'), official.BASE + '/news/injury.html'])
-            (output / name).write_text(annotate_provenance(html, client), encoding='utf-8')
+            (output / name).write_text(readable_match(annotate_provenance(html, client)), encoding='utf-8')
             write_thumbnail(output, name, '次戦プレビュー', game['home'] + ' vs ' + game['away'], data.jst_date(game['starts_at']))
             artifacts.append(name)
         except (ValueError, official.requests.RequestException) as exc:

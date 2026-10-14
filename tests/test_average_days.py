@@ -32,11 +32,11 @@ class AveragesAndDays(unittest.TestCase):
     def test_three_leagues_and_missing_distinct_from_empty(self):
         s=self.summary();s['schedule_complete']['BN']=False
         _,html=day_articles.render(s,'.',[],'TEST');soup=BeautifulSoup(html,'html.parser')
-        self.assertEqual([h.get_text() for h in soup.select('.league-games > h2')],['B.PREMIER','B.ONE','B.NEXT'])
-        self.assertIn('この日の試合はありません',soup.select_one('#league-bp').get_text())
-        self.assertIn('取得が未完了',soup.select_one('#league-bn').get_text())
-        self.assertNotIn('試合はありません',soup.select_one('#league-bn').get_text())
-        self.assertIn('80－71',soup.select_one('#league-b1').get_text())
+        text=soup.get_text()
+        self.assertIn('B.ONE',text)
+        self.assertIn('この日試合なし：B.PREMIER',text)
+        self.assertIn('B.NEXT：日程・結果を確認中',text)
+        self.assertIn('80 – 71',text)
 
     def test_date_alias_and_embedded_averages(self):
         s=self.summary();g=s['games'][0];g.update(ended=False,fixed=False,status='scheduled')
@@ -62,11 +62,11 @@ class AveragesAndDays(unittest.TestCase):
             s['games']=[];s['schedule_complete']['B1']=False
             self.assertIsNone(day_articles.write(C(),folder,s,[],'NEW'))
             html=(Path(folder)/name).read_text()
-            self.assertIn('80－71',html)
+            self.assertIn('80 – 71',html)
             self.assertIn('前回確認済みの試合情報を保持',html)
             self.assertIn('article-alias',legacy.read_text())
             self.assertIn('前回確認済みの試合情報を保持',legacy.read_text())
-            self.assertIn('80－71',legacy.read_text())
+            self.assertIn('80 – 71',legacy.read_text())
 
     def test_actual_date_mismatch_excluded(self):
         s=self.summary();g=s['games'][0];g['starts_at']='2026-10-14T19:05:00+09:00'

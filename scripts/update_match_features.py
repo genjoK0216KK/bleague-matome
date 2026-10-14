@@ -110,6 +110,8 @@ def run(root, client, year, now):
         # Secure current and prior-day results before expensive roster/profile work.
         for offset in (0, 1):
             generate_and_promote((now - timedelta(days=offset)).date().isoformat(), [])
+        yesterday_summary = day_articles.collect(client,year,(now-timedelta(days=1)).date().isoformat())
+        day_articles.daily_lineups.collect(client,root,yesterday_summary)
         day_states = {}
         for league in official.LEAGUES:
             try:
@@ -154,7 +156,7 @@ def main():
     parser.add_argument('--root', default=str(ROOT))
     parser.add_argument('--capture-dir')
     args = parser.parse_args()
-    result = run(args.root, official.Client(args.capture_dir), args.season_year, datetime.now(data.JST))
+    result = run(args.root, official.Client(args.capture_dir, max_requests=160, time_budget=480), args.season_year, datetime.now(data.JST))
     print(json.dumps(result, ensure_ascii=False, indent=2))
     # Failures are visible in Actions; successfully refreshed IL/results may still build.
     if result['errors']:
