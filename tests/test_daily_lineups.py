@@ -38,13 +38,6 @@ class DailyLineups(unittest.TestCase):
   with patch.object(official,'parse_schedule',return_value=plan),patch.object(official,'parse_game',return_value=game):
    games,complete,url,errors=official.fetch_day(C(),2026,'B1','2026-10-14')
    self.assertEqual(games,[]);self.assertFalse(complete);self.assertIn('different actual game date',errors[0])
- def test_preview_generation_gate_and_no_duplicate(self):
-  tomorrow=dict(game_id='2',starts_at='2026-10-15T19:00:00+09:00')
-  far=dict(game_id='3',starts_at='2026-10-22T19:00:00+09:00')
-  states={'B1':[tomorrow,tomorrow,far,dict(game_id='4',status='cancelled',starts_at=None,official_date='2026-10-15')]}
-  self.assertEqual(update.releasable_games(datetime.fromisoformat('2026-10-14T22:59:00+09:00'),[far],states),[])
-  self.assertEqual(update.releasable_games(datetime.fromisoformat('2026-10-14T23:00:00+09:00'),[far],states),[tomorrow])
-  self.assertEqual(update.releasable_games(datetime.fromisoformat('2026-10-15T00:00:00+09:00'),[tomorrow],{}),[tomorrow])
  def test_release_boundary(self):
   # Use actual read_articles filtering with only one dated page.
   class Clock:

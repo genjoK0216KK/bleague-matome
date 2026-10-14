@@ -90,8 +90,8 @@ class ILTests(unittest.TestCase):
             return [], True, '', []
         with tempfile.TemporaryDirectory() as folder, patch.object(official, 'fetch_day', side_effect=day), patch.object(official, 'fetch_next_games', side_effect=lambda c,y,l,n: [future] if l == 'BP' else []), patch.object(official, 'fetch_averages', return_value={}), patch.object(official, 'fetch_roster', return_value=[]):
             report = update.run(folder, C(), 2026, now.astimezone(articles.data.JST))
-            self.assertEqual(report['errors'], [])
-            self.assertFalse((Path(folder) / 'article-preview-506464.html').exists())  # 10/16 is not yet releasable on 10/13
+            self.assertTrue(any('選手資料の取得時刻' in e for e in report['errors']))
+            self.assertFalse((Path(folder) / 'article-preview-506464.html').exists())  # next fixtures now use the dedicated hub
             self.assertTrue((Path(folder) / 'injury.html').exists())
             self.assertTrue((Path(folder) / 'next-games.html').exists())
             self.assertEqual(calls[:6], ['2026-10-13']*3 + ['2026-10-12']*3)

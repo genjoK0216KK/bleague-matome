@@ -459,6 +459,9 @@ def fetch_next_games(client, year, league, after, horizon=35):
         checked.add(month)
         url = BASE + '/schedule/?' + urlencode(dict(tab=LEAGUES[league][0], year=year, mon=date.month, day=date.day))
         soup = BeautifulSoup(client.get(url), 'html.parser')
+        if (date.year if date.month >= 7 else date.year-1) != year:
+            raise DataError('Next season schedule unconfirmed')
+        parse_schedule(str(soup),league,date.isoformat())
         days = sorted({integer(x.get('data-day')) for x in soup.select('.js_click_data[data-day]')} - {None})
         for day in days:
             candidate_date = date.replace(day=day)
