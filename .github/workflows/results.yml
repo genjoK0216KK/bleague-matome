@@ -1,0 +1,44 @@
+name: 当日結果を軽量更新
+
+on:
+  schedule:
+    # UTC 09–14時 = JST 18–23時。毎時冒頭を避ける。
+    - cron: "7,22,37,52 9-14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-update
+  cancel-in-progress: false
+
+jobs:
+  results:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet requests beautifulsoup4
+      - name: 公式当日結果のみ更新（差分時だけHTML生成）
+        run: python scripts/update_results.py --season-year 2026
+      - name: 差分があれば保存
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "結果に変化なし"
+            exit 0
+          fi
+          git config user.name "bleague-matome-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "当日結果更新: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M')"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1

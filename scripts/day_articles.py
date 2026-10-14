@@ -3,12 +3,13 @@ import json
 from datetime import datetime
 from pathlib import Path
 try:
-    from . import official_data as official, preview_data as data, match_articles as articles, daily_lineups
+    from . import official_data as official, preview_data as data, match_articles as articles, daily_lineups, game_day_rankings
 except ImportError:
     import official_data as official
     import preview_data as data
     import match_articles as articles
     import daily_lineups
+    import game_day_rankings
 
 
 def filename(date):
@@ -52,11 +53,35 @@ def lineup_html(summary):
     return body+'</section>'
 
 
+def game_eff_html(summary):
+    leagues=summary.get('game_day_rankings',{}).get('leagues',{})
+    if not leagues:return ''
+    body='<section class="game-eff" id="game-eff"><h2>当日のEFF・ポジション別TOP3</h2><p class="candidate-label">この日の出場選手・公式試合スタッツ</p>'
+    for league,result in leagues.items():
+        body+='<h3>'+official.LEAGUES[league][3]+'</h3>'
+        if result.get('error'):
+            body+='<p class="game-eff-pending">'+articles.esc(result['error'])+'。確定後に掲載します。</p>'
+            continue
+        for position,rows in result['positions'].items():
+            body+='<h4>'+position+'</h4>'
+            if not rows:
+                body+='<p>対象の出場選手なし</p>';continue
+            body+='<div class="tablewrap" tabindex="0" aria-label="'+position+' 当日EFF順位表"><table><thead><tr><th scope="col">位</th><th scope="col">選手・所属</th><th scope="col">得点</th><th scope="col">REB</th><th scope="col">AST</th><th scope="col">EFF</th></tr></thead><tbody>'
+            for player in rows:
+                body+='<tr><td>'+str(player['rank'])+'</td><td><strong>'+articles.esc(player['name'])+'</strong><small>'+articles.esc(player['team']+'・'+'/'.join(player['positions']))+'</small></td>'
+                body+=''.join('<td>'+str(player[k])+'</td>' for k in ('pts','reb','ast','eff'))+'</tr>'
+            body+='</tbody></table></div>'
+    return body+'</section>'
+
+
 def render(summary, preview_root, preview_names, updated):
     date=summary['date'];name=filename(date)
     finished=any(data.is_verified_final(g) for g in summary['games'])
     title=date[5:].replace('-','/')+(' 試合結果・ベスト5' if finished else ' 試合予定・ベスト5')
-    body='<nav class="article-jumps" aria-label="記事内の移動"><a href="#daily-results">試合</a><a href="#daily-lineups">ベスト5・平均EFF</a></nav>'
+    body='<nav class="article-jumps" aria-label="記事内の移動"><a href="#daily-results">試合</a>'
+    if summary.get('game_day_rankings',{}).get('leagues'):body+='<a href="#game-eff">当日TOP3</a>'
+    if summary.get('lineups'):body+='<a href="#daily-lineups">今季平均</a>'
+    body+='</nav>'
     body+='<section class="daily-results" id="daily-results"><h2>'+('試合結果' if finished else '試合予定')+'</h2>'
     sources=list(summary['sources'])
     empty=[]
@@ -79,12 +104,21 @@ def render(summary, preview_root, preview_names, updated):
                 status='—'
                 state=(datetime.fromisoformat(g['starts_at']).astimezone(data.JST).strftime('%H:%M') if g.get('starts_at') else '時刻未確認')+' 予定・結果未確定'
             body+='<a class="daily-score" id="game-'+articles.esc(g['game_id'])+'" href="'+articles.esc(g['source'])+'"><span>'+articles.esc(g['home'])+'</span><strong>'+articles.esc(status)+'</strong><span>'+articles.esc(g['away'])+'</span><small>'+state+'</small></a>'
-    body+='</section>'+lineup_html(summary)
+    body+='</section>'+game_eff_html(summary)+lineup_html(summary)
     body+='<details class="match-notes"><summary>出典・選出ルール・注記</summary>'
-    body+='<p>当日の対戦チームの現在登録選手から、取得時点の今季平均EFFで選びます。当日の試合だけの評価や、試合前時点の記録ではありません。</p>'
+    if summary.get('game_day_rankings',{}).get('leagues'):
+        body+='<p>当日TOP3は全試合の公式記録確定後、出場時間がある選手の公式EFFでリーグ別・ポジション別に選出します。今季平均や予想とは別集計です。</p>'
+        body+='<p>公式登録の兼任ポジションは各部門の対象です。同率は同順位、同率内は選手IDの昇順で最大3人を表示します。ポジションは資料取得時点の公式登録で、当日の起用位置を断定しません。未取得値は0に置き換えません。</p>'
+        body+='<p>EFF＝得点＋REB＋AST＋ST＋BS＋被ファウル－TO－被ブロック－ファウル－外した2P・3P・FT。順位には公式配信EFFを使用し、内訳からの再計算で置き換えません。<a href="https://www.bleague.jp/glossary/">公式用語集</a></p>'
+        for result in summary['game_day_rankings']['leagues'].values():
+            sources.extend(result.get('sources',[]))
+            if result.get('position_retrieved_at'):body+='<p>当日TOP3のポジション資料取得：'+datetime.fromisoformat(result['position_retrieved_at']).astimezone(data.JST).strftime('%Y-%m-%d %H:%M JST')+'</p>'
+            if result.get('formula_differences'):
+                body+='<p>公式EFFと内訳算式の差を確認した記録：'+articles.esc('、'.join(p['name']+'（公式'+str(p['eff'])+'／内訳'+str(p['formula_value'])+'）' for p in result['formula_differences']))+'。公式配信値を優先しています。</p>'
+    body+='<p>今季平均ベスト5・サブ5は、当日の対戦チームの現在登録選手から、取得時点の今季平均EFFで選びます。当日の試合だけの評価や、試合前時点の記録ではありません。</p>'
     body+='<p>PG→SG→SF→PF→Cの順に上位を割り当て、残りからサブ5を選出します。同じ選手は1枠、同じ平均値は選手ID順です。</p>'
     body+='<p>リーグ間は比較しません。公式IL登録中・平均未確認の選手は除外します。出場確定を示す選出ではありません。</p>'
-    body+='<p>EFFは公式の1試合当たり平均です。通算合計からの再計算はしません。所属・ILも資料取得時点の情報です。</p>'
+    body+='<p>今季平均の表では、公式の1試合当たり平均EFFを使用します。通算合計からの再計算はしません。所属・ILも資料取得時点の情報です。</p>'
     if empty:body+='<p>この日試合なし：'+articles.esc('・'.join(empty))+'</p>'
     for league,result in summary.get('lineups',{}).items():
         sources.extend(result.get('sources',[]))
@@ -124,7 +158,7 @@ def sync_alias(root, date, html):
     legacy.write_text(str(soup), encoding='utf-8')
 
 
-def write(client, root, summary, previews, updated):
+def write(client, root, summary, previews, updated, refresh_players=True):
     root = Path(root)
     state_path = root / 'data/match_articles' / filename(summary['date']).replace('.html','.json')
     if state_path.exists():
@@ -141,7 +175,13 @@ def write(client, root, summary, previews, updated):
                     existing.write_text(str(soup), encoding='utf-8')
                 sync_alias(root, summary['date'], str(soup))
             return None  # retain known games rather than silently losing a failed league
-    summary['lineups'] = daily_lineups.collect(client, root, summary)
+    if refresh_players:
+        summary['lineups'] = daily_lineups.collect(client, root, summary)
+    elif state_path.exists():
+        summary['lineups'] = json.loads(state_path.read_text()).get('lineups',{})
+    else:
+        summary['lineups'] = {}
+    summary['game_day_rankings'] = game_day_rankings.collect(client if refresh_players else None, root, summary)
     name, html = render(summary, root, previews, updated)
     annotated = articles.readable_match(articles.annotate_provenance(html,client))
     (root/name).write_text(annotated,encoding='utf-8')
