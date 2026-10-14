@@ -35,7 +35,7 @@ def label(summary):
 def lineup_html(summary):
     if not summary.get('lineups'):
         return ''
-    body = '<section class="daily-lineups"><h2>この日のベスト5・サブ5</h2><p class="candidate-label">今季平均EFF（取得時点）・出場未確認</p>'
+    body = '<section class="daily-lineups" id="daily-lineups"><h2>この日のベスト5・サブ5</h2><p class="candidate-label">今季平均EFF（取得時点）・出場未確認</p>'
     for league, result in summary['lineups'].items():
         body += '<h3>' + official.LEAGUES[league][3] + '</h3>'
         if result.get('error'):
@@ -56,7 +56,8 @@ def render(summary, preview_root, preview_names, updated):
     date=summary['date'];name=filename(date)
     finished=any(data.is_verified_final(g) for g in summary['games'])
     title=date[5:].replace('-','/')+(' 試合結果・ベスト5' if finished else ' 試合予定・ベスト5')
-    body='<section class="daily-results"><h2>'+('試合結果' if finished else '試合予定')+'</h2>'
+    body='<nav class="article-jumps" aria-label="記事内の移動"><a href="#daily-results">試合</a><a href="#daily-lineups">ベスト5・平均EFF</a></nav>'
+    body+='<section class="daily-results" id="daily-results"><h2>'+('試合結果' if finished else '試合予定')+'</h2>'
     sources=list(summary['sources'])
     empty=[]
     for league,settings in official.LEAGUES.items():

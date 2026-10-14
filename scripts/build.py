@@ -975,6 +975,8 @@ def finalize_pages(cfg, pv):
             original = f.read()
         text = ensure_nav(original, bool(cfg["x_list_url"]), fn)
         text = ensure_ga(text, cfg["ga4_id"])
+        if 'href="design-system.css?v=1"' not in text:
+            text = text.replace("</head>", '<link rel="stylesheet" href="design-system.css?v=1">\n</head>', 1)
         if fn.startswith("article-"):
             text = ensure_pv(text, pv_of(pv["total"], fn) if pv_valid(pv) and ("/"+fn in pv["total"] or fn in pv["total"]) else None, pv_note(pv))
         if text != original:

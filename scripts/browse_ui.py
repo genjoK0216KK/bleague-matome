@@ -33,12 +33,18 @@ def match_row(game, date):
 
 def day_body(row, limit=None):
     body = ''
+    empty = []
     for league, settings in official_data.LEAGUES.items():
         games = [g for g in row['games'] if g['competition']==league]
+        if limit and not games:
+            empty.append(settings[3]+('：試合なし' if row.get('schedule_complete',{}).get(league) else '：日程未確認'))
+            continue
         body += '<h3 class="league-heading">'+escape(settings[3])+(' <small>全'+str(len(games))+'試合</small>' if limit and len(games)>limit else '')+'</h3>'
         body += ''.join(match_row(g,row['date']) for g in games[:limit])
         if not games:
             body += '<p class="empty-games">'+('試合なし' if row.get('schedule_complete',{}).get(league) else '日程未確認')+'</p>'
+    if empty:
+        body += '<p class="empty-games">'+' ／ '.join(empty)+'</p>'
     return body
 
 
@@ -60,6 +66,9 @@ def home(root, now=None):
     rows = summaries(root, now)
     today = next((r for r in rows if r['date']==now.date().isoformat()), None)
     body = '<section class="home-games"><h2>今日の試合 <small>'+now.strftime('%m/%d')+'</small></h2>'
+    if today:
+        href='article-games-'+today['date'].replace('-','')+'.html'
+        body += '<nav class="quick-actions" aria-label="今日の試合の見方"><a class="primary-action" href="'+href+'#daily-lineups">ベスト5・平均EFF <span aria-hidden="true">↗</span></a><a href="'+href+'#daily-results">全'+str(len(today['games']))+'試合を見る <span aria-hidden="true">→</span></a></nav>'
     body += day_body(today,2) if today else '<p>今日の試合情報は確認中です。</p>'
     recent = next((r for r in rows if r['date']<=now.date().isoformat() and any(preview_data.is_verified_final(g) for g in r['games'])),None)
     if recent:
