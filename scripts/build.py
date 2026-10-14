@@ -822,16 +822,39 @@ def ensure_ga(text, ga_id):
 
 def load_pv():
     pv = load("pv.json", {}) if os.path.exists(os.path.join(DATA_DIR, "pv.json")) else {}
-    return {"total": (pv or {}).get("total") or {}, "week": (pv or {}).get("week") or {}}
+    if not pv_valid(pv):
+        return {"total":{},"week":{}}
+    return pv
+
+
+def pv_valid(pv):
+    try:
+        stamp = datetime.fromisoformat(pv['updated'])
+        period = pv['period']
+        start, end = datetime.fromisoformat(period['start']), datetime.fromisoformat(period['end'])
+        return (pv.get('status') == 'success' and stamp.tzinfo is not None
+                and bool(pv.get('timezone')) and (end-start).days == 6
+                and all(isinstance(pv.get(k),dict) and all(type(v) is int and v >= 0 for v in pv[k].values()) for k in ('total','week')))
+    except (KeyError, TypeError, ValueError):
+        return False
+
+
+def pv_note(pv, now=None):
+    if not pv_valid(pv):
+        return ''
+    stamp = datetime.fromisoformat(pv['updated'])
+    age = ((now or datetime.now(JST))-stamp).total_seconds()
+    prefix = '更新待ち・過去の取得値 ／ ' if age > 36*3600 else ''
+    return prefix + '取得 ' + stamp.astimezone(JST).strftime('%Y-%m-%d %H:%M JST')
 
 
 def pv_of(table, fn):
     return int(table.get("/" + fn, 0)) + int(table.get(fn, 0))
 
 
-def ensure_pv(text, views):
+def ensure_pv(text, views, note=""):
     """記事の pmeta（日付の横）に閲覧数を差し込む。本文には触れない。"""
-    body = f'<span class="pv">{views:,} views</span>' if views else ""
+    body = f'<span class="pv">{views:,} views（{esc(note)}）</span>' if views is not None else ""
     if "<!-- AUTO:PV:START -->" not in text:
         if not body:
             return text
@@ -845,20 +868,22 @@ def ensure_pv(text, views):
                   text, count=1, flags=re.DOTALL)
 
 
-def render_popular(articles, week, n=5):
-    """実測PVがある場合は人気順、なければ番号なしのおすすめ。"""
+def render_popular(articles, week, n=5, metadata=None):
+    """実測週間順位。未取得・対象記事なしは番号なしのおすすめへ置換。"""
     ranked = sorted(((pv_of(week, a["href"]), a) for a in articles),
                     key=lambda x: -x[0])
     ranked = [(v, a) for v, a in ranked if v > 0][:n]
-    if not ranked:
+    if not ranked or not pv_valid(metadata):
         return '<h4>おすすめ記事</h4>' + ''.join(
             '<div class="rank"><a href="'+esc(a['href'])+'">'+esc(a['title'])+'</a></div>'
             for a in articles[:n])
-    rows = ['<h4>人気記事ランキング（週間）</h4>']
+    period = metadata['period']
+    rows = ['<h4>人気記事ランキング（週間）</h4><p class="source">'+esc(period['start']+'〜'+period['end']+' / '+metadata['timezone'])+'<br>'+esc(pv_note(metadata))+'</p>']
     for i, (v, a) in enumerate(ranked, 1):
+        place = next(j for j,(value,_) in enumerate(ranked,1) if value == v)
         title = a["title"] if len(a["title"]) <= 30 else a["title"][:29] + "…"
         rows.append('<div class="rank"><span class="n{top}">{i}</span><a href="{href}">{t}</a></div>'
-                    .format(top=" top" if i == 1 else "", i=i, href=esc(a["href"]), t=esc(title)))
+                    .format(top=" top" if i == 1 else "", i=place, href=esc(a["href"]), t=esc(title)+f"（{v:,} PV）"))
     return "\n".join(rows)
 
 
@@ -951,7 +976,7 @@ def finalize_pages(cfg, pv):
         text = ensure_nav(original, bool(cfg["x_list_url"]), fn)
         text = ensure_ga(text, cfg["ga4_id"])
         if fn.startswith("article-"):
-            text = ensure_pv(text, pv_of(pv["total"], fn))
+            text = ensure_pv(text, pv_of(pv["total"], fn) if pv_valid(pv) and ("/"+fn in pv["total"] or fn in pv["total"]) else None, pv_note(pv))
         if text != original:
             with open(path, "w", encoding="utf-8") as f:
                 f.write(text)
@@ -997,7 +1022,7 @@ def main():
         "XSIDE": render_x_side(cfg["x_list_url"]),
         "UPDATED": esc(updated),
     }
-    popular = render_popular(articles, pv["week"])
+    popular = render_popular(articles, pv["week"], metadata=pv)
     if popular:
         index_regions["POPULAR"] = popular
     changed |= update_file("index.html", index_regions,
