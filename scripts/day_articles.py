@@ -119,7 +119,7 @@ def render(summary, preview_root, preview_names, updated):
             if result.get('formula_differences'):
                 body+='<p>公式EFFと内訳算式の差を確認した記録：'+articles.esc('、'.join(p['name']+'（公式'+str(p['eff'])+'／内訳'+str(p['formula_value'])+'）' for p in result['formula_differences']))+'。公式配信値を優先しています。</p>'
     if summary.get('lineups'):
-        body+='<p>今季平均ベスト5・サブ5は、当日の対戦チームの現在登録選手から、取得時点の今季平均EFFで選びます。当日の試合だけの評価や、試合前時点の記録ではありません。</p>'
+        body+='<p>対象試合の現在登録選手を、資料取得時点の今季平均EFFで選びます。対象試合の実績ランキングとは別集計です。</p>'
     if summary.get('lineups'):
         body+='<p>PG→SG→SF→PF→Cの順に上位を割り当て、残りからサブ5を選出します。同じ選手は1枠、同じ平均値は選手ID順です。</p>'
     if summary.get('lineups'):
