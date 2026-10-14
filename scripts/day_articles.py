@@ -8,7 +8,7 @@ except ImportError:
     import official_data as official
     import preview_data as data
     import match_articles as articles
-    import daily_lineups, daily_lineups
+    import daily_lineups
 
 
 def filename(date):
@@ -35,79 +35,80 @@ def label(summary):
 def lineup_html(summary):
     if not summary.get('lineups'):
         return ''
-    body = '<section class="daily-lineups"><h2>今季平均EFF｜ベスト5・サブ5</h2><p>当日対戦チームの候補（出場未確認）です。リーグ間比較はしません。</p>'
-    body += '<details class="lineup-rule"><summary>選出ルール</summary><p>各組PG→SG→SF→PF→Cの順に平均EFF上位を割り当て、ベスト5選出後の残りからサブ5を選びます。同一選手は1枠のみ。同平均は選手ID順（能力差を意味しません）。IL登録中・平均未確認は除外します。</p></details>'
+    body = '<section class="daily-lineups"><h2>この日のベスト5・サブ5</h2><p class="candidate-label">今季平均EFF（取得時点）・出場未確認</p>'
     for league, result in summary['lineups'].items():
         body += '<h3>' + official.LEAGUES[league][3] + '</h3>'
         if result.get('error'):
-            body += '<p class="note">選出保留：' + articles.esc(result['error']) + '。全対戦チームの確認後に更新します。</p>'
+            body += '<p class="note">選手データ確認中：'+articles.esc(result['error'])+'</p>'
             continue
-        stamp = datetime.fromisoformat(result['retrieved_at']).astimezone(data.JST).strftime('%Y-%m-%d %H:%M JST')
-        body += '<p class="source">選手・平均データ取得：' + stamp + ' ／ ILは今回取得時点で照合</p>'
-        for title, team in zip(('ベスト5','サブ5'), result['teams']):
-            body += '<h4>' + title + '</h4><div class="tablewrap"><table><tr><th>位置</th><th>選手（所属）</th><th>平均EFF</th><th>試合数</th></tr>'
+        for title, team in zip(('ベスト5','サブ5'),result['teams']):
+            body += '<h4>'+title+'</h4><div class="tablewrap"><table><tr><th>位置</th><th>選手・所属</th><th>平均EFF</th><th>試合数</th></tr>'
             for position, player in team:
                 if player is None:
-                    body += '<tr><td>' + position + '</td><td colspan="3">選出可能な確認済み候補なし</td></tr>'
-                    continue
-                name = articles.esc(player['name']+'（'+player['team']+'）') + '<br><small>出場未確認</small>'
-                if player.get('il_removed_date'):
-                    name += '<br><small>' + articles.link(player['il_source'], 'IL抹消 '+player['il_removed_date']+'・出場未確認') + '</small>'
-                body += '<tr><td>'+position+'</td><td>'+name+'</td><td>'+articles.esc(player['average'])+'</td><td>'+str(player['games'])+'</td></tr>'
+                    body += '<tr><td>'+position+'</td><td colspan="3">確認済み候補なし</td></tr>'
+                else:
+                    body += '<tr><td>'+position+'</td><td><strong>'+articles.esc(player['name'])+'</strong><br><small>'+articles.esc(player['team'])+'</small></td><td>'+articles.esc(player['average'])+'</td><td>'+str(player['games'])+'</td></tr>'
             body += '</table></div>'
-    return body + '</section>'
+    return body+'</section>'
 
 
 def render(summary, preview_root, preview_names, updated):
-    date = summary['date']; name = filename(date)
-    title = date + ' ' + label(summary) + '｜B.PREMIER・B.ONE・B.NEXT'
-    body = lineup_html(summary) + '<p class="lead">この日の試合を3リーグに分けて掲載します。日付・開始時刻は日本時間です。試合前のポジション別ランキングは公式の今季平均EFF（1試合当たり）です。</p>'
-    body += '<p><a href="next-games.html">日付別の試合一覧へ</a> ／ <a href="injury.html">IL・抹消情報を確認</a></p>'
-    sources = list(summary['sources'])
-    for result in summary.get('lineups',{}).values():
-        sources.extend(result.get('sources',[]))
-    for league, settings in official.LEAGUES.items():
-        body += '<section class="league-games" id="league-' + league.lower() + '"><h2>' + settings[3] + '</h2>'
-        games = [g for g in summary['games'] if g['competition'] == league]
+    date=summary['date'];name=filename(date)
+    finished=any(data.is_verified_final(g) for g in summary['games'])
+    title=date[5:].replace('-','/')+(' 試合結果・ベスト5' if finished else ' 試合予定・ベスト5')
+    body='<section class="daily-results"><h2>'+('試合結果' if finished else '試合予定')+'</h2>'
+    sources=list(summary['sources'])
+    empty=[]
+    for league,settings in official.LEAGUES.items():
+        games=[g for g in summary['games'] if g['competition']==league]
         if not summary['schedule_complete'].get(league):
-            body += '<div class="note">日程・結果の取得が未完了です。試合なしとは断定できません。</div>'
+            body+='<p class="note schedule-warning">'+settings[3]+'：日程・結果を確認中</p>'
         elif not games:
-            body += '<p>この日の試合はありません。</p>'
+            empty.append(settings[3])
+        if not games:continue
+        body+='<h3 id="league-'+league.lower()+'">'+settings[3]+'</h3>'
         for g in games:
             sources.append(g['source'])
-            body += '<section class="day-game" id="game-' + articles.esc(g['game_id']) + '"><h3>' + articles.esc(g['home'] + ' vs ' + g['away']) + '</h3>'
             if data.is_verified_final(g):
-                status = f"{g['home_score']}－{g['away_score']}（公式記録確定）"
+                status=f"{g['home_score']} – {g['away_score']}"
+                state='終了'
             elif g['status'] in ('cancelled','postponed'):
-                status = '中止' if g['status']=='cancelled' else '延期'
+                status='—';state='中止' if g['status']=='cancelled' else '延期'
             else:
-                start = datetime.fromisoformat(g['starts_at']).astimezone(data.JST).strftime('%H:%M') if g.get('starts_at') else '開始時刻未確認'
-                status = start + (' 予定・結果未確定' if g.get('status') == 'scheduled' else '・結果未確定')
-            body += '<p class="game-status">' + articles.esc(status) + ' ／ ' + articles.link(g['source'],'公式試合詳細') + '</p>'
-            preview = 'article-preview-' + g['game_id'] + '.html'
-            if preview in preview_names and (Path(preview_root)/preview).exists():
-                soup = official.BeautifulSoup((Path(preview_root)/preview).read_text(), 'html.parser')
-                rank = soup.select_one('.match-rankings')
-                if rank:
-                    for h in rank.select('h2'): h.name = 'h4'
-                    extra = ''.join(str(node) for node in soup.select('.preview-warning'))
-                    return_heading = soup.find('h2', string='IL明け・登録情報')
-                    if return_heading and return_heading.find_next_sibling('ul'):
-                        extra += '<h4>IL明け・登録情報</h4>' + str(return_heading.find_next_sibling('ul'))
-                    preview_sources = [a['href'] for a in soup.select('.source a[href]')]
-                    source_note = '<p class="source">' + '<br>'.join(articles.link(url, articles.source_label(url)) for url in dict.fromkeys(preview_sources)) + '</p>'
-                    body += '<details class="day-rankings"><summary>ポジション別・今季平均EFFを見る</summary><p>両チーム内の上位3人。同点で3人目に並ぶ選手も掲載します。出場試合数を併記し、出場未確認は確定出場を意味しません。</p>' + extra + str(rank) + source_note + '<p><a href="' + preview + '">個別プレビュー・全出典</a></p></details>'
-            elif not data.is_verified_final(g) and g['status'] not in ('cancelled','postponed'):
-                body += '<p class="note">平均EFFのプレビューは未取得です。</p>'
-            body += '</section>'
-        body += '</section>'
-    category = 'kekka' if any(data.is_verified_final(g) for g in summary['games']) else 'data'
-    html = articles.page(title, date, category, body, name, sources, updated)
-    html = html.replace('<span>' + date.replace('-', '.') + '</span>', '<span>試合日 ' + date.replace('-', '.') + '</span>', 1)
-    # Daily selections precede decorative artwork, directly after the article metadata.
+                status='—'
+                state=(datetime.fromisoformat(g['starts_at']).astimezone(data.JST).strftime('%H:%M') if g.get('starts_at') else '時刻未確認')+' 予定・結果未確定'
+            body+='<a class="daily-score" id="game-'+articles.esc(g['game_id'])+'" href="'+articles.esc(g['source'])+'"><span>'+articles.esc(g['home'])+'</span><strong>'+articles.esc(status)+'</strong><span>'+articles.esc(g['away'])+'</span><small>'+state+'</small></a>'
+    body+='</section>'+lineup_html(summary)
+    body+='<details class="match-notes"><summary>出典・選出ルール・注記</summary>'
+    body+='<p>当日の対戦チームの現在登録選手から、取得時点の今季平均EFFで選びます。当日の試合だけの評価や、試合前時点の記録ではありません。</p>'
+    body+='<p>PG→SG→SF→PF→Cの順に上位を割り当て、残りからサブ5を選出します。同じ選手は1枠、同じ平均値は選手ID順です。</p>'
+    body+='<p>リーグ間は比較しません。公式IL登録中・平均未確認の選手は除外します。出場確定を示す選出ではありません。</p>'
+    body+='<p>EFFは公式の1試合当たり平均です。通算合計からの再計算はしません。所属・ILも資料取得時点の情報です。</p>'
+    if empty:body+='<p>この日試合なし：'+articles.esc('・'.join(empty))+'</p>'
+    for league,result in summary.get('lineups',{}).items():
+        sources.extend(result.get('sources',[]))
+        if result.get('retrieved_at'):
+            stamp=datetime.fromisoformat(result['retrieved_at']).astimezone(data.JST).strftime('%Y-%m-%d %H:%M JST')
+            body+='<p>'+official.LEAGUES[league][3]+' 選手・平均資料取得：'+stamp+'</p>'
+        for team in result.get('teams',[]):
+            for _,player in team:
+                if player and player.get('il_removed_date'):
+                    body+='<p>'+articles.esc(player['name'])+'：'+articles.link(player['il_source'],'IL抹消 '+player['il_removed_date'])+'・出場未確認</p>'
+    for g in summary['games']:
+        preview='article-preview-'+g['game_id']+'.html'
+        if preview in preview_names and (Path(preview_root)/preview).exists():
+            soup=official.BeautifulSoup((Path(preview_root)/preview).read_text(),'html.parser')
+            rank=soup.select_one('.match-rankings')
+            if rank:
+                sources.extend(a['href'] for a in soup.select('.source a[href]'))
+                body+='<details class="day-rankings"><summary>'+articles.esc(g['home']+' vs '+g['away'])+' ポジション別平均</summary>'+str(rank)+''.join(str(n) for n in soup.select('.preview-warning'))+'<a href="'+preview+'">個別プレビュー</a></details>'
+    body+='</details><p><a href="cat-kekka.html">日付別の試合結果</a> ／ <a href="injury.html">IL一覧</a></p>'
+    category='kekka' if finished else 'data'
+    html=articles.page(title,date,category,body,name,sources,updated)
+    html=html.replace('<span>'+date.replace('-','.')+'</span>','<span>試合日 '+date.replace('-','.')+'</span>',1)
     import re
-    html = re.sub(r'<img class="eyecatch"[^>]*>\s*', '', html, count=1)
-    return name, html
+    html=re.sub(r'<img class="eyecatch"[^>]*>\s*','',html,count=1)
+    return name,html
 
 
 def sync_alias(root, date, html):
@@ -141,7 +142,7 @@ def write(client, root, summary, previews, updated):
             return None  # retain known games rather than silently losing a failed league
     summary['lineups'] = daily_lineups.collect(client, root, summary)
     name, html = render(summary, root, previews, updated)
-    annotated = articles.annotate_provenance(html,client)
+    annotated = articles.readable_match(articles.annotate_provenance(html,client))
     (root/name).write_text(annotated,encoding='utf-8')
     articles.write_thumbnail(root,name,label(summary),'3リーグの試合情報',summary['date'])
     state_path.parent.mkdir(parents=True,exist_ok=True)
