@@ -40,7 +40,7 @@ class OfficialAdapters(unittest.TestCase):
         from datetime import datetime, timezone
         class Fake:
             def get(self, url):
-                return '<a class="js_click_data" data-day="13"></a><a class="js_click_data" data-day="16"></a>'
+                return '<select name="year"><option selected value="2026"></option></select><select name="mon"><option selected value="10"></option></select><div id="schedule-b1"></div><a class="js_click_data" data-day="13"></a><a class="js_click_data" data-day="16"></a>'
         future=official.parse_game((FIX/'game-506464.html').read_text(), '506464', 2026)
         old=dict(future,ended=True,starts_at='2026-10-13T00:00:00+09:00')
         with patch.object(official,'fetch_day',side_effect=[([old],True,'',[]),([future],True,'',[])]):

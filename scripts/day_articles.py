@@ -33,10 +33,11 @@ def label(summary):
     return '試合結果・予定' if any(data.is_verified_final(g) for g in summary['games']) else '試合予定'
 
 
-def lineup_html(summary):
+def lineup_html(summary, heading=True):
     if not summary.get('lineups'):
         return ''
-    body = '<section class="daily-lineups" id="daily-lineups"><h2>この日のベスト5・サブ5</h2><p class="candidate-label">今季平均EFF（取得時点）・出場未確認</p>'
+    body = '<section class="daily-lineups preview-selection" id="daily-lineups">'
+    if heading: body += '<p class="phase-label">試合前 ／ 今季平均 EFF</p><h2>出場予定選手（登録選手）のベスト5</h2><p class="fixture-date">対象日：'+articles.esc(summary['date'])+'</p>'
     for league, result in summary['lineups'].items():
         body += '<h3>' + official.LEAGUES[league][3] + '</h3>'
         if result.get('error'):
@@ -56,7 +57,7 @@ def lineup_html(summary):
 def game_eff_html(summary):
     leagues=summary.get('game_day_rankings',{}).get('leagues',{})
     if not leagues:return ''
-    body='<section class="game-eff" id="game-eff"><h2>当日のEFF・ポジション別TOP3</h2><p class="candidate-label">この日の出場選手・公式試合スタッツ</p>'
+    body='<section class="game-eff" id="game-eff"><p class="phase-label result-label">試合結果 ／ 当日の EFF</p><h2>当日のEFF・ポジション別TOP3</h2><p class="candidate-label">実際に出場した選手・公式試合スタッツ</p>'
     for league,result in leagues.items():
         body+='<h3>'+official.LEAGUES[league][3]+'</h3>'
         if result.get('error'):
@@ -77,7 +78,8 @@ def game_eff_html(summary):
 def render(summary, preview_root, preview_names, updated):
     date=summary['date'];name=filename(date)
     finished=any(data.is_verified_final(g) for g in summary['games'])
-    title=date[5:].replace('-','/')+(' 試合結果・ベスト5' if finished else ' 試合予定・ベスト5')
+    title=date[5:].replace('-','/')+(' 試合結果・当日のEFF' if finished else ' 出場予定選手（登録選手）のベスト5' if summary['games'] else ' 試合なし' if all(summary.get('schedule_complete',{}).get(k) for k in official.LEAGUES) else ' 日程未確認')
+    if finished: summary=dict(summary,lineups={})
     body='<nav class="article-jumps" aria-label="記事内の移動"><a href="#daily-results">試合</a>'
     if summary.get('game_day_rankings',{}).get('leagues'):body+='<a href="#game-eff">当日TOP3</a>'
     if summary.get('lineups'):body+='<a href="#daily-lineups">今季平均</a>'
@@ -104,6 +106,7 @@ def render(summary, preview_root, preview_names, updated):
                 status='—'
                 state=(datetime.fromisoformat(g['starts_at']).astimezone(data.JST).strftime('%H:%M') if g.get('starts_at') else '時刻未確認')+' 予定・結果未確定'
             body+='<a class="daily-score" id="game-'+articles.esc(g['game_id'])+'" href="'+articles.esc(g['source'])+'"><span>'+articles.esc(g['home'])+'</span><strong>'+articles.esc(status)+'</strong><span>'+articles.esc(g['away'])+'</span><small>'+state+'</small></a>'
+    if empty:body+='<p class="empty-games">この日試合なし：'+articles.esc('・'.join(empty))+'</p>'
     body+='</section>'+game_eff_html(summary)+lineup_html(summary)
     body+='<details class="match-notes"><summary>出典・選出ルール・注記</summary>'
     if summary.get('game_day_rankings',{}).get('leagues'):
@@ -115,10 +118,14 @@ def render(summary, preview_root, preview_names, updated):
             if result.get('position_retrieved_at'):body+='<p>当日TOP3のポジション資料取得：'+datetime.fromisoformat(result['position_retrieved_at']).astimezone(data.JST).strftime('%Y-%m-%d %H:%M JST')+'</p>'
             if result.get('formula_differences'):
                 body+='<p>公式EFFと内訳算式の差を確認した記録：'+articles.esc('、'.join(p['name']+'（公式'+str(p['eff'])+'／内訳'+str(p['formula_value'])+'）' for p in result['formula_differences']))+'。公式配信値を優先しています。</p>'
-    body+='<p>今季平均ベスト5・サブ5は、当日の対戦チームの現在登録選手から、取得時点の今季平均EFFで選びます。当日の試合だけの評価や、試合前時点の記録ではありません。</p>'
-    body+='<p>PG→SG→SF→PF→Cの順に上位を割り当て、残りからサブ5を選出します。同じ選手は1枠、同じ平均値は選手ID順です。</p>'
-    body+='<p>リーグ間は比較しません。公式IL登録中・平均未確認の選手は除外します。出場確定を示す選出ではありません。</p>'
-    body+='<p>今季平均の表では、公式の1試合当たり平均EFFを使用します。通算合計からの再計算はしません。所属・ILも資料取得時点の情報です。</p>'
+    if summary.get('lineups'):
+        body+='<p>今季平均ベスト5・サブ5は、当日の対戦チームの現在登録選手から、取得時点の今季平均EFFで選びます。当日の試合だけの評価や、試合前時点の記録ではありません。</p>'
+    if summary.get('lineups'):
+        body+='<p>PG→SG→SF→PF→Cの順に上位を割り当て、残りからサブ5を選出します。同じ選手は1枠、同じ平均値は選手ID順です。</p>'
+    if summary.get('lineups'):
+        body+='<p>リーグ間は比較しません。公式IL登録中・平均未確認の選手は除外します。出場確定を示す選出ではありません。</p>'
+    if summary.get('lineups'):
+        body+='<p>今季平均の表では、公式の1試合当たり平均EFFを使用します。通算合計からの再計算はしません。所属・ILも資料取得時点の情報です。</p>'
     if empty:body+='<p>この日試合なし：'+articles.esc('・'.join(empty))+'</p>'
     for league,result in summary.get('lineups',{}).items():
         sources.extend(result.get('sources',[]))

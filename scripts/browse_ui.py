@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from datetime import datetime, timedelta
 from html import escape
-from . import preview_data, official_data
+from . import preview_data, official_data, next_preview
 
 
 def summaries(root, now=None):
@@ -65,13 +65,24 @@ def home(root, now=None):
     now = now or datetime.now(preview_data.JST)
     rows = summaries(root, now)
     today = next((r for r in rows if r['date']==now.date().isoformat()), None)
-    body = '<section class="home-games"><h2>今日の試合 <small>'+now.strftime('%m/%d')+'</small></h2>'
-    if today:
+    preview=next_preview.load(root,now)
+    body='<section class="home-preview preview-heading"'+(' data-preview-valid-until="'+next_preview.valid_until(preview).isoformat()+'"' if preview else '')+'><p class="phase-label">試合前 ／ 今季平均 EFF</p><h2>'+next_preview.TITLE+'</h2>'
+    if preview:
+        body+='<p class="fixture-date">'+('確認できた次の開催日' if preview.get('errors') else '次の開催日')+' <strong>'+preview['date']+'</strong></p>'
+        body+='<p>'+escape(' ／ '.join(official_data.LEAGUES[k][3] for k in official_data.LEAGUES if any(g['competition']==k for g in preview['games'])))+'</p>'
+    else: body+='<p>次の開催日・登録選手を確認中</p>'
+    body+='<a class="primary-action" href="next-games.html">ベスト5・サブ5を見る →</a></section>'
+    body+='<script src="next-preview.js" defer></script><section class="home-games"><p class="phase-label result-label">試合結果 ／ 当日の EFF</p><h2>今日の試合 <small>'+now.strftime('%m/%d')+'</small></h2>'
+    if today and today['games'] and (Path(root)/('article-games-'+today['date'].replace('-','')+'.html')).exists():
         href='article-games-'+today['date'].replace('-','')+'.html'
-        body += '<nav class="quick-actions" aria-label="今日の試合の見方"><a class="primary-action" href="'+href+'#daily-lineups">ベスト5・平均EFF <span aria-hidden="true">↗</span></a><a href="'+href+'#daily-results">全'+str(len(today['games']))+'試合を見る <span aria-hidden="true">→</span></a></nav>'
+        body += '<nav class="quick-actions" aria-label="今日の試合の見方"><a href="'+href+'#daily-results">全'+str(len(today['games']))+'試合を見る →</a>'
+        if any(v.get('positions') for v in today.get('game_day_rankings',{}).get('leagues',{}).values()):
+            body+='<a href="'+href+'#game-eff">当日のEFF・TOP3 →</a>'
+        body+='</nav>'
     body += day_body(today,2) if today else '<p>今日の試合情報は確認中です。</p>'
     recent = next((r for r in rows if r['date']<=now.date().isoformat() and any(preview_data.is_verified_final(g) for g in r['games'])),None)
     if recent:
         body += '<h3>直近の結果 <small>'+recent['date'][5:]+'</small></h3>'
+        if any(v.get('positions') for v in recent.get('game_day_rankings',{}).get('leagues',{}).values()):body+='<a class="day-detail" href="article-games-'+recent['date'].replace('-','')+'.html#game-eff">この日のEFF・TOP3 →</a>'
         body += ''.join(match_row(g,recent['date']) for g in [g for g in recent['games'] if preview_data.is_verified_final(g)][:2])
     return body+'<a class="day-detail" href="cat-kekka.html">すべての試合・日付を選ぶ ›</a></section>'
