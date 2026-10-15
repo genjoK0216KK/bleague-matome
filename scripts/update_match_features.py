@@ -8,7 +8,7 @@ import tempfile
 from datetime import datetime, timedelta
 from pathlib import Path
 try:
-    from . import official_data as official, preview_data as data, match_articles as articles, injury_page, stats, day_articles, next_preview
+    from . import official_data as official, preview_data as data, match_articles as articles, injury_page, stats, day_articles, next_preview, schedule_calendar
 except ImportError:
     import official_data as official
     import preview_data as data
@@ -17,6 +17,7 @@ except ImportError:
     import stats
     import day_articles
     import next_preview
+    import schedule_calendar
 
 ROOT = Path(__file__).resolve().parent.parent
 MANAGED = re.compile(r'(?:article-(?:results-one-next-\d{8}|result-highlight-\d+|preview-\d+)\.html|thumb-(?:results-one-next-\d{8}|result-highlight-\d+|preview-\d+)\.svg)$')
@@ -92,6 +93,12 @@ def main():
     parser.add_argument('--capture-dir')
     args = parser.parse_args()
     result = run(args.root, official.Client(args.capture_dir, max_requests=160, time_budget=480), args.season_year, datetime.now(data.JST))
+    # Calendar has its own bounded budget after existing results/EFF are secure.
+    calendar_client = official.Client(args.capture_dir, max_requests=100, time_budget=300)
+    calendar_report = schedule_calendar.update(calendar_client, args.root, args.season_year, datetime.now(data.JST))
+    result['errors'].extend(calendar_report['errors'])
+    result['requests'] += calendar_client.request_count
+    result['sources'].extend(calendar_client.sources)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     # Failures are visible in Actions; successfully refreshed IL/results may still build.
     if result['errors']:

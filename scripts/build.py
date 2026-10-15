@@ -17,11 +17,11 @@ import sys
 from datetime import datetime, timedelta, timezone
 
 try:
-    from . import site_header, browse_ui
+    from . import site_header, browse_ui, schedule_calendar
 except ImportError:
     import site_header
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    from scripts import browse_ui
+    from scripts import browse_ui, schedule_calendar
 
 JST = timezone(timedelta(hours=9))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -780,7 +780,7 @@ def update_category(cat, page, news, articles, standings, updated):
         if n == 1 and cat == 'kekka':
             lead = browse_ui.results(ROOT)
         if n == 1 and cat == 'data':
-            lead = render_standings_table(standings)
+            lead = schedule_calendar.render(ROOT) + render_standings_table(standings)
         content = LIST_PAGE.format(title=esc(CATEGORY_LABEL[cat]), desc=esc(CATEGORY_LABEL[cat]),
             site=SITE_URL, file=page_file(base,n), ver=CSS_VER, header=HEADER_HTML,
             heading=esc(CATEGORY_LABEL[cat]), note='', feed=lead+render_articles(part),
