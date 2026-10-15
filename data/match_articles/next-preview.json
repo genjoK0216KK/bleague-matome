@@ -68,8 +68,9 @@
     "BN": true
   },
   "errors": [],
-  "retrieved_at": "2026-10-15T04:48:55.437436+09:00",
+  "retrieved_at": "2026-10-15T14:03:11.058945+09:00",
   "search_days": 35,
+  "offline": false,
   "other_dates": {
     "BP": "2026-10-16",
     "B1": "2026-10-17",
@@ -333,5 +334,5 @@
       ]
     }
   },
-  "offline": false
+  "player_errors": []
 }
