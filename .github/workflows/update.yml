@@ -52,9 +52,5 @@ jobs:
           fi
           git add -A
           git commit -m "自動更新: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M')"
-          # 実行中に記事公開などの別コミットが入っても失敗しないよう、最新を取り込んでから push
-          for i in 1 2 3; do
-            git pull --rebase origin main && git push && exit 0
-            sleep 5
-          done
-          exit 1
+          # 競合したニュースHTMLは先に公開された編集を保持。その他の競合は中断。
+          python scripts/publish_update.py

@@ -37,8 +37,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "当日結果更新: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M')"
-          for i in 1 2 3; do
-            git pull --rebase origin main && git push && exit 0
-            sleep 5
-          done
-          exit 1
+          python scripts/publish_update.py
