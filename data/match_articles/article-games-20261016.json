@@ -333,5 +333,15 @@
         "https://www.ibarakirobots.win/news/20261001_01_team/"
       ]
     }
+  },
+  "game_day_rankings": {
+    "date": "2026-10-16",
+    "metric": "EFF",
+    "aggregation": "game_total",
+    "leagues": {
+      "BP": {
+        "error": "全試合の公式記録確定待ち"
+      }
+    }
   }
 }
