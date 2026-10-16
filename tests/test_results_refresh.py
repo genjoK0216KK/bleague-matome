@@ -11,6 +11,8 @@ from scripts import update_results as subject
 
 class ResultsRefresh(unittest.TestCase):
     def setUp(self):
+        preview = patch.object(subject.refresh_next_preview, "refresh", return_value={"changed":False})
+        preview.start(); self.addCleanup(preview.stop)
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)

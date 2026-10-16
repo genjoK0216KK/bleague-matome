@@ -53,7 +53,7 @@ def render(state, now):
     body='<div class="breadcrumb"><a href="index.html">ホーム</a> ／ 次の試合</div><header class="preview-heading"><p class="phase-label">試合前 ／ 今季平均 EFF</p><h1>'+TITLE+'</h1>'
     if state.get('date'):
         body+='<p class="fixture-date">'+('確認できた次の開催日' if state['errors'] else '次の開催日')+' <strong>'+state['date']+'</strong>（日本時間）</p>'
-    body+='</header>'
+    body+='<p class="note">登録選手から選出しています。試合当日のエントリー・出場を確約するものではありません。</p></header>'
     if not state.get('games'):
         body+='<p class="empty-games">'+('次の日程を確認中です。' if state['errors'] else '35日以内に確認できる次の日程はありません。日程未発表の場合もあります。')+'</p>'
     else:

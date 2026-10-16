@@ -1,0 +1,545 @@
+{
+  "game": {
+    "game_id": "507257",
+    "season": "2026-27",
+    "competition": "B1",
+    "starts_at": "2026-10-17T15:35:00+09:00",
+    "ended": false,
+    "fixed": false,
+    "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507257",
+    "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+    "status": "scheduled",
+    "players": [],
+    "home": "FE名古屋",
+    "home_full": "ファイティングイーグルス名古屋",
+    "home_id": "717",
+    "home_score": null,
+    "away": "岡山",
+    "away_full": "トライフープ岡山",
+    "away_id": "1639",
+    "away_score": null
+  },
+  "players": [
+    {
+      "player_id": "51000616",
+      "name": "ネルソン・フィリップス",
+      "team": "FE名古屋",
+      "team_id": "717",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "SG",
+        "SF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=717",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "12.0",
+      "games": 7,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000617",
+      "name": "トレス・ティンクル",
+      "team": "FE名古屋",
+      "team_id": "717",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "PF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=717",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "22.0",
+      "games": 7,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "49518",
+      "name": "伊藤 治輝",
+      "team": "FE名古屋",
+      "team_id": "717",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "PF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=717",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": null,
+      "games": null,
+      "stats_source": null,
+      "coverage_complete": false
+    },
+    {
+      "player_id": "51000124",
+      "name": "宇都宮 陸",
+      "team": "FE名古屋",
+      "team_id": "717",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=717",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "0.6",
+      "games": 7,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "30512",
+      "name": "杉本 天昇",
+      "team": "FE名古屋",
+      "team_id": "717",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "SG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=717",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "4.9",
+      "games": 7,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000593",
+      "name": "月岡 熙",
+      "team": "FE名古屋",
+      "team_id": "717",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=717",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "6.0",
+      "games": 7,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000443",
+      "name": "平松 克樹",
+      "team": "FE名古屋",
+      "team_id": "717",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=717",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "5.3",
+      "games": 7,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000592",
+      "name": "針間 大知",
+      "team": "FE名古屋",
+      "team_id": "717",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "SG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=717",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "0.8",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000501",
+      "name": "マイロ・マーフィー",
+      "team": "FE名古屋",
+      "team_id": "717",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "PG",
+        "SG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=717",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": null,
+      "games": null,
+      "stats_source": null,
+      "coverage_complete": false
+    },
+    {
+      "player_id": "51000500",
+      "name": "フランシス・ロペス",
+      "team": "FE名古屋",
+      "team_id": "717",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "SF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=717",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "15.3",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "8517",
+      "name": "笹山 貴哉",
+      "team": "FE名古屋",
+      "team_id": "717",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=717",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "1.0",
+      "games": 1,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "10878",
+      "name": "保岡 龍斗",
+      "team": "FE名古屋",
+      "team_id": "717",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "SG",
+        "SF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=717",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "13.7",
+      "games": 7,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000167",
+      "name": "鍵冨 太雅",
+      "team": "FE名古屋",
+      "team_id": "717",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "SG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=717",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "0.5",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000618",
+      "name": "マックス・フィードラー",
+      "team": "FE名古屋",
+      "team_id": "717",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "C"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=717",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "16.6",
+      "games": 7,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "54143",
+      "name": "内山 晴輝",
+      "team": "岡山",
+      "team_id": "1639",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "SG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=1639",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "-0.6",
+      "games": 5,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "33100",
+      "name": "レイナルド・ガルシア",
+      "team": "岡山",
+      "team_id": "1639",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=1639",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "29.0",
+      "games": 5,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "15839",
+      "name": "秋山 熙",
+      "team": "岡山",
+      "team_id": "1639",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=1639",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "1.0",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "18167",
+      "name": "笠井 康平",
+      "team": "岡山",
+      "team_id": "1639",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=1639",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "4.8",
+      "games": 4,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "25272",
+      "name": "若狭 功希",
+      "team": "岡山",
+      "team_id": "1639",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "SF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=1639",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "1.9",
+      "games": 7,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "8522",
+      "name": "ソウ シェリフ",
+      "team": "岡山",
+      "team_id": "1639",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "C",
+        "PF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=1639",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "11.7",
+      "games": 7,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "12613",
+      "name": "フォファナ ママドゥ",
+      "team": "岡山",
+      "team_id": "1639",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "SF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=1639",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "2.0",
+      "games": 7,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "25275",
+      "name": "向井 祐介",
+      "team": "岡山",
+      "team_id": "1639",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "SG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=1639",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "0.7",
+      "games": 7,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "32975",
+      "name": "横川 俊樹",
+      "team": "岡山",
+      "team_id": "1639",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=1639",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": null,
+      "games": null,
+      "stats_source": null,
+      "coverage_complete": false
+    },
+    {
+      "player_id": "51000319",
+      "name": "キャメロン・ジャクソン",
+      "team": "岡山",
+      "team_id": "1639",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "C",
+        "PF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=1639",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "17.1",
+      "games": 7,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "49611",
+      "name": "中村 瑞稀",
+      "team": "岡山",
+      "team_id": "1639",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "PG",
+        "SG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=1639",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "3.3",
+      "games": 3,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "12631",
+      "name": "ジョシュ・スコット",
+      "team": "岡山",
+      "team_id": "1639",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "C",
+        "PF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=1639",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "22.8",
+      "games": 5,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000549",
+      "name": "横山 悠人",
+      "team": "岡山",
+      "team_id": "1639",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "SG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=1639",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "1.0",
+      "games": 7,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
+    }
+  ],
+  "retrieved_at": "2026-10-16T15:29:29.386528+00:00"
+}
