@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh today's verified results only; no roster, news, GA4, or posting calls."""
+"""Refresh results and roll over expired next-fixture previews; no news, GA4, or posting calls."""
 import argparse
 import json
 import subprocess
@@ -7,11 +7,12 @@ import sys
 from datetime import datetime
 from pathlib import Path
 try:
-    from . import day_articles, official_data as official, preview_data as data
+    from . import day_articles, official_data as official, preview_data as data, refresh_next_preview
 except ImportError:
     import day_articles
     import official_data as official
     import preview_data as data
+    import refresh_next_preview
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -75,6 +76,11 @@ def main():
     try:
         report = run(args.root, official.Client(max_requests=70, time_budget=180), args.season_year,
                      datetime.now(data.JST))
+        preview = refresh_next_preview.refresh(args.root, args.season_year, datetime.now(data.JST))
+        report['preview'] = preview
+        report['changed'] = report['changed'] or preview['changed']
+        if preview.get('errors'):
+            print('::warning::Next-fixture refresh unavailable; previous snapshot retained')
         print(json.dumps(report, ensure_ascii=False))
         if report['changed']:
             subprocess.run([sys.executable, str(Path(args.root) / 'scripts/build.py')],
