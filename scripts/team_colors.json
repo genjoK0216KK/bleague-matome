@@ -1,32 +1,188 @@
 {
- "_note": "B.PREMIER 2026-27 全26クラブのイメージカラー（サムネ用。ロゴは使わず色と名前だけ）。略称・正式名称のどちらでも引ける。色は見た目の目安なので、公式カラーと違えばここを直せば全サムネに反映される。",
+ "_note": "B.PREMIER 2026-27 全26クラブのチームカラー（サムネ用。ロゴは使わず色と名前だけ）。color は各クラブ公式サイトのテーマカラー（CSS の --theme-main-color 等）で確認した値をそのまま使う。A東京は公式サイトのメイン色が黒のため、アルバルクレッド（同サイトのアクセント色）を採用。明るい色の上では thumbgen.py が文字を自動で濃い色にする。official は公式のカラー名、source は確認元。直したら scripts/rethumb.py を実行すると既存サムネに反映される。",
  "clubs": [
-  {"short": "北海道",   "name": "レバンガ北海道",               "color": "#d1121b"},
-  {"short": "仙台",     "name": "仙台89ERS",                    "color": "#1b2a5e"},
-  {"short": "秋田",     "name": "秋田ノーザンハピネッツ",       "color": "#d6006f"},
-  {"short": "茨城",     "name": "茨城ロボッツ",                 "color": "#1f3a7a"},
-  {"short": "宇都宮",   "name": "宇都宮ブレックス",             "color": "#c79a00"},
-  {"short": "群馬",     "name": "群馬クレインサンダーズ",       "color": "#24356f"},
-  {"short": "A千葉",    "name": "アルティーリ千葉",             "color": "#262626"},
-  {"short": "千葉J",    "name": "千葉ジェッツ",                 "color": "#c8102e"},
-  {"short": "A東京",    "name": "アルバルク東京",               "color": "#9e1b32"},
-  {"short": "東京SR",   "name": "東京サンロッカーズ",           "color": "#b8860b"},
-  {"short": "川崎",     "name": "川崎ブレイブサンダース",       "color": "#b5002b"},
-  {"short": "横浜BC",   "name": "横浜ビー・コルセアーズ",       "color": "#1e5bc6"},
-  {"short": "富山",     "name": "富山グラウジーズ",             "color": "#d4561a"},
-  {"short": "信州",     "name": "信州ブレイブウォリアーズ",     "color": "#e07000"},
-  {"short": "三遠",     "name": "三遠ネオフェニックス",         "color": "#c4161c"},
-  {"short": "三河",     "name": "シーホース三河",               "color": "#0062ad"},
-  {"short": "名古屋D",  "name": "名古屋ダイヤモンドドルフィンズ", "color": "#0b6fb8"},
-  {"short": "滋賀",     "name": "滋賀レイクス",                 "color": "#0a6cb4"},
-  {"short": "京都",     "name": "京都ハンナリーズ",             "color": "#5b2a86"},
-  {"short": "大阪",     "name": "大阪エヴェッサ",               "color": "#123f8c"},
-  {"short": "神戸",     "name": "神戸ストークス",               "color": "#1c2f5e"},
-  {"short": "島根",     "name": "島根スサノオマジック",         "color": "#3d2a7d"},
-  {"short": "広島",     "name": "広島ドラゴンフライズ",         "color": "#4b2c83"},
-  {"short": "佐賀",     "name": "佐賀バルーナーズ",             "color": "#d8432b"},
-  {"short": "長崎",     "name": "長崎ヴェルカ",                 "color": "#5a2d82"},
-  {"short": "琉球",     "name": "琉球ゴールデンキングス",       "color": "#2a2a2a"}
+  {
+   "short": "北海道",
+   "name": "レバンガ北海道",
+   "color": "#8FC31F",
+   "official": "レバンガグリーン（公式色は明るい黄緑。白文字が読めるよう少し濃く）",
+   "source": "公式サイト"
+  },
+  {
+   "short": "仙台",
+   "name": "仙台89ERS",
+   "color": "#E9E611",
+   "official": "ナイナーズイエロー（白文字用に濃いめ）",
+   "source": "公式サイト"
+  },
+  {
+   "short": "秋田",
+   "name": "秋田ノーザンハピネッツ",
+   "color": "#E40073",
+   "official": "ハピネッツピンク",
+   "source": "公式サイト"
+  },
+  {
+   "short": "茨城",
+   "name": "茨城ロボッツ",
+   "color": "#023893",
+   "official": "いばらきブルー",
+   "source": "公式サイト"
+  },
+  {
+   "short": "宇都宮",
+   "name": "宇都宮ブレックス",
+   "color": "#12315A",
+   "official": "ネイビー（＋イエロー）",
+   "source": "公式サイト"
+  },
+  {
+   "short": "群馬",
+   "name": "群馬クレインサンダーズ",
+   "color": "#FFD700",
+   "official": "GCTブラック（＋GCTイエロー）",
+   "source": "公式サイト"
+  },
+  {
+   "short": "A千葉",
+   "name": "アルティーリ千葉",
+   "color": "#030B1C",
+   "official": "ブラックネイビー",
+   "source": "公式サイト"
+  },
+  {
+   "short": "千葉J",
+   "name": "千葉ジェッツ",
+   "color": "#F0001E",
+   "official": "チャレンジング レッド",
+   "source": "公式サイト"
+  },
+  {
+   "short": "A東京",
+   "name": "アルバルク東京",
+   "color": "#E2000B",
+   "official": "アルバルクレッド",
+   "source": "公式サイト"
+  },
+  {
+   "short": "東京SR",
+   "name": "東京サンロッカーズ",
+   "color": "#392171",
+   "official": "ROCKER VIOLET（2026-27〜）",
+   "source": "公式サイト"
+  },
+  {
+   "short": "川崎",
+   "name": "川崎ブレイブサンダース",
+   "color": "#8F0038",
+   "official": "ブレイブレッド",
+   "source": "公式サイト"
+  },
+  {
+   "short": "横浜BC",
+   "name": "横浜ビー・コルセアーズ",
+   "color": "#000436",
+   "official": "オーシャンネイビー",
+   "source": "公式サイト"
+  },
+  {
+   "short": "富山",
+   "name": "富山グラウジーズ",
+   "color": "#D90000",
+   "official": "グラウジーズレッド",
+   "source": "公式サイト"
+  },
+  {
+   "short": "信州",
+   "name": "信州ブレイブウォリアーズ",
+   "color": "#0F0F13",
+   "official": "WARRIORS BLACK（＋BRAVE GOLD、2026年刷新）",
+   "source": "公式サイト"
+  },
+  {
+   "short": "三遠",
+   "name": "三遠ネオフェニックス",
+   "color": "#EB0A1E",
+   "official": "フェニックスレッド",
+   "source": "公式サイト"
+  },
+  {
+   "short": "三河",
+   "name": "シーホース三河",
+   "color": "#1A4899",
+   "official": "シーホースブルー",
+   "source": "公式サイト"
+  },
+  {
+   "short": "名古屋D",
+   "name": "名古屋ダイヤモンドドルフィンズ",
+   "color": "#E60012",
+   "official": "ドルフィンズレッド",
+   "source": "未確認（Wikipedia等の値）"
+  },
+  {
+   "short": "滋賀",
+   "name": "滋賀レイクス",
+   "color": "#005BAC",
+   "official": "レイクスブルー",
+   "source": "公式サイト"
+  },
+  {
+   "short": "京都",
+   "name": "京都ハンナリーズ",
+   "color": "#0088A2",
+   "official": "ハンナリーズブルー（花浅葱）",
+   "source": "公式サイト"
+  },
+  {
+   "short": "大阪",
+   "name": "大阪エヴェッサ",
+   "color": "#E6001B",
+   "official": "パッショナリーレッド",
+   "source": "公式サイト"
+  },
+  {
+   "short": "神戸",
+   "name": "神戸ストークス",
+   "color": "#002612",
+   "official": "ストークスグリーン",
+   "source": "公式サイト"
+  },
+  {
+   "short": "島根",
+   "name": "島根スサノオマジック",
+   "color": "#003CA5",
+   "official": "スサマジ・ブルー",
+   "source": "公式サイト"
+  },
+  {
+   "short": "広島",
+   "name": "広島ドラゴンフライズ",
+   "color": "#E94709",
+   "official": "朱色（バーミリオン。白文字用に濃いめ）",
+   "source": "公式サイト"
+  },
+  {
+   "short": "佐賀",
+   "name": "佐賀バルーナーズ",
+   "color": "#00A9CE",
+   "official": "ブルー（水色系。白文字用に濃いめ）",
+   "source": "公式サイト"
+  },
+  {
+   "short": "長崎",
+   "name": "長崎ヴェルカ",
+   "color": "#1C2D51",
+   "official": "ヴェルカネイビー",
+   "source": "公式サイト"
+  },
+  {
+   "short": "琉球",
+   "name": "琉球ゴールデンキングス",
+   "color": "#DBC073",
+   "official": "シャンパンゴールド（白文字用に濃いめ）",
+   "source": "公式サイト"
+  }
  ],
  "default": "#2b3a4a"
 }
