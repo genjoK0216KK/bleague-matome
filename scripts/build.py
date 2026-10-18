@@ -605,7 +605,14 @@ def render_pager(base, n, total):
     out = ['<nav class="pager" aria-label="ページ送り">']
     if n > 1:
         out.append(f'<a class="pg-prev" href="{page_file(base, n - 1)}" rel="prev">‹ 前へ</a>')
-    for k in range(1, total + 1):
+    numbers = range(1, total + 1)
+    if base == 'news' and total > 7:
+        numbers = sorted({1, total, *range(max(1, n - 1), min(total, n + 1) + 1)})
+    previous = 0
+    for k in numbers:
+        if previous and k - previous > 1:
+            out.append('<span class="pg-gap" aria-hidden="true">…</span>')
+        previous = k
         if k == n:
             out.append(f'<span class="pg-cur" aria-current="page">{k}</span>')
         else:
