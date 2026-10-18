@@ -376,7 +376,7 @@ STANDINGS_BLOCK = """  <div class="sec-h"><span class="bar"></span><h2>B.PREMIER
 """
 
 
-CSS_VER = 3
+CSS_VER = 4
 CSS_LINK = f'<link rel="stylesheet" href="auto.css?v={CSS_VER}">'
 
 
