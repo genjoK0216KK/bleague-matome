@@ -241,6 +241,14 @@ table.stdtbl tbody tr:hover td {
   background: #fff;
 }
 .pager a:hover { border-color: #e2360b; color: #e2360b; }
+.pager .pg-gap { align-self: center; padding: 0 2px; }
+.pager .pg-prev, .pager .pg-next { font-weight: 800; white-space: nowrap; }
+.pager a:focus-visible { outline: 3px solid #14202e; outline-offset: 3px; }
+@media (max-width: 600px) {
+  .pager { align-items: center; }
+  .pager a, .pager .pg-cur { min-width: 40px; min-height: 44px; padding: 10px 8px; box-sizing: border-box; }
+  .pager .pg-prev, .pager .pg-next { flex-basis: 42%; order: 1; }
+}
 .pager .pg-cur {
   background: #14202e;
   border-color: #14202e;
