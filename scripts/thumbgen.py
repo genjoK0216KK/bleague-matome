@@ -100,6 +100,30 @@ def team_color(name):
 
 # -------------------------------------------------------------- templates
 
+def ink(bg, light="#ffffff", dark="#14202e"):
+    """背景色に対して読みやすい文字色。明るい色（黄・金・黄緑など）には濃い文字を使う。"""
+    h = str(bg).lstrip("#")
+    if len(h) == 3:
+        h = "".join(c * 2 for c in h)
+    try:
+        r, g, b = (int(h[i:i + 2], 16) / 255 for i in (0, 2, 4))
+    except ValueError:
+        return light
+    lum = 0.2126 * r + 0.7152 * g + 0.0722 * b
+    return dark if lum > 0.55 else light
+
+
+def fit(text, width, base):
+    """長い文字列が枠からはみ出さないよう、文字サイズを base から縮める
+    （全角=1、英大文字・数字=0.7、その他の半角=0.55 で幅を概算）。"""
+    def w(c):
+        if ord(c) >= 0x2E80:
+            return 1.0
+        return 0.7 if (c.isupper() or c.isdigit()) else 0.55
+    units = sum(w(c) for c in str(text or "")) or 1
+    return round(min(base, width / units), 1)
+
+
 def head(label):
     return f'''<svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{x(label)}">
 {FONT}'''
@@ -122,6 +146,9 @@ def game(home, away, hs, as_, hc, ac, meta, star, star_stat):
     hs, as_ = int(hs), int(as_)
     home_win = hs > as_
     hop, aop = (1, 0.55) if home_win else (0.55, 1)
+    hfg = ink(hc) if home_win else "#fff"   # 勝者側はチーム色がはっきり出るので、明るい色なら濃い文字に
+    afg = "#fff" if home_win else ink(ac)
+    wfg = hfg if home_win else afg
     return head(f"{home} {hs}-{as_} {away}") + f'''
 <rect width="480" height="300" fill="#151b22"/>
 <polygon points="0,0 262,0 218,300 0,300" fill="{hc}" opacity="{0.95 if home_win else 0.55}"/>
@@ -130,13 +157,13 @@ def game(home, away, hs, as_, hc, ac, meta, star, star_stat):
 <rect x="0" y="0" width="480" height="40" fill="#000" opacity="0.38"/>
 <text x="20" y="27" font-family="{NUM}" font-weight="800" font-size="19" fill="#fff" letter-spacing="1">FINAL</text>
 <text x="80" y="26" font-family="{JP}" font-weight="700" font-size="13" fill="#fff" opacity="0.85">{x(meta)}</text>
-<text x="118" y="104" text-anchor="middle" font-family="{JP}" font-weight="900" font-size="26" fill="#fff" opacity="{hop}">{x(home)}</text>
-<text x="362" y="104" text-anchor="middle" font-family="{JP}" font-weight="900" font-size="26" fill="#fff" opacity="{aop}">{x(away)}</text>
-<text x="118" y="212" text-anchor="middle" font-family="{NUM}" font-weight="800" font-size="110" fill="#fff" opacity="{hop}">{hs}</text>
-<text x="362" y="212" text-anchor="middle" font-family="{NUM}" font-weight="800" font-size="110" fill="#fff" opacity="{aop}">{as_}</text>
-<text x="{118 if home_win else 362}" y="132" text-anchor="middle" font-family="{NUM}" font-weight="800" font-size="15" fill="#fff" letter-spacing="3">WIN</text>
+<text x="118" y="104" text-anchor="middle" font-family="{JP}" font-weight="900" font-size="{fit(home, 190, 26)}" fill="{hfg}" opacity="{hop}">{x(home)}</text>
+<text x="362" y="104" text-anchor="middle" font-family="{JP}" font-weight="900" font-size="{fit(away, 190, 26)}" fill="{afg}" opacity="{aop}">{x(away)}</text>
+<text x="118" y="212" text-anchor="middle" font-family="{NUM}" font-weight="800" font-size="110" fill="{hfg}" opacity="{hop}">{hs}</text>
+<text x="362" y="212" text-anchor="middle" font-family="{NUM}" font-weight="800" font-size="110" fill="{afg}" opacity="{aop}">{as_}</text>
+<text x="{118 if home_win else 362}" y="132" text-anchor="middle" font-family="{NUM}" font-weight="800" font-size="15" fill="{wfg}" letter-spacing="3">WIN</text>
 <rect x="0" y="246" width="480" height="54" fill="#000" opacity="0.5"/>
-<text x="20" y="279" font-family="{JP}" font-weight="800" font-size="16" fill="#fff">{x(star)}</text>
+<text x="20" y="279" font-family="{JP}" font-weight="800" font-size="{fit(star, 330 - len(star_stat) * 11, 16)}" fill="#fff">{x(star)}</text>
 <text x="{26 + len(star) * 16}" y="280" font-family="{NUM}" font-weight="800" font-size="20" fill="#ffd166" letter-spacing="1">{x(star_stat)}</text>
 {brand(y=280)}
 </svg>'''
@@ -144,20 +171,22 @@ def game(home, away, hs, as_, hc, ac, meta, star, star_stat):
 
 def transfer(name, pos, frm, to, to_c, frm_c, note):
     """移籍: 選手名が主役。旧所属→新所属を矢印で。新所属のカラーで塗る。"""
+    fg = ink(to_c)                       # 新所属の色が明るければ濃い文字に
+    on_white = to_c if fg == "#ffffff" else "#14202e"
     return head(f"{name} {frm}から{to}へ") + f'''
 <rect width="480" height="300" fill="{to_c}"/>
 <polygon points="300,0 480,0 480,300 230,300" fill="#000" opacity="0.18"/>
 <text x="470" y="250" text-anchor="end" font-family="{NUM}" font-weight="800" font-size="190" fill="#fff" opacity="0.10">IN</text>
-{chip("移籍・新加入", 20, 20, "#ffffff", to_c)}
-<text x="22" y="118" font-family="{JP}" font-weight="900" font-size="38" fill="#fff" stroke="#fff" stroke-width="1.2" paint-order="stroke">{x(name)}</text>
-<text x="24" y="146" font-family="{NUM}" font-weight="800" font-size="20" fill="#fff" opacity="0.85" letter-spacing="2">{x(pos)}</text>
+{chip("移籍・新加入", 20, 20, "#ffffff", on_white)}
+<text x="22" y="118" font-family="{JP}" font-weight="900" font-size="38" fill="{fg}" stroke="{fg}" stroke-width="1.2" paint-order="stroke">{x(name)}</text>
+<text x="24" y="146" font-family="{NUM}" font-weight="800" font-size="20" fill="{fg}" opacity="0.85" letter-spacing="2">{x(pos)}</text>
 <rect x="20" y="172" width="150" height="46" rx="4" fill="{frm_c}" opacity="0.9"/>
-<text x="95" y="202" text-anchor="middle" font-family="{JP}" font-weight="800" font-size="17" fill="#fff">{x(frm)}</text>
-<path d="M184 195 h46 m-14 -12 l14 12 l-14 12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="95" y="202" text-anchor="middle" font-family="{JP}" font-weight="800" font-size="17" fill="{ink(frm_c)}">{x(frm)}</text>
+<path d="M184 195 h46 m-14 -12 l14 12 l-14 12" stroke="{fg}" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 <rect x="244" y="172" width="170" height="46" rx="4" fill="#fff"/>
-<text x="329" y="202" text-anchor="middle" font-family="{JP}" font-weight="900" font-size="18" fill="{to_c}">{x(to)}</text>
-<text x="22" y="262" font-family="{JP}" font-weight="700" font-size="14" fill="#fff" opacity="0.9">{x(note)}</text>
-{brand(y=286)}
+<text x="329" y="202" text-anchor="middle" font-family="{JP}" font-weight="900" font-size="18" fill="{on_white}">{x(to)}</text>
+<text x="22" y="262" font-family="{JP}" font-weight="700" font-size="14" fill="{fg}" opacity="0.9">{x(note)}</text>
+{brand(y=286, fill=fg)}
 </svg>'''
 
 
@@ -177,8 +206,8 @@ def news(label, team, team_c, headline, sub, facts):
 <rect x="12" y="0" width="468" height="6" fill="#e8552b"/>
 {chip(label, 32, 26, "#e8552b")}
 <text x="{62 + len(label) * 13}" y="44" font-family="{JP}" font-weight="800" font-size="15" fill="#fff" opacity="0.9">{x(team)}</text>
-<text x="30" y="122" font-family="{JP}" font-weight="900" font-size="46" fill="#fff">{x(headline)}</text>
-<text x="32" y="160" font-family="{JP}" font-weight="800" font-size="19" fill="#ffd166">{x(sub)}</text>
+<text x="30" y="122" font-family="{JP}" font-weight="900" font-size="{fit(headline, 430, 46)}" fill="#fff">{x(headline)}</text>
+<text x="32" y="160" font-family="{JP}" font-weight="800" font-size="{fit(sub, 430, 19)}" fill="#ffd166">{x(sub)}</text>
 <rect x="20" y="210" width="440" height="1" fill="#fff" opacity="0.2"/>
 {rows}
 {brand(y=290)}
