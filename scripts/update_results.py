@@ -4,7 +4,7 @@ import argparse
 import json
 import subprocess
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 try:
     from . import day_articles, official_data as official, preview_data as data, refresh_next_preview
@@ -22,9 +22,8 @@ def complete(summary):
 
 
 def settled(summary):
-    return bool(summary.get('games')) and complete(summary) and all(
-        data.is_verified_final(g) or (g.get('status') in ('cancelled', 'postponed') and g.get('source'))
-        for g in summary['games'])
+    """A date with games that needs no further official reads (results AND EFF TOP3)."""
+    return bool(summary.get('games')) and done(summary)
 
 
 def semantic(summary):
@@ -37,16 +36,50 @@ def semantic(summary):
                             key=lambda g: g['game_id'])}
 
 
-def run(root, client, year, now):
+LOOKBACK_DAYS = 3  # past JST dates re-checked each run; older dates are never retried
+
+
+def rankings_complete(summary):
+    """True when every league with a played/unplayed (not cancelled/postponed) game has its TOP3."""
+    leagues = summary.get('game_day_rankings', {}).get('leagues', {})
+    for league in official.LEAGUES:
+        live = [g for g in summary.get('games', []) if g.get('competition') == league
+                and g.get('status') not in ('cancelled', 'postponed')]
+        if live and (league not in leagues or 'error' in leagues[league]):
+            return False
+    return True
+
+
+def done(summary):
+    """Nothing left to recover for this date: schedule complete, every game final or
+    officially cancelled/postponed, and EFF/position TOP3 built. A day without games is done."""
+    return complete(summary) and all(
+        data.is_verified_final(g) or (g.get('status') in ('cancelled', 'postponed') and g.get('source'))
+        for g in summary.get('games', [])) and rankings_complete(summary)
+
+
+def estimate(summary):
+    """Upper bound of official requests to re-check one saved date (schedule pages,
+    game pages, both club rosters per game)."""
+    return len(official.LEAGUES) + 3 * len(summary.get('games', []))
+
+
+def league_semantic(summary, league):
+    return [g for g in semantic(summary)['games'] if g.get('competition') == league]
+
+
+def run_date(root, client, year, now, date=None):
+    """Refresh one JST date (default: today). Raises ValueError and keeps saved data on any doubt."""
     root = Path(root)
     now = now.astimezone(data.JST)
-    date = now.date().isoformat()
+    date = date or now.date().isoformat()
     path = root / 'data/match_articles' / day_articles.filename(date).replace('.html', '.json')
     prior = json.loads(path.read_text()) if path.exists() else None
     if prior and prior.get('date') != date:
         raise ValueError('Saved result date mismatch')
-    if prior and settled(prior) and (root / day_articles.filename(date)).exists():
-        return {'changed': False, 'reason': 'already_final', 'requests': client.request_count}
+    article = root / day_articles.filename(date)
+    if prior and done(prior) and article.exists():
+        return {'date': date, 'changed': False, 'reason': 'already_final', 'requests': client.request_count}
     summary = day_articles.collect(client, year, date)
     if summary.get('errors') or not complete(summary):
         raise ValueError('Official results incomplete; previous data retained')
@@ -57,15 +90,69 @@ def run(root, client, year, now):
     if any(data.is_verified_final(g) and not data.is_verified_final(new[key]) for key, g in old.items()):
         raise ValueError('Verified result regressed; previous data retained')
     if not summary['games']:
-        return {'changed': False, 'reason': 'no_games', 'requests': client.request_count}
-    if prior and semantic(prior) == semantic(summary) and (root / day_articles.filename(date)).exists():
-        return {'changed': False, 'reason': 'unchanged', 'requests': client.request_count}
+        return {'date': date, 'changed': False, 'reason': 'no_games', 'requests': client.request_count}
+    # Leagues whose games did not change keep an already-built TOP3 if a retry fails.
+    stable = [lg for lg in official.LEAGUES if prior and league_semantic(prior, lg) == league_semantic(summary, lg)]
+    prior_rankings = (prior or {}).get('game_day_rankings', {}).get('leagues', {})
+    if prior and semantic(prior) == semantic(summary) and article.exists():
+        all_final = all(data.is_verified_final(g) for g in summary['games']
+                        if g.get('status') not in ('cancelled', 'postponed'))
+        if rankings_complete(prior) or not all_final:  # TOP3 cannot exist before every result is final
+            return {'date': date, 'changed': False, 'reason': 'unchanged', 'requests': client.request_count}
+        trial = day_articles.game_day_rankings.collect(client, root, summary)
+        merged = day_articles.merge_rankings(trial, prior_rankings, stable)
+        if merged['leagues'] == prior_rankings:
+            return {'date': date, 'changed': False, 'reason': 'rankings_still_pending', 'requests': client.request_count}
     previews = [p.name for p in root.glob('article-preview-*.html')]
     written = day_articles.write(client, root, summary, previews,
-                                 now.strftime('%Y-%m-%d %H:%M JST'), refresh_players=False)
+                                 now.strftime('%Y-%m-%d %H:%M JST'), refresh_players=False,
+                                 rankings_client=client, prior_rankings=prior_rankings, stable_leagues=stable)
     if not written:
         raise ValueError('Result rendering failed; build skipped')
-    return {'changed': True, 'article': written, 'requests': client.request_count}
+    return {'date': date, 'changed': True, 'article': written, 'requests': client.request_count}
+
+
+def pending_dates(root, now):
+    """Today plus saved past JST dates (newest first, at most LOOKBACK_DAYS back) that are not done."""
+    root = Path(root)
+    today = now.astimezone(data.JST).date()
+    dates = [today.isoformat()]
+    for back in range(1, LOOKBACK_DAYS + 1):
+        day = (today - timedelta(days=back)).isoformat()
+        path = root / 'data/match_articles' / day_articles.filename(day).replace('.html', '.json')
+        if not path.exists():
+            continue
+        try:
+            saved = json.loads(path.read_text())
+        except (ValueError, OSError):
+            dates.append(day)  # unreadable: run() reports it for this date only
+            continue
+        if not (done(saved) and (root / day_articles.filename(day)).exists()):
+            dates.append(day)
+    return dates
+
+
+def run(root, client, year, now):
+    """Today and recent unfinished JST dates. Each date is independent: a failure keeps that
+    date's saved data and does not stop the others. If nothing changed and some date failed,
+    the first failure is raised (exit 1, no build) as before."""
+    reports, errors, first = [], [], None
+    today = now.astimezone(data.JST).date().isoformat()
+    limit = getattr(client, 'max_requests', None)
+    for date in pending_dates(root, now):
+        path = Path(root) / 'data/match_articles' / day_articles.filename(date).replace('.html', '.json')
+        try:
+            if date != today and limit is not None and client.request_count + estimate(json.loads(path.read_text())) > limit:
+                reports.append({'date': date, 'changed': False, 'reason': 'deferred_budget', 'requests': client.request_count})
+                continue
+            reports.append(run_date(root, client, year, now, date))
+        except (ValueError, OSError, official.requests.RequestException) as exc:
+            errors.append({'date': date, 'error': str(exc)}); first = first or exc
+    changed = any(r['changed'] for r in reports)
+    if errors and not changed:
+        raise first
+    head = next((r for r in reports if r['date'] == today), reports[0] if reports else {})
+    return dict(head, changed=changed, dates=reports, errors=errors, requests=client.request_count)
 
 
 def main():
@@ -75,16 +162,22 @@ def main():
     args = parser.parse_args()
     try:
         report = run(args.root, official.Client(max_requests=70, time_budget=180), args.season_year,
-                     datetime.now(data.JST))
+                         datetime.now(data.JST))
         preview = refresh_next_preview.refresh(args.root, args.season_year, datetime.now(data.JST))
         report['preview'] = preview
         report['changed'] = report['changed'] or preview['changed']
         if preview.get('errors'):
             print('::warning::Next-fixture refresh unavailable; previous snapshot retained')
+        for e in report.get('errors', []):
+            print('::warning::Result refresh failed for ' + e['date'] + '; saved data retained')
         print(json.dumps(report, ensure_ascii=False))
         if report['changed']:
             subprocess.run([sys.executable, str(Path(args.root) / 'scripts/build.py')],
                            cwd=args.root, check=True)
+            return 0  # some date was updated; failed dates are retried by the next run
+        if report.get('errors'):
+            print('::error::Result refresh failed; existing published data retained')
+            return 1
         return 0
     except (ValueError, OSError, official.requests.RequestException, subprocess.CalledProcessError):
         print('::error::Result refresh failed; existing published data retained')

@@ -112,6 +112,12 @@ def parse_game(page, key, year, schedule_status=None):
         game[side + '_id'] = str(g.get(prefix + 'TeamID') or '')
         game[side + '_score'] = integer(g.get(prefix + 'TeamScore'))
     game['status'] = 'final' if game['ended'] and game['fixed'] else 'unconfirmed'
+    # The official schedule's 中止/延期 notice also applies to games that already have a
+    # context page; a fixed final record contradicting it is not guessed either way.
+    if schedule_status in ('cancelled', 'postponed'):
+        if game['status'] == 'final':
+            raise DataError('Schedule notice contradicts a fixed official result')
+        game['status'] = schedule_status
     # Category and period are the only filters; PlayingFlg is not participation.
     game['players'] = [p for side in ('HomeBoxscores', 'AwayBoxscores') for p in ctx.get(side, [])
                        if integer(p.get('Category')) == 1 and integer(p.get('PeriodCategory')) == 18]

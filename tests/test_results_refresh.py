@@ -45,6 +45,9 @@ class ResultsRefresh(unittest.TestCase):
     def test_final_skips_all_fetches(self):
         prior = copy.deepcopy(self.summary)
         prior['games'][0].update(status='final', ended=True, fixed=True, home_score=80, away_score=71)
+        # 2026-10-20: "done" now also requires the day's EFF/position TOP3; a final result
+        # without it is retried (see test_backfill_unsettled.py).
+        prior['game_day_rankings'] = {'leagues': {'B1': {'positions': {}}}}
         self.save(prior)
         result, collect, write = self.call(self.summary)
         self.assertEqual(result['reason'], 'already_final'); collect.assert_not_called(); write.assert_not_called()

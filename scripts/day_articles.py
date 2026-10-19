@@ -165,7 +165,18 @@ def sync_alias(root, date, html):
     legacy.write_text(str(soup), encoding='utf-8')
 
 
-def write(client, root, summary, previews, updated, refresh_players=True):
+def merge_rankings(fresh, prior_leagues, stable_leagues):
+    """Keep a previously built league TOP3 when its games are unchanged and the new attempt failed."""
+    leagues = dict(fresh.get('leagues', {}))
+    for league in stable_leagues:
+        old = (prior_leagues or {}).get(league)
+        if old and 'error' not in old and 'error' in leagues.get(league, {'error': 'missing'}):
+            leagues[league] = old
+    return dict(fresh, leagues=leagues)
+
+
+def write(client, root, summary, previews, updated, refresh_players=True, rankings_client=None,
+          prior_rankings=None, stable_leagues=()):
     root = Path(root)
     state_path = root / 'data/match_articles' / filename(summary['date']).replace('.html','.json')
     if state_path.exists():
@@ -188,7 +199,11 @@ def write(client, root, summary, previews, updated, refresh_players=True):
         summary['lineups'] = json.loads(state_path.read_text()).get('lineups',{})
     else:
         summary['lineups'] = {}
-    summary['game_day_rankings'] = game_day_rankings.collect(client if refresh_players else None, root, summary)
+    # Positions come from a roster cache (36h) or, when stale, a fresh official roster
+    # fetch. rankings_client lets result-only refreshes fetch rosters without lineups.
+    ranking_source = rankings_client if rankings_client is not None else (client if refresh_players else None)
+    summary['game_day_rankings'] = merge_rankings(game_day_rankings.collect(ranking_source, root, summary),
+                                                  prior_rankings, stable_leagues)
     name, html = render(summary, root, previews, updated)
     annotated = articles.readable_match(articles.annotate_provenance(html,client))
     (root/name).write_text(annotated,encoding='utf-8')
