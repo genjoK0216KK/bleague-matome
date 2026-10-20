@@ -463,7 +463,9 @@ def run():
         if not g or not g["date"]:
             log(f"   {key}: ボックススコアなし")
             continue
-        if not is_premier(g) or g["date"] < oldest or g["date"] in published:
+        # 公開済みの日も再収集する（確定が遅れた同日試合を後から回収するため）。
+        # ページ取得は上の get() で既に済んでおり、追加のリクエストは発生しない。
+        if not is_premier(g) or g["date"] < oldest:
             continue
         games[key] = g
         queue.extend(k for k in g["same_day"] if k not in seen)
@@ -473,17 +475,27 @@ def run():
         by_date.setdefault(g["date"], []).append(g)
 
     new_pending = {}
-    latest = None
     for date, day_games in sorted(by_date.items()):
         expected = {k for g in day_games for k in g["same_day"]} | {g["key"] for g in day_games}
         expected = {k for k in expected
                     if (k in games and games[k]["date"] == date) or k in failed}
         complete = (not (expected & failed)
                     and all(g["ended"] and g["fixed"] and g["players"] for g in day_games))
+        already = date in published
         if not complete:
-            for g in day_games:
-                new_pending[g["key"]] = date
-            log(f"{date}: 未確定の試合があるため次回に持ち越し")
+            # 未公開日は次回に持ち越し。公開済み日は確定済み分を維持し、降格させない。
+            if not already:
+                for g in day_games:
+                    new_pending[g["key"]] = date
+                log(f"{date}: 未確定の試合があるため次回に持ち越し")
+            else:
+                log(f"{date}: 追加試合が未確定。公開済みの確定分は維持")
+            continue
+        # 公開済み日は、収集できた試合が既存分を増やす時だけ再集計する（churn防止・取りこぼし回収）。
+        stored = load_json(os.path.join(STATS_DIR, f"{date}.json"), None) if already else None
+        stored_keys = {g["key"] for g in stored["games"]} if stored else set()
+        new_keys = {g["key"] for g in day_games}
+        if already and new_keys <= stored_keys:
             continue
         day_games.sort(key=lambda g: g["key"])
         summary = summarise(date, day_games)
@@ -492,14 +504,14 @@ def run():
         save_json(os.path.join(STATS_DIR, f"{date}.json"), summary)
         write_article(summary)
         published.add(date)
-        latest = summary
-        log(f"{date}: {len(day_games)}試合 / {summary['player_count']}人を集計")
+        kind = "再集計(追加試合を反映)" if already else "集計"
+        log(f"{date}: {kind} {len(day_games)}試合 / {summary['player_count']}人")
 
-    if latest is None:
-        last = max(published) if published else None
-        latest = load_json(os.path.join(STATS_DIR, f"{last}.json"), None) if last else None
-    if latest:
-        write_stats_page(latest, published)
+    # stats.html は常に最新の公開日を表示する（古い日を再集計しても最新日のまま）。
+    newest = max(published) if published else None
+    newest_summary = load_json(os.path.join(STATS_DIR, f"{newest}.json"), None) if newest else None
+    if newest_summary:
+        write_stats_page(newest_summary, published)
 
     state["pending"] = new_pending
     state["published"] = sorted(published)
