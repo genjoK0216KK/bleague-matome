@@ -99,8 +99,8 @@
 }
 
 .feed .item.ext:hover {
-  border-color: #ffc7b3;
-  box-shadow: 0 2px 10px rgba(226, 54, 11, .08);
+  border-color: #151a18;
+  box-shadow: 0 2px 10px rgba(21, 26, 24, .08);
   transform: translateY(-1px);
 }
 
@@ -156,7 +156,7 @@
 .gname {
   font-size: 12px;
   font-weight: 700;
-  color: #e2360b;
+  color: #151a18;
   margin: 10px 0 4px;
   letter-spacing: .02em;
 }
@@ -211,7 +211,7 @@ table.stdtbl tbody tr:nth-child(odd) td {
 }
 
 table.stdtbl tbody tr:hover td {
-  background: #fff6f3;
+  background: #f3f5f3;
 }
 
 @media (max-width: 640px) {
@@ -240,7 +240,7 @@ table.stdtbl tbody tr:hover td {
   color: #14202e;
   background: #fff;
 }
-.pager a:hover { border-color: #e2360b; color: #e2360b; }
+.pager a:hover { border-color: #151a18; color: #151a18; background: #f3f5f3; }
 .pager .pg-gap { align-self: center; padding: 0 2px; }
 .pager .pg-prev, .pager .pg-next { font-weight: 800; white-space: nowrap; }
 .pager a:focus-visible { outline: 3px solid #14202e; outline-offset: 3px; }
@@ -279,7 +279,7 @@ table.stdtbl tbody tr:hover td {
 .day-rankings{border:1px solid #dfe5eb;border-radius:8px;margin:16px 0;padding:0 14px}
 .day-rankings summary{cursor:pointer;min-height:48px;padding:12px 0;font-weight:700}
 .day-rankings summary:focus-visible{outline:3px solid #1457d6;outline-offset:2px}
-.day-rankings h4{font-size:18px;margin:24px 0 10px;border-left:4px solid #ff5a1f;padding-left:10px}
+.day-rankings h4{font-size:18px;margin:24px 0 10px;border-left:4px solid #151a18;padding-left:10px}
 .game-status{font-weight:700}
 
 /* Daily five-player overview fits phone widths. */
