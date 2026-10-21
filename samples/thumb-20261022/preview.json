@@ -1,3 +1,29 @@
-{"type":"preview","date":"10.22","tipoff":"19:05","note":"試合前の見どころ（結果ではありません）",
- "games":[{"league":"B.PREMIER","home":"仙台","away":"横浜BC"},{"league":"B.PREMIER","home":"A東京","away":"茨城"},
-          {"league":"B.ONE","home":"八王子","away":"東京U"},{"league":"B.NEXT","home":"湘南","away":"山口"}]}
+{
+ "type": "preview",
+ "date": "10.22",
+ "tipoff": "19:05",
+ "note": "公式サイト未接続のため、日程は記事の確認状況どおり",
+ "games": [
+  {
+   "league": "B.PREMIER",
+   "home": "仙台",
+   "away": "横浜BC"
+  },
+  {
+   "league": "B.PREMIER",
+   "home": "A東京",
+   "away": "茨城"
+  },
+  {
+   "league": "B.ONE",
+   "home": "八王子",
+   "away": "東京U",
+   "flag": "未再確認"
+  },
+  {
+   "league": "B.NEXT",
+   "home": "湘南",
+   "away": "山口"
+  }
+ ]
+}

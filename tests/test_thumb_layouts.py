@@ -34,8 +34,27 @@ class Layouts(unittest.TestCase):
         self.assertEqual(thumbgen.visible_color('湘南', 0), thumbgen.FALLBACK[0])
         self.assertNotEqual(thumbgen.visible_color('仙台', 0), thumbgen.FALLBACK[0])
 
+    def test_compare_note_does_not_overlap_brand(self):
+        """独立実見：注記（取得日・出場未確認）が右下の「バスケまとめ」と同じ行で重なっていた。"""
+        svg = self.render('compare.json')
+        note_y = float(re.search(r'<text x="20" y="(\d+)"[^>]*>10/14', svg).group(1))
+        brand_y = float(re.search(r'<text x="462" y="(\d+)"[^>]*>バスケまとめ', svg).group(1))
+        self.assertGreaterEqual(brand_y - note_y, 12)
+        last_row_bottom = max(float(y) + 24 for y in re.findall(r'<rect x="272" y="(\d+)"', svg))
+        self.assertLess(last_row_bottom, note_y - 12)
+
+    def test_preview_marks_unconfirmed_card(self):
+        svg = self.render('preview.json')
+        self.assertEqual(svg.count('未再確認'), 1)
+        self.assertNotIn('当日確認済', svg)
+
+    def test_simple_variant_has_three_elements(self):
+        svg = self.render('simple-compare.json')
+        texts = [t for t in re.findall(r'>([^<>]+)</text>', svg) if t.strip() and t != 'バスケまとめ']
+        self.assertEqual(texts, ['比較', '湘南 vs 山口', 'ポジション別 今季平均EFF'])
+
     def test_samples_are_up_to_date(self):
-        for name in ('preview', 'compare'):
+        for name in ('preview', 'compare', 'simple-preview', 'simple-compare'):
             svg = self.render(name + '.json')
             body = lambda t: re.sub(r'<style>@font-face.*?</style>', '', t, flags=re.S)
             self.assertEqual(body(svg), body((SAMPLES / ('sample-' + name + '.svg')).read_text()))

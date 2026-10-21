@@ -20,6 +20,8 @@ data.json の形（type ごと。チームは略称でも正式名称でもよ�
   比較      {"type": "compare", "home": "湘南", "away": "山口", "metric": "ポジション別1位・今季平均EFF",
             "rows": [{"pos": "PG", "name": "重冨周希", "team": "湘南", "value": 9.2}, ...],
             "note": "10/14取得の公式スタッツ"}   # 値は記事の表と同じもの。表に無い値は描かない。
+  小さい一覧向け {"type": "simple", "label": "比較", "title": "湘南 vs 山口", "sub": "ポジション別EFF",
+            "teams": ["湘南", "山口"]}   # 種別・主役・一言の3要素だけ
   色を直接指定したいときは home_color / away_color / to_color / from_color / team_color を足す。
 
 デザイン:
@@ -241,7 +243,10 @@ def preview(date_label, tipoff, games, note):
             f'<text x="126" y="{y + 26}" font-family="{JP}" font-weight="900" font-size="{fit(g["home"], 120, 20)}" fill="#fff">{x(g["home"])}</text>'
             f'<text x="290" y="{y + 26}" text-anchor="middle" font-family="{NUM}" font-weight="800" font-size="18" fill="#fff" opacity="0.6">VS</text>'
             f'<rect x="318" y="{y + 7}" width="6" height="24" fill="{ac}"/>'
-            f'<text x="332" y="{y + 26}" font-family="{JP}" font-weight="900" font-size="{fit(g["away"], 120, 20)}" fill="#fff">{x(g["away"])}</text>')
+            f'<text x="332" y="{y + 26}" font-family="{JP}" font-weight="900" font-size="{fit(g["away"], 70 if g.get("flag") else 120, 20)}" fill="#fff">{x(g["away"])}</text>'
+            + (f'<rect x="398" y="{y + 9}" width="56" height="20" rx="3" fill="#fff" opacity="0.9"/>'
+               f'<text x="426" y="{y + 24}" text-anchor="middle" font-family="{JP}" font-weight="800" font-size="11" fill="#151a18">{x(g["flag"])}</text>'
+               if g.get("flag") else ''))
     return head(f"{date_label} {tipoff} 試合前プレビュー") + f'''
 <rect width="480" height="300" fill="#151a18"/>
 <rect x="0" y="0" width="480" height="6" fill="#ccf43b"/>
@@ -260,7 +265,7 @@ def compare(home, away, metric, rows, note):
     top = max([r["value"] for r in rows] + [1])
     out = []
     for i, r in enumerate(rows[:5]):
-        y = 84 + i * 40
+        y = 80 + i * 36
         c = colors.get(r["team"], team_color(r["team"]))
         w = round(120 * r["value"] / top)
         out.append(
@@ -281,8 +286,25 @@ def compare(home, away, metric, rows, note):
 <text x="460" y="38" text-anchor="end" font-family="{JP}" font-weight="800" font-size="{fit(metric, 300, 15)}" fill="#fff">{x(metric)}</text>
 {legend}
 {"".join(out)}
-<text x="20" y="292" font-family="{JP}" font-weight="700" font-size="12" fill="#fff" opacity="0.75">{x(note)}</text>
-{brand(y=292)}
+<rect x="20" y="262" width="440" height="1" fill="#fff" opacity="0.2"/>
+<text x="20" y="280" font-family="{JP}" font-weight="700" font-size="{fit(note, 440, 12)}" fill="#fff" opacity="0.8">{x(note)}</text>
+{brand(y=295, op=0.5)}
+</svg>'''
+
+
+def simple(label, title, sub, colors):
+    """一覧の小さいサムネ（96〜132px幅）でも種別と主役が分かるよう、要素を3つに絞った型。"""
+    colors = colors or ["#ccf43b"]
+    bars = "".join(f'<rect x="{i * 480 / len(colors)}" y="0" width="{480 / len(colors) + 1}" height="14" fill="{c}"/>'
+                   for i, c in enumerate(colors))
+    return head(f"{label} {title}") + f'''
+<rect width="480" height="300" fill="#151a18"/>
+{bars}
+<rect x="24" y="44" width="{28 + len(label) * 30}" height="54" rx="4" fill="#ccf43b"/>
+<text x="{38 + len(label) * 15}" y="83" text-anchor="middle" font-family="{JP}" font-weight="900" font-size="30" fill="#151a18">{x(label)}</text>
+<text x="24" y="192" font-family="{JP}" font-weight="900" font-size="{fit(title, 432, 66)}" fill="#fff">{x(title)}</text>
+<text x="26" y="250" font-family="{JP}" font-weight="800" font-size="{fit(sub, 430, 28)}" fill="#fff" opacity="0.85">{x(sub)}</text>
+{brand(y=290)}
 </svg>'''
 
 
@@ -305,6 +327,9 @@ def render(d):
         return news(d.get("label", "速報"), d.get("team", ""),
                     d.get("team_color") or team_color(d.get("team", "")),
                     d["headline"], d.get("sub", ""), facts)
+    if kind == "simple":
+        colors = [d.get("color_" + str(i)) or visible_color(t, i % 2) for i, t in enumerate(d.get("teams", []))]
+        return simple(d["label"], d["title"], d.get("sub", ""), colors)
     if kind == "preview":
         return preview(d["date"], d["tipoff"], d["games"], d.get("note", ""))
     if kind == "compare":
