@@ -37,7 +37,7 @@ class Proposal(unittest.TestCase):
         self.assertEqual(ids, ['today', 'own-articles', 'updates', 'ranking'])
         self.assertIn('10月22日（木）', soup.select_one('#today h2').text)
         self.assertEqual(len(soup.select('#today .match-row')), 4)
-        self.assertIn('10/21 の 9 試合は公式記録の確定待ちです', soup.select_one('#today').text)
+        self.assertIn('前日 10月21日（水）の 9 試合', soup.select_one('#today').text)
         fold = soup.select_one('details#ranking')
         self.assertIsNone(fold.get('open'))
         self.assertIn('10/19 の試合で活躍した選手', fold.summary.text)

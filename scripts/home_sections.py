@@ -208,13 +208,39 @@ def today_block(root, now, rows):
         more = len(row['games']) - 4
         body += ('<a class="day-detail" href="' + day_articles.filename(today) + '">'
                  + ('ほか ' + str(more) + ' 試合・' if more > 0 else '') + '今日の試合の詳細 ›</a>')
-    body += browse_ui.pending_past(rows, now)
+    body += past_pending(root, rows, now)
     recent = next((r for r in rows if r['date'] < today
                    and any(preview_data.is_verified_final(g) for g in r['games'])), None)
     if recent:
         body += ('<a class="day-detail" href="' + day_articles.filename(recent['date']) + '">直近の試合結果（'
                  + recent['date'][5:].replace('-', '/') + '）›</a>')
     return body + '</section>'
+
+
+def past_pending(root, rows, now):
+    """前日以前で未確定の試合がある日：対象日・状態・最終確認時刻・表示内容の取得時刻（不明なら不明）。
+    過去の日付は「今日」と書かない。"""
+    out = ''
+    for row in rows:
+        day = datetime.fromisoformat(row['date']).date()
+        if not (0 < (now.date() - day).days <= browse_ui.PENDING_DAYS):
+            continue
+        waiting = [g for g in row['games'] if not preview_data.is_verified_final(g)
+                   and g.get('status') not in ('cancelled', 'postponed')]
+        if not waiting:
+            continue
+        entry = result_status.load(root).get(row['date'], {})
+        failed = entry.get('state') == 'fetch_failed'
+        label = ('前日 ' if (now.date() - day).days == 1 else '') + _jp_date(day)
+        state = ('公式サイトから取得できていません（' + escape(entry.get('failing_since') or '時刻不明') + ' から）'
+                 if failed else '公式記録の確定待ち')
+        out += ('<div class="past-pending"><p><strong>' + label + 'の ' + str(len(waiting)) + ' 試合</strong>：'
+                + state + '</p><dl class="past-times">'
+                '<dt>最後に公式サイトを確認できた時刻</dt><dd>' + escape(entry.get('last_checked_at') or '不明') + '</dd>'
+                '<dt>表示中の内容の取得時刻</dt><dd>' + escape(entry.get('content_as_of') or '不明') + '</dd></dl>'
+                '<a class="day-detail" href="' + day_articles.filename(row['date']) + '">'
+                + row['date'][5:].replace('-', '/') + ' の試合を見る ›</a></div>')
+    return out
 
 
 def articles_block(articles, now, name):
