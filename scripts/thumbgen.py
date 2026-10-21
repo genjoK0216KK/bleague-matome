@@ -15,6 +15,11 @@ data.json の形（type ごと。チームは略称でも正式名称でもよ�
             "from": "富山", "to": "千葉ジェッツ", "note": "高さを補強し、B.PREMIER優勝を狙う"}
   速報など {"type": "news", "label": "速報", "team": "横浜ビー・コルセアーズ", "headline": "負傷離脱",
             "sub": "マクガスティがIL入り", "facts": [["診断", "右大腿四頭筋損傷"], ["全治", "2〜3カ月"]]}
+  試合前    {"type": "preview", "date": "10.22", "tipoff": "19:05", "note": "全4試合",
+            "games": [{"league": "B.PREMIER", "home": "仙台", "away": "横浜BC"}, ...]}  # 最大4カード
+  比較      {"type": "compare", "home": "湘南", "away": "山口", "metric": "ポジション別1位・今季平均EFF",
+            "rows": [{"pos": "PG", "name": "重冨周希", "team": "湘南", "value": 9.2}, ...],
+            "note": "10/14取得の公式スタッツ"}   # 値は記事の表と同じもの。表に無い値は描かない。
   色を直接指定したいときは home_color / away_color / to_color / from_color / team_color を足す。
 
 デザイン:
@@ -214,6 +219,73 @@ def news(label, team, team_c, headline, sub, facts):
 </svg>'''
 
 
+FALLBACK = ("#b9c4be", "#7d8a84")   # 色表に無いクラブ用（暗い背景でも見える中間色。ホーム明・アウェー暗）
+
+
+def visible_color(name, side=0):
+    """色表に無いクラブは既定色（暗色）だと背景に沈むので、見える中間色にする。"""
+    c = team_color(name)
+    return FALLBACK[side] if c == DEFAULT_COLOR else c
+
+
+def preview(date_label, tipoff, games, note):
+    """試合前プレビュー：開始時刻を大きく、対戦カードを最大4つ。結果・予想スコアは載せない。"""
+    rows = []
+    for i, g in enumerate(games[:4]):
+        y = 112 + i * 44
+        hc, ac = visible_color(g["home"], 0), visible_color(g["away"], 1)
+        rows.append(
+            f'<rect x="20" y="{y}" width="440" height="38" rx="3" fill="#ffffff" opacity="0.06"/>'
+            f'<text x="30" y="{y + 25}" font-family="{NUM}" font-weight="800" font-size="15" fill="#ccf43b" letter-spacing="1">{x(g.get("league", ""))}</text>'
+            f'<rect x="112" y="{y + 7}" width="6" height="24" fill="{hc}"/>'
+            f'<text x="126" y="{y + 26}" font-family="{JP}" font-weight="900" font-size="{fit(g["home"], 120, 20)}" fill="#fff">{x(g["home"])}</text>'
+            f'<text x="290" y="{y + 26}" text-anchor="middle" font-family="{NUM}" font-weight="800" font-size="18" fill="#fff" opacity="0.6">VS</text>'
+            f'<rect x="318" y="{y + 7}" width="6" height="24" fill="{ac}"/>'
+            f'<text x="332" y="{y + 26}" font-family="{JP}" font-weight="900" font-size="{fit(g["away"], 120, 20)}" fill="#fff">{x(g["away"])}</text>')
+    return head(f"{date_label} {tipoff} 試合前プレビュー") + f'''
+<rect width="480" height="300" fill="#151a18"/>
+<rect x="0" y="0" width="480" height="6" fill="#ccf43b"/>
+{chip("試合前プレビュー", 20, 22, "#ccf43b", "#151a18")}
+<text x="460" y="44" text-anchor="end" font-family="{NUM}" font-weight="800" font-size="30" fill="#fff" letter-spacing="1">{x(date_label)}  {x(tipoff)}</text>
+<text x="22" y="92" font-family="{JP}" font-weight="800" font-size="{fit(note, 430, 16)}" fill="#fff" opacity="0.85">{x(note)}</text>
+{"".join(rows)}
+{brand(y=292)}
+</svg>'''
+
+
+def compare(home, away, metric, rows, note):
+    """2チームの比較：ポジションごとの1位選手と値を、所属チームの色の棒で並べる。
+    記事の表にある値だけを使う（表に無い相手側の値は描かない＝推測で埋めない）。"""
+    colors = {home: visible_color(home, 0), away: visible_color(away, 1)}
+    top = max([r["value"] for r in rows] + [1])
+    out = []
+    for i, r in enumerate(rows[:5]):
+        y = 84 + i * 40
+        c = colors.get(r["team"], team_color(r["team"]))
+        w = round(120 * r["value"] / top)
+        out.append(
+            f'<text x="22" y="{y + 24}" font-family="{NUM}" font-weight="800" font-size="20" fill="#ccf43b">{x(r["pos"])}</text>'
+            f'<text x="62" y="{y + 24}" font-family="{JP}" font-weight="800" font-size="{fit(r["name"], 150, 17)}" fill="#fff">{x(r["name"])}</text>'
+            f'<text x="262" y="{y + 25}" text-anchor="end" font-family="{JP}" font-weight="800" font-size="15" fill="{c}">{x(r["team"])}</text>'
+            f'<rect x="272" y="{y + 7}" width="{w}" height="24" fill="{c}"/>'
+            f'<text x="{280 + w}" y="{y + 26}" font-family="{NUM}" font-weight="800" font-size="20" fill="#fff">{r["value"]}</text>')
+    legend = (f'<rect x="20" y="58" width="12" height="12" fill="{colors[home]}"/>'
+              f'<text x="38" y="69" font-family="{JP}" font-weight="800" font-size="15" fill="#fff">{x(home)}</text>'
+              f'<text x="{48 + len(home) * 15}" y="69" font-family="{NUM}" font-weight="800" font-size="15" fill="#fff" opacity="0.6">VS</text>'
+              f'<rect x="{76 + len(home) * 15}" y="58" width="12" height="12" fill="{colors[away]}"/>'
+              f'<text x="{94 + len(home) * 15}" y="69" font-family="{JP}" font-weight="800" font-size="15" fill="#fff">{x(away)}</text>')
+    return head(f"{home}vs{away} {metric}") + f'''
+<rect width="480" height="300" fill="#151a18"/>
+<rect x="0" y="0" width="480" height="6" fill="#ccf43b"/>
+{chip("独自比較", 20, 20, "#ccf43b", "#151a18")}
+<text x="460" y="38" text-anchor="end" font-family="{JP}" font-weight="800" font-size="{fit(metric, 300, 15)}" fill="#fff">{x(metric)}</text>
+{legend}
+{"".join(out)}
+<text x="20" y="292" font-family="{JP}" font-weight="700" font-size="12" fill="#fff" opacity="0.75">{x(note)}</text>
+{brand(y=292)}
+</svg>'''
+
+
 # --------------------------------------------------------------------- CLI
 
 def render(d):
@@ -233,7 +305,11 @@ def render(d):
         return news(d.get("label", "速報"), d.get("team", ""),
                     d.get("team_color") or team_color(d.get("team", "")),
                     d["headline"], d.get("sub", ""), facts)
-    raise ValueError(f"type は game / transfer / news のどれか: {kind!r}")
+    if kind == "preview":
+        return preview(d["date"], d["tipoff"], d["games"], d.get("note", ""))
+    if kind == "compare":
+        return compare(d["home"], d["away"], d.get("metric", ""), d["rows"], d.get("note", ""))
+    raise ValueError(f"type は game / transfer / news / preview / compare のどれか: {kind!r}")
 
 
 SAMPLES = {
