@@ -254,6 +254,26 @@
       "coverage_complete": true
     },
     {
+      "player_id": "12607",
+      "name": "クリストファー・オリビエ",
+      "team": "佐賀",
+      "team_id": "1638",
+      "season": "2026-27",
+      "competition": "BP",
+      "positions": [
+        "C",
+        "PF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=1638",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": null,
+      "games": null,
+      "stats_source": null,
+      "coverage_complete": false
+    },
+    {
       "player_id": "26888",
       "name": "井上 諒汰",
       "team": "佐賀",
@@ -564,5 +584,5 @@
       "coverage_complete": true
     }
   ],
-  "retrieved_at": "2026-10-19T16:25:44.330911+00:00"
+  "retrieved_at": "2026-10-21T08:25:04.158254+00:00"
 }
