@@ -6,7 +6,7 @@ LINKS = [('index.html', 'ホーム'), ('next-games.html', '次の試合'),
          ('cat-kekka.html', '試合結果'), ('injury.html', 'IL一覧'),
          ('cat-sokuho.html', '速報'), ('cat-iseki.html', '移籍情報'),
          ('cat-data.html', '順位・日程'), ('matome.html', 'まとめ')]
-LOGO = ('<a class="logo" href="index.html" aria-label="バスケまとめ ホーム">'
+LOGO = ('<a class="logo" href="/" aria-label="バスケまとめ トップページ">'
         '<img class="brand-logo" src="basuke-matome-logo-dark.svg" width="240" height="45" alt="バスケまとめ">'
         '<span class="brand-sub">非公式ファンサイト</span></a>')
 BRAND_HEAD = ('<link rel="icon" href="favicon.ico" sizes="any">\n'
