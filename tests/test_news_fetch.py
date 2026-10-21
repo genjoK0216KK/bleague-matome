@@ -141,6 +141,48 @@ class Categories(Base):
         self.assertEqual((e['category'], e['items'], e['entries']), ('ok', 0, 1))
 
 
+class QaRegressions(Base):
+    """13d7222 独立検品の指摘（10/22 01:44）の回帰テスト。"""
+
+    def test_polite_pause_does_not_exceed_run_budget(self):
+        # GET が timeout ぶん（5秒）かかって 200。旧実装は礼儀の2秒を足して7秒。
+        self.clock.per_get = 99
+        self.serve({NEWS_URL: [(200, NEWS_HTML)]})
+        with patch.object(fetch, 'RUN_BUDGET', 5), patch.object(fetch, 'MIN_ATTEMPT', 1):
+            fetch.fetch_bleague_news()
+        self.assertLessEqual(self.clock.now - 1000.0, 5)
+
+    def test_robots_is_not_requested_without_budget(self):
+        url = fetch.MATOME_FEEDS[0][1]
+        self.serve({})
+        with patch.object(fetch, 'RUN_BUDGET', 3), patch.dict(fetch._robots_cache, clear=True):
+            self.assertEqual(fetch.fetch_feed_items('バスケまとめ・COM', url, lambda t: True), [])
+        self.assertEqual(self.calls, [])
+        e = fetch.REPORT[-1]
+        self.assertEqual((e['category'], e['type']), ('budget', 'BudgetExhausted'))
+
+    def test_robots_timeout_is_capped_and_unknown_answer_keeps_old_policy(self):
+        url = fetch.MATOME_FEEDS[0][1]
+        robots = 'https://basketballbbs.com/robots.txt'
+        self.serve({robots: [requests.ConnectionError('down')], url: [(200, RSS)]})
+        with patch.object(fetch, 'RUN_BUDGET', 12), patch.dict(fetch._robots_cache, clear=True):
+            fetch.fetch_feed_items('バスケまとめ・COM', url, lambda t: True)
+        self.assertEqual(self.calls[0], (robots, 12))          # capped to time left, one try only
+        self.assertEqual([u for u, _ in self.calls].count(robots), 1)
+        self.assertEqual(fetch.REPORT[-1]['category'], 'ok')    # unreadable robots = allowed (unchanged)
+
+    def test_attempts_are_kept_for_ok_parse_and_empty(self):
+        self.serve({NEWS_URL: [503, 503, (200, NEWS_HTML)],
+                    FEED_URL: [503, (200, '<rss>broken')]})
+        fetch.fetch_bleague_news()
+        fetch.fetch_rss('バスケット・カウント', FEED_URL)
+        self.assertEqual([(e['category'], e['attempts']) for e in fetch.REPORT], [('ok', 3), ('parse', 2)])
+        fetch.REPORT.clear()
+        self.serve({NEWS_URL: [(200, '<html></html>')]})
+        fetch.fetch_bleague_news()
+        self.assertEqual((fetch.REPORT[-1]['category'], fetch.REPORT[-1]['attempts']), ('empty', 1))
+
+
 class Main(Base):
     def setUp(self):
         super().setUp()
