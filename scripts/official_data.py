@@ -32,8 +32,33 @@ class FetchError(DataError):
         super().__init__(message)
         self.url, self.status, self.kind, self.attempts = url, status, kind, attempts
 
+    @property
+    def category(self):
+        if self.kind == 'Stopped':
+            return 'stopped'          # not requested: this run stopped after repeated failures
+        if self.kind == 'BudgetExhausted':
+            return 'budget'           # not requested: run time/request budget used up
+        return 'http' if self.status else 'network'
+
     def detail(self):
-        return {'url': self.url, 'http_status': self.status, 'type': self.kind, 'attempts': self.attempts}
+        return {'url': self.url, 'category': self.category, 'http_status': self.status,
+                'type': self.kind, 'attempts': self.attempts}
+
+
+def problem(url, exc):
+    """Public record of why an official page could not be used. Categories:
+    http / network (request failed), parse (page read but content not as expected),
+    stopped / budget (not requested in this run), other."""
+    if isinstance(exc, FetchError):
+        return exc.detail()
+    if isinstance(exc, DataError):
+        category = 'parse'
+    elif isinstance(exc, requests.RequestException):
+        category = 'network'
+    else:
+        category = 'other'
+    return {'url': url, 'category': category, 'http_status': None, 'type': type(exc).__name__,
+            'attempts': None, 'message': str(exc)[:200]}
 
 
 # Temporary failures worth a bounded retry. 4xx other than 429 are not retried.
@@ -66,6 +91,11 @@ class Client:
         self.failures = []           # one public record per URL that could not be read
         self.consecutive_failures = 0
 
+    def record_problem(self, url, exc):
+        """Content problems (parse) are recorded here; request failures are recorded by _download."""
+        if not isinstance(exc, FetchError):
+            self.failures.append(problem(url, exc))
+
     def _budget_left(self, extra=0):
         return self.request_count < self.max_requests and self.clock() + 32 + extra <= self.deadline
 
@@ -75,7 +105,9 @@ class Client:
         The per-URL limit covers real elapsed time: each GET's timeout is capped to the time left,
         and a retry starts only if its wait plus a minimal attempt still fits."""
         if self.consecutive_failures >= STOP_AFTER_FAILED_URLS:
-            raise FetchError('Official site unavailable; stopped after repeated failures', url, kind='Stopped')
+            error = FetchError('Official site unavailable; stopped after repeated failures', url, kind='Stopped')
+            self.failures.append(error.detail())
+            raise error
         started, attempt = self.clock(), 0
         while True:
             left = RETRY_MAX_ELAPSED - (self.clock() - started)
@@ -348,13 +380,20 @@ def fetch_day(client, year, league, date):
     from datetime import date as Date
     d = Date.fromisoformat(date)
     url = BASE + '/schedule/?' + urlencode(dict(tab=LEAGUES[league][0], year=year, mon=d.month, day=d.day))
-    plan = parse_schedule(client.get(url), league, date)
+    note = getattr(client, 'record_problem', lambda u, e: None)
+    page = client.get(url)
+    try:
+        plan = parse_schedule(page, league, date)
+    except (ValueError, requests.RequestException) as exc:
+        note(url, exc)
+        raise
     games, errors = [], []
     if plan['no_games']:
         return [], plan['complete'], url, []
     for key in plan['keys']:
+        game_url = f'{BASE}/game_detail/?ScheduleKey={key}'
         try:
-            g = parse_game(client.get(f'{BASE}/game_detail/?ScheduleKey={key}'), key, year, plan['notices'].get(key))
+            g = parse_game(client.get(game_url), key, year, plan['notices'].get(key))
             if g['competition'] != league:
                 raise DataError('Schedule/game league mismatch')
             if key in plan['notices']:
@@ -366,6 +405,7 @@ def fetch_day(client, year, league, date):
                 raise DataError('Schedule fallback returned a different actual game date')
             games.append(g)
         except (ValueError, requests.RequestException) as exc:
+            note(game_url, exc)
             errors.append(str(exc))
     return games, plan['complete'] and not errors, url, errors
 
