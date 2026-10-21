@@ -16,7 +16,7 @@ from datetime import datetime
 from html import escape
 from pathlib import Path
 
-from . import browse_ui, day_articles, next_preview, official_data, preview_data
+from . import browse_ui, day_articles, next_preview, official_data, preview_data, result_status
 
 OWN_LIMIT = 6        # 独自記事の件数
 OFFICIAL_LIMIT = 5   # 公式発信の件数
@@ -171,10 +171,241 @@ def updates_feed(news, matome, x_list_url=''):
     return body + '</section>'
 
 
+# ------------------------------------------------- 提案：今日のバスケまとめ（未承認）
+# 10/22 本人フィードバック「自社記事という名前はダサい」「当日EFFポジションランキングは意味が
+# わからない、今日の記事まとめの方が良い」への変更案。HOME_VARIANT で切り替える。
+#   'current' : 公開中の並び（ランキング → 独自記事 → 公式更新 → 試合）
+#   'A'       : 今日のバスケまとめ → バスケ深掘り（記事）→ 公式更新 → 実績EFFは折りたたみ
+#   'B'       : 今日のバスケまとめ → 編集部の記事 → 実績EFFは1行リンク → 公式更新 → 試合
+#   'C'       : 今日のバスケまとめ（最新記事の見出し・要点・読むリンク → 試合1行 → 取得失敗1行＋詳細展開）
+#               → 最近の記事 → 前日以前の試合・実績EFF（折りたたみ）→ 公式更新
+HOME_VARIANT = 'current'  # 本人承認まで公開中の並びのまま
+OWN_NAMES = {'A': 'バスケ深掘り', 'B': '編集部の記事'}
+WEEKDAYS = '月火水木金土日'
+TODAY_ARTICLES = 3
+
+
+def _jp_date(day):
+    return f'{day.month}月{day.day}日（{WEEKDAYS[day.weekday()]}）'
+
+
+def today_block(root, now, rows):
+    """今日の対象日・試合数・各試合の状態。保存済みの公式データだけを使い、注目度は推測しない。"""
+    today = now.date().isoformat()
+    row = next((r for r in rows if r['date'] == today), None)
+    body = ('<section class="home-today" id="today"><p class="phase-label">今日のバスケまとめ</p>'
+            '<h2>' + _jp_date(now.date()) + '</h2>')
+    if row is None:
+        body += '<p class="today-lead">今日の日程を確認中です。</p>'
+    elif not row['games']:
+        body += '<p class="today-lead">今日は B.LEAGUE の試合はありません。</p>'
+    else:
+        counts = '・'.join(official_data.LEAGUES[k][3] + ' ' + str(n) + '試合'
+                           for k in official_data.LEAGUES
+                           for n in [sum(g['competition'] == k for g in row['games'])] if n)
+        body += '<p class="today-lead">' + escape(counts) + '</p>'
+        body += browse_ui.fetch_note(row)
+        failed = bool(row.get('fetch_status'))
+        body += ''.join(browse_ui.match_row(g, today, now, failed) for g in row['games'][:4])
+        more = len(row['games']) - 4
+        body += ('<a class="day-detail" href="' + day_articles.filename(today) + '">'
+                 + ('ほか ' + str(more) + ' 試合・' if more > 0 else '') + '今日の試合の詳細 ›</a>')
+    body += past_pending(root, rows, now)
+    recent = next((r for r in rows if r['date'] < today
+                   and any(preview_data.is_verified_final(g) for g in r['games'])), None)
+    if recent:
+        body += ('<a class="day-detail" href="' + day_articles.filename(recent['date']) + '">直近の試合結果（'
+                 + recent['date'][5:].replace('-', '/') + '）›</a>')
+    return body + '</section>'
+
+
+def past_pending(root, rows, now):
+    """前日以前で未確定の試合がある日：対象日・状態・最終確認時刻・表示内容の取得時刻（不明なら不明）。
+    過去の日付は「今日」と書かない。"""
+    out = ''
+    for row in rows:
+        day = datetime.fromisoformat(row['date']).date()
+        if not (0 < (now.date() - day).days <= browse_ui.PENDING_DAYS):
+            continue
+        waiting = [g for g in row['games'] if not preview_data.is_verified_final(g)
+                   and g.get('status') not in ('cancelled', 'postponed')]
+        if not waiting:
+            continue
+        entry = result_status.load(root).get(row['date'], {})
+        failed = entry.get('state') == 'fetch_failed'
+        label = ('前日 ' if (now.date() - day).days == 1 else '') + _jp_date(day)
+        state = ('公式サイトから取得できていません（' + escape(entry.get('failing_since') or '時刻不明') + ' から）'
+                 if failed else '公式記録の確定待ち')
+        out += ('<div class="past-pending"><p><strong>' + label + 'の ' + str(len(waiting)) + ' 試合</strong>：'
+                + state + '</p><dl class="past-times">'
+                '<dt>最後に公式サイトを確認できた時刻</dt><dd>' + escape(entry.get('last_checked_at') or '不明') + '</dd>'
+                '<dt>表示中の内容の取得時刻</dt><dd>' + escape(entry.get('content_as_of') or '不明') + '</dd></dl>'
+                '<a class="day-detail" href="' + day_articles.filename(row['date']) + '">'
+                + row['date'][5:].replace('-', '/') + ' の試合を見る ›</a></div>')
+    return out
+
+
+def articles_block(articles, now, name):
+    """今日の記事と最近の記事を分ける。過去の記事を「今日」として見せない。"""
+    today = now.strftime('%Y.%m.%d')
+    own = [a for a in articles if is_own_article(a)]
+    todays = [a for a in own if a['date'] == today][:TODAY_ARTICLES]
+    recent = [a for a in own if a['date'] != today][:TODAY_ARTICLES]
+
+    def card(a):
+        return ('<a class="own-card own-card-short" href="' + escape(a['href']) + '">'
+                '<span class="own-kind">' + own_kind(a) + '</span><h3>' + escape(a['title']) + '</h3>'
+                '<span class="own-date">' + escape(a['date']) + '</span></a>')
+    body = ('<section class="home-own" id="own-articles"><div class="sec-h"><h2>' + escape(name) + '</h2>'
+            '<a class="more" href="articles.html">記事一覧 ›</a></div>')
+    body += '<h3 class="own-sub">今日の記事</h3>'
+    if todays:
+        body += '<div class="own-grid">' + ''.join(card(a) for a in todays) + '</div>'
+    else:
+        body += '<p class="own-empty">今日の記事は準備中です（8時・12時・19時ごろ更新）。</p>'
+    if recent:
+        body += '<h3 class="own-sub">最近の記事</h3><div class="own-grid">' + ''.join(card(a) for a in recent) + '</div>'
+    return body + '</section>'
+
+
+def eff_folded(root, now):
+    """実績EFF（対象日を明記）を折りたたみで下位に置く。中身は公開中と同じ表。"""
+    row = latest_game_day(root, now)
+    if not row:
+        return ''
+    label = row['date'][5:].replace('-', '/')
+    return ('<details class="home-eff-fold home-ranking" id="ranking"><summary>' + label
+            + ' の試合で活躍した選手（ポジション別・当日EFF 1位）</summary>'
+            + game_day_leaders(row) + '</details>')
+
+
+def eff_link(root, now):
+    row = latest_game_day(root, now)
+    if not row:
+        return ''
+    label = row['date'][5:].replace('-', '/')
+    return ('<p class="home-eff-link" id="ranking"><a class="day-detail" href="' + day_articles.filename(row['date'])
+            + '#game-eff">' + label + ' の試合で活躍した選手（当日EFF・ポジション別）›</a></p>')
+
+
+# ---------------------------------------------------------------- 案C
+LEAD_SUMMARY = 60   # 要点の最大文字数
+
+
+def _article_day(article):
+    return datetime.strptime(article['date'], '%Y.%m.%d').date()
+
+
+def lead_article(articles, now):
+    """先頭の記事。今日の記事が無ければ最新記事を実日付つきで出す（今日の記事とは書かない）。"""
+    own = [a for a in articles if is_own_article(a)]
+    if not own:
+        return '<p class="lead-empty">記事はまだありません。</p>'
+    a = own[0]
+    day = _article_day(a)
+    label = '今日の記事' if day == now.date() else '最新記事・' + _jp_date(day)
+    desc = (a.get('desc') or '').strip()
+    if len(desc) > LEAD_SUMMARY:
+        desc = desc[:LEAD_SUMMARY].rstrip() + '…'
+    return ('<article class="lead-article"><p class="lead-label">' + label + '</p>'
+            '<h3><a href="' + escape(a['href']) + '">' + escape(a['title']) + '</a></h3>'
+            + ('<p class="lead-desc">' + escape(desc) + '</p>' if desc and desc != a['title'] else '')
+            + '<a class="read-link" href="' + escape(a['href']) + '">記事を読む ›</a></article>')
+
+
+def games_line(root, now, rows):
+    """今日の試合を1行で。取得できていない日も推測せず、保存済みの予定だけを数える。"""
+    today = now.date().isoformat()
+    row = next((r for r in rows if r['date'] == today), None)
+    if row is None:
+        text = '今日の試合：日程を確認中'
+    elif not row['games']:
+        text = '今日の試合：なし'
+    else:
+        times = sorted({datetime.fromisoformat(g['starts_at']).astimezone(preview_data.JST).strftime('%H:%M')
+                        for g in row['games'] if g.get('starts_at')})
+        text = ('今日の試合：' + str(len(row['games'])) + '試合'
+                + ('・' + '／'.join(times) + ' 開始' if times else ''))
+    link = ('<a class="games-link" href="' + day_articles.filename(today) + '">試合の詳細 ›</a>'
+            if row is not None else '')
+    return '<div class="games-line"><p>' + escape(text) + '</p>' + link + '</div>'
+
+
+def fetch_alert(root, now, rows):
+    """取得失敗は常に見える1行。対象日・最終確認・表示内容の取得時刻は展開で確認する。"""
+    failed = [r for r in rows if r.get('fetch_status')
+              and 0 <= (now.date() - datetime.fromisoformat(r['date']).date()).days <= browse_ui.PENDING_DAYS]
+    if not failed:
+        return ''
+    items = ''
+    for r in failed:
+        f = r['fetch_status']
+        items += ('<li><strong>' + _jp_date(datetime.fromisoformat(r['date']).date()) + '</strong>'
+                  '<dl><dt>取得できていない</dt><dd>' + escape(f.get('failing_since') or '不明') + ' から</dd>'
+                  '<dt>最後に公式サイトを確認できた時刻</dt><dd>' + escape(f.get('last_checked_at') or '不明') + '</dd>'
+                  '<dt>表示中の内容の取得時刻</dt><dd>' + escape(f.get('content_as_of') or '不明') + '</dd></dl>'
+                  '<a class="day-detail" href="' + day_articles.filename(r['date']) + '">この日の試合 ›</a></li>')
+    return ('<details class="fetch-alert"><summary>公式サイトから試合情報を取得できていません'
+            '<span class="fetch-alert-more">詳細</span></summary><ul>' + items + '</ul>'
+            '<p>確定した結果は各試合の公式ページでご確認ください。</p></details>')
+
+
+def today_block_c(root, articles, now, rows):
+    return ('<section class="home-today home-today-c" id="today">'
+            '<h2>今日のバスケまとめ<span class="today-date">' + _jp_date(now.date()) + '</span></h2>'
+            + lead_article(articles, now) + games_line(root, now, rows) + fetch_alert(root, now, rows)
+            + '</section>')
+
+
+def recent_articles_c(articles, now, skip=1, limit=4):
+    own = [a for a in articles if is_own_article(a)][skip:skip + limit]
+    if not own:
+        return ''
+    body = ('<section class="home-own home-own-c" id="own-articles"><div class="sec-h"><h2>最近の記事</h2>'
+            '<a class="more" href="articles.html">記事一覧 ›</a></div><ul class="recent-list">')
+    for a in own:
+        day = _article_day(a)
+        body += ('<li><a href="' + escape(a['href']) + '"><span class="recent-date">' + _jp_date(day)
+                 + '</span>' + escape(a['title']) + '</a></li>')
+    return body + '</ul></section>'
+
+
+def past_and_eff_c(root, rows, now):
+    """前日以前の試合と実績EFFは下位の折りたたみ。対象日を必ず書く。"""
+    body = ''
+    past = past_pending(root, rows, now)
+    recent = next((r for r in rows if r['date'] < now.date().isoformat()
+                   and any(preview_data.is_verified_final(g) for g in r['games'])), None)
+    if past or recent:
+        body += '<details class="home-fold" id="past-games"><summary>前日以前の試合</summary>' + past
+        if recent:
+            body += ('<a class="day-detail" href="' + day_articles.filename(recent['date']) + '">確定した直近の結果：'
+                     + _jp_date(datetime.fromisoformat(recent['date']).date()) + ' ›</a>')
+        body += '</details>'
+    row = latest_game_day(root, now)
+    if row:
+        body += ('<details class="home-fold home-ranking" id="ranking"><summary>'
+                 + _jp_date(datetime.fromisoformat(row['date']).date())
+                 + 'の試合で活躍した選手（当日EFF）</summary>' + game_day_leaders(row) + '</details>')
+    return body
+
+
 # ------------------------------------------------------------- まとめ
 
-def home(root, articles, news, matome, x_list_url='', now=None):
+def home(root, articles, news, matome, x_list_url='', now=None, variant=None):
     now = now or datetime.now(preview_data.JST)
+    variant = variant or HOME_VARIANT
+    if variant == 'C':
+        rows = browse_ui.summaries(root, now)
+        return (today_block_c(root, articles, now, rows) + recent_articles_c(articles, now)
+                + past_and_eff_c(root, rows, now) + updates_feed(news, matome, x_list_url))
+    if variant in OWN_NAMES:
+        rows = browse_ui.summaries(root, now)
+        body = today_block(root, now, rows) + articles_block(articles, now, OWN_NAMES[variant])
+        if variant == 'A':
+            return body + updates_feed(news, matome, x_list_url) + eff_folded(root, now)
+        return (body + eff_link(root, now) + updates_feed(news, matome, x_list_url)
+                + browse_ui.home_games(root, now, rows))
     return (ranking(root, now)
             + own_articles(articles)
             + updates_feed(news, matome, x_list_url)

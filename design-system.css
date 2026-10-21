@@ -108,3 +108,43 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #17
 .fetch-failed strong{font-weight:700}
 .result-asof{font-size:14px;line-height:1.6;color:var(--muted);margin:0 0 12px}
 .pending-past{font-size:16px;line-height:1.6;margin:12px 0;padding:12px 0;border-top:1px solid var(--line)}
+/* Proposal (10/22, unapproved): 今日のバスケまとめ */
+.home-today{border-top:4px solid #ccf43b;background:#f5f8e9;padding:16px;margin:0 0 32px}
+.home-today h2{font-size:24px;line-height:1.4;margin:4px 0 8px}
+.today-lead{font-size:16px;line-height:1.6;margin:0 0 8px}
+.home-today .match-row{background:transparent}
+.own-sub{font-size:16px;font-weight:700;margin:16px 0 8px}
+.own-empty{font-size:16px;line-height:1.6;margin:0 0 8px;color:var(--muted)}
+.own-card-short{padding:12px 16px}.own-card-short h3{font-size:17px;margin:6px 0}
+.home-eff-fold{border-top:1px solid var(--line);margin:32px 0 0;padding:0}
+.home-eff-fold summary{min-height:48px;display:flex;align-items:center;font-size:16px;font-weight:700;cursor:pointer;padding:8px 0}
+.home-eff-fold table{width:100%;min-width:0;table-layout:fixed;font-size:16px}
+.home-eff-link{margin:0 0 24px}
+.past-pending{border-top:1px solid var(--line);margin:12px 0 0;padding:12px 0 0}
+.past-pending p{font-size:16px;line-height:1.6;margin:0 0 4px}
+.past-times{display:block;font-size:14px;line-height:1.5;margin:0;color:var(--muted)}
+.past-times dt{font-weight:400}.past-times dd{margin:0 0 4px;white-space:nowrap;color:var(--ink);font-variant-numeric:tabular-nums}
+/* Proposal C (10/22, unapproved): 記事を入口に */
+.home-today-c{padding:16px 16px 8px}
+.home-today-c h2{font-size:22px;line-height:1.4;margin:0 0 10px}.today-date{display:block;font-size:16px;font-weight:400;color:var(--ink)}
+.lead-article{background:#fff;border:1px solid var(--line);border-left:4px solid #ccf43b;border-radius:4px;padding:12px 16px;margin:0 0 12px}
+.lead-label{font-size:14px;font-weight:700;line-height:1.5;margin:0 0 4px;color:var(--ink)}
+.lead-article h3{font-size:19px;line-height:1.5;margin:0 0 6px;font-weight:700}
+.lead-article h3 a{color:var(--ink);text-decoration:none}
+.lead-desc{font-size:16px;line-height:1.6;margin:0;color:#2b322e;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden}
+.read-link,.games-link{display:inline-flex;align-items:center;min-height:48px;font-size:16px;font-weight:700;text-decoration:underline;text-underline-offset:4px;color:var(--ink)}
+.games-line{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 12px;border-top:1px solid var(--line);padding:4px 0}
+.games-line p{font-size:16px;line-height:1.5;margin:0}
+.fetch-alert{border-top:1px solid var(--line);font-size:14px;line-height:1.6}
+.fetch-alert summary{min-height:48px;display:flex;align-items:center;gap:8px;cursor:pointer;font-size:14px;font-weight:700;color:var(--ink);list-style:none}
+.fetch-alert summary::-webkit-details-marker{display:none}
+.fetch-alert summary::before{content:"!";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:4px;background:#171b19;color:#ccf43b;font-size:13px;flex:0 0 auto}
+.fetch-alert-more{margin-left:auto;white-space:nowrap;font-weight:400;text-decoration:underline;text-underline-offset:4px}
+.fetch-alert ul{list-style:none;margin:0 0 8px;padding:0}.fetch-alert li{padding:8px 0;border-top:1px dashed var(--line)}
+.fetch-alert dl{margin:4px 0}.fetch-alert dt{color:var(--muted)}.fetch-alert dd{margin:0 0 4px;font-variant-numeric:tabular-nums}
+.recent-list{list-style:none;margin:0;padding:0}.recent-list li{border-bottom:1px solid var(--line)}
+.recent-list a{display:block;min-height:48px;padding:10px 0;font-size:16px;line-height:1.5;color:var(--ink)}
+.recent-date{display:block;font-size:14px;color:var(--muted)}
+.home-fold{border-top:1px solid var(--line);margin:0}
+.home-fold>summary{min-height:48px;display:flex;align-items:center;font-size:16px;font-weight:700;cursor:pointer}
+.home-fold:last-of-type{border-bottom:1px solid var(--line);margin-bottom:32px}
