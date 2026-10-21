@@ -31,7 +31,7 @@ jobs:
           python-version: "3.12"
 
       - name: 依存パッケージをインストール
-        run: pip install --quiet requests beautifulsoup4
+        run: pip install --quiet requests beautifulsoup4 fonttools brotli
 
       - name: ニュース・順位表を取得
         run: python scripts/fetch.py
