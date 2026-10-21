@@ -122,5 +122,5 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #17
 .home-eff-link{margin:0 0 24px}
 .past-pending{border-top:1px solid var(--line);margin:12px 0 0;padding:12px 0 0}
 .past-pending p{font-size:16px;line-height:1.6;margin:0 0 4px}
-.past-times{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;font-size:14px;line-height:1.5;margin:0;color:var(--muted)}
-.past-times dt{font-weight:400}.past-times dd{margin:0;color:var(--ink);font-variant-numeric:tabular-nums}
+.past-times{display:block;font-size:14px;line-height:1.5;margin:0;color:var(--muted)}
+.past-times dt{font-weight:400}.past-times dd{margin:0 0 4px;white-space:nowrap;color:var(--ink);font-variant-numeric:tabular-nums}
