@@ -2,13 +2,16 @@
 """Refresh results and roll over expired next-fixture previews; no news, GA4, or posting calls."""
 import argparse
 import json
+import os
 import subprocess
 import sys
+import traceback
 from datetime import datetime, timedelta
 from pathlib import Path
 try:
-    from . import day_articles, official_data as official, preview_data as data, refresh_next_preview
+    from . import day_articles, official_data as official, preview_data as data, refresh_next_preview, result_status
 except ImportError:
+    import result_status
     import day_articles
     import official_data as official
     import preview_data as data
@@ -139,20 +142,59 @@ def run(root, client, year, now):
     reports, errors, first = [], [], None
     today = now.astimezone(data.JST).date().isoformat()
     limit = getattr(client, 'max_requests', None)
+    status_changed = False
     for date in pending_dates(root, now):
         path = Path(root) / 'data/match_articles' / day_articles.filename(date).replace('.html', '.json')
+        seen = len(getattr(client, 'failures', []))
         try:
             if date != today and limit is not None and client.request_count + estimate(json.loads(path.read_text())) > limit:
                 reports.append({'date': date, 'changed': False, 'reason': 'deferred_budget', 'requests': client.request_count})
                 continue
-            reports.append(run_date(root, client, year, now, date))
+            report = run_date(root, client, year, now, date)
+            reports.append(report)
+            # Result fetch state only; EFF TOP3 still pending is not a fetch failure.
+            if report.get('reason') != 'no_games':
+                status_changed |= result_status.record_success(root, date, now, report['changed'])
         except (ValueError, OSError, official.requests.RequestException) as exc:
-            errors.append({'date': date, 'error': str(exc)}); first = first or exc
+            fetches = list(getattr(client, 'failures', [])[seen:])
+            detail = fetches[-1] if fetches else {}
+            error = {'date': date, 'error': str(exc), 'type': detail.get('type') or type(exc).__name__,
+                     'http_status': detail.get('http_status'), 'url': detail.get('url'), 'fetch_failures': fetches}
+            errors.append(error); first = first or exc
+            if (Path(root) / day_articles.filename(date)).exists():
+                status_changed |= result_status.record_failure(root, date, now, error)
+        status_changed |= result_status.apply_notice(root, date)
     changed = any(r['changed'] for r in reports)
     if errors and not changed:
+        first.result_errors = errors
+        first.status_changed = status_changed
         raise first
     head = next((r for r in reports if r['date'] == today), reports[0] if reports else {})
-    return dict(head, changed=changed, dates=reports, errors=errors, requests=client.request_count)
+    return dict(head, changed=changed, dates=reports, errors=errors, requests=client.request_count,
+                status_changed=status_changed)
+
+
+def log_errors(errors):
+    """One line per failed date with public facts only (date, type, HTTP status, URL)."""
+    for e in errors:
+        print('::warning::Result refresh failed date=' + e['date'] + ' type=' + str(e.get('type'))
+              + ' http=' + str(e.get('http_status')) + ' url=' + str(e.get('url'))
+              + ' reason=' + e['error'][:200] + '; saved data retained')
+        for f in e.get('fetch_failures', [])[:10]:
+            print('  fetch_failed url=' + str(f.get('url')) + ' http=' + str(f.get('http_status'))
+                  + ' type=' + str(f.get('type')) + ' attempts=' + str(f.get('attempts')))
+
+
+def mark_status_saved():
+    """Tell the workflow that a failure notice was written and the site rebuilt, so it may be saved."""
+    target = os.environ.get('GITHUB_OUTPUT')
+    if target:
+        with open(target, 'a') as handle:
+            handle.write('status_saved=1\n')
+
+
+def build(root):
+    subprocess.run([sys.executable, str(Path(root) / 'scripts/build.py')], cwd=root, check=True)
 
 
 def main():
@@ -160,27 +202,42 @@ def main():
     parser.add_argument('--season-year', required=True, type=int)
     parser.add_argument('--root', default=str(ROOT))
     args = parser.parse_args()
+    client = official.Client(max_requests=70, time_budget=180)
     try:
-        report = run(args.root, official.Client(max_requests=70, time_budget=180), args.season_year,
-                         datetime.now(data.JST))
-        preview = refresh_next_preview.refresh(args.root, args.season_year, datetime.now(data.JST))
+        try:
+            report = run(args.root, client, args.season_year, datetime.now(data.JST))
+        except (ValueError, OSError, official.requests.RequestException) as exc:
+            errors = getattr(exc, 'result_errors', [{'date': '-', 'error': str(exc), 'type': type(exc).__name__}])
+            log_errors(errors)
+            if getattr(exc, 'status_changed', False):
+                build(args.root)      # show the failure notice; results themselves are unchanged
+                mark_status_saved()
+            print('::error::Result refresh failed; existing published data retained')
+            return 1
+        try:
+            preview = refresh_next_preview.refresh(args.root, args.season_year, datetime.now(data.JST))
+        except (ValueError, OSError, official.requests.RequestException) as exc:
+            # Results are already secured; a preview problem must not discard them.
+            print('::warning::Next-fixture refresh failed type=' + type(exc).__name__ + ' reason=' + str(exc)[:200])
+            preview = {'changed': False, 'errors': [str(exc)]}
         report['preview'] = preview
         report['changed'] = report['changed'] or preview['changed']
         if preview.get('errors'):
             print('::warning::Next-fixture refresh unavailable; previous snapshot retained')
-        for e in report.get('errors', []):
-            print('::warning::Result refresh failed for ' + e['date'] + '; saved data retained')
-        print(json.dumps(report, ensure_ascii=False))
-        if report['changed']:
-            subprocess.run([sys.executable, str(Path(args.root) / 'scripts/build.py')],
-                           cwd=args.root, check=True)
+        log_errors(report.get('errors', []))
+        print(json.dumps(report, ensure_ascii=False, default=str))
+        if report['changed'] or report.get('status_changed'):
+            build(args.root)
+            if report.get('errors'):
+                mark_status_saved()
             return 0  # some date was updated; failed dates are retried by the next run
         if report.get('errors'):
             print('::error::Result refresh failed; existing published data retained')
             return 1
         return 0
-    except (ValueError, OSError, official.requests.RequestException, subprocess.CalledProcessError):
-        print('::error::Result refresh failed; existing published data retained')
+    except (ValueError, OSError, official.requests.RequestException, subprocess.CalledProcessError) as exc:
+        print('::error::Result refresh failed type=' + type(exc).__name__ + ' reason=' + str(exc)[:300])
+        traceback.print_exc()
         return 1
 
 

@@ -109,7 +109,10 @@ class Backfill(unittest.TestCase):
         self.official['2026-10-19'] = day('2026-10-19', [game('2026-10-19', final=True)])
         result, _ = self.go()
         self.assertTrue(result['changed'])
-        self.assertEqual(result['errors'], [{'date': '2026-10-20', 'error': 'synthetic transient'}])
+        # 10/22: errors also carry public diagnostics (type / HTTP status / URL) for the run log.
+        self.assertEqual(result['errors'], [{'date': '2026-10-20', 'error': 'synthetic transient',
+                                             'type': 'ValueError', 'http_status': None, 'url': None,
+                                             'fetch_failures': []}])
         self.assertEqual([d for d, _ in self.writes], ['2026-10-19'])
 
     def test_all_failing_raises_and_keeps_bytes(self):

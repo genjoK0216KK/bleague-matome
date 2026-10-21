@@ -23,8 +23,29 @@ class DataError(ValueError):
     pass
 
 
+class FetchError(DataError):
+    """An official page could not be read (HTTP error, network error or stopped run).
+
+    Carries only public facts for logs: URL, HTTP status, exception type, attempts."""
+
+    def __init__(self, message, url, status=None, kind='', attempts=0):
+        super().__init__(message)
+        self.url, self.status, self.kind, self.attempts = url, status, kind, attempts
+
+    def detail(self):
+        return {'url': self.url, 'http_status': self.status, 'type': self.kind, 'attempts': self.attempts}
+
+
+# Temporary failures worth a bounded retry. 4xx other than 429 are not retried.
+RETRY_STATUS = frozenset({429, 500, 502, 503, 504})
+RETRY_WAITS = (5, 15)          # seconds before the 2nd and 3rd attempt (max 3 attempts per URL)
+RETRY_MAX_ELAPSED = 60         # never spend more than this on one URL, including waits
+STOP_AFTER_FAILED_URLS = 3     # consecutive unreadable URLs: stop this run instead of hammering
+
+
 class Client:
-    def __init__(self, cache=None, offline=False, max_requests=120, time_budget=360):
+    def __init__(self, cache=None, offline=False, max_requests=120, time_budget=360, sleep=time.sleep,
+                 fetch=None):
         self.cache = Path(cache) if cache else None
         self.offline = offline
         self.sources = []
@@ -32,14 +53,61 @@ class Client:
         self.max_requests = max_requests
         self.request_count = 0
         self.deadline = time.monotonic() + time_budget
+        self.sleep = sleep
+        self.fetch = fetch or (lambda url: requests.get(
+            url, timeout=30, headers={'User-Agent': 'BleagueMatomeBot/1.0 (+https://basuke-matome.jp/about.html)'}))
+        self.failures = []           # one public record per URL that could not be read
+        self.consecutive_failures = 0
+
+    def _budget_left(self, extra=0):
+        return self.request_count < self.max_requests and time.monotonic() + 32 + extra <= self.deadline
+
+    def _download(self, url):
+        """GET with a bounded retry for temporary failures; raises FetchError with public details."""
+        if self.consecutive_failures >= STOP_AFTER_FAILED_URLS:
+            raise FetchError('Official site unavailable; stopped after repeated failures', url, kind='Stopped')
+        started, attempt = time.monotonic(), 0
+        while True:
+            if not self._budget_left():
+                error = FetchError('Official fetch budget exhausted; prior data retained', url,
+                                   kind='BudgetExhausted', attempts=attempt)
+                break
+            attempt += 1
+            self.request_count += 1
+            status, kind = None, ''
+            try:
+                response = self.fetch(url)
+                status = response.status_code
+                response.raise_for_status()
+                self.consecutive_failures = 0
+                return response
+            except requests.HTTPError as exc:
+                kind = type(exc).__name__
+                retry = status in RETRY_STATUS
+            except (requests.ConnectionError, requests.Timeout) as exc:
+                kind, retry = type(exc).__name__, True
+            except requests.RequestException as exc:
+                kind, retry = type(exc).__name__, False
+            message = 'Official fetch failed: ' + kind + (' HTTP ' + str(status) if status else '')
+            error = FetchError(message, url, status, kind, attempt)
+            wait = RETRY_WAITS[attempt - 1] if attempt <= len(RETRY_WAITS) else None
+            if (not retry or wait is None or time.monotonic() - started + wait > RETRY_MAX_ELAPSED
+                    or not self._budget_left(wait)):
+                break
+            self.sleep(wait)
+        self.consecutive_failures += 1
+        self.failures.append(error.detail())
+        raise error
 
     def get(self, url):
         if urlparse(url).hostname != 'www.bleague.jp' or not url.startswith('https://'):
             raise DataError('Only official HTTPS sources are allowed')
         if url in self.memory:
             return self.memory[url]
-        if not self.offline and (self.request_count >= self.max_requests or time.monotonic() + 32 > self.deadline):
-            raise DataError('Official fetch budget exhausted; prior data retained')
+        if not self.offline and not self._budget_left():
+            error = FetchError('Official fetch budget exhausted; prior data retained', url, kind='BudgetExhausted')
+            self.failures.append(error.detail())
+            raise error
         key = hashlib.sha256(url.encode()).hexdigest()
         path = self.cache / (key + '.json') if self.cache else None
         if self.offline:
@@ -49,9 +117,7 @@ class Client:
             if capture['url'] != url:
                 raise DataError('Capture URL mismatch')
         else:
-            self.request_count += 1
-            response = requests.get(url, timeout=30, headers={'User-Agent': 'BleagueMatomeBot/1.0 (+https://basuke-matome.jp/about.html)'})
-            response.raise_for_status()
+            response = self._download(url)
             if urlparse(response.url).hostname != 'www.bleague.jp':
                 raise DataError('Unexpected redirect')
             response.encoding = 'utf-8'
