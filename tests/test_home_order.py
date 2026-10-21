@@ -88,6 +88,22 @@ class HomeOrder(unittest.TestCase):
         first = soup.select_one('aside.side').find(True, recursive=False)
         self.assertNotIn('adbox', first.get('class') or [])
 
+    def test_home_styles_follow_design_contract(self):
+        """独立QA（10/22）指摘：更新リンク48px・ランキング表見出し16px・注記は黒×ライム/角丸4px。"""
+        import re
+        css = (ROOT / 'design-system.css').read_text()
+
+        def rule(selector):
+            m = re.search(re.escape(selector) + r'\{([^}]*)\}', css)
+            self.assertIsNotNone(m, selector)
+            return m.group(1)
+
+        self.assertIn('min-height:48px', rule('.upd-list a'))
+        self.assertIn('font-size:16px', rule('.home-ranking th'))
+        note = rule('.home-ranking .note')
+        self.assertIn('border-left:4px solid #ccf43b', note)
+        self.assertIn('border-radius:4px', note)
+
     def test_read_articles_has_description(self):
         rows = {a['href']: a for a in build.read_articles()}
         self.assertTrue(rows['article-daily-20261021.html']['desc'].startswith('Bリーグは10月20日'))
