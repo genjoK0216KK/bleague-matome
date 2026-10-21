@@ -26,7 +26,9 @@ def ev(**kw):
 class Evidence(unittest.TestCase):
     def test_unknown_values_are_recorded_as_unknown(self):
         e = ev(game_id=None)
-        self.assertEqual((e['crawled_at'], e['league'], e['season'], e['game_id']), ('不明', '不明', '不明', None))
+        self.assertEqual((e['crawled_at'], e['published_at'], e['updated_at'], e['league'], e['season'], e['game_id']),
+                         ('不明', '不明', '不明', '不明', '不明', None))
+        self.assertEqual(e['retrieved_at'], '2026-10-22T04:20:00+09:00')
         self.assertEqual(e['route_label'], '公式サイトの検索インデックス（検索結果の断片）')
 
     def test_partial_and_final_mixed_is_mismatch_not_final(self):
@@ -53,22 +55,40 @@ class Evidence(unittest.TestCase):
         self.assertEqual(r['state'], 'unverified')
         self.assertIn('試合IDが不明（対戦と日付だけでは同一試合と確定しない）', r['rejected'][0]['reasons'])
 
-    def test_old_or_unknown_crawl_is_only_a_stale_reference(self):
+    def test_crawl_time_alone_is_not_evidence_of_a_finished_game(self):
+        """クロールが試合開始後でも、原典の公開・更新日時が不明なら終了の根拠にしない。"""
         g = game(gid='506486', home='北海道', away='富山', starts_at='2026-10-21T19:05:00+09:00')
-        for crawled in (None, '2026-10-19T12:00:00+09:00'):
+        for crawled in (None, '2026-10-19T12:00:00+09:00', '2026-10-21T23:00:00+09:00'):
             with self.subTest(crawled=crawled):
                 r = rev.reconcile(g, [ev(game_id='506486', home='北海道', away='富山', home_score=87, away_score=105,
                                          crawled_at=crawled)], direct_fetch_ok=False)
                 self.assertEqual(r['state'], 'reference_stale')
+                self.assertIn('クロール時点だけでは終了の根拠にしない', r['matched'][0]['reasons'][0])
                 self.assertFalse(r['can_publish_score'])
+
+    def test_source_dated_before_tipoff_is_stale(self):
+        g = game(gid='506486', home='北海道', away='富山', starts_at='2026-10-21T19:05:00+09:00')
+        r = rev.reconcile(g, [ev(game_id='506486', home='北海道', away='富山', published_at='2026-10-21T12:00:00+09:00',
+                                 crawled_at='2026-10-21T23:00:00+09:00')], direct_fetch_ok=False)
+        self.assertEqual(r['state'], 'reference_stale')
 
     def test_fresh_reference_is_still_not_confirmed_when_direct_fetch_failed(self):
         g = game(gid='506486', home='北海道', away='富山', starts_at='2026-10-21T19:05:00+09:00')
         r = rev.reconcile(g, [ev(game_id='506486', home='北海道', away='富山', home_score=87, away_score=105,
-                                 crawled_at='2026-10-21T21:30:00+09:00', route='club_official',
+                                 published_at='2026-10-21T21:30:00+09:00', route='club_official',
                                  url='https://example-club.jp/news/1')], direct_fetch_ok=False)
         self.assertEqual(r['state'], 'reference_only')
         self.assertFalse(r['can_publish_score'])
+
+    def test_saved_final_is_kept_but_not_reconfirmed_without_direct_fetch(self):
+        """独立QA：今回の直接取得に失敗したのに、過去の確定で confirmed にならない。確定値は消さない。"""
+        g = game(status='final', ended=True, fixed=True, home_score=94, away_score=65)
+        before = copy.deepcopy(g)
+        r = rev.reconcile(g, [], direct_fetch_ok=False)
+        self.assertEqual(r['state'], 'previously_confirmed')
+        self.assertFalse(r['can_publish_score'])
+        self.assertTrue(r['keeps_saved_final'])
+        self.assertEqual(g, before)
 
     def test_direct_fetch_ok_but_not_fixed_is_distinguished(self):
         g = game(status='unconfirmed', ended=True, fixed=False, home_score=94, away_score=65)

@@ -23,9 +23,14 @@ UNKNOWN = '不明'
 
 
 def evidence(route, url, *, date_jst, home, away, league=None, season=None, game_id=None,
-             home_score=None, away_score=None, status_text=None, retrieved_at, crawled_at=None, note=''):
-    """1件の記録。取得経路・こちらの取得時刻・原典の更新（クロール）時点を別の項目にする。
-    分からない値は推測せず「不明」（ID は None のまま）。"""
+             home_score=None, away_score=None, status_text=None, retrieved_at,
+             published_at=None, updated_at=None, crawled_at=None, note=''):
+    """1件の記録。時刻は意味ごとに分ける。分からない値は推測せず「不明」（ID は None のまま）。
+      published_at : 原典に書かれた公開日時（確認できた場合だけ）
+      updated_at   : 原典に書かれた更新日時（確認できた場合だけ）
+      crawled_at   : 検索エンジンがその原典を読み込んだ時点（検索結果に出ている場合だけ）
+      retrieved_at : こちらが検索結果・原典を確認した日時
+    """
     if route not in ROUTES:
         raise ValueError('unknown route: ' + str(route))
     return {
@@ -33,7 +38,8 @@ def evidence(route, url, *, date_jst, home, away, league=None, season=None, game
         'date_jst': date_jst, 'game_id': str(game_id) if game_id else None,
         'home': home, 'away': away, 'league': league or UNKNOWN, 'season': season or UNKNOWN,
         'home_score': home_score, 'away_score': away_score, 'status_text': status_text or UNKNOWN,
-        'retrieved_at': retrieved_at, 'crawled_at': crawled_at or UNKNOWN, 'note': note,
+        'retrieved_at': retrieved_at, 'published_at': published_at or UNKNOWN,
+        'updated_at': updated_at or UNKNOWN, 'crawled_at': crawled_at or UNKNOWN, 'note': note,
     }
 
 
@@ -61,27 +67,35 @@ def _checks(game, ev):
 
 
 def _stale(game, ev):
-    """原典の更新時点が試合開始より前、または不明なら、その記録は最新の結果の根拠にしない。"""
-    if ev['crawled_at'] == UNKNOWN:
-        return '原典の更新時点が不明'
-    if game.get('starts_at') and datetime.fromisoformat(ev['crawled_at']) < datetime.fromisoformat(game['starts_at']):
-        return '原典の更新時点が試合開始より前'
+    """原典に書かれた公開・更新日時が試合開始より後と確認できない記録は、終了の根拠にしない。
+    検索エンジンのクロール時点が試合開始後でも、それだけでは補わない。"""
+    stamps = [ev[k] for k in ('updated_at', 'published_at') if ev[k] != UNKNOWN]
+    if not stamps:
+        return '原典の公開・更新日時が不明（クロール時点だけでは終了の根拠にしない）'
+    if game.get('starts_at') and max(datetime.fromisoformat(t) for t in stamps) < datetime.fromisoformat(game['starts_at']):
+        return '原典の公開・更新日時が試合開始より前'
     return None
 
 
 def reconcile(game, items, direct_fetch_ok):
     """照合結果を返す。game は書き換えない。
 
+    direct_fetch_ok は「今回」公式の試合ページを直接取得できたか。保存済みの game が過去に確定していても、
+    今回の直接取得が無ければ今回の確定とはしない（過去の確定値は消さない・書き換えない）。
+
     state:
-      confirmed_official : 公式の直接取得で確定（既存の確定条件）。記録は参考に添えるだけ
+      confirmed_official : 今回、公式の直接取得で確定（既存の確定条件）。記録は参考に添えるだけ
+      previously_confirmed : 保存済みの確定値はあるが、今回は直接取得できていない（値は保持、今回の確認は未了）
       official_not_fixed : 公式を直接取得できたが、公式記録はまだ確定していない（結果未公開・未確定）
       reference_only     : 直接取得できず、対象試合を指す参考記録はある（確定扱いしない）
       reference_stale    : 直接取得できず、対象試合を指す記録はあるが、原典の更新時点が不明または試合前
       mismatch           : 対象試合を指す記録どうしで状態・得点が食い違う（照合待ち。途中経過を FINAL で上書きしない）
       unverified         : 直接取得できず、対象試合を指す記録も無い
     """
-    if data.is_verified_final(game):
+    if data.is_verified_final(game) and direct_fetch_ok:
         state = 'confirmed_official'
+    elif data.is_verified_final(game):
+        state = 'previously_confirmed'
     elif direct_fetch_ok:
         state = 'official_not_fixed'
     else:
@@ -104,5 +118,6 @@ def reconcile(game, items, direct_fetch_ok):
         else:
             state = 'reference_stale'
     return {'game_id': str(game['game_id']), 'state': state,
-            'can_publish_score': state == 'confirmed_official',
+            'can_publish_score': state == 'confirmed_official',     # 今回の確定として出せるか
+            'keeps_saved_final': state == 'previously_confirmed',  # 過去の確定値は消さない（今回の確認ではない）
             'matched': same_game, 'rejected': rejected}
