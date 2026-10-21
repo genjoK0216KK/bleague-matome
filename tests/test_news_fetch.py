@@ -152,6 +152,22 @@ class QaRegressions(Base):
             fetch.fetch_bleague_news()
         self.assertLessEqual(self.clock.now - 1000.0, 5)
 
+    def test_polite_pause_does_not_exceed_per_url_limit(self):
+        """4a8527a 再検品：(10秒,503)(5秒,503)(25秒,200)＋待ち5・15秒で60秒→礼儀2秒で62秒になっていた。"""
+        steps = [(10, 503), (5, 503), (25, 200)]
+
+        def request(url, headers=None, timeout=None):
+            seconds, status = steps.pop(0)
+            self.clock.now += min(seconds, timeout)
+            return response(status, url, NEWS_HTML if status == 200 else '')
+        with patch.object(fetch.requests, 'get', side_effect=request):
+            start = self.clock.now
+            self.assertEqual(len(fetch.fetch_bleague_news()), 1)
+        self.assertLessEqual(self.clock.now - start, fetch.URL_MAX_ELAPSED)   # old code: 62
+        self.assertEqual(self.clock.waits[:2], [5, 15])              # retry waits unchanged
+        self.assertEqual(self.clock.waits[2:], [0.0])                 # polite pause shrunk to the 0s left
+        self.assertEqual(fetch.REPORT[-1]['attempts'], 3)
+
     def test_robots_is_not_requested_without_budget(self):
         url = fetch.MATOME_FEEDS[0][1]
         self.serve({})

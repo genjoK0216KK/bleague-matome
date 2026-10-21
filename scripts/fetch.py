@@ -117,7 +117,8 @@ def get(url, request=None):
             r.raise_for_status()
             r.encoding = r.apparent_encoding or r.encoding
             r.fetch_attempts = attempt          # 実際の試行回数（回復した場合も記録に残す）
-            _sleep(min(SLEEP, max(0.0, _run_left())))   # 礼儀の待ちも実行全体の残り時間を超えない
+            # 礼儀の待ちも、URLごとの残り時間と実行全体の残り時間を超えない
+            _sleep(min(SLEEP, max(0.0, _run_left()), max(0.0, URL_MAX_ELAPSED - (_clock() - started))))
             return r
         except requests.HTTPError as e:
             kind, retry, category = type(e).__name__, status in RETRY_STATUS, "http"
