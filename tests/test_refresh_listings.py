@@ -26,16 +26,41 @@ def snapshot(root):
             for p in root.rglob('*') if p.is_file() and '.git' not in p.parts and '__pycache__' not in p.parts}
 
 
+def unlist(root, name):
+    """記事ファイルを一時的に外して一覧から行を消し（同じ差し替え処理を使う）、sitemap の行も消して戻す。"""
+    article = root / name
+    keep = article.read_bytes()
+    article.unlink()
+    refresh_listings.refresh(str(root))
+    article.write_bytes(keep)
+    sitemap = root / 'sitemap.xml'
+    sitemap.write_text(''.join(l for l in sitemap.read_text().splitlines(True) if name not in l))
+
+
+def top_href(soup):
+    """トップの先頭の記事。案C（既定）は先頭記事欄、旧の並びは独自記事欄の1枚目。"""
+    lead = soup.select_one('#today .lead-article h3 a')
+    return lead['href'] if lead else soup.select_one('#own-articles a.own-card')['href']
+
+
 class RefreshListings(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name) / 'site'
         shutil.copytree(ROOT, self.root, ignore=shutil.ignore_patterns('.git', '__pycache__'))
-        # 試験の前提：公開済みなのに一覧に未掲載（main 5b71ef8 と同じ状態）
-        self.assertTrue((self.root / NEW).exists())
-        self.assertNotIn(NEW, (self.root / 'articles.html').read_text())
         offline = patch.object(requests, 'get', side_effect=AssertionError('no network'))
         offline.start(); self.addCleanup(offline.stop)
+        # 試験の前提を明示的に作る：記事は公開済みなのに一覧に未掲載（main 5b71ef8 と同じ状態）。
+        # 実リポジトリの main では既に掲載済みのことがあるため、写しから当該記事の掲載を外す。
+        unlist(self.root, NEW)
+        self.assertTrue((self.root / NEW).exists())
+        for fn in ('articles.html', 'cat-data.html', 'sitemap.xml'):
+            self.assertNotIn(NEW, (self.root / fn).read_text(), fn)
+        top = BeautifulSoup((self.root / 'index.html').read_text(), 'html.parser')
+        self.assertNotIn(NEW, str(top.select_one('#own-articles')) + str(top.select_one('#today')))
+        self.stale_lead = top.select_one('#today .lead-article')   # 案Cなら「古い先頭記事」の状態
+        self.fixture_articles = (self.root / 'articles.html').read_text()
+        self.fixture_sitemap = (self.root / 'sitemap.xml').read_text()
 
     def test_new_article_is_listed_and_nothing_else_changes(self):
         before = snapshot(self.root)
@@ -51,9 +76,10 @@ class RefreshListings(unittest.TestCase):
         self.assertIn(NEW, (self.root / 'cat-data.html').read_text())
         self.assertIn('<loc>https://basuke-matome.jp/' + NEW + '</loc>', (self.root / 'sitemap.xml').read_text())
         index_after = BeautifulSoup((self.root / 'index.html').read_text(), 'html.parser')
-        self.assertEqual(index_after.select('#own-articles a.own-card')[0]['href'], NEW)
+        self.assertEqual(top_href(index_after), NEW)
         # everything else on the top page is byte-for-byte the same section
-        for sel in ('#ranking', '#updates', '#games', 'aside.side', 'header', 'footer', 'head'):
+        for sel in ('#ranking', '#updates', '#games', '.games-line', '.fetch-alert', '#past-games',
+                    'aside.side', 'header', 'footer', 'head'):
             self.assertEqual(str(index_before.select_one(sel)), str(index_after.select_one(sel)), sel)
 
     def test_data_and_article_bodies_are_untouched(self):
@@ -64,7 +90,7 @@ class RefreshListings(unittest.TestCase):
                      'data/match_articles/result-status.json', NEW, 'article-games-20261021.html',
                      'article-games-20261022.html', 'news.html', 'matome.html', 'cat-kekka.html'):
             self.assertEqual(before[name], after[name], name)
-        old_sitemap = [l for l in (ROOT / 'sitemap.xml').read_text().splitlines() if '<url>' in l]
+        old_sitemap = [l for l in self.fixture_sitemap.splitlines() if '<url>' in l]
         new_sitemap = [l for l in (self.root / 'sitemap.xml').read_text().splitlines() if '<url>' in l]
         self.assertEqual(new_sitemap[:len(old_sitemap)], old_sitemap)   # existing lastmod kept
         self.assertEqual(len(new_sitemap), len(old_sitemap) + 1)
@@ -95,22 +121,23 @@ class RefreshListings(unittest.TestCase):
         self.assertEqual(sorted(k for k in after if before[k] != after[k]), written)
 
     def test_partial_failure_is_repaired(self):
-        """独立QA再現：articles には載っているのに index だけ欠落 → 直る。"""
+        """独立QA再現：articles には載っているのに index だけ欠落（古いまま）→ 直る。"""
         refresh_listings.refresh(str(self.root))
         index = self.root / 'index.html'
         soup = BeautifulSoup(index.read_text(), 'html.parser')
-        card = soup.select_one('#own-articles a.own-card[href="%s"]' % NEW)
-        text = index.read_text().replace(str(card), '', 1)
-        self.assertNotIn(NEW, BeautifulSoup(text, 'html.parser').select_one('#own-articles').decode())
+        if self.stale_lead is not None:      # 案C：先頭記事欄だけが古い記事のまま
+            text = index.read_text().replace(str(soup.select_one('#today .lead-article')), str(self.stale_lead), 1)
+        else:                                # 旧の並び：独自記事欄から当該カードが欠落
+            text = index.read_text().replace(str(soup.select_one('#own-articles a.own-card[href="%s"]' % NEW)), '', 1)
+        self.assertNotEqual(top_href(BeautifulSoup(text, 'html.parser')), NEW)
         index.write_text(text)
         self.assertEqual(refresh_listings.refresh(str(self.root)), ['index.html'])
-        self.assertEqual(BeautifulSoup(index.read_text(), 'html.parser')
-                         .select_one('#own-articles a.own-card')['href'], NEW)
+        self.assertEqual(top_href(BeautifulSoup(index.read_text(), 'html.parser')), NEW)
 
     def test_news_data_empty_or_broken_does_not_block_listing(self):
         for content in ('[]', '{broken', ''):
             with self.subTest(news=content or 'empty file'):
-                shutil.copy(ROOT / 'articles.html', self.root / 'articles.html')
+                (self.root / 'articles.html').write_text(self.fixture_articles)
                 (self.root / 'data/news.json').write_text(content)
                 refresh_listings.refresh(str(self.root))
                 self.assertIn(NEW, (self.root / 'articles.html').read_text())

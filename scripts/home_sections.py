@@ -179,7 +179,7 @@ def updates_feed(news, matome, x_list_url=''):
 #   'B'       : 今日のバスケまとめ → 編集部の記事 → 実績EFFは1行リンク → 公式更新 → 試合
 #   'C'       : 今日のバスケまとめ（最新記事の見出し・要点・読むリンク → 試合1行 → 取得失敗1行＋詳細展開）
 #               → 最近の記事 → 前日以前の試合・実績EFF（折りたたみ）→ 公式更新
-HOME_VARIANT = 'current'  # 本人承認まで公開中の並びのまま
+HOME_VARIANT = 'C'  # 10/22 04:10 本人承認「公開して」により案Cを公開（旧の並びは 'current' で再現可）
 OWN_NAMES = {'A': 'バスケ深掘り', 'B': '編集部の記事'}
 WEEKDAYS = '月火水木金土日'
 TODAY_ARTICLES = 3

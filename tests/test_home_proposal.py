@@ -28,8 +28,9 @@ class Proposal(unittest.TestCase):
         with patch.object(browse_ui, 'summaries', return_value=rows()), patch.object(next_preview, 'load', return_value=None):
             return BeautifulSoup(home_sections.home(ROOT, ARTICLES, [], [], '', NOW, variant=variant), 'html.parser')
 
-    def test_default_stays_on_the_published_order(self):
-        self.assertEqual(home_sections.HOME_VARIANT, 'current')
+    def test_default_is_the_approved_variant_c(self):
+        # 10/22 04:10 本人「公開して」で案Cを既定に。'current' は旧の並びとして残す。
+        self.assertEqual(home_sections.HOME_VARIANT, 'C')
 
     def test_variant_a_order_and_folded_eff(self):
         soup = self.render('A')
