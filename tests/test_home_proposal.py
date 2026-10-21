@@ -56,5 +56,50 @@ class Proposal(unittest.TestCase):
         self.assertIn('10/19 の試合で活躍した選手', soup.select_one('#ranking').text)
 
 
+class ProposalC(unittest.TestCase):
+    def render(self, articles=ARTICLES, status=None):
+        data = rows()
+        if status:
+            data = [dict(r, fetch_status=status) if r['date'] in ('2026-10-21', '2026-10-22') else r for r in data]
+        with patch.object(browse_ui, 'summaries', return_value=data), patch.object(next_preview, 'load', return_value=None):
+            return BeautifulSoup(home_sections.home(ROOT, articles, [], [], '', NOW, variant='C'), 'html.parser')
+
+    def test_lead_is_latest_article_with_real_date_not_today(self):
+        lead = self.render().select_one('#today .lead-article')
+        self.assertEqual(lead.select_one('.lead-label').text, '最新記事・10月21日（水）')
+        self.assertEqual(lead.h3.a['href'], 'article-daily-20261021.html')
+        self.assertEqual(lead.select_one('.read-link')['href'], 'article-daily-20261021.html')
+        self.assertNotIn('今日の記事', lead.text)
+
+    def test_today_article_is_labelled_today(self):
+        today = [dict(href='article-daily-20261022.html', title='今日の話題', date='2026.10.22', extra='', desc='要点')]
+        lead = self.render(today + ARTICLES).select_one('#today .lead-article')
+        self.assertEqual(lead.select_one('.lead-label').text, '今日の記事')
+
+    def test_games_are_one_line(self):
+        soup = self.render()
+        self.assertEqual(soup.select_one('.games-line p').text, '今日の試合：4試合・19:05 開始')
+        self.assertEqual(soup.select('#today .match-row'), [])
+
+    def test_fetch_alert_is_one_visible_line_with_details(self):
+        status = {'failing_since': '2026-10-22 01:16 JST', 'last_checked_at': None, 'content_as_of': '2026-10-21 17:26 JST'}
+        alert = self.render(status=status).select_one('#today details.fetch-alert')
+        self.assertIsNone(alert.get('open'))
+        self.assertIn('取得できていません', alert.summary.text)
+        text = alert.ul.text
+        self.assertIn('10月21日（水）', text); self.assertIn('10月22日（木）', text)
+        self.assertIn('不明', text); self.assertIn('2026-10-21 17:26 JST', text)
+
+    def test_order_and_folds(self):
+        soup = self.render()
+        ids = [n['id'] for n in soup.find_all(['section', 'details'], id=True, recursive=False)]
+        self.assertEqual(ids, ['today', 'own-articles', 'past-games', 'ranking', 'updates'])
+        for fold in soup.select('details.home-fold'):
+            self.assertIsNone(fold.get('open'))
+        self.assertIn('10月19日（月）の試合で活躍した選手', soup.select_one('#ranking summary').text)
+        hrefs = [a['href'] for a in soup.select('#own-articles a') if a['href'].startswith('article-')]
+        self.assertEqual(hrefs, ['article-daily-20261020.html'])  # the lead is not repeated
+
+
 if __name__ == '__main__':
     unittest.main()

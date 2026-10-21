@@ -177,6 +177,8 @@ def updates_feed(news, matome, x_list_url=''):
 #   'current' : 公開中の並び（ランキング → 独自記事 → 公式更新 → 試合）
 #   'A'       : 今日のバスケまとめ → バスケ深掘り（記事）→ 公式更新 → 実績EFFは折りたたみ
 #   'B'       : 今日のバスケまとめ → 編集部の記事 → 実績EFFは1行リンク → 公式更新 → 試合
+#   'C'       : 今日のバスケまとめ（最新記事の見出し・要点・読むリンク → 試合1行 → 取得失敗1行＋詳細展開）
+#               → 最近の記事 → 前日以前の試合・実績EFF（折りたたみ）→ 公式更新
 HOME_VARIANT = 'current'  # 本人承認まで公開中の並びのまま
 OWN_NAMES = {'A': 'バスケ深掘り', 'B': '編集部の記事'}
 WEEKDAYS = '月火水木金土日'
@@ -286,11 +288,117 @@ def eff_link(root, now):
             + '#game-eff">' + label + ' の試合で活躍した選手（当日EFF・ポジション別）›</a></p>')
 
 
+# ---------------------------------------------------------------- 案C
+LEAD_SUMMARY = 60   # 要点の最大文字数
+
+
+def _article_day(article):
+    return datetime.strptime(article['date'], '%Y.%m.%d').date()
+
+
+def lead_article(articles, now):
+    """先頭の記事。今日の記事が無ければ最新記事を実日付つきで出す（今日の記事とは書かない）。"""
+    own = [a for a in articles if is_own_article(a)]
+    if not own:
+        return '<p class="lead-empty">記事はまだありません。</p>'
+    a = own[0]
+    day = _article_day(a)
+    label = '今日の記事' if day == now.date() else '最新記事・' + _jp_date(day)
+    desc = (a.get('desc') or '').strip()
+    if len(desc) > LEAD_SUMMARY:
+        desc = desc[:LEAD_SUMMARY].rstrip() + '…'
+    return ('<article class="lead-article"><p class="lead-label">' + label + '</p>'
+            '<h3><a href="' + escape(a['href']) + '">' + escape(a['title']) + '</a></h3>'
+            + ('<p class="lead-desc">' + escape(desc) + '</p>' if desc and desc != a['title'] else '')
+            + '<a class="read-link" href="' + escape(a['href']) + '">記事を読む ›</a></article>')
+
+
+def games_line(root, now, rows):
+    """今日の試合を1行で。取得できていない日も推測せず、保存済みの予定だけを数える。"""
+    today = now.date().isoformat()
+    row = next((r for r in rows if r['date'] == today), None)
+    if row is None:
+        text = '今日の試合：日程を確認中'
+    elif not row['games']:
+        text = '今日の試合：なし'
+    else:
+        times = sorted({datetime.fromisoformat(g['starts_at']).astimezone(preview_data.JST).strftime('%H:%M')
+                        for g in row['games'] if g.get('starts_at')})
+        text = ('今日の試合：' + str(len(row['games'])) + '試合'
+                + ('・' + '／'.join(times) + ' 開始' if times else ''))
+    link = ('<a class="games-link" href="' + day_articles.filename(today) + '">試合の詳細 ›</a>'
+            if row is not None else '')
+    return '<div class="games-line"><p>' + escape(text) + '</p>' + link + '</div>'
+
+
+def fetch_alert(root, now, rows):
+    """取得失敗は常に見える1行。対象日・最終確認・表示内容の取得時刻は展開で確認する。"""
+    failed = [r for r in rows if r.get('fetch_status')
+              and 0 <= (now.date() - datetime.fromisoformat(r['date']).date()).days <= browse_ui.PENDING_DAYS]
+    if not failed:
+        return ''
+    items = ''
+    for r in failed:
+        f = r['fetch_status']
+        items += ('<li><strong>' + _jp_date(datetime.fromisoformat(r['date']).date()) + '</strong>'
+                  '<dl><dt>取得できていない</dt><dd>' + escape(f.get('failing_since') or '不明') + ' から</dd>'
+                  '<dt>最後に公式サイトを確認できた時刻</dt><dd>' + escape(f.get('last_checked_at') or '不明') + '</dd>'
+                  '<dt>表示中の内容の取得時刻</dt><dd>' + escape(f.get('content_as_of') or '不明') + '</dd></dl>'
+                  '<a class="day-detail" href="' + day_articles.filename(r['date']) + '">この日の試合 ›</a></li>')
+    return ('<details class="fetch-alert"><summary>公式サイトから試合情報を取得できていません'
+            '<span class="fetch-alert-more">詳細</span></summary><ul>' + items + '</ul>'
+            '<p>確定した結果は各試合の公式ページでご確認ください。</p></details>')
+
+
+def today_block_c(root, articles, now, rows):
+    return ('<section class="home-today home-today-c" id="today">'
+            '<h2>今日のバスケまとめ<span class="today-date">' + _jp_date(now.date()) + '</span></h2>'
+            + lead_article(articles, now) + games_line(root, now, rows) + fetch_alert(root, now, rows)
+            + '</section>')
+
+
+def recent_articles_c(articles, now, skip=1, limit=4):
+    own = [a for a in articles if is_own_article(a)][skip:skip + limit]
+    if not own:
+        return ''
+    body = ('<section class="home-own home-own-c" id="own-articles"><div class="sec-h"><h2>最近の記事</h2>'
+            '<a class="more" href="articles.html">記事一覧 ›</a></div><ul class="recent-list">')
+    for a in own:
+        day = _article_day(a)
+        body += ('<li><a href="' + escape(a['href']) + '"><span class="recent-date">' + _jp_date(day)
+                 + '</span>' + escape(a['title']) + '</a></li>')
+    return body + '</ul></section>'
+
+
+def past_and_eff_c(root, rows, now):
+    """前日以前の試合と実績EFFは下位の折りたたみ。対象日を必ず書く。"""
+    body = ''
+    past = past_pending(root, rows, now)
+    recent = next((r for r in rows if r['date'] < now.date().isoformat()
+                   and any(preview_data.is_verified_final(g) for g in r['games'])), None)
+    if past or recent:
+        body += '<details class="home-fold" id="past-games"><summary>前日以前の試合</summary>' + past
+        if recent:
+            body += ('<a class="day-detail" href="' + day_articles.filename(recent['date']) + '">確定した直近の結果：'
+                     + _jp_date(datetime.fromisoformat(recent['date']).date()) + ' ›</a>')
+        body += '</details>'
+    row = latest_game_day(root, now)
+    if row:
+        body += ('<details class="home-fold home-ranking" id="ranking"><summary>'
+                 + _jp_date(datetime.fromisoformat(row['date']).date())
+                 + 'の試合で活躍した選手（当日EFF）</summary>' + game_day_leaders(row) + '</details>')
+    return body
+
+
 # ------------------------------------------------------------- まとめ
 
 def home(root, articles, news, matome, x_list_url='', now=None, variant=None):
     now = now or datetime.now(preview_data.JST)
     variant = variant or HOME_VARIANT
+    if variant == 'C':
+        rows = browse_ui.summaries(root, now)
+        return (today_block_c(root, articles, now, rows) + recent_articles_c(articles, now)
+                + past_and_eff_c(root, rows, now) + updates_feed(news, matome, x_list_url))
     if variant in OWN_NAMES:
         rows = browse_ui.summaries(root, now)
         body = today_block(root, now, rows) + articles_block(articles, now, OWN_NAMES[variant])
