@@ -190,7 +190,8 @@ class Workflow(unittest.TestCase):
         il, news = text.index('id: il'), text.index('id: fetch')
         self.assertLess(il, news)                                                 # IL はニュースより前・独立
         self.assertIn('--il-capture "$RUNNER_TEMP/il-capture.json"', text)        # 後続は再取得しない
-        self.assertIn("injury.html data/match_articles/injury.json", text)       # ニュース失敗時も IL を保存
+        self.assertIn('python scripts/save_il.py', text)                         # 後の工程が失敗しても IL を保存
+        self.assertIn("if: always() && steps.il.outcome == 'success'", text)
         self.assertIn("if: always() && steps.il.outputs.il_status == 'failed'", text)
         self.assertNotIn('continue-on-error', text)
 

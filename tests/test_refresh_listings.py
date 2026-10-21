@@ -148,8 +148,9 @@ class RefreshListings(unittest.TestCase):
         self.assertIn('id: fetch', text)
         step = text.split('ニュース取得失敗時：公開済み記事を一覧に載せ')[1].split('- name:')[0]
         self.assertIn("if: failure() && steps.fetch.outcome == 'failure'", step)
-        # 10/22：同じ失敗時ステップで、この回のIL結果（injury.html / injury.json）も保存する
-        self.assertIn("git add -- 'articles*.html' 'cat-*.html' index.html sitemap.xml injury.html data/match_articles/injury.json", step)
+        # 記事一覧の補完だけを保存（IL は独立したステップ save_il.py で保存。test_il_save 参照）
+        self.assertIn("git add -- 'articles*.html' 'cat-*.html' index.html sitemap.xml", step)
+        self.assertNotIn('injury', step)
         self.assertNotIn('git add -A', step)
         self.assertNotIn('continue-on-error', text)
 

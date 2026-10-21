@@ -46,18 +46,18 @@ jobs:
       # ニュースが全滅すると以降の工程は止まる（従来どおり、ジョブは失敗のまま）。
       # その場合も、記事ルーティンが公開済みの記事だけは一覧に載せる。外部取得はせず、
       # 書き換えるのは記事一覧・該当カテゴリ・トップの独自記事欄・sitemap の未掲載URLだけ。
-      - name: ニュース取得失敗時：公開済み記事を一覧に載せ、この回のIL結果を保存（記事一覧とILのみ）
+      - name: ニュース取得失敗時：公開済み記事を一覧に載せる（記事一覧のみ）
         if: failure() && steps.fetch.outcome == 'failure'
         run: |
           python scripts/refresh_listings.py
-          git add -- 'articles*.html' 'cat-*.html' index.html sitemap.xml injury.html data/match_articles/injury.json
+          git add -- 'articles*.html' 'cat-*.html' index.html sitemap.xml
           if git diff --cached --quiet; then
             echo "一覧に未掲載の記事なし"
             exit 0
           fi
           git config user.name  "bleague-matome-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "記事一覧・ILのみ更新（ニュース取得失敗のため）: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M')"
+          git commit -m "記事一覧のみ更新（ニュース取得失敗のため）: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M')"
           python scripts/publish_update.py
 
       - name: 公式IL・23時に翌日プレビュー・3リーグ日付記事を更新
@@ -78,6 +78,16 @@ jobs:
           git commit -m "自動更新: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M')"
           # 競合したニュースHTMLは先に公開された編集を保持。その他の競合は中断。
           python scripts/publish_update.py
+
+      # IL の2つの成果（取得できた一覧／取得失敗の「未確認」記録）は、後の工程（ニュース・試合記事・HTML生成・
+      # 記事一覧の補完）が失敗した回でも、それだけを保存する。ほかの工程の失敗は失敗のまま残る。
+      # 全工程が成功した回は上の通常コミットに含まれるので、ここでは何もしない。
+      - name: 公式ILの結果を保存（後の工程が失敗した回も）
+        if: always() && steps.il.outcome == 'success'
+        run: |
+          git config user.name  "bleague-matome-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python scripts/save_il.py
 
       # IL の取得失敗は、ほかの工程が成功してもジョブの失敗として残す（成功扱いにしない）。
       - name: 公式ILの取得結果を確認
