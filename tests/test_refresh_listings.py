@@ -75,11 +75,46 @@ class RefreshListings(unittest.TestCase):
         refresh_listings.refresh(str(self.root))
         self.assertEqual(stamp.search((self.root / 'cat-data.html').read_text()).group(1), old)
 
-    def test_second_run_and_no_new_article_write_nothing(self):
+    def test_identical_input_is_a_no_op(self):
         refresh_listings.refresh(str(self.root))
         before = snapshot(self.root)
         self.assertEqual(refresh_listings.refresh(str(self.root)), [])
         self.assertEqual(snapshot(self.root), before)
+
+    def test_same_day_article_update_is_reflected(self):
+        """独立QA再現：掲載後に同じ記事の h1 を書き換える（12時・19時の同日更新）→ 一覧も追従。"""
+        refresh_listings.refresh(str(self.root))
+        path = self.root / NEW
+        path.write_text(path.read_text().replace('<h1>', '<h1>【12時更新】', 1))
+        before = snapshot(self.root)
+        written = refresh_listings.refresh(str(self.root))
+        self.assertEqual(written, ['articles.html', 'cat-data.html', 'index.html'])
+        for fn in written:
+            self.assertIn('【12時更新】', (self.root / fn).read_text(), fn)
+        after = snapshot(self.root)
+        self.assertEqual(sorted(k for k in after if before[k] != after[k]), written)
+
+    def test_partial_failure_is_repaired(self):
+        """独立QA再現：articles には載っているのに index だけ欠落 → 直る。"""
+        refresh_listings.refresh(str(self.root))
+        index = self.root / 'index.html'
+        soup = BeautifulSoup(index.read_text(), 'html.parser')
+        card = soup.select_one('#own-articles a.own-card[href="%s"]' % NEW)
+        text = index.read_text().replace(str(card), '', 1)
+        self.assertNotIn(NEW, BeautifulSoup(text, 'html.parser').select_one('#own-articles').decode())
+        index.write_text(text)
+        self.assertEqual(refresh_listings.refresh(str(self.root)), ['index.html'])
+        self.assertEqual(BeautifulSoup(index.read_text(), 'html.parser')
+                         .select_one('#own-articles a.own-card')['href'], NEW)
+
+    def test_news_data_empty_or_broken_does_not_block_listing(self):
+        for content in ('[]', '{broken', ''):
+            with self.subTest(news=content or 'empty file'):
+                shutil.copy(ROOT / 'articles.html', self.root / 'articles.html')
+                (self.root / 'data/news.json').write_text(content)
+                refresh_listings.refresh(str(self.root))
+                self.assertIn(NEW, (self.root / 'articles.html').read_text())
+                self.assertEqual((self.root / 'data/news.json').read_text(), content)   # not repaired/overwritten
 
     def test_workflow_step_runs_only_after_fetch_failure_and_stages_fixed_files(self):
         text = (ROOT / '.github/workflows/update.yml').read_text()
