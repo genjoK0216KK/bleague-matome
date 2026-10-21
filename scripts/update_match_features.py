@@ -37,14 +37,33 @@ def promote(stage, root, report):
             path.unlink()
 
 
-def run(root, client, year, now):
+def use_il_capture(client, capture):
+    """同じ回の update_injury.py の結果を使う（ILを再取得しない）。成功の原文があれば読み込み、
+    無ければ（この回のIL取得は失敗）IL のURLを取得しないようにする＝出場状況は「未確認」になる。"""
+    path = Path(capture)
+    if path.exists():
+        saved = json.loads(path.read_text(encoding='utf-8'))
+        if saved.get('url') == injury_page.URL and saved.get('body'):
+            client.memory[injury_page.URL] = saved['body']
+            client.sources.append({'url': injury_page.URL, 'retrieved_at': saved['retrieved_at']})
+            return True
+    client.blocked[injury_page.URL] = 'この回の公式IL取得は失敗（出場状況は未確認）'
+    return False
+
+
+def run(root, client, year, now, il_capture=None):
     now = now.astimezone(data.JST)
     root = Path(root); root.mkdir(parents=True, exist_ok=True)
     state_dir = root / 'data' / 'match_articles'; state_dir.mkdir(parents=True, exist_ok=True)
     errors = []
-    il_error = injury_page.generate(client, root, state_dir / 'injury.json', now)
-    if il_error:
-        errors.append('IL: ' + il_error)
+    if il_capture:
+        # IL は update_injury.py が同じ回の先に取得・保存済み。ここでは取得も injury.html の書き換えもしない。
+        if not use_il_capture(client, il_capture):
+            errors.append('IL: この回の取得は失敗（update_injury.py の記録を参照）')
+    else:
+        il_error = injury_page.generate(client, root, state_dir / 'injury.json', now)
+        if il_error:
+            errors.append('IL: ' + il_error)
     editorial_path = root / 'data' / 'match-editorial.json'
     editorial = json.loads(editorial_path.read_text()) if editorial_path.exists() else {}
     published = []
@@ -91,8 +110,10 @@ def main():
     parser.add_argument('--season-year', type=int, required=True)
     parser.add_argument('--root', default=str(ROOT))
     parser.add_argument('--capture-dir')
+    parser.add_argument('--il-capture', help='update_injury.py が同じ回に保存したIL原文（あればILを再取得しない）')
     args = parser.parse_args()
-    result = run(args.root, official.Client(args.capture_dir, max_requests=160, time_budget=480), args.season_year, datetime.now(data.JST))
+    result = run(args.root, official.Client(args.capture_dir, max_requests=160, time_budget=480), args.season_year,
+                 datetime.now(data.JST), il_capture=args.il_capture)
     # Calendar has its own bounded budget after existing results/EFF are secure.
     calendar_client = official.Client(args.capture_dir, max_requests=100, time_budget=300)
     calendar_report = schedule_calendar.update(calendar_client, args.root, args.season_year, datetime.now(data.JST))

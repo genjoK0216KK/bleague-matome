@@ -33,6 +33,12 @@ jobs:
       - name: 依存パッケージをインストール
         run: pip install --quiet requests beautifulsoup4 fonttools brotli
 
+      # 公式IL はニュースとは独立に、この実行枠の中で1回だけ取得する（新しいスケジュールは作らない）。
+      # 失敗しても後続を止めず、前回の一覧を「未確認」として残す。失敗は末尾の確認ステップでジョブ失敗として報告する。
+      - name: 公式ILを取得（ニュースと独立）
+        id: il
+        run: python scripts/update_injury.py --capture "$RUNNER_TEMP/il-capture.json"
+
       - name: ニュース・順位表を取得
         id: fetch
         run: python scripts/fetch.py
@@ -40,22 +46,22 @@ jobs:
       # ニュースが全滅すると以降の工程は止まる（従来どおり、ジョブは失敗のまま）。
       # その場合も、記事ルーティンが公開済みの記事だけは一覧に載せる。外部取得はせず、
       # 書き換えるのは記事一覧・該当カテゴリ・トップの独自記事欄・sitemap の未掲載URLだけ。
-      - name: ニュース取得失敗時：公開済み記事を一覧に載せる（記事一覧のみ）
+      - name: ニュース取得失敗時：公開済み記事を一覧に載せ、この回のIL結果を保存（記事一覧とILのみ）
         if: failure() && steps.fetch.outcome == 'failure'
         run: |
           python scripts/refresh_listings.py
-          git add -- 'articles*.html' 'cat-*.html' index.html sitemap.xml
+          git add -- 'articles*.html' 'cat-*.html' index.html sitemap.xml injury.html data/match_articles/injury.json
           if git diff --cached --quiet; then
             echo "一覧に未掲載の記事なし"
             exit 0
           fi
           git config user.name  "bleague-matome-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "記事一覧のみ更新（ニュース取得失敗のため）: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M')"
+          git commit -m "記事一覧・ILのみ更新（ニュース取得失敗のため）: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M')"
           python scripts/publish_update.py
 
       - name: 公式IL・23時に翌日プレビュー・3リーグ日付記事を更新
-        run: python scripts/update_match_features.py --season-year 2026
+        run: python scripts/update_match_features.py --season-year 2026 --il-capture "$RUNNER_TEMP/il-capture.json"
 
       - name: HTMLを生成
         run: python scripts/build.py
@@ -72,3 +78,10 @@ jobs:
           git commit -m "自動更新: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M')"
           # 競合したニュースHTMLは先に公開された編集を保持。その他の競合は中断。
           python scripts/publish_update.py
+
+      # IL の取得失敗は、ほかの工程が成功してもジョブの失敗として残す（成功扱いにしない）。
+      - name: 公式ILの取得結果を確認
+        if: always() && steps.il.outputs.il_status == 'failed'
+        run: |
+          echo "::error::公式ILの取得に失敗しました。前回の一覧を未確認として表示しています（data/match_articles/injury.json の last_error を参照）"
+          exit 1

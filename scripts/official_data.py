@@ -90,6 +90,7 @@ class Client:
         self.fetch = fetch or _default_fetch   # fetch(url, timeout) -> requests.Response
         self.failures = []           # one public record per URL that could not be read
         self.consecutive_failures = 0
+        self.blocked = {}            # url -> reason: not requested again in this run (e.g. IL failed earlier)
 
     def record_problem(self, url, exc):
         """Content problems (parse) are recorded here; request failures are recorded by _download."""
@@ -148,6 +149,8 @@ class Client:
             raise DataError('Only official HTTPS sources are allowed')
         if url in self.memory:
             return self.memory[url]
+        if url in self.blocked:
+            raise DataError(self.blocked[url])
         if not self.offline and not self._budget_left():
             error = FetchError('Official fetch budget exhausted; prior data retained', url, kind='BudgetExhausted')
             self.failures.append(error.detail())
@@ -466,6 +469,11 @@ def apply_injuries(client, roster, active, game, removed=()):
     """Resolve exact names per club; profile fetch ordering is not identity evidence."""
     normalize = lambda s: re.sub(r'\s+', '', s).casefold()
     failures = []
+    # IL一覧をいつ取得したかを、そのまま注記に書く（古い一覧を最新に見せない）
+    il_time = next((s['retrieved_at'] for s in reversed(getattr(client, 'sources', []))
+                    if s.get('url') == BASE + '/news/injury.html'), None)
+    il_checked = (datetime.fromisoformat(il_time).astimezone(JST).strftime('%Y-%m-%d %H:%M JST') + ' 取得時点'
+                  if il_time else '取得時刻未確認')
     for side in ('home', 'away'):
         team_players = [p for p in roster if p['team_id'] == game.get(side + '_id')]
         candidates = [r for r in list(active) + list(removed)
@@ -500,7 +508,7 @@ def apply_injuries(client, roster, active, game, removed=()):
             if active_matches:
                 row = active_matches[0]
                 p.update(availability='out', availability_source=BASE + '/news/injury.html',
-                         availability_detail='公式IL登録中（取得時点）。選手公示日：' + row.get('announced_date', '未確認')
+                         availability_detail='公式IL登録中（' + il_checked + '）。選手公示日：' + row.get('announced_date', '未確認')
                          + '／リスト登録日：' + row.get('registered_date', '未確認') + '。次戦時点の解除・登録は再確認が必要')
             elif matches:
                 p.update(il_removed_date=matches[0]['removed_date'], il_source=BASE + '/news/injury.html',

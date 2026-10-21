@@ -146,9 +146,10 @@ class RefreshListings(unittest.TestCase):
     def test_workflow_step_runs_only_after_fetch_failure_and_stages_fixed_files(self):
         text = (ROOT / '.github/workflows/update.yml').read_text()
         self.assertIn('id: fetch', text)
-        step = text.split('ニュース取得失敗時：公開済み記事を一覧に載せる')[1].split('- name:')[0]
+        step = text.split('ニュース取得失敗時：公開済み記事を一覧に載せ')[1].split('- name:')[0]
         self.assertIn("if: failure() && steps.fetch.outcome == 'failure'", step)
-        self.assertIn("git add -- 'articles*.html' 'cat-*.html' index.html sitemap.xml", step)
+        # 10/22：同じ失敗時ステップで、この回のIL結果（injury.html / injury.json）も保存する
+        self.assertIn("git add -- 'articles*.html' 'cat-*.html' index.html sitemap.xml injury.html data/match_articles/injury.json", step)
         self.assertNotIn('git add -A', step)
         self.assertNotIn('continue-on-error', text)
 

@@ -22,8 +22,8 @@ except ImportError:
 
 AVAILABILITY_LABELS = {'unknown': '出場未確認', 'unannounced': 'エントリー未発表',
                        'entry_confirmed': 'エントリー確認済（出場保証ではありません）',
-                       'expected': '公式の出場見込み', 'out': '公式欠場・IL登録', 'suspended': '公式出場停止'}
-EXCLUSIONS = {'out': '公式欠場・IL・停止', 'no_appearance': '今季未出場（公式G=0）',
+                       'expected': '公式の出場見込み', 'out': 'IL登録中（取得時点・当日の出欠は別）', 'suspended': '公式出場停止'}
+EXCLUSIONS = {'out': 'IL登録中または公式出場停止（取得時点）', 'no_appearance': '今季未出場（公式G=0）',
               'average_unverified': '平均記録未確認', 'scope_mismatch': '集計範囲不一致',
               'position_unknown': '登録ポジション未確認', 'position_unverified': 'ポジション出典未確認',
               'average_invalid': '平均記録未確認'}
