@@ -40,6 +40,8 @@ def semantic(summary):
 
 
 LOOKBACK_DAYS = 3  # past JST dates re-checked each run; older dates are never retried
+# run_date reasons that come from a successful official read (already_final / deferred do not read).
+READ_REASONS = ('unchanged', 'rankings_still_pending')
 
 
 def rankings_complete(summary):
@@ -142,7 +144,9 @@ def run(root, client, year, now):
     reports, errors, first = [], [], None
     today = now.astimezone(data.JST).date().isoformat()
     limit = getattr(client, 'max_requests', None)
-    status_changed = False
+    status_changed = False   # reader-facing state changed (rebuild needed)
+    status_path = Path(root) / result_status.PATH
+    status_before = status_path.read_bytes() if status_path.exists() else None
     for date in pending_dates(root, now):
         path = Path(root) / 'data/match_articles' / day_articles.filename(date).replace('.html', '.json')
         seen = len(getattr(client, 'failures', []))
@@ -153,7 +157,8 @@ def run(root, client, year, now):
             report = run_date(root, client, year, now, date)
             reports.append(report)
             # Result fetch state only; EFF TOP3 still pending is not a fetch failure.
-            if report.get('reason') != 'no_games':
+            # Only reasons that come from a real official read advance last_checked_at.
+            if report['changed'] or report.get('reason') in READ_REASONS:
                 status_changed |= result_status.record_success(root, date, now, report['changed'])
         except (ValueError, OSError, official.requests.RequestException) as exc:
             fetches = list(getattr(client, 'failures', [])[seen:])
@@ -165,13 +170,15 @@ def run(root, client, year, now):
                 status_changed |= result_status.record_failure(root, date, now, error)
         status_changed |= result_status.apply_notice(root, date)
     changed = any(r['changed'] for r in reports)
+    status_file_changed = (status_path.read_bytes() if status_path.exists() else None) != status_before
     if errors and not changed:
         first.result_errors = errors
         first.status_changed = status_changed
+        first.status_file_changed = status_file_changed
         raise first
     head = next((r for r in reports if r['date'] == today), reports[0] if reports else {})
     return dict(head, changed=changed, dates=reports, errors=errors, requests=client.request_count,
-                status_changed=status_changed)
+                status_changed=status_changed, status_file_changed=status_file_changed)
 
 
 def log_errors(errors):
@@ -211,6 +218,7 @@ def main():
             log_errors(errors)
             if getattr(exc, 'status_changed', False):
                 build(args.root)      # show the failure notice; results themselves are unchanged
+            if getattr(exc, 'status_changed', False) or getattr(exc, 'status_file_changed', False):
                 mark_status_saved()
             print('::error::Result refresh failed; existing published data retained')
             return 1
@@ -228,10 +236,11 @@ def main():
         print(json.dumps(report, ensure_ascii=False, default=str))
         if report['changed'] or report.get('status_changed'):
             build(args.root)
-            if report.get('errors'):
-                mark_status_saved()
             return 0  # some date was updated; failed dates are retried by the next run
+        # Only last_checked_at moved: saved by the workflow (exit 0), no HTML rebuild needed.
         if report.get('errors'):
+            if report.get('status_file_changed'):
+                mark_status_saved()
             print('::error::Result refresh failed; existing published data retained')
             return 1
         return 0

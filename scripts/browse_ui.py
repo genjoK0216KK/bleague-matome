@@ -42,9 +42,8 @@ def fetch_note(row):
     fetch = row.get('fetch_status')
     if not fetch:
         return ''
-    last = fetch.get('last_success_at')
-    return ('<p class="note fetch-failed">公式サイトから最新の結果を取得できていません（'+escape(fetch.get('failing_since') or '時刻不明')+' から）。'
-            + ('最終取得：'+escape(last)+'。' if last else '') + '</p>')
+    return ('<p class="note fetch-failed">公式サイトから最新の結果を取得できていません（'
+            + escape(fetch.get('failing_since') or '時刻不明') + ' から）。' + result_status.times_text(fetch) + '</p>')
 
 
 def day_body(row, limit=None, now=None):

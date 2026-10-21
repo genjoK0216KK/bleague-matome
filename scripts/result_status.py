@@ -6,8 +6,14 @@ States shown to readers:
   - 取得失敗          : the latest attempt could not read the official site; the page keeps the
                         last verified data and shows when it was last read successfully
 
-The file only changes on a state transition (ok -> failed, failed -> ok, new data written),
-so repeated identical failures every 15 minutes do not create commits.
+Two different times are kept per date and never mixed:
+  last_checked_at : the last time the official site was actually read successfully for the date
+                    (every successful read, also when nothing changed; never advanced when no
+                    network read happened, e.g. already final or deferred)
+  content_as_of   : when the official data shown on the page was retrieved (advances only when
+                    the page is written from a new read)
+Failures keep both times and record when failing started. Identical repeated failures do not
+rewrite the file.
 Only public facts are stored: date, URL, HTTP status, exception type, times.
 """
 import json
@@ -42,26 +48,32 @@ def stamp(now):
 
 
 def record_success(root, date, now, changed):
-    """Mark a date readable. Writes only when data changed or a failure is cleared."""
+    """A successful official read of `date` at `now` (call only after a real network read).
+
+    changed=True: the page was written from this read, so the shown content is as of `now`.
+    Returns True when the reader-facing state changed (a failure notice must be removed)."""
     dates = load(root)
-    entry = dates.get(date)
-    if not changed and (entry is None or entry.get('state') == 'ok'):
-        return False
-    dates[date] = {'state': 'ok', 'last_success_at': stamp(now)}
-    _save(root, dates, now)
-    return True
+    entry = dates.get(date) or {}
+    content = stamp(now) if changed else (entry.get('content_as_of') or last_retrieval(root, date))
+    new = {'state': 'ok', 'last_checked_at': stamp(now), 'content_as_of': content}
+    if new != entry:
+        dates[date] = new
+        _save(root, dates, now)
+    return entry.get('state') == 'fetch_failed'
 
 
 def record_failure(root, date, now, error):
-    """Mark a date unreadable. Keeps the first failure time and the last success time."""
+    """Mark a date unreadable. Keeps the first failure time and both success times."""
     dates = load(root)
     entry = dates.get(date) or {}
     public = {k: error.get(k) for k in ('type', 'http_status', 'url')}
     if entry.get('state') == 'fetch_failed' and entry.get('error') == public:
         return False
+    content = entry.get('content_as_of') or last_retrieval(root, date)
     dates[date] = {'state': 'fetch_failed',
                    'failing_since': entry.get('failing_since') if entry.get('state') == 'fetch_failed' else stamp(now),
-                   'last_success_at': entry.get('last_success_at') or last_retrieval(root, date),
+                   'last_checked_at': entry.get('last_checked_at') or content,
+                   'content_as_of': content,
                    'error': public}
     _save(root, dates, now)
     return True
@@ -82,14 +94,23 @@ def failed(root, date):
     return entry if entry and entry.get('state') == 'fetch_failed' else None
 
 
+def times_text(entry):
+    """'最後に確認できた時刻' and '表示内容の取得時刻' (merged when equal)."""
+    checked, content = entry.get('last_checked_at'), entry.get('content_as_of')
+    if checked and content and checked != content:
+        return ('最後に公式サイトを確認できたのは ' + escape(checked) + '、表示中の内容は '
+                + escape(content) + ' に取得した公式記録です（その後の確認でも変化なし）。')
+    if checked or content:
+        return '表示中の内容は ' + escape(checked or content) + ' 時点の公式記録です。'
+    return '表示中の内容は前回確認できた公式記録です。'
+
+
 def notice_html(entry):
     """Reader-facing warning. No error text from the remote site is shown."""
     since = escape(entry.get('failing_since') or '時刻不明')
-    last = entry.get('last_success_at')
-    shown = ('表示中の内容は ' + escape(last) + ' 時点の公式記録です。') if last else '表示中の内容は前回確認できた公式記録です。'
     return ('<div class="note fetch-failed" id="result-fetch-status" role="status">'
             '<strong>公式サイトから最新の結果を取得できていません</strong>（' + since + ' から）。'
-            + shown + '試合前・未確定の表示は最新の状態と異なる場合があります。確定した結果は各試合の公式ページでご確認ください。</div>')
+            + times_text(entry) + '試合前・未確定の表示は最新の状態と異なる場合があります。確定した結果は各試合の公式ページでご確認ください。</div>')
 
 
 def apply_notice(root, date):
