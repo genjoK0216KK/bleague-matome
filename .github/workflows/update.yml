@@ -34,7 +34,25 @@ jobs:
         run: pip install --quiet requests beautifulsoup4 fonttools brotli
 
       - name: ニュース・順位表を取得
+        id: fetch
         run: python scripts/fetch.py
+
+      # ニュースが全滅すると以降の工程は止まる（従来どおり、ジョブは失敗のまま）。
+      # その場合も、記事ルーティンが公開済みの記事だけは一覧に載せる。外部取得はせず、
+      # 書き換えるのは記事一覧・該当カテゴリ・トップの独自記事欄・sitemap の未掲載URLだけ。
+      - name: ニュース取得失敗時：公開済み記事を一覧に載せる（記事一覧のみ）
+        if: failure() && steps.fetch.outcome == 'failure'
+        run: |
+          python scripts/refresh_listings.py
+          git add -- 'articles*.html' 'cat-*.html' index.html sitemap.xml
+          if git diff --cached --quiet; then
+            echo "一覧に未掲載の記事なし"
+            exit 0
+          fi
+          git config user.name  "bleague-matome-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "記事一覧のみ更新（ニュース取得失敗のため）: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M')"
+          python scripts/publish_update.py
 
       - name: 公式IL・23時に翌日プレビュー・3リーグ日付記事を更新
         run: python scripts/update_match_features.py --season-year 2026
