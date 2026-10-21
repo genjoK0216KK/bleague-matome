@@ -108,3 +108,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #17
 .fetch-failed strong{font-weight:700}
 .result-asof{font-size:14px;line-height:1.6;color:var(--muted);margin:0 0 12px}
 .pending-past{font-size:16px;line-height:1.6;margin:12px 0;padding:12px 0;border-top:1px solid var(--line)}
+/* Proposal (10/22, unapproved): 今日のバスケまとめ */
+.home-today{border-top:4px solid #ccf43b;background:#f5f8e9;padding:16px;margin:0 0 32px}
+.home-today h2{font-size:24px;line-height:1.4;margin:4px 0 8px}
+.today-lead{font-size:16px;line-height:1.6;margin:0 0 8px}
+.home-today .match-row{background:transparent}
+.own-sub{font-size:16px;font-weight:700;margin:16px 0 8px}
+.own-empty{font-size:16px;line-height:1.6;margin:0 0 8px;color:var(--muted)}
+.own-card-short{padding:12px 16px}.own-card-short h3{font-size:17px;margin:6px 0}
+.home-eff-fold{border-top:1px solid var(--line);margin:32px 0 0;padding:0}
+.home-eff-fold summary{min-height:48px;display:flex;align-items:center;font-size:16px;font-weight:700;cursor:pointer;padding:8px 0}
+.home-eff-fold table{width:100%;min-width:0;table-layout:fixed;font-size:16px}
+.home-eff-link{margin:0 0 24px}

@@ -16,7 +16,7 @@ from datetime import datetime
 from html import escape
 from pathlib import Path
 
-from . import browse_ui, day_articles, next_preview, official_data, preview_data
+from . import browse_ui, day_articles, next_preview, official_data, preview_data, result_status
 
 OWN_LIMIT = 6        # 独自記事の件数
 OFFICIAL_LIMIT = 5   # 公式発信の件数
@@ -171,10 +171,107 @@ def updates_feed(news, matome, x_list_url=''):
     return body + '</section>'
 
 
+# ------------------------------------------------- 提案：今日のバスケまとめ（未承認）
+# 10/22 本人フィードバック「自社記事という名前はダサい」「当日EFFポジションランキングは意味が
+# わからない、今日の記事まとめの方が良い」への変更案。HOME_VARIANT で切り替える。
+#   'current' : 公開中の並び（ランキング → 独自記事 → 公式更新 → 試合）
+#   'A'       : 今日のバスケまとめ → バスケ深掘り（記事）→ 公式更新 → 実績EFFは折りたたみ
+#   'B'       : 今日のバスケまとめ → 編集部の記事 → 実績EFFは1行リンク → 公式更新 → 試合
+HOME_VARIANT = 'current'  # 本人承認まで公開中の並びのまま
+OWN_NAMES = {'A': 'バスケ深掘り', 'B': '編集部の記事'}
+WEEKDAYS = '月火水木金土日'
+TODAY_ARTICLES = 3
+
+
+def _jp_date(day):
+    return f'{day.month}月{day.day}日（{WEEKDAYS[day.weekday()]}）'
+
+
+def today_block(root, now, rows):
+    """今日の対象日・試合数・各試合の状態。保存済みの公式データだけを使い、注目度は推測しない。"""
+    today = now.date().isoformat()
+    row = next((r for r in rows if r['date'] == today), None)
+    body = ('<section class="home-today" id="today"><p class="phase-label">今日のバスケまとめ</p>'
+            '<h2>' + _jp_date(now.date()) + '</h2>')
+    if row is None:
+        body += '<p class="today-lead">今日の日程を確認中です。</p>'
+    elif not row['games']:
+        body += '<p class="today-lead">今日は B.LEAGUE の試合はありません。</p>'
+    else:
+        counts = '・'.join(official_data.LEAGUES[k][3] + ' ' + str(n) + '試合'
+                           for k in official_data.LEAGUES
+                           for n in [sum(g['competition'] == k for g in row['games'])] if n)
+        body += '<p class="today-lead">' + escape(counts) + '</p>'
+        body += browse_ui.fetch_note(row)
+        failed = bool(row.get('fetch_status'))
+        body += ''.join(browse_ui.match_row(g, today, now, failed) for g in row['games'][:4])
+        more = len(row['games']) - 4
+        body += ('<a class="day-detail" href="' + day_articles.filename(today) + '">'
+                 + ('ほか ' + str(more) + ' 試合・' if more > 0 else '') + '今日の試合の詳細 ›</a>')
+    body += browse_ui.pending_past(rows, now)
+    recent = next((r for r in rows if r['date'] < today
+                   and any(preview_data.is_verified_final(g) for g in r['games'])), None)
+    if recent:
+        body += ('<a class="day-detail" href="' + day_articles.filename(recent['date']) + '">直近の試合結果（'
+                 + recent['date'][5:].replace('-', '/') + '）›</a>')
+    return body + '</section>'
+
+
+def articles_block(articles, now, name):
+    """今日の記事と最近の記事を分ける。過去の記事を「今日」として見せない。"""
+    today = now.strftime('%Y.%m.%d')
+    own = [a for a in articles if is_own_article(a)]
+    todays = [a for a in own if a['date'] == today][:TODAY_ARTICLES]
+    recent = [a for a in own if a['date'] != today][:TODAY_ARTICLES]
+
+    def card(a):
+        return ('<a class="own-card own-card-short" href="' + escape(a['href']) + '">'
+                '<span class="own-kind">' + own_kind(a) + '</span><h3>' + escape(a['title']) + '</h3>'
+                '<span class="own-date">' + escape(a['date']) + '</span></a>')
+    body = ('<section class="home-own" id="own-articles"><div class="sec-h"><h2>' + escape(name) + '</h2>'
+            '<a class="more" href="articles.html">記事一覧 ›</a></div>')
+    body += '<h3 class="own-sub">今日の記事</h3>'
+    if todays:
+        body += '<div class="own-grid">' + ''.join(card(a) for a in todays) + '</div>'
+    else:
+        body += '<p class="own-empty">今日の記事は準備中です（8時・12時・19時ごろ更新）。</p>'
+    if recent:
+        body += '<h3 class="own-sub">最近の記事</h3><div class="own-grid">' + ''.join(card(a) for a in recent) + '</div>'
+    return body + '</section>'
+
+
+def eff_folded(root, now):
+    """実績EFF（対象日を明記）を折りたたみで下位に置く。中身は公開中と同じ表。"""
+    row = latest_game_day(root, now)
+    if not row:
+        return ''
+    label = row['date'][5:].replace('-', '/')
+    return ('<details class="home-eff-fold home-ranking" id="ranking"><summary>' + label
+            + ' の試合で活躍した選手（ポジション別・当日EFF 1位）</summary>'
+            + game_day_leaders(row) + '</details>')
+
+
+def eff_link(root, now):
+    row = latest_game_day(root, now)
+    if not row:
+        return ''
+    label = row['date'][5:].replace('-', '/')
+    return ('<p class="home-eff-link" id="ranking"><a class="day-detail" href="' + day_articles.filename(row['date'])
+            + '#game-eff">' + label + ' の試合で活躍した選手（当日EFF・ポジション別）›</a></p>')
+
+
 # ------------------------------------------------------------- まとめ
 
-def home(root, articles, news, matome, x_list_url='', now=None):
+def home(root, articles, news, matome, x_list_url='', now=None, variant=None):
     now = now or datetime.now(preview_data.JST)
+    variant = variant or HOME_VARIANT
+    if variant in OWN_NAMES:
+        rows = browse_ui.summaries(root, now)
+        body = today_block(root, now, rows) + articles_block(articles, now, OWN_NAMES[variant])
+        if variant == 'A':
+            return body + updates_feed(news, matome, x_list_url) + eff_folded(root, now)
+        return (body + eff_link(root, now) + updates_feed(news, matome, x_list_url)
+                + browse_ui.home_games(root, now, rows))
     return (ranking(root, now)
             + own_articles(articles)
             + updates_feed(news, matome, x_list_url)
