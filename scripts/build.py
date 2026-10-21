@@ -17,11 +17,11 @@ import sys
 from datetime import datetime, timedelta, timezone
 
 try:
-    from . import site_header, browse_ui, schedule_calendar
+    from . import site_header, browse_ui, schedule_calendar, home_sections
 except ImportError:
     import site_header
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    from scripts import browse_ui, schedule_calendar
+    from scripts import browse_ui, schedule_calendar, home_sections
 
 JST = timezone(timedelta(hours=9))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -119,9 +119,14 @@ def read_articles():
         thumb = _attr(imgm.group(0), "src") if imgm else ""
         alt = _attr(imgm.group(0), "alt") if imgm else ""
 
+        descm = (re.search(r'<meta[^>]*name="description"[^>]*content="([^"]*)"', t)
+                 or re.search(r'<meta[^>]*content="([^"]*)"[^>]*name="description"', t))
+        desc = html.unescape(descm.group(1)).strip() if descm else ""
+
         items.append({
             "href": fn, "title": title, "cat": cat, "label": label,
             "date": date, "extra": extra, "thumb": thumb, "alt": alt or title,
+            "desc": desc,
         })
 
     items.sort(key=article_order, reverse=True)
@@ -1054,10 +1059,17 @@ def main():
     column = soup.select_one('div.main')
     if column:
         column.clear()
-        body = browse_ui.home(ROOT)
-        body += '<div class="sec-h"><h2>最新の記事</h2><a class="more" href="articles.html">記事一覧 ›</a></div><div class="feed">'+render_articles(articles[:8])+'</div>'
-        body += '<div class="sec-h"><h2>外部ニュース</h2><a class="more" href="news.html">もっと見る ›</a></div><div class="feed">'+render_feed(news,limit=5)+'</div>'
+        # 10/21 本人承認の並び：ランキング → 独自記事 → 公式・外部の更新 → 試合（補助）
+        body = home_sections.home(ROOT, articles, news, matome, cfg["x_list_url"])
         column.append(BeautifulSoup(body,'html.parser'))
+    # 広告の仮枠をサイドバー先頭（ランキングの真横）に置かない。位置だけ順位表の下へ移す
+    side = soup.select_one('aside.side')
+    if side:
+        first = side.find(True, recursive=False)
+        if first is not None and 'adbox' in (first.get('class') or []):
+            anchor = next((c for c in side.find_all('div', class_='card', recursive=False)), None)
+            if anchor is not None:
+                anchor.insert_after(first.extract())
     for ticker in soup.select('.ticker'):
         ticker.decompose()
     changed |= write_if_changed('index.html',str(soup))
