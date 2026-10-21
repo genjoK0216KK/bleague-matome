@@ -33,7 +33,11 @@ class BrowseUI(unittest.TestCase):
     def test_generated_navigation_contract(self):
         root=Path(__file__).resolve().parents[1]
         soup=BeautifulSoup((root/'index.html').read_text(),'html.parser')
-        self.assertEqual(len(soup.select('main .item.ext')),5)
+        # 10/21 承認：外部リンクは「公式・外部の更新」枠だけに、種類を付けて載せる（独自記事枠には混ぜない）
+        external=[a for a in soup.select('div.main a[href^="http"]')]
+        self.assertTrue(external)
+        self.assertTrue(all(a.find_parent(id='updates') for a in external))
+        self.assertIn(len(soup.select('#updates .upd-list li')),range(1,12))
         self.assertIn(len(BeautifulSoup((root/'news.html').read_text(),'html.parser').select('.item.ext')),range(5,11))
         result=BeautifulSoup((root/'cat-kekka.html').read_text(),'html.parser')
         self.assertFalse(result.select('.item.ext'))

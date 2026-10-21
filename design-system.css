@@ -66,3 +66,40 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #17
 .article table.draft-stats{min-width:0;width:100%;table-layout:fixed}.article .draft-stats th:first-child{width:42%}.article .draft-stats th,.article .draft-stats td{white-space:normal;overflow-wrap:anywhere;padding:9px 8px}
 
 .article .source a{overflow-wrap:anywhere}
+/* Home order (10/21 approved): ranking → own articles → official/external updates → games (supporting). */
+.layout>.main{min-width:0}
+.home-ranking{margin-bottom:32px}.home-ranking h2 small{font-size:14px;font-weight:400;color:var(--muted);margin-left:6px}
+.home-ranking .note{font-size:14px;line-height:1.5;color:var(--muted);margin:0 0 8px}
+.home-ranking .daily-lineups h3,.home-ranking .game-eff h3{font-size:18px;margin:16px 0 8px}.home-ranking .daily-lineups h4,.home-ranking .game-eff h4{font-size:16px;margin:16px 0 8px}
+.home-ranking table{width:100%;min-width:0;table-layout:fixed;border-collapse:collapse;font-size:16px;line-height:1.5}
+.home-ranking th,.home-ranking td{border:0;border-bottom:1px solid var(--line);padding:12px 8px;background:#fff;vertical-align:middle;overflow-wrap:anywhere}
+.home-ranking th{background:var(--soft);font-weight:700;color:var(--ink);font-size:14px;white-space:nowrap}
+.home-ranking td small{display:block;font-size:14px;color:var(--muted)}.home-ranking td strong{font-weight:700}
+.home-ranking .daily-lineups th:first-child{width:3em}.home-ranking .daily-lineups th:nth-child(3){width:5em}.home-ranking .daily-lineups th:nth-child(4){width:4.5em}
+.home-ranking .daily-lineups td:nth-child(n+3),.home-ranking .daily-lineups th:nth-child(n+3){text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.home-ranking .daily-lineups td:nth-child(3){font-weight:700}
+.home-ranking .game-eff{border-top:0;padding-top:0}.home-ranking .game-eff h2{font-size:24px;line-height:1.5;margin:8px 0 8px}
+.home-ranking .game-eff .tablewrap{overflow-x:auto}.home-ranking .game-eff table{min-width:20em}
+.home-ranking .game-eff th:first-child{width:2.2em}.home-ranking .game-eff th:nth-child(n+3){width:3.2em}
+.home-ranking .game-eff td:nth-child(n+3),.home-ranking .game-eff th:nth-child(n+3){text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.home-ranking .game-eff td:last-child{font-weight:700}
+.home-ranking table.leaders th:first-child{width:3.5em}.home-ranking table.leaders th:nth-child(3){width:4em}
+.home-ranking table.leaders td:nth-child(3),.home-ranking table.leaders th:nth-child(3){text-align:right;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.home-ranking .day-detail,.home-own .more,.home-updates .day-detail{display:flex;align-items:center;min-height:48px}
+.section-note{font-size:14px;line-height:1.5;color:var(--muted);margin:0 0 16px}
+.home-own{margin:0 0 48px}.home-own .sec-h,.home-updates .sec-h{display:flex;align-items:center;justify-content:space-between;gap:8px;border-bottom:3px solid var(--ink);padding-bottom:8px;margin:0 0 12px}
+.own-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.own-card{display:block;border:1px solid var(--line);border-left:4px solid #ccf43b;border-radius:4px;padding:16px;color:var(--ink);text-decoration:none;background:#fff}
+.own-card:hover h3{text-decoration:underline;text-decoration-thickness:2px}
+.own-card h3{font-size:18px;line-height:1.5;margin:8px 0;font-weight:700}
+.own-card p{font-size:16px;line-height:1.7;margin:0 0 8px;color:#2b322e}
+.own-kind{display:inline-block;font-size:14px;font-weight:700;line-height:1.5;padding:0 8px;border:1px solid var(--ink);border-radius:4px;background:#fff;color:var(--ink)}
+.own-date{display:block;font-size:14px;color:var(--muted)}
+.home-updates{margin:0 0 48px}.home-updates .upd-group{margin:0 0 24px}
+.home-updates h3{font-size:16px;margin:0 0 4px;font-weight:700}.home-updates h3 small{font-size:14px;font-weight:400;color:var(--muted);margin-left:4px}
+.upd-list{list-style:none;margin:0;padding:0}.upd-list li{border-bottom:1px solid var(--line);padding:12px 0}
+.upd-list a{display:block;font-size:16px;line-height:1.6;color:var(--ink)}
+.upd-meta{display:block;font-size:14px;line-height:1.5;color:var(--muted);margin-top:4px}
+.home-games{border-top:1px solid var(--line);padding-top:16px}
+@media(min-width:1024px){.own-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.home-ranking .game-eff h2{font-size:22px}.home-ranking th,.home-ranking td{padding:12px 6px}}

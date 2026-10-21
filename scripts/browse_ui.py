@@ -72,9 +72,18 @@ def home(root, now=None):
         body+='<p>'+escape(' ／ '.join(official_data.LEAGUES[k][3] for k in official_data.LEAGUES if any(g['competition']==k for g in preview['games'])))+'</p>'
     else: body+='<p>次の開催日・登録選手を確認中</p>'
     body+='<a class="primary-action" href="next-games.html">ベスト5・サブ5を見る →</a></section>'
+    return body+'<script src="next-preview.js" defer></script>'+home_games(root, now, rows)
+
+
+def home_games(root, now=None, rows=None):
+    """トップの「今日の試合・直近の結果」（補助導線）。"""
+    now = now or datetime.now(preview_data.JST)
+    rows = summaries(root, now) if rows is None else rows
+    today = next((r for r in rows if r['date']==now.date().isoformat()), None)
+    body=''
     has_results = today and any(preview_data.is_verified_final(g) for g in today['games'])
     phase = '試合結果 ／ 当日の EFF' if has_results else ('試合予定 ／ 開始時刻' if today and today['games'] else '試合日程 ／ 確認状況')
-    body+='<script src="next-preview.js" defer></script><section class="home-games"><p class="phase-label result-label">'+phase+'</p><h2>今日の試合 <small>'+now.strftime('%m/%d')+'</small></h2>'
+    body+='<section class="home-games" id="games"><p class="phase-label result-label">'+phase+'</p><h2>今日の試合 <small>'+now.strftime('%m/%d')+'</small></h2>'
     if today and today['games'] and (Path(root)/('article-games-'+today['date'].replace('-','')+'.html')).exists():
         href='article-games-'+today['date'].replace('-','')+'.html'
         body += '<nav class="quick-actions" aria-label="今日の試合の見方"><a href="'+href+'#daily-results">全'+str(len(today['games']))+'試合を見る →</a>'
