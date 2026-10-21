@@ -3,8 +3,9 @@ import json
 from datetime import datetime
 from pathlib import Path
 try:
-    from . import official_data as official, preview_data as data, match_articles as articles, daily_lineups, game_day_rankings
+    from . import official_data as official, preview_data as data, match_articles as articles, daily_lineups, game_day_rankings, result_status
 except ImportError:
+    import result_status
     import official_data as official
     import preview_data as data
     import match_articles as articles
@@ -75,6 +76,14 @@ def game_eff_html(summary):
     return body+'</section>'
 
 
+def _checked_at(updated):
+    """The official check time printed on the page ('YYYY-MM-DD HH:MM JST')."""
+    try:
+        return datetime.strptime(str(updated).replace(' JST',''),'%Y-%m-%d %H:%M').replace(tzinfo=data.JST)
+    except ValueError:
+        return datetime.now(data.JST)
+
+
 def render(summary, preview_root, preview_names, updated):
     date=summary['date'];name=filename(date)
     finished=any(data.is_verified_final(g) for g in summary['games'])
@@ -84,7 +93,10 @@ def render(summary, preview_root, preview_names, updated):
     if summary.get('game_day_rankings',{}).get('leagues'):body+='<a href="#game-eff">当日TOP3</a>'
     if summary.get('lineups'):body+='<a href="#daily-lineups">今季平均</a>'
     body+='</nav>'
+    checked=_checked_at(updated)
     body+='<section class="daily-results" id="daily-results"><h2>'+('試合結果' if finished else '試合予定')+'</h2>'
+    if any(not data.is_verified_final(g) and g.get('status') not in ('cancelled','postponed') for g in summary['games']):
+        body+='<p class="result-asof">各試合の状態は '+articles.esc(updated)+' 時点の公式記録です（試合前／開始・公式記録未確定／終了）。</p>'
     sources=list(summary['sources'])
     empty=[]
     for league,settings in official.LEAGUES.items():
@@ -104,7 +116,7 @@ def render(summary, preview_root, preview_names, updated):
                 status='—';state='中止' if g['status']=='cancelled' else '延期'
             else:
                 status='—'
-                state=(datetime.fromisoformat(g['starts_at']).astimezone(data.JST).strftime('%H:%M') if g.get('starts_at') else '時刻未確認')+' 予定・結果未確定'
+                state=result_status.game_state(g,checked,data.is_verified_final)
             body+='<a class="daily-score" id="game-'+articles.esc(g['game_id'])+'" href="'+articles.esc(g['source'])+'"><span>'+articles.esc(g['home'])+'</span><strong>'+articles.esc(status)+'</strong><span>'+articles.esc(g['away'])+'</span><small>'+state+'</small></a>'
     if empty:body+='<p class="empty-games">この日試合なし：'+articles.esc('・'.join(empty))+'</p>'
     body+='</section>'+game_eff_html(summary)+lineup_html(summary)
@@ -211,4 +223,6 @@ def write(client, root, summary, previews, updated, refresh_players=True, rankin
     state_path.parent.mkdir(parents=True,exist_ok=True)
     state_path.write_text(json.dumps(summary,ensure_ascii=False,indent=2,default=str),encoding='utf-8')
     sync_alias(root, summary['date'], annotated)
+    # A fresh official read replaces any earlier fetch-failure notice for this date.
+    result_status.record_success(root, summary['date'], _checked_at(updated), changed=True)
     return name

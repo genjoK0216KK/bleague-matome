@@ -103,3 +103,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #17
 .home-games{border-top:1px solid var(--line);padding-top:16px}
 @media(min-width:1024px){.own-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.home-ranking .game-eff h2{font-size:22px}.home-ranking th,.home-ranking td{padding:12px 6px}}
+/* Result fetch state (10/22): failure notice in black x lime, 4px radius */
+.wrap .fetch-failed,.note.fetch-failed{background:#fff;border:1px solid var(--line);border-left:4px solid #ccf43b;border-radius:4px;color:var(--ink);font-size:14px;line-height:1.6;padding:12px 16px;margin:12px 0}
+.fetch-failed strong{font-weight:700}
+.result-asof{font-size:14px;line-height:1.6;color:var(--muted);margin:0 0 12px}
+.pending-past{font-size:16px;line-height:1.6;margin:12px 0;padding:12px 0;border-top:1px solid var(--line)}

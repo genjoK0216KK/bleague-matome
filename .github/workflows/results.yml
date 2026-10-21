@@ -26,8 +26,12 @@ jobs:
           python-version: "3.12"
       - run: pip install --quiet requests beautifulsoup4
       - name: 公式当日結果・期限切れの次戦情報を更新（差分時だけHTML生成）
+        id: results
         run: python scripts/update_results.py --season-year 2026
+      # 取得失敗でも「取得できていない」表示を書けた場合（status_saved=1）だけ保存する。
+      # 結果データ自体は前回の確認済み内容のまま。ジョブは失敗のまま残る。
       - name: 差分があれば保存
+        if: success() || steps.results.outputs.status_saved == '1'
         run: |
           if [ -z "$(git status --porcelain)" ]; then
             echo "結果に変化なし"
