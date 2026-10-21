@@ -31,7 +31,8 @@ class HomeOrder(unittest.TestCase):
         rows = rows if rows is not None else [game_day()]
         with patch.object(browse_ui, 'summaries', return_value=rows), \
              patch.object(next_preview, 'load', return_value=preview):
-            return BeautifulSoup(home_sections.home(ROOT, ARTICLES, NEWS, MATOME, '', now), 'html.parser')
+            # 10/21 承認の並び（'current'）の試験。10/22 からの既定は案C（test_home_proposal で試験）
+            return BeautifulSoup(home_sections.home(ROOT, ARTICLES, NEWS, MATOME, '', now, variant='current'), 'html.parser')
 
     def test_sections_in_approved_order(self):
         soup = self.render(datetime(2026, 10, 22, 1, tzinfo=preview_data.JST))
@@ -83,8 +84,9 @@ class HomeOrder(unittest.TestCase):
 
     def test_generated_index_follows_order_and_keeps_ad_off_top(self):
         soup = BeautifulSoup((ROOT / 'index.html').read_text(), 'html.parser')
-        ids = [s.get('id') for s in soup.select('div.main > section[id]')]
-        self.assertEqual(ids[:4], ['ranking', 'own-articles', 'updates', 'games'])
+        ids = [s.get('id') for s in soup.select('div.main > [id]')]
+        # 10/22 04:10 本人承認で公開した案Cの並び
+        self.assertEqual(ids[:5], ['today', 'own-articles', 'past-games', 'ranking', 'updates'])
         first = soup.select_one('aside.side').find(True, recursive=False)
         self.assertNotIn('adbox', first.get('class') or [])
 

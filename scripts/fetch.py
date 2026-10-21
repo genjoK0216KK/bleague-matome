@@ -54,13 +54,94 @@ def log(msg):
     print(f"[fetch] {msg}", flush=True)
 
 
-def get(url):
-    log(f"GET {url}")
-    r = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
-    r.raise_for_status()
-    r.encoding = r.apparent_encoding or r.encoding
-    time.sleep(SLEEP)
-    return r
+# ------------------------------------------------- bounded retry & diagnostics
+# 一時的な失敗（429/5xx・接続断・タイムアウト）だけを、回数と時間に上限をつけて再試行する。
+# 取得元・頻度は増やさない。ニュース・まとめ・順位表・robots.txt の取得と待ちは RUN_BUDGET 秒の予算内で行う。
+# 制約：requests の timeout は「接続」と「受信の間隔」の上限で、少量ずつ受信が続く場合の総時間は保証しない。
+#       また stats.run() など fetch.py から呼ぶ別処理はこの予算の対象外。fetch.py 全体の厳密な120秒保証ではない。
+RETRY_STATUS = frozenset({429, 500, 502, 503, 504})
+RETRY_WAITS = (5, 15)       # 2回目・3回目の前の待ち（1URL最大3回）
+URL_MAX_ELAPSED = 60        # 1URLにかける実時間の上限（GETと待ちを含む）
+MIN_ATTEMPT = 5             # これより残り時間が少なければ新しいGETを始めない
+RUN_BUDGET = 120            # 1回の fetch.py 全体で取得に使う時間の上限（update.yml は通常8〜11分・上限15分）
+
+_clock = time.monotonic
+_sleep = time.sleep
+_run_started = None
+REPORT = []                 # 取得元ごとの結果（公開情報のみ：URL・種類・HTTP状態・例外名・回数・件数）
+
+
+class FetchFailure(Exception):
+    """取得失敗。category: http / network / budget"""
+
+    def __init__(self, url, category, status=None, kind="", attempts=0):
+        super().__init__(f"{category}: {kind}" + (f" HTTP {status}" if status else ""))
+        self.url, self.category, self.status, self.kind, self.attempts = url, category, status, kind, attempts
+
+
+def record(source, url, category, status=None, kind="", attempts=0, items=None, total=None, note=""):
+    """category: ok / empty（0件）/ parse（形式不一致）/ http / network / budget / robots"""
+    entry = {"source": source, "url": url, "category": category, "http_status": status,
+             "type": kind, "attempts": attempts, "items": items, "entries": total}
+    if note:
+        entry["note"] = note[:200]
+    REPORT.append(entry)
+    return entry
+
+
+def record_failure(source, exc):
+    return record(source, exc.url, exc.category, exc.status, exc.kind, exc.attempts)
+
+
+def _run_left():
+    global _run_started
+    if _run_started is None:
+        _run_started = _clock()
+    return RUN_BUDGET - (_clock() - _run_started)
+
+
+def get(url, request=None):
+    """GET。一時障害だけ最大3回。1URL 60秒・実行全体 RUN_BUDGET 秒を超えない。"""
+    request = request or requests.get
+    started, attempt = _clock(), 0
+    while True:
+        left = min(URL_MAX_ELAPSED - (_clock() - started), _run_left())
+        if left < MIN_ATTEMPT:
+            raise FetchFailure(url, "budget", kind="BudgetExhausted", attempts=attempt)
+        attempt += 1
+        log(f"GET {url}" + (f"（{attempt}回目）" if attempt > 1 else ""))
+        status, kind, retry = None, "", False
+        try:
+            r = request(url, headers=HEADERS, timeout=min(TIMEOUT, left))
+            status = r.status_code
+            r.raise_for_status()
+            r.encoding = r.apparent_encoding or r.encoding
+            r.fetch_attempts = attempt          # 実際の試行回数（回復した場合も記録に残す）
+            # 礼儀の待ちも、URLごとの残り時間と実行全体の残り時間を超えない
+            _sleep(min(SLEEP, max(0.0, _run_left()), max(0.0, URL_MAX_ELAPSED - (_clock() - started))))
+            return r
+        except requests.HTTPError as e:
+            kind, retry, category = type(e).__name__, status in RETRY_STATUS, "http"
+        except (requests.ConnectionError, requests.Timeout) as e:
+            kind, retry, category = type(e).__name__, True, "network"
+        except requests.RequestException as e:
+            kind, retry, category = type(e).__name__, False, "network"
+        wait = RETRY_WAITS[attempt - 1] if attempt <= len(RETRY_WAITS) else None
+        elapsed = _clock() - started
+        if (not retry or wait is None or elapsed + wait + MIN_ATTEMPT > URL_MAX_ELAPSED
+                or _run_left() < wait + MIN_ATTEMPT):
+            raise FetchFailure(url, category, status, kind, attempt)
+        log(f"  一時的な失敗（{kind}{' HTTP ' + str(status) if status else ''}）。{wait}秒後に再試行")
+        _sleep(wait)
+
+
+def annotate(report=None):
+    """GitHub の注記として取得元ごとの結果を出す（ジョブログが読めなくても残る）。"""
+    for e in report if report is not None else REPORT:
+        level = "notice" if e["category"] == "ok" else "warning"
+        print(f"::{level}::fetch source={e['source']} category={e['category']} http={e['http_status']} "
+              f"type={e['type'] or '-'} attempts={e['attempts']} items={e['items']} entries={e['entries']} "
+              f"url={e['url']}" + (f" note={e['note']}" if e.get("note") else ""), flush=True)
 
 
 def clean(text):
@@ -161,9 +242,15 @@ def fetch_bleague_news():
     """
     items = []
     try:
-        soup = BeautifulSoup(get(BLEAGUE_NEWS_URL).text, "html.parser")
-    except Exception as e:  # noqa: BLE001
+        page = get(BLEAGUE_NEWS_URL)
+        soup = BeautifulSoup(page.text, "html.parser")
+    except FetchFailure as e:
         log(f"!! B.LEAGUE公式の取得に失敗: {e}")
+        record_failure("B.LEAGUE公式", e)
+        return items
+    except Exception as e:  # noqa: BLE001  想定外も従来どおり既存データ維持。ただし種類を記録する
+        log(f"!! B.LEAGUE公式の処理に失敗: {e}")
+        record("B.LEAGUE公式", BLEAGUE_NEWS_URL, "other", kind=type(e).__name__, note=str(e))
         return items
 
     seen = set()
@@ -190,6 +277,10 @@ def fetch_bleague_news():
         })
 
     log(f"B.LEAGUE公式: {len(items)}件")
+    # 読めたのに見出しが0件 = ページ構成の変化か空ページ。成功扱いにしない。
+    record("B.LEAGUE公式", BLEAGUE_NEWS_URL, "ok" if items else "empty", page.status_code,
+           attempts=page.fetch_attempts, items=len(items),
+           note="" if items else "ニュース詳細へのリンクが見つからない")
     return items
 
 
@@ -215,12 +306,25 @@ RELEVANT_RE = re.compile(
 def fetch_rss(name, url):
     items = []
     try:
-        root = ElementTree.fromstring(get(url).content)
-    except Exception as e:  # noqa: BLE001
+        page = None
+        page = get(url)
+        root = ElementTree.fromstring(page.content)
+    except FetchFailure as e:
         log(f"!! {name} の取得に失敗: {e}")
+        record_failure(name, e)
+        return items
+    except ElementTree.ParseError as e:
+        log(f"!! {name} のRSSを解釈できません: {e}")
+        record(name, url, "parse", page.status_code, type(e).__name__, page.fetch_attempts, note=str(e))
+        return items
+    except Exception as e:  # noqa: BLE001
+        log(f"!! {name} の処理に失敗: {e}")
+        record(name, url, "other", kind=type(e).__name__, note=str(e))
         return items
 
+    total = 0
     for entry in root.iter("item"):
+        total += 1
         title = clean((entry.findtext("title") or ""))
         link = (entry.findtext("link") or "").strip()
         if not title or not link:
@@ -237,6 +341,9 @@ def fetch_rss(name, url):
         })
 
     log(f"{name}: {len(items)}件")
+    # entries=0 は空フィード（失敗扱い）。entries>0 で items=0 は関係する記事が無いだけ（成功）。
+    record(name, url, "ok" if total else "empty", page.status_code, attempts=page.fetch_attempts,
+           items=len(items), total=total)
     return items
 
 
@@ -338,15 +445,20 @@ _robots_cache = {}
 
 
 def robots_allows(url):
-    """robots.txt で取得が禁止されていないか確かめる（読めないときは許可とみなす）。"""
+    """robots.txt で取得が禁止されていないか確かめる（読めないときは許可とみなす＝従来どおり）。
+    実行全体の残り時間が無いときは確認自体をせず None を返す（取得もしない）。
+    robots.txt の取得は1回だけで再試行しない。"""
     from urllib import robotparser
     from urllib.parse import urlsplit
     parts = urlsplit(url)
     base = f"{parts.scheme}://{parts.netloc}"
     if base not in _robots_cache:
+        left = _run_left()
+        if left < MIN_ATTEMPT:
+            return None   # 予算切れ：robots.txt も読みに行かない（呼び出し側は取得しない）
         rp = robotparser.RobotFileParser()
         try:
-            r = requests.get(base + "/robots.txt", headers=HEADERS, timeout=TIMEOUT)
+            r = requests.get(base + "/robots.txt", headers=HEADERS, timeout=min(TIMEOUT, left))
             rp.parse(r.text.splitlines() if r.status_code == 200 else [])
         except Exception:  # noqa: BLE001
             rp.parse([])
@@ -357,13 +469,34 @@ def robots_allows(url):
 def fetch_feed_items(name, url, keep):
     """RSS 1.0（RDF）/ RSS 2.0 / Atom のどれでも見出し・リンク・日付を取り出す。"""
     items = []
-    if not robots_allows(url):
+    if _run_left() < MIN_ATTEMPT:
+        log(f"!! {name}: 取得時間の上限に達したため取得しません")
+        record(name, url, "budget", kind="BudgetExhausted")
+        return items
+    allowed = robots_allows(url)
+    if allowed is None:
+        log(f"!! {name}: 取得時間の上限に達したため robots.txt を確認できず、取得しません")
+        record(name, url, "budget", kind="BudgetExhausted", note="robots.txt 未確認")
+        return items
+    if not allowed:
         log(f"!! {name}: robots.txt で禁止されているため取得しません")
+        record(name, url, "robots")
         return items
     try:
-        root = ElementTree.fromstring(get(url).content)
-    except Exception as e:  # noqa: BLE001
+        page = None
+        page = get(url)
+        root = ElementTree.fromstring(page.content)
+    except FetchFailure as e:
         log(f"!! {name} の取得に失敗: {e}")
+        record_failure(name, e)
+        return items
+    except ElementTree.ParseError as e:
+        log(f"!! {name} のフィードを解釈できません: {e}")
+        record(name, url, "parse", page.status_code, type(e).__name__, page.fetch_attempts, note=str(e))
+        return items
+    except Exception as e:  # noqa: BLE001
+        log(f"!! {name} の処理に失敗: {e}")
+        record(name, url, "other", kind=type(e).__name__, note=str(e))
         return items
 
     total = 0
@@ -385,6 +518,8 @@ def fetch_feed_items(name, url, keep):
         })
 
     log(f"{name}: {total}件中 {len(items)}件を採用")
+    record(name, url, "ok" if total else "empty", page.status_code, attempts=page.fetch_attempts,
+           items=len(items), total=total)
     return items
 
 
@@ -422,9 +557,15 @@ def fetch_standings():
         "started": False,
     }
     try:
-        soup = BeautifulSoup(get(STANDINGS_URL).text, "html.parser")
-    except Exception as e:  # noqa: BLE001
+        page = get(STANDINGS_URL)
+        soup = BeautifulSoup(page.text, "html.parser")
+    except FetchFailure as e:
         log(f"!! 順位表の取得に失敗: {e}")
+        record_failure("順位表", e)
+        return None
+    except Exception as e:  # noqa: BLE001
+        log(f"!! 順位表の処理に失敗: {e}")
+        record("順位表", STANDINGS_URL, "other", kind=type(e).__name__, note=str(e))
         return None
 
     for table in soup.find_all("table"):
@@ -458,6 +599,10 @@ def fetch_standings():
         for g in result["groups"] for row in g["rows"]
     )
     log(f"順位表: {len(result['groups'])}グループ / 開幕済={result['started']}")
+    record("順位表", STANDINGS_URL, "ok" if result["groups"] else "parse", page.status_code,
+           attempts=page.fetch_attempts,
+           items=sum(len(g["rows"]) for g in result["groups"]),
+           note="" if result["groups"] else "順位表のテーブルが見つからない")
     return result if result["groups"] else None
 
 
@@ -498,7 +643,13 @@ def main():
         incoming += fetch_rss(name, url)
 
     if not incoming:
-        log("!! すべての取得元が失敗したため、既存データを維持して終了します")
+        # 全滅は成功扱いにしない（exit 1）。既存データは書き換えない。
+        news = [e for e in REPORT if e["source"] in ["B.LEAGUE公式"] + [n for n, _ in RSS_FEEDS]]
+        log("!! すべてのニュース取得元から見出しを得られなかったため、既存データを維持して終了します："
+            + "、".join(f"{e['source']}={e['category']}" + (f"(HTTP {e['http_status']})" if e['category'] == 'http' else "")
+                       for e in news))
+        annotate()
+        print("::error::News fetch failed for every source; existing data retained", flush=True)
         return 1
 
     news_path = os.path.join(DATA_DIR, "news.json")
@@ -530,6 +681,7 @@ def main():
     except Exception as e:  # noqa: BLE001
         log(f"!! スタッツ集計に失敗: {e}")
 
+    annotate()
     log(f"完了（新規 {added}件）")
     return 0
 
