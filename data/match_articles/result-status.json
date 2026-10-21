@@ -6,9 +6,10 @@
    "last_checked_at": "2026-10-21 17:26 JST",
    "content_as_of": "2026-10-21 17:26 JST",
    "error": {
-    "type": "ValueError",
+    "category": "stopped",
+    "type": "Stopped",
     "http_status": null,
-    "url": null
+    "url": "https://www.bleague.jp/schedule/?tab=1&year=2026&mon=10&day=21"
    }
   },
   "2026-10-22": {
@@ -17,9 +18,10 @@
    "last_checked_at": "2026-10-14 02:19 JST",
    "content_as_of": "2026-10-14 02:19 JST",
    "error": {
+    "category": "http",
     "type": "HTTPError",
     "http_status": 503,
-    "url": "https://www.bleague.jp/schedule/?tab=3&year=2026&mon=10&day=22"
+    "url": "https://www.bleague.jp/schedule/?tab=1&year=2026&mon=10&day=22"
    }
   }
  }
