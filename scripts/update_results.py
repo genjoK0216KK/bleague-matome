@@ -137,6 +137,19 @@ def pending_dates(root, now):
     return dates
 
 
+# Which recorded problem explains a failed date best: a real observation beats "not requested".
+CATEGORY_ORDER = ('http', 'network', 'parse', 'other', 'budget', 'stopped')
+
+
+def primary(problems):
+    """The first problem of the most informative category; {} when nothing was recorded."""
+    for category in CATEGORY_ORDER:
+        for item in problems:
+            if item.get('category') == category:
+                return item
+    return problems[0] if problems else {}
+
+
 def run(root, client, year, now):
     """Today and recent unfinished JST dates. Each date is independent: a failure keeps that
     date's saved data and does not stop the others. If nothing changed and some date failed,
@@ -162,8 +175,9 @@ def run(root, client, year, now):
                 status_changed |= result_status.record_success(root, date, now, report['changed'])
         except (ValueError, OSError, official.requests.RequestException) as exc:
             fetches = list(getattr(client, 'failures', [])[seen:])
-            detail = fetches[-1] if fetches else {}
-            error = {'date': date, 'error': str(exc), 'type': detail.get('type') or type(exc).__name__,
+            detail = primary(fetches)
+            error = {'date': date, 'error': str(exc), 'category': detail.get('category') or 'unknown',
+                     'type': detail.get('type') or type(exc).__name__,
                      'http_status': detail.get('http_status'), 'url': detail.get('url'), 'fetch_failures': fetches}
             errors.append(error); first = first or exc
             if (Path(root) / day_articles.filename(date)).exists():
@@ -181,15 +195,21 @@ def run(root, client, year, now):
                 status_changed=status_changed, status_file_changed=status_file_changed)
 
 
-def log_errors(errors):
-    """One line per failed date with public facts only (date, type, HTTP status, URL)."""
+def log_errors(errors, limit=12):
+    """Annotations with public facts only. Every recorded problem is listed (as annotations, so
+    they stay readable even when the full job log cannot be downloaded)."""
     for e in errors:
-        print('::warning::Result refresh failed date=' + e['date'] + ' type=' + str(e.get('type'))
-              + ' http=' + str(e.get('http_status')) + ' url=' + str(e.get('url'))
+        print('::warning::Result refresh failed date=' + e['date'] + ' category=' + str(e.get('category'))
+              + ' type=' + str(e.get('type')) + ' http=' + str(e.get('http_status')) + ' url=' + str(e.get('url'))
               + ' reason=' + e['error'][:200] + '; saved data retained')
-        for f in e.get('fetch_failures', [])[:10]:
-            print('  fetch_failed url=' + str(f.get('url')) + ' http=' + str(f.get('http_status'))
-                  + ' type=' + str(f.get('type')) + ' attempts=' + str(f.get('attempts')))
+        problems = e.get('fetch_failures', [])
+        for f in problems[:limit]:
+            print('::warning::  date=' + e['date'] + ' problem category=' + str(f.get('category'))
+                  + ' http=' + str(f.get('http_status')) + ' type=' + str(f.get('type'))
+                  + ' attempts=' + str(f.get('attempts')) + ' url=' + str(f.get('url'))
+                  + ((' message=' + f['message']) if f.get('message') else ''))
+        if len(problems) > limit:
+            print('::warning::  date=' + e['date'] + ' ' + str(len(problems) - limit) + ' more problems not listed')
 
 
 def mark_status_saved():

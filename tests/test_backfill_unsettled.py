@@ -110,8 +110,9 @@ class Backfill(unittest.TestCase):
         result, _ = self.go()
         self.assertTrue(result['changed'])
         # 10/22: errors also carry public diagnostics (type / HTTP status / URL) for the run log.
+        # Nothing recorded by the client for this synthetic error -> category 'unknown'.
         self.assertEqual(result['errors'], [{'date': '2026-10-20', 'error': 'synthetic transient',
-                                             'type': 'ValueError', 'http_status': None, 'url': None,
+                                             'category': 'unknown', 'type': 'ValueError', 'http_status': None, 'url': None,
                                              'fetch_failures': []}])
         self.assertEqual([d for d, _ in self.writes], ['2026-10-19'])
 

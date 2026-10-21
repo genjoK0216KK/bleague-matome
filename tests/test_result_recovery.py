@@ -94,7 +94,8 @@ class Retry(unittest.TestCase):
         with self.assertRaises(official_data.FetchError) as ctx:
             c.get(URL)
         self.assertEqual(len(calls), 3)
-        self.assertEqual(ctx.exception.detail(), {'url': URL, 'http_status': 503, 'type': 'HTTPError', 'attempts': 3})
+        self.assertEqual(ctx.exception.detail(), {'url': URL, 'category': 'http', 'http_status': 503,
+                                                  'type': 'HTTPError', 'attempts': 3})
         self.assertEqual(c.failures, [ctx.exception.detail()])
         self.assertIsInstance(ctx.exception, ValueError)  # existing callers keep data on ValueError
 
@@ -299,10 +300,10 @@ class Timeline(unittest.TestCase):
 class MainLogging(unittest.TestCase):
     def test_failure_logs_public_facts_builds_notice_and_exits_1(self):
         exc = ValueError('Official results incomplete; previous data retained')
-        exc.result_errors = [{'date': '2026-10-21', 'error': str(exc), 'type': 'HTTPError', 'http_status': 503,
-                              'url': 'https://www.bleague.jp/schedule/?tab=1', 'fetch_failures': [
-                                  {'url': 'https://www.bleague.jp/schedule/?tab=1', 'http_status': 503,
-                                   'type': 'HTTPError', 'attempts': 3}]}]
+        exc.result_errors = [{'date': '2026-10-21', 'error': str(exc), 'category': 'http', 'type': 'HTTPError',
+                              'http_status': 503, 'url': 'https://www.bleague.jp/schedule/?tab=1', 'fetch_failures': [
+                                  {'url': 'https://www.bleague.jp/schedule/?tab=1', 'category': 'http',
+                                   'http_status': 503, 'type': 'HTTPError', 'attempts': 3}]}]
         exc.status_changed = True
         with tempfile.NamedTemporaryFile('r', delete=False) as out:
             path = out.name
@@ -315,8 +316,8 @@ class MainLogging(unittest.TestCase):
         log = buffer.getvalue()
         self.assertEqual(code, 1)
         build.assert_called_once()
-        self.assertIn('date=2026-10-21 type=HTTPError http=503 url=https://www.bleague.jp/schedule/?tab=1', log)
-        self.assertIn('attempts=3', log)
+        self.assertIn('date=2026-10-21 category=http type=HTTPError http=503 url=https://www.bleague.jp/schedule/?tab=1', log)
+        self.assertIn('::warning::  date=2026-10-21 problem category=http http=503 type=HTTPError attempts=3', log)
         self.assertEqual(Path(path).read_text(), 'status_saved=1\n')
 
     def test_unchanged_failure_does_not_build_or_save(self):

@@ -66,7 +66,7 @@ def record_failure(root, date, now, error):
     """Mark a date unreadable. Keeps the first failure time and both success times."""
     dates = load(root)
     entry = dates.get(date) or {}
-    public = {k: error.get(k) for k in ('type', 'http_status', 'url')}
+    public = {k: error.get(k) for k in ('category', 'type', 'http_status', 'url')}
     if entry.get('state') == 'fetch_failed' and entry.get('error') == public:
         return False
     content = entry.get('content_as_of') or last_retrieval(root, date)
