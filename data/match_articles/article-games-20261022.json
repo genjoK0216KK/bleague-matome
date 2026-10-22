@@ -95,5 +95,32 @@
     "https://www.bleague.jp/schedule/?tab=2&year=2026&mon=10&day=22",
     "https://www.bleague.jp/schedule/?tab=3&year=2026&mon=10&day=22"
   ],
-  "errors": []
+  "errors": [],
+  "lineups": {
+    "BP": {
+      "error": "IL profile verification incomplete: Official fetch failed: HTTPError HTTP 500"
+    },
+    "B1": {
+      "error": "Official site unavailable; stopped after repeated failures"
+    },
+    "BN": {
+      "error": "Official site unavailable; stopped after repeated failures"
+    }
+  },
+  "game_day_rankings": {
+    "date": "2026-10-22",
+    "metric": "EFF",
+    "aggregation": "game_total",
+    "leagues": {
+      "BP": {
+        "error": "全試合の公式記録確定待ち"
+      },
+      "B1": {
+        "error": "全試合の公式記録確定待ち"
+      },
+      "BN": {
+        "error": "全試合の公式記録確定待ち"
+      }
+    }
+  }
 }

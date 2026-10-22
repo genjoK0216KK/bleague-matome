@@ -1,6 +1,6 @@
 {
   "source": "https://www.bleague.jp/news/injury.html",
-  "retrieved_at": "2026-10-21T08:24:01.296096+00:00",
+  "retrieved_at": "2026-10-22T00:29:19.435081+00:00",
   "records": [
     {
       "team": "山形ワイヴァンズ",
@@ -1069,5 +1069,21 @@
       "active": false,
       "notice_date": "2026年10月21日"
     }
-  ]
+  ],
+  "last_success_at": "2026-10-22T00:29:19.435081+00:00",
+  "last_attempt_at": "2026-10-22T00:29:19.023340+00:00",
+  "status": "ok",
+  "last_error": null,
+  "scope": {
+    "leagues": [
+      "B,ONE",
+      "B.NEXT",
+      "B.ONE",
+      "B.PREMIER",
+      "B1",
+      "B2",
+      "B3"
+    ],
+    "season": null
+  }
 }
