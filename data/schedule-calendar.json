@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T01:28:23.722013+09:00",
+  "updated_at": "2026-10-23T03:16:28.662442+09:00",
   "today": "2026-10-23",
   "months": [
     {
@@ -5016,9 +5016,9 @@
     }
   ],
   "errors": [
-    "2026-10/BP: Official fetch failed: ReadTimeout",
-    "2026-10/B1: Official fetch failed: ReadTimeout",
-    "2026-10/BN: Official fetch failed: ReadTimeout",
+    "2026-10/BP: Official fetch failed: HTTPError HTTP 500",
+    "2026-10/B1: Official fetch failed: HTTPError HTTP 500",
+    "2026-10/BN: Official fetch failed: HTTPError HTTP 500",
     "2026-11/BP: Official site unavailable; stopped after repeated failures",
     "2026-11/B1: Official site unavailable; stopped after repeated failures",
     "2026-11/BN: Official site unavailable; stopped after repeated failures"
