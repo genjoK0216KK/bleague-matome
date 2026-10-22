@@ -1071,9 +1071,14 @@
     }
   ],
   "last_success_at": "2026-10-22T08:25:29.307433+00:00",
-  "last_attempt_at": "2026-10-22T08:25:29.022486+00:00",
-  "status": "ok",
-  "last_error": null,
+  "last_attempt_at": "2026-10-22T16:22:09.126618+00:00",
+  "status": "failed",
+  "last_error": {
+    "type": "ReadTimeout",
+    "http_status": null,
+    "url": "https://www.bleague.jp/news/injury.html",
+    "category": "network"
+  },
   "scope": {
     "leagues": [
       "B,ONE",

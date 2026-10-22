@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-22T17:29:46.370018+09:00",
-  "today": "2026-10-22",
+  "updated_at": "2026-10-23T01:28:23.722013+09:00",
+  "today": "2026-10-23",
   "months": [
     {
       "month": "2026-10",
       "leagues": {
         "BP": {
-          "status": "complete",
+          "status": "stale",
           "days": {
             "2026-10-01": [],
             "2026-10-02": [
@@ -1335,7 +1335,7 @@
           "checked_at": "2026-10-22T08:29:46.941257+00:00"
         },
         "B1": {
-          "status": "complete",
+          "status": "stale",
           "days": {
             "2026-10-01": [],
             "2026-10-02": [],
@@ -2600,7 +2600,7 @@
           "checked_at": "2026-10-22T08:30:45.633017+00:00"
         },
         "BN": {
-          "status": "complete",
+          "status": "stale",
           "days": {
             "2026-10-01": [],
             "2026-10-02": [
@@ -2802,7 +2802,7 @@
       "month": "2026-11",
       "leagues": {
         "BP": {
-          "status": "complete",
+          "status": "stale",
           "days": {
             "2026-11-01": [
               {
@@ -3653,7 +3653,7 @@
           "checked_at": "2026-10-22T08:31:59.217817+00:00"
         },
         "B1": {
-          "status": "complete",
+          "status": "stale",
           "days": {
             "2026-11-01": [
               {
@@ -4837,7 +4837,7 @@
           "checked_at": "2026-10-22T08:32:37.598043+00:00"
         },
         "BN": {
-          "status": "complete",
+          "status": "stale",
           "days": {
             "2026-11-01": [
               {
@@ -5015,5 +5015,12 @@
       }
     }
   ],
-  "errors": []
+  "errors": [
+    "2026-10/BP: Official fetch failed: ReadTimeout",
+    "2026-10/B1: Official fetch failed: ReadTimeout",
+    "2026-10/BN: Official fetch failed: ReadTimeout",
+    "2026-11/BP: Official site unavailable; stopped after repeated failures",
+    "2026-11/B1: Official site unavailable; stopped after repeated failures",
+    "2026-11/BN: Official site unavailable; stopped after repeated failures"
+  ]
 }
