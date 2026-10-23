@@ -553,13 +553,21 @@ def parse_future_game(page, key, year, schedule_status=None):
     if not starts:
         game['official_date'] = datetime.strptime(day, '%Y.%m.%d').date().isoformat()
     related = soup.select('.related-links a[href*="club_detail/?TeamID="]')
+    scores_shown = False
     for side in ('home', 'away'):
         team = area.select_one('.team-wrap.' + side)
         if team is None or any(team.select_one(sel) is None for sel in ('.team-point', '.team-name .for-pc', '.team-name .for-sp')):
             raise DataError('Future-game team markup missing')
         points = team.select_one('.team-point').find(string=True, recursive=False)
-        if not points or points.strip() != '--':
-            raise DataError('Game has scores but no official record context')
+        if not points:
+            raise DataError('Future-game score markup missing')
+        if points.strip() != '--':
+            # 試合ページに得点の表示はあるが、公式記録（試合データ）がまだ無い：試合中か記録の確定前。
+            # 得点は取り込まず「開始・公式記録未確定」として扱う（確定条件は GameEndedFlg かつ RecordFixedFlg のまま）。
+            # その日の他の試合（確定済み）の反映は止めない。
+            if schedule_status in ('cancelled', 'postponed'):
+                raise DataError('Schedule notice contradicts a game page showing scores')
+            scores_shown = True
         full = team.select_one('.team-name .for-pc').get_text(strip=True)
         matches = [a for a in related if a.get_text(strip=True) == full]
         ids = {re.search(r'TeamID=(\d+)', a['href']).group(1) for a in matches}
@@ -569,6 +577,9 @@ def parse_future_game(page, key, year, schedule_status=None):
         game[side + '_full'] = full
         game[side + '_id'] = ids.pop()
         game[side + '_score'] = None
+    if scores_shown:
+        game['status'] = 'unconfirmed'
+        game['record_note'] = 'score_shown_without_official_record'
     return game
 
 
