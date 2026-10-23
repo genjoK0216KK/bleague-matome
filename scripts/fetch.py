@@ -58,7 +58,7 @@ def log(msg):
 # 一時的な失敗（429/5xx・接続断・タイムアウト）だけを、回数と時間に上限をつけて再試行する。
 # 取得元・頻度は増やさない。ニュース・まとめ・順位表・robots.txt の取得と待ちは RUN_BUDGET 秒の予算内で行う。
 # 制約：requests の timeout は「接続」と「受信の間隔」の上限で、少量ずつ受信が続く場合の総時間は保証しない。
-#       また stats.run() など fetch.py から呼ぶ別処理はこの予算の対象外。fetch.py 全体の厳密な120秒保証ではない。
+#       fetch.py 全体の厳密な120秒保証ではない。
 RETRY_STATUS = frozenset({429, 500, 502, 503, 504})
 RETRY_WAITS = (5, 15)       # 2回目・3回目の前の待ち（1URL最大3回）
 URL_MAX_ELAPSED = 60        # 1URLにかける実時間の上限（GETと待ちを含む）
@@ -672,14 +672,8 @@ def main():
     else:
         log("順位表は取得できなかったため、既存データを維持します")
 
-    # 当日の全試合の記録が確定していれば、貢献度ランキングを生成する
-    try:
-        sys.dont_write_bytecode = True
-        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-        import stats
-        stats.run()
-    except Exception as e:  # noqa: BLE001
-        log(f"!! スタッツ集計に失敗: {e}")
+    # 貢献度ランキング（stats）はここでは作らない。保存済みの確定結果から
+    # update_match_features.py / update_results.py の後で集計する（ニュース取得の成否と無関係）。
 
     annotate()
     log(f"完了（新規 {added}件）")
