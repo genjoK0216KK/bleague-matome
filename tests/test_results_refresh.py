@@ -13,6 +13,9 @@ class ResultsRefresh(unittest.TestCase):
     def setUp(self):
         preview = patch.object(subject.refresh_next_preview, "refresh", return_value={"changed":False})
         preview.start(); self.addCleanup(preview.stop)
+        # 貢献度ランキングは tests/test_stats_daily.py で確かめる（ここでは実データに書かない）
+        ranking = patch.object(subject, "refresh_stats", return_value=False)
+        ranking.start(); self.addCleanup(ranking.stop)
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)

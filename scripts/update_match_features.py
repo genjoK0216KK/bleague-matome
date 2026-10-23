@@ -120,6 +120,7 @@ def main():
     result['errors'].extend(calendar_report['errors'])
     result['requests'] += calendar_client.request_count
     result['sources'].extend(calendar_client.sources)
+    result['stats'] = stats.run_reported(root=args.root)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     # Failures are visible in Actions; successfully refreshed IL/results may still build.
     if result['errors']:
