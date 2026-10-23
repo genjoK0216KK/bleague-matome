@@ -156,7 +156,17 @@
     "https://www.bleague.jp/schedule/?tab=3&year=2026&mon=10&day=23"
   ],
   "errors": [],
-  "lineups": {},
+  "lineups": {
+    "BP": {
+      "error": "IL profile verification incomplete: Official site unavailable; stopped after repeated failures"
+    },
+    "B1": {
+      "error": "Official site unavailable; stopped after repeated failures"
+    },
+    "BN": {
+      "error": "Official site unavailable; stopped after repeated failures"
+    }
+  },
   "game_day_rankings": {
     "date": "2026-10-23",
     "metric": "EFF",

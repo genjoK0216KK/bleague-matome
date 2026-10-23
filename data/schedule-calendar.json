@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-23T03:16:28.662442+09:00",
+  "updated_at": "2026-10-23T09:31:44.493761+09:00",
   "today": "2026-10-23",
   "months": [
     {
       "month": "2026-10",
       "leagues": {
         "BP": {
-          "status": "stale",
+          "status": "complete",
           "days": {
             "2026-10-01": [],
             "2026-10-02": [
@@ -1332,10 +1332,10 @@
             ]
           },
           "source": "https://www.bleague.jp/schedule/?tab=1&year=2026&mon=10&day=1",
-          "checked_at": "2026-10-22T08:29:46.941257+00:00"
+          "checked_at": "2026-10-23T00:31:45.077713+00:00"
         },
         "B1": {
-          "status": "stale",
+          "status": "complete",
           "days": {
             "2026-10-01": [],
             "2026-10-02": [],
@@ -2597,10 +2597,10 @@
             ]
           },
           "source": "https://www.bleague.jp/schedule/?tab=2&year=2026&mon=10&day=1",
-          "checked_at": "2026-10-22T08:30:45.633017+00:00"
+          "checked_at": "2026-10-23T00:32:46.934560+00:00"
         },
         "BN": {
-          "status": "stale",
+          "status": "complete",
           "days": {
             "2026-10-01": [],
             "2026-10-02": [
@@ -2794,7 +2794,7 @@
             ]
           },
           "source": "https://www.bleague.jp/schedule/?tab=3&year=2026&mon=10&day=1",
-          "checked_at": "2026-10-22T08:31:33.435023+00:00"
+          "checked_at": "2026-10-23T00:33:37.419611+00:00"
         }
       }
     },
@@ -2802,7 +2802,7 @@
       "month": "2026-11",
       "leagues": {
         "BP": {
-          "status": "stale",
+          "status": "complete",
           "days": {
             "2026-11-01": [
               {
@@ -3650,10 +3650,10 @@
             "2026-11-30": []
           },
           "source": "https://www.bleague.jp/schedule/?tab=1&year=2026&mon=11&day=1",
-          "checked_at": "2026-10-22T08:31:59.217817+00:00"
+          "checked_at": "2026-10-23T00:34:03.839944+00:00"
         },
         "B1": {
-          "status": "stale",
+          "status": "complete",
           "days": {
             "2026-11-01": [
               {
@@ -4834,10 +4834,10 @@
             ]
           },
           "source": "https://www.bleague.jp/schedule/?tab=2&year=2026&mon=11&day=1",
-          "checked_at": "2026-10-22T08:32:37.598043+00:00"
+          "checked_at": "2026-10-23T00:34:44.110344+00:00"
         },
         "BN": {
-          "status": "stale",
+          "status": "complete",
           "days": {
             "2026-11-01": [
               {
@@ -5010,17 +5010,10 @@
             "2026-11-30": []
           },
           "source": "https://www.bleague.jp/schedule/?tab=3&year=2026&mon=11&day=1",
-          "checked_at": "2026-10-22T08:33:24.771922+00:00"
+          "checked_at": "2026-10-23T00:35:34.518214+00:00"
         }
       }
     }
   ],
-  "errors": [
-    "2026-10/BP: Official fetch failed: HTTPError HTTP 500",
-    "2026-10/B1: Official fetch failed: HTTPError HTTP 500",
-    "2026-10/BN: Official fetch failed: HTTPError HTTP 500",
-    "2026-11/BP: Official site unavailable; stopped after repeated failures",
-    "2026-11/B1: Official site unavailable; stopped after repeated failures",
-    "2026-11/BN: Official site unavailable; stopped after repeated failures"
-  ]
+  "errors": []
 }

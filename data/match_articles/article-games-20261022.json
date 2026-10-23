@@ -4050,7 +4050,7 @@
   "errors": [],
   "lineups": {
     "BP": {
-      "error": "IL profile verification incomplete: Official fetch failed: HTTPError HTTP 500"
+      "error": "IL profile verification incomplete: Official site unavailable; stopped after repeated failures"
     },
     "B1": {
       "error": "Official site unavailable; stopped after repeated failures"
@@ -4370,10 +4370,10 @@
         ]
       },
       "B1": {
-        "error": "Official fetch failed: HTTPError HTTP 500"
+        "error": "Official site unavailable; stopped after repeated failures"
       },
       "BN": {
-        "error": "Official fetch failed: HTTPError HTTP 500"
+        "error": "Official site unavailable; stopped after repeated failures"
       }
     }
   }
