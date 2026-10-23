@@ -11,9 +11,16 @@
    "content_as_of": "2026-10-23 17:22 JST"
   },
   "2026-10-23": {
-   "state": "ok",
+   "state": "fetch_failed",
+   "failing_since": "2026-10-23 23:11 JST",
    "last_checked_at": "2026-10-23 17:22 JST",
-   "content_as_of": "2026-10-23 17:22 JST"
+   "content_as_of": "2026-10-23 17:22 JST",
+   "error": {
+    "category": "parse",
+    "type": "DataError",
+    "http_status": null,
+    "url": "https://www.bleague.jp/game_detail/?ScheduleKey=506497"
+   }
   }
  }
 }
