@@ -26,9 +26,10 @@ import requests
 from bs4 import BeautifulSoup
 
 try:
-    from . import site_header
+    from . import site_header, preview_data as data
 except ImportError:
     import site_header
+    import preview_data as data
 
 JST = timezone(timedelta(hours=9))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -450,7 +451,12 @@ DEFINITION = {"league": "B.PREMIER", "competition": "BP", "metric": "EFF（公�
 REASON_LABEL = {
     "record_not_fixed": "公式記録が未確定",
     "boxscore_missing": "ボックススコア未取得",
-    "boxscore_team_mismatch": "ボックススコアのチームが試合と一致しない",
+    "boxscore_id_mismatch": "ボックススコアの試合・チーム・選手IDが一致しない",
+    "boxscore_value_invalid": "ボックススコアの数値・出場時間・選手名が欠損または不正",
+    "boxscore_one_team": "片方のチームの出場記録しかない",
+    "duplicate_player_id": "選手IDが重複",
+    "duplicate_game_id": "試合IDが重複または欠落",
+    "date_mismatch": "試合の開始日時が対象日と一致しない",
     "schedule_incomplete": "日程の取得が不完全",
 }
 
@@ -463,38 +469,100 @@ def results_path(date):
     return os.path.join(results_dir(), f"article-games-{date.replace('-', '')}.json")
 
 
-def verified_final(g):
-    """結果側（preview_data.is_verified_final）と同じ条件。終了かつ記録確定・出典あり・得点が0以上の整数。"""
-    def score(v):
-        return isinstance(v, int) and not isinstance(v, bool) and v >= 0
-    return (g.get("ended") is True and g.get("fixed") is True and bool(g.get("source"))
-            and score(g.get("home_score")) and score(g.get("away_score")))
+class Hold(Exception):
+    """集計しない理由（state.json の holds に残す）。値を0や推測で埋めない。"""
+
+    def __init__(self, reason, detail=""):
+        super().__init__(reason)
+        self.reason, self.detail = reason, detail
+
+
+# 結果側の当日TOP3（scripts/game_day_rankings.py）と同じ厳格な読み方。欠損・不正値は0にしない。
+STAT_FIELDS = {"pts": "Point", "reb": "RB_TOT", "ast": "AS", "stl": "ST", "blk": "BS", "tov": "TO",
+               "pt2m": "PT2M", "pt2a": "PT2A", "tpm": "PT3M", "tpa": "PT3A", "ftm": "FTM", "fta": "FTA",
+               "eff": "EFF", "pm": "PLUSMINUS"}
+
+
+def strict_int(value, what):
+    if isinstance(value, bool) or not re.fullmatch(r"-?\d+", str(value if value is not None else "")):
+        raise Hold("boxscore_value_invalid", f"{what}={value!r}")
+    return int(value)
+
+
+def strict_seconds(value):
+    if value in ("DNP", "DNP-CD", "00:00"):
+        return 0
+    m = re.fullmatch(r"(\d+):([0-5]\d)", str(value if value is not None else ""))
+    if not m:
+        raise Hold("boxscore_value_invalid", f"PlayTime={value!r}")
+    return int(m[1]) * 60 + int(m[2])
+
+
+def verified_rows(g):
+    """保存済みの公式ボックススコアを検査して集計用の行にする。疑わしければ Hold。"""
+    key = str(g["game_id"])
+    home_id, away_id = str(g.get("home_id") or ""), str(g.get("away_id") or "")
+    if not home_id or not away_id or home_id == away_id:
+        raise Hold("boxscore_id_mismatch", "home_id/away_id")
+    teams = {home_id: (g.get("home") or "", g.get("away") or "", g["home_score"] > g["away_score"]),
+             away_id: (g.get("away") or "", g.get("home") or "", g["away_score"] > g["home_score"])}
+    out, seen, played_teams = [], set(), set()
+    for r in g.get("players") or []:
+        if strict_int(r.get("Category"), "Category") != 1 or strict_int(r.get("PeriodCategory"), "PeriodCategory") != TOTAL_PERIOD:
+            continue
+        secs = strict_seconds(r.get("PlayTime"))
+        if not secs:
+            continue   # 出場なし（従来どおり集計対象外）
+        pid, tid = str(r.get("PlayerID") or ""), str(r.get("TeamID") or "")
+        if str(r.get("ScheduleKey")) != key or tid not in teams or not pid:
+            raise Hold("boxscore_id_mismatch", f"ScheduleKey={r.get('ScheduleKey')!r} TeamID={tid!r} PlayerID={pid!r}")
+        if pid in seen:
+            raise Hold("duplicate_player_id", pid)
+        seen.add(pid)
+        played_teams.add(tid)
+        name = (r.get("PlayerNameJ") or "").strip()
+        if not name:
+            raise Hold("boxscore_value_invalid", f"PlayerNameJ missing PlayerID={pid}")
+        v = {k: strict_int(r.get(f), f) for k, f in STAT_FIELDS.items()}
+        team, opp, won = teams[tid]
+        out.append({
+            "name": name, "name_en": r.get("PlayerNameE") or "", "no": str(r.get("PlayerNo") or ""),
+            "player_id": pid, "team": team, "team_full": r.get("TeamNameJ") or team, "opp": opp, "won": won, "key": key,
+            "jp": None, "nationality": None, "nationality_verified": False,
+            "min": round(secs / 60, 1),
+            "pts": v["pts"], "reb": v["reb"], "ast": v["ast"], "stl": v["stl"], "blk": v["blk"], "tov": v["tov"],
+            "fgm": v["pt2m"] + v["tpm"], "fga": v["pt2a"] + v["tpa"],
+            "tpm": v["tpm"], "tpa": v["tpa"], "ftm": v["ftm"], "fta": v["fta"],
+            "eff": v["eff"], "pm": v["pm"],
+        })
+    if not out:
+        raise Hold("boxscore_missing")
+    if played_teams != set(teams):
+        raise Hold("boxscore_one_team", "両チームの出場記録が揃っていない")
+    return out
 
 
 def game_from_result(date, g):
     """保存済みの確定結果（公式試合ページの記録）を集計用の形にする。再取得はしない。
     返り値：(game, None) または (None, 保留理由)。"""
-    key = str(g["game_id"])
-    if not verified_final(g):
+    if not data.is_verified_final(g):
         return None, "record_not_fixed"
-    rows = [r for r in g.get("players") or []
-            if num(r.get("Category")) == 1 and num(r.get("PeriodCategory")) == TOTAL_PERIOD]
-    if not rows:
-        return None, "boxscore_missing"
-    home_id, away_id = str(g.get("home_id") or ""), str(g.get("away_id") or "")
-    if any(str(r.get("TeamID") or "") not in (home_id, away_id) for r in rows):
-        return None, "boxscore_team_mismatch"
-    hs, as_ = g["home_score"], g["away_score"]
-    home, away = g.get("home") or "", g.get("away") or ""
-    players = (player_rows([r for r in rows if str(r.get("TeamID")) == home_id], home, away, hs > as_, key)
-               + player_rows([r for r in rows if str(r.get("TeamID")) == away_id], away, home, as_ > hs, key))
-    if not players:
-        return None, "boxscore_missing"
+    try:
+        same_day = bool(g.get("starts_at")) and data.jst_date(g["starts_at"]) == date
+    except (ValueError, TypeError, AttributeError):
+        same_day = False          # 時差の無い・読めない開始日時は対象日と照合できない
+    if not same_day:
+        return None, "date_mismatch"
+    try:
+        players = verified_rows(g)
+    except Hold as h:
+        return None, h.reason
+    key, home, away = str(g["game_id"]), g.get("home") or "", g.get("away") or ""
     return {
         "key": key, "date": date, "convention": g.get("convention") or "",
         "ended": True, "fixed": True, "home": home, "away": away,
         "home_full": g.get("home_full") or home, "away_full": g.get("away_full") or away,
-        "home_score": hs, "away_score": as_,
+        "home_score": g["home_score"], "away_score": g["away_score"],
         "ot": None,          # 保存データに延長の有無が無いため不明（推測で付けない）
         "stadium": "", "same_day": [], "players": players,
     }, None
@@ -507,29 +575,42 @@ def assess_day(date, saved):
                 "players": None, "holds": [], "excluded": [], "games": []}
     bp = [g for g in saved.get("games", []) if g.get("competition") == DEFINITION["competition"]]
     games, holds, excluded = [], [], []
-    for g in sorted(bp, key=lambda x: str(x["game_id"])):
+    ids = [str(g.get("game_id") or "") for g in bp]
+    duplicated = {k for k in ids if ids.count(k) > 1 or not k}
+    for g in sorted(bp, key=lambda x: str(x.get("game_id") or "")):
+        key = str(g.get("game_id") or "")
         if g.get("status") in ("cancelled", "postponed"):
-            excluded.append({"key": str(g["game_id"]), "status": g["status"]})
+            excluded.append({"key": key, "status": g["status"]})
             continue
-        game, reason = game_from_result(date, g)
+        if key in duplicated:
+            game, reason = None, "duplicate_game_id"
+        else:
+            game, reason = game_from_result(date, g)
         if game:
             games.append(game)
         else:
-            holds.append({"key": str(g["game_id"]), "home": g.get("home"), "away": g.get("away"),
+            holds.append({"key": key or None, "home": g.get("home"), "away": g.get("away"),
                           "status": g.get("status"), "record_note": g.get("record_note"), "reason": reason})
+    players = [p["player_id"] for x in games for p in x["players"]]
+    if len(set(players)) != len(players):
+        # 同じ選手が同じ日に2試合（結果側の当日TOP3と同じく未対応。重複を足し合わせない）
+        dup = sorted({p for p in players if players.count(p) > 1})
+        holds.append({"key": None, "reason": "duplicate_player_id", "detail": ",".join(dup)})
     schedule_ok = (saved.get("schedule_complete") or {}).get(DEFINITION["competition"]) is True
     if not schedule_ok:
-        state = "held"
         holds.insert(0, {"key": None, "reason": "schedule_incomplete"})
-    elif holds:
+    if holds:
         state = "held"
     elif not games:
         state = "no_games"
     else:
         state = "ready"
+    for x in games:
+        for p in x["players"]:
+            p.pop("player_id", None)     # 出力の形は従来どおり（重複の検査にだけ使う）
     return {"state": state, "games_total": len(bp) - len(excluded), "games_ready": len(games),
-            "players": sum(len(g["players"]) for g in games) if state == "ready" else None,
-            "holds": holds, "excluded": excluded, "games": games}
+            "players": len(players) if state == "ready" else None,
+            "holds": holds, "excluded": excluded, "games": games if state == "ready" else []}
 
 
 def content_as_of(date):
@@ -538,8 +619,11 @@ def content_as_of(date):
     return (status.get("dates", {}).get(date) or {}).get("content_as_of")
 
 
-def comparable(summary):
-    return {k: v for k, v in (summary or {}).items() if k not in ("generated",)}
+def ranking_content(summary):
+    """読者に見える中身だけ（生成時刻・取得時点・定義などの付帯情報は除く）。"""
+    games = sorted((g.get("key"), g.get("home_score"), g.get("away_score")) for g in summary.get("games", []))
+    return {"games": games, "eff_top": summary.get("eff_top"), "eff_top_jp": summary.get("eff_top_jp"),
+            "leaders": summary.get("leaders"), "player_count": summary.get("player_count")}
 
 
 def pending_note(days, newest):
@@ -604,12 +688,13 @@ def run(now=None, root=None):
             continue
         out = os.path.join(STATS_DIR, f"{date}.json")
         stored = load_json(out, None)
-        if comparable(stored) == comparable(summary):
+        if stored and ranking_content(stored) == ranking_content(summary):
+            continue      # 中身（試合・得点・順位・人数）が同じなら書き換えない（旧方式で公開した日もそのまま）
+        if stored and {g["key"] for g in summary["games"]} < {g["key"] for g in stored["games"]}:
+            # 保存結果から試合が減った：減った理由を確かめずに公開済みの日を縮めない（旧結果を保持）
+            log(f"{date}: 保存結果の試合が公開済み（{len(stored['games'])}試合）より少ないため維持")
             continue
-        # 公開済みの日は、試合が増える時だけ作り直す（旧結果をそのまま残す・churn防止）。
-        if date in published and stored and {g["key"] for g in day["games"]} <= {g["key"] for g in stored["games"]}:
-            log(f"{date}: 公開済み（{len(stored['games'])}試合）を維持")
-            continue
+        # 試合が増えた・同じ試合でも公式記録の訂正で値が変わった → 作り直す
         save_json(out, summary)
         write_article(summary)
         published.add(date)

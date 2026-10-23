@@ -7,6 +7,7 @@
 ボックススコアから集計する。公式への追加取得はしない。ニュース取得の成否にも依存しない。
 """
 import copy
+import itertools
 import io
 import json
 import os
@@ -25,17 +26,23 @@ FIX = Path(__file__).parent / 'fixtures' / 'stats'
 NOW = datetime(2026, 10, 24, 7, 0, tzinfo=stats.JST)
 
 
-def row(team_id, name, eff, pts=10, play='20:00', period=18, category=1):
-    return {'Category': category, 'PeriodCategory': period, 'TeamID': team_id, 'TeamNameJ': 'T' + team_id,
+_ids = itertools.count(1000)
+
+
+def row(team_id, name, eff, pts=10, play='20:00', period=18, category=1, key=None, pid=None):
+    """公式ボックススコアの1行（試合合計）。ScheduleKey は game() が試合IDで埋める。PlayerID は一意。"""
+    return {'Category': category, 'PeriodCategory': period, 'ScheduleKey': key, 'TeamID': team_id,
+            'PlayerID': str(next(_ids)) if pid is None else pid, 'TeamNameJ': 'T' + team_id,
             'PlayerNameJ': name, 'PlayerNameE': name, 'PlayerNo': '1', 'PlayTime': play, 'Point': pts,
             'PT2M': 3, 'PT2A': 6, 'PT3M': 1, 'PT3A': 3, 'FTM': 1, 'FTA': 2, 'RB_TOT': 5, 'AS': 2, 'ST': 1,
             'BS': 0, 'TO': 1, 'EFF': eff, 'PLUSMINUS': 3}
 
 
 def game(key, competition='BP', status='final', players=None, home_score=80, away_score=70, **extra):
+    """starts_at は保存日（save の date）の 19:05 JST を save() が入れる。別日にする試験は starts_at を明示する。"""
     final = status == 'final'
     g = dict(game_id=key, season='2026-27', competition=competition, status=status,
-             starts_at='2026-10-23T10:05:00+00:00', ended=final, fixed=final,
+             starts_at=None, ended=final, fixed=final,
              source='https://www.bleague.jp/game_detail/?ScheduleKey=' + key,
              convention='りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦',
              home='H' + key, away='A' + key, home_full='Home' + key, away_full='Away' + key,
@@ -43,6 +50,9 @@ def game(key, competition='BP', status='final', players=None, home_score=80, awa
              home_score=home_score if final else None, away_score=away_score if final else None,
              players=players if players is not None else ([row('1' + key, '選手' + key, 30), row('2' + key, '相手' + key, 12)] if final else []))
     g.update(extra)
+    for r in g['players']:
+        if r.get('ScheduleKey') is None:
+            r['ScheduleKey'] = int(key) if key.isdigit() else key
     return g
 
 
@@ -58,6 +68,9 @@ class Base(unittest.TestCase):
         self.status = {'dates': {}}
 
     def save(self, date, games, schedule_complete=True, content_as_of=None):
+        for g in games:
+            if g.get('starts_at') is None:
+                g['starts_at'] = date + 'T19:05:00+09:00'
         path = self.root / 'data/match_articles' / ('article-games-' + date.replace('-', '') + '.json')
         path.write_text(json.dumps(dict(date=date, games=games, schedule_complete=dict(BP=schedule_complete, B1=True, BN=True)),
                                    ensure_ascii=False))
@@ -140,9 +153,9 @@ class Rules(Base):
         self.assertEqual(self.state()['days']['2026-10-22']['holds'][0]['reason'], 'boxscore_missing')
 
     def test_boxscore_team_mismatch_is_held(self):
-        self.save('2026-10-22', [game('506495', players=[row('999', 'X', 20)])])
+        self.save('2026-10-22', [game('506495', players=[row('999', 'X', 20), row('2506495', 'Y', 5)])])
         self.assertEqual(self.run_stats()['2026-10-22'], 'held')
-        self.assertEqual(self.state()['days']['2026-10-22']['holds'][0]['reason'], 'boxscore_team_mismatch')
+        self.assertEqual(self.state()['days']['2026-10-22']['holds'][0]['reason'], 'boxscore_id_mismatch')
 
     def test_incomplete_schedule_is_held(self):
         self.save('2026-10-22', [game('506495')], schedule_complete=False)
@@ -230,6 +243,122 @@ class SameAsPreviousMethod(Base):
         self.assertEqual(new['leaders'], old['leaders'])
         self.assertEqual(new['player_count'], old['player_count'])
         self.assertEqual([g['key'] for g in new['games']], [g['key'] for g in old['games']])
+
+
+class InvalidInput(Base):
+    """差戻し 10/24 08:26：欠損を0にしない・片側だけ・別日・ID重複／欠落は理由つきで保留（game_day_rankings と同じ基準）。"""
+
+    def held(self, games, date='2026-10-22'):
+        self.save(date, games)
+        days = self.run_stats()
+        self.assertEqual(days[date], 'held')
+        self.assertFalse((self.root / 'data/stats' / (date + '.json')).exists())
+        d = self.state()['days'][date]
+        self.assertIsNone(d['players'])
+        return [h['reason'] for h in d['holds']]
+
+    def rows(self, key, **change):
+        rows = [row('1' + key, '選手', 30), row('2' + key, '相手', 12)]
+        rows[0].update(change)
+        return rows
+
+    def test_official_zero_eff_is_counted_as_zero(self):
+        self.save('2026-10-22', [game('506495', players=self.rows('506495', EFF=0))])
+        self.assertEqual(self.run_stats()['2026-10-22'], 'ready')
+        self.assertIn(('選手', 0), [(p['name'], p['eff']) for p in self.day_json('2026-10-22')['eff_top']])
+
+    def test_missing_or_invalid_eff_is_not_zero(self):
+        for bad in (None, '', '-', 'abc', 1.5, True):
+            with self.subTest(EFF=bad):
+                self.assertEqual(self.held([game('506495', players=self.rows('506495', EFF=bad))]), ['boxscore_value_invalid'])
+
+    def test_missing_other_stat_or_playtime_is_held(self):
+        for change in ({'Point': None}, {'RB_TOT': ''}, {'PLUSMINUS': None}, {'PlayTime': None}, {'PlayTime': '12:7'},
+                       {'PlayerNameJ': ''}, {'Category': None}):
+            with self.subTest(change=change):
+                self.assertEqual(self.held([game('506495', players=self.rows('506495', **change))]), ['boxscore_value_invalid'])
+
+    def test_one_team_only_is_held(self):
+        self.assertEqual(self.held([game('506495', players=[row('1506495', '片側', 30), row('1506495', '片側2', 10)])]),
+                         ['boxscore_one_team'])
+        self.assertEqual(self.held([game('506495', players=[row('1506495', '片側', 30), row('2506495', '出場なし', 0, play='00:00')])]),
+                         ['boxscore_one_team'])
+
+    def test_other_day_or_missing_start_is_held(self):
+        self.assertEqual(self.held([game('506495', starts_at='2026-10-23T10:05:00+00:00')]), ['date_mismatch'])   # 10/23 19:05 JST
+        self.assertEqual(self.held([game('506495', starts_at='')]), ['date_mismatch'])
+        self.assertEqual(self.held([game('506495', starts_at='2026-10-22T19:05:00')]), ['date_mismatch'])          # 時差なし
+
+    def test_missing_ids_are_held(self):
+        for change in ({'PlayerID': ''}, {'PlayerID': None}, {'ScheduleKey': 999999}, {'TeamID': ''}):
+            with self.subTest(change=change):
+                self.assertEqual(self.held([game('506495', players=self.rows('506495', **change))]), ['boxscore_id_mismatch'])
+        self.assertEqual(self.held([game('506495', home_id='')]), ['boxscore_id_mismatch'])
+
+    def test_duplicate_player_in_game_is_held(self):
+        rows = self.rows('506495') + [row('1506495', '重複', 5, pid=None)]
+        rows[2]['PlayerID'] = rows[0]['PlayerID']
+        self.assertEqual(self.held([game('506495', players=rows)]), ['duplicate_player_id'])
+
+    def test_same_player_in_two_games_is_held(self):
+        a, b = game('506495'), game('506496')
+        b['players'][0]['PlayerID'] = a['players'][0]['PlayerID']
+        self.assertEqual(self.held([a, b]), ['duplicate_player_id'])
+
+    def test_duplicate_or_missing_game_id_is_held(self):
+        self.assertEqual(self.held([game('506495'), game('506495')]), ['duplicate_game_id', 'duplicate_game_id'])
+        self.assertIn('duplicate_game_id', self.held([game('506495'), dict(game('506496'), game_id='')]))
+
+    def test_held_reason_is_shown_on_page_without_dropping_old_ranking(self):
+        self.save('2026-10-21', [game('506490')])
+        self.run_stats()
+        self.save('2026-10-22', [game('506495', players=self.rows('506495', EFF=None))])
+        self.run_stats()
+        status = self.stats_page().select_one('#stats-status').text
+        self.assertIn('表示中：10月21日', status)
+        self.assertIn('10月22日：集計待ち（B.PREMIER 1試合中 1試合が' + stats.REASON_LABEL['boxscore_value_invalid'], status)
+
+
+class Corrections(Base):
+    def test_corrected_value_with_same_games_is_reflected(self):
+        g = game('506495')
+        self.save('2026-10-22', [g])
+        self.run_stats()
+        self.assertEqual(self.day_json('2026-10-22')['eff_top'][0]['eff'], 30)
+        g2 = copy.deepcopy(g); g2['players'][0]['EFF'] = 33           # 公式記録の訂正（試合集合は同じ）
+        self.save('2026-10-22', [g2])
+        self.run_stats()
+        self.assertEqual(self.day_json('2026-10-22')['eff_top'][0]['eff'], 33)
+        self.assertIn('<strong>33</strong>', (self.root / 'article-stats-20261022.html').read_text())
+        self.assertIn('<strong>33</strong>', (self.root / 'stats.html').read_text())
+
+    def test_corrected_score_is_reflected(self):
+        g = game('506495')
+        self.save('2026-10-22', [g]); self.run_stats()
+        self.save('2026-10-22', [dict(copy.deepcopy(g), home_score=81)]); self.run_stats()
+        self.assertEqual(self.day_json('2026-10-22')['games'][0]['home_score'], 81)
+
+    def test_fewer_games_do_not_shrink_published_day(self):
+        self.save('2026-10-22', [game('506495'), game('506496')]); self.run_stats()
+        self.save('2026-10-22', [game('506495')]); self.run_stats()
+        self.assertEqual(len(self.day_json('2026-10-22')['games']), 2)
+        self.assertIn('少ないため維持', self.log)
+
+
+class SavedRealData(unittest.TestCase):
+    """main 98f7b38 の保存済み結果（10/19・21・22）は新しい厳格な検査を通り、件数も結果側と一致する。"""
+
+    def test_saved_days_pass_strict_checks(self):
+        root = Path(__file__).resolve().parents[1]
+        for date, games, players in (('2026-10-19', 9, 198), ('2026-10-21', 9, 202), ('2026-10-22', 2, 42)):
+            path = root / 'data/match_articles' / ('article-games-' + date.replace('-', '') + '.json')
+            if not path.exists():
+                self.skipTest('saved data not present')
+            with self.subTest(date=date):
+                saved = json.loads(path.read_text())
+                day = stats.assess_day(date, saved)
+                self.assertEqual((day['state'], day['games_ready'], day['players']), ('ready', games, players))
+                self.assertEqual(day['players'], saved['game_day_rankings']['leagues']['BP']['eligible_players'])
 
 
 class Independence(unittest.TestCase):

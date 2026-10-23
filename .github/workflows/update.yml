@@ -89,6 +89,18 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           python scripts/save_il.py
 
+      # 貢献度ランキングは、コミット済みの保存結果（公式の確定記録）から集計するので、ニュース取得・試合記事・
+      # HTML生成が失敗した回も、ここで独立に集計して stats の成果物だけを保存する（失敗した工程の途中の生成物は
+      # 退避して公開しない・集計にも使わない）。全工程が成功した回は通常のコミットに含まれ、ここでは差分なし。
+      # 集計・保存に失敗したらこのステップが失敗する（ほかの工程の失敗も失敗のまま残る）。
+      - name: 貢献度ランキングを集計・保存（ニュースと独立）
+        id: stats
+        if: always()
+        run: |
+          git config user.name  "bleague-matome-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python scripts/save_stats.py
+
       # IL の取得失敗は、ほかの工程が成功してもジョブの失敗として残す（成功扱いにしない）。
       - name: 公式ILの取得結果を確認
         if: always() && steps.il.outputs.il_status == 'failed'
