@@ -160,6 +160,9 @@ def game_state(game, now, verified_final):
         return '時刻未確認'
     start = datetime.fromisoformat(starts)
     clock = start.astimezone(now.tzinfo).strftime('%H:%M')
-    if game.get('status') == 'scheduled' and now < start:
+    fixture_only = (game.get('status') == 'unconfirmed'
+                    and game.get('record_note') == 'official_record_not_loaded')
+    if (game.get('status') == 'scheduled' or fixture_only) and now < start:
         return clock + ' 試合前'
     return clock + ' 開始・公式記録未確定'
+
