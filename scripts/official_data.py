@@ -265,6 +265,8 @@ def fetch_game(client, page, key, year, schedule_status=None):
     game = parse_game(page, key, year, schedule_status)
     if re.search(r'\b_contexts_s3id\.data\s*=', page):
         return game
+    if schedule_status in ('cancelled', 'postponed'):
+        return game  # Preserve the official notice, including a TBD tipoff.
     ids = re.findall(r'\b_contexts_s3id\[' + re.escape(str(key)) + r'\]\s*=\s*(\d+)', page)
     if not ids or not any(int(value) > 0 for value in ids):
         return game
