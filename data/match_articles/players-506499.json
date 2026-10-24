@@ -8,7 +8,7 @@
     "fixed": false,
     "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506499",
     "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
-    "status": "scheduled",
+    "status": "unconfirmed",
     "players": [],
     "home": "琉球",
     "home_full": "琉球ゴールデンキングス",
@@ -17,7 +17,8 @@
     "away": "群馬",
     "away_full": "群馬クレインサンダーズ",
     "away_id": "713",
-    "away_score": null
+    "away_score": null,
+    "record_note": "score_shown_without_official_record"
   },
   "players": [
     {
@@ -526,5 +527,5 @@
       "coverage_complete": true
     }
   ],
-  "retrieved_at": "2026-10-22T14:30:22.402170+00:00"
+  "retrieved_at": "2026-10-24T08:00:04.977599+00:00"
 }
