@@ -17,9 +17,10 @@ import sys
 from datetime import datetime, timedelta, timezone
 
 try:
-    from . import site_header, browse_ui, schedule_calendar, home_sections
+    from . import site_header, page_assets, browse_ui, schedule_calendar, home_sections
 except ImportError:
     import site_header
+    import page_assets
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     from scripts import browse_ui, schedule_calendar, home_sections
 
@@ -815,21 +816,11 @@ def ensure_nav(text, x_enabled, filename=''):
 
 
 def ga_snippet(ga_id):
-    return (
-        '<!-- AUTO:GA:START -->\n'
-        f'<script async src="https://www.googletagmanager.com/gtag/js?id={esc(ga_id)}"></script>\n'
-        '<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}'
-        f"gtag('js',new Date());gtag('config','{esc(ga_id)}');</script>\n"
-        '<!-- AUTO:GA:END -->\n'
-    )
+    return page_assets.ga_snippet(ga_id)
 
 
 def ensure_ga(text, ga_id):
-    """GA4 の計測タグ。測定IDが設定されていれば head に入れ、無ければ取り除く。"""
-    text = re.sub(r"<!-- AUTO:GA:START -->.*?<!-- AUTO:GA:END -->\n?", "", text, flags=re.DOTALL)
-    if ga_id and "</head>" in text:
-        text = text.replace("</head>", ga_snippet(ga_id) + "</head>", 1)
-    return text
+    return page_assets.ensure_ga(text, ga_id)
 
 
 def load_pv():
@@ -986,9 +977,7 @@ def finalize_pages(cfg, pv):
         with open(path, encoding="utf-8") as f:
             original = f.read()
         text = ensure_nav(original, bool(cfg["x_list_url"]), fn)
-        text = ensure_ga(text, cfg["ga4_id"])
-        if 'href="design-system.css?v=1"' not in text:
-            text = text.replace("</head>", '<link rel="stylesheet" href="design-system.css?v=1">\n</head>', 1)
+        text = page_assets.ensure(text, cfg["ga4_id"])
         if fn.startswith("article-"):
             text = ensure_pv(text, pv_of(pv["total"], fn) if pv_valid(pv) and ("/"+fn in pv["total"] or fn in pv["total"]) else None, pv_note(pv))
         if text != original:
@@ -1103,3 +1092,4 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
