@@ -635,7 +635,8 @@ def pending_note(days, published, today=None):
             continue        # 公開済みの日（旧結果を表示・アーカイブに掲載）
         if d["state"] == "held":
             waiting = [h for h in d["holds"] if h.get("key")]
-            reasons = sorted({REASON_LABEL.get(h["reason"], h["reason"]) for h in d["holds"]})
+            reasons = sorted({"試合前" if h.get("status") == "scheduled" else REASON_LABEL.get(h["reason"], h["reason"])
+                              for h in d["holds"]})
             notes.append(f"{jp_date(date)}：集計待ち（B.PREMIER {d['games_total']}試合中 "
                          f"{len(waiting)}試合：{'・'.join(reasons)}）")
         elif d["state"] == "not_retrieved" and date != today:   # 当日分は通常これから取得する
