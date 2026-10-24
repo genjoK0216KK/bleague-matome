@@ -689,6 +689,8 @@ def run(now=None, root=None):
         out = os.path.join(STATS_DIR, f"{date}.json")
         stored = load_json(out, None)
         if stored and ranking_content(stored) == ranking_content(summary):
+            if os.path.exists(os.path.join(ROOT, f"article-stats-{date.replace('-', '')}.html")):
+                published.add(date)   # 集計済みの記事がある日は公開済みとして扱う（state.json が古くても）
             continue      # 中身（試合・得点・順位・人数）が同じなら書き換えない（旧方式で公開した日もそのまま）
         if stored and {g["key"] for g in summary["games"]} < {g["key"] for g in stored["games"]}:
             # 保存結果から試合が減った：減った理由を確かめずに公開済みの日を縮めない（旧結果を保持）
