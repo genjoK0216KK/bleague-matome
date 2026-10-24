@@ -175,6 +175,13 @@ class Rules(Base):
         d = self.state()['days']['2026-10-21']
         self.assertEqual((d['games_total'], d['players'], d['content_as_of']), (None, None, None))
 
+    def test_today_not_yet_retrieved_is_not_shown_as_missing(self):
+        self.save('2026-10-22', [game('506495')])
+        self.run_stats()
+        status = self.stats_page().select_one('#stats-status').text
+        self.assertIn('10月23日：試合結果データが未取得', status)       # 過去日の未取得は出す
+        self.assertNotIn('10月24日', status)                            # 当日（NOW=10/24）はまだ出さない
+
     def test_unverified_final_flags_are_not_trusted(self):
         """status が final でも、終了・記録確定・得点が揃わなければ集計しない（結果側と同じ条件）。"""
         self.save('2026-10-22', [game('506495', fixed=False)])

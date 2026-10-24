@@ -626,7 +626,7 @@ def ranking_content(summary):
             "leaders": summary.get("leaders"), "player_count": summary.get("player_count")}
 
 
-def pending_note(days, newest):
+def pending_note(days, newest, today=None):
     """表示中より新しい日が保留・未取得なら、その状況を書く（旧結果は残したまま）。"""
     notes = []
     for date in sorted(days, reverse=True):
@@ -638,7 +638,7 @@ def pending_note(days, newest):
             reasons = sorted({REASON_LABEL.get(h["reason"], h["reason"]) for h in d["holds"]})
             notes.append(f"{jp_date(date)}：集計待ち（B.PREMIER {d['games_total']}試合中 "
                          f"{len(waiting)}試合が{'・'.join(reasons)}）")
-        elif d["state"] == "not_retrieved":
+        elif d["state"] == "not_retrieved" and date != today:   # 当日分は通常これから取得する
             notes.append(f"{jp_date(date)}：試合結果データが未取得のため未集計（0人・0試合という意味ではありません）")
     return notes
 
@@ -703,7 +703,7 @@ def run(now=None, root=None):
     newest = max(published) if published else None
     newest_summary = load_json(os.path.join(STATS_DIR, f"{newest}.json"), None) if newest else None
     if newest_summary:
-        write_stats_page(newest_summary, published, pending_note(days, newest))
+        write_stats_page(newest_summary, published, pending_note(days, newest, today.isoformat()))
 
     state["pending"] = pending
     state["published"] = sorted(published)
