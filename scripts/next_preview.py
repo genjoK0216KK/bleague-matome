@@ -10,7 +10,9 @@ except ImportError:
 TITLE = '出場予定選手（登録選手）のベスト5'
 
 def upcoming(games, now):
-    return sorted((g for g in games if g.get('status') == 'scheduled' and not g.get('ended') and g.get('starts_at')
+    return sorted((g for g in games if (g.get('status') == 'scheduled'
+                   or (g.get('status') == 'unconfirmed' and g.get('record_note') == 'official_record_not_loaded'))
+                   and not g.get('ended') and g.get('starts_at')
                    and datetime.fromisoformat(g['starts_at']) > now), key=lambda g:(g['starts_at'],g['game_id']))
 
 def choose(games, now):
@@ -89,3 +91,4 @@ def write(root,state,now):
     path=Path(root)/'data/match_articles/next-preview.json';path.parent.mkdir(parents=True,exist_ok=True)
     path.write_text(json.dumps(state,ensure_ascii=False,indent=2,default=str))
     (Path(root)/'next-games.html').write_text(render(state,now))
+
