@@ -26,9 +26,10 @@ import requests
 from bs4 import BeautifulSoup
 
 try:
-    from . import site_header, preview_data as data
+    from . import site_header, page_assets, preview_data as data
 except ImportError:
     import site_header
+    import page_assets
     import preview_data as data
 
 JST = timezone(timedelta(hours=9))
@@ -346,7 +347,9 @@ def page(title, desc, url, body):
 </html>
 """
 
-    return site_header.enhance(result, url)
+    cfg = load_json(os.path.join(ROOT, "data", "site_config.json"), {}) or {}
+    result = site_header.enhance(result, url, bool((cfg.get("x_list_url") or "").strip()))
+    return page_assets.ensure(result, (cfg.get("ga4_id") or "").strip())
 
 
 def article_title(s):
@@ -693,9 +696,12 @@ def run(now=None, root=None):
             if os.path.exists(os.path.join(ROOT, f"article-stats-{date.replace('-', '')}.html")):
                 published.add(date)   # 集計済みの記事がある日は公開済みとして扱う（state.json が古くても）
             continue      # 中身（試合・得点・順位・人数）が同じなら書き換えない（旧方式で公開した日もそのまま）
-        if stored and {g["key"] for g in summary["games"]} < {g["key"] for g in stored["games"]}:
-            # 保存結果から試合が減った：減った理由を確かめずに公開済みの日を縮めない（旧結果を保持）
-            log(f"{date}: 保存結果の試合が公開済み（{len(stored['games'])}試合）より少ないため維持")
+        if stored and not {g["key"] for g in stored["games"]}.issubset({g["key"] for g in summary["games"]}):
+            # 一部置換・入替・増加を伴う欠損も含め、旧試合IDを1件でも失えば保持する
+            missing = {g["key"] for g in stored["games"]} - {g["key"] for g in summary["games"]}
+            record.update(state="held", holds=[{"key": key, "reason": "published_game_missing"} for key in sorted(missing)])
+            pending.update({key: date for key in missing})
+            log(f"{date}: 公開済みと共通の試合IDが少ないため維持（旧{len(stored['games'])}試合）")
             continue
         # 試合が増えた・同じ試合でも公式記録の訂正で値が変わった → 作り直す
         save_json(out, summary)
@@ -733,3 +739,4 @@ def run_reported(now=None, root=None):
 
 if __name__ == "__main__":
     run_reported()
+
