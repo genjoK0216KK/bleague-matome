@@ -26,9 +26,10 @@ import requests
 from bs4 import BeautifulSoup
 
 try:
-    from . import site_header
+    from . import site_header, preview_data as data
 except ImportError:
     import site_header
+    import preview_data as data
 
 JST = timezone(timedelta(hours=9))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -41,7 +42,7 @@ UA = ("Mozilla/5.0 (compatible; BleagueMatomeBot/1.0; "
       "+https://basuke-matome.jp/about.html)")
 HEADERS = {"User-Agent": UA, "Accept-Language": "ja,en;q=0.8"}
 SLEEP = 2.0
-LOOKBACK_DAYS = 3          # これより古い未確定日は諦める
+LOOKBACK_DAYS = 7          # 保存済みの結果を見直す日数（公式への追加取得はしないので取得量は増えない）
 TOTAL_PERIOD = 18          # ボックススコアの「試合合計」行
 TOP_N = 10
 
@@ -389,7 +390,10 @@ def write_article(s):
 
 def thumbnail(s):
     """スコアボード風サムネ（scripts/thumbgen.py の「速報など」デザイン）。"""
-    import thumbgen
+    try:
+        from . import thumbgen
+    except ImportError:
+        import thumbgen
     if not thumbgen.FONT:
         thumbgen.FONT = thumbgen.embed_font()
     top = s["eff_top"][0]
@@ -407,7 +411,15 @@ def thumbnail(s):
     return thumbgen.render(d)
 
 
-def write_stats_page(s, published):
+def status_block(s, notes):
+    """表示中の集計の対象日と、より新しい日の保留・未取得の状況。旧結果は消さずに併記する。"""
+    items = "".join(f"<li>{esc(n)}</li>" for n in notes)
+    newer = (f'<p style="margin:6px 0 0">集計できていない日：</p><ul style="margin:4px 0 0">{items}</ul>' if notes else "")
+    return (f'<div class="note" id="stats-status"><p style="margin:0">表示中：{esc(jp_date(s["date"]))}の'
+            f'B.PREMIER {len(s["games"])}試合（記録確定分）</p>{newer}</div>')
+
+
+def write_stats_page(s, published, notes=()):
     title = f"スタッツリーダー（{jp_date(s['date'])}）貢献度ランキング"
     desc = "B.LEAGUE PREMIERの最新試合日の貢献度（EFF）ランキングと部門別リーダー。全試合の記録確定後に自動更新します。"
     archive = "\n".join(
@@ -417,6 +429,7 @@ def write_stats_page(s, published):
     body = f"""    <div class="breadcrumb"><a href="index.html">ホーム</a> ／ <a href="cat-data.html">順位・日程</a></div>
     <h1>{esc(title)}</h1>
     <div class="pmeta"><span class="tag data">順位・日程</span><span>{s['date'].replace('-', '.')}</span><span>最終更新 {esc(s['generated'])}</span></div>
+    {status_block(s, notes)}
     {body_sections(s)}
 
     <p class="source">出典：B.LEAGUE公式 試合詳細（ボックススコア）<br>
@@ -432,89 +445,291 @@ def write_stats_page(s, published):
 
 # --------------------------------------------------------------------- main
 
-def run():
-    state = load_json(STATE_PATH, {"pending": {}, "published": []})
-    pending = state.setdefault("pending", {})       # key -> date（未確定）
-    published = set(state.setdefault("published", []))
-    today = datetime.now(JST).date()
-    oldest = (today - timedelta(days=LOOKBACK_DAYS)).strftime("%Y-%m-%d")
+# 対象の定義（表示・記録で分けて持つ）
+DEFINITION = {"league": "B.PREMIER", "competition": "BP", "metric": "EFF（公式記録の値）",
+              "aggregation": "その日のB.PREMIER全試合の試合合計（出場時間0秒の選手は除く）"}
+REASON_LABEL = {
+    "record_not_fixed": "公式記録が未確定",
+    "boxscore_missing": "ボックススコア未取得",
+    "boxscore_id_mismatch": "ボックススコアの試合・チーム・選手IDが一致しない",
+    "boxscore_value_invalid": "ボックススコアの数値・出場時間・選手名が欠損または不正",
+    "boxscore_one_team": "片方のチームの出場記録しかない",
+    "duplicate_player_id": "選手IDが重複",
+    "duplicate_game_id": "試合IDが重複または欠落",
+    "date_mismatch": "試合の開始日時が対象日と一致しない",
+    "schedule_incomplete": "日程の取得が不完全",
+}
 
+
+def results_dir():
+    return os.path.join(ROOT, "data", "match_articles")
+
+
+def results_path(date):
+    return os.path.join(results_dir(), f"article-games-{date.replace('-', '')}.json")
+
+
+class Hold(Exception):
+    """集計しない理由（state.json の holds に残す）。値を0や推測で埋めない。"""
+
+    def __init__(self, reason, detail=""):
+        super().__init__(reason)
+        self.reason, self.detail = reason, detail
+
+
+# 結果側の当日TOP3（scripts/game_day_rankings.py）と同じ厳格な読み方。欠損・不正値は0にしない。
+STAT_FIELDS = {"pts": "Point", "reb": "RB_TOT", "ast": "AS", "stl": "ST", "blk": "BS", "tov": "TO",
+               "pt2m": "PT2M", "pt2a": "PT2A", "tpm": "PT3M", "tpa": "PT3A", "ftm": "FTM", "fta": "FTA",
+               "eff": "EFF", "pm": "PLUSMINUS"}
+
+
+def strict_int(value, what):
+    if isinstance(value, bool) or not re.fullmatch(r"-?\d+", str(value if value is not None else "")):
+        raise Hold("boxscore_value_invalid", f"{what}={value!r}")
+    return int(value)
+
+
+def strict_seconds(value):
+    if value in ("DNP", "DNP-CD", "00:00"):
+        return 0
+    m = re.fullmatch(r"(\d+):([0-5]\d)", str(value if value is not None else ""))
+    if not m:
+        raise Hold("boxscore_value_invalid", f"PlayTime={value!r}")
+    return int(m[1]) * 60 + int(m[2])
+
+
+def verified_rows(g):
+    """保存済みの公式ボックススコアを検査して集計用の行にする。疑わしければ Hold。"""
+    key = str(g["game_id"])
+    home_id, away_id = str(g.get("home_id") or ""), str(g.get("away_id") or "")
+    if not home_id or not away_id or home_id == away_id:
+        raise Hold("boxscore_id_mismatch", "home_id/away_id")
+    teams = {home_id: (g.get("home") or "", g.get("away") or "", g["home_score"] > g["away_score"]),
+             away_id: (g.get("away") or "", g.get("home") or "", g["away_score"] > g["home_score"])}
+    out, seen, played_teams = [], set(), set()
+    for r in g.get("players") or []:
+        if strict_int(r.get("Category"), "Category") != 1 or strict_int(r.get("PeriodCategory"), "PeriodCategory") != TOTAL_PERIOD:
+            continue
+        secs = strict_seconds(r.get("PlayTime"))
+        if not secs:
+            continue   # 出場なし（従来どおり集計対象外）
+        pid, tid = str(r.get("PlayerID") or ""), str(r.get("TeamID") or "")
+        if str(r.get("ScheduleKey")) != key or tid not in teams or not pid:
+            raise Hold("boxscore_id_mismatch", f"ScheduleKey={r.get('ScheduleKey')!r} TeamID={tid!r} PlayerID={pid!r}")
+        if pid in seen:
+            raise Hold("duplicate_player_id", pid)
+        seen.add(pid)
+        played_teams.add(tid)
+        name = (r.get("PlayerNameJ") or "").strip()
+        if not name:
+            raise Hold("boxscore_value_invalid", f"PlayerNameJ missing PlayerID={pid}")
+        v = {k: strict_int(r.get(f), f) for k, f in STAT_FIELDS.items()}
+        team, opp, won = teams[tid]
+        out.append({
+            "name": name, "name_en": r.get("PlayerNameE") or "", "no": str(r.get("PlayerNo") or ""),
+            "player_id": pid, "team": team, "team_full": r.get("TeamNameJ") or team, "opp": opp, "won": won, "key": key,
+            "jp": None, "nationality": None, "nationality_verified": False,
+            "min": round(secs / 60, 1),
+            "pts": v["pts"], "reb": v["reb"], "ast": v["ast"], "stl": v["stl"], "blk": v["blk"], "tov": v["tov"],
+            "fgm": v["pt2m"] + v["tpm"], "fga": v["pt2a"] + v["tpa"],
+            "tpm": v["tpm"], "tpa": v["tpa"], "ftm": v["ftm"], "fta": v["fta"],
+            "eff": v["eff"], "pm": v["pm"],
+        })
+    if not out:
+        raise Hold("boxscore_missing")
+    if played_teams != set(teams):
+        raise Hold("boxscore_one_team", "両チームの出場記録が揃っていない")
+    return out
+
+
+def game_from_result(date, g):
+    """保存済みの確定結果（公式試合ページの記録）を集計用の形にする。再取得はしない。
+    返り値：(game, None) または (None, 保留理由)。"""
+    if not data.is_verified_final(g):
+        return None, "record_not_fixed"
     try:
-        queue = sorted(set(re.findall(r"ScheduleKey=(\d+)", get(SCHEDULE_URL))))
-    except Exception as e:  # noqa: BLE001
-        log(f"!! 日程ページの取得に失敗: {e}")
-        queue = []
-    queue = list(dict.fromkeys(queue + sorted(pending)))
+        same_day = bool(g.get("starts_at")) and data.jst_date(g["starts_at"]) == date
+    except (ValueError, TypeError, AttributeError):
+        same_day = False          # 時差の無い・読めない開始日時は対象日と照合できない
+    if not same_day:
+        return None, "date_mismatch"
+    try:
+        players = verified_rows(g)
+    except Hold as h:
+        return None, h.reason
+    key, home, away = str(g["game_id"]), g.get("home") or "", g.get("away") or ""
+    return {
+        "key": key, "date": date, "convention": g.get("convention") or "",
+        "ended": True, "fixed": True, "home": home, "away": away,
+        "home_full": g.get("home_full") or home, "away_full": g.get("away_full") or away,
+        "home_score": g["home_score"], "away_score": g["away_score"],
+        "ot": None,          # 保存データに延長の有無が無いため不明（推測で付けない）
+        "stadium": "", "same_day": [], "players": players,
+    }, None
 
-    games, failed, seen = {}, set(), set()
-    while queue:
-        key = queue.pop(0)
-        if key in seen:
-            continue
-        seen.add(key)
-        try:
-            g = parse_game(key, get(GAME_URL.format(key=key)))
-        except Exception as e:  # noqa: BLE001
-            log(f"!! {key} の取得に失敗: {e}")
-            failed.add(key)
-            continue
-        if not g or not g["date"]:
-            log(f"   {key}: ボックススコアなし")
-            continue
-        # 公開済みの日も再収集する（確定が遅れた同日試合を後から回収するため）。
-        # ページ取得は上の get() で既に済んでおり、追加のリクエストは発生しない。
-        if not is_premier(g) or g["date"] < oldest:
-            continue
-        games[key] = g
-        queue.extend(k for k in g["same_day"] if k not in seen)
 
-    by_date = {}
-    for g in games.values():
-        by_date.setdefault(g["date"], []).append(g)
+def assess_day(date, saved):
+    """1日分の判定。saved が None なら「結果データ未取得」（0試合とは別）。"""
+    if saved is None:
+        return {"state": "not_retrieved", "games_total": None, "games_ready": None,
+                "players": None, "holds": [], "excluded": [], "games": []}
+    bp = [g for g in saved.get("games", []) if g.get("competition") == DEFINITION["competition"]]
+    games, holds, excluded = [], [], []
+    ids = [str(g.get("game_id") or "") for g in bp]
+    duplicated = {k for k in ids if ids.count(k) > 1 or not k}
+    for g in sorted(bp, key=lambda x: str(x.get("game_id") or "")):
+        key = str(g.get("game_id") or "")
+        if g.get("status") in ("cancelled", "postponed"):
+            excluded.append({"key": key, "status": g["status"]})
+            continue
+        if key in duplicated:
+            game, reason = None, "duplicate_game_id"
+        else:
+            game, reason = game_from_result(date, g)
+        if game:
+            games.append(game)
+        else:
+            holds.append({"key": key or None, "home": g.get("home"), "away": g.get("away"),
+                          "status": g.get("status"), "record_note": g.get("record_note"), "reason": reason})
+    players = [p["player_id"] for x in games for p in x["players"]]
+    if len(set(players)) != len(players):
+        # 同じ選手が同じ日に2試合（結果側の当日TOP3と同じく未対応。重複を足し合わせない）
+        dup = sorted({p for p in players if players.count(p) > 1})
+        holds.append({"key": None, "reason": "duplicate_player_id", "detail": ",".join(dup)})
+    schedule_ok = (saved.get("schedule_complete") or {}).get(DEFINITION["competition"]) is True
+    if not schedule_ok:
+        holds.insert(0, {"key": None, "reason": "schedule_incomplete"})
+    if holds:
+        state = "held"
+    elif not games:
+        state = "no_games"
+    else:
+        state = "ready"
+    for x in games:
+        for p in x["players"]:
+            p.pop("player_id", None)     # 出力の形は従来どおり（重複の検査にだけ使う）
+    return {"state": state, "games_total": len(bp) - len(excluded), "games_ready": len(games),
+            "players": len(players) if state == "ready" else None,
+            "holds": holds, "excluded": excluded, "games": games if state == "ready" else []}
 
-    new_pending = {}
-    for date, day_games in sorted(by_date.items()):
-        expected = {k for g in day_games for k in g["same_day"]} | {g["key"] for g in day_games}
-        expected = {k for k in expected
-                    if (k in games and games[k]["date"] == date) or k in failed}
-        complete = (not (expected & failed)
-                    and all(g["ended"] and g["fixed"] and g["players"] for g in day_games))
-        already = date in published
-        if not complete:
-            # 未公開日は次回に持ち越し。公開済み日は確定済み分を維持し、降格させない。
-            if not already:
-                for g in day_games:
-                    new_pending[g["key"]] = date
-                log(f"{date}: 未確定の試合があるため次回に持ち越し")
-            else:
-                log(f"{date}: 追加試合が未確定。公開済みの確定分は維持")
+
+def content_as_of(date):
+    """結果データ（ボックススコアを含む）を公式から取得した時点。result-status の記録だけを使う。"""
+    status = load_json(os.path.join(results_dir(), "result-status.json"), {})
+    return (status.get("dates", {}).get(date) or {}).get("content_as_of")
+
+
+def ranking_content(summary):
+    """読者に見える中身だけ（生成時刻・取得時点・定義などの付帯情報は除く）。"""
+    games = sorted((g.get("key"), g.get("home_score"), g.get("away_score")) for g in summary.get("games", []))
+    return {"games": games, "eff_top": summary.get("eff_top"), "eff_top_jp": summary.get("eff_top_jp"),
+            "leaders": summary.get("leaders"), "player_count": summary.get("player_count")}
+
+
+def pending_note(days, published, today=None):
+    """未公開の日が保留・未取得なら、その状況を書く（表示中の旧結果は残したまま）。"""
+    notes = []
+    for date in sorted(days, reverse=True):
+        d = days[date]
+        if date in published:
+            continue        # 公開済みの日（旧結果を表示・アーカイブに掲載）
+        if d["state"] == "held":
+            waiting = [h for h in d["holds"] if h.get("key")]
+            reasons = sorted({"試合前" if h.get("status") == "scheduled" else REASON_LABEL.get(h["reason"], h["reason"])
+                              for h in d["holds"]})
+            notes.append(f"{jp_date(date)}：集計待ち（B.PREMIER {d['games_total']}試合中 "
+                         f"{len(waiting)}試合：{'・'.join(reasons)}）")
+        elif d["state"] == "not_retrieved" and date != today:   # 当日分は通常これから取得する
+            notes.append(f"{jp_date(date)}：試合結果データが未取得のため未集計（0人・0試合という意味ではありません）")
+    return notes
+
+
+def use_root(root):
+    """出力先を root 配下にする（update_results.py --root などと同じ場所に書く）。"""
+    global ROOT, STATS_DIR, STATE_PATH
+    ROOT = os.path.abspath(str(root))
+    STATS_DIR = os.path.join(ROOT, "data", "stats")
+    STATE_PATH = os.path.join(STATS_DIR, "state.json")
+
+
+def run(now=None, root=None):
+    """保存済みの確定結果（data/match_articles/article-games-*.json）から日別の貢献度ランキングを作る。
+    公式サイトへの追加取得はしない（結果の取得・確定判定は update_results / update_match_features 側）。
+    ニュース取得の成否には依存しない。戻り値は日別の判定（記録用）。"""
+    if root is not None:
+        use_root(root)
+    now = (now or datetime.now(JST)).astimezone(JST)
+    state = load_json(STATE_PATH, {"pending": {}, "published": []})
+    published = set(state.get("published", []))
+    today = now.date()
+    dates = [(today - timedelta(days=n)).isoformat() for n in range(LOOKBACK_DAYS, -1, -1)]
+
+    days, pending = {}, {}
+    for date in dates:
+        path = results_path(date)
+        saved = load_json(path, None) if os.path.exists(path) else None
+        day = assess_day(date, saved)
+        record = {k: v for k, v in day.items() if k != "games"}
+        record.update(content_as_of=content_as_of(date) if saved is not None else None,
+                      source=os.path.relpath(path, ROOT).replace(os.sep, "/"))
+        days[date] = record
+        if day["state"] == "held":
+            for h in day["holds"]:
+                if h.get("key"):
+                    pending[h["key"]] = date
+            kept = "公開済みの確定分は維持" if date in published else "次回に持ち越し"
+            log(f"{date}: 保留（{len(day['holds'])}件）{kept} " + json.dumps(day["holds"], ensure_ascii=False))
             continue
-        # 公開済み日は、収集できた試合が既存分を増やす時だけ再集計する（churn防止・取りこぼし回収）。
-        stored = load_json(os.path.join(STATS_DIR, f"{date}.json"), None) if already else None
-        stored_keys = {g["key"] for g in stored["games"]} if stored else set()
-        new_keys = {g["key"] for g in day_games}
-        if already and new_keys <= stored_keys:
+        if day["state"] != "ready":
+            log(f"{date}: {day['state']}")
             continue
-        day_games.sort(key=lambda g: g["key"])
-        summary = summarise(date, day_games)
+        summary = summarise(date, day["games"])
+        summary.update(retrieved_at=record["content_as_of"], definition=DEFINITION, source="saved_results")
         if not summary["eff_top"]:
             continue
-        save_json(os.path.join(STATS_DIR, f"{date}.json"), summary)
+        out = os.path.join(STATS_DIR, f"{date}.json")
+        stored = load_json(out, None)
+        if stored and ranking_content(stored) == ranking_content(summary):
+            if os.path.exists(os.path.join(ROOT, f"article-stats-{date.replace('-', '')}.html")):
+                published.add(date)   # 集計済みの記事がある日は公開済みとして扱う（state.json が古くても）
+            continue      # 中身（試合・得点・順位・人数）が同じなら書き換えない（旧方式で公開した日もそのまま）
+        if stored and {g["key"] for g in summary["games"]} < {g["key"] for g in stored["games"]}:
+            # 保存結果から試合が減った：減った理由を確かめずに公開済みの日を縮めない（旧結果を保持）
+            log(f"{date}: 保存結果の試合が公開済み（{len(stored['games'])}試合）より少ないため維持")
+            continue
+        # 試合が増えた・同じ試合でも公式記録の訂正で値が変わった → 作り直す
+        save_json(out, summary)
         write_article(summary)
         published.add(date)
-        kind = "再集計(追加試合を反映)" if already else "集計"
-        log(f"{date}: {kind} {len(day_games)}試合 / {summary['player_count']}人")
+        log(f"{date}: 集計 {len(day['games'])}試合 / {summary['player_count']}人（公式記録の取得時点 {summary['retrieved_at']}）")
 
-    # stats.html は常に最新の公開日を表示する（古い日を再集計しても最新日のまま）。
     newest = max(published) if published else None
     newest_summary = load_json(os.path.join(STATS_DIR, f"{newest}.json"), None) if newest else None
     if newest_summary:
-        write_stats_page(newest_summary, published)
+        write_stats_page(newest_summary, published, pending_note(days, published, today.isoformat()))
 
-    state["pending"] = new_pending
+    state["pending"] = pending
     state["published"] = sorted(published)
+    state["days"] = days
+    state["definition"] = DEFINITION
     save_json(STATE_PATH, state)
+    return days
+
+
+def run_reported(now=None, root=None):
+    """run() を呼び、日別の判定を Actions の注記に残す（ジョブログを読めなくても注記は読める）。
+    集計の失敗は結果の保存を止めない（警告にとどめる）。"""
+    try:
+        days = run(now, root)
+    except (ValueError, OSError, KeyError, TypeError) as exc:
+        print("::warning::Stats ranking failed type=" + type(exc).__name__ + " reason=" + str(exc)[:200])
+        return {"error": type(exc).__name__}
+    for date, d in sorted(days.items()):
+        holds = ",".join(f"{h.get('key')}:{h['reason']}" for h in d["holds"])
+        print(f"::notice::stats date={date} state={d['state']} games={d['games_ready']}/{d['games_total']} "
+              f"players={d['players']} content_as_of={d['content_as_of']} holds={holds}")
+    return {date: d["state"] for date, d in days.items()}
 
 
 if __name__ == "__main__":
-    run()
+    run_reported()

@@ -183,7 +183,8 @@ class WorkflowConditions(unittest.TestCase):
 
     def test_save_step_is_last_but_check_and_stages_only_il(self):
         names = [s['name'] for s in steps()]
-        self.assertEqual(names[-2:], [SAVE, CHECK])
+        self.assertEqual(names[-3:-1], [SAVE, '貢献度ランキングを集計・保存（ニュースと独立）'])   # 10/24 stats を追加
+        self.assertEqual(names[-1], CHECK)
         fallback = next(s for s in steps() if s['name'] == FALLBACK)['run']
         self.assertNotIn('injury', fallback)                  # 記事一覧の補完と IL の保存は独立
         self.assertEqual(save_il.FILES, IL)

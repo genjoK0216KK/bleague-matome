@@ -87,14 +87,16 @@ def _checked_at(updated):
 def render(summary, preview_root, preview_names, updated):
     date=summary['date'];name=filename(date)
     finished=any(data.is_verified_final(g) for g in summary['games'])
-    title=date[5:].replace('-','/')+(' 試合結果・当日のEFF' if finished else ' 出場予定選手（登録選手）のベスト5' if summary['games'] else ' 試合なし' if all(summary.get('schedule_complete',{}).get(k) for k in official.LEAGUES) else ' 日程未確認')
+    # 開始済みで公式記録がまだ無い試合（status=unconfirmed）がある日は、試合前の見出しにしない（10/23）。
+    started=not finished and any(g.get('status')=='unconfirmed' for g in summary['games'])
+    title=date[5:].replace('-','/')+(' 試合結果・当日のEFF' if finished else ' 試合結果（公式記録の確定待ち）' if started else ' 出場予定選手（登録選手）のベスト5' if summary['games'] else ' 試合なし' if all(summary.get('schedule_complete',{}).get(k) for k in official.LEAGUES) else ' 日程未確認')
     if finished: summary=dict(summary,lineups={})
     body='<nav class="article-jumps" aria-label="記事内の移動"><a href="#daily-results">試合</a>'
     if summary.get('game_day_rankings',{}).get('leagues'):body+='<a href="#game-eff">当日TOP3</a>'
     if summary.get('lineups'):body+='<a href="#daily-lineups">今季平均</a>'
     body+='</nav>'
     checked=_checked_at(updated)
-    body+='<section class="daily-results" id="daily-results"><h2>'+('試合結果' if finished else '試合予定')+'</h2>'
+    body+='<section class="daily-results" id="daily-results"><h2>'+('試合結果' if finished or started else '試合予定')+'</h2>'
     if any(not data.is_verified_final(g) and g.get('status') not in ('cancelled','postponed') for g in summary['games']):
         body+='<p class="result-asof">各試合の状態は '+articles.esc(updated)+' 時点の公式記録です（試合前／開始・公式記録未確定／終了）。</p>'
     sources=list(summary['sources'])
@@ -157,7 +159,7 @@ def render(summary, preview_root, preview_names, updated):
                 sources.extend(a['href'] for a in soup.select('.source a[href]'))
                 body+='<details class="day-rankings"><summary>'+articles.esc(g['home']+' vs '+g['away'])+' ポジション別平均</summary>'+str(rank)+''.join(str(n) for n in soup.select('.preview-warning'))+'<a href="'+preview+'">個別プレビュー</a></details>'
     body+='</details><p><a href="cat-kekka.html">日付別の試合結果</a> ／ <a href="injury.html">IL一覧</a></p>'
-    category='kekka' if finished else 'data'
+    category='kekka' if finished or started else 'data'
     html=articles.page(title,date,category,body,name,sources,updated)
     html=html.replace('<span>'+date.replace('-','.')+'</span>','<span>試合日 '+date.replace('-','.')+'</span>',1)
     import re

@@ -77,5 +77,31 @@ class PartialDay(unittest.TestCase):
         self.assertFalse(update_results.done(dict(fresh, game_day_rankings={'leagues': {}})))
 
 
+class StartedDayHeading(unittest.TestCase):
+    """10/23：全試合が「開始・公式記録未確定」の日を「出場予定選手のベスト5」と見出しにしない（10/25 本人「修正して」）。"""
+
+    def render(self, statuses):
+        from bs4 import BeautifulSoup
+        from scripts import day_articles, match_articles
+        games = [dict(game_id=str(500 + i), competition='BP', season='2026-27', starts_at='2026-10-23T19:05:00+09:00',
+                      status=st, ended=False, fixed=False, home='H', away='A', home_id='1', away_id='2',
+                      home_score=None, away_score=None, source='https://www.bleague.jp/game_detail/?ScheduleKey=' + str(500 + i))
+                 for i, st in enumerate(statuses)]
+        s = dict(date='2026-10-23', games=games, sources=[], schedule_complete=dict(BP=True, B1=True, BN=True), lineups={})
+        _, html = day_articles.render(s, '.', [], '2026-10-24 09:23 JST')
+        return BeautifulSoup(match_articles.readable_match(html), 'html.parser'), html
+
+    def test_started_without_record_is_a_results_page_waiting_for_record(self):
+        soup, html = self.render(['unconfirmed', 'unconfirmed', 'scheduled'])
+        self.assertEqual(soup.h1.get_text(), '10/23 試合結果（公式記録の確定待ち）')
+        self.assertEqual(soup.select_one('#daily-results h2').get_text(), '試合結果')
+        self.assertNotIn('出場予定選手', soup.h1.get_text())
+
+    def test_before_start_keeps_preview_heading(self):
+        soup, _ = self.render(['scheduled', 'scheduled'])
+        self.assertEqual(soup.h1.get_text(), '10/23 出場予定選手（登録選手）のベスト5')
+        self.assertEqual(soup.select_one('#daily-results h2').get_text(), '試合予定')
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -1,8 +1,148 @@
 {
- "pending": {},
+ "pending": {
+  "506497": "2026-10-23",
+  "506498": "2026-10-23",
+  "506499": "2026-10-23",
+  "506508": "2026-10-25",
+  "506509": "2026-10-25"
+ },
  "published": [
   "2026-10-12",
   "2026-10-17",
-  "2026-10-18"
- ]
+  "2026-10-18",
+  "2026-10-19",
+  "2026-10-21",
+  "2026-10-22",
+  "2026-10-24"
+ ],
+ "days": {
+  "2026-10-18": {
+   "state": "ready",
+   "games_total": 4,
+   "games_ready": 4,
+   "players": 88,
+   "holds": [],
+   "excluded": [],
+   "content_as_of": null,
+   "source": "data/match_articles/article-games-20261018.json"
+  },
+  "2026-10-19": {
+   "state": "ready",
+   "games_total": 9,
+   "games_ready": 9,
+   "players": 198,
+   "holds": [],
+   "excluded": [],
+   "content_as_of": null,
+   "source": "data/match_articles/article-games-20261019.json"
+  },
+  "2026-10-20": {
+   "state": "no_games",
+   "games_total": 0,
+   "games_ready": 0,
+   "players": null,
+   "holds": [],
+   "excluded": [],
+   "content_as_of": null,
+   "source": "data/match_articles/article-games-20261020.json"
+  },
+  "2026-10-21": {
+   "state": "ready",
+   "games_total": 9,
+   "games_ready": 9,
+   "players": 202,
+   "holds": [],
+   "excluded": [],
+   "content_as_of": "2026-10-22 17:25 JST",
+   "source": "data/match_articles/article-games-20261021.json"
+  },
+  "2026-10-22": {
+   "state": "ready",
+   "games_total": 2,
+   "games_ready": 2,
+   "players": 42,
+   "holds": [],
+   "excluded": [],
+   "content_as_of": "2026-10-23 17:22 JST",
+   "source": "data/match_articles/article-games-20261022.json"
+  },
+  "2026-10-23": {
+   "state": "held",
+   "games_total": 3,
+   "games_ready": 0,
+   "players": null,
+   "holds": [
+    {
+     "key": "506497",
+     "home": "滋賀",
+     "away": "長崎",
+     "status": "unconfirmed",
+     "record_note": "score_shown_without_official_record",
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506498",
+     "home": "大阪",
+     "away": "東京SR",
+     "status": "unconfirmed",
+     "record_note": "score_shown_without_official_record",
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506499",
+     "home": "琉球",
+     "away": "群馬",
+     "status": "unconfirmed",
+     "record_note": "score_shown_without_official_record",
+     "reason": "record_not_fixed"
+    }
+   ],
+   "excluded": [],
+   "content_as_of": "2026-10-24 16:58 JST",
+   "source": "data/match_articles/article-games-20261023.json"
+  },
+  "2026-10-24": {
+   "state": "ready",
+   "games_total": 8,
+   "games_ready": 8,
+   "players": 164,
+   "holds": [],
+   "excluded": [],
+   "content_as_of": "2026-10-25 00:08 JST",
+   "source": "data/match_articles/article-games-20261024.json"
+  },
+  "2026-10-25": {
+   "state": "held",
+   "games_total": 2,
+   "games_ready": 0,
+   "players": null,
+   "holds": [
+    {
+     "key": "506508",
+     "home": "東京SR",
+     "away": "名古屋D",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506509",
+     "home": "大阪",
+     "away": "千葉J",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    }
+   ],
+   "excluded": [],
+   "content_as_of": "2026-10-25 00:08 JST",
+   "source": "data/match_articles/article-games-20261025.json"
+  }
+ },
+ "definition": {
+  "league": "B.PREMIER",
+  "competition": "BP",
+  "metric": "EFF（公式記録の値）",
+  "aggregation": "その日のB.PREMIER全試合の試合合計（出場時間0秒の選手は除く）"
+ }
 }

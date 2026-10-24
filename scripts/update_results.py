@@ -9,8 +9,9 @@ import traceback
 from datetime import datetime, timedelta
 from pathlib import Path
 try:
-    from . import day_articles, official_data as official, preview_data as data, refresh_next_preview, result_status
+    from . import day_articles, official_data as official, preview_data as data, refresh_next_preview, result_status, stats
 except ImportError:
+    import stats
     import result_status
     import day_articles
     import official_data as official
@@ -224,6 +225,20 @@ def build(root):
     subprocess.run([sys.executable, str(Path(root) / 'scripts/build.py')], cwd=root, check=True)
 
 
+def refresh_stats(root):
+    """Daily EFF ranking from the saved, verified-final results only (no extra official reads).
+    Returns True when a ranking file or page changed. A stats problem never discards results."""
+    before = snapshot(root)
+    stats.run_reported(root=root)
+    return snapshot(root) != before
+
+
+def snapshot(root):
+    root = Path(root)
+    files = [root / 'stats.html', *sorted((root / 'data/stats').glob('*.json')), *sorted(root.glob('article-stats-*.html'))]
+    return {str(p): p.read_bytes() for p in files if p.exists()}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--season-year', required=True, type=int)
@@ -236,12 +251,16 @@ def main():
         except (ValueError, OSError, official.requests.RequestException) as exc:
             errors = getattr(exc, 'result_errors', [{'date': '-', 'error': str(exc), 'type': type(exc).__name__}])
             log_errors(errors)
-            if getattr(exc, 'status_changed', False):
+            # Rankings come from already-saved finals, so a failed refresh still updates them.
+            stats_changed = refresh_stats(args.root)
+            if getattr(exc, 'status_changed', False) or stats_changed:
                 build(args.root)      # show the failure notice; results themselves are unchanged
-            if getattr(exc, 'status_changed', False) or getattr(exc, 'status_file_changed', False):
+            if getattr(exc, 'status_changed', False) or getattr(exc, 'status_file_changed', False) or stats_changed:
                 mark_status_saved()
             print('::error::Result refresh failed; existing published data retained')
             return 1
+        report['stats_changed'] = refresh_stats(args.root)
+        report['changed'] = report['changed'] or report['stats_changed']
         try:
             preview = refresh_next_preview.refresh(args.root, args.season_year, datetime.now(data.JST))
         except (ValueError, OSError, official.requests.RequestException) as exc:

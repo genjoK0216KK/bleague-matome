@@ -298,6 +298,11 @@ class Timeline(unittest.TestCase):
 
 
 class MainLogging(unittest.TestCase):
+    def setUp(self):
+        # 貢献度ランキングは tests/test_stats_daily.py で確かめる（ここでは実データに書かない）
+        ranking = patch.object(update_results, 'refresh_stats', return_value=False)
+        ranking.start(); self.addCleanup(ranking.stop)
+
     def test_failure_logs_public_facts_builds_notice_and_exits_1(self):
         exc = ValueError('Official results incomplete; previous data retained')
         exc.result_errors = [{'date': '2026-10-21', 'error': str(exc), 'category': 'http', 'type': 'HTTPError',
