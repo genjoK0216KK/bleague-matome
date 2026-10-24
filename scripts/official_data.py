@@ -1,5 +1,6 @@
 """Read-only B.LEAGUE adapters. Parse HTML/JSON; never execute remote JavaScript."""
 import hashlib
+import gzip
 import json
 import re
 import time
@@ -13,6 +14,18 @@ import requests
 from bs4 import BeautifulSoup
 
 BASE = 'https://www.bleague.jp'
+# Public production feed named by the official genius_game_new2208.js.
+GAME_FEED = 'https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/'
+
+def allowed_source(url):
+    parsed = urlparse(url)
+    if parsed.scheme != 'https' or parsed.username or parsed.password or parsed.port not in (None, 443):
+        return False
+    if parsed.hostname == 'www.bleague.jp':
+        return True
+    return (parsed.hostname == 'b-league.s3.amazonaws.com' and not parsed.query and not parsed.fragment
+            and re.fullmatch(r'/web_json/v2_genius_contexts/\d+/(?:latestid|\d+\.json)', parsed.path) is not None)
+
 LEAGUES = {'BP': (1, 'player-b1', 2, 'B.PREMIER'),
            'B1': (2, 'player-b2', 7, 'B.ONE'),
            'BN': (3, 'player-b3', 15, 'B.NEXT')}
@@ -145,7 +158,7 @@ class Client:
         raise error
 
     def get(self, url):
-        if urlparse(url).hostname != 'www.bleague.jp' or not url.startswith('https://'):
+        if not allowed_source(url):
             raise DataError('Only official HTTPS sources are allowed')
         if url in self.memory:
             return self.memory[url]
@@ -165,10 +178,15 @@ class Client:
                 raise DataError('Capture URL mismatch')
         else:
             response = self._download(url)
-            if urlparse(response.url).hostname != 'www.bleague.jp':
+            if not allowed_source(response.url) or urlparse(response.url).hostname != urlparse(url).hostname:
                 raise DataError('Unexpected redirect')
             response.encoding = 'utf-8'
-            capture = {'url': url, 'retrieved_at': datetime.now(timezone.utc).isoformat(), 'body': response.text}
+            body = response.text
+            # requests normally decodes Content-Encoding; some official S3 objects
+            # are gzip bytes without that header. Decode only that exact public feed.
+            if url.startswith(GAME_FEED) and response.content[:2] == b'\x1f\x8b':
+                body = gzip.decompress(response.content).decode('utf-8')
+            capture = {'url': url, 'retrieved_at': datetime.now(timezone.utc).isoformat(), 'body': body}
             if path:
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text(json.dumps(capture, ensure_ascii=False), encoding='utf-8')
@@ -236,6 +254,74 @@ def parse_game(page, key, year, schedule_status=None):
                        if integer(p.get('Category')) == 1 and integer(p.get('PeriodCategory')) == 18]
     return game
 
+
+
+def fetch_game(client, page, key, year, schedule_status=None):
+    """Read the official public JSON only when this validated page advertises it.
+
+    No guessed snapshot IDs, no alternative host/path after a failure, and no
+    extra feed requests for future fixtures without an advertised positive ID.
+    """
+    game = parse_game(page, key, year, schedule_status)
+    if re.search(r'\b_contexts_s3id\.data\s*=', page):
+        return game
+    if schedule_status in ('cancelled', 'postponed'):
+        return game  # Preserve the official notice, including a TBD tipoff.
+    ids = re.findall(r'\b_contexts_s3id\[' + re.escape(str(key)) + r'\]\s*=\s*(\d+)', page)
+    if not ids or not any(int(value) > 0 for value in ids):
+        return game
+    if not re.search(r'\b_contexts\.scheduleKey\s*=\s*' + re.escape(str(key)) + r'\s*;', page):
+        raise DataError('Official feed page identity missing')
+    latest_url = GAME_FEED + str(key) + '/latestid'
+    latest = integer(json.loads(client.get(latest_url)))
+    if latest is None or latest <= 0:
+        raise DataError('Official latest snapshot ID invalid')
+    record_url = GAME_FEED + str(key) + '/' + str(latest) + '.json'
+    ctx = json.loads(client.get(record_url))
+    if not isinstance(ctx, dict) or not isinstance(ctx.get('Game'), dict):
+        raise DataError('Official feed game missing')
+    for field in ('HomeBoxscores', 'AwayBoxscores'):
+        if not isinstance(ctx.get(field), list) or any(not isinstance(row, dict) for row in ctx[field]):
+            raise DataError('Official feed boxscore structure invalid')
+    raw = ctx['Game']
+    # .NET date is epoch milliseconds; the suffix is a display timezone, not
+    # another offset to add. Keep the same instant used by the HTML fixture.
+    stamp = raw.get('GameDateTime')
+    if isinstance(stamp, str):
+        match = re.fullmatch(r'/Date\((\d+)(?:[+-]\d{4})?\)/', stamp)
+        if not match or int(match.group(1)) % 1000:
+            raise DataError('Official feed timestamp invalid')
+        raw['GameDateTime'] = int(match.group(1)) // 1000
+    parsed = parse_game('_contexts_s3id.data = ' + json.dumps(ctx), key, year, schedule_status)
+    if (parsed['competition'] != game['competition']
+            or datetime.fromisoformat(parsed['starts_at']) != datetime.fromisoformat(game['starts_at'])
+            or any(parsed[side + '_id'] != game[side + '_id'] for side in ('home', 'away'))):
+        raise DataError('Official feed contradicts fixture identity/time')
+    player_ids = set()
+    for side in ('home', 'away'):
+        rows = ctx.get(side.title() + 'Boxscores')
+        if not isinstance(rows, list):
+            raise DataError('Official feed boxscore missing')
+        totals = []
+        for row in rows:
+            if not isinstance(row, dict) or str(row.get('ScheduleKey')) != str(key):
+                raise DataError('Official feed boxscore identity mismatch')
+            if integer(row.get('Category')) == 1 and integer(row.get('PeriodCategory')) == 18:
+                pid = row.get('PlayerID')
+                if (str(row.get('TeamID')) != parsed[side + '_id'] or not pid
+                        or str(pid) in player_ids):
+                    raise DataError('Official feed player identity mismatch')
+                player_ids.add(str(pid))
+                point = integer(row.get('Point'))
+                if point is None or point < 0:
+                    raise DataError('Official feed player points invalid')
+                totals.append(point)
+        if parsed['ended'] and parsed['fixed']:
+            score = parsed[side + '_score']
+            if score is None or score < 0 or not totals or sum(totals) != score:
+                raise DataError('Official feed final score/boxscore mismatch')
+    parsed['record_source'] = record_url
+    return parsed
 
 def stats_url(year, league, index=None, aggregation="tot"):
     if aggregation not in ('tot', 'avg'):
@@ -396,7 +482,7 @@ def fetch_day(client, year, league, date):
     for key in plan['keys']:
         game_url = f'{BASE}/game_detail/?ScheduleKey={key}'
         try:
-            g = parse_game(client.get(game_url), key, year, plan['notices'].get(key))
+            g = fetch_game(client, client.get(game_url), key, year, plan['notices'].get(key))
             if g['competition'] != league:
                 raise DataError('Schedule/game league mismatch')
             if key in plan['notices']:
@@ -554,14 +640,19 @@ def parse_future_game(page, key, year, schedule_status=None):
         game['official_date'] = datetime.strptime(day, '%Y.%m.%d').date().isoformat()
     related = soup.select('.related-links a[href*="club_detail/?TeamID="]')
     scores_shown = False
+    score_markup_empty = False
     for side in ('home', 'away'):
         team = area.select_one('.team-wrap.' + side)
         if team is None or any(team.select_one(sel) is None for sel in ('.team-point', '.team-name .for-pc', '.team-name .for-sp')):
             raise DataError('Future-game team markup missing')
-        points = team.select_one('.team-point').find(string=True, recursive=False)
+        # The official JS shell may leave only the HOME/AWAY label. Retain
+        # validated fixture identity/time, never infer zero or a final result.
+        points = ''.join(team.select_one('.team-point').find_all(string=True, recursive=False)).strip()
         if not points:
-            raise DataError('Future-game score markup missing')
-        if points.strip() != '--':
+            score_markup_empty = True
+        elif points != '--':
+            if not re.fullmatch(r'\d+', points):
+                raise DataError('Future-game score markup invalid')
             # 試合ページに得点の表示はあるが、公式記録（試合データ）がまだ無い：試合中か記録の確定前。
             # 得点は取り込まず「開始・公式記録未確定」として扱う（確定条件は GameEndedFlg かつ RecordFixedFlg のまま）。
             # その日の他の試合（確定済み）の反映は止めない。
@@ -580,6 +671,10 @@ def parse_future_game(page, key, year, schedule_status=None):
     if scores_shown:
         game['status'] = 'unconfirmed'
         game['record_note'] = 'score_shown_without_official_record'
+    elif score_markup_empty:
+        if schedule_status not in ('cancelled', 'postponed'):
+            game['status'] = 'unconfirmed'
+        game['record_note'] = 'official_record_not_loaded'
     return game
 
 
@@ -618,3 +713,4 @@ def fetch_next_games(client, year, league, after, horizon=35):
             if upcoming:
                 return upcoming
     return []
+
