@@ -132,3 +132,12 @@ class PublicGameFeed(unittest.TestCase):
         game['players'][0]['EFF'] = 0
         rows = ranking.player_rows(game, positions, '2026-10-24')
         self.assertEqual(rows[0]['eff'], 0)
+
+    def test_postponed_or_cancelled_unknown_time_keeps_notice_without_feed(self):
+        for status in ('postponed', 'cancelled'):
+            client = Capture()
+            game = o.fetch_game(client, page().replace('15:00 TIP OFF', '未定'), '506500', 2026, status)
+            self.assertEqual(game['status'], status)
+            self.assertIsNone(game['starts_at'])
+            self.assertEqual(game['official_date'], '2026-10-24')
+            self.assertFalse(client.calls)
