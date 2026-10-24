@@ -130,7 +130,7 @@ class Oct23Shape(Base):
         self.assertEqual(s['definition']['league'], 'B.PREMIER')
         status = self.stats_page().select_one('#stats-status').text
         self.assertIn('表示中：10月22日のB.PREMIER 2試合', status)
-        self.assertIn('10月23日：集計待ち（B.PREMIER 3試合中 3試合が公式記録が未確定）', status)
+        self.assertIn('10月23日：集計待ち（B.PREMIER 3試合中 3試合：公式記録が未確定）', status)
 
     def test_scores_alone_never_become_eff(self):
         """得点だけ表示された試合（記録なし）から EFF を作らない。"""
@@ -326,7 +326,7 @@ class InvalidInput(Base):
         self.run_stats()
         status = self.stats_page().select_one('#stats-status').text
         self.assertIn('表示中：10月21日', status)
-        self.assertIn('10月22日：集計待ち（B.PREMIER 1試合中 1試合が' + stats.REASON_LABEL['boxscore_value_invalid'], status)
+        self.assertIn('10月22日：集計待ち（B.PREMIER 1試合中 1試合：' + stats.REASON_LABEL['boxscore_value_invalid'], status)
 
 
 class Corrections(Base):
