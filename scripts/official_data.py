@@ -554,14 +554,19 @@ def parse_future_game(page, key, year, schedule_status=None):
         game['official_date'] = datetime.strptime(day, '%Y.%m.%d').date().isoformat()
     related = soup.select('.related-links a[href*="club_detail/?TeamID="]')
     scores_shown = False
+    score_markup_empty = False
     for side in ('home', 'away'):
         team = area.select_one('.team-wrap.' + side)
         if team is None or any(team.select_one(sel) is None for sel in ('.team-point', '.team-name .for-pc', '.team-name .for-sp')):
             raise DataError('Future-game team markup missing')
-        points = team.select_one('.team-point').find(string=True, recursive=False)
+        # The official JS shell may leave only the HOME/AWAY label. Retain
+        # validated fixture identity/time, never infer zero or a final result.
+        points = ''.join(team.select_one('.team-point').find_all(string=True, recursive=False)).strip()
         if not points:
-            raise DataError('Future-game score markup missing')
-        if points.strip() != '--':
+            score_markup_empty = True
+        elif points != '--':
+            if not re.fullmatch(r'\d+', points):
+                raise DataError('Future-game score markup invalid')
             # 試合ページに得点の表示はあるが、公式記録（試合データ）がまだ無い：試合中か記録の確定前。
             # 得点は取り込まず「開始・公式記録未確定」として扱う（確定条件は GameEndedFlg かつ RecordFixedFlg のまま）。
             # その日の他の試合（確定済み）の反映は止めない。
@@ -580,6 +585,10 @@ def parse_future_game(page, key, year, schedule_status=None):
     if scores_shown:
         game['status'] = 'unconfirmed'
         game['record_note'] = 'score_shown_without_official_record'
+    elif score_markup_empty:
+        if schedule_status not in ('cancelled', 'postponed'):
+            game['status'] = 'unconfirmed'
+        game['record_note'] = 'official_record_not_loaded'
     return game
 
 
@@ -618,3 +627,4 @@ def fetch_next_games(client, year, league, after, horizon=35):
             if upcoming:
                 return upcoming
     return []
+
