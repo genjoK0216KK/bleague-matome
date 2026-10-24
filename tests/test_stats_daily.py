@@ -177,8 +177,11 @@ class Rules(Base):
 
     def test_today_not_yet_retrieved_is_not_shown_as_missing(self):
         self.save('2026-10-22', [game('506495')])
+        self.save('2026-10-21', [game('506490', status='unconfirmed')])
         self.run_stats()
         status = self.stats_page().select_one('#stats-status').text
+        self.assertIn('表示中：10月22日', status)
+        self.assertIn('10月21日：集計待ち', status)                      # 表示中より古い未公開日も出す
         self.assertIn('10月23日：試合結果データが未取得', status)       # 過去日の未取得は出す
         self.assertNotIn('10月24日', status)                            # 当日（NOW=10/24）はまだ出さない
 

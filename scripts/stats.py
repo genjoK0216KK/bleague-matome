@@ -414,7 +414,7 @@ def thumbnail(s):
 def status_block(s, notes):
     """表示中の集計の対象日と、より新しい日の保留・未取得の状況。旧結果は消さずに併記する。"""
     items = "".join(f"<li>{esc(n)}</li>" for n in notes)
-    newer = (f'<p style="margin:6px 0 0">新しい日の状況：</p><ul style="margin:4px 0 0">{items}</ul>' if notes else "")
+    newer = (f'<p style="margin:6px 0 0">集計できていない日：</p><ul style="margin:4px 0 0">{items}</ul>' if notes else "")
     return (f'<div class="note" id="stats-status"><p style="margin:0">表示中：{esc(jp_date(s["date"]))}の'
             f'B.PREMIER {len(s["games"])}試合（記録確定分）</p>{newer}</div>')
 
@@ -626,13 +626,13 @@ def ranking_content(summary):
             "leaders": summary.get("leaders"), "player_count": summary.get("player_count")}
 
 
-def pending_note(days, newest, today=None):
-    """表示中より新しい日が保留・未取得なら、その状況を書く（旧結果は残したまま）。"""
+def pending_note(days, published, today=None):
+    """未公開の日が保留・未取得なら、その状況を書く（表示中の旧結果は残したまま）。"""
     notes = []
     for date in sorted(days, reverse=True):
         d = days[date]
-        if newest and date <= newest:
-            break
+        if date in published:
+            continue        # 公開済みの日（旧結果を表示・アーカイブに掲載）
         if d["state"] == "held":
             waiting = [h for h in d["holds"] if h.get("key")]
             reasons = sorted({REASON_LABEL.get(h["reason"], h["reason"]) for h in d["holds"]})
@@ -703,7 +703,7 @@ def run(now=None, root=None):
     newest = max(published) if published else None
     newest_summary = load_json(os.path.join(STATS_DIR, f"{newest}.json"), None) if newest else None
     if newest_summary:
-        write_stats_page(newest_summary, published, pending_note(days, newest, today.isoformat()))
+        write_stats_page(newest_summary, published, pending_note(days, published, today.isoformat()))
 
     state["pending"] = pending
     state["published"] = sorted(published)
