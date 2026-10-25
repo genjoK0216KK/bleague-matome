@@ -1,0 +1,70 @@
+name: 自動生成サムネを取り込み
+
+# Mac mini が thumb-inbox ブランチへ画像を送った直後に、送信スクリプト（scripts/thumb_deliver.py）が
+# このワークフローを手動起動する（MINI-8）。通常更新（update.yml、1日4回）の成功を待たない。
+# ※ thumb-inbox への push では起動できない（push で動くワークフローは送られたブランチ内の定義を使うが、
+#    thumb-inbox には画像しか無い）。起動に失敗した時の保険として1時間ごとにも動き、update.yml にも同じ取り込み工程がある。
+# data/thumbs/config.json の enabled が true の時だけ動く（既定 false＝何もしない）。
+# 順番待ちの列 site-update には並ばない（2件目の待ちが古い待ちを取り消すため、通常更新を消さないように）。
+# 代わりに、公開が他の更新とぶつかったら最新の main から作り直して最大3回やり直す。
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"   # 保険（毎時17分）。新しい画像が無ければ何も変えずに終わる
+
+permissions:
+  contents: write
+
+concurrency:
+  group: thumbs
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet requests beautifulsoup4 fonttools brotli pillow
+      - name: 取り込み→差し替え→公開（有効時のみ・ぶつかったら最新から再実行）
+        run: |
+          git config user.name "bleague-matome-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            if ! python -c "import json,sys; sys.exit(0 if json.load(open('data/thumbs/config.json')).get('enabled') is True else 1)"; then
+              echo "自動サムネは無効（data/thumbs/config.json）"
+              exit 0
+            fi
+            if ! git fetch -q --depth=1 origin thumb-inbox; then
+              echo "::notice::thumb-inbox ブランチがまだ無いため取り込みなし"
+              exit 0
+            fi
+            rm -rf "$RUNNER_TEMP/thumb-inbox" && mkdir -p "$RUNNER_TEMP/thumb-inbox"
+            git archive FETCH_HEAD inbox | tar -x -C "$RUNNER_TEMP/thumb-inbox" || { echo "::notice::inbox が空"; exit 0; }
+            : > "$RUNNER_TEMP/out"
+            GITHUB_OUTPUT="$RUNNER_TEMP/out" python scripts/thumb_auto.py import --inbox "$RUNNER_TEMP/thumb-inbox/inbox"
+            # 新しく採用した画像がある時だけページを作り直す（build は毎回「最終更新」を書き換えるため、空の更新を出さない）
+            if grep -q '^imported=[1-9]' "$RUNNER_TEMP/out"; then
+              python scripts/build.py
+            fi
+            if [ -z "$(git status --porcelain)" ]; then
+              echo "変化なし"
+              exit 0
+            fi
+            git add -A
+            git commit -q -m "自動サムネ取り込み: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M')"
+            if python scripts/publish_update.py; then
+              exit 0
+            fi
+            echo "::warning::公開が他の更新とぶつかったため、最新の main から作り直します（${attempt}/3）"
+          done
+          echo "::error::3回とも公開できませんでした。次の取り込み（update.yml を含む）で再試行されます"
+          exit 1

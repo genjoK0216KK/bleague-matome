@@ -4,7 +4,7 @@
 流れ（MINI-8、10/25 本人「サムネの自動差し替えまで進めて」）
   1. 受け渡し：Mac mini の ready/<id>/ を tools/thumb_deliver.py が専用ブランチ thumb-inbox の
      inbox/<id>/{manifest.json, thumbnail.png, source.html} に置く（main には書かない）。
-  2. 取り込み（import）：update.yml がそのブランチを読み取り専用で展開し、本スクリプトが検査する。
+  2. 取り込み（import）：thumbs.yml（送信直後に起動・1時間ごとの保険）と update.yml がそのブランチを読み取り専用で展開し、本スクリプトが検査する。
        - manifest の形・status・style・ID（記事パス＋本文指紋から再計算）・画像の SHA256・PNG 寸法・制作側の5項目QA
        - 同梱の固定原文 source.html の blob SHA と本文指紋が manifest と一致すること
        - いまの記事本文が、その固定原文と同じ版であること（違えば「古い版」として採用しない）
@@ -86,12 +86,16 @@ def editorial_fingerprint(raw):
     return hashlib.sha256(article_text(raw).encode()).hexdigest()
 
 
-AUTO_BLOCK = re.compile(r'<!-- AUTO:([A-Z]+):START -->.*?<!-- AUTO:\1:END -->', re.S)
+# 本文ではない自動枠だけを許可リストで除く（閲覧数・広告・計測タグ）。これ以外の AUTO 枠（本文・表など）は
+# 照合に含めるので、得点などが変われば指紋も変わる。生成側（Mac mini の thumbnail_queue.py）の
+# 正規化もこの定義と同じにする（docs/mini8-mac-side/02-thumbnail_queue-normalize.patch。試験で一致を確認）。
+NON_EDITORIAL_AUTO = ('PV', 'AFFILIATE', 'GA')
+AUTO_BLOCK = re.compile(r'<!-- AUTO:(' + '|'.join(NON_EDITORIAL_AUTO) + r'):START -->.*?<!-- AUTO:\1:END -->', re.S)
 
 
 def stable_fingerprint(raw):
-    """記事の中身の照合用。build が毎回書き換える自動枠（閲覧数 AUTO:PV・広告 AUTO:AFFILIATE など）を除く。
-    本文・見出し・表が変われば変わり、閲覧数や画像URLだけの変化では変わらない。"""
+    """記事の中身の照合用（正規化版の本文指紋）。本文ではない自動枠（NON_EDITORIAL_AUTO）だけを除く。
+    本文・見出し・表が変われば変わり、閲覧数・広告・画像URLだけの変化では変わらない。"""
     html = raw.decode('utf-8') if isinstance(raw, bytes) else raw
     return hashlib.sha256(article_text(AUTO_BLOCK.sub('', html)).encode()).hexdigest()
 
@@ -194,7 +198,10 @@ def check_bundle(root, folder):
     if (manifest.get('width'), manifest.get('height')) not in ((width, height), (None, None)):
         raise Reject('image_invalid', '寸法が manifest と違う')
     source = (folder / 'source.html').read_bytes() if (folder / 'source.html').exists() else b''
-    if blob_sha(source) != manifest['source_blob_sha'] or editorial_fingerprint(source) != manifest['editorial_fingerprint']:
+    # 生成側の本文指紋は、正規化版（自動枠を除く＝現行の生成側）と旧版（自動枠込み＝既存の manifest）の
+    # どちらでもよい。どちらも固定原文から再計算して一致すること。
+    if blob_sha(source) != manifest['source_blob_sha'] or manifest['editorial_fingerprint'] not in (
+            stable_fingerprint(source), editorial_fingerprint(source)):
         raise Reject('source_mismatch', '固定原文が manifest と一致しない')
     current_path = Path(root) / path
     if not current_path.exists():
@@ -410,6 +417,10 @@ def main(argv=None):
             print(f"::notice::thumb rejected id={r['id']} reason={r['reason']} {r['detail']}")
         for r in result['imported']:
             print(f"::notice::thumb imported id={r['id']} article={r['article']}")
+        output = os.environ.get('GITHUB_OUTPUT')
+        if output:                                  # 取り込み専用ワークフローが「新しく採用したか」を判断する
+            with open(output, 'a', encoding='utf-8') as handle:
+                handle.write(f"imported={len(result['imported'])}\n")
     else:
         result = apply_all(root, force=args.force)
     print(json.dumps(result, ensure_ascii=False))

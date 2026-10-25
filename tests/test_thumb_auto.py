@@ -328,5 +328,212 @@ class Workflow(unittest.TestCase):
         self.assertIs(config['enabled'], False)                       # 本人確認までは無効
 
 
+
+class ReviewFixes(Base):
+    """ChatGPT 独立QA（10/25 21:26）の4点。"""
+
+    def producer_bundle(self, source_html, fingerprint):
+        raw = source_html.encode()
+        image = png()
+        key = ta.request_id(self.PATH, fingerprint, STYLE)
+        m = dict(id=key, article_path=self.PATH, editorial_fingerprint=fingerprint, source_blob_sha=ta.blob_sha(raw),
+                 style=STYLE, status='ready_unpublished', image_sha256=hashlib.sha256(image).hexdigest(),
+                 width=1672, height=941, prepared_at='2026-10-26T06:00:00+00:00', brief={'qa': QA})
+        folder = self.inbox / key
+        folder.mkdir(parents=True)
+        (folder / 'manifest.json').write_text(json.dumps(m))
+        (folder / 'thumbnail.png').write_bytes(image)
+        (folder / 'source.html').write_bytes(raw)
+        return m
+
+    # P1-1：生成側の正規化版の指紋（PV除外）を受け取り側が受け付ける。旧版の指紋も受け付け続ける
+    def test_producer_normalized_fingerprint_is_accepted(self):
+        src = article(pv=4)
+        (self.root / self.PATH).write_text(article(pv=9))           # 閲覧数だけ増えた現本文
+        m = self.producer_bundle(src, ta.stable_fingerprint(src.encode()))
+        self.assertEqual([x['id'] for x in self.run_import()['imported']], [m['id']])
+
+    def test_legacy_raw_fingerprint_is_still_accepted(self):
+        src = article(pv=4)
+        (self.root / self.PATH).write_text(article(pv=9))
+        m = self.producer_bundle(src, ta.editorial_fingerprint(src.encode()))
+        self.assertEqual([x['id'] for x in self.run_import()['imported']], [m['id']])
+
+    def test_fingerprint_that_matches_neither_is_rejected(self):
+        m = self.producer_bundle(article(), hashlib.sha256(b'other').hexdigest())
+        r = self.run_import()
+        self.assertEqual(r['imported'], [])
+        self.assertEqual(r['rejected'][0]['reason'], 'source_mismatch')
+
+    def test_view_count_only_change_keeps_producer_fingerprint(self):
+        a, b = article(pv=4).encode(), article(pv=40).encode()
+        self.assertEqual(ta.stable_fingerprint(a), ta.stable_fingerprint(b))   # 生成側も同じ定義＝再生成しない
+        self.assertNotEqual(ta.editorial_fingerprint(a), ta.editorial_fingerprint(b))
+
+    # P2-4：除外は許可リストの自動枠だけ。本文の自動枠（得点など）の変化は検知する
+    def test_body_auto_block_change_is_detected(self):
+        before = b'<article><h1>Result</h1><!-- AUTO:BODY:START --><p>95-90</p><!-- AUTO:BODY:END --></article>'
+        self.assertNotEqual(ta.stable_fingerprint(before), ta.stable_fingerprint(before.replace(b'95-90', b'101-90')))
+
+    def test_only_listed_non_editorial_blocks_are_ignored(self):
+        self.assertEqual(ta.NON_EDITORIAL_AUTO, ('PV', 'AFFILIATE', 'GA'))
+        base = '<article><h1>T</h1><p>本文</p>{}</article>'
+        for name in ta.NON_EDITORIAL_AUTO:
+            noisy = base.format(f'<!-- AUTO:{name}:START --><p>x{name}</p><!-- AUTO:{name}:END -->')
+            self.assertEqual(ta.stable_fingerprint(noisy), ta.stable_fingerprint(base.format('')), name)
+        other = base.format('<!-- AUTO:STANDINGS:START --><p>1位</p><!-- AUTO:STANDINGS:END -->')
+        self.assertNotEqual(ta.stable_fingerprint(other), ta.stable_fingerprint(base.format('')))
+
+    def test_body_score_change_makes_imported_image_stale(self):
+        page = article(body='<!-- AUTO:BODY:START -->95-90<!-- AUTO:BODY:END -->')
+        (self.root / self.PATH).write_text(page)
+        self.producer_bundle(page, ta.stable_fingerprint(page.encode()))
+        self.run_import()
+        ta.apply_all(self.root)
+        self.assertIn('data-auto-thumb', self.page())
+        (self.root / self.PATH).write_text(self.page().replace('95-90', '101-90'))
+        r = ta.apply_all(self.root)
+        self.assertEqual(r['stale'][0]['reason'], 'stale_source')
+        self.assertNotIn('data-auto-thumb', self.page())
+
+    def test_independent_repro_expectations(self):
+        """ChatGPT の単独再現スクリプト（MINI-8-independent-repro-073cad6）と同じ条件で、修正後の期待値になる。"""
+        source = ('<html><head><title>test</title></head><body><article><h1>10/25 test</h1>'
+                  '<!-- AUTO:PV:START --><span>7 views</span><!-- AUTO:PV:END -->'
+                  '<p>confirmed article body</p></article></body></html>')
+        (self.root / 'article-daily-20261025.html').write_text(source)
+        self.producer_bundle(source, ta.stable_fingerprint(source.encode()))
+        self.assertEqual(len(self.run_import()['imported']), 1)          # 'accepted'
+        before = b'<article><h1>Result</h1><!-- AUTO:BODY:START --><p>95-90</p><!-- AUTO:BODY:END --></article>'
+        self.assertFalse(ta.stable_fingerprint(before) == ta.stable_fingerprint(before.replace(b'95-90', b'101-90')))
+
+    def test_import_reports_count_for_workflow(self):
+        src = article()
+        self.producer_bundle(src, ta.stable_fingerprint(src.encode()))
+        out = Path(self.temp.name) / 'gh-output'
+        with redirect_stdout(io.StringIO()):
+            import os
+            old = os.environ.get('GITHUB_OUTPUT')
+            os.environ['GITHUB_OUTPUT'] = str(out)
+            try:
+                ta.main(['import', '--root', str(self.root), '--inbox', str(self.inbox)])
+                ta.main(['import', '--root', str(self.root), '--inbox', str(self.inbox)])
+            finally:
+                os.environ.pop('GITHUB_OUTPUT') if old is None else os.environ.__setitem__('GITHUB_OUTPUT', old)
+        self.assertEqual(out.read_text().split(), ['imported=1', 'imported=0'])
+
+
+class DeliverRetry(Deliver):
+    """P1-2：送信に失敗しても、新しい画像が無い次の回で送り直される。"""
+
+    def test_failed_push_is_retried_on_next_run_without_new_images(self):
+        good = git(self.repo, 'remote', 'get-url', 'origin').strip()
+        git(self.repo, 'remote', 'set-url', 'origin', str(Path(self.temp.name) / 'unreachable.git'))
+        with redirect_stdout(io.StringIO()), self.assertRaises(thumb_deliver.DeliverError):
+            import contextlib
+            with contextlib.redirect_stderr(io.StringIO()):
+                thumb_deliver.deliver(self.ready, self.repo, self.state)
+        git(self.repo, 'remote', 'set-url', 'origin', good)
+        self.assertEqual(self.deliver(), [self.items['新']])             # 生成の新規なし（pending0）でも送り直す
+        self.assertEqual(self.deliver(), [])                             # 以後は変化なし
+
+    def test_push_race_is_retried_with_fresh_branch(self):
+        from unittest import mock
+        real = thumb_deliver.git
+        calls = {'push': 0}
+
+        def flaky(repo, *args, check=True):
+            if args and args[0] == 'push':
+                calls['push'] += 1
+                if calls['push'] == 1:
+                    return subprocess.CompletedProcess(args, 1, '', 'rejected (fetch first)')
+            return real(repo, *args, check=check)
+
+        import contextlib
+        with mock.patch.object(thumb_deliver, 'git', side_effect=flaky), contextlib.redirect_stderr(io.StringIO()):
+            self.assertEqual(self.deliver(), [self.items['新']])
+        self.assertEqual(calls['push'], 2)
+        self.assertEqual(git(self.remote, 'ls-tree', '--name-only', 'thumb-inbox', 'inbox/').split(),
+                         [f'inbox/{self.items["新"]}'])
+
+    def test_cli_exit_code_is_1_when_push_keeps_failing(self):
+        git(self.repo, 'remote', 'set-url', 'origin', str(Path(self.temp.name) / 'unreachable.git'))
+        import contextlib, sys
+        from unittest import mock
+        argv = ['thumb_deliver', '--ready', str(self.ready), '--repo', str(self.repo), '--state', str(self.state)]
+        with mock.patch.object(sys, 'argv', argv), redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+            self.assertEqual(thumb_deliver.main(), 1)
+
+
+class DeliverDispatch(Deliver):
+    """送れた時だけ、サイトの取り込み（thumbs.yml）を gh で起動する。起動の失敗は送信の失敗にしない。"""
+
+    def run_with_gh(self, returncode=0, origin='https://github.com/genjoK0216KK/bleague-matome.git'):
+        from unittest import mock
+        import contextlib
+        calls = []
+        real_run = subprocess.run
+
+        def fake_run(cmd, *a, **k):
+            if cmd and cmd[0] == 'gh':
+                calls.append(cmd)
+                return subprocess.CompletedProcess(cmd, returncode, '', '' if returncode == 0 else 'HTTP 403')
+            return real_run(cmd, *a, **k)
+
+        real_slug = thumb_deliver.repo_slug
+        with mock.patch.object(thumb_deliver.subprocess, 'run', side_effect=fake_run), \
+             mock.patch.object(thumb_deliver, 'repo_slug', side_effect=lambda r, remote='origin': real_slug(r, remote) or 'genjoK0216KK/bleague-matome'), \
+             contextlib.redirect_stderr(io.StringIO()):
+            added = self.deliver()
+        return added, calls
+
+    def test_ingest_is_started_after_successful_push(self):
+        added, calls = self.run_with_gh()
+        self.assertEqual(added, [self.items['新']])
+        self.assertEqual(calls, [['gh', 'workflow', 'run', 'thumbs.yml', '--repo', 'genjoK0216KK/bleague-matome', '--ref', 'main']])
+
+    def test_nothing_new_does_not_start_ingest(self):
+        self.deliver()
+        added, calls = self.run_with_gh()
+        self.assertEqual((added, calls), ([], []))
+
+    def test_failed_dispatch_does_not_fail_delivery(self):
+        added, calls = self.run_with_gh(returncode=1)
+        self.assertEqual(added, [self.items['新']])
+        self.assertEqual(len(calls), 1)
+
+    def test_repo_slug_from_github_remotes(self):
+        for url in ('https://github.com/genjoK0216KK/bleague-matome.git', 'git@github.com:genjoK0216KK/bleague-matome.git',
+                    'https://github.com/genjoK0216KK/bleague-matome'):
+            git(self.repo, 'remote', 'set-url', 'origin', url)
+            self.assertEqual(thumb_deliver.repo_slug(self.repo), 'genjoK0216KK/bleague-matome')
+
+
+class ThumbsWorkflow(unittest.TestCase):
+    """P1-3：取り込みは thumb-inbox への push で即動き、通常更新の成功に依存しない。"""
+    ROOT = Path(__file__).resolve().parents[1]
+
+    def test_ingest_is_dispatched_with_hourly_fallback_outside_site_update_queue(self):
+        text = (self.ROOT / '.github/workflows/thumbs.yml').read_text()
+        trigger = re.search(r'^on:\n(.*?)^permissions:', text, re.M | re.S).group(1)
+        self.assertIn('workflow_dispatch:', trigger)
+        self.assertIn('cron: "17 * * * *"', trigger)
+        self.assertNotIn('push:', trigger)       # thumb-inbox には定義が無いので push では起動できない
+        self.assertIn('group: thumbs', text)
+        self.assertNotIn('site-update', text.split('concurrency:')[1].split('jobs:')[0])
+        self.assertIn("get('enabled') is True", text)
+        self.assertIn("grep -q '^imported=[1-9]'", text)              # 新しく採用した時だけ build
+        self.assertIn('python scripts/publish_update.py', text)
+        self.assertIn('git reset -q --hard origin/main', text)        # ぶつかったら最新から作り直す
+        self.assertNotIn('push origin', text)                         # thumb-inbox や main へ直接 push しない
+
+    def test_mac_side_patches_match_site_definitions(self):
+        p2 = (self.ROOT / 'docs/mini8-mac-side/02-thumbnail_queue-normalize.patch').read_text()
+        self.assertIn('NON_EDITORIAL_AUTO = ' + repr(ta.NON_EDITORIAL_AUTO), p2)
+        self.assertIn(r"AUTO_BLOCK = re.compile(r'<!-- AUTO:(' + '|'.join(NON_EDITORIAL_AUTO) + r'):START -->.*?<!-- AUTO:\1:END -->', re.S)", p2)
+        p1 = (self.ROOT / 'docs/mini8-mac-side/01-OPERATIONS-deliver-every-run.patch').read_text()
+        self.assertIn('【毎回の定期回】', p1)
+        self.assertIn('静かに終了する回でも', p1)
+
 if __name__ == '__main__':
     unittest.main()

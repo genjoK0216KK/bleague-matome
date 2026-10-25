@@ -1,0 +1,20 @@
+--- a/thumbnail_queue.py
++++ b/thumbnail_queue.py
+@@ -67,9 +67,16 @@
+             self.parts.append(data)
+ 
+ 
++# サイト側 scripts/thumb_auto.py の NON_EDITORIAL_AUTO / AUTO_BLOCK と同じ定義（本文ではない自動枠だけを除く）。
++# 閲覧数（PV）・広告（AFFILIATE）・計測タグ（GA）の更新では指紋が変わらず、本文・表の枠が変われば変わる。
++NON_EDITORIAL_AUTO = ('PV', 'AFFILIATE', 'GA')
++AUTO_BLOCK = re.compile(r'<!-- AUTO:(' + '|'.join(NON_EDITORIAL_AUTO) + r'):START -->.*?<!-- AUTO:\1:END -->', re.S)
++
++
+ def article_text(raw):
+     parser = ArticleText()
+-    html = raw.decode('utf-8')
++    # 新しく作る job の editorial_fingerprint は正規化版。既存の ready/manifest はそのまま（サイト側が旧版も受け付ける）
++    html = AUTO_BLOCK.sub('', raw.decode('utf-8'))
+     article = re.search(r'<article\b[^>]*>([\s\S]*?)</article>', html, re.I)
+     html = article[1] if article else html
+     related = re.search(r'<h[2-6]\b[^>]*>\s*関連記事\s*</h[2-6]>', html, re.I)
