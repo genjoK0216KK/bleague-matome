@@ -1,2 +1,11 @@
 __pycache__/
 *.pyc
+
+# 環境変数・資格情報
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+service-account*.json
+credentials*.json
