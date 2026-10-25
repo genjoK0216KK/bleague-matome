@@ -245,22 +245,37 @@ def jp_date(date):
     return f"{d.month}月{d.day}日"
 
 
-def eff_table(rows):
+def eff_table(rows, caption="貢献度ランキング"):
     if not rows:
         return '<p class="note">該当する選手がいません。</p>'
-    head = ("<tr><th>順位</th><th>選手（チーム）</th><th>貢献度</th><th>得点</th>"
-            "<th>リバウンド</th><th>アシスト</th><th>スティール</th><th>ブロック</th>"
-            "<th>出場時間</th></tr>")
+    head = ('<thead><tr><th scope="col">順位</th><th scope="col">選手・所属</th><th scope="col">EFF</th>'
+            '<th scope="col">得点</th><th scope="col"><abbr title="リバウンド">REB</abbr></th>'
+            '<th scope="col"><abbr title="アシスト">AST</abbr></th><th scope="col"><abbr title="スティール">STL</abbr></th>'
+            '<th scope="col"><abbr title="ブロック">BLK</abbr></th><th scope="col">出場分</th></tr></thead>')
     body = []
     for i, p in enumerate(rows, 1):
         body.append(
-            f"<tr><td>{i}</td><td>{esc(p['name'])}（{esc(p['team'])}）</td>"
-            f"<td><strong>{p['eff']}</strong></td><td>{p['pts']}</td><td>{p['reb']}</td>"
-            f"<td>{p['ast']}</td><td>{p['stl']}</td><td>{p['blk']}</td>"
-            f"<td>{p['min']:.0f}分</td></tr>"
+            f'<tr><td class="rk">{i}</td><th scope="row" class="pl"><span class="nm">{esc(p["name"])}</span>'
+            f'<span class="tm">{esc(p["team"])}</span></th>'
+            f'<td class="num eff"><strong>{p["eff"]}</strong></td><td class="num">{p["pts"]}</td>'
+            f'<td class="num">{p["reb"]}</td><td class="num">{p["ast"]}</td><td class="num">{p["stl"]}</td>'
+            f'<td class="num">{p["blk"]}</td><td class="num">{p["min"]:.0f}</td></tr>'
         )
-    return ('<div class="tablewrap">\n<table>\n' + head + "\n" + "\n".join(body)
-            + "\n</table>\n</div>")
+    return ('<p class="scroll-hint" aria-hidden="true">横にスクロールできます</p>\n'
+            f'<div class="tablewrap eff-wrap" role="region" tabindex="0" aria-label="{esc(caption)}（横にスクロールできます）">\n'
+            f'<table class="eff-table">\n<caption>{esc(caption)}</caption>\n' + head + "\n<tbody>\n"
+            + "\n".join(body) + "\n</tbody>\n</table>\n</div>")
+
+
+def top3_summary(rows):
+    """TOP3の文字要約。表と同じ行から作り、再集計しない。"""
+    if not rows:
+        return ""
+    items = "".join(
+        f'<li><span class="t3-rank">{i}位</span><span class="t3-name">{esc(p["name"])}</span>'
+        f'<span class="t3-team">{esc(p["team"])}</span><span class="t3-eff">EFF <b>{p["eff"]}</b></span></li>'
+        for i, p in enumerate(rows[:3], 1))
+    return f'<ol class="top3" aria-label="貢献度TOP3">{items}</ol>'
 
 
 def leaders_table(leaders):
@@ -301,11 +316,15 @@ def body_sections(s):
     if jp:
         lead += (f"日本人選手のトップは{esc(jp[0]['team'])}の{esc(jp[0]['name'])}（貢献度{jp[0]['eff']}）"
                  f"でした。")
-    nationality = (f'<h2>公式国籍確認済み・日本人選手 TOP{TOP_N}</h2>' + eff_table(jp) if jp else '<p class="note">国籍別ランキングは未掲載です。公式国籍情報を確認できない選手を名前から分類しません。</p>')
+    nationality = (f'<h2>公式国籍確認済み・日本人選手 TOP{TOP_N}</h2>' + eff_table(jp, f"日本人選手 貢献度TOP{TOP_N}") if jp else '<p class="note">国籍別ランキングは未掲載です。公式国籍情報を確認できない選手を名前から分類しません。</p>')
     return f"""<p class="lead">{lead}</p>
 
+    <h2>貢献度 TOP3</h2>
+    {top3_summary(top)}
+
     <h2>貢献度ランキング TOP{TOP_N}</h2>
-    {eff_table(top)}
+    {eff_table(top, f"貢献度ランキング TOP{TOP_N}")}
+    <p class="table-note">EFF＝貢献度、REB＝リバウンド、AST＝アシスト、STL＝スティール、BLK＝ブロック、出場分＝出場時間（分）。</p>
 
     {nationality}
 
@@ -335,7 +354,7 @@ def page(title, desc, url, body):
 <body>
 {HEADER}
 <main class="wrap">
-  <article class="article">
+  <article class="article stats-article">
 {body}
   <!-- AUTO:AFFILIATE:START -->
 
@@ -371,9 +390,10 @@ def write_article(s):
     body = f"""    <div class="breadcrumb"><a href="index.html">ホーム</a> ／ <a href="cat-data.html">順位・日程</a></div>
     <h1>{esc(title)}</h1>
     <div class="pmeta"><span class="tag data">順位・日程</span><span>{dot}</span><span>B.PREMIER / 貢献度ランキング</span></div>
+    {body_sections(s)}
+
     <img class="eyecatch" src="{thumb}" alt="{esc(jp_date(s['date']))}の貢献度ランキング">
     <div class="adbox">広告スペース（AdSense）</div>
-    {body_sections(s)}
 
     <p class="source">出典：B.LEAGUE公式 試合詳細（ボックススコア）<br>
     {source_links(s['games'])}</p>
@@ -431,7 +451,7 @@ def write_stats_page(s, published, notes=()):
         for d in sorted(published, reverse=True)[:30])
     body = f"""    <div class="breadcrumb"><a href="index.html">ホーム</a> ／ <a href="cat-data.html">順位・日程</a></div>
     <h1>{esc(title)}</h1>
-    <div class="pmeta"><span class="tag data">順位・日程</span><span>{s['date'].replace('-', '.')}</span><span>最終更新 {esc(s['generated'])}</span></div>
+    <div class="pmeta"><span class="tag data">順位・日程</span><span>対象試合日 {s['date'].replace('-', '.')}</span><span>最終更新 {esc(s['generated'])} JST</span></div>
     {status_block(s, notes)}
     {body_sections(s)}
 
