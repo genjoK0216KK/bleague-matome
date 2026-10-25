@@ -121,8 +121,8 @@
      "key": "506508",
      "home": "東京SR",
      "away": "名古屋D",
-     "status": "scheduled",
-     "record_note": null,
+     "status": "unconfirmed",
+     "record_note": "official_record_not_loaded",
      "reason": "record_not_fixed"
     },
     {
@@ -135,7 +135,7 @@
     }
    ],
    "excluded": [],
-   "content_as_of": "2026-10-25 17:14 JST",
+   "content_as_of": "2026-10-25 22:40 JST",
    "source": "data/match_articles/article-games-20261025.json"
   }
  },

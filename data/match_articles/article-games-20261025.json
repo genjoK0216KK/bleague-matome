@@ -222,7 +222,7 @@
       "fixed": false,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506508",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
-      "status": "scheduled",
+      "status": "unconfirmed",
       "players": [],
       "home": "東京SR",
       "home_full": "東京サンロッカーズ",
@@ -231,7 +231,8 @@
       "away": "名古屋D",
       "away_full": "名古屋ダイヤモンドドルフィンズ",
       "away_id": "729",
-      "away_score": null
+      "away_score": null,
+      "record_note": "official_record_not_loaded"
     }
   ],
   "individual_candidates": [],
