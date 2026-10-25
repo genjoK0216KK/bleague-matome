@@ -1,0 +1,39 @@
+name: 試合終了の見張り（結果更新を起動）
+
+# 定期実行（cron）は数時間遅れたり飛ばされたりするため、この見張り役を試合の時間帯に
+# 起動しておき、試合が終わる頃から5分ごとに results.yml を手動起動（遅延なし）で呼ぶ。
+# 起動が遅れても、見張り役が終了見込み時刻まで待ってから呼ぶので反映は遅れない。
+on:
+  schedule:
+    # UTC。日本時間 14:40 / 18:40 / 20:40 / 22:40。複数あるのは起動が飛ばされた時の保険。
+    - cron: "40 5 * * *"
+    - cron: "40 9 * * *"
+    - cron: "40 11 * * *"
+    - cron: "40 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write   # results.yml の手動起動と実行状況の確認だけに使う
+
+concurrency:
+  group: results-ticker   # 見張り役は1本だけ。site-update の列には並ばない
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet requests beautifulsoup4
+      - name: 試合終了を見張り、5分ごとに結果更新を起動
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: python scripts/results_ticker.py
