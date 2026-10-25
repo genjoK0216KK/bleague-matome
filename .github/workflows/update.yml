@@ -31,7 +31,7 @@ jobs:
           python-version: "3.12"
 
       - name: 依存パッケージをインストール
-        run: pip install --quiet requests beautifulsoup4 fonttools brotli
+        run: pip install --quiet requests beautifulsoup4 fonttools brotli pillow
 
       # 公式IL はニュースとは独立に、この実行枠の中で1回だけ取得する（新しいスケジュールは作らない）。
       # 失敗しても後続を止めず、前回の一覧を「未確認」として残す。失敗は末尾の確認ステップでジョブ失敗として報告する。
@@ -62,6 +62,23 @@ jobs:
 
       - name: 公式IL・23時に翌日プレビュー・3リーグ日付記事を更新
         run: python scripts/update_match_features.py --season-year 2026 --il-capture "$RUNNER_TEMP/il-capture.json"
+
+      # 自動生成サムネ（ChatGPT が Mac mini で生成・検品した画像）を、専用ブランチ thumb-inbox から読み取り専用で取り込む。
+      # data/thumbs/config.json の enabled が true の時だけ動く（既定 false＝何もしない）。いまの本文と同じ版の画像だけを採用し、
+      # 差し替え自体は次の「HTMLを生成」の最初（thumb_auto.apply_all）で行う。
+      - name: 自動生成サムネを取り込み（有効時のみ）
+        run: |
+          if ! python -c "import json,sys; sys.exit(0 if json.load(open('data/thumbs/config.json')).get('enabled') is True else 1)"; then
+            echo "自動サムネは無効（data/thumbs/config.json）"
+            exit 0
+          fi
+          if ! git fetch --depth=1 origin thumb-inbox; then
+            echo "::notice::thumb-inbox ブランチがまだ無いため取り込みなし"
+            exit 0
+          fi
+          mkdir -p "$RUNNER_TEMP/thumb-inbox"
+          git archive FETCH_HEAD inbox | tar -x -C "$RUNNER_TEMP/thumb-inbox" || { echo "::notice::inbox が空"; exit 0; }
+          python scripts/thumb_auto.py import --inbox "$RUNNER_TEMP/thumb-inbox/inbox"
 
       - name: HTMLを生成
         run: python scripts/build.py

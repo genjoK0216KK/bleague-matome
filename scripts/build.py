@@ -17,12 +17,12 @@ import sys
 from datetime import datetime, timedelta, timezone
 
 try:
-    from . import site_header, page_assets, browse_ui, schedule_calendar, home_sections
+    from . import site_header, page_assets, browse_ui, schedule_calendar, home_sections, thumb_auto
 except ImportError:
     import site_header
     import page_assets
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    from scripts import browse_ui, schedule_calendar, home_sections
+    from scripts import browse_ui, schedule_calendar, home_sections, thumb_auto
 
 JST = timezone(timedelta(hours=9))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -157,16 +157,20 @@ def render_articles(articles, category=None):
     out = []
     for a in rows:
         meta = esc(a["date"])
+        # 自動生成サムネ（承認済みの絵柄）がある記事だけ小さな画像を添える。文字だけの記事は従来どおり
+        auto = a["thumb"].startswith(thumb_auto.OUT_DIR + "/")
         out.append(
-            '<a class="item compact-item" href="{href}">'
+            '<a class="item compact-item{cls}" href="{href}">'
+            '{img}'
             '<div class="c">'
             '<span class="tag {cat}">{label}</span>'
             '<h3>{title}</h3>'
             '<div class="meta">{meta}</div>'
             '</div></a>'.format(
-                href=esc(a["href"]), thumb=esc(a["thumb"]), alt=esc(a["alt"]),
-                cat=esc(a["cat"]), label=esc(a["label"]), title=esc(a["title"]),
-                meta=meta,
+                href=esc(a["href"]), cat=esc(a["cat"]), label=esc(a["label"]), title=esc(a["title"]),
+                meta=meta, cls=" has-thumb" if auto else "",
+                img=('<img class="item-thumb" src="{}" alt="" width="128" height="72" loading="lazy">'.format(esc(a["thumb"]))
+                     if auto else ""),
             )
         )
     return "\n".join(out)
@@ -1005,6 +1009,12 @@ def main():
         return 1
 
     log(f"ニュース {len(news)}件 / まとめブログ {len(matome)}件 / 更新日時 {updated}")
+
+    # 自動生成サムネ（data/thumbs/config.json が有効な時だけ）。記事が再生成されて既定の画像に戻っても、
+    # 本文が同じ版ならここで入れ直す。本文が変わった記事には入れない（既定の画像のまま）。
+    thumbs = thumb_auto.apply_all(ROOT)
+    if thumbs['applied'] or thumbs['stale']:
+        log(f"自動サムネ：適用 {len(thumbs['applied'])}件 / 本文が変わったため不採用 {len(thumbs['stale'])}件")
 
     articles = read_articles()
     log(f"手書き記事 {len(articles)}件を一覧化")
