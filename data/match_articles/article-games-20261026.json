@@ -7949,10 +7949,10 @@
       "competition": "BP",
       "starts_at": "2026-10-26T10:15:00+00:00",
       "ended": true,
-      "fixed": false,
+      "fixed": true,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506515",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
-      "status": "unconfirmed",
+      "status": "final",
       "home": "京都",
       "home_full": "京都ハンナリーズ",
       "home_id": "699",
@@ -8887,7 +8887,7 @@
           "USG": 10.607751753047912
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506515/126.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506515/127.json"
     }
   ],
   "individual_candidates": [],
