@@ -1030,8 +1030,7 @@
           "TS": 0.6756756756756757,
           "USG": 16.342328932578987
         }
-      ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506510/129.json"
+      ]
     },
     {
       "game_id": "506511",
@@ -1976,8 +1975,7 @@
           "TS": 0,
           "USG": 0
         }
-      ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506511/113.json"
+      ]
     },
     {
       "game_id": "506512",
@@ -3959,10 +3957,10 @@
       "competition": "BP",
       "starts_at": "2026-10-26T10:05:00+00:00",
       "ended": true,
-      "fixed": false,
+      "fixed": true,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506514",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
-      "status": "unconfirmed",
+      "status": "final",
       "home": "信州",
       "home_full": "信州ブレイブウォリアーズ",
       "home_id": "716",
@@ -4288,7 +4286,7 @@
           "PT2A": 0,
           "FTM": 0,
           "FTA": 0,
-          "FOUL": 3,
+          "FOUL": 4,
           "FOULON": 0,
           "RB_OFF": 1,
           "RB_DEF": 0,
@@ -4301,7 +4299,7 @@
           "PTFB": 0,
           "PT2IN": 0,
           "PT2ND": 0,
-          "EFF": -3,
+          "EFF": -4,
           "PLUSMINUS": 3,
           "AST_TO": 0.6666666666666666,
           "EFG": 0,
@@ -4793,7 +4791,7 @@
           "FTM": 1,
           "FTA": 2,
           "FOUL": 1,
-          "FOULON": 1,
+          "FOULON": 2,
           "RB_OFF": 1,
           "RB_DEF": 0,
           "RB_TOT": 1,
@@ -4805,7 +4803,7 @@
           "PTFB": 4,
           "PT2IN": 4,
           "PT2ND": 1,
-          "EFF": 17,
+          "EFF": 18,
           "PLUSMINUS": 2,
           "AST_TO": 0,
           "EFG": 0.85,
@@ -4981,7 +4979,7 @@
           "USG": 3.371040859993061
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506514/137.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506514/139.json"
     },
     {
       "game_id": "506516",
@@ -8889,7 +8887,7 @@
           "USG": 10.607751753047912
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506515/121.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506515/126.json"
     }
   ],
   "individual_candidates": [],

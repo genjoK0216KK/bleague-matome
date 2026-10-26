@@ -5,7 +5,6 @@
   "506499": "2026-10-23",
   "506508": "2026-10-25",
   "506509": "2026-10-25",
-  "506514": "2026-10-26",
   "506515": "2026-10-26",
   "506516": "2026-10-26"
  },
@@ -134,17 +133,9 @@
   "2026-10-26": {
    "state": "held",
    "games_total": 9,
-   "games_ready": 6,
+   "games_ready": 7,
    "players": null,
    "holds": [
-    {
-     "key": "506514",
-     "home": "信州",
-     "away": "神戸",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
-    },
     {
      "key": "506515",
      "home": "京都",
@@ -163,7 +154,7 @@
     }
    ],
    "excluded": [],
-   "content_as_of": "2026-10-26 21:48 JST",
+   "content_as_of": "2026-10-26 21:58 JST",
    "source": "data/match_articles/article-games-20261026.json"
   }
  },
