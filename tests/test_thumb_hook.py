@@ -6,6 +6,7 @@ import hmac
 import importlib.util
 import json
 import os
+import signal
 import socket
 import subprocess
 import sys
@@ -183,6 +184,46 @@ class Receiver(unittest.TestCase):
         with urllib.request.urlopen(req, timeout=5) as res:
             self.assertEqual(res.read(), b'accepted')
 
+    def test_secret_is_read_once_at_start_with_a_timeout(self):
+        """再検品4-3：合言葉は起動時に1回だけ読む。キーチェーンが止まっても時間切れで戻る。"""
+        reads = []
+        server = recv.make_server(port=0, secret_reader=lambda: reads.append(1) or SECRET,
+                                  waker=lambda spawn=True: self.woken.append(spawn), home=self.home)
+        threading.Thread(target=server.serve_forever, daemon=True).start()
+        self.addCleanup(server.server_close); self.addCleanup(server.shutdown)
+        self.url = f'http://127.0.0.1:{server.server_address[1]}'
+        for _ in range(3):
+            self.assertEqual(self.post(push())[1], 'accepted')
+        self.assertEqual(reads, [1])
+        hang = self.home / 'security'
+        hang.write_text(f'#!{sys.executable}\nimport time\ntime.sleep(30)\n'); os.chmod(hang, 0o755)
+        old = recv.SECURITY, recv.SECRET_TIMEOUT
+        self.addCleanup(lambda: (setattr(recv, 'SECURITY', old[0]), setattr(recv, 'SECRET_TIMEOUT', old[1])))
+        recv.SECURITY, recv.SECRET_TIMEOUT = str(hang), 0.5
+        start = time.monotonic()
+        self.assertIsNone(recv.keychain_secret())
+        self.assertLess(time.monotonic() - start, 5)
+
+    def test_slot_is_returned_even_if_the_deadline_timer_fails(self):
+        """再検品4-5：期限タイマーの準備で失敗しても、枠は戻る。"""
+        handler = recv.make_handler(lambda: SECRET, lambda spawn=True: self.woken.append(spawn), home=self.home)
+        server = self.start(handler, max_connections=1)
+        self.url = f'http://127.0.0.1:{server.server_address[1]}'
+        real = threading.Timer
+        calls = []
+
+        def broken(*a, **k):
+            if not calls:
+                calls.append(1)
+                raise RuntimeError('timer')
+            return real(*a, **k)
+        recv.threading.Timer = broken
+        self.addCleanup(setattr, recv.threading, 'Timer', real)
+        with self.assertRaises(Exception):
+            self.post(push())
+        time.sleep(0.2)
+        self.assertEqual(self.post(push())[1], 'accepted')            # 枠が戻っている
+
     def test_slow_sender_is_cut_at_the_total_deadline(self):
         """再検品B：少しずつ送り続けても（1回の読み取りの待ちに掛からなくても）全体の期限で切る。"""
         handler = recv.make_handler(lambda: SECRET, lambda spawn=True: None, home=self.home)
@@ -261,6 +302,8 @@ mode = words.pop(0) if words else 'ok'
 plan.write_text(' '.join(words))
 if 'dirty' in mode:
     (home / 'dirty').write_text('x')
+if mode == 'hang':
+    import time; time.sleep(30)
 if mode.startswith('fail'):
     sys.exit(1)
 print('{{}}')
@@ -273,6 +316,9 @@ import json, sys
 from pathlib import Path
 args = sys.argv[1:]
 with open({str(self.calls)!r}, 'a') as f: f.write(json.dumps(['codex'] + args) + '\\n')
+st = Path({str(self.home)!r}) / 'status.json'
+saved = json.loads(st.read_text()) if st.exists() else {{}}
+with open({str(self.calls)!r}, 'a') as f: f.write(json.dumps(['saved', len(saved.get('generated_at', [])), len(saved.get('round_starts', []))]) + '\\n')
 plan = Path({str(self.plan)!r})
 lines = plan.read_text().split()
 mode = lines.pop(0) if lines else 'ok'
@@ -287,6 +333,7 @@ work = Path(args[args.index('-C') + 1])
         self.w = load('thumb_worker')
         self.w.HOME, self.w.AUTOMATION, self.w.REPO, self.w.CODEX = self.home, self.auto, self.repo, str(self.codex)
         self.enabled = True
+        self.real_site_enabled = self.w.site_enabled
         self.w.site_enabled = lambda: self.enabled
         self.w.become_group_leader = lambda: None       # テストの実行役そのもののグループは変えない
         self.slept = []
@@ -398,11 +445,64 @@ work = Path(args[args.index('-C') + 1])
         for i in range(len(starts) - cap):
             self.assertGreaterEqual(starts[i + cap] - starts[i], 3600)
 
-    def test_worker_records_its_pid_while_running(self):
-        """再検品E：止める手順のため、動いている間は worker.pid に自分の PID を書き、終われば消す。"""
+    def test_worker_records_its_identity_while_running(self):
+        """止める手順のため、動いている間は worker.pid に PID・PGID・開始時刻・コマンド・置き場所を書き、終われば消す。"""
         self.wake_and_run()
-        self.assertEqual(self.calls_of('deliver')[0][1], str(os.getpid()))
+        rec = json.loads(self.calls_of('deliver')[0][1])
+        self.assertEqual(rec['pid'], os.getpid())
+        self.assertEqual(rec['home'], str(self.home))
+        self.assertTrue(rec['lstart'] and rec['command'])
         self.assertFalse((self.home / 'worker.pid').exists())
+
+    def test_group_leader_failure_is_a_start_failure(self):
+        def fail():
+            raise OSError('setpgid')
+        self.w.become_group_leader = fail
+        self.assertEqual(self.wake_and_run(), 1)
+        self.assertEqual(self.calls_of('queue'), [])
+        self.assertTrue((self.home / 'dirty').exists())
+
+    def test_deliver_timeout_or_oserror_enters_the_same_retry(self):
+        """再検品4-1：送信が時間切れ（例外）でも、印を残して終わらず、同じ間隔で再挑戦する。"""
+        self.w.DELIVER_TIMEOUT = 1
+        self.dplan.write_text('hang ok')
+        self.wake_and_run()
+        self.assertEqual(len(self.calls_of('deliver')), 2)
+        self.assertEqual(self.slept, [60])
+        self.assertFalse((self.home / 'dirty').exists())
+        self.w.REPO = self.home / 'no-such-repo'                       # 起動できない（OSError）
+        self.dplan.write_text('')
+        self.wake_and_run()
+        self.assertEqual(self.status()['deliver_failures'], len(self.w.DELIVER_BACKOFF))
+        self.assertIn('deliver_blocked', self.status())
+
+    def test_limits_are_saved_before_generation_starts(self):
+        """再検品4-4：生成の開始と周の開始は、Codex を動かす前に status.json に保存される（強制終了しても残る）。"""
+        self.wake_and_run()
+        self.assertEqual(self.calls_of('saved')[0][1:], [1, 1])
+
+    def test_non_dict_config_means_disabled_and_keeps_signal(self):
+        """再検品4-6：設定が [] や null でも例外にならず「無効」。"""
+        import io
+
+        class Res(io.BytesIO):
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *a):
+                return False
+        bodies = {'v': b'[]'}
+        real = self.w.urllib.request.urlopen
+        self.w.urllib.request.urlopen = lambda req, timeout=0: Res(bodies['v'])
+        self.addCleanup(setattr, self.w.urllib.request, 'urlopen', real)
+        for body, want in ((b'[]', False), (b'null', False), (b'"x"', False), (b'{"enabled": true}', True)):
+            bodies['v'] = body
+            self.assertIs(self.real_site_enabled(), want)
+        bodies['v'] = b'[]'
+        self.w.site_enabled = self.real_site_enabled
+        self.wake_and_run()
+        self.assertEqual(self.calls_of('queue'), [])
+        self.assertTrue((self.home / 'dirty').exists())
 
     def test_worker_becomes_its_own_process_group_leader(self):
         code = ('import importlib.util,os,sys;'
@@ -438,9 +538,81 @@ work = Path(args[args.index('-C') + 1])
         self.assertNotIn('01a16fa6', (HOOK / 'thumb_worker.py').read_text().split('"""', 2)[2])
 
 
+class StopScript(unittest.TestCase):
+    """再検品4-2：記録が全部一致した時だけ、そのグループを止める。"""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)
+        self.home = Path(self.tmp.name) / 'home'
+        self.env = dict(os.environ, BASUKE_THUMB_HOME=str(self.home))
+
+    def fake_worker(self, ignore_term=False):
+        code = (
+            'import importlib.util,os,signal,subprocess,sys,time\n'
+            f'spec=importlib.util.spec_from_file_location("w",{str(HOOK / "thumb_worker.py")!r})\n'
+            'm=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)\n'
+            + ('signal.signal(signal.SIGTERM, signal.SIG_IGN)\n' if ignore_term else '') +
+            'm.HOME.mkdir(parents=True, exist_ok=True)\n'
+            'm.become_group_leader()\n'
+            'child=subprocess.Popen(["/bin/sleep","60"])\n'
+            '(m.HOME/"child").write_text(str(child.pid))\n'
+            'm.write_pid(m.HOME/"worker.pid")\n'
+            'time.sleep(60)\n')
+        proc = subprocess.Popen([sys.executable, '-c', code], env=self.env)
+        self.addCleanup(self.cleanup, proc)
+        for _ in range(100):
+            if (self.home / 'worker.pid').exists():
+                break
+            time.sleep(0.1)
+        return proc, int((self.home / 'child').read_text())
+
+    def cleanup(self, proc):
+        for pid in (proc.pid,):
+            try:
+                os.killpg(pid, signal.SIGKILL)
+            except OSError:
+                pass
+        proc.wait(timeout=10)
+
+    def stop(self):
+        out = subprocess.run([sys.executable, str(HOOK / 'thumb_stop.py'), '1'], env=self.env,
+                             capture_output=True, text=True, timeout=60)
+        return out.stdout
+
+    def alive(self, pid):
+        stat = subprocess.run(['/bin/ps', '-p', str(pid), '-o', 'stat='], capture_output=True, text=True).stdout.strip()
+        return bool(stat) and not stat.startswith('Z')
+
+    def test_stops_the_worker_and_its_children(self):
+        proc, child = self.fake_worker()
+        out = self.stop()
+        self.assertIn('止まりました', out)
+        self.assertTrue((self.home / 'STOP').exists())
+        self.assertEqual(proc.wait(timeout=10), -signal.SIGTERM)
+        self.assertFalse(self.alive(child))
+
+    def test_kills_after_term_only_when_still_the_same_process(self):
+        proc, child = self.fake_worker(ignore_term=True)
+        self.assertIn('止まりました（KILL）', self.stop())
+        self.assertEqual(proc.wait(timeout=10), -signal.SIGKILL)
+
+    def test_reused_or_mismatched_pid_is_never_touched(self):
+        proc, child = self.fake_worker()
+        rec = json.loads((self.home / 'worker.pid').read_text())
+        for key, value in (('lstart', 'Mon Jan  1 00:00:00 2001'), ('command', '/bin/other'), ('home', '/elsewhere'),
+                           ('pgid', rec['pid'] + 1)):
+            bad = dict(rec, **{key: value})
+            (self.home / 'worker.pid').write_text(json.dumps(bad))
+            self.assertIn('何も止めません', self.stop())
+            self.assertTrue(self.alive(proc.pid))
+            self.assertTrue(self.alive(child))
+        (self.home / 'worker.pid').unlink()
+        self.assertIn('何も止めません', self.stop())
+
+
 class Install(unittest.TestCase):
     def test_python39_compatible(self):
-        for name in ('hook_receiver.py', 'thumb_worker.py'):
+        for name in ('hook_receiver.py', 'thumb_worker.py', 'thumb_stop.py'):
             ast.parse((HOOK / name).read_text(), feature_version=(3, 9))
 
     def test_launchd_has_no_timer_and_listens_locally(self):

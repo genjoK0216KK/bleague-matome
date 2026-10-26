@@ -4,6 +4,8 @@
 流れ：GitHub の Webhook（push）→ Tailscale Funnel → この受け口（127.0.0.1 だけで待ち受け）→ 作業役（thumb_worker.py）。
 
 - 署名（X-Hub-Signature-256、ASCII の sha256=<16進64桁>）を、キーチェーンの合言葉で HMAC-SHA256 照合する。
+  合言葉は起動時に1回だけ（10秒の時間切れ付きで）読み、メモリに置く。通知ごとにキーチェーンは呼ばない
+  （合言葉を変えた時は、受け口を起動し直す）。
   署名なし・形式違い・不一致は 401。回数の枠は署名の後で数える（署名の無い大量送信で正規の通知を締め出させない）。
 - 同時の接続は8本まで（処理用のスレッドを作る前に数え、超えたら即座に切る）。1つの接続は、ヘッダと中身の
   読み取りから返事まで全体で15秒が期限（少しずつ送り続けても15秒で切る）。中身は 5MB まで。
@@ -41,6 +43,8 @@ PORT = int(os.environ.get('BASUKE_THUMB_PORT', '8787'))
 REPO_FULL_NAME = 'genjoK0216KK/bleague-matome'
 REQUESTS_PATH = 'data/thumbs/requests.json'
 KEYCHAIN_SERVICE = 'basuke-thumb-webhook'
+SECURITY = '/usr/bin/security'
+SECRET_TIMEOUT = 10
 PATHS = ('/', '/hooks/github', '/hooks/github/')      # Funnel の set-path の扱いに関わらず受ける
 MAX_BODY = 5 * 1024 * 1024
 READ_TIMEOUT = 5                                      # 1回の読み取りの待ち時間
@@ -58,8 +62,11 @@ def log(msg):
 
 
 def keychain_secret():
-    out = subprocess.run(['/usr/bin/security', 'find-generic-password', '-s', KEYCHAIN_SERVICE, '-w'],
-                         capture_output=True, text=True)
+    try:
+        out = subprocess.run([SECURITY, 'find-generic-password', '-s', KEYCHAIN_SERVICE, '-w'],
+                             capture_output=True, text=True, timeout=SECRET_TIMEOUT)
+    except (subprocess.TimeoutExpired, OSError):
+        return None
     return out.stdout.strip().encode() if out.returncode == 0 and out.stdout.strip() else None
 
 
@@ -114,8 +121,9 @@ def wake_worker(spawn=True, home=None, worker=None, python=None):
     home.mkdir(parents=True, exist_ok=True)
     (home / 'dirty').write_text(time.strftime('%Y-%m-%dT%H:%M:%S'))
     if spawn and not worker_running(home):
-        subprocess.Popen([python or sys.executable, str(worker or WORKER)], start_new_session=True,
-                         stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        proc = subprocess.Popen([python or sys.executable, str(worker or WORKER)], start_new_session=True,
+                                stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        threading.Thread(target=proc.wait, daemon=True).start()   # 終わったらすぐ回収（ゾンビを残さない）
         return True
     return False
 
@@ -177,17 +185,22 @@ class Server(ThreadingHTTPServer):
                 request.shutdown(socket.SHUT_RDWR)
             except OSError:
                 pass
-        timer = threading.Timer(self.deadline, cut)
-        timer.daemon = True
-        timer.start()
+        timer = None
         try:
+            timer = threading.Timer(self.deadline, cut)   # 期限の準備で失敗しても、枠は必ず戻す
+            timer.daemon = True
+            timer.start()
             super().process_request_thread(request, client_address)
+        except Exception as exc:
+            log('接続の処理に失敗：' + type(exc).__name__)
+            self.shutdown_request(request)
         finally:
-            timer.cancel()
+            if timer is not None:
+                timer.cancel()
             self.slots.release()
 
 
-def make_handler(secret_provider=keychain_secret, waker=wake_worker, limiter=None, home=None, clock=time.monotonic):
+def make_handler(secret_provider, waker=wake_worker, limiter=None, home=None, clock=time.monotonic):
     limiter = limiter or Limiter(WAKE_PER_MINUTE)
     seen = Seen()
     home = Path(home or HOME)
@@ -265,12 +278,17 @@ def make_handler(secret_provider=keychain_secret, waker=wake_worker, limiter=Non
     return Handler
 
 
+def make_server(port=PORT, secret_reader=keychain_secret, **handler_kw):
+    secret = secret_reader()                          # 起動時に1回だけ読む
+    if not secret:
+        log('合言葉がキーチェーンから読めない（サービス名 ' + KEYCHAIN_SERVICE + '）。全ての通知を拒否します')
+    return Server((HOST, port), make_handler(lambda: secret, **handler_kw))
+
+
 def main():
-    if not keychain_secret():
-        log('合言葉がキーチェーンに無い（サービス名 ' + KEYCHAIN_SERVICE + '）。全ての通知を拒否します')
+    server = make_server()
     if not (HOME / 'STOP').exists():
         wake_worker()                                 # 起動・ログイン時に1回だけ、止まっていた間の依頼を回収
-    server = Server((HOST, PORT), make_handler())
     log(f'待ち受け開始 http://{HOST}:{PORT}（外からは Tailscale Funnel 経由のみ）')
     server.serve_forever()
 

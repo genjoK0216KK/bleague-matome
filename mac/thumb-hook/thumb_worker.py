@@ -13,8 +13,12 @@
   5. thumb_deliver.py … 記事ごとに最新の完成画像を thumb-inbox へ送り、サイトの取り込みを起動する。
 上限：生成は1周で最大5件・1時間に最大20件。周と周の間は最低60秒あけ、依頼の取得と送信は1時間に30周まで
 （通知が続いても詰めて回らない）。生成の残り・再挑戦・送信の失敗があれば、同じ作業役が間隔をあけて続ける。
-送信の失敗は 1・2・5・10・15分 の間隔で5回まで試し、それでもだめなら止めて本人判断に回す（次の通知で再挑戦）。
-作業役は自分のプロセスグループの先頭として動き、PID を worker.pid に書く。止める時はこのグループだけを止める
+送信の失敗（時間切れ・起動できない等の例外も含む）は 1・2・5・10・15分 の間隔で5回まで試し、それでもだめなら
+生成も含めて止めて本人判断に回す（次の通知で1周だけ試し直す）。
+上限の記録（生成の開始・周の開始・失敗の回数・送信の再挑戦）は、その都度 status.json に保存する（途中で強制終了しても
+再開後に上限を超えない）。
+作業役は自分のプロセスグループの先頭として動き（なれなければ起動の失敗として終える）、PID・PGID・開始時刻・
+コマンド・置き場所を worker.pid に書く。止める時は thumb_stop.py が、これが全部一致した時だけこのグループを止める
 （作業役・Codex・送信・git がまとめて止まり、ほかの作業の codex は巻き込まない）。
 Python 3.9（macOS 標準）の標準ライブラリだけで動く。
 """
@@ -44,6 +48,7 @@ ROUNDS_PER_HOUR = 30       # 依頼の取得・送信の周の上限
 DELIVER_BACKOFF = (60, 120, 300, 600, 900)   # 送信の再挑戦の間隔。尽きたら止めて本人判断
 MAX_FAILURES = 2
 CODEX_TIMEOUT = 20 * 60
+DELIVER_TIMEOUT = 10 * 60
 ARTICLE = re.compile(r'article-[A-Za-z0-9_-]*?\d{8}\.html\Z')
 JOB_ID = re.compile(r'[0-9a-f]{20}\Z')
 BLOB = re.compile(r'[0-9a-f]{40}\Z')
@@ -81,13 +86,14 @@ def run(cmd, cwd=None, timeout=600):
 
 
 def site_enabled():
-    """main のサイト設定。読めない時は「無効」として扱う（迷ったら作らない・送らない）。"""
+    """main のサイト設定。読めない・辞書でない時は「無効」として扱う（迷ったら作らない・送らない）。"""
     try:
         req = urllib.request.Request(CONFIG_URL, headers={'Cache-Control': 'no-cache', 'User-Agent': 'basuke-thumb-worker'})
         with urllib.request.urlopen(req, timeout=20) as res:
-            return json.loads(res.read().decode('utf-8')).get('enabled') is True
+            data = json.loads(res.read().decode('utf-8'))
     except (OSError, ValueError):
         return False
+    return isinstance(data, dict) and data.get('enabled') is True
 
 
 def check_go():
@@ -95,6 +101,10 @@ def check_go():
         raise Stop('停止の印（STOP）がある')
     if not site_enabled():
         raise Stop('サイト側が無効（data/thumbs/config.json の enabled が true ではない）')
+
+
+def persist(status):
+    save(HOME / 'status.json', status)
 
 
 def queue(*args):
@@ -176,8 +186,10 @@ def process_round(status, now=time.time):
         check_go()
         jid = str(job.get('id'))
         try:
+            checked(job)
+            status.setdefault('generated_at', []).append(now())   # 生成の開始で数える（途中で止まっても残る）
+            persist(status)
             generate(job)
-            status.setdefault('generated_at', []).append(now())
             failures.pop(jid, None)
             status.setdefault('done', {})[jid] = time.strftime('%Y-%m-%dT%H:%M:%S')
             log('完成：' + jid + ' ' + str(job.get('article_path', ''))[:80])
@@ -185,7 +197,6 @@ def process_round(status, now=time.time):
             failures[jid] = MAX_FAILURES
             log('形式違いのため生成しない：' + jid[:40] + ' ' + str(exc))
         except (RuntimeError, subprocess.TimeoutExpired, OSError) as exc:
-            status.setdefault('generated_at', []).append(now())   # 失敗も1回の生成として上限に数える
             failures[jid] = failures.get(jid, 0) + 1
             log(f"失敗（{failures[jid]}回目）：{jid} {str(exc)[:300]}")
         if failures.get(jid, 0) >= MAX_FAILURES:
@@ -196,13 +207,17 @@ def process_round(status, now=time.time):
                 'reason': 'generation_failed_twice（本人判断待ち）'}
             failures.pop(jid, None)
             log('停止：block（本人判断待ち）：' + jid[:40])
+        persist(status)
     check_go()
-    run(['git', '-C', str(REPO), 'pull', '-q', '--ff-only'])
-    deliver = run([PYTHON, str(REPO / 'scripts/thumb_deliver.py'), '--ready', str(AUTOMATION / 'ready'),
-                   '--repo', str(REPO)], cwd=REPO)
-    delivered = deliver.returncode == 0
-    log('送信：' + ('成功 ' + deliver.stdout.strip()[-300:] if delivered
-                    else '失敗 ' + (deliver.stderr or '').strip()[-300:]))
+    try:
+        run(['git', '-C', str(REPO), 'pull', '-q', '--ff-only'])
+        deliver = run([PYTHON, str(REPO / 'scripts/thumb_deliver.py'), '--ready', str(AUTOMATION / 'ready'),
+                       '--repo', str(REPO)], cwd=REPO, timeout=DELIVER_TIMEOUT)
+        delivered = deliver.returncode == 0
+        detail = deliver.stdout.strip()[-300:] if delivered else (deliver.stderr or '').strip()[-300:]
+    except (subprocess.TimeoutExpired, OSError) as exc:   # 時間切れ・起動できない も送信の失敗として再挑戦に回す
+        delivered, detail = False, type(exc).__name__ + ' ' + str(exc)[:200]
+    log('送信：' + ('成功 ' if delivered else '失敗 ') + detail)
     blocked = set(status.get('blocked', {}))
     left = len([j for j in pending if str(j.get('id')) not in blocked and str(j.get('id')) not in status.get('done', {})])
     return {'remaining': left, 'delivered': delivered}
@@ -220,16 +235,35 @@ def wait_for_slot(status, now):
 
 
 def become_group_leader():
-    try:
-        if os.getpgrp() != os.getpid():
-            os.setpgid(0, 0)
-    except OSError:
-        pass
+    """自分のプロセスグループの先頭になる。なれなければ例外（起動の失敗として扱う）。"""
+    if os.getpgrp() != os.getpid():
+        os.setpgid(0, 0)
+    if os.getpgrp() != os.getpid():
+        raise OSError('プロセスグループの先頭になれない')
+
+
+def ps_field(pid, field):
+    out = subprocess.run(['/bin/ps', '-p', str(pid), '-o', field + '='], capture_output=True, text=True, timeout=10)
+    return out.stdout.strip() if out.returncode == 0 else ''
+
+
+def write_pid(pidfile):
+    """止める手順が「本当にこの作業役か」を確かめるための記録。どれかが取れなければ起動の失敗。"""
+    pid = os.getpid()
+    record = {'pid': pid, 'pgid': os.getpgid(pid), 'lstart': ps_field(pid, 'lstart'),
+              'command': ps_field(pid, 'command'), 'home': str(HOME)}
+    if not record['lstart'] or not record['command']:
+        raise OSError('ps で自分の開始時刻・コマンドが取れない')
+    save(pidfile, record)
 
 
 def main(sleep=time.sleep, now=time.time):
     HOME.mkdir(parents=True, exist_ok=True)
-    become_group_leader()
+    try:
+        become_group_leader()
+    except OSError as exc:
+        log('起動の失敗（印は残す）：' + str(exc))
+        return 1
     dirty = HOME / 'dirty'
     pidfile = HOME / 'worker.pid'
     while True:
@@ -238,9 +272,15 @@ def main(sleep=time.sleep, now=time.time):
                 fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
             except BlockingIOError:
                 return 0                       # 別の作業役が動いている。印は残っているので、そちらが拾う
-            pidfile.write_text(str(os.getpid()))
             status = load(HOME / 'status.json', {})
+            if not isinstance(status, dict):
+                status = {}
             try:
+                try:
+                    write_pid(pidfile)
+                except (OSError, subprocess.TimeoutExpired) as exc:
+                    log('起動の失敗（印は残す）：' + str(exc))
+                    return 1
                 while dirty.exists():
                     wait = wait_for_slot(status, now)
                     if wait:
@@ -248,14 +288,15 @@ def main(sleep=time.sleep, now=time.time):
                     dirty.unlink()
                     status.setdefault('round_starts', []).append(now())
                     status.pop('next_round_at', None)
+                    persist(status)
                     try:
                         result = process_round(status, now)
                     except Stop as exc:
                         log('止めた：' + str(exc) + '（印を残す。再開すれば拾う）')
                         dirty.write_text('stopped')
                         return 0
-                    except (RuntimeError, subprocess.TimeoutExpired, OSError, ValueError) as exc:
-                        log('この周は中断（次の通知で再挑戦）：' + str(exc)[:300])
+                    except Exception as exc:                  # 想定外でも印は残す（次の通知で再挑戦）
+                        log('この周は中断（次の通知で再挑戦）：' + type(exc).__name__ + ' ' + str(exc)[:300])
                         dirty.write_text('retry')
                         return 0
                     more = bool(result['remaining'])
@@ -277,6 +318,7 @@ def main(sleep=time.sleep, now=time.time):
                     made = status.get('generated_at', [])
                     if result['remaining'] and len(made) >= PER_HOUR:      # 1時間の生成の上限：空くまで待つ
                         status['next_round_at'] = max(status.get('next_round_at', 0), made[-PER_HOUR] + 3600)
+                    persist(status)
                     if more:
                         log(f"続ける：生成の残り {result['remaining']}件 / 送信 {'済' if result['delivered'] else '再挑戦'}")
                         dirty.write_text('remaining')
