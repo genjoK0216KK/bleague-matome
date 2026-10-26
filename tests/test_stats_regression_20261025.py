@@ -60,3 +60,24 @@ class SharedHead(Base):
         self.assertEqual(first,page_assets.ensure(first,'G-TEST123'))
         self.assertEqual(build.ensure_ga(raw,'G-TEST123'),page_assets.ensure_ga(raw,'G-TEST123'))
         self.assertNotIn('googletagmanager',page_assets.ensure(first,''))
+
+
+class LeaderTieLabels(Base):
+    """MINI-6 R1: 同じ記録に別々の順位を付けない（列は表示順）。"""
+    def leader(self, name, **v):
+        return {'name': name, 'team': 'T', 'pts': 0, 'reb': 0, 'ast': 0, 'stl': 0, 'blk': 0, **v}
+
+    def test_tied_records_are_not_labelled_with_different_ranks(self):
+        leaders = {'stl': [self.leader('A', stl=3), self.leader('B', stl=3), self.leader('C', stl=3)],
+                   'blk': [self.leader('D', blk=2), self.leader('E', blk=2), self.leader('F', blk=1)],
+                   'ast': [self.leader('G', ast=4)]}
+        html = stats.leaders_table(leaders)
+        for bad in ('1位', '2位', '3位'):
+            self.assertNotIn(bad, html)
+        self.assertIn('<th scope="col">1人目</th><th scope="col">2人目</th><th scope="col">3人目</th>', html)
+        self.assertIn('同じ記録は同順位', html)
+        # 選手の並び・数値・空き枠は変えない
+        self.assertLess(html.index('>A<'), html.index('>B<')); self.assertLess(html.index('>B<'), html.index('>C<'))
+        self.assertEqual(html.count('class="lv">3<'), 3)
+        self.assertEqual(html.count('class="lv">2<'), 2)
+        self.assertEqual(html.count('class="none">—'), 2)
