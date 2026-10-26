@@ -7,6 +7,8 @@
 3. 待っても残っていたら、もう一度同じ確かめ方をしてから KILL する。
    （先頭のプロセスが既に終わり、同じグループの子だけが残っている時は、そのグループ番号はメンバーがいる間は
    ほかに再利用されないので、そのまま KILL してよい）
+4. 止める前から先頭のプロセスが消えていて、同じグループの子だけが残っている時は、自動では止めない
+   （記録と照合できないため）。残っている候補を表示し、「未完了」として終了コード 2 で終える。
 使い方：/usr/bin/python3 thumb_stop.py [待つ秒数（既定5）]
 Python 3.9（macOS 標準）の標準ライブラリだけで動く。
 """
@@ -51,6 +53,22 @@ def same(rec):
         return False
 
 
+def orphans(rec):
+    """先頭が消えて子だけ残っている時の候補（PID とコマンド）。止めはしない。"""
+    try:
+        pgid = int(rec['pgid'])
+        if pgid <= 1 or rec.get('home') != str(HOME) or pgid in members(pgid):
+            return []
+        pids = members(pgid)
+        if not pids:
+            return []
+        out = subprocess.run(['/bin/ps', '-o', 'pid=,command=', '-p', ','.join(map(str, pids))],
+                             capture_output=True, text=True, timeout=10)
+        return [line.strip() for line in out.stdout.splitlines() if line.strip()] or [str(p) for p in pids]
+    except (KeyError, TypeError, ValueError, OSError, subprocess.TimeoutExpired):
+        return []
+
+
 def wait_gone(pgid, seconds):
     end = time.monotonic() + seconds
     while time.monotonic() < end:
@@ -69,6 +87,13 @@ def main(wait=5.0):
     except (OSError, ValueError):
         rec = None
     if not isinstance(rec, dict) or not same(rec):
+        left = orphans(rec)
+        if left:
+            print('未完了：先頭の作業役は既に終わっていますが、同じグループのプロセスが残っています。'
+                  '照合できないため自動では止めません。中身を見て、必要なら1つずつ止めてください：')
+            for line in left:
+                print('  ' + line)
+            return 2
         print('動いている作業役はありません（worker.pid が無いか、別のプロセスを指しているので何も止めません）')
         return 0
     pid = int(rec['pid'])

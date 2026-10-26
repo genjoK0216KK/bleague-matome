@@ -7,54 +7,111 @@ ChatGPT の検品に合格し、本人が実行する時に行う。それまで
 
 ---
 
-## A. Claude（Mac mini「Macbook ⇄ mini_連携用」）がやる設置 — PR #32 の統合後
+## A. Claude（Mac mini「Macbook ⇄ mini_連携用」）がやる設置 — PR #32 の統合後、木村さんの B の前
+
+やらないこと：キーチェーンへの登録、`launchctl bootstrap`（常駐の読み込み）、Funnel、Webhook の登録、`enabled=true`。
+既存の会話 01a16fa6 は使わない。新しいタイマー・巡回は作らない（automation-2 は PAUSED のまま）。LINE 系の保留中の承認には触れない。
+各手順の結果（出力の最後の数行）を全体管理へ返す。失敗したら、そこで止めて報告する。
 
 1. 置き場所と、送信専用の作業用コピー（既存の `~/Claude/work/bleague-matome` とは分ける）
    ```bash
    mkdir -p "$HOME/Library/Application Support/basuke-thumb-hook/bin"
    git clone https://github.com/genjoK0216KK/bleague-matome "$HOME/Claude/work/bleague-thumb"
-   cp "$HOME/Claude/work/bleague-thumb/mac/thumb-hook/hook_receiver.py" "$HOME/Claude/work/bleague-thumb/mac/thumb-hook/thumb_worker.py" "$HOME/Claude/work/bleague-thumb/mac/thumb-hook/thumb_stop.py" "$HOME/Library/Application Support/basuke-thumb-hook/bin/"
+   cd "$HOME/Claude/work/bleague-thumb" && git log --oneline -1   # PR #32 の統合コミット以降であること
+   cp mac/thumb-hook/hook_receiver.py mac/thumb-hook/thumb_worker.py mac/thumb-hook/thumb_stop.py "$HOME/Library/Application Support/basuke-thumb-hook/bin/"
    ```
-2. 生成側のパッチ（先に控えを取る）。`docs/mini8-mac-side/01-OPERATIONS-creation-requests.patch` と `02-thumbnail_queue-requests.patch` を、
-   `/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnail-automation/` で `patch -p1` する。当てた後に `python3 -m unittest test_thumbnail_queue`（19件）。
-3. codex の場所を確かめ（ChatGPT アプリ同梱）、常駐の設定ファイルの `__CODEX__` をその絶対パスに置き換えて `~/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist` に置く。**読み込みはしない**（本人の操作4）。
-4. `codex exec --ephemeral --skip-git-repo-check -s workspace-write -C <一時フォルダ> "1672x941の黒い画像を1枚作って out.png に保存して"` で画像ができることを確かめ、一時フォルダは消す。
+2. 送信の権限を確かめる（何も書き換えない）
+   ```bash
+   gh auth status 2>&1 | grep -E "Logged in|scopes"
+   git -C "$HOME/Claude/work/bleague-thumb" push --dry-run origin HEAD:refs/heads/thumb-inbox-dryrun
+   ```
+   `repo` と `workflow` の権限があり、dry-run が認証エラーにならないこと。
+3. 生成側のパッチ（先に控えを取る）
+   ```bash
+   G=/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnail-automation
+   cp -p "$G/OPERATIONS.txt" "$G/OPERATIONS.txt.bak-mini8"; cp -p "$G/thumbnail_queue.py" "$G/thumbnail_queue.py.bak-mini8"
+   cd "$G" && patch -p1 --dry-run < "$HOME/Claude/work/bleague-thumb/docs/mini8-mac-side/01-OPERATIONS-creation-requests.patch" && patch -p1 < "$HOME/Claude/work/bleague-thumb/docs/mini8-mac-side/01-OPERATIONS-creation-requests.patch"
+   cd "$G" && patch -p1 --dry-run < "$HOME/Claude/work/bleague-thumb/docs/mini8-mac-side/02-thumbnail_queue-requests.patch" && patch -p1 < "$HOME/Claude/work/bleague-thumb/docs/mini8-mac-side/02-thumbnail_queue-requests.patch"
+   cd "$G" && /usr/bin/python3 -m unittest test_thumbnail_queue 2>&1 | tail -3   # 19件 OK
+   ```
+   dry-run が失敗したら、本体には当てずに止めて報告する（控えから戻せる）。
+4. 常駐の設定ファイルを置く（**読み込みはしない**。読み込みは木村さんの B-2）
+   ```bash
+   CODEX=（ChatGPT アプリ同梱の codex の絶対パス。`codex --version` が 0.164 系で動くもの）
+   sed "s#__CODEX__#$CODEX#" "$HOME/Claude/work/bleague-thumb/mac/thumb-hook/com.genjo.basuke-thumb-hook.plist" > "$HOME/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist"
+   plutil -lint "$HOME/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist" && grep -c __CODEX__ "$HOME/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist"   # OK と 0
+   ```
+5. 画像が作れることを確かめる（使い捨ての会話で1枚だけ）
+   ```bash
+   D=$(mktemp -d); "$CODEX" exec --ephemeral --skip-git-repo-check -s workspace-write -C "$D" "1672x941の黒い画像を1枚、内蔵の画像生成で作って out.png に保存して" < /dev/null; ls -l "$D/out.png"; rm -rf "$D"
+   ```
+6. 全体管理へ「A 完了」と、1〜5の結果（clone のコミット、権限、パッチの試験結果、plist の確認、画像の有無）を返す。
 
-## B. 木村さんの操作（Mac mini のターミナルで、上から順に。合計15分ほど）
+## B. 木村さんの操作（最終版）
 
-### 1. 合言葉を作ってキーチェーンに入れる（画面にも、ほかのプロセスの引数にも出ない）
-合言葉はシェル内蔵の printf から `security -i` の標準入力へ渡す（どのコマンドの引数にも載らない）。
+Mac mini の「ターミナル」を開き、下の枠を**上から順に1つずつ**貼って Enter を押します。合計15分ほど。
+枠の下に「こう出ればOK」を書いています。違う表示が出たら、そこで止めて、表示をそのまま Claude に貼ってください。
+合言葉（秘密の文字列）は、どの手順でも画面に出ません。
+
+### 0. 準備ができているか確かめる（Claude の設置 A が済んでいるか）
+```bash
+test -f "$HOME/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist" && test -f "$HOME/Library/Application Support/basuke-thumb-hook/bin/thumb_stop.py" && echo "準備OK" || echo "まだ準備ができていません（Claude に伝えてください）"
+```
+こう出ればOK：`準備OK`
+
+### 1. 合言葉を作って、キーチェーンに入れる
 ```bash
 S=$(openssl rand -hex 32); printf 'add-generic-password -U -a basuke-thumb -s basuke-thumb-webhook -T /usr/bin/security -w %s\n' "$S" | /usr/bin/security -i; unset S; /usr/bin/security find-generic-password -s basuke-thumb-webhook >/dev/null && echo "保存しました"
 ```
+こう出ればOK：`保存しました`
+（合言葉はシェル内蔵の printf から `security -i` へ渡すので、どのコマンドの引数にも載りません）
 
 ### 2. 受け口を起動する
 ```bash
-launchctl bootstrap gui/$(id -u) "$HOME/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist" && sleep 2 && curl -s -o /dev/null -w "受け口の応答：%{http_code}（401なら正常＝署名の無い通知を断っている）\n" -X POST -d '{}' http://127.0.0.1:8787/hooks/github
+launchctl bootstrap gui/$(id -u) "$HOME/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist" && sleep 2 && curl -s -o /dev/null -w "受け口の応答：%{http_code}\n" -X POST -d '{}' http://127.0.0.1:8787/hooks/github
 ```
+こう出ればOK：`受け口の応答：401`（署名の無い通知を正しく断っている、という意味です）
+※ この時点では、サイト側がまだ無効なので、作業役は何も作らずに終わります（`worker.log` に「サイト側が無効」と出るのは正常です）。
 
-### 3. Tailscale の HTTPS と Funnel を有効にし、受け口のURLだけを公開する
-1. HTTPS を有効にする：<https://login.tailscale.com/admin/dns> を開き、「HTTPS Certificates」の **Enable HTTPS** を押す。
-2. 受け口だけを公開する（下を貼る）。初回に「Funnel を有効にするURL」が表示されたら、そのURLを開いて許可し、もう一度同じ行を貼る。
+### 3. Tailscale で、受け口のURLだけを外に公開する
+1. ブラウザで <https://login.tailscale.com/admin/dns> を開き、下の方の「HTTPS Certificates」にある **Enable HTTPS** を押します（もう有効なら、押すものは出ません）。
+2. ターミナルに貼ります：
    ```bash
    /Applications/Tailscale.app/Contents/MacOS/Tailscale funnel --bg --set-path /hooks/github http://127.0.0.1:8787
    ```
-3. 公開されたURLを確かめる（`https://aimac-mini.〜.ts.net/hooks/github` のように出る）。
+   - 初めての時は「Funnel を有効にするには、このURLを開いて」という表示（`https://login.tailscale.com/f/funnel?...`）が出ます。そのURLを開いて許可し、**もう一度同じ行を貼ります**。
+   - 何も出ずに異常終了した時や、エラーが出た時は、ここで止めて表示を Claude に貼ってください（この先には進まない）。
+3. 公開されたことを確かめます：
    ```bash
    /Applications/Tailscale.app/Contents/MacOS/Tailscale funnel status
    ```
+   こう出ればOK：`https://aimac-mini.（英数字）.ts.net/hooks/github` と `Funnel on` のような表示に、`http://127.0.0.1:8787` が並ぶ。
 
-### 4. GitHub に通知先を登録する（合言葉は画面に出ない）
+### 4. GitHub に「記事ができたらこのURLへ知らせて」と登録する
 ```bash
 URL="https://$(/Applications/Tailscale.app/Contents/MacOS/Tailscale status --json | python3 -c 'import json,sys;print(json.load(sys.stdin)["Self"]["DNSName"].rstrip("."))')/hooks/github"; gh api repos/genjoK0216KK/bleague-matome/hooks --method POST --input - >/dev/null <<EOF && echo "登録しました：$URL"
-{"name":"web","active":true,"events":["push"],"config":{"url":"$URL","content_type":"json","insecure_ssl":"0","secret":"$(security find-generic-password -s basuke-thumb-webhook -w)"}}
+{"name":"web","active":true,"events":["push"],"config":{"url":"$URL","content_type":"json","insecure_ssl":"0","secret":"$(/usr/bin/security find-generic-password -s basuke-thumb-webhook -w)"}}
 EOF
 ```
-登録すると GitHub がすぐ確認の通知（ping）を送る。届いたかを見る：
+こう出ればOK：`登録しました：https://aimac-mini.〜.ts.net/hooks/github`
+
+### 5. 最後の確認（GitHub からの確認の通知が届いたか）
+登録すると、GitHub がすぐに確認の通知（ping）を送ります。
 ```bash
-tail -3 "$HOME/Library/Application Support/basuke-thumb-hook/receiver.log"
+sleep 5; tail -3 "$HOME/Library/Application Support/basuke-thumb-hook/receiver.log"; gh api repos/genjoK0216KK/bleague-matome/hooks --jq '.[]|{id,active,url:.config.url}'
 ```
-「GitHub から ping を受信」が出れば成功。うまくいかない時の画面での登録：<https://github.com/genjoK0216KK/bleague-matome/settings/hooks/new>（Payload URL＝上のURL、Content type＝application/json、Secret＝`security find-generic-password -s basuke-thumb-webhook -w | tr -d '\n' | pbcopy` で写して貼り、貼った後に `pbcopy < /dev/null`、イベント＝Just the push event）。
+こう出ればOK：`GitHub から ping を受信` の行があり、その下に `"active": true` と手順4のURL。
+画面でも確かめられます：<https://github.com/genjoK0216KK/bleague-matome/settings/hooks>（登録した通知先を開き、「Recent Deliveries」に緑のチェック）。
+
+ここまでできたら、Claude に「設定できた」と伝えてください。Claude が手順 C（有効化と確認）を行います。
+
+<details><summary>手順4がうまくいかない時：画面で登録する</summary>
+
+1. <https://github.com/genjoK0216KK/bleague-matome/settings/hooks/new> を開く。
+2. Payload URL＝手順3で確かめたURL、Content type＝`application/json`、イベント＝「Just the push event」。
+3. Secret：ターミナルで `/usr/bin/security find-generic-password -s basuke-thumb-webhook -w | tr -d '\n' | pbcopy` を貼ってから、Secret 欄に貼り付ける。貼った後に `pbcopy < /dev/null` でコピーを消す。
+4. 「Add webhook」を押し、手順5で確かめる。
+</details>
 
 ## C. 有効化と確認（Claude が行う。本人のOKの後）
 1. 同じコミットで `python scripts/thumb_requests.py --init`（既存記事を基準に登録）と `data/thumbs/config.json` の `enabled=true` を main へ入れる。依頼台帳ができる push なので、受け口→作業役が動き、「新規0件」で終わることを `worker.log` で確かめる。
@@ -77,6 +134,7 @@ touch "$H/STOP"
 ```
 - STOP を置いたうえで、`worker.pid` の記録（PID・PGID・開始時刻・コマンド・置き場所）が今動いているプロセスと**全部一致した時だけ**、そのプロセスグループ（作業役・Codex・送信・git）に TERM を送る。5秒待って残っていれば、もう一度同じ確かめ方をしてから KILL する。
 - 古い `worker.pid` の番号が別のプロセスに使い回されていても、開始時刻やコマンドが違うので何もしない（「何も止めません」と出る）。ほかの作業の codex は巻き込まない。
+- 止める前から作業役の本体が終わっていて、子（Codex など）だけが残っている時は、照合できないので**子の停止は保証しない**。「未完了」と残っているプロセスの一覧が出るので、中身を見て必要なら1つずつ `kill PID` で止める（STOP は置かれているので、新しい作業は始まらない）。
 - 確かめ方：「止まりました」と出る。`tail -3 "$H/worker.log"` も見る。
 - 途中で止めた作業は完成として保存されず、再開後にもう一度作られる。生成の回数と周の記録はその都度 status.json に保存しているので、止めて再開しても1時間の上限は超えない。
 

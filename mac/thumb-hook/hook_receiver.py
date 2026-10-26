@@ -115,15 +115,29 @@ def worker_running(home):
         return True
 
 
+CHILDREN = []                                         # 回収用スレッドを作れなかった作業役（次の機会に回収）
+
+
+def reap_children():
+    for proc in list(CHILDREN):
+        if proc.poll() is not None:
+            CHILDREN.remove(proc)
+
+
 def wake_worker(spawn=True, home=None, worker=None, python=None):
     """「もう一度見る」印を置く。作業役が動いていなければ起こす（動いていれば印だけで、その作業役が拾う）。"""
+    reap_children()
     home = Path(home or HOME)
     home.mkdir(parents=True, exist_ok=True)
     (home / 'dirty').write_text(time.strftime('%Y-%m-%dT%H:%M:%S'))
     if spawn and not worker_running(home):
         proc = subprocess.Popen([python or sys.executable, str(worker or WORKER)], start_new_session=True,
                                 stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        threading.Thread(target=proc.wait, daemon=True).start()   # 終わったらすぐ回収（ゾンビを残さない）
+        try:
+            threading.Thread(target=proc.wait, daemon=True).start()   # 終わったらすぐ回収（ゾンビを残さない）
+        except RuntimeError as exc:
+            log('回収用スレッドを作れない（次の通知の時に回収する）：' + str(exc))
+            CHILDREN.append(proc)
         return True
     return False
 

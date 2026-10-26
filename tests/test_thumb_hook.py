@@ -538,6 +538,32 @@ work = Path(args[args.index('-C') + 1])
         self.assertNotIn('01a16fa6', (HOOK / 'thumb_worker.py').read_text().split('"""', 2)[2])
 
 
+class Reaping(unittest.TestCase):
+    def test_worker_is_reaped_even_if_the_reaper_thread_cannot_start(self):
+        """再検品5-L2：回収用スレッドを作れなくても例外を上げず、記録して次の機会に回収する。"""
+        tmp = tempfile.TemporaryDirectory(); self.addCleanup(tmp.cleanup)
+        home = Path(tmp.name)
+        script = home / 'noop.py'
+        script.write_text('pass\n')
+
+        class NoThread:
+            def __init__(self, *a, **k):
+                pass
+
+            def start(self):
+                raise RuntimeError("can't start new thread")
+        real = recv.threading.Thread
+        recv.threading.Thread = NoThread
+        try:
+            self.assertTrue(recv.wake_worker(home=home, worker=script, python=sys.executable))
+        finally:
+            recv.threading.Thread = real
+        self.assertEqual(len(recv.CHILDREN), 1)
+        recv.CHILDREN[0].wait(timeout=10)
+        recv.reap_children()
+        self.assertEqual(recv.CHILDREN, [])
+
+
 class StopScript(unittest.TestCase):
     """再検品4-2：記録が全部一致した時だけ、そのグループを止める。"""
 
@@ -574,9 +600,11 @@ class StopScript(unittest.TestCase):
                 pass
         proc.wait(timeout=10)
 
-    def stop(self):
+    def stop(self, code=None):
         out = subprocess.run([sys.executable, str(HOOK / 'thumb_stop.py'), '1'], env=self.env,
                              capture_output=True, text=True, timeout=60)
+        if code is not None:
+            self.assertEqual(out.returncode, code)
         return out.stdout
 
     def alive(self, pid):
@@ -608,6 +636,16 @@ class StopScript(unittest.TestCase):
             self.assertTrue(self.alive(child))
         (self.home / 'worker.pid').unlink()
         self.assertIn('何も止めません', self.stop())
+
+    def test_children_left_after_the_leader_died_are_shown_not_killed(self):
+        """再検品5-L1：先頭が先に消えて子だけ残る時は、止めずに候補を出し「未完了」（終了コード2）。"""
+        proc, child = self.fake_worker()
+        os.kill(proc.pid, signal.SIGKILL)
+        proc.wait(timeout=10)
+        out = self.stop(code=2)
+        self.assertIn('未完了', out)
+        self.assertIn(str(child), out)
+        self.assertTrue(self.alive(child))
 
 
 class Install(unittest.TestCase):
