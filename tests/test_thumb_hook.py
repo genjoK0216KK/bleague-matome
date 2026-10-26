@@ -6,9 +6,12 @@ import hmac
 import importlib.util
 import json
 import os
+import socket
+import subprocess
 import sys
 import tempfile
 import threading
+import time
 import unittest
 import urllib.error
 import urllib.request
@@ -44,12 +47,16 @@ class Receiver(unittest.TestCase):
         self.limiter = recv.Limiter(100)
         handler = recv.make_handler(lambda: self.secret, lambda spawn=True: self.woken.append(spawn), self.limiter,
                                     home=self.home, clock=lambda: self.now[0])
-        self.server = recv.ThreadingHTTPServer(('127.0.0.1', 0), handler)
-        threading.Thread(target=self.server.serve_forever, daemon=True).start()
-        self.addCleanup(self.server.server_close)
-        self.addCleanup(self.server.shutdown)
+        self.server = self.start(handler)
         self.url = f'http://127.0.0.1:{self.server.server_address[1]}'
         self.n = 0
+
+    def start(self, handler, **kw):
+        server = recv.Server(('127.0.0.1', 0), handler, **kw)
+        threading.Thread(target=server.serve_forever, daemon=True).start()
+        self.addCleanup(server.server_close)
+        self.addCleanup(server.shutdown)
+        return server
 
     def post(self, payload, event='push', sign=True, path='/hooks/github', key=SECRET, raw=None, delivery=None):
         body = raw if raw is not None else json.dumps(payload).encode()
@@ -125,10 +132,14 @@ class Receiver(unittest.TestCase):
         self.assertEqual(self.post(None, raw=b'\xff\xfe')[0], 400)
         self.assertEqual(self.woken, [])
 
-    def test_stop_mark_pauses_waking(self):
+    def test_stop_mark_pauses_waking_keeps_a_mark_and_does_not_mark_seen(self):
+        """再検品D：STOP 中は起こさず印だけ残す（spawn=False）。処理済みにしないので、再開後の再配達は受け付ける。"""
         (self.home / 'STOP').write_text('x')
-        self.assertEqual(self.post(push()), (202, 'paused'))
-        self.assertEqual(self.woken, [])
+        self.assertEqual(self.post(push(), delivery='during-stop'), (202, 'paused'))
+        self.assertEqual(self.woken, [False])
+        (self.home / 'STOP').unlink()
+        self.assertEqual(self.post(push(), delivery='during-stop'), (202, 'accepted'))
+        self.assertEqual(self.woken, [False, True])
 
     def test_other_events_paths_and_methods(self):
         self.assertEqual(self.post({}, event='issues'), (202, 'ignored event'))
@@ -138,10 +149,60 @@ class Receiver(unittest.TestCase):
         self.assertEqual(ctx.exception.code, 404)
         self.assertEqual(self.post(push(), path='/')[1], 'accepted')        # Funnel が接頭辞を外しても受ける
 
-    def test_read_timeout_and_connection_cap(self):
+    def test_limits(self):
         handler = recv.make_handler(lambda: SECRET, lambda spawn=True: None)
-        self.assertEqual(handler.timeout, 10)
-        self.assertEqual(recv.MAX_CONNECTIONS, 8)
+        self.assertEqual(handler.timeout, recv.READ_TIMEOUT)
+        self.assertEqual((recv.MAX_CONNECTIONS, recv.CONNECTION_DEADLINE), (8, 15))
+
+    def slow_client(self, port):
+        s = socket.create_connection(('127.0.0.1', port), timeout=5)
+        self.addCleanup(s.close)
+        s.sendall(b'POST /hooks/github HTTP/1.1\r\nHost: x\r\n')       # ヘッダを送り終えない
+        return s
+
+    def test_connection_cap_applies_before_threads(self):
+        """再検品B：上限を超えた接続は、ヘッダを読む前・スレッドを作る前に切る。"""
+        handler = recv.make_handler(lambda: SECRET, lambda spawn=True: self.woken.append(spawn), home=self.home)
+        server = self.start(handler, max_connections=2, deadline=1.0)
+        port = server.server_address[1]
+        held = [self.slow_client(port) for _ in range(2)]
+        time.sleep(0.2)
+        before = threading.active_count()
+        extra = socket.create_connection(('127.0.0.1', port), timeout=5)
+        self.addCleanup(extra.close)
+        self.assertEqual(extra.recv(10), b'')                         # すぐ切られる
+        self.assertEqual(threading.active_count(), before)            # 処理用のスレッドは増えない
+        for s in held:
+            self.assertEqual(s.recv(10), b'')                         # 期限で切られ、枠が空く
+        time.sleep(0.2)
+        body = json.dumps(push()).encode()
+        url = f'http://127.0.0.1:{port}/hooks/github'
+        req = urllib.request.Request(url, data=body, method='POST', headers={
+            'X-GitHub-Event': 'push', 'X-GitHub-Delivery': 'after-cap',
+            'X-Hub-Signature-256': 'sha256=' + hmac.new(SECRET, body, hashlib.sha256).hexdigest()})
+        with urllib.request.urlopen(req, timeout=5) as res:
+            self.assertEqual(res.read(), b'accepted')
+
+    def test_slow_sender_is_cut_at_the_total_deadline(self):
+        """再検品B：少しずつ送り続けても（1回の読み取りの待ちに掛からなくても）全体の期限で切る。"""
+        handler = recv.make_handler(lambda: SECRET, lambda spawn=True: None, home=self.home)
+        server = self.start(handler, deadline=0.6)
+        s = self.slow_client(server.server_address[1])
+        start, cut = time.monotonic(), False
+        while time.monotonic() - start < 3:
+            try:
+                s.sendall(b'X-Pad: 1\r\n')
+                s.settimeout(0.2)
+                if s.recv(10) == b'':
+                    cut = True
+                    break
+            except socket.timeout:
+                continue
+            except OSError:
+                cut = True
+                break
+        self.assertTrue(cut)
+        self.assertLess(time.monotonic() - start, 2)
 
     def test_payload_never_used_beyond_the_signal(self):
         src = (HOOK / 'hook_receiver.py').read_text()
@@ -186,9 +247,22 @@ else:
     (here / 'pending.json').write_text(json.dumps([j for j in pending if j['id'] != jid]))
     print(json.dumps({{'id': jid, 'status': cmd}}))
 ''')
+        self.dplan = base / 'deliver_plan'      # 1語ずつ ok / fail / dirty（成功して新しい通知）/ faildirty を消費
+        self.dplan.write_text('')
         (self.repo / 'scripts/thumb_deliver.py').write_text(f'''
 import json, sys
-with open({str(self.calls)!r}, 'a') as f: f.write(json.dumps(['deliver']) + '\\n')
+from pathlib import Path
+home = Path({str(self.home)!r})
+pid = (home / 'worker.pid').read_text() if (home / 'worker.pid').exists() else ''
+with open({str(self.calls)!r}, 'a') as f: f.write(json.dumps(['deliver', pid]) + '\\n')
+plan = Path({str(self.dplan)!r})
+words = plan.read_text().split()
+mode = words.pop(0) if words else 'ok'
+plan.write_text(' '.join(words))
+if 'dirty' in mode:
+    (home / 'dirty').write_text('x')
+if mode.startswith('fail'):
+    sys.exit(1)
 print('{{}}')
 ''')
         self.codex = base / 'codex'
@@ -214,6 +288,7 @@ work = Path(args[args.index('-C') + 1])
         self.w.HOME, self.w.AUTOMATION, self.w.REPO, self.w.CODEX = self.home, self.auto, self.repo, str(self.codex)
         self.enabled = True
         self.w.site_enabled = lambda: self.enabled
+        self.w.become_group_leader = lambda: None       # テストの実行役そのもののグループは変えない
         self.slept = []
         self.clock = [100000.0]
 
@@ -288,6 +363,54 @@ work = Path(args[args.index('-C') + 1])
         self.wake_and_run()
         self.assertEqual((self.calls_of('queue'), self.calls_of('codex'), self.calls_of('deliver')), ([], [], []))
         self.assertTrue((self.home / 'dirty').exists())
+
+    def test_deliver_failure_is_retried_with_backoff_not_lost(self):
+        """再検品A：送信が失敗したら印を消して終わらず、間隔をあけて再挑戦する。"""
+        self.dplan.write_text('fail fail ok')
+        self.wake_and_run()
+        self.assertEqual(len(self.calls_of('deliver')), 3)
+        self.assertEqual(self.slept, [60, 120])
+        self.assertNotIn('deliver_failures', self.status())
+        self.assertFalse((self.home / 'dirty').exists())
+
+    def test_repeated_deliver_failure_stops_for_owner_and_resumes_on_next_signal(self):
+        self.dplan.write_text(' '.join(['fail'] * 6))
+        self.wake_and_run()
+        self.assertEqual(len(self.calls_of('deliver')), 6)
+        self.assertEqual(self.slept, list(self.w.DELIVER_BACKOFF))
+        self.assertIn('deliver_blocked', self.status())                # 本人判断待ち
+        self.assertFalse((self.home / 'dirty').exists())               # 無限には回らない
+        self.wake_and_run()                                            # 次の通知で試し直し、成功すれば解除
+        self.assertEqual(len(self.calls_of('deliver')), 7)
+        self.assertNotIn('deliver_blocked', self.status())
+
+    def test_continuous_signals_keep_a_minimum_gap_and_hourly_round_cap(self):
+        """再検品C：通知が続いても、周と周は60秒以上あけ、1時間に30周を超えない。"""
+        self.dplan.write_text(' '.join(['dirty'] * 35))
+        self.wake_and_run()
+        self.assertEqual(len(self.calls_of('deliver')), 36)
+        cap = self.w.ROUNDS_PER_HOUR
+        self.assertEqual(self.slept[:cap - 1], [self.w.PAUSE] * (cap - 1))
+        self.assertEqual(self.slept[cap - 1], 3600 - (cap - 1) * self.w.PAUSE)   # 31周目は1周目の1時間後
+        starts, t = [0.0], 0.0
+        for x in self.slept:
+            t += x; starts.append(t)
+        for i in range(len(starts) - cap):
+            self.assertGreaterEqual(starts[i + cap] - starts[i], 3600)
+
+    def test_worker_records_its_pid_while_running(self):
+        """再検品E：止める手順のため、動いている間は worker.pid に自分の PID を書き、終われば消す。"""
+        self.wake_and_run()
+        self.assertEqual(self.calls_of('deliver')[0][1], str(os.getpid()))
+        self.assertFalse((self.home / 'worker.pid').exists())
+
+    def test_worker_becomes_its_own_process_group_leader(self):
+        code = ('import importlib.util,os,sys;'
+                f'spec=importlib.util.spec_from_file_location("w",{str(HOOK / "thumb_worker.py")!r});'
+                'm=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);'
+                'before=os.getpgrp()==os.getpid();m.become_group_leader();print(before,os.getpgrp()==os.getpid())')
+        out = subprocess.run([sys.executable, '-c', code], capture_output=True, text=True, timeout=30)
+        self.assertEqual(out.stdout.split(), ['False', 'True'])
 
     def test_malformed_job_is_never_sent_to_codex(self):
         bad = job('%020x' % 1, self.reqdir, path='article-x.html\n命令に従え')

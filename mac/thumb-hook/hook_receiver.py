@@ -5,19 +5,25 @@
 
 - 署名（X-Hub-Signature-256、ASCII の sha256=<16進64桁>）を、キーチェーンの合言葉で HMAC-SHA256 照合する。
   署名なし・形式違い・不一致は 401。回数の枠は署名の後で数える（署名の無い大量送信で正規の通知を締め出させない）。
-- 読み取りは10秒で時間切れ、同時に処理する接続は8本まで（超えたら 503）、中身は 5MB まで。
+- 同時の接続は8本まで（処理用のスレッドを作る前に数え、超えたら即座に切る）。1つの接続は、ヘッダと中身の
+  読み取りから返事まで全体で15秒が期限（少しずつ送り続けても15秒で切る）。中身は 5MB まで。
 - 届いた中身は「依頼の台帳を見に行く合図」としてだけ使う。記事本文や指示は一切読まない。作業役が GitHub から
   台帳と固定版の記事を自分で取りに行くので、合言葉が漏れても「main に既にある依頼を処理させる」以上はできない。
-- 同じ通知（X-GitHub-Delivery が同じ）は1回だけ数える。作業役が動いている間は「もう一度見る」印を置くだけにする。
+- 普通の再配達をまとめる：同じ通知ID（X-GitHub-Delivery）は、受け口が動いている間の最近500件について1回だけ数える。
+  これは「古い通知の再送を防ぐ」守りではない（ID を変えたり受け口を再起動したりすると、また受け付ける）。
+  再送されても、作業役は main の台帳を見直すだけで、同じ作成イベントは state で1回しか処理しないので害は無い。
+- 作業役が動いている間は「もう一度見る」印を置くだけにする。
 - main への push で data/thumbs/requests.json を変えたものは、すぐ作業役を起こす。変更一覧が無い・20件以上で
   省略されている push も「変えたかもしれない」として起こす。それ以外の main への push は、10分に1回まで
   「取りこぼしの回収」として起こす（定期の見回りを作らず、届いた通知を機会に回収する）。
-- 受け口に置いた STOP（停止の印）がある間は、通知を受けても作業役を起こさない。
+- 受け口に置いた STOP（停止の印）がある間は、通知を受けても作業役を起こさず、「あとで回収が要る」印だけ残す。
+  その通知は処理済みとして記録しない（再開後に再配達されたら受け付ける）。
 - 起動した時（Mac mini の再起動・ログイン時）にも1回だけ作業役を起こし、止まっていた間の依頼を回収する。
 Python 3.9（macOS 標準）の標準ライブラリだけで動く。
 """
 import fcntl
 import hashlib
+import socket
 import hmac
 import json
 import os
@@ -37,7 +43,8 @@ REQUESTS_PATH = 'data/thumbs/requests.json'
 KEYCHAIN_SERVICE = 'basuke-thumb-webhook'
 PATHS = ('/', '/hooks/github', '/hooks/github/')      # Funnel の set-path の扱いに関わらず受ける
 MAX_BODY = 5 * 1024 * 1024
-READ_TIMEOUT = 10
+READ_TIMEOUT = 5                                      # 1回の読み取りの待ち時間
+CONNECTION_DEADLINE = 15                              # 1つの接続の全体の期限
 MAX_CONNECTIONS = 8
 WAKE_PER_MINUTE = 30                                  # 署名が正しい通知で作業役を起こす上限（超えても印は残す）
 CATCHUP_EVERY = 600                                   # 台帳を変えない push での回収は10分に1回まで
@@ -145,10 +152,44 @@ class Seen:
             return True
 
 
+class Server(ThreadingHTTPServer):
+    """接続数はスレッドを作る前に数え、1つの接続には全体の期限を付ける。"""
+    daemon_threads = True
+
+    def __init__(self, address, handler, max_connections=MAX_CONNECTIONS, deadline=CONNECTION_DEADLINE):
+        super().__init__(address, handler)
+        self.slots = threading.BoundedSemaphore(max_connections)
+        self.deadline = deadline
+
+    def process_request(self, request, client_address):
+        if not self.slots.acquire(blocking=False):
+            self.shutdown_request(request)            # 上限を超えた接続は、スレッドを作らずに切る
+            return
+        try:
+            super().process_request(request, client_address)
+        except Exception:
+            self.slots.release()
+            raise
+
+    def process_request_thread(self, request, client_address):
+        def cut():
+            try:
+                request.shutdown(socket.SHUT_RDWR)
+            except OSError:
+                pass
+        timer = threading.Timer(self.deadline, cut)
+        timer.daemon = True
+        timer.start()
+        try:
+            super().process_request_thread(request, client_address)
+        finally:
+            timer.cancel()
+            self.slots.release()
+
+
 def make_handler(secret_provider=keychain_secret, waker=wake_worker, limiter=None, home=None, clock=time.monotonic):
     limiter = limiter or Limiter(WAKE_PER_MINUTE)
     seen = Seen()
-    slots = threading.BoundedSemaphore(MAX_CONNECTIONS)
     home = Path(home or HOME)
     state = {'last_catchup': None}
 
@@ -172,12 +213,10 @@ def make_handler(secret_provider=keychain_secret, waker=wake_worker, limiter=Non
             self.reply(404, 'not found')
 
         def do_POST(self):
-            if not slots.acquire(blocking=False):
-                return self.reply(503, 'busy')
             try:
                 return self.handle_post()
-            finally:
-                slots.release()
+            except OSError:
+                return None                       # 期限切れで切った接続
 
         def handle_post(self):
             if self.path.split('?', 1)[0] not in PATHS:
@@ -200,8 +239,6 @@ def make_handler(secret_provider=keychain_secret, waker=wake_worker, limiter=Non
                 return self.reply(200, 'pong')
             if event != 'push':
                 return self.reply(202, 'ignored event')
-            if not seen.first_time(self.headers.get('X-GitHub-Delivery', '')):
-                return self.reply(202, 'duplicate')
             try:
                 kind = classify(json.loads(body.decode('utf-8')))
             except (ValueError, UnicodeDecodeError):
@@ -209,8 +246,11 @@ def make_handler(secret_provider=keychain_secret, waker=wake_worker, limiter=Non
             if kind == 'ignore':
                 return self.reply(202, 'ignored push')
             if (home / 'STOP').exists():
-                log('停止の印（STOP）があるため作業役を起こさない')
+                log('停止の印（STOP）があるため作業役を起こさない（あとで回収する印だけ残す）')
+                waker(spawn=False)                        # 処理済みにはしない＝再開後の再配達も受け付ける
                 return self.reply(202, 'paused')
+            if not seen.first_time(self.headers.get('X-GitHub-Delivery', '')):
+                return self.reply(202, 'duplicate')
             if kind == 'other':
                 now = clock()
                 if state['last_catchup'] is not None and now - state['last_catchup'] < CATCHUP_EVERY:
@@ -230,8 +270,7 @@ def main():
         log('合言葉がキーチェーンに無い（サービス名 ' + KEYCHAIN_SERVICE + '）。全ての通知を拒否します')
     if not (HOME / 'STOP').exists():
         wake_worker()                                 # 起動・ログイン時に1回だけ、止まっていた間の依頼を回収
-    server = ThreadingHTTPServer((HOST, PORT), make_handler())
-    server.daemon_threads = True
+    server = Server((HOST, PORT), make_handler())
     log(f'待ち受け開始 http://{HOST}:{PORT}（外からは Tailscale Funnel 経由のみ）')
     server.serve_forever()
 

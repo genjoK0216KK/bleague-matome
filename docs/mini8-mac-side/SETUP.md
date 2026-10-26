@@ -62,19 +62,65 @@ tail -3 "$HOME/Library/Application Support/basuke-thumb-hook/receiver.log"
 
 ## D. 止め方（止めたいものごとに。確かめ方つき）
 
-| 止めたいもの | 止め方 | 止まったことの確かめ方 |
-| --- | --- | --- |
-| 動いている生成と送信 | `touch "$HOME/Library/Application Support/basuke-thumb-hook/STOP"`（次の作業の前・送信の前で止まる）。今すぐ止める時は続けて `pkill -f thumb_worker.py; pkill -f "codex exec --ephemeral"` | `pgrep -fl thumb_worker.py` が何も出さない。`tail -3 "$HOME/Library/Application Support/basuke-thumb-hook/worker.log"` に「止めた：停止の印」 |
-| 新しい通知で作業役が起きること | 上の STOP で十分（受け口は通知を受けても起こさない）。受け口ごと止める時は `launchctl bootout gui/$(id -u)/com.genjo.basuke-thumb-hook` | STOP の時：`receiver.log` に「停止の印（STOP）があるため」。bootout の時：`curl -s -o /dev/null -w "%{http_code}\n" -X POST http://127.0.0.1:8787/hooks/github` が 000 |
-| 外からの通知の到達 | このURLだけ外す：`/Applications/Tailscale.app/Contents/MacOS/Tailscale funnel --https=443 --set-path=/hooks/github off`。GitHub 側も止める時は <https://github.com/genjoK0216KK/bleague-matome/settings/hooks> で該当の Webhook の Active を外す（または Delete） | `/Applications/Tailscale.app/Contents/MacOS/Tailscale funnel status` に /hooks/github が出ない。GitHub の Webhook 画面の Recent Deliveries が失敗になる |
-| サイトへの反映 | `data/thumbs/config.json` を `enabled=false` にして main へ（Claude が行う）。作業役もこれを見て生成・送信をしない | 記事・一覧に新しい自動サムネが入らない。`worker.log` に「サイト側が無効」 |
+以下、`H="$HOME/Library/Application Support/basuke-thumb-hook"` と `T=/Applications/Tailscale.app/Contents/MacOS/Tailscale` を最初に貼ってから使う。
 
-再開：STOP を消す（`rm "$HOME/Library/Application Support/basuke-thumb-hook/STOP"`）／`launchctl bootstrap gui/$(id -u) "$HOME/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist"`／Funnel を手順B-3で再設定／enabled=true。止めていた間の依頼は台帳に残っているので、再開後の最初の通知（または受け口の起動時）にまとめて処理される。
+### D-1. 生成と送信を止める（ふつうはこれだけ）
+```bash
+touch "$H/STOP"
+```
+- 動いている作業役は、次の作業の前・送信の前で止まる。受け口は通知を受けても作業役を起こさず、「あとで回収が要る」印（dirty）だけ残す。その通知は処理済みとして記録しない。
+- 確かめ方：`tail -3 "$H/worker.log"` に「止めた：停止の印」、通知が来ていれば `tail -3 "$H/receiver.log"` に「停止の印（STOP）があるため」。
+
+### D-2. 今すぐ止める（生成の途中でも）
+作業役は自分のプロセスグループの先頭として動き、PID を `worker.pid` に書く。そのグループだけを止める（作業役・Codex・送信・git がまとめて止まり、ほかの作業の codex は巻き込まない）。
+```bash
+touch "$H/STOP"; P=$(cat "$H/worker.pid" 2>/dev/null); if [ -n "$P" ] && ps -p "$P" -o command= | grep -q thumb_worker.py; then kill -TERM -- -"$P"; sleep 3; pgrep -g "$P" -l || echo "止まりました"; else echo "動いている作業役はありません"; fi
+```
+- `pgrep -g` に何か残っていたら、もう一度 `kill -KILL -- -"$P"`。
+- 途中で止めた作業は完成として保存されず、再開後にもう一度作られる（1時間の上限の中で）。
+
+### D-3. 受け口ごと止める
+```bash
+launchctl bootout gui/$(id -u)/com.genjo.basuke-thumb-hook
+```
+- 確かめ方：`curl -s -o /dev/null -w "%{http_code}\n" -X POST http://127.0.0.1:8787/hooks/github` が `000`。
+
+### D-4. 外からの通知の到達を止める（Funnel）
+1. まず今の公開設定を見る：
+   ```bash
+   "$T" serve status
+   ```
+2. 外し方（上で見た内容に合わせて、どちらか）
+   - 公開しているのが /hooks/github だけなら、Funnel の設定をまとめて消す：`"$T" serve reset`
+   - ほかの公開もあって /hooks/github だけ外したい時：`"$T" funnel --https=443 --set-path=/hooks/github off`（この版で受け付けない時は、`"$T" funnel --help` の「off」の書き方に従う。迷ったら D-3 で受け口を止めれば、Funnel が残っていても中には届かない）
+3. 確かめ方：`"$T" serve status` と `"$T" funnel status` に /hooks/github が出ない。
+
+### D-5. GitHub からの通知を止める（Webhook）
+1. 画面：<https://github.com/genjoK0216KK/bleague-matome/settings/hooks> で該当の Webhook を開き、Active を外して保存（または Delete）。
+2. 確かめ方（ターミナル）：
+   ```bash
+   gh api repos/genjoK0216KK/bleague-matome/hooks --jq '.[]|{id,active,url:.config.url}'
+   ```
+   該当の URL の `active` が `false`（Delete した時は一覧に出ない）。
+
+### D-6. サイトへの反映を止める
+`data/thumbs/config.json` を `enabled=false` にして main へ（Claude が行う）。作業役もこれを見て生成・送信をしない。確かめ方：`worker.log` に「サイト側が無効」、記事・一覧に新しい自動サムネが入らない。
+
+### 再開
+- STOP だけの時：`rm "$H/STOP"` のあと、受け口を起動し直して止めていた間の分を回収する：`launchctl kickstart -k gui/$(id -u)/com.genjo.basuke-thumb-hook`（起動時に1回作業役を起こす）。
+- D-3 の後：`launchctl bootstrap gui/$(id -u) "$HOME/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist"`
+- D-4 の後：手順 B-3 の2をもう一度。D-5 の後：Active に戻す（Delete した時は手順 B-4）。D-6 の後：enabled=true（Claude）。
+- 止めていた間の依頼は台帳に残っているので、再開後の起動時（または次の通知）にまとめて処理される。
+
+### 同じ通知の扱い（二重処理しない理由）
+- **再配達のまとめ**：受け口は、動いている間の最近500件の通知ID（X-GitHub-Delivery）を覚え、同じIDは1回だけ数える。これは手間を省くためのもので、記憶はメモリだけ（受け口を再起動すると忘れる）。
+- **再送されても害が無い理由**：通知は「台帳を見に行く合図」でしかなく、中身は使わない。作業役は main の台帳を読み直し、同じ作成イベント（記事パスから決まるID）は state で1回しか受け取らない。だから古い通知の再送や、ID を変えた再送があっても、新しい生成は起きない（起きるのは台帳の見直し1回だけで、それも周の上限の中）。
 
 ## 費用・守り
 - 費用は0円（Tailscale 個人無料、GitHub Webhook 無料、画像は ChatGPT 定額の範囲。1枚あたり約2万トークン）。
 - 外に出るのは Funnel の1つのURLだけ。受け口は GitHub の署名を確かめ、中身は「見に行く合図」としてだけ使う。合言葉はキーチェーンと GitHub の Webhook 設定の2か所だけ。
 - 定期巡回は作らない（受け口の常駐は、通知を待つだけで自分からは動かない）。取りこぼしの回収は、起動・ログイン時の1回と、届いた通知を機会にした回収（台帳を変えない main への push でも10分に1回まで）で行う。push の変更一覧が無い・20件以上で省略されている時は、変更を確かめずに作業役を起こす。
-- 作業役の上限：1周で最大5件、1時間に最大20件。残りや失敗の再挑戦は、1分あけて同じ作業役が続ける。同じ作業が2回続けて失敗したら止めて、status.json に「本人判断待ち」を残す。
-- 受け口の守り：署名の形式（ASCII の sha256=16進64桁）と一致を確かめてから数える（30回/分。超えても合図は残す）。読み取り10秒・同時8接続・5MBまで。同じ通知ID（X-GitHub-Delivery）は1回だけ数える。
+- 作業役の上限：生成は1周で最大5件、1時間に最大20件。周と周は最低1分あけ、1時間に30周まで（通知が続いても詰めて回らない）。残りや失敗の再挑戦は同じ作業役が続ける。同じ作業が2回続けて失敗したら止めて、status.json に「本人判断待ち」を残す。
+- 送信の失敗：1・2・5・10・15分 あけて5回まで試す。だめなら止めて status.json に「本人判断待ち」（次の通知で1回だけ試し直す）。完成画像は ready に残るので失われない。
+- 受け口の守り：署名の形式（ASCII の sha256=16進64桁）と一致を確かめてから数える（30回/分。超えても合図は残す）。同時8接続まで（スレッドを作る前に数え、超えたら即座に切る）・1接続は全体で15秒まで・5MBまで。同じ通知の扱いは D の最後を参照。
 - 受け口が動くのは genjo でログインしている間（既存の health-watch と同じ）。停電後の自動起動のあと、ログインまでの間の依頼は、ログイン後の回収で処理される。

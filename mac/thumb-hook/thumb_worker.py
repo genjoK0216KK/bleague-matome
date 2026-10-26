@@ -11,7 +11,11 @@
   4. thumbnail_queue.py ready … 固定版の本文照合・5項目の検品を通った時だけ完成として保存する。
      失敗した作業は次の周でもう一度だけ試し、2回続けて失敗したら block で止めて本人判断に回す。
   5. thumb_deliver.py … 記事ごとに最新の完成画像を thumb-inbox へ送り、サイトの取り込みを起動する。
-上限：1周で最大5件。残りや再挑戦があれば1分あけて同じ作業役が続ける。1時間に最大20件（超えたら空くまで待つ）。
+上限：生成は1周で最大5件・1時間に最大20件。周と周の間は最低60秒あけ、依頼の取得と送信は1時間に30周まで
+（通知が続いても詰めて回らない）。生成の残り・再挑戦・送信の失敗があれば、同じ作業役が間隔をあけて続ける。
+送信の失敗は 1・2・5・10・15分 の間隔で5回まで試し、それでもだめなら止めて本人判断に回す（次の通知で再挑戦）。
+作業役は自分のプロセスグループの先頭として動き、PID を worker.pid に書く。止める時はこのグループだけを止める
+（作業役・Codex・送信・git がまとめて止まり、ほかの作業の codex は巻き込まない）。
 Python 3.9（macOS 標準）の標準ライブラリだけで動く。
 """
 import fcntl
@@ -35,7 +39,9 @@ SITE = 'https://basuke-matome.jp/'
 PYTHON = sys.executable
 PER_ROUND = 5
 PER_HOUR = 20
-PAUSE = 60
+PAUSE = 60                 # 周と周の最小間隔（秒）
+ROUNDS_PER_HOUR = 30       # 依頼の取得・送信の周の上限
+DELIVER_BACKOFF = (60, 120, 300, 600, 900)   # 送信の再挑戦の間隔。尽きたら止めて本人判断
 MAX_FAILURES = 2
 CODEX_TIMEOUT = 20 * 60
 ARTICLE = re.compile(r'article-[A-Za-z0-9_-]*?\d{8}\.html\Z')
@@ -194,44 +200,93 @@ def process_round(status, now=time.time):
     run(['git', '-C', str(REPO), 'pull', '-q', '--ff-only'])
     deliver = run([PYTHON, str(REPO / 'scripts/thumb_deliver.py'), '--ready', str(AUTOMATION / 'ready'),
                    '--repo', str(REPO)], cwd=REPO)
-    log('送信：' + ('成功 ' + deliver.stdout.strip()[-300:] if deliver.returncode == 0
-                    else '失敗（次の周・次の通知で取り返す）' + (deliver.stderr or '').strip()[-300:]))
+    delivered = deliver.returncode == 0
+    log('送信：' + ('成功 ' + deliver.stdout.strip()[-300:] if delivered
+                    else '失敗 ' + (deliver.stderr or '').strip()[-300:]))
     blocked = set(status.get('blocked', {}))
-    return len([j for j in pending if str(j.get('id')) not in blocked and str(j.get('id')) not in status.get('done', {})])
+    left = len([j for j in pending if str(j.get('id')) not in blocked and str(j.get('id')) not in status.get('done', {})])
+    return {'remaining': left, 'delivered': delivered}
+
+
+def wait_for_slot(status, now):
+    """次の周に入ってよい時刻まで待つ秒数（最小間隔・1時間の周の上限・送信の再挑戦の間隔）。"""
+    t = now()
+    starts = [x for x in status.get('round_starts', []) if t - x < 3600]
+    status['round_starts'] = starts
+    target = max(starts[-1] + PAUSE if starts else t, status.get('next_round_at', t))
+    if len(starts) >= ROUNDS_PER_HOUR:
+        target = max(target, starts[-ROUNDS_PER_HOUR] + 3600)
+    return max(0.0, target - t)
+
+
+def become_group_leader():
+    try:
+        if os.getpgrp() != os.getpid():
+            os.setpgid(0, 0)
+    except OSError:
+        pass
 
 
 def main(sleep=time.sleep, now=time.time):
     HOME.mkdir(parents=True, exist_ok=True)
+    become_group_leader()
     dirty = HOME / 'dirty'
+    pidfile = HOME / 'worker.pid'
     while True:
         with (HOME / 'lock').open('a') as lock:
             try:
                 fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
             except BlockingIOError:
                 return 0                       # 別の作業役が動いている。印は残っているので、そちらが拾う
+            pidfile.write_text(str(os.getpid()))
             status = load(HOME / 'status.json', {})
-            while dirty.exists():
-                dirty.unlink()
-                try:
-                    remaining = process_round(status, now)
-                except Stop as exc:
-                    log('止めた：' + str(exc) + '（印を残す。再開すれば拾う）')
-                    dirty.write_text('stopped')
-                    save(HOME / 'status.json', dict(status, last_run=time.strftime('%Y-%m-%dT%H:%M:%S')))
-                    return 0
-                except (RuntimeError, subprocess.TimeoutExpired, OSError, ValueError) as exc:
-                    log('この周は中断（次の通知で再挑戦）：' + str(exc)[:300])
-                    dirty.write_text('retry')
-                    save(HOME / 'status.json', dict(status, last_run=time.strftime('%Y-%m-%dT%H:%M:%S')))
-                    return 0
+            try:
+                while dirty.exists():
+                    wait = wait_for_slot(status, now)
+                    if wait:
+                        sleep(wait)
+                    dirty.unlink()
+                    status.setdefault('round_starts', []).append(now())
+                    status.pop('next_round_at', None)
+                    try:
+                        result = process_round(status, now)
+                    except Stop as exc:
+                        log('止めた：' + str(exc) + '（印を残す。再開すれば拾う）')
+                        dirty.write_text('stopped')
+                        return 0
+                    except (RuntimeError, subprocess.TimeoutExpired, OSError, ValueError) as exc:
+                        log('この周は中断（次の通知で再挑戦）：' + str(exc)[:300])
+                        dirty.write_text('retry')
+                        return 0
+                    more = bool(result['remaining'])
+                    if result['delivered']:
+                        status.pop('deliver_failures', None)
+                        status.pop('deliver_blocked', None)
+                    else:
+                        n = status.get('deliver_failures', 0) + 1
+                        status['deliver_failures'] = n
+                        if n <= len(DELIVER_BACKOFF):
+                            status['next_round_at'] = now() + DELIVER_BACKOFF[n - 1]
+                            log(f'送信の失敗（{n}回目）：{DELIVER_BACKOFF[n - 1]}秒あけて再挑戦する')
+                            more = True
+                        else:
+                            status['deliver_blocked'] = time.strftime('%Y-%m-%dT%H:%M:%S')
+                            status['deliver_failures'] = len(DELIVER_BACKOFF)   # 次の通知で1回だけ試し直す
+                            log('停止：送信が続けて失敗したため、次の通知まで止める（本人判断待ち）')
+                            more = False
+                    made = status.get('generated_at', [])
+                    if result['remaining'] and len(made) >= PER_HOUR:      # 1時間の生成の上限：空くまで待つ
+                        status['next_round_at'] = max(status.get('next_round_at', 0), made[-PER_HOUR] + 3600)
+                    if more:
+                        log(f"続ける：生成の残り {result['remaining']}件 / 送信 {'済' if result['delivered'] else '再挑戦'}")
+                        dirty.write_text('remaining')
+            finally:
                 status['last_run'] = time.strftime('%Y-%m-%dT%H:%M:%S')
                 save(HOME / 'status.json', status)
-                if remaining:
-                    left, wait = hour_left(status, now())
-                    pause = PAUSE if left > 0 else max(PAUSE, wait)
-                    log(f'残り {remaining}件：{int(pause)}秒あけて続ける')
-                    dirty.write_text('remaining')
-                    sleep(pause)
+                try:
+                    pidfile.unlink()
+                except OSError:
+                    pass
         if not dirty.exists():
             return 0                           # ロックを放した直後に印が増えていたら、もう一度取りに行く
 
