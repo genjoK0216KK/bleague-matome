@@ -4,8 +4,7 @@
   "506498": "2026-10-23",
   "506499": "2026-10-23",
   "506508": "2026-10-25",
-  "506509": "2026-10-25",
-  "506516": "2026-10-26"
+  "506509": "2026-10-25"
  },
  "published": [
   "2026-10-12",
@@ -14,7 +13,8 @@
   "2026-10-19",
   "2026-10-21",
   "2026-10-22",
-  "2026-10-24"
+  "2026-10-24",
+  "2026-10-26"
  ],
  "days": {
   "2026-10-19": {
@@ -130,22 +130,13 @@
    "source": "data/match_articles/article-games-20261025.json"
   },
   "2026-10-26": {
-   "state": "held",
+   "state": "ready",
    "games_total": 9,
-   "games_ready": 8,
-   "players": null,
-   "holds": [
-    {
-     "key": "506516",
-     "home": "島根",
-     "away": "仙台",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
-    }
-   ],
+   "games_ready": 9,
+   "players": 193,
+   "holds": [],
    "excluded": [],
-   "content_as_of": "2026-10-26 22:03 JST",
+   "content_as_of": "2026-10-26 22:13 JST",
    "source": "data/match_articles/article-games-20261026.json"
   }
  },
