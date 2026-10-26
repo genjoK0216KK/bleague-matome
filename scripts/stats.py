@@ -290,11 +290,11 @@ def leaders_table(leaders):
             f'<span class="lv">{p[k]}</span></td>' for p in shown)
         cells += '<td class="none">—</td>' * (3 - len(shown))
         rows.append(f'<tr><th scope="row" class="cat">{label}</th>{cells}</tr>')
-    head = ('<thead><tr><th scope="col">部門</th><th scope="col">1位</th>'
-            '<th scope="col">2位</th><th scope="col">3位</th></tr></thead>')
+    head = ('<thead><tr><th scope="col">部門</th><th scope="col">1人目</th>'
+            '<th scope="col">2人目</th><th scope="col">3人目</th></tr></thead>')
     return ('<p class="scroll-hint leaders-hint" aria-hidden="true">横にスクロールできます</p>\n'
             '<div class="tablewrap leaders-wrap" role="region" tabindex="0" aria-label="部門別リーダー（横にスクロールできます）">\n'
-            '<table class="leaders-table">\n<caption>部門別リーダー（各部門の上位3人と記録）</caption>\n'
+            '<table class="leaders-table">\n<caption>部門別リーダー（各部門の上位3人と記録。記録の多い順に左から。同じ記録は同順位）</caption>\n'
             + head + "\n<tbody>\n" + "\n".join(rows) + "\n</tbody>\n</table>\n</div>")
 
 
