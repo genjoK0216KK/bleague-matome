@@ -242,13 +242,33 @@ def derive(root, cand):
     return files
 
 
+def newest_by_article(folders):
+    """記事ごとに、いちばん新しく完成した bundle（prepared_at が最大）の (id, prepared_at)。
+    いまの本文に合うかどうかに関わらず数える（合わない新しい版があれば、古い版へは戻らないため）。"""
+    newest = {}
+    for folder in folders:
+        m = load_json(folder / 'manifest.json', None)
+        if not isinstance(m, dict) or m.get('id') != folder.name or not isinstance(m.get('article_path'), str):
+            continue
+        prev = newest.get(m['article_path'])
+        stamp = m.get('prepared_at') or ''
+        if prev is None or stamp > prev[1]:
+            newest[m['article_path']] = (m['id'], stamp)
+    return newest
+
+
 def import_inbox(root, inbox):
-    """inbox/<id>/ を全部見るが、採用するのは「いまの本文と同じ版」の画像だけ。古い版・不正は理由を記録して捨てる。
-    戻り値：{'imported': [...], 'rejected': [...], 'unchanged': n}"""
+    """inbox/<id>/ を全部見るが、採用の候補は「記事ごとにいちばん新しく完成した画像」だけ。
+    それが「いまの本文と同じ版」なら採用する。古い版・不正は理由を記録して捨てる。
+    同じ記事のより古い画像は、本文が合っていても採用せず「置き換え済み（superseded）」の終わりの印を付ける
+    （本文が過去の版へ戻っても古い画像へは戻らない。送信側が未取り込みと誤って起動を繰り返さない）。
+    いちばん新しい画像が採用できない時は、それより古い採用中の画像を退役（retired）させ、既定の表示に戻す。
+    戻り値：{'imported': [...], 'rejected': [...], 'superseded': [...], 'retired': [...], 'unchanged': n}"""
     root, inbox = Path(root), Path(inbox)
     reg = registry(root)
-    result = {'imported': [], 'rejected': [], 'unchanged': 0}
+    result = {'imported': [], 'rejected': [], 'superseded': [], 'retired': [], 'unchanged': 0}
     folders = sorted(p for p in inbox.iterdir() if p.is_dir()) if inbox.is_dir() else []
+    newest = newest_by_article(folders)
     candidates = {}
     for folder in folders:
         mid = folder.name
@@ -269,13 +289,29 @@ def import_inbox(root, inbox):
             result['rejected'].append({'id': mid, 'reason': 'error', 'detail': type(exc).__name__})
             continue
         path = cand['manifest']['article_path']
-        best = candidates.get(path)
-        if not best or (cand['manifest'].get('prepared_at') or '') > (best['manifest'].get('prepared_at') or ''):
-            candidates[path] = cand
+        top = newest.get(path, (mid, ''))[0]
+        if top != mid:
+            mark = 'superseded:' + top
+            if reg['seen'].get(mid) != mark:
+                reg['seen'][mid] = mark
+                note(reg, 'superseded', id=mid, article=path, by=top)
+                result['superseded'].append({'id': mid, 'article': path, 'by': top})
+            else:
+                result['unchanged'] += 1
+            continue
+        candidates[path] = cand
+    for path, (top, stamp) in sorted(newest.items()):
+        entry = reg['entries'].get(path)
+        if path in candidates or not entry or entry['id'] == top or entry.get('retired'):
+            continue
+        if (entry.get('prepared_at') or '') <= stamp:     # 採用中の画像より新しい版があるのに、その版が採用できない
+            entry['retired'] = top
+            note(reg, 'retired', id=entry['id'], article=path, by=top)
+            result['retired'].append({'id': entry['id'], 'article': path, 'by': top})
     for path, cand in sorted(candidates.items()):
         m = cand['manifest']
         entry = reg['entries'].get(path)
-        if entry and entry['id'] == m['id'] and entry['image_sha256'] == m['image_sha256'] \
+        if entry and entry['id'] == m['id'] and entry['image_sha256'] == m['image_sha256'] and not entry.get('retired') \
                 and all((root / f['path']).exists() for f in entry['files'].values()):
             result['unchanged'] += 1
             continue
@@ -376,7 +412,11 @@ def apply_all(root, force=False):
             result['stale'].append({'article': path, 'reason': 'missing_file'})
             continue
         html = target.read_text(encoding='utf-8')
-        if stable_fingerprint(html) != entry['stable_fingerprint']:
+        if entry.get('retired'):
+            # より新しい版の画像があるのに採用できない：古い画像は使わず、既定の表示に戻す。
+            new = restore_html(html)
+            result['stale'].append({'article': path, 'reason': 'retired'})
+        elif stable_fingerprint(html) != entry['stable_fingerprint']:
             # 本文が変わった：古い版の画像は使わない。入っていれば外し、既定の表示に戻す。
             new = restore_html(html)
             result['stale'].append({'article': path, 'reason': 'stale_source'})

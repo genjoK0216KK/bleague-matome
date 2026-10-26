@@ -10,8 +10,10 @@
   文章（TXT）は生成側が同じ HTML から作る。
 - 依頼を読んで画像を作るのは Mac mini 側（thumbnail_queue.py requests）。サイトから Mac mini へ直接は知らせない
   （外から届く経路が無い）。Mac mini で既に動いている巡回が、新しい依頼がある時だけ1回処理する。
-- data/thumbs/config.json の enabled が true の時だけ動く。有効にして最初の1回は、その時点の既存記事を
-  すべて「基準（baseline＝作らない）」として登録し、過去記事の一斉生成を起こさない。
+- data/thumbs/config.json の enabled が true の時だけ動く。
+- 基準（baseline＝作らない記事）は、有効にする時に1回だけ init で確定させる（python scripts/thumb_requests.py --init）。
+  enabled=true にするのと同じコミットで、記事を作る更新より前に実行する。台帳が無いうちは record() は何も積まない
+  （有効化した直後の更新で作られた新しい記事を、基準に取り込んで取りこぼさないため）。
 """
 import hashlib
 import json
@@ -33,36 +35,58 @@ def event_id(path):
     return hashlib.sha256(('create\0' + path).encode()).hexdigest()[:20]
 
 
-def record(root, now=None):
-    """新しく現れた記事だけ依頼を積む。戻り値：{'enabled', 'baseline', 'requested'}。"""
+def _entry(article, raw, kind, stamp, date):
+    return dict(event_id=event_id(article.name), article_path=article.name,
+                article_url=thumb_auto.SITE + article.name, target_date=date,
+                source_blob_sha=thumb_auto.blob_sha(raw),
+                editorial_fingerprint=thumb_auto.editorial_fingerprint(raw),
+                status=kind, recorded_at=stamp)
+
+
+def _articles(root):
+    for article in sorted(Path(root).glob('article-*.html')):
+        m = ARTICLE.fullmatch(article.name)
+        if m and m[1] >= START:
+            yield article, m[1]
+
+
+def init(root, now=None):
+    """有効化の時に1回だけ：その時点の既存記事をすべて基準（作らない）として台帳を作る。既にあれば何もしない。"""
     root = Path(root)
-    result = {'enabled': thumb_auto.enabled(root), 'baseline': [], 'requested': []}
+    target = root / REQUESTS
+    if target.exists():
+        return {'created': False, 'baseline': []}
+    stamp = (now or datetime.now(timezone.utc)).isoformat()
+    events = {a.name: _entry(a, a.read_bytes(), 'baseline', stamp, d) for a, d in _articles(root)}
+    thumb_auto.save_json(target, {'version': 1, 'baseline_at': stamp, 'events': events})
+    return {'created': True, 'baseline': sorted(events)}
+
+
+def record(root, now=None):
+    """新しく現れた記事だけ依頼を積む。戻り値：{'enabled', 'initialized', 'baseline', 'requested'}。
+    台帳が無い（init 前）なら何もしない。"""
+    root = Path(root)
+    result = {'enabled': thumb_auto.enabled(root), 'initialized': False, 'baseline': [], 'requested': []}
     if not result['enabled']:
         return result
-    stamp = (now or datetime.now(timezone.utc)).isoformat()
     target = root / REQUESTS
     data = thumb_auto.load_json(target, None)
-    first = not isinstance(data, dict)
-    if first:
-        data = {'version': 1, 'baseline_at': stamp, 'events': {}}
+    if not isinstance(data, dict):
+        return result
+    result['initialized'] = True
+    stamp = (now or datetime.now(timezone.utc)).isoformat()
     events = data.setdefault('events', {})
-    for article in sorted(root.glob('article-*.html')):
-        m = ARTICLE.fullmatch(article.name)
-        if not m or m[1] < START or article.name in events:
+    for article, date in _articles(root):
+        if article.name in events:
             continue
-        raw = article.read_bytes()
-        kind = 'baseline' if first else 'requested'
-        events[article.name] = dict(
-            event_id=event_id(article.name), article_path=article.name,
-            article_url=thumb_auto.SITE + article.name, target_date=m[1],
-            source_blob_sha=thumb_auto.blob_sha(raw),
-            editorial_fingerprint=thumb_auto.editorial_fingerprint(raw),
-            status=kind, recorded_at=stamp)
-        result[kind].append(article.name)
-    if result['baseline'] or result['requested']:
+        events[article.name] = _entry(article, article.read_bytes(), 'requested', stamp, date)
+        result['requested'].append(article.name)
+    if result['requested']:
         thumb_auto.save_json(target, data)
     return result
 
 
 if __name__ == '__main__':
-    print(json.dumps(record(Path(__file__).resolve().parent.parent), ensure_ascii=False))
+    import sys
+    root = Path(__file__).resolve().parent.parent
+    print(json.dumps(init(root) if '--init' in sys.argv[1:] else record(root), ensure_ascii=False))

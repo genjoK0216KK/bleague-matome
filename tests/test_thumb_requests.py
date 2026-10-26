@@ -33,32 +33,45 @@ class Record(unittest.TestCase):
 
     def test_disabled_writes_nothing(self):
         self.enable(False)
-        self.assertEqual(tr.record(self.root, T0), {'enabled': False, 'baseline': [], 'requested': []})
+        r = tr.record(self.root, T0)
+        self.assertEqual((r['enabled'], r['requested']), (False, []))
         self.assertFalse((self.root / tr.REQUESTS).exists())
 
-    def test_first_run_registers_existing_articles_as_baseline_only(self):
+    def test_record_before_init_adds_nothing(self):
         r = tr.record(self.root, T0)
-        self.assertEqual(r['requested'], [])                     # 過去記事の一斉生成をしない
+        self.assertEqual((r['initialized'], r['requested']), (False, []))
+        self.assertFalse((self.root / tr.REQUESTS).exists())
+
+    def test_init_registers_existing_articles_as_baseline_once(self):
+        r = tr.init(self.root, T0)
         self.assertEqual(r['baseline'], ['article-daily-20261025.html', 'article-games-20261026.html'])
         self.assertNotIn('article-daily-20261020.html', self.ledger())   # START より前は対象外
         self.assertTrue(all(e['status'] == 'baseline' for e in self.ledger().values()))
+        self.assertEqual(tr.init(self.root, T0), {'created': False, 'baseline': []})   # 2回目は何もしない
+
+    def test_first_update_after_init_requests_new_articles(self):
+        """P2-3：有効化直後の最初の更新で作られた記事を基準に取り込んで取りこぼさない。"""
+        tr.init(self.root, T0)
+        (self.root / 'article-daily-20261027.html').write_text(page('有効化直後に作られた記事'))
+        r = tr.record(self.root, T0)
+        self.assertEqual(r['requested'], ['article-daily-20261027.html'])
+        self.assertEqual(self.ledger()['article-daily-20261027.html']['status'], 'requested')
 
     def test_new_article_is_requested_once_with_pinned_source(self):
-        tr.record(self.root, T0)
+        tr.init(self.root, T0)
         new = self.root / 'article-daily-20261027.html'
         new.write_text(page('新しい記事'))
         r = tr.record(self.root, T0)
         self.assertEqual(r['requested'], ['article-daily-20261027.html'])
         e = self.ledger()['article-daily-20261027.html']
         raw = new.read_bytes()
-        self.assertEqual(e['status'], 'requested')
         self.assertEqual(e['event_id'], tr.event_id('article-daily-20261027.html'))
         self.assertEqual(e['source_blob_sha'], ta.blob_sha(raw))                    # GitHub から固定版を取り出せる
         self.assertEqual(e['editorial_fingerprint'], ta.editorial_fingerprint(raw))  # 生成側と同じ定義
         self.assertEqual(e['article_url'], 'https://basuke-matome.jp/article-daily-20261027.html')
 
     def test_updates_reruns_and_view_counts_never_add_requests(self):
-        tr.record(self.root, T0)
+        tr.init(self.root, T0)
         new = self.root / 'article-daily-20261027.html'
         new.write_text(page('新しい記事'))
         tr.record(self.root, T0)
@@ -66,8 +79,7 @@ class Record(unittest.TestCase):
         new.write_text(page('本文を更新した', pv=40))                        # 本文更新・閲覧数
         (self.root / 'article-daily-20261025.html').write_text(page('既存Aも更新'))
         for _ in range(3):                                                  # 再実行
-            r = tr.record(self.root, T0)
-            self.assertEqual((r['baseline'], r['requested']), ([], []))
+            self.assertEqual(tr.record(self.root, T0)['requested'], [])
         self.assertEqual((self.root / tr.REQUESTS).read_text(), before)      # 台帳は1文字も変わらない
 
     def test_event_id_depends_only_on_article_path(self):

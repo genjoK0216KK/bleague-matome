@@ -1098,8 +1098,10 @@ def main():
 
     # サムネの依頼：新しく現れた記事だけ1回積む（全ページを書き終えた後＝公開される版を記録する。無効なら何もしない）
     req = thumb_requests.record(ROOT)
-    if req["baseline"] or req["requested"]:
-        log(f"サムネ依頼: 新規 {len(req['requested'])}件 / 基準登録 {len(req['baseline'])}件")
+    if req["requested"]:
+        log(f"サムネ依頼: 新規 {len(req['requested'])}件")
+    elif req["enabled"] and not req["initialized"]:
+        log("サムネ依頼: 台帳が未初期化（有効化の時に thumb_requests.py --init を実行する）")
 
     log("完了" if changed else "完了（内容に変化なし）")
     return 0

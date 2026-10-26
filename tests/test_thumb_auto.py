@@ -436,6 +436,52 @@ class ReviewFixes(Base):
         self.assertEqual(out.read_text().split(), ['imported=1', 'imported=0'])
 
 
+class NewestOnly(Base):
+    """ChatGPT検品（bc65bb3）の P1-2・P2-4：採用の候補は記事ごとに最新の完成画像だけ。"""
+
+    def put(self, body, pv, prepared_at, color):
+        src = article(body=body, pv=pv)
+        return bundle(self.inbox, self.PATH, src, image=png(color), prepared_at=prepared_at)
+
+    def test_valid_but_older_bundle_gets_terminal_mark(self):
+        """P1-2：同じ本文の PV=5 と PV=40 の2つ。新しい方を採用し、古い方は終わりの印で未取り込みに残さない。"""
+        (self.root / self.PATH).write_text(article(pv=40))
+        old = self.put('本文A', 5, '2026-10-26T01:00:00+00:00', (1, 1, 1))
+        new = self.put('本文A', 40, '2026-10-26T02:00:00+00:00', (2, 2, 2))
+        r = self.run_import()
+        self.assertEqual([x['id'] for x in r['imported']], [new['id']])
+        seen = ta.registry(self.root)['seen']
+        self.assertEqual(seen[old['id']], 'superseded:' + new['id'])     # 終わりの印＝送信側の awaiting から外れる
+        self.assertEqual(set(seen), {old['id'], new['id']})
+        again = self.run_import()
+        self.assertEqual((again['imported'], again['superseded'], again['rejected']), ([], [], []))
+
+    def test_body_reverting_to_old_version_does_not_bring_back_old_image(self):
+        """P2-4：v1の画像A→v2の画像B（新しい）→本文がv1へ戻っても、Aへ自動で戻らない。"""
+        a = self.put('本文v1', None, '2026-10-26T01:00:00+00:00', (1, 1, 1))
+        (self.root / self.PATH).write_text(article(body='本文v1'))
+        self.run_import(); ta.apply_all(self.root)
+        self.assertIn(f'data-auto-thumb="{a["id"]}"', self.page())
+        b = self.put('本文v2', None, '2026-10-26T02:00:00+00:00', (2, 2, 2))
+        (self.root / self.PATH).write_text(self.page().replace('本文v1', '本文v2'))
+        self.run_import(); ta.apply_all(self.root)
+        self.assertIn(f'data-auto-thumb="{b["id"]}"', self.page())
+        (self.root / self.PATH).write_text(self.page().replace('本文v2', '本文v1'))   # 過去の版へ戻る
+        r = self.run_import(); ta.apply_all(self.root)
+        self.assertEqual(r['imported'], [])
+        self.assertNotIn('data-auto-thumb', self.page())                  # 既定の表示
+        self.assertTrue(ta.registry(self.root)['seen'][a['id']].startswith('superseded:'))
+
+    def test_newer_unusable_bundle_retires_older_adopted_image(self):
+        a = self.put('本文v1', None, '2026-10-26T01:00:00+00:00', (1, 1, 1))
+        (self.root / self.PATH).write_text(article(body='本文v1'))
+        self.run_import(); ta.apply_all(self.root)
+        self.put('本文v2', None, '2026-10-26T02:00:00+00:00', (2, 2, 2))   # 新しい版の画像だが、本文はv1のまま
+        r = self.run_import()
+        self.assertEqual([x['id'] for x in r['retired']], [a['id']])
+        ta.apply_all(self.root)
+        self.assertNotIn('data-auto-thumb', self.page())
+
 class DeliverCarryOver(Deliver):
     """記事ごとに最新の完成画像を渡す。生成側の台帳が保留（PV_ONLY_DUPLICATE）の job を指していても引き継ぐ。"""
 
