@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  バスケまとめ：サムネの受け口（MINI-8）。Mac mini の ~/Library/LaunchAgents/ に置く。
+  受け口は 127.0.0.1:8787 だけで待ち受け、外からは Tailscale Funnel 経由の1つのURLだけが届く。
+  定期起動はしない（StartInterval・StartCalendarInterval を持たない）。起動時に1回だけ、止まっていた間の依頼を回収する。
+  __CODEX__ は Mac mini の codex（ChatGPT アプリ同梱）の絶対パスに置き換えてから読み込む。
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.genjo.basuke-thumb-hook</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/genjo/Library/Application Support/basuke-thumb-hook/bin/hook_receiver.py</string>
+  </array>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key><string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    <key>BASUKE_THUMB_PORT</key><string>8787</string>
+    <key>BASUKE_THUMB_HOME</key><string>/Users/genjo/Library/Application Support/basuke-thumb-hook</string>
+    <key>BASUKE_THUMB_AUTOMATION</key><string>/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnail-automation</string>
+    <key>BASUKE_THUMB_REPO</key><string>/Users/genjo/Claude/work/bleague-thumb</string>
+    <key>BASUKE_THUMB_CODEX</key><string>__CODEX__</string>
+  </dict>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>ThrottleInterval</key><integer>30</integer>
+  <key>StandardOutPath</key><string>/Users/genjo/Library/Application Support/basuke-thumb-hook/receiver.log</string>
+  <key>StandardErrorPath</key><string>/Users/genjo/Library/Application Support/basuke-thumb-hook/receiver.err.log</string>
+</dict>
+</plist>

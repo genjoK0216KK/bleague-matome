@@ -8,8 +8,9 @@
   画像の差し替え・再実行では、新しい依頼は増えない。
 - 依頼には、固定版の HTML（Git の blob SHA で GitHub から取り出せる）と、生成側と同じ定義の本文指紋を記録する。
   文章（TXT）は生成側が同じ HTML から作る。
-- 依頼を読んで画像を作るのは Mac mini 側（thumbnail_queue.py requests）。サイトから Mac mini へ直接は知らせない
-  （外から届く経路が無い）。Mac mini で既に動いている巡回が、新しい依頼がある時だけ1回処理する。
+- この台帳が main へ push されると、GitHub の Webhook が Tailscale Funnel 経由で Mac mini の受け口
+  （mac/thumb-hook/hook_receiver.py）へ知らせ、作業役（thumb_worker.py）がその場で thumbnail_queue.py requests →
+  codex exec → ready → 送信を行う（本人 10/27 選択）。定期巡回は使わない。
 - data/thumbs/config.json の enabled が true の時だけ動く。
 - 基準（baseline＝作らない記事）は、有効にする時に1回だけ init で確定させる（python scripts/thumb_requests.py --init）。
   enabled=true にするのと同じコミットで、記事を作る更新より前に実行する。台帳が無いうちは record() は何も積まない
