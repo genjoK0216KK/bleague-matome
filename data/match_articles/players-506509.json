@@ -8,7 +8,7 @@
     "fixed": false,
     "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506509",
     "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
-    "status": "scheduled",
+    "status": "unconfirmed",
     "players": [],
     "home": "大阪",
     "home_full": "大阪エヴェッサ",
@@ -17,7 +17,8 @@
     "away": "千葉J",
     "away_full": "千葉ジェッツ",
     "away_id": "704",
-    "away_score": null
+    "away_score": null,
+    "record_note": "official_record_not_loaded"
   },
   "players": [
     {
@@ -661,5 +662,5 @@
       "coverage_complete": true
     }
   ],
-  "retrieved_at": "2026-10-24T13:17:16.818464+00:00"
+  "retrieved_at": "2026-10-26T08:41:46.637790+00:00"
 }

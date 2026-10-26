@@ -8,7 +8,7 @@
     "fixed": false,
     "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507284",
     "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-    "status": "scheduled",
+    "status": "unconfirmed",
     "players": [],
     "home": "岡山",
     "home_full": "トライフープ岡山",
@@ -17,7 +17,8 @@
     "away": "徳島",
     "away_full": "徳島ガンバロウズ",
     "away_id": "2890",
-    "away_score": null
+    "away_score": null,
+    "record_note": "official_record_not_loaded"
   },
   "players": [
     {
@@ -522,5 +523,5 @@
       "coverage_complete": true
     }
   ],
-  "retrieved_at": "2026-10-24T13:18:19.122517+00:00"
+  "retrieved_at": "2026-10-26T08:42:39.807525+00:00"
 }

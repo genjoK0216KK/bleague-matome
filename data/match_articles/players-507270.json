@@ -8,7 +8,7 @@
     "fixed": false,
     "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507270",
     "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-    "status": "scheduled",
+    "status": "unconfirmed",
     "players": [],
     "home": "山形",
     "home_full": "山形ワイヴァンズ",
@@ -17,7 +17,8 @@
     "away": "越谷",
     "away_full": "越谷アルファーズ",
     "away_id": "745",
-    "away_score": null
+    "away_score": null,
+    "record_note": "official_record_not_loaded"
   },
   "players": [
     {
@@ -544,5 +545,5 @@
       "coverage_complete": true
     }
   ],
-  "retrieved_at": "2026-10-24T13:18:19.122517+00:00"
+  "retrieved_at": "2026-10-26T08:42:39.807525+00:00"
 }
