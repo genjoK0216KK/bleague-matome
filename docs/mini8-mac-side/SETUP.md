@@ -22,9 +22,10 @@ ChatGPT の検品に合格し、本人が実行する時に行う。それまで
 
 ## B. 木村さんの操作（Mac mini のターミナルで、上から順に。合計15分ほど）
 
-### 1. 合言葉を作ってキーチェーンに入れる（画面には出ない）
+### 1. 合言葉を作ってキーチェーンに入れる（画面にも、ほかのプロセスの引数にも出ない）
+合言葉はシェル内蔵の printf から `security -i` の標準入力へ渡す（どのコマンドの引数にも載らない）。
 ```bash
-security add-generic-password -U -a basuke-thumb -s basuke-thumb-webhook -T /usr/bin/security -w "$(openssl rand -hex 32)" && echo "保存しました"
+S=$(openssl rand -hex 32); printf 'add-generic-password -U -a basuke-thumb -s basuke-thumb-webhook -T /usr/bin/security -w %s\n' "$S" | /usr/bin/security -i; unset S; /usr/bin/security find-generic-password -s basuke-thumb-webhook >/dev/null && echo "保存しました"
 ```
 
 ### 2. 受け口を起動する
@@ -59,14 +60,21 @@ tail -3 "$HOME/Library/Application Support/basuke-thumb-hook/receiver.log"
 1. 同じコミットで `python scripts/thumb_requests.py --init`（既存記事を基準に登録）と `data/thumbs/config.json` の `enabled=true` を main へ入れる。依頼台帳ができる push なので、受け口→作業役が動き、「新規0件」で終わることを `worker.log` で確かめる。
 2. 次に記事が作られた時、数分以内に `worker.log` に「完成」、サイトの記事にサムネと OGP が入ることを確かめる。結果を MINI-8 に記録する。
 
-## D. 止め方（いつでも、どれか1つで止まる）
-- サイト側で止める：`data/thumbs/config.json` を `enabled=false`。
-- 受け口を止める：`launchctl bootout gui/$(id -u)/com.genjo.basuke-thumb-hook`
-- 公開を閉じる：`/Applications/Tailscale.app/Contents/MacOS/Tailscale funnel reset`（このMac miniで公開しているのは受け口だけ）
-- 通知を消す：<https://github.com/genjoK0216KK/bleague-matome/settings/hooks> で該当の Webhook を Delete。
+## D. 止め方（止めたいものごとに。確かめ方つき）
+
+| 止めたいもの | 止め方 | 止まったことの確かめ方 |
+| --- | --- | --- |
+| 動いている生成と送信 | `touch "$HOME/Library/Application Support/basuke-thumb-hook/STOP"`（次の作業の前・送信の前で止まる）。今すぐ止める時は続けて `pkill -f thumb_worker.py; pkill -f "codex exec --ephemeral"` | `pgrep -fl thumb_worker.py` が何も出さない。`tail -3 "$HOME/Library/Application Support/basuke-thumb-hook/worker.log"` に「止めた：停止の印」 |
+| 新しい通知で作業役が起きること | 上の STOP で十分（受け口は通知を受けても起こさない）。受け口ごと止める時は `launchctl bootout gui/$(id -u)/com.genjo.basuke-thumb-hook` | STOP の時：`receiver.log` に「停止の印（STOP）があるため」。bootout の時：`curl -s -o /dev/null -w "%{http_code}\n" -X POST http://127.0.0.1:8787/hooks/github` が 000 |
+| 外からの通知の到達 | このURLだけ外す：`/Applications/Tailscale.app/Contents/MacOS/Tailscale funnel --https=443 --set-path=/hooks/github off`。GitHub 側も止める時は <https://github.com/genjoK0216KK/bleague-matome/settings/hooks> で該当の Webhook の Active を外す（または Delete） | `/Applications/Tailscale.app/Contents/MacOS/Tailscale funnel status` に /hooks/github が出ない。GitHub の Webhook 画面の Recent Deliveries が失敗になる |
+| サイトへの反映 | `data/thumbs/config.json` を `enabled=false` にして main へ（Claude が行う）。作業役もこれを見て生成・送信をしない | 記事・一覧に新しい自動サムネが入らない。`worker.log` に「サイト側が無効」 |
+
+再開：STOP を消す（`rm "$HOME/Library/Application Support/basuke-thumb-hook/STOP"`）／`launchctl bootstrap gui/$(id -u) "$HOME/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist"`／Funnel を手順B-3で再設定／enabled=true。止めていた間の依頼は台帳に残っているので、再開後の最初の通知（または受け口の起動時）にまとめて処理される。
 
 ## 費用・守り
 - 費用は0円（Tailscale 個人無料、GitHub Webhook 無料、画像は ChatGPT 定額の範囲。1枚あたり約2万トークン）。
 - 外に出るのは Funnel の1つのURLだけ。受け口は GitHub の署名を確かめ、中身は「見に行く合図」としてだけ使う。合言葉はキーチェーンと GitHub の Webhook 設定の2か所だけ。
-- 定期巡回は作らない（受け口の常駐は、通知を待つだけで自分からは動かない。起動・復帰時に1回だけ取りこぼしを回収）。
+- 定期巡回は作らない（受け口の常駐は、通知を待つだけで自分からは動かない）。取りこぼしの回収は、起動・ログイン時の1回と、届いた通知を機会にした回収（台帳を変えない main への push でも10分に1回まで）で行う。push の変更一覧が無い・20件以上で省略されている時は、変更を確かめずに作業役を起こす。
+- 作業役の上限：1周で最大5件、1時間に最大20件。残りや失敗の再挑戦は、1分あけて同じ作業役が続ける。同じ作業が2回続けて失敗したら止めて、status.json に「本人判断待ち」を残す。
+- 受け口の守り：署名の形式（ASCII の sha256=16進64桁）と一致を確かめてから数える（30回/分。超えても合図は残す）。読み取り10秒・同時8接続・5MBまで。同じ通知ID（X-GitHub-Delivery）は1回だけ数える。
 - 受け口が動くのは genjo でログインしている間（既存の health-watch と同じ）。停電後の自動起動のあと、ログインまでの間の依頼は、ログイン後の回収で処理される。
