@@ -276,6 +276,7 @@ class Deliver(unittest.TestCase):
             src = folder / 'source.html'; src.write_text(article(body=body))
             m = bundle(self.ready, 'article-daily-20261025.html', article(body=body), image=png((len(body) * 50, 0, 0)))
             m['source_file'] = str(src)
+            m['prepared_at'] = {'旧': '2026-10-25T10:00:00+00:00', '新': '2026-10-25T11:00:00+00:00'}[body]
             (self.ready / m['id'] / 'manifest.json').write_text(json.dumps(m))
             (self.ready / m['id'] / 'source.html').unlink()
             self.items[body] = m['id']
@@ -435,6 +436,27 @@ class ReviewFixes(Base):
         self.assertEqual(out.read_text().split(), ['imported=1', 'imported=0'])
 
 
+class DeliverCarryOver(Deliver):
+    """記事ごとに最新の完成画像を渡す。生成側の台帳が保留（PV_ONLY_DUPLICATE）の job を指していても引き継ぐ。"""
+
+    def test_latest_pointing_to_blocked_job_still_delivers_newest_ready(self):
+        self.state.write_text(json.dumps({'latest': {'article-daily-20261025.html': 'blocked0000000000000'}}))
+        self.assertEqual(self.deliver(), [self.items['新']])
+
+    def test_works_without_state(self):
+        with redirect_stdout(io.StringIO()):
+            self.assertEqual(thumb_deliver.deliver(self.ready, self.repo, None), [self.items['新']])
+
+    def test_broken_newest_ready_does_not_fall_back_to_older_version(self):
+        (self.ready / self.items['新'] / 'thumbnail.png').write_bytes(png((9, 9, 9)))   # SHA不一致
+        import contextlib
+        with contextlib.redirect_stderr(io.StringIO()):
+            self.assertEqual(self.deliver(), [])
+        tree = subprocess.run(['git', '-C', str(self.remote), 'ls-tree', '-r', '--name-only', 'thumb-inbox'],
+                              text=True, capture_output=True).stdout
+        self.assertNotIn(self.items['旧'], tree)                 # 古い版へは戻らない
+
+
 class DeliverRetry(Deliver):
     """P1-2：送信に失敗しても、新しい画像が無い次の回で送り直される。"""
 
@@ -504,10 +526,29 @@ class DeliverDispatch(Deliver):
         self.assertEqual(added, [self.items['新']])
         self.assertEqual(calls, [['gh', 'workflow', 'run', 'thumbs.yml', '--repo', 'genjoK0216KK/bleague-matome', '--ref', 'main']])
 
-    def test_nothing_new_does_not_start_ingest(self):
+    def site_ingested(self, ids):
+        """サイトが取り込んだ状態（main の data/thumbs/registry.json に seen が載る）を作る。"""
+        reg = {'version': 1, 'entries': {}, 'seen': {i: 'imported' for i in ids}, 'log': []}
+        (self.repo / 'data/thumbs').mkdir(parents=True, exist_ok=True)
+        (self.repo / 'data/thumbs/registry.json').write_text(json.dumps(reg))
+        git(self.repo, 'checkout', '-q', 'main'); git(self.repo, 'add', '-A')
+        git(self.repo, 'commit', '-qm', 'ingested'); git(self.repo, 'push', '-q', 'origin', 'main')
+
+    def test_nothing_new_and_already_ingested_does_not_start_ingest(self):
         self.deliver()
+        self.site_ingested([self.items['新']])
         added, calls = self.run_with_gh()
         self.assertEqual((added, calls), ([], []))
+
+    def test_delivered_but_not_ingested_is_restarted_on_next_call(self):
+        added, calls = self.run_with_gh(returncode=1)          # 送信は成功、取り込みの起動は失敗
+        self.assertEqual((added, len(calls)), ([self.items['新']], 1))
+        added, calls = self.run_with_gh()                      # 新しい画像なしで次に呼ばれた時
+        self.assertEqual(added, [])
+        self.assertEqual(len(calls), 1)                        # 起動し直す
+        self.site_ingested([self.items['新']])
+        added, calls = self.run_with_gh()
+        self.assertEqual((added, calls), ([], []))             # 取り込まれた後は起動しない
 
     def test_failed_dispatch_does_not_fail_delivery(self):
         added, calls = self.run_with_gh(returncode=1)
@@ -529,7 +570,8 @@ class ThumbsWorkflow(unittest.TestCase):
         text = (self.ROOT / '.github/workflows/thumbs.yml').read_text()
         trigger = re.search(r'^on:\n(.*?)^permissions:', text, re.M | re.S).group(1)
         self.assertIn('workflow_dispatch:', trigger)
-        self.assertIn('cron: "17 * * * *"', trigger)
+        self.assertNotIn('schedule', trigger)    # 定期起動は持たない（本人 10/26「巡回は必要ない」）
+        self.assertNotIn('cron', trigger)
         self.assertNotIn('push:', trigger)       # thumb-inbox には定義が無いので push では起動できない
         self.assertIn('group: thumbs', text)
         self.assertNotIn('site-update', text.split('concurrency:')[1].split('jobs:')[0])

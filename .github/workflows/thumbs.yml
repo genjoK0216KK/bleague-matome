@@ -2,15 +2,15 @@ name: 自動生成サムネを取り込み
 
 # Mac mini が thumb-inbox ブランチへ画像を送った直後に、送信スクリプト（scripts/thumb_deliver.py）が
 # このワークフローを手動起動する（MINI-8）。通常更新（update.yml、1日4回）の成功を待たない。
+# 定期起動は持たない（本人 10/26「サムネは記事を作成する時のみ。巡回は必要ない」）。起動に失敗した分は、
+# 送信スクリプトが次に実行された時に「届いているのに未取り込み」を見つけて起動し直す。update.yml にも同じ取り込み工程がある。
 # ※ thumb-inbox への push では起動できない（push で動くワークフローは送られたブランチ内の定義を使うが、
-#    thumb-inbox には画像しか無い）。起動に失敗した時の保険として1時間ごとにも動き、update.yml にも同じ取り込み工程がある。
+#    thumb-inbox には画像しか無い）。
 # data/thumbs/config.json の enabled が true の時だけ動く（既定 false＝何もしない）。
 # 順番待ちの列 site-update には並ばない（2件目の待ちが古い待ちを取り消すため、通常更新を消さないように）。
 # 代わりに、公開が他の更新とぶつかったら最新の main から作り直して最大3回やり直す。
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "17 * * * *"   # 保険（毎時17分）。新しい画像が無ければ何も変えずに終わる
 
 permissions:
   contents: write
