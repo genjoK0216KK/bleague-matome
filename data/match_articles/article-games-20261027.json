@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-27",
+  "status": "no_games",
+  "article_key": "article-results-one-next-20261027",
+  "games": [],
+  "individual_candidates": [],
+  "schedule_complete": {
+    "BP": true,
+    "B1": true,
+    "BN": true
+  },
+  "sources": [
+    "https://www.bleague.jp/schedule/?tab=1&year=2026&mon=10&day=27",
+    "https://www.bleague.jp/schedule/?tab=2&year=2026&mon=10&day=27",
+    "https://www.bleague.jp/schedule/?tab=3&year=2026&mon=10&day=27"
+  ],
+  "errors": [],
+  "lineups": {},
+  "game_day_rankings": {
+    "date": "2026-10-27",
+    "metric": "EFF",
+    "aggregation": "game_total",
+    "leagues": {}
+  }
+}

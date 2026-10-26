@@ -4,16 +4,7 @@
   "506498": "2026-10-23",
   "506499": "2026-10-23",
   "506508": "2026-10-25",
-  "506509": "2026-10-25",
-  "506510": "2026-10-26",
-  "506511": "2026-10-26",
-  "506512": "2026-10-26",
-  "506513": "2026-10-26",
-  "506514": "2026-10-26",
-  "506515": "2026-10-26",
-  "506516": "2026-10-26",
-  "506517": "2026-10-26",
-  "506518": "2026-10-26"
+  "506509": "2026-10-25"
  },
  "published": [
   "2026-10-12",
@@ -22,19 +13,10 @@
   "2026-10-19",
   "2026-10-21",
   "2026-10-22",
-  "2026-10-24"
+  "2026-10-24",
+  "2026-10-26"
  ],
  "days": {
-  "2026-10-19": {
-   "state": "ready",
-   "games_total": 9,
-   "games_ready": 9,
-   "players": 198,
-   "holds": [],
-   "excluded": [],
-   "content_as_of": null,
-   "source": "data/match_articles/article-games-20261019.json"
-  },
   "2026-10-20": {
    "state": "no_games",
    "games_total": 0,
@@ -138,87 +120,24 @@
    "source": "data/match_articles/article-games-20261025.json"
   },
   "2026-10-26": {
-   "state": "held",
+   "state": "ready",
    "games_total": 9,
+   "games_ready": 9,
+   "players": 193,
+   "holds": [],
+   "excluded": [],
+   "content_as_of": "2026-10-27 03:00 JST",
+   "source": "data/match_articles/article-games-20261026.json"
+  },
+  "2026-10-27": {
+   "state": "no_games",
+   "games_total": 0,
    "games_ready": 0,
    "players": null,
-   "holds": [
-    {
-     "key": "506510",
-     "home": "宇都宮",
-     "away": "川崎",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
-    },
-    {
-     "key": "506511",
-     "home": "A千葉",
-     "away": "群馬",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
-    },
-    {
-     "key": "506512",
-     "home": "横浜BC",
-     "away": "広島",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
-    },
-    {
-     "key": "506513",
-     "home": "富山",
-     "away": "茨城",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
-    },
-    {
-     "key": "506514",
-     "home": "信州",
-     "away": "神戸",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
-    },
-    {
-     "key": "506515",
-     "home": "京都",
-     "away": "秋田",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
-    },
-    {
-     "key": "506516",
-     "home": "島根",
-     "away": "仙台",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
-    },
-    {
-     "key": "506517",
-     "home": "佐賀",
-     "away": "A東京",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
-    },
-    {
-     "key": "506518",
-     "home": "長崎",
-     "away": "琉球",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
-    }
-   ],
+   "holds": [],
    "excluded": [],
-   "content_as_of": "2026-10-26 21:27 JST",
-   "source": "data/match_articles/article-games-20261026.json"
+   "content_as_of": "2026-10-27 03:00 JST",
+   "source": "data/match_articles/article-games-20261027.json"
   }
  },
  "definition": {
