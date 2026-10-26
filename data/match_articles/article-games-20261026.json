@@ -1031,7 +1031,7 @@
           "USG": 16.342328932578987
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506510/121.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506510/125.json"
     },
     {
       "game_id": "506511",
@@ -1985,10 +1985,10 @@
       "competition": "BP",
       "starts_at": "2026-10-26T10:05:00+00:00",
       "ended": true,
-      "fixed": false,
+      "fixed": true,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506512",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
-      "status": "unconfirmed",
+      "status": "final",
       "home": "横浜BC",
       "home_full": "横浜ビー・コルセアーズ",
       "home_id": "694",
@@ -2922,8 +2922,7 @@
           "TS": 0.6118881118881119,
           "USG": 30.02268455071522
         }
-      ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506512/127.json"
+      ]
     },
     {
       "game_id": "506513",
@@ -2931,10 +2930,10 @@
       "competition": "BP",
       "starts_at": "2026-10-26T10:05:00+00:00",
       "ended": true,
-      "fixed": false,
+      "fixed": true,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506513",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
-      "status": "unconfirmed",
+      "status": "final",
       "home": "富山",
       "home_full": "富山グラウジーズ",
       "home_id": "696",
@@ -3952,8 +3951,7 @@
           "TS": 0.9166666666666666,
           "USG": 16.516504116738652
         }
-      ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506513/111.json"
+      ]
     },
     {
       "game_id": "506514",
@@ -3999,8 +3997,8 @@
           "FOUL": 2,
           "FOULON": 4,
           "RB_OFF": 0,
-          "RB_DEF": 7,
-          "RB_TOT": 7,
+          "RB_DEF": 6,
+          "RB_TOT": 6,
           "TO": 2,
           "AS": 5,
           "ST": 0,
@@ -4009,7 +4007,7 @@
           "PTFB": 2,
           "PT2IN": 4,
           "PT2ND": 0,
-          "EFF": 32,
+          "EFF": 31,
           "PLUSMINUS": 15,
           "AST_TO": 2.5,
           "EFG": 0.8571428571428571,
@@ -4502,9 +4500,9 @@
           "FTA": 0,
           "FOUL": 3,
           "FOULON": 0,
-          "RB_OFF": 2,
+          "RB_OFF": 3,
           "RB_DEF": 9,
-          "RB_TOT": 11,
+          "RB_TOT": 12,
           "TO": 2,
           "AS": 5,
           "ST": 0,
@@ -4512,8 +4510,8 @@
           "BSON": 0,
           "PTFB": 0,
           "PT2IN": 4,
-          "PT2ND": 1,
-          "EFF": 15,
+          "PT2ND": 2,
+          "EFF": 16,
           "PLUSMINUS": -10,
           "AST_TO": 2.5,
           "EFG": 0.5714285714285714,
@@ -4671,8 +4669,8 @@
           "FOUL": 3,
           "FOULON": 3,
           "RB_OFF": 0,
-          "RB_DEF": 4,
-          "RB_TOT": 4,
+          "RB_DEF": 3,
+          "RB_TOT": 3,
           "TO": 2,
           "AS": 0,
           "ST": 2,
@@ -4681,7 +4679,7 @@
           "PTFB": 4,
           "PT2IN": 3,
           "PT2ND": 2,
-          "EFF": 22,
+          "EFF": 21,
           "PLUSMINUS": -14,
           "AST_TO": 0,
           "EFG": 0.6666666666666666,
@@ -4983,7 +4981,7 @@
           "USG": 3.371040859993061
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506514/128.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506514/132.json"
     },
     {
       "game_id": "506516",
@@ -6055,7 +6053,7 @@
           "USG": 0
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506516/127.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506516/128.json"
     },
     {
       "game_id": "506517",
@@ -6143,8 +6141,8 @@
           "FOUL": 3,
           "FOULON": 4,
           "RB_OFF": 0,
-          "RB_DEF": 4,
-          "RB_TOT": 4,
+          "RB_DEF": 5,
+          "RB_TOT": 5,
           "TO": 1,
           "AS": 3,
           "ST": 1,
@@ -6153,7 +6151,7 @@
           "PTFB": 3,
           "PT2IN": 6,
           "PT2ND": 0,
-          "EFF": 33,
+          "EFF": 34,
           "PLUSMINUS": -28,
           "AST_TO": 3,
           "EFG": 0.6730769230769231,
@@ -6395,8 +6393,8 @@
           "FOUL": 2,
           "FOULON": 2,
           "RB_OFF": 2,
-          "RB_DEF": 5,
-          "RB_TOT": 7,
+          "RB_DEF": 4,
+          "RB_TOT": 6,
           "TO": 2,
           "AS": 6,
           "ST": 0,
@@ -6405,7 +6403,7 @@
           "PTFB": 0,
           "PT2IN": 6,
           "PT2ND": 1,
-          "EFF": 15,
+          "EFF": 14,
           "PLUSMINUS": -19,
           "AST_TO": 3,
           "EFG": 0.4411764705882353,
@@ -6959,7 +6957,7 @@
           "USG": 30.060097736780268
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506517/119.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506517/122.json"
     },
     {
       "game_id": "506518",
@@ -7947,14 +7945,14 @@
           "USG": 17.73624320998114
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506518/125.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506518/127.json"
     },
     {
       "game_id": "506515",
       "season": "2026-27",
       "competition": "BP",
       "starts_at": "2026-10-26T10:15:00+00:00",
-      "ended": false,
+      "ended": true,
       "fixed": false,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506515",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
@@ -7962,11 +7960,11 @@
       "home": "京都",
       "home_full": "京都ハンナリーズ",
       "home_id": "699",
-      "home_score": 77,
+      "home_score": 79,
       "away": "秋田",
       "away_full": "秋田ノーザンハピネッツ",
       "away_id": "693",
-      "away_score": 66,
+      "away_score": 71,
       "players": [
         {
           "Code": 546,
@@ -8008,7 +8006,7 @@
           "AST_TO": 0.5,
           "EFG": 1,
           "TS": 0.797872340425532,
-          "USG": 13.612438185037798
+          "USG": 13.597838551134306
         },
         {
           "Code": 546,
@@ -8050,7 +8048,7 @@
           "AST_TO": 0,
           "EFG": 0.3,
           "TS": 0.3,
-          "USG": 26.37198908488592
+          "USG": 26.343704557109742
         },
         {
           "Code": 546,
@@ -8065,8 +8063,8 @@
           "PlayerNameJ": "チャールズ・ジャクソン",
           "PlayerNameE": "Charles Jackson",
           "StartingFlg": 1,
-          "PlayTime": "29:07",
-          "PlayingFlg": true,
+          "PlayTime": "29:15",
+          "PlayingFlg": false,
           "Point": 16,
           "PT3M": 0,
           "PT3A": 0,
@@ -8088,11 +8086,11 @@
           "PT2IN": 6,
           "PT2ND": 4,
           "EFF": 36,
-          "PLUSMINUS": 5,
+          "PLUSMINUS": 4,
           "AST_TO": 4,
           "EFG": 1,
           "TS": 0.8403361344537815,
-          "USG": 15.978583908171613
+          "USG": 15.882339442431064
         },
         {
           "Code": 546,
@@ -8107,7 +8105,7 @@
           "PlayerNameJ": "前田 悟",
           "PlayerNameE": "Satoru Maeta",
           "StartingFlg": 1,
-          "PlayTime": "22:06",
+          "PlayTime": "22:53",
           "PlayingFlg": true,
           "Point": 4,
           "PT3M": 0,
@@ -8121,7 +8119,7 @@
           "RB_OFF": 1,
           "RB_DEF": 0,
           "RB_TOT": 1,
-          "TO": 0,
+          "TO": 1,
           "AS": 3,
           "ST": 0,
           "BS": 0,
@@ -8129,12 +8127,12 @@
           "PTFB": 0,
           "PT2IN": 1,
           "PT2ND": 1,
-          "EFF": 0,
-          "PLUSMINUS": 10,
-          "AST_TO": 0,
+          "EFF": -1,
+          "PLUSMINUS": 7,
+          "AST_TO": 3,
           "EFG": 0.2,
           "TS": 0.2,
-          "USG": 20.012235814584848
+          "USG": 21.232296768316058
         },
         {
           "Code": 546,
@@ -8149,7 +8147,7 @@
           "PlayerNameJ": "岸本 隆一",
           "PlayerNameE": "Ryuichi Kishimoto",
           "StartingFlg": 1,
-          "PlayTime": "26:39",
+          "PlayTime": "27:19",
           "PlayingFlg": true,
           "Point": 18,
           "PT3M": 3,
@@ -8172,11 +8170,11 @@
           "PT2IN": 2,
           "PT2ND": 2,
           "EFF": 16,
-          "PLUSMINUS": 13,
+          "PLUSMINUS": 10,
           "AST_TO": 0.6,
           "EFG": 0.5416666666666666,
           "TS": 0.6338028169014085,
-          "USG": 31.862153222767656
+          "USG": 31.041600918831385
         },
         {
           "Code": 546,
@@ -8191,8 +8189,8 @@
           "PlayerNameJ": "川嶋 勇人",
           "PlayerNameE": "Hayato Kawashima",
           "StartingFlg": null,
-          "PlayTime": "10:22",
-          "PlayingFlg": false,
+          "PlayTime": "11:01",
+          "PlayingFlg": true,
           "Point": 0,
           "PT3M": 0,
           "PT3A": 4,
@@ -8214,11 +8212,11 @@
           "PT2IN": 0,
           "PT2ND": 0,
           "EFF": -2,
-          "PLUSMINUS": -1,
+          "PLUSMINUS": -5,
           "AST_TO": 3,
           "EFG": 0,
           "TS": 0,
-          "USG": 21.312838222522483
+          "USG": 20.04672222727042
         },
         {
           "Code": 546,
@@ -8233,8 +8231,8 @@
           "PlayerNameJ": "渡辺 竜之佑",
           "PlayerNameE": "Ryunosuke Watanabe",
           "StartingFlg": null,
-          "PlayTime": "13:03",
-          "PlayingFlg": true,
+          "PlayTime": "13:18",
+          "PlayingFlg": false,
           "Point": 4,
           "PT3M": 0,
           "PT3A": 1,
@@ -8256,11 +8254,11 @@
           "PT2IN": 2,
           "PT2ND": 1,
           "EFF": 4,
-          "PLUSMINUS": 15,
+          "PLUSMINUS": 16,
           "AST_TO": 0,
           "EFG": 0.6666666666666666,
           "TS": 0.6666666666666666,
-          "USG": 10.171330742259855
+          "USG": 9.963070219718908
         },
         {
           "Code": 546,
@@ -8302,7 +8300,7 @@
           "AST_TO": 0,
           "EFG": 0,
           "TS": 0,
-          "USG": 7.84917781638886
+          "USG": 7.8407594036838795
         },
         {
           "Code": 546,
@@ -8317,8 +8315,8 @@
           "PlayerNameJ": "デメトレ・リバース",
           "PlayerNameE": "Demetre Rivers",
           "StartingFlg": null,
-          "PlayTime": "20:58",
-          "PlayingFlg": false,
+          "PlayTime": "21:37",
+          "PlayingFlg": true,
           "Point": 9,
           "PT3M": 1,
           "PT3A": 3,
@@ -8340,11 +8338,11 @@
           "PT2IN": 2,
           "PT2ND": 0,
           "EFF": 9,
-          "PLUSMINUS": 7,
+          "PLUSMINUS": 5,
           "AST_TO": 0,
           "EFG": 0.4375,
           "TS": 0.5067567567567567,
-          "USG": 20.8361354269968
+          "USG": 20.19415824698355
         },
         {
           "Code": 546,
@@ -8359,17 +8357,17 @@
           "PlayerNameJ": "アンジェロ・カロイアロ",
           "PlayerNameE": "Angelo Caloiaro",
           "StartingFlg": 1,
-          "PlayTime": "25:37",
+          "PlayTime": "26:25",
           "PlayingFlg": true,
-          "Point": 18,
+          "Point": 20,
           "PT3M": 1,
           "PT3A": 2,
           "PT2M": 5,
           "PT2A": 8,
-          "FTM": 5,
-          "FTA": 5,
-          "FOUL": 0,
-          "FOULON": 4,
+          "FTM": 7,
+          "FTA": 7,
+          "FOUL": 1,
+          "FOULON": 5,
           "RB_OFF": 4,
           "RB_DEF": 5,
           "RB_TOT": 9,
@@ -8381,12 +8379,12 @@
           "PTFB": 2,
           "PT2IN": 5,
           "PT2ND": 3,
-          "EFF": 30,
-          "PLUSMINUS": 10,
+          "EFF": 32,
+          "PLUSMINUS": 7,
           "AST_TO": 3,
           "EFG": 0.65,
-          "TS": 0.7377049180327869,
-          "USG": 22.7801286317577
+          "TS": 0.764525993883792,
+          "USG": 23.548206255527475
         },
         {
           "Code": 546,
@@ -8428,7 +8426,7 @@
           "AST_TO": 0,
           "EFG": 0.14285714285714285,
           "TS": 0.14285714285714285,
-          "USG": 19.405595311992258
+          "USG": 19.384782391971378
         },
         {
           "Code": 546,
@@ -8443,7 +8441,7 @@
           "PlayerNameJ": "トロイ・マーフィージュニア",
           "PlayerNameE": "Troy Murphy Jr.",
           "StartingFlg": 1,
-          "PlayTime": "16:36",
+          "PlayTime": "16:45",
           "PlayingFlg": false,
           "Point": 0,
           "PT3M": 0,
@@ -8452,7 +8450,7 @@
           "PT2A": 0,
           "FTM": 0,
           "FTA": 0,
-          "FOUL": 2,
+          "FOUL": 3,
           "FOULON": 0,
           "RB_OFF": 1,
           "RB_DEF": 3,
@@ -8465,12 +8463,12 @@
           "PTFB": 0,
           "PT2IN": 0,
           "PT2ND": 0,
-          "EFF": 0,
+          "EFF": -1,
           "PLUSMINUS": -5,
           "AST_TO": 0,
           "EFG": 0,
           "TS": 0,
-          "USG": 6.249070355495953
+          "USG": 6.130736734720447
         },
         {
           "Code": 546,
@@ -8485,7 +8483,7 @@
           "PlayerNameJ": "田口 成浩",
           "PlayerNameE": "Shigehiro Taguchi",
           "StartingFlg": 1,
-          "PlayTime": "19:44",
+          "PlayTime": "20:22",
           "PlayingFlg": true,
           "Point": 16,
           "PT3M": 4,
@@ -8508,11 +8506,11 @@
           "PT2IN": 0,
           "PT2ND": 0,
           "EFF": 13,
-          "PLUSMINUS": -2,
+          "PLUSMINUS": 1,
           "AST_TO": 0.5,
           "EFG": 0.875,
           "TS": 0.9009009009009008,
-          "USG": 28.604344819602066
+          "USG": 27.418829679673475
         },
         {
           "Code": 546,
@@ -8527,8 +8525,8 @@
           "PlayerNameJ": "赤穂 雷太",
           "PlayerNameE": "Raita Akaho",
           "StartingFlg": 1,
-          "PlayTime": "16:58",
-          "PlayingFlg": true,
+          "PlayTime": "17:06",
+          "PlayingFlg": false,
           "Point": 5,
           "PT3M": 1,
           "PT3A": 3,
@@ -8550,11 +8548,11 @@
           "PT2IN": 1,
           "PT2ND": 0,
           "EFF": 1,
-          "PLUSMINUS": -13,
+          "PLUSMINUS": -12,
           "AST_TO": 0,
           "EFG": 0.625,
           "TS": 0.625,
-          "USG": 15.289559973650997
+          "USG": 15.00429723072659
         },
         {
           "Code": 546,
@@ -8611,7 +8609,7 @@
           "PlayerNameJ": "ヤニー・ウェッツェル",
           "PlayerNameE": "Yanni Wetzell",
           "StartingFlg": 1,
-          "PlayTime": "32:32",
+          "PlayTime": "33:19",
           "PlayingFlg": true,
           "Point": 10,
           "PT3M": 0,
@@ -8634,11 +8632,11 @@
           "PT2IN": 5,
           "PT2ND": 0,
           "EFF": 9,
-          "PLUSMINUS": -17,
+          "PLUSMINUS": -14,
           "AST_TO": 0.75,
           "EFG": 0.5555555555555556,
           "TS": 0.5555555555555556,
-          "USG": 20.728842281847218
+          "USG": 20.030549155481033
         },
         {
           "Code": 546,
@@ -8653,8 +8651,8 @@
           "PlayerNameJ": "ジャオ バイチン",
           "PlayerNameE": "Baiqing Zhao",
           "StartingFlg": null,
-          "PlayTime": "14:47",
-          "PlayingFlg": false,
+          "PlayTime": "15:26",
+          "PlayingFlg": true,
           "Point": 2,
           "PT3M": 0,
           "PT3A": 1,
@@ -8676,11 +8674,11 @@
           "PT2IN": 1,
           "PT2ND": 0,
           "EFF": -4,
-          "PLUSMINUS": -1,
+          "PLUSMINUS": 1,
           "AST_TO": 0,
           "EFG": 0.3333333333333333,
           "TS": 0.3333333333333333,
-          "USG": 14.03398889306451
+          "USG": 13.310640170801847
         },
         {
           "Code": 546,
@@ -8695,7 +8693,7 @@
           "PlayerNameJ": "元田 大陽",
           "PlayerNameE": "Taiyo Motoda",
           "StartingFlg": null,
-          "PlayTime": "16:55",
+          "PlayTime": "17:42",
           "PlayingFlg": true,
           "Point": 0,
           "PT3M": 0,
@@ -8711,18 +8709,18 @@
           "RB_TOT": 1,
           "TO": 1,
           "AS": 1,
-          "ST": 0,
+          "ST": 1,
           "BS": 0,
           "BSON": 0,
           "PTFB": 0,
           "PT2IN": 0,
           "PT2ND": 0,
-          "EFF": -6,
-          "PLUSMINUS": -16,
+          "EFF": -5,
+          "PLUSMINUS": -13,
           "AST_TO": 1,
           "EFG": 0,
           "TS": 0,
-          "USG": 21.464439116424174
+          "USG": 20.29803704449793
         },
         {
           "Code": 546,
@@ -8737,17 +8735,17 @@
           "PlayerNameJ": "マーク・スミス",
           "PlayerNameE": "Mark Smith",
           "StartingFlg": 1,
-          "PlayTime": "34:41",
+          "PlayTime": "35:28",
           "PlayingFlg": true,
-          "Point": 20,
-          "PT3M": 2,
-          "PT3A": 6,
+          "Point": 25,
+          "PT3M": 3,
+          "PT3A": 7,
           "PT2M": 3,
           "PT2A": 4,
-          "FTM": 8,
-          "FTA": 10,
+          "FTM": 10,
+          "FTA": 13,
           "FOUL": 2,
-          "FOULON": 11,
+          "FOULON": 12,
           "RB_OFF": 0,
           "RB_DEF": 10,
           "RB_TOT": 10,
@@ -8756,15 +8754,15 @@
           "ST": 3,
           "BS": 0,
           "BSON": 0,
-          "PTFB": 2,
+          "PTFB": 4,
           "PT2IN": 3,
           "PT2ND": 1,
-          "EFF": 37,
-          "PLUSMINUS": -6,
+          "EFF": 42,
+          "PLUSMINUS": -3,
           "AST_TO": 1.4,
-          "EFG": 0.6,
-          "TS": 0.6944444444444444,
-          "USG": 29.013176278781742
+          "EFG": 0.6818181818181818,
+          "TS": 0.7476076555023924,
+          "USG": 31.43472605186209
         },
         {
           "Code": 546,
@@ -8806,7 +8804,7 @@
           "AST_TO": 1,
           "EFG": 0.375,
           "TS": 0.375,
-          "USG": 25.94805756284384
+          "USG": 25.681618695306
         },
         {
           "Code": 546,
@@ -8848,7 +8846,7 @@
           "AST_TO": 0,
           "EFG": 0.8333333333333334,
           "TS": 0.8333333333333334,
-          "USG": 16.413697452726712
+          "USG": 16.245158942635094
         },
         {
           "Code": 546,
@@ -8890,10 +8888,10 @@
           "AST_TO": 0,
           "EFG": 1,
           "TS": 0.753012048192771,
-          "USG": 10.71780390348815
+          "USG": 10.607751753047912
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506515/115.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506515/119.json"
     }
   ],
   "individual_candidates": [],
