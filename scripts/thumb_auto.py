@@ -87,8 +87,11 @@ def editorial_fingerprint(raw):
 
 
 # 本文ではない自動枠だけを許可リストで除く（閲覧数・広告・計測タグ）。これ以外の AUTO 枠（本文・表など）は
-# 照合に含めるので、得点などが変われば指紋も変わる。生成側（Mac mini の thumbnail_queue.py）の
-# 正規化もこの定義と同じにする（docs/mini8-mac-side/02-thumbnail_queue-normalize.patch。試験で一致を確認）。
+# 照合に含めるので、得点などが変われば指紋も変わる。
+# 生成側（Mac mini の thumbnail_queue.py）の指紋は従来どおり（自動枠込み）で変えない。変えると既存の記事が
+# すべて新しいIDに見えて作り直しになるため（独立検品 10/26）。受け取り側は生成側の指紋をそのまま固定原文で
+# 確かめ、いまの本文との版の照合だけをこの正規化版で行う。閲覧数だけの変化で作り直さないことは、生成側の
+# 既存の判定（PV_ONLY_DUPLICATE）が担う。
 NON_EDITORIAL_AUTO = ('PV', 'AFFILIATE', 'GA')
 AUTO_BLOCK = re.compile(r'<!-- AUTO:(' + '|'.join(NON_EDITORIAL_AUTO) + r'):START -->.*?<!-- AUTO:\1:END -->', re.S)
 

@@ -365,9 +365,21 @@ class ReviewFixes(Base):
         self.assertEqual(r['imported'], [])
         self.assertEqual(r['rejected'][0]['reason'], 'source_mismatch')
 
+    def test_unchanged_producer_bundle_survives_view_count_changes(self):
+        """生成側は旧指紋のまま。閲覧数が何度変わっても同じ画像を使い続け、本文が変われば外す。"""
+        src = article(body='本文A', pv=4)
+        self.producer_bundle(src, ta.editorial_fingerprint(src.encode()))
+        for pv in (5, 40, 400):
+            (self.root / self.PATH).write_text(article(body='本文A', pv=pv))
+            self.run_import(); ta.apply_all(self.root)
+            self.assertIn('data-auto-thumb', self.page(), pv)
+        (self.root / self.PATH).write_text(article(body='本文B', pv=400))
+        ta.apply_all(self.root)
+        self.assertNotIn('data-auto-thumb', self.page())
+
     def test_view_count_only_change_keeps_producer_fingerprint(self):
         a, b = article(pv=4).encode(), article(pv=40).encode()
-        self.assertEqual(ta.stable_fingerprint(a), ta.stable_fingerprint(b))   # 生成側も同じ定義＝再生成しない
+        self.assertEqual(ta.stable_fingerprint(a), ta.stable_fingerprint(b))   # 受け取り側の版照合は閲覧数に左右されない
         self.assertNotEqual(ta.editorial_fingerprint(a), ta.editorial_fingerprint(b))
 
     # P2-4：除外は許可リストの自動枠だけ。本文の自動枠（得点など）の変化は検知する
@@ -527,11 +539,12 @@ class ThumbsWorkflow(unittest.TestCase):
         self.assertIn('git reset -q --hard origin/main', text)        # ぶつかったら最新から作り直す
         self.assertNotIn('push origin', text)                         # thumb-inbox や main へ直接 push しない
 
-    def test_mac_side_patches_match_site_definitions(self):
-        p2 = (self.ROOT / 'docs/mini8-mac-side/02-thumbnail_queue-normalize.patch').read_text()
-        self.assertIn('NON_EDITORIAL_AUTO = ' + repr(ta.NON_EDITORIAL_AUTO), p2)
-        self.assertIn(r"AUTO_BLOCK = re.compile(r'<!-- AUTO:(' + '|'.join(NON_EDITORIAL_AUTO) + r'):START -->.*?<!-- AUTO:\1:END -->', re.S)", p2)
+    def test_mac_side_changes_do_not_touch_producer_fingerprint(self):
+        # 生成側の指紋を変えるパッチは置かない（変えると既存記事が全件作り直しになる。独立検品 10/26）
+        self.assertEqual(sorted(p.name for p in (self.ROOT / 'docs/mini8-mac-side').iterdir()),
+                         ['01-OPERATIONS-deliver-every-run.patch'])
         p1 = (self.ROOT / 'docs/mini8-mac-side/01-OPERATIONS-deliver-every-run.patch').read_text()
+        self.assertNotIn('thumbnail_queue.py', p1)
         self.assertIn('【毎回の定期回】', p1)
         self.assertIn('静かに終了する回でも', p1)
 
