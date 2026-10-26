@@ -1031,7 +1031,7 @@
           "USG": 16.342328932578987
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506510/125.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506510/127.json"
     },
     {
       "game_id": "506511",
@@ -1039,10 +1039,10 @@
       "competition": "BP",
       "starts_at": "2026-10-26T10:05:00+00:00",
       "ended": true,
-      "fixed": false,
+      "fixed": true,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506511",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
-      "status": "unconfirmed",
+      "status": "final",
       "home": "A千葉",
       "home_full": "アルティーリ千葉",
       "home_id": "2486",
@@ -1977,7 +1977,7 @@
           "USG": 0
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506511/112.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506511/113.json"
     },
     {
       "game_id": "506512",
@@ -4981,7 +4981,7 @@
           "USG": 3.371040859993061
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506514/132.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506514/135.json"
     },
     {
       "game_id": "506516",
@@ -6061,10 +6061,10 @@
       "competition": "BP",
       "starts_at": "2026-10-26T10:05:00+00:00",
       "ended": true,
-      "fixed": false,
+      "fixed": true,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506517",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
-      "status": "unconfirmed",
+      "status": "final",
       "home": "佐賀",
       "home_full": "佐賀バルーナーズ",
       "home_id": "1638",
@@ -6957,7 +6957,7 @@
           "USG": 30.060097736780268
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506517/122.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506517/123.json"
     },
     {
       "game_id": "506518",
@@ -7945,7 +7945,7 @@
           "USG": 17.73624320998114
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506518/127.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506518/128.json"
     },
     {
       "game_id": "506515",
@@ -8119,7 +8119,7 @@
           "RB_OFF": 1,
           "RB_DEF": 0,
           "RB_TOT": 1,
-          "TO": 1,
+          "TO": 0,
           "AS": 3,
           "ST": 0,
           "BS": 0,
@@ -8127,12 +8127,12 @@
           "PTFB": 0,
           "PT2IN": 1,
           "PT2ND": 1,
-          "EFF": -1,
+          "EFF": 0,
           "PLUSMINUS": 7,
-          "AST_TO": 3,
+          "AST_TO": 0,
           "EFG": 0.2,
           "TS": 0.2,
-          "USG": 21.232296768316058
+          "USG": 19.302087971196418
         },
         {
           "Code": 546,
@@ -8329,7 +8329,7 @@
           "RB_OFF": 0,
           "RB_DEF": 5,
           "RB_TOT": 5,
-          "TO": 1,
+          "TO": 2,
           "AS": 0,
           "ST": 0,
           "BS": 0,
@@ -8337,12 +8337,12 @@
           "PTFB": 0,
           "PT2IN": 2,
           "PT2ND": 0,
-          "EFF": 9,
+          "EFF": 8,
           "PLUSMINUS": 5,
           "AST_TO": 0,
           "EFG": 0.4375,
           "TS": 0.5067567567567567,
-          "USG": 20.19415824698355
+          "USG": 22.238101389390792
         },
         {
           "Code": 546,
@@ -8891,7 +8891,7 @@
           "USG": 10.607751753047912
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506515/119.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506515/120.json"
     }
   ],
   "individual_candidates": [],
