@@ -405,9 +405,9 @@ def write_article(s):
     body = f"""    <div class="breadcrumb"><a href="index.html">ホーム</a> ／ <a href="cat-data.html">順位・日程</a></div>
     <h1>{esc(title)}</h1>
     <div class="pmeta"><span class="tag data">順位・日程</span><span>{dot}</span><span>B.PREMIER / 貢献度ランキング</span></div>
+    <img class="eyecatch" src="{thumb}" alt="{esc(jp_date(s['date']))}の貢献度ランキング">
     {body_sections(s)}
 
-    <img class="eyecatch" src="{thumb}" alt="{esc(jp_date(s['date']))}の貢献度ランキング">
     <div class="adbox">広告スペース（AdSense）</div>
 
     <p class="source">出典：B.LEAGUE公式 試合詳細（ボックススコア）<br>

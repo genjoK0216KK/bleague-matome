@@ -172,7 +172,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #17
 .stats-article .eff-table .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 .stats-article .eff-table thead th:nth-child(n+3){text-align:right}
 .stats-article .table-note{font-size:14px;line-height:1.5;color:var(--muted);margin:0 0 24px}
-.stats-article .eyecatch{margin-top:32px}
+.stats-article .eyecatch{margin:8px 0 16px}
 @media(max-width:767px){
 .stats-article .top3{grid-template-columns:1fr;gap:8px}
 .stats-article .top3 li{display:grid;grid-template-columns:auto 1fr auto;column-gap:12px;align-items:center}
