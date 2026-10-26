@@ -16,7 +16,7 @@ ChatGPT の検品に合格し、本人が実行する時に行う。それまで
    cp "$HOME/Claude/work/bleague-thumb/mac/thumb-hook/hook_receiver.py" "$HOME/Claude/work/bleague-thumb/mac/thumb-hook/thumb_worker.py" "$HOME/Library/Application Support/basuke-thumb-hook/bin/"
    ```
 2. 生成側のパッチ（先に控えを取る）。`docs/mini8-mac-side/01-OPERATIONS-creation-requests.patch` と `02-thumbnail_queue-requests.patch` を、
-   `/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnail-automation/` で `patch -p1` する。当てた後に `python3 -m unittest test_thumbnail_queue`（18件）。
+   `/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnail-automation/` で `patch -p1` する。当てた後に `python3 -m unittest test_thumbnail_queue`（19件）。
 3. codex の場所を確かめ（ChatGPT アプリ同梱）、常駐の設定ファイルの `__CODEX__` をその絶対パスに置き換えて `~/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist` に置く。**読み込みはしない**（本人の操作4）。
 4. `codex exec --ephemeral --skip-git-repo-check -s workspace-write -C <一時フォルダ> "1672x941の黒い画像を1枚作って out.png に保存して"` で画像ができることを確かめ、一時フォルダは消す。
 

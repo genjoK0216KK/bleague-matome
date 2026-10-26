@@ -633,7 +633,8 @@ class ThumbsWorkflow(unittest.TestCase):
                          ['01-OPERATIONS-creation-requests.patch', '02-thumbnail_queue-requests.patch', 'SETUP.md'])
         setup = (d / 'SETUP.md').read_text()
         self.assertNotIn('StartInterval', setup)
-        self.assertIn('-w "$(openssl rand -hex 32)"', setup)              # 合言葉を画面に出さずに作る
+        self.assertIn("| /usr/bin/security -i", setup)                   # 合言葉は標準入力で渡す（引数に出さない）
+        self.assertNotIn('-w "$(', setup)
         p1 = (d / '01-OPERATIONS-creation-requests.patch').read_text()
         added = '\n'.join(l for l in p1.splitlines() if l.startswith('+'))
         self.assertIn('thumbnail_queue.py requests', added)              # 作成イベントの受け取り
