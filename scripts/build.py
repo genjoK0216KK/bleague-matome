@@ -17,12 +17,12 @@ import sys
 from datetime import datetime, timedelta, timezone
 
 try:
-    from . import site_header, page_assets, browse_ui, schedule_calendar, home_sections, thumb_auto
+    from . import site_header, page_assets, browse_ui, schedule_calendar, home_sections, thumb_auto, thumb_requests
 except ImportError:
     import site_header
     import page_assets
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    from scripts import browse_ui, schedule_calendar, home_sections, thumb_auto
+    from scripts import browse_ui, schedule_calendar, home_sections, thumb_auto, thumb_requests
 
 JST = timezone(timedelta(hours=9))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -1095,6 +1095,11 @@ def main():
 
     changed |= finalize_pages(cfg, pv)
     write_sitemap()
+
+    # サムネの依頼：新しく現れた記事だけ1回積む（全ページを書き終えた後＝公開される版を記録する。無効なら何もしない）
+    req = thumb_requests.record(ROOT)
+    if req["baseline"] or req["requested"]:
+        log(f"サムネ依頼: 新規 {len(req['requested'])}件 / 基準登録 {len(req['baseline'])}件")
 
     log("完了" if changed else "完了（内容に変化なし）")
     return 0

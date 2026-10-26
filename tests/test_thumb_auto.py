@@ -581,14 +581,22 @@ class ThumbsWorkflow(unittest.TestCase):
         self.assertIn('git reset -q --hard origin/main', text)        # ぶつかったら最新から作り直す
         self.assertNotIn('push origin', text)                         # thumb-inbox や main へ直接 push しない
 
-    def test_mac_side_changes_do_not_touch_producer_fingerprint(self):
-        # 生成側の指紋を変えるパッチは置かない（変えると既存記事が全件作り直しになる。独立検品 10/26）
-        self.assertEqual(sorted(p.name for p in (self.ROOT / 'docs/mini8-mac-side').iterdir()),
-                         ['01-OPERATIONS-deliver-every-run.patch'])
-        p1 = (self.ROOT / 'docs/mini8-mac-side/01-OPERATIONS-deliver-every-run.patch').read_text()
-        self.assertNotIn('thumbnail_queue.py', p1)
-        self.assertIn('【毎回の定期回】', p1)
-        self.assertIn('静かに終了する回でも', p1)
+    def test_mac_side_patches_follow_creation_only_policy(self):
+        d = self.ROOT / 'docs/mini8-mac-side'
+        self.assertEqual(sorted(p.name for p in d.iterdir()),
+                         ['01-OPERATIONS-creation-requests.patch', '02-thumbnail_queue-requests.patch'])
+        p1 = (d / '01-OPERATIONS-creation-requests.patch').read_text()
+        added = '\n'.join(l for l in p1.splitlines() if l.startswith('+'))
+        self.assertIn('thumbnail_queue.py requests', added)              # 作成イベントの受け取り
+        self.assertIn('新しいタイマー巡回は作らず', added)
+        self.assertNotIn('毎回の定期回', p1)                               # 止めた巡回を前提にしない
+        self.assertNotIn('automation-2 を再開', p1)
+        p2 = (d / '02-thumbnail_queue-requests.patch').read_text()
+        changed = [l for l in p2.splitlines() if l[:1] in '+-' and not l.startswith(('+++', '---'))]
+        # 生成側の本文指紋・job ID の定義は変えない（変えると既存記事が全件作り直しになる。独立検品 10/26）
+        for line in changed:
+            for frozen in ('def article_text', 'def editorial_fingerprint', 'def request_id', "html = raw.decode('utf-8')"):
+                self.assertNotIn(frozen, line)
 
 if __name__ == '__main__':
     unittest.main()
