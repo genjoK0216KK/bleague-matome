@@ -284,20 +284,35 @@ def leaders_table(leaders):
         top = leaders.get(k) or []
         if not top or top[0][k] <= 0:
             continue
-        names = "、".join(f"{esc(p['name'])}（{esc(p['team'])}）{p[k]}" for p in top if p[k] > 0)
-        rows.append(f"<tr><td>{label}</td><td>{names}</td></tr>")
-    return ('<div class="tablewrap">\n<table>\n<tr><th>部門</th><th>上位3人</th></tr>\n'
-            + "\n".join(rows) + "\n</table>\n</div>")
+        shown = [p for p in top if p[k] > 0]
+        cells = "".join(
+            f'<td><span class="nm">{esc(p["name"])}</span><span class="tm">{esc(p["team"])}</span>'
+            f'<span class="lv">{p[k]}</span></td>' for p in shown)
+        cells += '<td class="none">—</td>' * (3 - len(shown))
+        rows.append(f'<tr><th scope="row" class="cat">{label}</th>{cells}</tr>')
+    head = ('<thead><tr><th scope="col">部門</th><th scope="col">1人目</th>'
+            '<th scope="col">2人目</th><th scope="col">3人目</th></tr></thead>')
+    return ('<p class="scroll-hint leaders-hint" aria-hidden="true">横にスクロールできます</p>\n'
+            '<div class="tablewrap leaders-wrap" role="region" tabindex="0" aria-label="部門別リーダー（横にスクロールできます）">\n'
+            '<table class="leaders-table">\n<caption>部門別リーダー（各部門の上位3人と記録。記録の多い順に左から。同じ記録は同順位）</caption>\n'
+            + head + "\n<tbody>\n" + "\n".join(rows) + "\n</tbody>\n</table>\n</div>")
 
 
 def games_table(games):
     rows = []
     for g in games:
-        ot = "（延長）" if g.get("ot") else ""
-        rows.append(f"<tr><td>{esc(g['home'])} vs {esc(g['away'])}{ot}</td>"
-                    f"<td>{g['home_score']}－{g['away_score']}</td></tr>")
-    return ('<div class="tablewrap">\n<table>\n<tr><th>対戦（ホーム vs アウェー）</th>'
-            '<th>スコア</th></tr>\n' + "\n".join(rows) + "\n</table>\n</div>")
+        hs, as_ = g["home_score"], g["away_score"]
+        home = f'<strong>{esc(g["home"])}</strong>' if hs > as_ else esc(g["home"])
+        away = f'<strong>{esc(g["away"])}</strong>' if as_ > hs else esc(g["away"])
+        ot = '<span class="ot">延長</span>' if g.get("ot") else ""
+        rows.append(f'<tr><td class="hm">{home}</td>'
+                    f'<td class="sc"><span class="pts">{hs}－{as_}</span>{ot}</td>'
+                    f'<td class="aw">{away}</td></tr>')
+    head = ('<thead><tr><th scope="col">ホーム</th><th scope="col">スコア</th>'
+            '<th scope="col">アウェー</th></tr></thead>')
+    return ('<div class="tablewrap games-wrap">\n<table class="games-table">\n'
+            '<caption>この日の試合結果（勝者を太字で表示）</caption>\n'
+            + head + "\n<tbody>\n" + "\n".join(rows) + "\n</tbody>\n</table>\n</div>")
 
 
 def source_links(games):
@@ -390,9 +405,9 @@ def write_article(s):
     body = f"""    <div class="breadcrumb"><a href="index.html">ホーム</a> ／ <a href="cat-data.html">順位・日程</a></div>
     <h1>{esc(title)}</h1>
     <div class="pmeta"><span class="tag data">順位・日程</span><span>{dot}</span><span>B.PREMIER / 貢献度ランキング</span></div>
+    <img class="eyecatch" src="{thumb}" alt="{esc(jp_date(s['date']))}の貢献度ランキング">
     {body_sections(s)}
 
-    <img class="eyecatch" src="{thumb}" alt="{esc(jp_date(s['date']))}の貢献度ランキング">
     <div class="adbox">広告スペース（AdSense）</div>
 
     <p class="source">出典：B.LEAGUE公式 試合詳細（ボックススコア）<br>

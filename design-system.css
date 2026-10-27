@@ -172,7 +172,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #17
 .stats-article .eff-table .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 .stats-article .eff-table thead th:nth-child(n+3){text-align:right}
 .stats-article .table-note{font-size:14px;line-height:1.5;color:var(--muted);margin:0 0 24px}
-.stats-article .eyecatch{margin-top:32px}
+.stats-article .eyecatch{margin:8px 0 16px}
 @media(max-width:767px){
 .stats-article .top3{grid-template-columns:1fr;gap:8px}
 .stats-article .top3 li{display:grid;grid-template-columns:auto 1fr auto;column-gap:12px;align-items:center}
@@ -183,6 +183,31 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #17
 .stats-article .eff-table th.pl,.stats-article .eff-table thead th:nth-child(2){position:sticky;left:48px;z-index:1;width:150px;min-width:150px;max-width:150px;box-sizing:border-box;box-shadow:2px 0 0 var(--line)}
 .stats-article .eff-table thead th:nth-child(2){background:#f3f5f3;white-space:normal}
 }
+/* 貢献度記事・stats.html：部門別リーダー表・試合結果表（TOP10表と同じ体裁、MINI-6続き） */
+.stats-article .leaders-table{min-width:600px}
+.stats-article .leaders-table tbody tr{height:56px}
+.stats-article .leaders-table th.cat{background:#fff;color:#151a18;font-weight:700;text-align:left;white-space:nowrap;width:120px}
+.stats-article .leaders-table td{vertical-align:top}
+.stats-article .leaders-table .nm{display:block;font-size:16px;font-weight:700;overflow-wrap:anywhere}
+.stats-article .leaders-table .tm{display:block;font-size:14px;color:var(--muted)}
+.stats-article .leaders-table .lv{display:block;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums}
+.stats-article .leaders-table td.none{color:var(--muted);vertical-align:middle}
+.stats-article .games-table{min-width:0}
+.stats-article .games-table tbody tr{height:56px}
+.stats-article .games-table td.hm{text-align:right;width:40%}
+.stats-article .games-table td.aw{text-align:left;width:40%}
+.stats-article .games-table td.sc,.stats-article .games-table thead th:nth-child(2){text-align:center;white-space:nowrap}
+.stats-article .games-table thead th:first-child{text-align:right}
+.stats-article .games-table .pts{display:block;font-weight:700;font-variant-numeric:tabular-nums}
+.stats-article .games-table .ot{display:block;font-size:14px;color:var(--muted)}
+.stats-article .games-table td.hm,.stats-article .games-table td.aw{font-weight:400;overflow-wrap:anywhere}
+@media(max-width:767px){
+.stats-article .leaders-table th.cat,.stats-article .leaders-table thead th:first-child{position:sticky;left:0;z-index:1;width:96px;min-width:96px;max-width:96px;box-sizing:border-box;box-shadow:2px 0 0 var(--line)}
+.stats-article .leaders-table th.cat{background:#fff;white-space:normal}
+.stats-article .leaders-table thead th:first-child{background:#f3f5f3}
+.stats-article .games-table th,.stats-article .games-table td{padding:12px 8px}
+}
+.stats-article tbody tr:nth-child(even) th.pl,.stats-article tbody tr:nth-child(even) th.cat,.stats-article .eff-table tbody tr:nth-child(even) .rk{background:var(--soft)}
 /* 自動生成サムネ（MINI-8）：画像全体を見せる（注記を切らない）。文字だけの記事は従来どおり */
 .article img.eyecatch[data-auto-thumb]{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#151a18;border-radius:4px}
 .lead-article.has-thumb .lead-thumb{display:block;margin:0 0 10px}
