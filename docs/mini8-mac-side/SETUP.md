@@ -9,7 +9,7 @@ ChatGPT の検品に合格し、本人が実行する時に行う。それまで
 
 ## A. Claude（Mac mini「Macbook ⇄ mini_連携用」）がやる設置 — PR #32 の統合後、木村さんの B の前
 
-やらないこと：キーチェーンへの登録、`launchctl bootstrap`（常駐の読み込み）、Funnel、Webhook の登録、`enabled=true`。
+やらないこと：`~/Library/LaunchAgents` への plist の配置（RunAtLoad・KeepAlive が true なので、置くだけで次のログイン時に常駐する。置くのは木村さんの B-0）、キーチェーンへの登録、`launchctl bootstrap`（常駐の読み込み）、Funnel、Webhook の登録、`enabled=true`。
 既存の会話 01a16fa6 は使わない。新しいタイマー・巡回は作らない（automation-2 は PAUSED のまま）。LINE 系の保留中の承認には触れない。
 各手順の結果（出力の最後の数行）を全体管理へ返す。失敗したら、そこで止めて報告する。
 
@@ -35,17 +35,19 @@ ChatGPT の検品に合格し、本人が実行する時に行う。それまで
    cd "$G" && /usr/bin/python3 -m unittest test_thumbnail_queue 2>&1 | tail -3   # 19件 OK
    ```
    dry-run が失敗したら、本体には当てずに止めて報告する（控えから戻せる）。
-4. 常駐の設定ファイルを置く（**読み込みはしない**。読み込みは木村さんの B-2）
+4. 常駐の設定ファイルを**確かめるだけ**（`~/Library/LaunchAgents` には置かない。置くのは木村さんの B-0、読み込みは B-2）
    ```bash
-   CODEX=（ChatGPT アプリ同梱の codex の絶対パス。`codex --version` が 0.164 系で動くもの）
-   sed "s#__CODEX__#$CODEX#" "$HOME/Claude/work/bleague-thumb/mac/thumb-hook/com.genjo.basuke-thumb-hook.plist" > "$HOME/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist"
-   plutil -lint "$HOME/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist" && grep -c __CODEX__ "$HOME/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist"   # OK と 0
+   CODEX=/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex
+   "$CODEX" --version
+   T=$(mktemp); sed "s#__CODEX__#$CODEX#" "$HOME/Claude/work/bleague-thumb/mac/thumb-hook/com.genjo.basuke-thumb-hook.plist" > "$T"; plutil -lint "$T"; grep -c __CODEX__ "$T"; rm -f "$T"   # OK と 0
+   test ! -e "$HOME/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist" && echo "LaunchAgents にはまだ置いていない"
    ```
+   一時ファイルで置き換えと形式を確かめて、すぐ消す。
 5. 画像が作れることを確かめる（使い捨ての会話で1枚だけ）
    ```bash
    D=$(mktemp -d); "$CODEX" exec --ephemeral --skip-git-repo-check -s workspace-write -C "$D" "1672x941の黒い画像を1枚、内蔵の画像生成で作って out.png に保存して" < /dev/null; ls -l "$D/out.png"; rm -rf "$D"
    ```
-6. 全体管理へ「A 完了」と、1〜5の結果（clone のコミット、権限、パッチの試験結果、plist の確認、画像の有無）を返す。
+6. 全体管理へ「A 完了」と、1〜5の結果（clone のコミット、権限、パッチの試験結果、codex の版と plist の確認、画像の有無）を返す。
 
 ## B. 木村さんの操作（最終版）
 
@@ -53,11 +55,17 @@ Mac mini の「ターミナル」を開き、下の枠を**上から順に1つ�
 枠の下に「こう出ればOK」を書いています。違う表示が出たら、そこで止めて、表示をそのまま Claude に貼ってください。
 合言葉（秘密の文字列）は、どの手順でも画面に出ません。
 
-### 0. 準備ができているか確かめる（Claude の設置 A が済んでいるか）
+### 0. 準備ができているか確かめて、常駐の設定ファイルを置く
+Claude の設置 A が済んでいるかを確かめ、済んでいれば受け口の設定ファイルを `~/Library/LaunchAgents` に置きます（まだ起動はしません。起動は手順2）。
 ```bash
-test -f "$HOME/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist" && test -f "$HOME/Library/Application Support/basuke-thumb-hook/bin/thumb_stop.py" && echo "準備OK" || echo "まだ準備ができていません（Claude に伝えてください）"
+B="$HOME/Library/Application Support/basuke-thumb-hook/bin"; R="$HOME/Claude/work/bleague-thumb"; P="$HOME/Library/LaunchAgents/com.genjo.basuke-thumb-hook.plist"; CODEX=/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex
+if ! { test -f "$B/hook_receiver.py" && test -f "$B/thumb_worker.py" && test -f "$B/thumb_stop.py" && test -f "$R/mac/thumb-hook/com.genjo.basuke-thumb-hook.plist"; }; then echo "まだ準備ができていません（Claude に伝えてください）"
+elif ! test -x "$CODEX"; then echo "止めます：codex が見つかりません（Claude に伝えてください）"
+elif sed "s#__CODEX__#$CODEX#" "$R/mac/thumb-hook/com.genjo.basuke-thumb-hook.plist" > "$P" && plutil -lint "$P" >/dev/null && ! grep -q __CODEX__ "$P"; then echo "準備OK（設定ファイルを置きました）"
+else echo "止めます：設定ファイルを置けませんでした（Claude に伝えてください）"; fi
 ```
-こう出ればOK：`準備OK`
+こう出ればOK：`準備OK（設定ファイルを置きました）`
+（この設定ファイルは、置いた後に Mac mini へログインし直すと自動で起動します。手順1〜2は続けて行ってください）
 
 ### 1. 合言葉を作って、キーチェーンに入れる
 ```bash
