@@ -88,12 +88,19 @@ launchctl bootstrap gui/$(id -u) "$HOME/Library/LaunchAgents/com.genjo.basuke-th
    こう出ればOK：`https://aimac-mini.（英数字）.ts.net/hooks/github` と `Funnel on` のような表示に、`http://127.0.0.1:8787` が並ぶ。
 
 ### 4. GitHub に「記事ができたらこのURLへ知らせて」と登録する
+合言葉とURLを先に取り出し（画面には出しません）、どちらかが取れなければ**登録せずに止まります**。
 ```bash
-URL="https://$(/Applications/Tailscale.app/Contents/MacOS/Tailscale status --json | python3 -c 'import json,sys;print(json.load(sys.stdin)["Self"]["DNSName"].rstrip("."))')/hooks/github"; gh api repos/genjoK0216KK/bleague-matome/hooks --method POST --input - >/dev/null <<EOF && echo "登録しました：$URL"
-{"name":"web","active":true,"events":["push"],"config":{"url":"$URL","content_type":"json","insecure_ssl":"0","secret":"$(/usr/bin/security find-generic-password -s basuke-thumb-webhook -w)"}}
+S="$(/usr/bin/security find-generic-password -s basuke-thumb-webhook -w 2>/dev/null)" || S=""
+DNS="$(/Applications/Tailscale.app/Contents/MacOS/Tailscale status --json 2>/dev/null | python3 -c 'import json,sys;print(json.load(sys.stdin)["Self"]["DNSName"].rstrip("."))' 2>/dev/null)" || DNS=""
+if [ -z "$S" ]; then echo "止めます：合言葉が取れませんでした（登録していません）"
+elif [ -z "$DNS" ]; then echo "止めます：公開URLが取れませんでした（登録していません）"
+else URL="https://$DNS/hooks/github"; gh api repos/genjoK0216KK/bleague-matome/hooks --method POST --input - >/dev/null <<EOF && echo "登録しました：$URL" || echo "止めます：登録に失敗しました"
+{"name":"web","active":true,"events":["push"],"config":{"url":"$URL","content_type":"json","insecure_ssl":"0","secret":"$S"}}
 EOF
+fi; unset S
 ```
 こう出ればOK：`登録しました：https://aimac-mini.〜.ts.net/hooks/github`
+「止めます：…」と出た時は、ここで止めて表示を Claude に貼ってください（合言葉が取れない時は手順1、URLが取れない時は手順3に戻ります）。
 
 ### 5. 最後の確認（GitHub からの確認の通知が届いたか）
 登録すると、GitHub がすぐに確認の通知（ping）を送ります。
