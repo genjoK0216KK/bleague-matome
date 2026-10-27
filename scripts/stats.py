@@ -326,10 +326,10 @@ def body_sections(s):
     first = top[0]
     lead = (f"{jp_date(s['date'])}に行われたりそなB.LEAGUE PREMIER(Bプレミア){len(s['games'])}試合の"
             f"ボックススコアから、貢献度（EFF）の上位選手をまとめました。この日の貢献度1位は"
-            f"{esc(first['team'])}の{esc(first['name'])}で、{first['pts']}得点・{first['reb']}リバウンド・"
-            f"{first['ast']}アシストを記録し、貢献度{first['eff']}をマークしました。")
+            f"{esc(first['team'])}の{esc(first['name'])}です。{first['pts']}得点・{first['reb']}リバウンド・"
+            f"{first['ast']}アシストで、貢献度は{first['eff']}でした。")
     if jp:
-        lead += (f"日本人選手のトップは{esc(jp[0]['team'])}の{esc(jp[0]['name'])}（貢献度{jp[0]['eff']}）"
+        lead += (f"</p>\n    <p>日本人選手のトップは{esc(jp[0]['team'])}の{esc(jp[0]['name'])}（貢献度{jp[0]['eff']}）"
                  f"でした。")
     nationality = (f'<h2>公式国籍確認済み・日本人選手 TOP{TOP_N}</h2>' + eff_table(jp, f"日本人選手 貢献度TOP{TOP_N}") if jp else '<p class="note">国籍別ランキングは未掲載です。公式国籍情報を確認できない選手を名前から分類しません。</p>')
     return f"""<p class="lead">{lead}</p>
@@ -349,7 +349,7 @@ def body_sections(s):
     <h2>この日の試合結果</h2>
     {games_table(s['games'])}
 
-    <div class="note"><p style="margin:0"><strong>Q. 貢献度（EFF）とは？</strong><br>A. 得点・リバウンド・アシスト・スティール・ブロック・被ファウルを加算し、外したシュート数（フィールドゴール・フリースロー）、ターンオーバー・被ブロック・ファウルを減算した指標です。B.LEAGUE公式記録の値をそのまま掲載しています。<a href="https://www.bleague.jp/glossary/" rel="noopener nofollow">公式用語集</a>を参照してください。</p></div>"""
+    <div class="note"><p style="margin:0"><strong>Q. 貢献度（EFF）とは？</strong><br>A. 得点・リバウンド・アシスト・スティール・ブロック・被ファウルを足し、外したシュート（フィールドゴール・フリースロー）・ターンオーバー・被ブロック・ファウルを引いた指標です。B.LEAGUE公式記録の値をそのまま載せています。詳しくは<a href="https://www.bleague.jp/glossary/" rel="noopener nofollow">公式用語集</a>を見てください。</p></div>"""
 
 
 def page(title, desc, url, body):
