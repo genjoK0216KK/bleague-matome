@@ -31,7 +31,7 @@ home_sections = build.home_sections
 
 from bs4 import BeautifulSoup  # noqa: E402
 
-ROWS = re.compile(r'(?:<a class="item compact-item" href="[^"]*">.*?</div></a>\n?)+'
+ROWS = re.compile(r'(?:<a class="item compact-item(?: has-thumb)?" href="[^"]*">.*?</div></a>\n?)+'
                   r'|<p class="note">この分類の記事はまだありません。</p>')
 STAMP = re.compile(r"(<!-- AUTO:UPDATED:START -->)(.*?)(<!-- AUTO:UPDATED:END -->)", re.DOTALL)
 

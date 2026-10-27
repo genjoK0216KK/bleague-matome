@@ -208,3 +208,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #17
 .stats-article .games-table th,.stats-article .games-table td{padding:12px 8px}
 }
 .stats-article tbody tr:nth-child(even) th.pl,.stats-article tbody tr:nth-child(even) th.cat,.stats-article .eff-table tbody tr:nth-child(even) .rk{background:var(--soft)}
+/* 自動生成サムネ（MINI-8）：画像全体を見せる（注記を切らない）。文字だけの記事は従来どおり */
+.article img.eyecatch[data-auto-thumb]{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#151a18;border-radius:4px}
+.lead-article.has-thumb .lead-thumb{display:block;margin:0 0 10px}
+.lead-article.has-thumb .lead-thumb img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#151a18;border-radius:4px}
+.wrap .feed .compact-item.has-thumb{display:flex;gap:12px;align-items:flex-start}
+.compact-item .item-thumb{flex:0 0 128px;width:128px;height:72px;object-fit:contain;background:#151a18;border-radius:4px;margin-top:6px}
+@media (max-width:480px){.compact-item .item-thumb{flex-basis:96px;width:96px;height:54px}}

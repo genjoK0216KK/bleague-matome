@@ -307,7 +307,13 @@ def lead_article(articles, now):
     desc = (a.get('desc') or '').strip()
     if len(desc) > LEAD_SUMMARY:
         desc = desc[:LEAD_SUMMARY].rstrip() + '…'
-    return ('<article class="lead-article"><p class="lead-label">' + label + '</p>'
+    # 自動生成サムネ（承認済みの絵柄・本文と同じ版）がある記事だけ画像を出す。無ければ従来どおり文字だけ
+    thumb = a.get('thumb') or ''
+    image = ('<a class="lead-thumb" href="' + escape(a['href']) + '" tabindex="-1" aria-hidden="true">'
+             '<img src="' + escape(thumb) + '" alt="" width="1280" height="720"></a>'
+             if thumb.startswith('thumbs/auto/') else '')
+    return ('<article class="lead-article' + (' has-thumb' if image else '') + '">' + image
+            + '<p class="lead-label">' + label + '</p>'
             '<h3><a href="' + escape(a['href']) + '">' + escape(a['title']) + '</a></h3>'
             + ('<p class="lead-desc">' + escape(desc) + '</p>' if desc and desc != a['title'] else '')
             + '<a class="read-link" href="' + escape(a['href']) + '">記事を読む ›</a></article>')
