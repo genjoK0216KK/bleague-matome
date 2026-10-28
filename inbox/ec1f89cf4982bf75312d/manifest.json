@@ -1,0 +1,69 @@
+{
+  "id": "ec1f89cf4982bf75312d",
+  "article_path": "article-results-one-next-20261026.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261026.html",
+  "source_commit": "db5335f57b68483d90c07b29b99d483604a62576",
+  "source_blob_sha": "064e9a74081983f1cee312d933f38990b14c6218",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "3806c3551bb5b776ff1dece1890f8e52cf78ee5eaf7420e7dc0b4a0faa796cc4",
+  "last_observed_blob_sha": "064e9a74081983f1cee312d933f38990b14c6218",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ec1f89cf4982bf75312d/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ec1f89cf4982bf75312d/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-25T17:50:52.950643+00:00",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/ec1f89cf4982bf75312d/thumbnail.png",
+  "image_sha256": "ac947ca186128303bd7553c992831c05acfd7b5aac47d654114cd67cbdf34498",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "064e9a74081983f1cee312d933f38990b14c6218",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.26",
+      "B.PREMIER",
+      "登録選手",
+      "ベスト5",
+      "本日の対戦クラブから",
+      "今季平均EFFで独自選出",
+      "出場確定ではありません",
+      "記事掲載情報：10/26 02:23時点",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "url": "https://basuke-matome.jp/article-results-one-next-20261026.html",
+        "evidence": "固定source.html/source.txtを確認。B.PREMIERの本日対象試合登録選手を今季平均EFFで選出。出場は未確定。記事の試合状態表示は2026-10-26 02:23 JST、平均資料は2026-10-25 17:15 JST。画像の時点表記は記事掲載情報を指す。"
+      },
+      {
+        "url": "https://www.bleague.jp/schedule/?tab=1&year=2026&mon=10&day=26",
+        "evidence": "固定記事内の公式日程出典。記事に記載された取得時刻02:23を参照。今回は公式ページを独立再取得していない。"
+      },
+      {
+        "url": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
+        "evidence": "固定記事が引用する今季平均EFF資料。数値を画像へ転記せず、実際の当日成績と区別。"
+      }
+    ],
+    "person_reference": null,
+    "prompt": "Use case: ads-marketing\nAsset: Japanese basketball editorial thumbnail, PNG, landscape approximately 16:9.\nCreate a new thumbnail using the attached approved image ONLY as the ink/brush style and black-lime color reference. Do not reuse the reference player, name, score, or date. This article is a collective pre-game selection, with no single player as protagonist.\nSubject: one vividly hand-inked orange basketball and a few abstract court lines on the right. No people, no faces, no hands, no uniforms, no logos, no sponsor text, no scoreboards or scenes claiming a real play.\nDesign: background #151A18, electric lime #CCF43B, off-white bold Japanese typography, hand-made brush streaks, restrained ink texture, spacious editorial composition. Text at left and center, ball at right. Keep 6% safe margins. No text clipping.\nRender ONLY these exact strings, with the main headline largest:\n\"バスケまとめ\"\n\"2026.10.26\"\n\"B.PREMIER\"\n\"登録選手\"\n\"ベスト5\"\n\"本日の対戦クラブから\"\n\"今季平均EFFで独自選出\"\n\"出場確定ではありません\"\n\"記事掲載情報：10/26 02:23時点\"\n\"イラスト（AI生成）\"\n\"成績をもとにしたイメージ\"\nHierarchy: 登録選手 / ベスト5 is the main two-line headline. The two lines 本日の対戦クラブから / 今季平均EFFで独自選出 must be clearly legible together underneath, defining the selection scope. 出場確定ではありません must be clearly legible in its own band. The article timestamp and two AI disclosure lines go along the bottom in smaller but clear text. Do not add any other numbers, player names, claims, actual results or rankings.",
+    "generator": "built-in image_gen",
+    "generated_image": "/Users/genjo/.codex/generated_images/01a16fa6-1d99-7470-a4ae-57fd0126f685/exec-239eec7a-b89e-42b0-a98c-0488062b93a1.png",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    },
+    "qa_notes": {
+      "text_and_numbers": "出力画像で全11文字列を目視照合。日付10/26、記事時点02:23、ベスト5一致。得点・勝敗・順位の追加なし。",
+      "source_qualifiers": "対象範囲と今季平均による独自選出、出場非確定の3行を明瞭に確認。",
+      "likeness_or_no_named_person": "人物なし。ボールとコートの抽象イラストのみ。顔・手・個人名なし。",
+      "layout": "約16:9。文字とボールの見切れ、文字への重なりなし。",
+      "ai_label": "イラスト（AI生成）／成績をもとにしたイメージを画像下部で確認。"
+    },
+    "correction_count": 0
+  },
+  "prepared_at": "2026-10-25T17:52:50.923677+00:00",
+  "publication_approved": false
+}

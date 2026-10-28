@@ -1,0 +1,67 @@
+{
+  "id": "d87a8ec3bf24b1b0559b",
+  "article_path": "article-results-one-next-20261025.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261025.html",
+  "source_commit": "db5335f57b68483d90c07b29b99d483604a62576",
+  "source_blob_sha": "91a871ed0daede520bdca5500887b48317f80d1a",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "8ea4902b55a521e4629cc207d20aabde9e23b41e7a7fddfd69239de2bdc08c7f",
+  "last_observed_blob_sha": "91a871ed0daede520bdca5500887b48317f80d1a",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d87a8ec3bf24b1b0559b/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d87a8ec3bf24b1b0559b/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-25T17:50:52.675880+00:00",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/d87a8ec3bf24b1b0559b/thumbnail.png",
+  "image_sha256": "c3007fb63b54380ecf0b7fa30775e265b84b9ad6b68136706166c491a9d28adf",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "91a871ed0daede520bdca5500887b48317f80d1a",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.25",
+      "B.PREMIER・B.ONE",
+      "試合結果",
+      "公式記録の",
+      "確定待ち",
+      "記事掲載情報：10/26 02:23時点",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "url": "https://basuke-matome.jp/article-results-one-next-20261025.html",
+        "evidence": "固定source.html/source.txtを確認。10/25の試合結果ページでB.PREMIER/B.ONEとも全試合の公式記録確定待ち。本文の試合状態時点は2026-10-26 02:23 JST。本文内の今季平均ベスト5は当日結果と区別し、画像では使わない。"
+      },
+      {
+        "url": "https://www.bleague.jp/schedule/?tab=1&year=2026&mon=10&day=25",
+        "evidence": "固定記事で引用されている公式日程。今回は独立再取得せず、元記事の未確定注記を保持。"
+      },
+      {
+        "url": "https://www.bleague.jp/schedule/?tab=2&year=2026&mon=10&day=25",
+        "evidence": "固定記事で引用されているB.ONE公式日程。勝敗・確定スコアは画像に追加しない。"
+      }
+    ],
+    "person_reference": null,
+    "prompt": "Use case: ads-marketing\nAsset: Japanese basketball editorial thumbnail, PNG, landscape approximately 16:9.\nGenerate a new thumbnail in the attached reference's approved black/lime ink and brush style. The input is a style reference ONLY. Do not reuse its player, name, date, scores or claims.\nSubject: an illustrated orange basketball and a few abstract hand-drawn court lines to the right. No humans, no hands, no player faces, no uniforms or logos. Do not portray any specific game, winning basket or match result.\nPalette: dark #151A18, lime #CCF43B, off-white text. Bold Japanese headline typography, hand-made ink textures and broad brush strokes. Sparse and spacious composition with clear text/illustration separation, approximately 6% padding.\nExact text, no other words or scores:\n\"バスケまとめ\"\n\"2026.10.25\"\n\"B.PREMIER・B.ONE\"\n\"試合結果\"\n\"公式記録の\"\n\"確定待ち\"\n\"記事掲載情報：10/26 02:23時点\"\n\"イラスト（AI生成）\"\n\"成績をもとにしたイメージ\"\nMake 試合結果 the bold white headline and 公式記録の / 確定待ち a large clearly legible lime two-line statement of equal importance immediately below. The status is PENDING, not a completed match-score announcement. Date 2026.10.25 is the match date, and the smaller article timestamp is 10/26 02:23. Bottom AI disclosure text must be readable. Keep every character within the image, never crop text or the basketball.",
+    "generator": "built-in image_gen",
+    "generated_image": "/Users/genjo/.codex/generated_images/01a16fa6-1d99-7470-a4ae-57fd0126f685/exec-7ce59914-851f-4eab-a17d-7cac72c1c427.png",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    },
+    "qa_notes": {
+      "text_and_numbers": "出力画像の全9文字列を目視照合。対象日2026.10.25、記事時点10/26 02:23、リーグ一致。",
+      "source_qualifiers": "公式記録の確定待ちを大文字で明示。確定勝敗・選手ランキングの創作なし。",
+      "likeness_or_no_named_person": "人物・顔・手なし。ボールと抽象コートのみ。",
+      "layout": "約16:9。文字・ボールが画面内に収まり、判読できる。",
+      "ai_label": "下部にイラスト（AI生成）と成績をもとにしたイメージの両方を確認。"
+    },
+    "correction_count": 0
+  },
+  "prepared_at": "2026-10-25T17:53:58.152331+00:00",
+  "publication_approved": false
+}

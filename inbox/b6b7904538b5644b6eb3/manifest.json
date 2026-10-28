@@ -1,0 +1,75 @@
+{
+  "id": "b6b7904538b5644b6eb3",
+  "article_path": "article-daily-20261025.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261025.html",
+  "source_commit": "152c90b3b3c4f338f12816b437f800bb96d52bbf",
+  "source_blob_sha": "94dc6934a03252c10ff7cbf1a2105f5a0b87f4ad",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "6c99f6dcf6cc09ef118717637cc0a3be1e0f396763d077ff2aa2413a87534136",
+  "last_observed_blob_sha": "94dc6934a03252c10ff7cbf1a2105f5a0b87f4ad",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b6b7904538b5644b6eb3/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b6b7904538b5644b6eb3/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-25T10:10:43.410807+00:00",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/b6b7904538b5644b6eb3/thumbnail.png",
+  "image_sha256": "35cc4e746deec0542f6c12ea6f768d0dbaa02e2e2fed4be8700ff49a20222060",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "schema_version": 1,
+    "job_id": "b6b7904538b5644b6eb3",
+    "article_path": "article-daily-20261025.html",
+    "source_blob_sha": "94dc6934a03252c10ff7cbf1a2105f5a0b87f4ad",
+    "source_commit": "152c90b3b3c4f338f12816b437f800bb96d52bbf",
+    "editorial_fingerprint": "6c99f6dcf6cc09ef118717637cc0a3be1e0f396763d077ff2aa2413a87534136",
+    "source_revision_label": "2026-10-25 19:10 JST追記版",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.25",
+      "岡山 vs 徳島",
+      "今季平均EFFで比較",
+      "試合前データの独自分析",
+      "19:10更新時点：結果・出場未確認",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "url": "https://basuke-matome.jp/article-daily-20261025.html",
+        "evidence": "固定source.html/source.txtを読了。本文の独自分析①の岡山―徳島と今季平均EFFの比較を主題に採用。19:10追記は最終結果を未確認と明記し、出場確定ではない旨も原文にある。画像は記事の留保を表すもので、公式サイトや現実の試合状況を本回で再確認したとの主張はしていない。",
+        "snapshot_commit": "152c90b3b3c4f338f12816b437f800bb96d52bbf"
+      }
+    ],
+    "source_timestamps": {
+      "season_average_premier": "2026-10-24 22:17 JST (article attribution)",
+      "season_average_one": "2026-10-24 22:18 JST (article attribution)",
+      "schedule": "2026-10-25 00:07–00:08 JST (article attribution)",
+      "article_latest_check": "2026-10-25 19:10 JST",
+      "snapshot_created_at": "2026-10-25T10:10:43.410807+00:00"
+    },
+    "person_reference": null,
+    "subject_reason": "複数カードの比較記事で特定人物を主役にしていない。第一の比較である岡山―徳島を選び、ボールとコートのみで構成。",
+    "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+    "prompt": "Use case: ads-marketing\nAsset type: Japanese basketball editorial thumbnail, landscape PNG, approximately 16:9.\nPrimary request: Create a NEW thumbnail for the 2026-10-25 daily article's 19:10 update. Use the supplied image ONLY as the approved visual style reference: near-black #151A18, lime #CCF43B, ivory-white, rough hand-ink and dry-brush textures, very bold Japanese typography, few elements. Do not copy its player, name, scores, date, or pose.\nSource context: This is the site's independent comparison of pre-game season-average EFF for scheduled matchups, with Okayama versus Tokushima as the first main comparison. The article's 19:10 update explicitly says today's final results and player participation remain unverified. This is NOT a confirmed game result or live match status. Do not add scores, rankings, statistics, claims of winning, or a future/live-game implication.\nComposition: Spacious, strong typographic block on the left, a single orange hand-drawn basketball resting on an abstract half-court on the right with a restrained lime brush stroke behind it. No people, faces, hands, logos, sponsors, player uniforms, trophies, or specific game action. At least 5 percent safe margins; all text fully inside the frame. Keep the caution line clear and readable.\nRender exactly these text lines, and no other words:\nTop small:\n「バスケまとめ」\n「2026.10.25」\nMain headline, very large:\n「岡山 vs 徳島」\nNext headline, large:\n「今季平均EFFで比較」\nSupporting line:\n「試合前データの独自分析」\nVisible caution line:\n「19:10更新時点：結果・出場未確認」\nBottom two readable labels:\n「イラスト（AI生成）」\n「成績をもとにしたイメージ」\nUse crisp accurate Japanese glyphs. The two main lines dominate; the caution and disclosure labels remain legible. The image is an illustration, not photorealistic. Opaque background.",
+    "generator": "built-in image_gen",
+    "generated_image": "/Users/genjo/.codex/generated_images/01a16fa6-1d99-7470-a4ae-57fd0126f685/exec-3e661893-fbb4-4882-8bf3-23f92a06cad0.png",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    },
+    "qa_notes": {
+      "text_and_numbers": "出力画像を目視。8行すべてが正確。日付2026.10.25、更新時刻19:10を本文と照合。スコア・順位・選手成績の数値を追加していない。",
+      "source_qualifiers": "『試合前データの独自分析』『19:10更新時点：結果・出場未確認』を画像で確認。現在進行中や結果確定を暗示しない。",
+      "likeness_or_no_named_person": "人物・顔・手・ユニフォームを描いていない。別人・実写・ロゴ・スポンサーなし。",
+      "layout": "約16:9。全文が見切れず、主要見出し・注意帯・AI注記を読める。ボールの輪郭は完結し、テキストを遮らない。",
+      "ai_label": "『イラスト（AI生成）』『成績をもとにしたイメージ』の両方を下部で目視確認。"
+    },
+    "correction_count": 0,
+    "publication_approved": false
+  },
+  "prepared_at": "2026-10-25T10:12:43.370672+00:00",
+  "publication_approved": false
+}
