@@ -33,9 +33,21 @@ import urllib.request
 from pathlib import Path
 
 HOME = Path(os.environ.get('BASUKE_THUMB_HOME', str(Path.home() / 'Library/Application Support/basuke-thumb-hook')))
-AUTOMATION = Path(os.environ.get(
-    'BASUKE_THUMB_AUTOMATION',
-    '/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnail-automation'))
+# launchd から起動した python は、macOS のプライバシー保護で ~/Documents・~/Desktop・~/Downloads を読めない
+# （10/29 worker.log「Operation not permitted」）。生成側は HOME/automation の下に置き、
+# 古い plist が保護フォルダを指していても、こちらを使う（plist を読み込み直さずに直せるように）。
+DEFAULT_AUTOMATION = HOME / 'automation/outputs/basketball-thumbnail-automation'
+PROTECTED = tuple(Path.home() / d for d in ('Documents', 'Desktop', 'Downloads'))
+
+
+def automation_dir(value):
+    path = Path(value) if value else DEFAULT_AUTOMATION
+    if any(path == p or p in path.parents for p in PROTECTED):
+        return DEFAULT_AUTOMATION
+    return path
+
+
+AUTOMATION = automation_dir(os.environ.get('BASUKE_THUMB_AUTOMATION'))
 REPO = Path(os.environ.get('BASUKE_THUMB_REPO', str(Path.home() / 'Claude/work/bleague-thumb')))
 CODEX = os.environ.get('BASUKE_THUMB_CODEX', 'codex')
 CONFIG_URL = 'https://raw.githubusercontent.com/genjoK0216KK/bleague-matome/main/data/thumbs/config.json'

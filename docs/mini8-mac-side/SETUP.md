@@ -49,6 +49,21 @@ ChatGPT の検品に合格し、本人が実行する時に行う。それまで
    ```
 6. 全体管理へ「A 完了」と、1〜5の結果（clone のコミット、権限、パッチの試験結果、codex の版と plist の確認、画像の有無）を返す。
 
+### A-7. 生成側を ~/Documents の外へ移す（10/29 追加・Claude「連携用」がやる）
+launchd から起動した python は、macOS のプライバシー保護で `~/Documents` を読めません（10/29 06:34 の worker.log「Operation not permitted」）。
+生成側を受け口と同じ `~/Library/Application Support/basuke-thumb-hook/automation/` の下へ写します。元のフォルダは消しません。
+plist は読み込み直さなくてよいです（作業役は通知のたびに新しく起動し、保護フォルダを指す古い設定を自動で新しい場所に読み替えます）。
+```bash
+G=/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25; A="$HOME/Library/Application Support/basuke-thumb-hook/automation"
+mkdir -p "$A/outputs" "$A/work"
+rsync -a "$G/outputs/basketball-thumbnail-automation" "$A/outputs/"
+test -d "$G/work/basketball-thumbnail-automation" && rsync -a "$G/work/basketball-thumbnail-automation" "$A/work/"
+grep -rIn "/Documents/" "$A" | grep -v '\.bak-mini8' | head -20   # 0件になるまで、出た行の場所を "$A" の下に直す（承認済みスタイル参照の画像が外にあれば "$A" の下へ写す）
+cd "$A/outputs/basketball-thumbnail-automation" && /usr/bin/python3 -m unittest test_thumbnail_queue 2>&1 | tail -3   # OK
+cd "$HOME/Claude/work/bleague-thumb" && git pull -q origin main && cp mac/thumb-hook/thumb_worker.py "$HOME/Library/Application Support/basuke-thumb-hook/bin/"
+```
+確かめ方：次の通知（記事の公開）の後、`worker.log` に「Operation not permitted」が出ず、「新規0件」か「完成」と出ること。
+
 ## B. 木村さんの操作（最終版）
 
 Mac mini の「ターミナル」を開き、下の枠を**上から順に1つずつ**貼って Enter を押します。合計15分ほど。
