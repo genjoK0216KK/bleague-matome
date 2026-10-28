@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-29",
+  "status": "pending",
+  "article_key": "article-results-one-next-20261029",
+  "games": [
+    {
+      "game_id": "507299",
+      "season": "2026-27",
+      "competition": "B1",
+      "starts_at": "2026-10-29T19:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507299",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "東京U",
+      "home_full": "東京ユナイテッドバスケットボールクラブ",
+      "home_id": "2725",
+      "home_score": null,
+      "away": "静岡",
+      "away_full": "ベルテックス静岡",
+      "away_id": "1637",
+      "away_score": null
+    }
+  ],
+  "individual_candidates": [],
+  "schedule_complete": {
+    "BP": true,
+    "B1": true,
+    "BN": true
+  },
+  "sources": [
+    "https://www.bleague.jp/schedule/?tab=1&year=2026&mon=10&day=29",
+    "https://www.bleague.jp/schedule/?tab=2&year=2026&mon=10&day=29",
+    "https://www.bleague.jp/schedule/?tab=3&year=2026&mon=10&day=29"
+  ],
+  "errors": [],
+  "lineups": {},
+  "game_day_rankings": {
+    "date": "2026-10-29",
+    "metric": "EFF",
+    "aggregation": "game_total",
+    "leagues": {
+      "B1": {
+        "error": "全試合の公式記録確定待ち"
+      }
+    }
+  }
+}
