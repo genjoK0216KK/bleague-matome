@@ -333,7 +333,7 @@ class Workflow(unittest.TestCase):
         self.assertLess(text.index('3リーグ日付記事を更新'), text.index('自動生成サムネを取り込み'))
         self.assertEqual(len(re.findall(r'- cron:', text)), 4)
         config = json.loads((Path(__file__).resolve().parents[1] / ta.CONFIG).read_text())
-        self.assertIs(config['enabled'], False)                       # 本人確認までは無効
+        self.assertIsInstance(config['enabled'], bool)                # 10/29 本人OKで有効化（止める時は false）
 
 
 
