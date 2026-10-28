@@ -296,6 +296,17 @@ def _article_day(article):
     return datetime.strptime(article['date'], '%Y.%m.%d').date()
 
 
+def article_thumb(article):
+    """トップに出す記事の画像 (src, 幅, 高さ)。本人 10/29「サムネがトップに載ってないとインパクトない」。
+    自動生成サムネ（承認済みの絵柄・本文と同じ版）を優先し、無ければ記事のサムネ（thumbgen の SVG・480×300）。"""
+    thumb = article.get('thumb') or ''
+    if thumb.startswith('thumbs/auto/'):
+        return thumb, 1280, 720
+    if thumb.startswith('thumb-') and thumb.endswith('.svg') and '/' not in thumb:
+        return thumb, 480, 300
+    return None
+
+
 def lead_article(articles, now):
     """先頭の記事。今日の記事が無ければ最新記事を実日付つきで出す（今日の記事とは書かない）。"""
     own = [a for a in articles if is_own_article(a)]
@@ -307,11 +318,10 @@ def lead_article(articles, now):
     desc = (a.get('desc') or '').strip()
     if len(desc) > LEAD_SUMMARY:
         desc = desc[:LEAD_SUMMARY].rstrip() + '…'
-    # 自動生成サムネ（承認済みの絵柄・本文と同じ版）がある記事だけ画像を出す。無ければ従来どおり文字だけ
-    thumb = a.get('thumb') or ''
+    thumb = article_thumb(a)
     image = ('<a class="lead-thumb" href="' + escape(a['href']) + '" tabindex="-1" aria-hidden="true">'
-             '<img src="' + escape(thumb) + '" alt="" width="1280" height="720"></a>'
-             if thumb.startswith('thumbs/auto/') else '')
+             '<img src="' + escape(thumb[0]) + '" alt="" width="' + str(thumb[1]) + '" height="' + str(thumb[2]) + '"></a>'
+             if thumb else '')
     return ('<article class="lead-article' + (' has-thumb' if image else '') + '">' + image
             + '<p class="lead-label">' + label + '</p>'
             '<h3><a href="' + escape(a['href']) + '">' + escape(a['title']) + '</a></h3>'
@@ -371,8 +381,12 @@ def recent_articles_c(articles, now, skip=1, limit=4):
             '<a class="more" href="articles.html">記事一覧 ›</a></div><ul class="recent-list">')
     for a in own:
         day = _article_day(a)
-        body += ('<li><a href="' + escape(a['href']) + '"><span class="recent-date">' + _jp_date(day)
-                 + '</span>' + escape(a['title']) + '</a></li>')
+        thumb = article_thumb(a)
+        image = ('<img class="recent-thumb" src="' + escape(thumb[0]) + '" alt="" width="' + str(thumb[1])
+                 + '" height="' + str(thumb[2]) + '" loading="lazy">' if thumb else '')
+        body += ('<li><a' + (' class="has-thumb"' if image else '') + ' href="' + escape(a['href']) + '">' + image
+                 + '<span class="recent-text"><span class="recent-date">' + _jp_date(day)
+                 + '</span>' + escape(a['title']) + '</span></a></li>')
     return body + '</ul></section>'
 
 

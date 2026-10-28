@@ -247,7 +247,14 @@ class Listings(unittest.TestCase):
         lead = home_sections.lead_article(items, datetime(2026, 10, 25, 9, 0))
         self.assertIn('class="lead-article has-thumb"', lead)
         self.assertIn('src="thumbs/auto/article-daily-20261025-abc.jpg"', lead)
-        self.assertNotIn('<img', home_sections.lead_article(items[1:], datetime(2026, 10, 25, 9, 0)))
+        # 自動生成サムネが無い記事は、記事のサムネ（SVG）をトップに出す（本人 10/29）
+        svg_lead = home_sections.lead_article(items[1:], datetime(2026, 10, 25, 9, 0))
+        self.assertIn('src="thumb-daily-20261024.svg" alt="" width="480" height="300"', svg_lead)
+        recent = home_sections.recent_articles_c(items, datetime(2026, 10, 25, 9, 0), skip=0)
+        self.assertEqual(recent.count('class="recent-thumb"'), 2)
+        self.assertIn('src="thumbs/auto/article-daily-20261025-abc.jpg"', recent)
+        self.assertIsNone(home_sections.article_thumb(dict(thumb='')))
+        self.assertIsNone(home_sections.article_thumb(dict(thumb='https://example.com/x.svg')))
 
 
 def git(cwd, *args):
