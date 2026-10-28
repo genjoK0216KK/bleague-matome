@@ -660,6 +660,19 @@ class Install(unittest.TestCase):
         self.assertIn('<key>RunAtLoad</key><true/>', plist)
         self.assertIn('<key>KeepAlive</key><true/>', plist)
 
+    def test_automation_avoids_folders_launchd_cannot_read(self):
+        # 10/29 worker.log「Operation not permitted」：launchd の python は ~/Documents を読めない
+        w = load('thumb_worker')
+        old = str(Path.home() / 'Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnail-automation')
+        self.assertEqual(w.automation_dir(old), w.DEFAULT_AUTOMATION)
+        self.assertEqual(w.automation_dir(str(Path.home() / 'Desktop/x')), w.DEFAULT_AUTOMATION)
+        self.assertEqual(w.automation_dir(None), w.DEFAULT_AUTOMATION)
+        self.assertEqual(w.automation_dir('/tmp/auto'), Path('/tmp/auto'))
+        self.assertEqual(w.automation_dir(str(Path.home() / 'Documents2/x')), Path.home() / 'Documents2/x')
+        self.assertTrue(str(w.DEFAULT_AUTOMATION).startswith(str(w.HOME)))
+        self.assertEqual(w.DEFAULT_AUTOMATION.parents[1].name, 'automation')   # 原稿の作業フォルダ（parents[1]/work）も同じ下
+        self.assertNotIn('/Documents/', (HOOK / 'com.genjo.basuke-thumb-hook.plist').read_text())
+
 
 if __name__ == '__main__':
     unittest.main()
