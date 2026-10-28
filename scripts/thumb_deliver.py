@@ -155,10 +155,10 @@ def start_ingest(repo, remote='origin'):
         out = subprocess.run(['gh', 'workflow', 'run', INGEST_WORKFLOW, '--repo', slug, '--ref', 'main'],
                              text=True, capture_output=True)
     except OSError as exc:
-        print(f'取り込みを起動できません（gh が無い）。1時間ごとの取り込みで拾われます: {exc}', file=sys.stderr)
+        print(f'取り込みを起動できません（gh が無い）。次の通常更新（update.yml）か次の送信で拾われます: {exc}', file=sys.stderr)
         return False
     if out.returncode:
-        print('取り込みを起動できません。1時間ごとの取り込みで拾われます: ' + out.stderr.strip()[:200], file=sys.stderr)
+        print('取り込みを起動できません。次の通常更新（update.yml）か次の送信で拾われます: ' + out.stderr.strip()[:200], file=sys.stderr)
         return False
     return True
 

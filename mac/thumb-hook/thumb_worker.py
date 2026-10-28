@@ -48,6 +48,12 @@ def automation_dir(value):
 
 
 AUTOMATION = automation_dir(os.environ.get('BASUKE_THUMB_AUTOMATION'))
+
+# gh は ~/.local/bin にあり、launchd の PATH には無い。無いと送信後の取り込みの起動（gh workflow run）が
+# 黙って失敗する（10/29 ingest_started=false）。plist を読み込み直さずに直せるよう、ここで PATH に足す。
+LOCAL_BIN = str(Path.home() / '.local/bin')
+if LOCAL_BIN not in os.environ.get('PATH', '').split(os.pathsep):
+    os.environ['PATH'] = os.environ.get('PATH', '') + os.pathsep + LOCAL_BIN
 REPO = Path(os.environ.get('BASUKE_THUMB_REPO', str(Path.home() / 'Claude/work/bleague-thumb')))
 CODEX = os.environ.get('BASUKE_THUMB_CODEX', 'codex')
 CONFIG_URL = 'https://raw.githubusercontent.com/genjoK0216KK/bleague-matome/main/data/thumbs/config.json'
@@ -230,6 +236,8 @@ def process_round(status, now=time.time):
     except (subprocess.TimeoutExpired, OSError) as exc:   # 時間切れ・起動できない も送信の失敗として再挑戦に回す
         delivered, detail = False, type(exc).__name__ + ' ' + str(exc)[:200]
     log('送信：' + ('成功 ' if delivered else '失敗 ') + detail)
+    if delivered and (deliver.stderr or '').strip():     # 取り込みを起動できなかった等の注意も残す
+        log('送信の注意：' + deliver.stderr.strip()[-300:])
     blocked = set(status.get('blocked', {}))
     left = len([j for j in pending if str(j.get('id')) not in blocked and str(j.get('id')) not in status.get('done', {})])
     return {'remaining': left, 'delivered': delivered}
