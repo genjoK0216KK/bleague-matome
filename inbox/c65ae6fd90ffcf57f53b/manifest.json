@@ -1,0 +1,79 @@
+{
+  "id": "c65ae6fd90ffcf57f53b",
+  "article_path": "article-daily-20261029.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261029.html",
+  "source_commit": "",
+  "source_blob_sha": "bd636448720eb48b66c79447474d7d024da6d186",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "410ec64da30ae2b9957111333e8c946a8d3183eff7d0864588bce85a61338eb1",
+  "last_observed_blob_sha": "bd636448720eb48b66c79447474d7d024da6d186",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c65ae6fd90ffcf57f53b/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c65ae6fd90ffcf57f53b/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-28T23:12:48.690754+00:00",
+  "creation_event_id": "bb6897390d117f5fcb79",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/c65ae6fd90ffcf57f53b/thumbnail.png",
+  "image_sha256": "e09b464811b2b3bdaea80aa3af0ca6cb1e8ed78a300e7706f4ef938dac90d0af",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "bd636448720eb48b66c79447474d7d024da6d186",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.29 ｜ B.ONE ｜ 19:05開始",
+      "東京U × 静岡",
+      "静岡のEFF更新",
+      "登録選手の今季平均EFFを10/27時点と比較",
+      "試合前の独自分析｜出場・勝敗予測ではありません",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c65ae6fd90ffcf57f53b/source.html",
+        "role": "固定版の本文根拠。HTMLのblob SHAをローカル計算し指定SHAとの一致を確認。記事URLは https://basuke-matome.jp/article-daily-20261029.html 。外部ページは参照していない。",
+        "used_facts": [
+          "2026年10月29日 B.ONE 東京U×静岡、19時05分開始",
+          "静岡の登録選手の今季平均EFFが10/27時点から更新"
+        ],
+        "qualifiers_preserved": [
+          "試合前の独自分析",
+          "登録選手の今季平均EFFの比較",
+          "出場・勝敗を予測しない"
+        ],
+        "omissions": "個人成績の数値、先発・出場確定、未確認の別試合の相手や結果、勝敗予測は画像に入れていない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c65ae6fd90ffcf57f53b/source.txt",
+        "role": "固定版の文章を全文確認し、掲載文字・日時・比較対象・留保をHTMLと照合。本文の根拠はこの2ファイルだけ。"
+      }
+    ],
+    "person_reference": {
+      "used": false,
+      "reason": "特定の選手が主役ではない試合前比較記事のため、ボールとコートのみを描写。人物・顔・手・実在選手の名前・ロゴ・スポンサー文字は画像内にないことを目視確認。",
+      "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "style_reference_usage": "view_imageで確認。黒・ライム、太い和文、インクとブラシの表現だけ参照。参照画像の選手名・数値・日付は不使用。"
+    },
+    "prompt": "Use case: ads-marketing\nAsset type: Japanese basketball editorial thumbnail for バスケまとめ. Generate exactly ONE finished landscape image, approximately 16:9, target 2048x1152 pixels, opaque PNG.\nPrimary request: Create a polished bold hand-ink basketball thumbnail about a pregame comparison of Tokyo United (東京U) vs Shizuoka (静岡) on 2026-10-29. Use only the editorial facts and exact text below.\nStyle reference already inspected in the conversation: B-culver-black-lime-v3.png. Use its visual language ONLY: near-black #151A18 background, electric lime #CCF43B dry-brush diagonal strokes and ink flecks, warm ivory oversized heavy Japanese gothic headline lettering, a single orange basketball illustrated with vigorous black ink and brush texture. No text, dates, scores, names, people, poses, or numeric statistics from the reference may carry over.\nSubject: One illustrated basketball and a few hand-drawn court lines in the right third. This article is not about one named player, so NO PEOPLE, NO FACES, NO HANDS, NO silhouettes, no jersey, no logos or sponsors. The ball is a symbolic still-life, not a depiction of an actual game moment. Do not add directional statistics charts or a victory motif.\nComposition: Strong typographic hierarchy. Keep main text in the left two thirds, ball and sweeping lime brush energy in the right third. Calm near-black area behind all text. Generous safe margins of at least 5%. All characters fully visible, not clipped. No frames, no decorative panels, few elements. Each text string appears exactly once. Footer must be clearly readable. Do not cram.\nExact text, Japanese, with roles:\nSmall upper-left masthead: \"バスケまとめ\"\nSmall line below masthead: \"2026.10.29 ｜ B.ONE ｜ 19:05開始\"\nHuge ivory main matchup headline: \"東京U × 静岡\"\nLarge lime second headline: \"静岡のEFF更新\"\nSmaller ivory explanatory line: \"登録選手の今季平均EFFを10/27時点と比較\"\nClear ivory qualifier line: \"試合前の独自分析｜出場・勝敗予測ではありません\"\nSmall but legible bottom caption: \"イラスト（AI生成）\"\nSmall but legible bottom caption immediately alongside: \"成績をもとにしたイメージ\"\nEditorial safeguards: EFF refers to registered players' season averages, not a predicted game score, not an actual result, not a team aggregate. No players are confirmed to appear. Do not show scores, player names, player numbers, individual EFF values, league-wide records, win/loss predictions, rising performance arrows, or a decisive shot. Render Japanese accurately and use only the exact text specified. No additional wording or watermarks.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generations": 1,
+      "corrections": 0,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a184c9-a0cc-7550-bd6b-080c5f6cc17d/exec-d2777819-9604-417b-ba35-d539e0552e88.png",
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "inspection": "生成ツールに表示された画像全体を目視検品。文字と数値、原稿の留保、人物不在、レイアウトと見切れ、AI表記を確認。PNGヘッダーと全チャンクCRCも検証。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-28T23:14:36.126912+00:00",
+  "publication_approved": false
+}
