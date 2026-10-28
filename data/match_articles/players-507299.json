@@ -307,8 +307,8 @@
       "availability": "unknown",
       "metric": "EFF",
       "aggregation": "average",
-      "average": "2.3",
-      "games": 9,
+      "average": "2.1",
+      "games": 10,
       "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
       "coverage_complete": true
     },
@@ -326,8 +326,8 @@
       "availability": "unknown",
       "metric": "EFF",
       "aggregation": "average",
-      "average": "24.8",
-      "games": 9,
+      "average": "24.3",
+      "games": 10,
       "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
       "coverage_complete": true
     },
@@ -345,8 +345,8 @@
       "availability": "unknown",
       "metric": "EFF",
       "aggregation": "average",
-      "average": "15.2",
-      "games": 9,
+      "average": "15.4",
+      "games": 10,
       "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
       "coverage_complete": true
     },
@@ -364,8 +364,8 @@
       "availability": "unknown",
       "metric": "EFF",
       "aggregation": "average",
-      "average": "17.2",
-      "games": 9,
+      "average": "17.9",
+      "games": 10,
       "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
       "coverage_complete": true
     },
@@ -403,10 +403,10 @@
       "availability": "unknown",
       "metric": "EFF",
       "aggregation": "average",
-      "average": null,
-      "games": null,
-      "stats_source": null,
-      "coverage_complete": false
+      "average": "10.0",
+      "games": 1,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+      "coverage_complete": true
     },
     {
       "player_id": "20018",
@@ -423,7 +423,7 @@
       "metric": "EFF",
       "aggregation": "average",
       "average": "11.7",
-      "games": 9,
+      "games": 10,
       "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
       "coverage_complete": true
     },
@@ -441,8 +441,8 @@
       "availability": "unknown",
       "metric": "EFF",
       "aggregation": "average",
-      "average": "0.7",
-      "games": 7,
+      "average": "1.1",
+      "games": 8,
       "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
       "coverage_complete": true
     },
@@ -461,8 +461,8 @@
       "availability": "unknown",
       "metric": "EFF",
       "aggregation": "average",
-      "average": "-0.9",
-      "games": 9,
+      "average": "0.2",
+      "games": 10,
       "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
       "coverage_complete": true
     },
@@ -499,8 +499,8 @@
       "availability": "unknown",
       "metric": "EFF",
       "aggregation": "average",
-      "average": "5.2",
-      "games": 6,
+      "average": "4.0",
+      "games": 7,
       "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
       "coverage_complete": true
     },
@@ -518,8 +518,8 @@
       "availability": "unknown",
       "metric": "EFF",
       "aggregation": "average",
-      "average": "3.4",
-      "games": 8,
+      "average": "4.4",
+      "games": 9,
       "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
       "coverage_complete": true
     },
@@ -544,5 +544,5 @@
       "coverage_complete": true
     }
   ],
-  "retrieved_at": "2026-10-26T11:36:33.268591+00:00"
+  "retrieved_at": "2026-10-28T01:03:03.728768+00:00"
 }
