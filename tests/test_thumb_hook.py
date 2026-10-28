@@ -673,6 +673,11 @@ class Install(unittest.TestCase):
         self.assertEqual(w.DEFAULT_AUTOMATION.parents[1].name, 'automation')   # 原稿の作業フォルダ（parents[1]/work）も同じ下
         self.assertNotIn('/Documents/', (HOOK / 'com.genjo.basuke-thumb-hook.plist').read_text())
 
+    def test_gh_is_on_path_for_launchd(self):
+        # 10/29 ingest_started=false：launchd の PATH に ~/.local/bin（gh の場所）が無かった
+        w = load('thumb_worker')
+        self.assertIn(w.LOCAL_BIN, os.environ['PATH'].split(os.pathsep))
+
 
 if __name__ == '__main__':
     unittest.main()
