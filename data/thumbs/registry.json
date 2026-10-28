@@ -1,0 +1,76 @@
+{
+ "entries": {
+  "article-daily-20261025.html": {
+   "article_path": "article-daily-20261025.html",
+   "editorial_fingerprint": "6c99f6dcf6cc09ef118717637cc0a3be1e0f396763d077ff2aa2413a87534136",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261025-35cc4e746dee.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261025-35cc4e746dee-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "b6b7904538b5644b6eb3",
+   "image_sha256": "35cc4e746deec0542f6c12ea6f768d0dbaa02e2e2fed4be8700ff49a20222060",
+   "imported_at": "2026-10-28T23:12:43.241277+00:00",
+   "prepared_at": "2026-10-25T10:12:43.370672+00:00",
+   "source_blob_sha": "94dc6934a03252c10ff7cbf1a2105f5a0b87f4ad",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "6c99f6dcf6cc09ef118717637cc0a3be1e0f396763d077ff2aa2413a87534136",
+   "style": "ink-lime-portrait-v3"
+  }
+ },
+ "log": [
+  {
+   "at": "2026-10-28T23:12:43.012283+00:00",
+   "detail": "記事本文がこの画像の版から変わっている",
+   "event": "rejected",
+   "id": "7323c5f3c2556686df0c",
+   "reason": "stale_source"
+  },
+  {
+   "at": "2026-10-28T23:12:43.023566+00:00",
+   "detail": "記事本文がこの画像の版から変わっている",
+   "event": "rejected",
+   "id": "ae8de66420a50e0a2591",
+   "reason": "stale_source"
+  },
+  {
+   "at": "2026-10-28T23:12:43.046775+00:00",
+   "detail": "記事本文がこの画像の版から変わっている",
+   "event": "rejected",
+   "id": "d87a8ec3bf24b1b0559b",
+   "reason": "stale_source"
+  },
+  {
+   "at": "2026-10-28T23:12:43.059193+00:00",
+   "detail": "記事本文がこの画像の版から変わっている",
+   "event": "rejected",
+   "id": "ec1f89cf4982bf75312d",
+   "reason": "stale_source"
+  },
+  {
+   "article": "article-daily-20261025.html",
+   "at": "2026-10-28T23:12:43.241302+00:00",
+   "event": "imported",
+   "id": "b6b7904538b5644b6eb3",
+   "image": "35cc4e746dee"
+  }
+ ],
+ "seen": {
+  "7323c5f3c2556686df0c": "rejected:stale_source",
+  "ae8de66420a50e0a2591": "rejected:stale_source",
+  "b6b7904538b5644b6eb3": "imported",
+  "d87a8ec3bf24b1b0559b": "rejected:stale_source",
+  "ec1f89cf4982bf75312d": "rejected:stale_source"
+ },
+ "version": 1
+}
