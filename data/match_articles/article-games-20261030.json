@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-30",
+  "status": "pending",
+  "article_key": "article-results-one-next-20261030",
+  "games": [
+    {
+      "game_id": "507300",
+      "season": "2026-27",
+      "competition": "B1",
+      "starts_at": "2026-10-30T19:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507300",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "東京U",
+      "home_full": "東京ユナイテッドバスケットボールクラブ",
+      "home_id": "2725",
+      "home_score": null,
+      "away": "静岡",
+      "away_full": "ベルテックス静岡",
+      "away_id": "1637",
+      "away_score": null
+    },
+    {
+      "game_id": "507311",
+      "season": "2026-27",
+      "competition": "B1",
+      "starts_at": "2026-10-30T19:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507311",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "愛媛",
+      "home_full": "愛媛オレンジバイキングス",
+      "home_id": "723",
+      "home_score": null,
+      "away": "香川",
+      "away_full": "香川ファイブアローズ",
+      "away_id": "722",
+      "away_score": null
+    },
+    {
+      "game_id": "507925",
+      "season": "2026-27",
+      "competition": "BN",
+      "starts_at": "2026-10-30T19:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507925",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE NEXT リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "湘南",
+      "home_full": "ウォルガ湘南",
+      "home_id": "2728",
+      "home_score": null,
+      "away": "品川",
+      "away_full": "しながわシティバスケットボールクラブ",
+      "away_id": "748",
+      "away_score": null
+    },
+    {
+      "game_id": "506520",
+      "season": "2026-27",
+      "competition": "BP",
+      "starts_at": "2026-10-30T19:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506520",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "信州",
+      "home_full": "信州ブレイブウォリアーズ",
+      "home_id": "716",
+      "home_score": null,
+      "away": "京都",
+      "away_full": "京都ハンナリーズ",
+      "away_id": "699",
+      "away_score": null
+    },
+    {
+      "game_id": "506519",
+      "season": "2026-27",
+      "competition": "BP",
+      "starts_at": "2026-10-30T19:30:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506519",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "秋田",
+      "home_full": "秋田ノーザンハピネッツ",
+      "home_id": "693",
+      "home_score": null,
+      "away": "A千葉",
+      "away_full": "アルティーリ千葉",
+      "away_id": "2486",
+      "away_score": null
+    },
+    {
+      "game_id": "506521",
+      "season": "2026-27",
+      "competition": "BP",
+      "starts_at": "2026-10-30T19:35:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506521",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "名古屋D",
+      "home_full": "名古屋ダイヤモンドドルフィンズ",
+      "home_id": "729",
+      "home_score": null,
+      "away": "滋賀",
+      "away_full": "滋賀レイクス",
+      "away_id": "698",
+      "away_score": null
+    }
+  ],
+  "individual_candidates": [],
+  "schedule_complete": {
+    "BP": true,
+    "B1": true,
+    "BN": true
+  },
+  "sources": [
+    "https://www.bleague.jp/schedule/?tab=1&year=2026&mon=10&day=30",
+    "https://www.bleague.jp/schedule/?tab=2&year=2026&mon=10&day=30",
+    "https://www.bleague.jp/schedule/?tab=3&year=2026&mon=10&day=30"
+  ],
+  "errors": [],
+  "lineups": {},
+  "game_day_rankings": {
+    "date": "2026-10-30",
+    "metric": "EFF",
+    "aggregation": "game_total",
+    "leagues": {
+      "BP": {
+        "error": "全試合の公式記録確定待ち"
+      },
+      "B1": {
+        "error": "全試合の公式記録確定待ち"
+      },
+      "BN": {
+        "error": "全試合の公式記録確定待ち"
+      }
+    }
+  }
+}
