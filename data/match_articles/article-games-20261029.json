@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "status": "pending",
+  "status": "ready",
   "article_key": "article-results-one-next-20261029",
   "games": [
     {
@@ -9,10 +9,10 @@
       "competition": "B1",
       "starts_at": "2026-10-29T10:05:00+00:00",
       "ended": true,
-      "fixed": false,
+      "fixed": true,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507299",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-      "status": "unconfirmed",
+      "status": "final",
       "home": "東京U",
       "home_full": "東京ユナイテッドバスケットボールクラブ",
       "home_id": "2725",
@@ -1031,7 +1031,7 @@
           "USG": 0
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/507299/103.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/507299/110.json"
     }
   ],
   "individual_candidates": [],
@@ -1282,7 +1282,7 @@
     "aggregation": "game_total",
     "leagues": {
       "B1": {
-        "error": "全試合の公式記録確定待ち"
+        "error": "出場選手の公式ポジションが未確認"
       }
     }
   }
