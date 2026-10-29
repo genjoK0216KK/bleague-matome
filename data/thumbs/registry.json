@@ -80,6 +80,33 @@
    ],
    "stable_fingerprint": "78694fbe8bae061a40aaa753ec356c660b313c09ac1ac5bda5efa67675fa1b7d",
    "style": "ink-lime-portrait-v3"
+  },
+  "article-results-one-next-20261030.html": {
+   "article_path": "article-results-one-next-20261030.html",
+   "editorial_fingerprint": "983014a53849f8493335cbc0e293501b955a0819dab6a7663416322f18d1d0e2",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-results-one-next-20261030-c16911e182d5.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-results-one-next-20261030-c16911e182d5-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "64677ebbbdc4b4827d54",
+   "image_sha256": "c16911e182d5c98983ed65c09eff4827cf8b4f92e5d66fab058bd325f55d4fd7",
+   "imported_at": "2026-10-29T18:40:12.956092+00:00",
+   "prepared_at": "2026-10-29T18:39:51.561651+00:00",
+   "source_blob_sha": "91af9ab326c75cddc0c6e0aee77ef09f3c5a896b",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "983014a53849f8493335cbc0e293501b955a0819dab6a7663416322f18d1d0e2",
+   "style": "ink-lime-portrait-v3"
   }
  },
  "log": [
@@ -145,10 +172,18 @@
    "event": "rejected",
    "id": "44da7637029692ee5a53",
    "reason": "stale_source"
+  },
+  {
+   "article": "article-results-one-next-20261030.html",
+   "at": "2026-10-29T18:40:12.956118+00:00",
+   "event": "imported",
+   "id": "64677ebbbdc4b4827d54",
+   "image": "c16911e182d5"
   }
  ],
  "seen": {
   "44da7637029692ee5a53": "rejected:stale_source",
+  "64677ebbbdc4b4827d54": "imported",
   "7323c5f3c2556686df0c": "rejected:stale_source",
   "ae8de66420a50e0a2591": "rejected:stale_source",
   "b6b7904538b5644b6eb3": "imported",
