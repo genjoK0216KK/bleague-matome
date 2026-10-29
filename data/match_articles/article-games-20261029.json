@@ -1030,8 +1030,7 @@
           "TS": 0,
           "USG": 0
         }
-      ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/507299/110.json"
+      ]
     }
   ],
   "individual_candidates": [],
@@ -1282,7 +1281,282 @@
     "aggregation": "game_total",
     "leagues": {
       "B1": {
-        "error": "出場選手の公式ポジションが未確認"
+        "positions": {
+          "PG": [
+            {
+              "player_id": "51000444",
+              "team_id": "1637",
+              "name": "山本 愛哉",
+              "team": "静岡",
+              "positions": [
+                "PG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507299",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=1637",
+              "game_id": "507299",
+              "formula_value": 10,
+              "pts": 15,
+              "reb": 1,
+              "ast": 5,
+              "eff": 10,
+              "rank": 1
+            },
+            {
+              "player_id": "9365",
+              "team_id": "2725",
+              "name": "田口 暖",
+              "team": "東京U",
+              "positions": [
+                "PG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507299",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2725",
+              "game_id": "507299",
+              "formula_value": 2,
+              "pts": 6,
+              "reb": 1,
+              "ast": 2,
+              "eff": 2,
+              "rank": 2
+            },
+            {
+              "player_id": "10894",
+              "team_id": "1637",
+              "name": "柏倉 哲平",
+              "team": "静岡",
+              "positions": [
+                "PG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507299",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=1637",
+              "game_id": "507299",
+              "formula_value": 2,
+              "pts": 5,
+              "reb": 3,
+              "ast": 2,
+              "eff": 2,
+              "rank": 2
+            }
+          ],
+          "SG": [
+            {
+              "player_id": "51000174",
+              "team_id": "1637",
+              "name": "サイモン 拓海",
+              "team": "静岡",
+              "positions": [
+                "SG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507299",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=1637",
+              "game_id": "507299",
+              "formula_value": 7,
+              "pts": 9,
+              "reb": 1,
+              "ast": 1,
+              "eff": 7,
+              "rank": 1
+            },
+            {
+              "player_id": "15841",
+              "team_id": "2725",
+              "name": "東 宏輝",
+              "team": "東京U",
+              "positions": [
+                "SG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507299",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2725",
+              "game_id": "507299",
+              "formula_value": 3,
+              "pts": 3,
+              "reb": 2,
+              "ast": 2,
+              "eff": 3,
+              "rank": 2
+            },
+            {
+              "player_id": "40138",
+              "team_id": "2725",
+              "name": "川島 蓮",
+              "team": "東京U",
+              "positions": [
+                "SG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507299",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2725",
+              "game_id": "507299",
+              "formula_value": 1,
+              "pts": 7,
+              "reb": 3,
+              "ast": 2,
+              "eff": 1,
+              "rank": 3
+            }
+          ],
+          "SF": [
+            {
+              "player_id": "51000685",
+              "team_id": "1637",
+              "name": "トレダリアス・マカラム",
+              "team": "静岡",
+              "positions": [
+                "SF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507299",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=1637",
+              "game_id": "507299",
+              "formula_value": 25,
+              "pts": 19,
+              "reb": 13,
+              "ast": 1,
+              "eff": 25,
+              "rank": 1
+            },
+            {
+              "player_id": "51000686",
+              "team_id": "1637",
+              "name": "ジェイデン・ガードナー",
+              "team": "静岡",
+              "positions": [
+                "SF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507299",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=1637",
+              "game_id": "507299",
+              "formula_value": 13,
+              "pts": 12,
+              "reb": 7,
+              "ast": 1,
+              "eff": 13,
+              "rank": 2
+            },
+            {
+              "player_id": "20018",
+              "team_id": "1637",
+              "name": "増田 啓介",
+              "team": "静岡",
+              "positions": [
+                "SF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507299",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=1637",
+              "game_id": "507299",
+              "formula_value": 12,
+              "pts": 4,
+              "reb": 5,
+              "ast": 4,
+              "eff": 12,
+              "rank": 3
+            }
+          ],
+          "PF": [
+            {
+              "player_id": "51000100",
+              "team_id": "2725",
+              "name": "マックス・ヒサタケ",
+              "team": "東京U",
+              "positions": [
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507299",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2725",
+              "game_id": "507299",
+              "formula_value": 38,
+              "pts": 23,
+              "reb": 15,
+              "ast": 2,
+              "eff": 38,
+              "rank": 1
+            },
+            {
+              "player_id": "12648",
+              "team_id": "2725",
+              "name": "ジョーダン・フェイゾン",
+              "team": "東京U",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507299",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2725",
+              "game_id": "507299",
+              "formula_value": 31,
+              "pts": 20,
+              "reb": 14,
+              "ast": 6,
+              "eff": 31,
+              "rank": 2
+            },
+            {
+              "player_id": "49709",
+              "team_id": "2725",
+              "name": "ジェイディエル・コルディリア",
+              "team": "東京U",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507299",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2725",
+              "game_id": "507299",
+              "formula_value": 2,
+              "pts": 2,
+              "reb": 4,
+              "ast": 0,
+              "eff": 2,
+              "rank": 3
+            }
+          ],
+          "C": [
+            {
+              "player_id": "12648",
+              "team_id": "2725",
+              "name": "ジョーダン・フェイゾン",
+              "team": "東京U",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507299",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2725",
+              "game_id": "507299",
+              "formula_value": 31,
+              "pts": 20,
+              "reb": 14,
+              "ast": 6,
+              "eff": 31,
+              "rank": 1
+            },
+            {
+              "player_id": "49709",
+              "team_id": "2725",
+              "name": "ジェイディエル・コルディリア",
+              "team": "東京U",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507299",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2725",
+              "game_id": "507299",
+              "formula_value": 2,
+              "pts": 2,
+              "reb": 4,
+              "ast": 0,
+              "eff": 2,
+              "rank": 2
+            }
+          ]
+        },
+        "eligible_players": 20,
+        "position_retrieved_at": "2026-10-29T13:06:42.221337+00:00",
+        "formula_differences": [],
+        "sources": [
+          "https://www.bleague.jp/club_detail/?TeamID=1637",
+          "https://www.bleague.jp/club_detail/?TeamID=2725",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507299"
+        ]
       }
     }
   }
