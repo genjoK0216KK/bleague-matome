@@ -1065,8 +1065,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "15.4",
-              "games": 10,
+              "average": "14.9",
+              "games": 11,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -1088,8 +1088,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "10.3",
-              "games": 9,
+              "average": "9.7",
+              "games": 12,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -1111,8 +1111,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "24.3",
-              "games": 10,
+              "average": "24.4",
+              "games": 11,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -1135,8 +1135,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "28.2",
-              "games": 9,
+              "average": "29.4",
+              "games": 12,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -1159,8 +1159,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "13.5",
-              "games": 4,
+              "average": "10.7",
+              "games": 7,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -1184,7 +1184,7 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "6.9",
+              "average": "7.0",
               "games": 9,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
@@ -1194,20 +1194,21 @@
           [
             "SG",
             {
-              "player_id": "15841",
-              "name": "東 宏輝",
+              "player_id": "8666",
+              "name": "德川 慎之介",
               "team": "東京U",
               "team_id": "2725",
               "season": "2026-27",
               "competition": "B1",
               "positions": [
-                "SG"
+                "SG",
+                "SF"
               ],
               "position_source": "https://www.bleague.jp/club_detail/?TeamID=2725",
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "7.8",
+              "average": "6.4",
               "games": 9,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
@@ -1230,8 +1231,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "17.9",
-              "games": 10,
+              "average": "17.5",
+              "games": 11,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -1253,8 +1254,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "21.2",
-              "games": 9,
+              "average": "22.8",
+              "games": 12,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -1266,7 +1267,7 @@
           ]
         ]
       ],
-      "retrieved_at": "2026-10-28T01:03:03.728768+00:00",
+      "retrieved_at": "2026-10-29T18:31:15.972208+00:00",
       "sources": [
         "https://www.bleague.jp/club_detail/?TeamID=1637",
         "https://www.bleague.jp/club_detail/?TeamID=2725",
@@ -1550,7 +1551,7 @@
           ]
         },
         "eligible_players": 20,
-        "position_retrieved_at": "2026-10-29T13:06:42.221337+00:00",
+        "position_retrieved_at": "2026-10-29T18:31:15.972208+00:00",
         "formula_differences": [],
         "sources": [
           "https://www.bleague.jp/club_detail/?TeamID=1637",

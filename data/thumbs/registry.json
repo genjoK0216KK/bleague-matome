@@ -138,10 +138,17 @@
    "event": "imported",
    "id": "44da7637029692ee5a53",
    "image": "2ad081b5c92e"
+  },
+  {
+   "at": "2026-10-29T18:37:04.059352+00:00",
+   "detail": "記事本文がこの画像の版から変わっている",
+   "event": "rejected",
+   "id": "44da7637029692ee5a53",
+   "reason": "stale_source"
   }
  ],
  "seen": {
-  "44da7637029692ee5a53": "imported",
+  "44da7637029692ee5a53": "rejected:stale_source",
   "7323c5f3c2556686df0c": "rejected:stale_source",
   "ae8de66420a50e0a2591": "rejected:stale_source",
   "b6b7904538b5644b6eb3": "imported",
