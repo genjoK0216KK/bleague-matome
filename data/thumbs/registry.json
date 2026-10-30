@@ -280,6 +280,34 @@
    "style": "ink-lime-portrait-v3",
    "title": "10/28 試合なし"
   },
+  "article-games-20261029.html": {
+   "article_path": "article-games-20261029.html",
+   "editorial_fingerprint": "021bf558f73207671e1404317ed134675e26fe25b611ae92099c4b5bf1a35c92",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-games-20261029-9f2ce3c7a128.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-games-20261029-9f2ce3c7a128-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "6e14b01b2117b3d326c8",
+   "image_sha256": "9f2ce3c7a1286b6be3775f6276bb9cf80bb798ebfb25c2fbde322f0cc28bb9a8",
+   "imported_at": "2026-10-30T11:38:22.016528+00:00",
+   "prepared_at": "2026-10-30T11:35:00.583625+00:00",
+   "source_blob_sha": "e209866d4ba632329e0c5f0181320407aa793817",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "d69c2c6f56f1d02970fe70a90844cd12bc242f7a1882b0596f2e8d7a88af1df7",
+   "style": "ink-lime-portrait-v3",
+   "title": "10/29 試合結果・当日のEFF"
+  },
   "article-games-20261030.html": {
    "article_path": "article-games-20261030.html",
    "editorial_fingerprint": "119913befcbf6b2ce74d07716178a7d5ac136f7eb2b84b35e65dc2b76fff038b",
@@ -363,6 +391,34 @@
    "stable_fingerprint": "1a2e1c2b3fda118532a59131143f5e89c32f94d0ba77ebd67e02d7d5309fa093",
    "style": "ink-lime-portrait-v3",
    "title": "10/26 試合結果・当日のEFF"
+  },
+  "article-results-one-next-20261029.html": {
+   "article_path": "article-results-one-next-20261029.html",
+   "editorial_fingerprint": "d69c2c6f56f1d02970fe70a90844cd12bc242f7a1882b0596f2e8d7a88af1df7",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-results-one-next-20261029-c12f8f60f7ea.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-results-one-next-20261029-c12f8f60f7ea-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "2d836f0394de01c7d009",
+   "image_sha256": "c12f8f60f7ea24183e023e4a836db0d923b628c69fba56e1e09069e97a288321",
+   "imported_at": "2026-10-30T11:38:22.168936+00:00",
+   "prepared_at": "2026-10-30T11:37:59.296661+00:00",
+   "source_blob_sha": "4eaa006af0d6684f6174cacad3bbcb0a29ecb77e",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "d69c2c6f56f1d02970fe70a90844cd12bc242f7a1882b0596f2e8d7a88af1df7",
+   "style": "ink-lime-portrait-v3",
+   "title": "10/29 試合結果・当日のEFF"
   },
   "article-results-one-next-20261030.html": {
    "article_path": "article-results-one-next-20261030.html",
@@ -645,12 +701,28 @@
    "event": "imported",
    "id": "b86acc20b06b8f02084d",
    "image": "263186a6a4b8"
+  },
+  {
+   "article": "article-games-20261029.html",
+   "at": "2026-10-30T11:38:22.016563+00:00",
+   "event": "imported",
+   "id": "6e14b01b2117b3d326c8",
+   "image": "9f2ce3c7a128"
+  },
+  {
+   "article": "article-results-one-next-20261029.html",
+   "at": "2026-10-30T11:38:22.168968+00:00",
+   "event": "imported",
+   "id": "2d836f0394de01c7d009",
+   "image": "c12f8f60f7ea"
   }
  ],
  "seen": {
+  "2d836f0394de01c7d009": "imported",
   "3d20be125ac18075c9b0": "imported",
   "44da7637029692ee5a53": "superseded:c39e144583cffda92155",
   "64677ebbbdc4b4827d54": "superseded:b86acc20b06b8f02084d",
+  "6e14b01b2117b3d326c8": "imported",
   "7323c5f3c2556686df0c": "imported",
   "92907f5e3191ad3e0565": "imported",
   "a2b6b2b44b3ab2922589": "imported",
