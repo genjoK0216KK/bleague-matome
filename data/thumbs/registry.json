@@ -54,6 +54,33 @@
    "stable_fingerprint": "410ec64da30ae2b9957111333e8c946a8d3183eff7d0864588bce85a61338eb1",
    "style": "ink-lime-portrait-v3"
   },
+  "article-daily-20261030.html": {
+   "article_path": "article-daily-20261030.html",
+   "editorial_fingerprint": "335bcac724679785afcd18f9655452ac1f08c827d5bea76b8d262b9bb87b8091",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261030-0c3ffa85d3e5.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261030-0c3ffa85d3e5-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "ed5eafb2c5a54d0b60af",
+   "image_sha256": "0c3ffa85d3e5cfc561ff138a1165a2b2541fd66031eae3bd778d8a2e6cf51c14",
+   "imported_at": "2026-10-30T02:09:09.863099+00:00",
+   "prepared_at": "2026-10-30T02:08:49.089406+00:00",
+   "source_blob_sha": "ea5b8192020a38aacb0cbb87c40003acf0bb0697",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "335bcac724679785afcd18f9655452ac1f08c827d5bea76b8d262b9bb87b8091",
+   "style": "ink-lime-portrait-v3"
+  },
   "article-games-20261030.html": {
    "article_path": "article-games-20261030.html",
    "editorial_fingerprint": "78694fbe8bae061a40aaa753ec356c660b313c09ac1ac5bda5efa67675fa1b7d",
@@ -186,6 +213,13 @@
    "event": "rejected",
    "id": "64677ebbbdc4b4827d54",
    "reason": "stale_source"
+  },
+  {
+   "article": "article-daily-20261030.html",
+   "at": "2026-10-30T02:09:09.863126+00:00",
+   "event": "imported",
+   "id": "ed5eafb2c5a54d0b60af",
+   "image": "0c3ffa85d3e5"
   }
  ],
  "seen": {
@@ -196,7 +230,8 @@
   "b6b7904538b5644b6eb3": "imported",
   "c65ae6fd90ffcf57f53b": "rejected:stale_source",
   "d87a8ec3bf24b1b0559b": "rejected:stale_source",
-  "ec1f89cf4982bf75312d": "rejected:stale_source"
+  "ec1f89cf4982bf75312d": "rejected:stale_source",
+  "ed5eafb2c5a54d0b60af": "imported"
  },
  "version": 1
 }
