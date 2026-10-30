@@ -1,0 +1,61 @@
+{
+  "id": "1237ac56ecfe95c7fd0a",
+  "article_path": "article-games-20261030.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261030.html",
+  "source_commit": "",
+  "source_blob_sha": "985d9e4e3787e5f80a3074ed9fcd976c954fa677",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "9a6e4fea5350ee74214b4c322857a09a693deb10556eda762080f429b12545e8",
+  "last_observed_blob_sha": "985d9e4e3787e5f80a3074ed9fcd976c954fa677",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1237ac56ecfe95c7fd0a/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1237ac56ecfe95c7fd0a/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T12:43:54.745732+00:00",
+  "creation_event_id": "514cb158ba6c0b533075",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/1237ac56ecfe95c7fd0a/thumbnail.png",
+  "image_sha256": "f380994eb2863d98f2716edc28e4459cd95d73309433cd70e0e76986741f633a",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "985d9e4e3787e5f80a3074ed9fcd976c954fa677",
+    "text_lines": [
+      "バスケまとめ",
+      "10/30 試合結果",
+      "B.ONE｜終了",
+      "愛媛 76–78 香川",
+      "ほかの試合・当日EFFは",
+      "公式記録確定待ち",
+      "2026/10/30 21:42 JST時点",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1237ac56ecfe95c7fd0a/source.html",
+        "role": "固定版の本文根拠",
+        "verified_blob_sha": "985d9e4e3787e5f80a3074ed9fcd976c954fa677",
+        "evidence": "B.ONE 愛媛76–78香川は終了。他の5試合は開始・公式記録未確定。各試合の状態は2026-10-30 21:42 JST時点。各リーグの当日EFFは全試合の公式記録確定待ち。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1237ac56ecfe95c7fd0a/source.txt",
+        "role": "固定版の本文照合",
+        "evidence": "日付、得点、終了状態、他試合と当日EFFの公式記録確定待ちをHTMLと照合。"
+      }
+    ],
+    "person_reference": {
+      "mode": "no_named_person",
+      "reason": "記事は当日の試合結果と確定待ち状況を扱い、特定選手を主役にしていない。ボールと抽象的なコート線のみで構成。人物、顔、手、実際の試合場面は描いていない。"
+    },
+    "prompt": "Use case: ads-marketing\nAsset type: One finished Japanese basketball news article thumbnail, landscape 16:9, requested 1920 × 1080 PNG.\nCreate a polished bold editorial sports thumbnail for バスケまとめ. Use near-black #151A18 background, electric lime #CCF43B, ivory text, and one orange basketball. Hand-drawn ink and dry-brush texture, assertive thick Japanese gothic typography, sparse composition, high contrast and clean legibility. The approved visual language has large white Japanese headlines, lime brush accents and expressive black ink illustration.\nComposition: left roughly 70% holds clearly ordered text with generous safe margins. Right roughly 30% holds one large hand-drawn orange basketball and minimal abstract court-line arcs, framed by a restrained diagonal lime brush stroke. No people, no faces, no hands, no team marks or sponsor logos. Ball illustration is symbolic, not an actual game scene. Keep texture away from small lettering.\nText, exactly as follows, in this visual reading order:\nTop small masthead: \"バスケまとめ\"\nLarge headline: \"10/30 試合結果\"\nSmall tag above the score: \"B.ONE｜終了\"\nMain score in very large bold text, keeping teams and scores clearly paired: \"愛媛 76–78 香川\"\nTwo clearly readable qualifier lines below the score: \"ほかの試合・当日EFFは\" and \"公式記録確定待ち\"\nSmall as-of line: \"2026/10/30 21:42 JST時点\"\nAt the bottom, two readable disclosure phrases: \"イラスト（AI生成）\" and \"成績をもとにしたイメージ\"\nUse lime prominently for the score or brush highlight; ivory for main headline; the pending-record qualifier must remain visually prominent and not be hidden as fine print.\nAccuracy: only the Ehime 76 versus Kagawa 78 score is reported finished. Other games' official records and all daily EFF rankings are still pending in the fixed source. Do not imply that all games or rankings are finalized. Do not add players, rankings, EFF numbers, fictional game moments, victory claims, old dates, other teams, or any additional text. Carefully render every Japanese character, team name, date, and digit. Keep all text safely within the canvas with no clipping. Produce exactly one complete image.",
+    "generator": "image_gen__imagegen（内蔵画像生成、初回生成1回、修正0回）",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T12:46:18.108619+00:00",
+  "publication_approved": false
+}
