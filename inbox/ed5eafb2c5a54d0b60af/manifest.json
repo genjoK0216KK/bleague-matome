@@ -1,0 +1,85 @@
+{
+  "id": "ed5eafb2c5a54d0b60af",
+  "article_path": "article-daily-20261030.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261030.html",
+  "source_commit": "",
+  "source_blob_sha": "ea5b8192020a38aacb0cbb87c40003acf0bb0697",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "335bcac724679785afcd18f9655452ac1f08c827d5bea76b8d262b9bb87b8091",
+  "last_observed_blob_sha": "ea5b8192020a38aacb0cbb87c40003acf0bb0697",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ed5eafb2c5a54d0b60af/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ed5eafb2c5a54d0b60af/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T02:06:40.958272+00:00",
+  "creation_event_id": "1ce2341be898a450cb19",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/ed5eafb2c5a54d0b60af/thumbnail.png",
+  "image_sha256": "0c3ffa85d3e5cfc561ff138a1165a2b2541fd66031eae3bd778d8a2e6cf51c14",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "ea5b8192020a38aacb0cbb87c40003acf0bb0697",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.30",
+      "10/29 第1戦｜東京U vs 静岡",
+      "東京U 競り勝ち",
+      "69–68",
+      "第2戦 10/30 19:05予定",
+      "出場メンバーは未確認",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ed5eafb2c5a54d0b60af/source.html",
+        "role": "fixed_article_body",
+        "article_url": "https://basuke-matome.jp/article-daily-20261030.html",
+        "blob_sha_verified": true,
+        "evidence": [
+          "10月29日の第1戦は、東京Uが69対68で静岡に勝ちました。",
+          "第2戦は、19時05分に開始します。会場は江戸川区スポーツセンターです。当日のスタメンや最新のインジュアリーリストは未確認です。"
+        ],
+        "qualifiers": "原稿は第1戦のスコアを共同通信配信記事で確認したと記載。B.LEAGUE試合詳細・インジュアリーリストを開けていないとの留保を保持。画像は第1戦の結果と第2戦の予定を分け、出場メンバー未確認を明記し、第2戦の勝敗・出場・決勝シュートを断定しない。外部出典の再閲覧は行わず、この固定原稿のみを本文根拠とした。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ed5eafb2c5a54d0b60af/source.txt",
+        "role": "fixed_article_text",
+        "evidence": [
+          "第2戦は今夜10月30日19時05分から、同じ江戸川区スポーツセンターで行われます。",
+          "出場メンバーや結果を保証するものではありません。"
+        ]
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "approved_style_only",
+        "inspection": "view_imageで確認。黒×ライム、太字見出し、手描きインク・ブラシの表現だけを参照。参考画像の選手・成績・日付は使用しない。"
+      }
+    ],
+    "person_reference": {
+      "mode": "no_named_person",
+      "reason": "原稿の主役は東京U対静岡の試合結果と第2戦予定。ボールと抽象的なコートのみを描き、人物・顔・手・特定のプレー場面は描いていない。",
+      "official_profile": null
+    },
+    "prompt": "Create ONE finished editorial basketball-news thumbnail in PNG format, landscape 16:9, ideally 1600×900 pixels (at least 1000 pixels wide). Use case: ads-marketing / Japanese sports editorial thumbnail.\n\nVisual style: dark almost-black #151A18 background, acid lime #CCF43B accents, warm ivory typography, bold hand-drawn ink and dry-brush textures, few elements. Match the visual language of the approved black-and-lime basketball illustration previously viewed: extremely bold Japanese headlines, oversized brush-style numerals, energetic diagonal lime brush strokes, high contrast. Do not copy any player, player name, statistic, score, or date from that reference.\n\nSubject: a single orange basketball rendered as an expressive hand-drawn ink illustration on the right, with a few abstract court lines. No human figures, faces, hands, uniforms, logos, sponsors, or photorealism. This is a symbolic illustration, not a depiction of any actual shot or match moment.\n\nLayout: left two-thirds is a strong clean typographic area; right third is the orange ball and restrained diagonal lime brush strokes. Keep every character legible and inside generous 60px safe margins. Keep texture behind letters minimal. Strong hierarchy: the main Japanese headline and score dominate; the second-game information is distinctly secondary, and the disclosure remains readable along the bottom.\n\nRender ONLY the following exact strings; no other text:\nTop-left small masthead: \"バスケまとめ\"\nTop-right small date: \"2026.10.30\"\nAbove headline medium context line: \"10/29 第1戦｜東京U vs 静岡\"\nMain very large ivory Japanese headline: \"東京U 競り勝ち\"\nBelow the headline, very large lime brush-style score, largest numeral element: \"69–68\"\nBelow score, medium ivory secondary line: \"第2戦 10/30 19:05予定\"\nBelow the secondary line, smaller readable ivory caveat: \"出場メンバーは未確認\"\nBottom-left readable disclosure: \"イラスト（AI生成）\"\nBeside it at bottom, readable disclosure: \"成績をもとにしたイメージ\"\n\nEditorial grounding: the only article sources are the supplied fixed source.html and source.txt. The first game on October 29 ended Tokyo United 69, Shizuoka 68. The second game is scheduled for October 30 at 19:05. Its result and player availability are not known. The source says the first-game score was checked from Kyodo syndicated reports, while the league game detail and injury list were not opened. Do not imply official league verification, guaranteed starters, a second-game score, a predicted winner, or a confirmed game-winning shot. Do not add EFF numbers or named players. Render the score in the correct order TokyoU 69, Shizuoka 68. No watermarks other than the exact required AI disclosure. No extra borders, icons, panels, or decorative text. Deliver one polished complete image.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built_in",
+      "generation_count": 1,
+      "revision_count": 0,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "sha256": "0c3ffa85d3e5cfc561ff138a1165a2b2541fd66031eae3bd778d8a2e6cf51c14",
+      "post_processing": "none"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T02:08:49.089406+00:00",
+  "publication_approved": false
+}
