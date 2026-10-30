@@ -3012,10 +3012,10 @@
       "competition": "BP",
       "starts_at": "2026-10-30T10:05:00+00:00",
       "ended": true,
-      "fixed": false,
+      "fixed": true,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506520",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
-      "status": "unconfirmed",
+      "status": "final",
       "home": "信州",
       "home_full": "信州ブレイブウォリアーズ",
       "home_id": "716",
@@ -3949,8 +3949,7 @@
           "TS": 1,
           "USG": 8.860569197058227
         }
-      ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506520/134.json"
+      ]
     },
     {
       "game_id": "506519",
@@ -3984,8 +3983,8 @@
           "PlayerNameJ": "トロイ・マーフィージュニア",
           "PlayerNameE": "Troy Murphy Jr.",
           "StartingFlg": 1,
-          "PlayTime": "20:23",
-          "PlayingFlg": true,
+          "PlayTime": "20:36",
+          "PlayingFlg": false,
           "Point": 9,
           "PT3M": 0,
           "PT3A": 3,
@@ -4007,11 +4006,11 @@
           "PT2IN": 4,
           "PT2ND": 0,
           "EFF": 9,
-          "PLUSMINUS": -6,
+          "PLUSMINUS": -8,
           "AST_TO": 1,
           "EFG": 0.4,
           "TS": 0.4310344827586207,
-          "USG": 26.261571217868887
+          "USG": 25.974733668159153
         },
         {
           "Code": 546,
@@ -4026,8 +4025,8 @@
           "PlayerNameJ": "田口 成浩",
           "PlayerNameE": "Shigehiro Taguchi",
           "StartingFlg": 1,
-          "PlayTime": "16:03",
-          "PlayingFlg": false,
+          "PlayTime": "15:50",
+          "PlayingFlg": true,
           "Point": 6,
           "PT3M": 2,
           "PT3A": 3,
@@ -4049,11 +4048,11 @@
           "PT2IN": 0,
           "PT2ND": 0,
           "EFF": 4,
-          "PLUSMINUS": 0,
+          "PLUSMINUS": 2,
           "AST_TO": 0,
           "EFG": 1,
           "TS": 1,
-          "USG": 8.738021022707871
+          "USG": 8.862192900398986
         },
         {
           "Code": 546,
@@ -4488,8 +4487,8 @@
           "PlayerNameJ": "木田 貴明",
           "PlayerNameE": "Takaaki Kida",
           "StartingFlg": null,
-          "PlayTime": "19:38",
-          "PlayingFlg": false,
+          "PlayTime": "19:54",
+          "PlayingFlg": true,
           "Point": 18,
           "PT3M": 2,
           "PT3A": 3,
@@ -4511,11 +4510,11 @@
           "PT2IN": 4,
           "PT2ND": 0,
           "EFF": 16,
-          "PLUSMINUS": -2,
+          "PLUSMINUS": 0,
           "AST_TO": 0,
           "EFG": 0.8,
           "TS": 0.8272058823529411,
-          "USG": 25.819934650787484
+          "USG": 25.481139974989965
         },
         {
           "Code": 546,
@@ -4557,7 +4556,7 @@
           "AST_TO": 3,
           "EFG": 0.4444444444444444,
           "TS": 0.4444444444444444,
-          "USG": 16.637939216439072
+          "USG": 16.641267469933055
         },
         {
           "Code": 546,
@@ -4599,7 +4598,7 @@
           "AST_TO": 2.5,
           "EFG": 0.42857142857142855,
           "TS": 0.4704301075268817,
-          "USG": 25.018739147236143
+          "USG": 25.023743896015343
         },
         {
           "Code": 546,
@@ -4641,7 +4640,7 @@
           "AST_TO": 1.3333333333333333,
           "EFG": 0.55,
           "TS": 0.55,
-          "USG": 34.77123928887397
+          "USG": 34.778194927859545
         },
         {
           "Code": 546,
@@ -4683,7 +4682,7 @@
           "AST_TO": 0,
           "EFG": 0.5,
           "TS": 0.5,
-          "USG": 11.21500568808013
+          "USG": 11.21724913790771
         },
         {
           "Code": 546,
@@ -4725,7 +4724,7 @@
           "AST_TO": 5,
           "EFG": 0.5,
           "TS": 0.5,
-          "USG": 9.008923192577221
+          "USG": 9.01072533764475
         },
         {
           "Code": 546,
@@ -4782,7 +4781,7 @@
           "PlayerNameJ": "安藤 誓哉",
           "PlayerNameE": "Seiya Ando",
           "StartingFlg": null,
-          "PlayTime": "15:14",
+          "PlayTime": "15:01",
           "PlayingFlg": true,
           "Point": 11,
           "PT3M": 3,
@@ -4805,11 +4804,11 @@
           "PT2IN": 1,
           "PT2ND": 0,
           "EFF": 11,
-          "PLUSMINUS": 4,
+          "PLUSMINUS": 2,
           "AST_TO": 2,
           "EFG": 0.6875,
           "TS": 0.6875,
-          "USG": 27.522220227311728
+          "USG": 27.940366565191393
         },
         {
           "Code": 546,
@@ -4851,7 +4850,7 @@
           "AST_TO": 5,
           "EFG": 0.5,
           "TS": 0.6443298969072165,
-          "USG": 16.88887500484495
+          "USG": 16.892253455536057
         },
         {
           "Code": 546,
@@ -4893,7 +4892,7 @@
           "AST_TO": 0,
           "EFG": 0,
           "TS": 0.5681818181818182,
-          "USG": 5.503130531596165
+          "USG": 5.504231377871739
         },
         {
           "Code": 546,
@@ -4935,10 +4934,10 @@
           "AST_TO": 0,
           "EFG": 0.5833333333333334,
           "TS": 0.6211180124223602,
-          "USG": 24.76202294406467
+          "USG": 24.766976339332537
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506519/69.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506519/73.json"
     },
     {
       "game_id": "506521",
