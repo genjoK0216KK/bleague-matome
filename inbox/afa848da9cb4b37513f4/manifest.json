@@ -1,0 +1,64 @@
+{
+  "id": "afa848da9cb4b37513f4",
+  "article_path": "article-games-20261027.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261027.html",
+  "source_commit": "",
+  "source_blob_sha": "8ac09cb15977a874a999db6a799fc9a71a218461",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "18d78da8d6859e21a111956f349477cc0e6886edc3dc644f4a3182a2aebd7e0e",
+  "last_observed_blob_sha": "8ac09cb15977a874a999db6a799fc9a71a218461",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/afa848da9cb4b37513f4/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/afa848da9cb4b37513f4/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T10:07:32.522378+00:00",
+  "creation_event_id": "b123b4dfdcdafee47927",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/afa848da9cb4b37513f4/thumbnail.png",
+  "image_sha256": "239bd053d541bb14471d8c7aef083a3a6cda6702ff94b867d4d452c2d718b604",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "8ac09cb15977a874a999db6a799fc9a71a218461",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.27",
+      "試合なし",
+      "B.PREMIER・B.ONE・B.NEXT",
+      "資料取得：2026-10-28 18:27 JST",
+      "公式記録・発表は訂正される場合があります",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/afa848da9cb4b37513f4/source.html",
+        "role": "固定HTML原稿。本文根拠。Git blob形式のSHA-1をローカル計算し指定値との一致を確認。",
+        "facts": [
+          "試合日 2026.10.27",
+          "この日試合なし：B.PREMIER・B.ONE・B.NEXT",
+          "資料取得 2026-10-28 18:27〜2026-10-28 18:27 JST",
+          "公式記録・発表は訂正される場合があります。"
+        ],
+        "qualifier_note": "画像の対象を3リーグに限定し、資料取得時刻と訂正可能性を明記。人物・出場予定を示していないため、選手の出場を保証する表現はない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/afa848da9cb4b37513f4/source.txt",
+        "role": "固定テキスト原稿。HTML本文と一致する日付・対象リーグ・試合なし・資料取得時刻・留保を確認。"
+      }
+    ],
+    "person_reference": {
+      "used": false,
+      "reason": "特定人物が主役ではない試合日程記事のため、人物・顔・手は描かず、ボールと空のコートによる象徴的イラストを使用。実際の試合場面は描いていない。"
+    },
+    "prompt": "Use case: ads-marketing.\nCreate exactly ONE finished Japanese editorial basketball article thumbnail, PNG, landscape 16:9, target 1536 x 864 pixels (width at least 1000 pixels). All lettering and artwork are to be rendered together by image generation.\n\nARTICLE FACTS — use only these: The fixed article's date is 2026.10.27. There are no games on that day for B.PREMIER, B.ONE, and B.NEXT. The data were retrieved on 2026-10-28 at 18:27 JST. Official records and announcements may be corrected. No named athlete, score, statistic, winner, cancellation, postponement or actual game scene is supported.\n\nSTYLE: Approved バスケまとめ visual style: deep charcoal black #151A18 background, electric lime #CCF43B dry-brush strokes, warm off-white extremely bold Japanese sans-serif headline, hand-drawn ink and coarse brush illustration, energetic but uncluttered, limited elements. Strong editorial contrast and crisp readable Japanese type. Do not reproduce any names, numbers, players, team marks or scores from previous thumbnails.\n\nCOMPOSITION: Wide rectangle, safe 55px outer margins. Left two-thirds hold a powerful typographic block: the small publication label at top, the date in large off-white type below, then the HUGE dominant lime headline 試合なし (one line). Below the headline, the three league names on one readable off-white line. Right third: one orange basketball resting on an empty abstract court, drawn with bold black ink hatching and dry-brush texture; a restrained diagonal lime brush accent behind it, a few off-white court lines. This is symbolic illustration, not a depiction of an actual event. No people, faces, hands, players, uniforms, logos, sponsors or photographic imagery. Preserve generous negative space and no overlap between words and illustration.\n\nTEXT — render these exact strings, with no spelling changes, no extra labels and no made-up text:\nTop small: \"バスケまとめ\"\nDate large: \"2026.10.27\"\nMain headline largest: \"試合なし\"\nLeagues below: \"B.PREMIER・B.ONE・B.NEXT\"\nBottom information line: \"資料取得：2026-10-28 18:27 JST\"\nBottom qualifier line: \"公式記録・発表は訂正される場合があります\"\nBottom credit line, two phrases separated by a generous gap: \"イラスト（AI生成）\" and \"成績をもとにしたイメージ\"\n\nKeep the three bottom information/qualifier/credit lines high-contrast off-white, approximately 26–30px at 1536px width, clean horizontal type with ample spacing. All text must remain within the canvas and be clearly readable. Do not suggest that all basketball everywhere has no games; make the three named leagues prominent. Avoid calendars with fabricated weekday cells, scoreboards, decorative numerical marks, cancellation crosses, watermarks, or extra text.",
+    "generator": "built-in image_gen.imagegen; single generation; no revision; no API or CLI fallback",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T10:19:59.224281+00:00",
+  "publication_approved": false
+}

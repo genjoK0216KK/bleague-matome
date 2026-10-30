@@ -1,0 +1,80 @@
+{
+  "id": "d4cd88fa21bd64b494f0",
+  "article_path": "article-daily-20261027.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261027.html",
+  "source_commit": "",
+  "source_blob_sha": "677f35ae5ea0223a56fd5dfb91717f4cd27acc61",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "95369f755d0d07147ced5428c9cbf848e9d018edd2faf1382277131562271643",
+  "last_observed_blob_sha": "677f35ae5ea0223a56fd5dfb91717f4cd27acc61",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d4cd88fa21bd64b494f0/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d4cd88fa21bd64b494f0/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T10:07:31.682295+00:00",
+  "creation_event_id": "3de4df5710e3a91c6ac1",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/d4cd88fa21bd64b494f0/thumbnail.png",
+  "image_sha256": "14edbdea7833a342b5215eae3bfd639e28b6ee8776af78887b5fe02c499a5c3d",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "677f35ae5ea0223a56fd5dfb91717f4cd27acc61",
+    "text_lines": [
+      "バスケまとめ｜2026.10.27",
+      "10/29・30｜B.ONE",
+      "東京U × 静岡",
+      "登録選手を比較",
+      "今季平均EFF",
+      "データ：10/27 08:10ごろ",
+      "出場・勝敗の予測ではありません",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d4cd88fa21bd64b494f0/source.html",
+        "role": "固定HTML原稿。本文の根拠。Git blob形式のSHA-1をローカル計算して指定SHAとの一致を確認。gitコマンドは使用していない。",
+        "evidence": [
+          "10月29日・30日のB.ONE「東京U vs 静岡」",
+          "比べるのは登録選手のデータです。出場や勝敗の予測ではありません。",
+          "表のEFFは10/27 08:10ごろの値です。"
+        ],
+        "qualifiers_preserved": "登録選手と今季平均EFFの比較、データ時点、出場・勝敗の予測ではない旨を画像上で明記。未確認の10/28日程、最新順位、インジュアリーリスト、先発・出場状況は画像上で断定していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d4cd88fa21bd64b494f0/source.txt",
+        "role": "固定文章原稿。HTML本文と照合。関連記事・外部ページは本文の根拠に使っていない。"
+      }
+    ],
+    "person_reference": {
+      "mode": "no_named_person",
+      "reason": "特定選手が主役ではなく両クラブ登録選手のEFF比較記事。人物を描かず、ボールと抽象的なコート線を使用。",
+      "visual_check": "人物・顔・手・ユニフォーム・チームロゴ・スポンサー文字なし。確定した実際の試合場面の描写なし。"
+    },
+    "prompt": "Use case: ads-marketing / illustrated Japanese editorial sports thumbnail.\nCreate exactly ONE finished landscape PNG thumbnail for the Japanese site バスケまとめ. Target canvas 1792 × 1008 pixels, 16:9, opaque background. This is an editorial illustration and typography asset, not a photograph.\n\nContent grounding: the supplied frozen article compares Tokyo United and Shizuoka registered players using season-average EFF data as of approximately 2026-10-27 08:10. Their scheduled B.ONE matchup is on October 29 and 30. This is NOT a prediction of player appearances or match results. Do not invent scores or statistics. Do not depict any person.\n\nVisual style: approved house style uses nearly black #151A18, vivid lime #CCF43B, warm off-white lettering, expressive hand-drawn black ink and dry-brush strokes, strong thick Japanese gothic headlines, very few elements. Use those qualities. A single large orange basketball rendered as a bold hand-inked illustration sits in the right third, with a few restrained court arcs and diagonal lime brush marks behind it. No human figures, faces, hands, silhouettes, jerseys, sponsor words or team logos. Plenty of breathing room. This is a flat editorial poster, no frame, no mockup.\n\nComposition and hierarchy: a small brand and article date at the upper left; a small lime date/league ribbon below it; huge off-white matchup headline across the left and center; large readable two-line Japanese subheading; a modest source timestamp below. The basketball must not overlap any text. Put the nonprediction qualifier on a clear high-contrast line above the footer. Put the two required AI disclosure labels along the bottom with a generous safe margin. All text must fit inside the canvas with at least 60 px side margins and 45 px top/bottom margins. Keep Japanese letterforms clean, precisely spelled, and readable; place brush texture around the type, not across its strokes.\n\nRender exactly these text strings, and no other text:\n1. Small header: \"バスケまとめ｜2026.10.27\"\n2. Date/league ribbon: \"10/29・30｜B.ONE\"\n3. Largest main headline: \"東京U × 静岡\"\n4. Bold secondary headline: \"登録選手を比較\"\n5. Bold lime emphasis line: \"今季平均EFF\"\n6. Source timestamp, smaller but legible: \"データ：10/27 08:10ごろ\"\n7. Qualifier, clearly legible: \"出場・勝敗の予測ではありません\"\n8. Bottom-left disclosure: \"イラスト（AI生成）\"\n9. Bottom disclosure after a visible space: \"成績をもとにしたイメージ\"\n\nImportant: This is a new illustration. Do not import the player, name, score, or date from any style example. Do not add a score, probability, ranking, win/loss claim, named athlete or actual game scene. Preserve the exact Japanese wording, dates, colon and EFF letters. Make one polished, ready-to-use thumbnail only.",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "revision_calls": 0,
+      "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "style_reference_checked_with": "view_image",
+      "original_output": "/Users/genjo/.codex/generated_images/01a18c49-f263-70d2-ad16-f712dc106054/exec-157cdc61-8227-4376-88b6-f774bfda111d.png",
+      "saved_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d4cd88fa21bd64b494f0/generated.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "14edbdea7833a342b5215eae3bfd639e28b6ee8776af78887b5fe02c499a5c3d",
+      "postprocessing": "なし。視覚検品合格後に生成PNGをバイト同一でコピー。",
+      "visual_inspection": "生成結果およびview_imageのoriginal表示で全体を目視。文言・日付・データ時点・留保・文字の見切れなし・AI表記を確認。",
+      "ready_executed": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T10:12:53.767499+00:00",
+  "publication_approved": false
+}

@@ -1,0 +1,74 @@
+{
+  "id": "92907f5e3191ad3e0565",
+  "article_path": "article-daily-20261026.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261026.html",
+  "source_commit": "",
+  "source_blob_sha": "5ec908f7c8fcbe78b5a04032f9141feea8ec61c1",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "64012691ffcf63f1c5aaf3da856677623eafe4d9c0aa2c1bbb5242688780e1c5",
+  "last_observed_blob_sha": "5ec908f7c8fcbe78b5a04032f9141feea8ec61c1",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/92907f5e3191ad3e0565/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/92907f5e3191ad3e0565/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T10:07:31.406262+00:00",
+  "creation_event_id": "64ecae33e19c94cf65fb",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/92907f5e3191ad3e0565/thumbnail.png",
+  "image_sha256": "73d175421b0bbe947d91d6f434e79f471033c61ec1484214bdf4b00da4d0516d",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "5ec908f7c8fcbe78b5a04032f9141feea8ec61c1",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.26｜B.PREMIER 9試合予定",
+      "注目の2カード",
+      "京都 vs 秋田",
+      "島根 vs 仙台",
+      "今季平均EFFに基づく試合前比較",
+      "出場・結果は未確認",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/92907f5e3191ad3e0565/source.html",
+        "role": "fixed_article_html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261026.html",
+        "evidence": "2026年10月26日のB.PREMIERは9試合予定。京都—秋田・島根—仙台は両チームに今季平均EFFのポジション別ベスト5／サブ5ランクイン選手がいる2カード。試合前比較であり出場・結果は未確認。",
+        "verification": "HTMLのGit blob形式SHA-1をgitコマンドを使わず計算し、指定source_blob_shaとの一致を確認。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/92907f5e3191ad3e0565/source.txt",
+        "role": "fixed_article_text",
+        "evidence": "本文・Q&A・末尾の留保を照合。今季平均EFFによる見どころ比較であり、出場確定や勝敗の予測・保証ではない。現行の結果として表現しない。"
+      }
+    ],
+    "person_reference": {
+      "mode": "no_named_person",
+      "reason": "記事の中心は複数試合の比較であり、特定の1選手を主役にしない。ボールと抽象的なコートのみを描写。人物・顔・手・ユニフォーム・チームロゴ・スポンサー文字がないことを画像で確認。"
+    },
+    "prompt": "Use case: ads-marketing.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, wide 16:9 landscape, high resolution 1920x1080 PNG if possible (at least 1000 pixels wide). Opaque background. This is a complete designed bitmap with all Japanese text integrated, not a mockup.\n\nPurpose and source-bound content: A fixed article dated 2026-10-26 previews nine scheduled B.PREMIER games and compares two interesting matchups, Kyoto vs Akita and Shimane vs Sendai, based on season-average EFF. This is pregame comparison only; player participation and game results are unconfirmed. Do not imply any actual match result, score, guaranteed appearance, prediction or decisive shot.\n\nVisual style: premium bold Japanese sports editorial, dark near-black #151A18 and electric lime #CCF43B with warm ivory letters and a restrained orange basketball accent. Heavy hand-drawn ink and dry-brush textures. Few strong elements, clean readable hierarchy, generous margins. Inspired by an approved design with huge cream Japanese title, lime brush numerals, black field and diagonal lime brush marks, but do not carry over ANY names, scores, dates or portraits from that design.\n\nComposition: On the left and center, a powerful headline and two large matchup rows occupying approximately two thirds of the canvas. On the right, one large expressive hand-inked orange basketball above an abstract partial basketball court in cream/lime linework. Diagonal brush marks add energy behind the ball while all copy sits on a calm dark area. This is a symbolic illustration only, with no human beings, faces, silhouettes, hands, uniforms or action scene. No club logos or sponsors.\n\nText: Render ONLY the following Japanese strings, accurately and verbatim, with crisp glyphs. No extra words, fake letters, logos, watermarks or duplicated text. Preserve punctuation and dates.\nSmall but clearly legible brand at top left:\n\"バスケまとめ\"\nDate/league line below brand:\n\"2026.10.26｜B.PREMIER 9試合予定\"\nHuge bold main title, with the digit 2 in lime:\n\"注目の2カード\"\nTwo very prominent matchup rows:\n\"京都 vs 秋田\"\n\"島根 vs 仙台\"\nSupporting line:\n\"今季平均EFFに基づく試合前比較\"\nA clearly readable qualifier immediately below:\n\"出場・結果は未確認\"\nBottom disclosure, separated with comfortable space, readable and fully inside canvas:\n\"イラスト（AI生成）\"\n\"成績をもとにしたイメージ\"\n\nKeep headline and matchups dominant. Supporting lines and disclosures must remain legible, approximately 30 pixels or more at 1920px width, in clean ivory type, never lost in texture. At least 60px safe margins on all sides. Nothing clipped, no text overlaps, no ornamental data charts, no tables, no score numerals, no trophy. Use ink illustration rather than photography or 3D.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "correction_count": 0,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "image_sha256": "73d175421b0bbe947d91d6f434e79f471033c61ec1484214bdf4b00da4d0516d",
+      "style_reference_viewed": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "style_reference_note": "指定の白地参照画像A-faison-ivory-v3.pngは同フォルダに存在せず、目視確認できた承認済み黒×ライム参照を採用。",
+      "visual_review": "生成結果を実際に表示して文字・数字・留保・人物不在・見切れ・AI表記を確認。日本語見出しと2カードは大きく読みやすく、下部の留保とAI生成ラベルも枠内で判読できる。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T10:10:18.690948+00:00",
+  "publication_approved": false
+}

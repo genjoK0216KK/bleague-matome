@@ -1,0 +1,73 @@
+{
+  "id": "d4ee196cd5adf437fb60",
+  "article_path": "article-daily-20261028.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261028.html",
+  "source_commit": "",
+  "source_blob_sha": "690288b47cf0fc2587b996c7d0c9d0b9eb2afb54",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "21e62cdebd59a66d1e25f8e1f45d0073ad12d476bc67fe257688cd2b11a09143",
+  "last_observed_blob_sha": "690288b47cf0fc2587b996c7d0c9d0b9eb2afb54",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d4ee196cd5adf437fb60/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d4ee196cd5adf437fb60/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T10:07:31.960770+00:00",
+  "creation_event_id": "73809a572f0462f23e8d",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/d4ee196cd5adf437fb60/thumbnail.png",
+  "image_sha256": "cf49ecc5abfc3f84bfbcad3b94706428344085bb16b1bc8ffe5167b2f4384734",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "690288b47cf0fc2587b996c7d0c9d0b9eb2afb54",
+    "text_lines": [
+      "10/30 B.PREMIER",
+      "3試合",
+      "勝率差で比較",
+      "独自分析｜勝敗・出場の予測ではありません",
+      "10/28 04:11 JST取得データ・日程変更がない前提",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d4ee196cd5adf437fb60/source.html",
+        "role": "fixed_article_content",
+        "evidence": "10/30のB.PREMIER3試合を公式順位表の勝率差で比較する独自分析。出場や勝敗を予測するものではない。順位表は2026年10月28日04:11 JST取得、10/27までの消化分。対戦カードは公式日程の変更がない前提。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d4ee196cd5adf437fb60/source.txt",
+        "role": "fixed_article_content_crosscheck",
+        "evidence": "HTMLと同じ主題・日付・3試合・取得時点・留保を確認。関連記事および外部ページは本文根拠に使用していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "approved_style_only",
+        "evidence": "view_imageで確認した黒×ライム、太い日本語見出し、インク・ブラシの画風のみ参照。選手名・成績・人物は転用していない。"
+      }
+    ],
+    "person_reference": {
+      "used": false,
+      "reason": "特定人物を主役にできない3試合の比較記事のため、ボールと抽象的なコートのみ。人物・手・顔・チームロゴ・スポンサー文字がないことを実画像で確認。"
+    },
+    "prompt": "Use case: editorial sports thumbnail.\nCreate exactly one finished Japanese basketball news thumbnail, landscape 16:9, ideally 1920x1080 or another near-16:9 resolution with width above 1000 pixels. Opaque PNG.\nArt direction: approved site aesthetic translated into a NEW image: deep near-black #151A18, electric lime #CCF43B, warm ivory lettering, restrained orange basketball. Bold heavy Japanese sans-serif typography, hand-drawn ink hatching, rough dry-brush streaks, sparse composition and generous breathing space. Editorial print-poster look, NOT photorealistic, not a generic dashboard.\nSubject: one large expressive hand-inked orange basketball at the right above simple abstract court arcs. Lime diagonal brushstroke behind it. No people, faces, silhouettes, hands, uniforms, club logos or sponsors. The art is symbolic, not an actual game or specific scoring event.\nComposition: text dominates the left roughly 68% and the ball occupies the right roughly 30%. Do not overlap any text with the illustration. Oversized lime \"3試合\" as the primary focal point; \"勝率差で比較\" in very bold ivory underneath, visually one coherent headline. Small but legible header \"10/30 B.PREMIER\". Full-width calm dark footer area for the qualifiers. Keep every text character fully in-frame with at least 5% edge padding. All footer text must remain clearly readable at original size; no tiny hairline type.\nRender ONLY these exact text strings, each once. Do not add a title, score, player name, team name, year, winning probability or extra words:\n\"10/30 B.PREMIER\"\n\"3試合\"\n\"勝率差で比較\"\n\"独自分析｜勝敗・出場の予測ではありません\"\n\"10/28 04:11 JST取得データ・日程変更がない前提\"\n\"イラスト（AI生成）\"\n\"成績をもとにしたイメージ\"\nTypography hierarchy: first line medium, second line extremely large, third line large. Fourth and fifth lines medium-small in the bottom full-width area. The final two labels sit side by side in the last footer line, smaller but comfortably legible in ivory.\nSource meaning to preserve: a comparison of standing win-percentage differences for three B.PREMIER fixtures scheduled on October 30; this is independent analysis, not predictions of wins, losses, or appearances. Source data acquired October 28 at 04:11 JST; fixtures assume no schedule change. Do not imply current/live rechecking, confirmed game results, or actual attendance.\nOne image only. Clean, compelling, few elements. No extra numeric chart, no watermark beyond the required AI disclosure, no copied player or score from any style example.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "attempts": 1,
+      "revision_count": 0,
+      "output_format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "source_output": "/Users/genjo/.codex/generated_images/01a18c4c-50eb-7b80-99a5-dde38fa16ffc/exec-852da44d-841f-44fa-97fc-8cb2c39bc265.png",
+      "visual_inspection": "生成画像とローカルPNGを表示して確認。文字・日付・試合数、予測ではない旨、取得時点、日程変更の留保、非人物イラスト、見切れなし、AI生成と成績をもとにしたイメージの表記を確認。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T10:15:15.658738+00:00",
+  "publication_approved": false
+}
