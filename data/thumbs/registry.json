@@ -86,30 +86,30 @@
   },
   "article-daily-20261028.html": {
    "article_path": "article-daily-20261028.html",
-   "editorial_fingerprint": "21e62cdebd59a66d1e25f8e1f45d0073ad12d476bc67fe257688cd2b11a09143",
+   "editorial_fingerprint": "8b9c95c95bde687be2764a5905053520ab62b404f73e1f2516c1e8d9aab1202f",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261028-cf49ecc5abfc.jpg",
+     "path": "thumbs/auto/article-daily-20261028-64926e18e72f.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261028-cf49ecc5abfc-og.jpg",
+     "path": "thumbs/auto/article-daily-20261028-64926e18e72f-og.jpg",
      "width": 1200
     }
    },
-   "id": "d4ee196cd5adf437fb60",
-   "image_sha256": "cf49ecc5abfc3f84bfbcad3b94706428344085bb16b1bc8ffe5167b2f4384734",
-   "imported_at": "2026-10-30T10:20:25.990685+00:00",
-   "prepared_at": "2026-10-30T10:15:15.658738+00:00",
-   "source_blob_sha": "690288b47cf0fc2587b996c7d0c9d0b9eb2afb54",
+   "id": "9bbc15165c559181134d",
+   "image_sha256": "64926e18e72ff0f0dfcf3dd7bad44808fcac19fb970dc32a6eba40d3c24e29db",
+   "imported_at": "2026-10-30T22:58:45.861491+00:00",
+   "prepared_at": "2026-10-30T22:56:01.785055+00:00",
+   "source_blob_sha": "e68edc72170b70e5c504bc1422965b62e5f91d42",
    "source_size": [
     1672,
     941
    ],
    "stable_fingerprint": "50e79546286141bfe23410a0076d70dde8631447ed78bdb7877016d88789c023",
-   "style": "ink-lime-portrait-v3",
+   "style": "ink-lime-portrait-v4",
    "title": "10/28は3リーグとも試合なし、独自分析「10/30のB.PREMIER3試合」を勝率差で比較"
   },
   "article-daily-20261029.html": {
@@ -142,30 +142,30 @@
   },
   "article-daily-20261030.html": {
    "article_path": "article-daily-20261030.html",
-   "editorial_fingerprint": "68acc30218ce7e01b7d04172c20348296b1b52b0c2e88fa2c0a4dab97e1f5d09",
+   "editorial_fingerprint": "8753a488d0f9f8b99bd6b9b75a3d3b129bbae81027c5d234a30d4d5b1cde9498",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261030-f2d17ad07667.jpg",
+     "path": "thumbs/auto/article-daily-20261030-2bd00be5f812.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261030-f2d17ad07667-og.jpg",
+     "path": "thumbs/auto/article-daily-20261030-2bd00be5f812-og.jpg",
      "width": 1200
     }
    },
-   "id": "3d20be125ac18075c9b0",
-   "image_sha256": "f2d17ad07667b786dc28ace1502f12eb3ed01f4d13a2b480e1ee55d5f31c3d22",
-   "imported_at": "2026-10-30T10:41:45.323972+00:00",
-   "prepared_at": "2026-10-30T10:41:24.730449+00:00",
-   "source_blob_sha": "4105b0457757441c4314ee080fad0bc5a960fe7e",
+   "id": "3955308615847dff3136",
+   "image_sha256": "2bd00be5f8124273571212a38d00b492e23e643afc64ca66eee833a06b768091",
+   "imported_at": "2026-10-30T22:58:45.976690+00:00",
+   "prepared_at": "2026-10-30T22:58:19.100061+00:00",
+   "source_blob_sha": "b9963e39a3929708a582f268c1cb492d1e930957",
    "source_size": [
     1672,
     941
    ],
    "stable_fingerprint": "68acc30218ce7e01b7d04172c20348296b1b52b0c2e88fa2c0a4dab97e1f5d09",
-   "style": "ink-lime-portrait-v3",
+   "style": "ink-lime-portrait-v4",
    "title": "東京Uが静岡に69-68で競り勝ち、第2戦は今夜19時05分から同会場"
   },
   "article-games-20261025.html": {
@@ -841,6 +841,41 @@
    "event": "imported",
    "id": "292138556e17df566d67",
    "image": "69e048314f70"
+  },
+  {
+   "article": "article-daily-20261028.html",
+   "at": "2026-10-30T22:58:45.716872+00:00",
+   "by": "9bbc15165c559181134d",
+   "event": "superseded",
+   "id": "d4ee196cd5adf437fb60"
+  },
+  {
+   "article": "article-daily-20261028.html",
+   "at": "2026-10-30T22:58:45.861520+00:00",
+   "event": "imported",
+   "id": "9bbc15165c559181134d",
+   "image": "64926e18e72f"
+  },
+  {
+   "article": "article-daily-20261030.html",
+   "at": "2026-10-30T22:58:45.861623+00:00",
+   "by": "3955308615847dff3136",
+   "event": "superseded",
+   "id": "ed5eafb2c5a54d0b60af"
+  },
+  {
+   "article": "article-daily-20261030.html",
+   "at": "2026-10-30T22:58:45.861627+00:00",
+   "by": "3955308615847dff3136",
+   "event": "superseded",
+   "id": "3d20be125ac18075c9b0"
+  },
+  {
+   "article": "article-daily-20261030.html",
+   "at": "2026-10-30T22:58:45.976715+00:00",
+   "event": "imported",
+   "id": "3955308615847dff3136",
+   "image": "2bd00be5f812"
   }
  ],
  "seen": {
@@ -848,12 +883,14 @@
   "1237ac56ecfe95c7fd0a": "imported",
   "292138556e17df566d67": "imported",
   "2d836f0394de01c7d009": "imported",
-  "3d20be125ac18075c9b0": "imported",
+  "3955308615847dff3136": "imported",
+  "3d20be125ac18075c9b0": "superseded:3955308615847dff3136",
   "44da7637029692ee5a53": "superseded:1237ac56ecfe95c7fd0a",
   "64677ebbbdc4b4827d54": "superseded:b86acc20b06b8f02084d",
   "6e14b01b2117b3d326c8": "imported",
   "7323c5f3c2556686df0c": "imported",
   "92907f5e3191ad3e0565": "imported",
+  "9bbc15165c559181134d": "imported",
   "a2b6b2b44b3ab2922589": "imported",
   "a61987943aaf82c9dcaa": "imported",
   "ae8de66420a50e0a2591": "superseded:a61987943aaf82c9dcaa",
@@ -864,12 +901,12 @@
   "c39e144583cffda92155": "superseded:1237ac56ecfe95c7fd0a",
   "c65ae6fd90ffcf57f53b": "imported",
   "d4cd88fa21bd64b494f0": "imported",
-  "d4ee196cd5adf437fb60": "imported",
+  "d4ee196cd5adf437fb60": "superseded:9bbc15165c559181134d",
   "d87a8ec3bf24b1b0559b": "imported",
   "db1b08157b4974a77014": "imported",
   "de438e71b32369b2ee65": "imported",
   "ec1f89cf4982bf75312d": "superseded:a2b6b2b44b3ab2922589",
-  "ed5eafb2c5a54d0b60af": "superseded:3d20be125ac18075c9b0"
+  "ed5eafb2c5a54d0b60af": "superseded:3955308615847dff3136"
  },
  "version": 1
 }
