@@ -1,0 +1,113 @@
+{
+  "id": "03f1109abc0d7ee744f9",
+  "article_path": "article-daily-20261031.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261031.html",
+  "source_commit": "",
+  "source_blob_sha": "9b543e066584d32739aeabdb5859caf0935dc81c",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "3fcffb49b8e37c7ae96a9ed0e95fb99cfb1ac2756446b5b263e554c54ef86cad",
+  "last_observed_blob_sha": "9b543e066584d32739aeabdb5859caf0935dc81c",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/03f1109abc0d7ee744f9/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/03f1109abc0d7ee744f9/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T23:31:34.101749+00:00",
+  "creation_event_id": "1d762b7fee7a6b82a3bf",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/03f1109abc0d7ee744f9/thumbnail.png",
+  "image_sha256": "a779ca6c372d89f47d0e3c1e0d5b98525752374496b3b949cc155b304c881f06",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "9b543e066584d32739aeabdb5859caf0935dc81c",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.31",
+      "東京U×静岡",
+      "2連戦は",
+      "1勝1敗",
+      "第2戦 静岡83-74東京U",
+      "第2戦は新聞記録欄の検索表示で確認／公式詳細・個人成績未確認",
+      "イラスト（AI生成）　イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/03f1109abc0d7ee744f9/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261031.html",
+        "evidence": "10/29は東京U69-68静岡、10/30は静岡83-74東京U、2連戦1勝1敗。記事日付2026.10.31。記事の内容はこの固定HTMLとTXTのみを根拠にした。ライブ記事・関連記事・外部試合情報は根拠にしていない。"
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/03f1109abc0d7ee744f9/source.txt",
+        "qualifiers": "第2戦スコアは新聞記録欄の検索表示から確認、当該新聞本文は未閲覧、公式試合詳細とインジュアリーリストは未閲覧、出場時間・個人成績は未確認、次節は未確認。画像には第2戦の検索表示依拠、公式詳細・個人成績未確認を記載。次節や個人の出場・活躍・成績は記載していない。"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "view_imageで確認。配色・手描きインク・ブラシ・文字階層のみを継承。参照の選手・成績・日付は持ち越していない。"
+      },
+      {
+        "role": "random_candidate_roster_only",
+        "url": "https://veltex.co.jp/news/detail/id=51746",
+        "note": "2026-27公式ロスター発表に記載された13選手を抽選候補にした。本文の試合内容の根拠には使用していない。"
+      },
+      {
+        "role": "random_candidate_roster_only",
+        "url": "https://tubc.tokyo/game_lp_20261003_20261004/",
+        "note": "2026年10月のクラブ公式ページのROSTERに記載された12選手を抽選候補にした。本文の試合内容の根拠には使用していない。"
+      },
+      {
+        "role": "current_player_identity_and_appearance_only",
+        "url": "https://veltex.co.jp/team/players/detail/id=52055?PlayerID=51000686",
+        "image_url": "https://veltex.bl.kuroco-img.app/files/user/team/players/ID_01_5.png?v=1789526389",
+        "note": "公式選手一覧および公式プロフィールで在籍を確認。公式写真は容姿参照のみに使用し、完成画像に写真を貼り付けていない。個人成績欄は画像の内容根拠に使用していない。"
+      }
+    ],
+    "person_reference": {
+      "name": "ジェイデン・ガードナー",
+      "roman_name": "Jayden Gardner",
+      "team": "ベルテックス静岡",
+      "selection": "ランダム",
+      "reason": "固定本文に個人名がなく、主役は東京U・静岡の2連戦。本人10/31指示に従い、本文に登場する2クラブの選手から抽選した。",
+      "selection_method": "Python random.SystemRandom().choiceで、上記公式資料に記載された両クラブ計25人の候補から1回抽選。完全な現役名簿の網羅を主張するものではない。選ばれた選手は現行公式選手一覧・プロフィールでも在籍確認。",
+      "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/03f1109abc0d7ee744f9/selection.json",
+      "reference_source": "ベルテックス静岡公式プロフィール",
+      "reference_url": "https://veltex.co.jp/team/players/detail/id=52055?PlayerID=51000686",
+      "reference_image_url": "https://veltex.bl.kuroco-img.app/files/user/team/players/ID_01_5.png?v=1789526389",
+      "visual_reference_inspected": true,
+      "observed_features": "高めのボリュームがある短い黒いツイスト状の髪、短いこめかみ、広い卵形の輪郭と頬、幅のある鼻、深めの目元、厚い唇、口ひげと顎・フェイスラインの短いひげ、厚い肩。",
+      "depiction": "実在の本人に容姿を寄せた手描きインクのプレー姿。ボールを両手で構える一般的なシュート準備のイメージであり、特定試合の実際のプレーや出場の再現ではない。人物は1人。",
+      "image_text_policy": "選手名・背番号・個人成績・出場・活躍を示す文字なし。イラスト（AI生成）とイメージを明記。チームロゴ・リーグロゴ・スポンサー文字なし。",
+      "visual_qa_note": "完成PNGをview_imageで実確認。髪型・広めの輪郭・鼻・口元・ひげ・肩の特徴が公式参照と整合するイラストで、写真風ではない。前側の手は自然な5指、反対の手はボールの下を支える配置。頭・両肘・手・ボールの不自然な見切れなし。"
+    },
+    "prompt": "Use case: style-transfer / editorial sports thumbnail adaptation.\nProduce exactly ONE finished PNG thumbnail, landscape 16:9, ideally 1792x1008 or 1600x900, at least 1000 px wide.\n\nAdapt reference image 1 (the approved black-and-lime basketball thumbnail) for an entirely different article. Keep its charcoal #151A18, lime #CCF43B, ivory lettering, bold Japanese typography, hand-painted ink and dry-brush energy, sparse elements and strong text/athlete hierarchy. Replace ALL original headline, stats, date and original player. Never carry over Culver, 38 points, Sendai, Kobe, 80-71, or 2026.10.19.\n\nReference image 2 is the official portrait of REAL player Jayden Gardner / ジェイデン・ガードナー, chosen randomly from the article's clubs' current players. It is ONLY a reference for facial identity; DO NOT paste, trace photographic texture, or reproduce the photograph in the artwork. Draw an original, clearly hand-inked illustration of THIS ONE real player in a generic basketball play pose. Preserve his distinctive high thick short black twisted/coiled hair with tapered temples, broad oval face and cheeks, broad nose, serious deep-set eyes, full lips, close-trimmed full jaw/chin beard joined to a short moustache, and powerful broad shoulders. Use readable warm gray/ivory facial planes with dark ink contours; do not obscure his features. Plain sleeveless jersey, with no logos, sponsor marks, names, numbers or brand insignia. One orange basketball held naturally with two anatomically correct hands, preparing a shot at shoulder level in a dynamic three-quarter pose, body angled toward the text. Show head, torso and upper legs. Keep the entire head, hands, elbows and ball safely inside the frame; lower legs can naturally extend below the artwork. Exactly one person. The pose is a generic illustrative image, NOT a depiction of a specific game, winning shot, or confirmed appearance. Do NOT include his name or ANY individual performance claim as text.\n\nComposition: roughly left 60% clean bold text, right 40% large ink athlete backed by lime sweeping brush strokes. Place athlete above the footer, with good separation from all letters. Dark quiet background; no court rendering, no other people, no scoreboards, no trophy. Ensure readable Japanese glyphs, comfortable margins at least 50px, no cropped text. Main '1勝1敗' is huge lime lettering on one line, with numerals visually dominant. Not a photographic image.\n\nRender ONLY the following exact Japanese text, no extra words:\nTop-left masthead: 「バスケまとめ」\nSmall date immediately below: 「2026.10.31」\nLarge ivory matchup: 「東京U×静岡」\nMedium ivory lead-in: 「2連戦は」\nLargest lime headline: 「1勝1敗」\nSmaller ivory supporting line: 「第2戦 静岡83-74東京U」\nReadable footer line on a quiet dark strip: 「第2戦は新聞記録欄の検索表示で確認／公式詳細・個人成績未確認」\nSecond readable footer line: 「イラスト（AI生成）　イメージ」\n\nEditorial facts are provided only from fixed source.html/source.txt: October 29 Tokyo U 69-68 Shizuoka; October 30 Shizuoka 83-74 Tokyo U, so series one win each. Article dated October 31, 2026. The second score was checked via a newspaper record column's search listing, the article could not access official game details, individual playing time/performance was not verified, and next fixtures are unconfirmed. Do not add prediction, schedules, individual statistics, selection rank, or claims that the illustrated player played or contributed to these results. The footer preserves the relevant source qualifiers. The AI label must remain fully legible.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "method": "承認済みサムネをスタイル参照として変換し、公式プロフィール画像を容姿参照にして主役と全テキストを差し替え。",
+      "reference_image_paths": [
+        "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "/private/tmp/basuke-03f1109abc0d7ee744f9-gardner-reference.png"
+      ],
+      "generation_calls": 1,
+      "correction_calls": 0,
+      "output_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/03f1109abc0d7ee744f9/generated.png",
+      "width": 1672,
+      "height": 941,
+      "png_sha256": "a779ca6c372d89f47d0e3c1e0d5b98525752374496b3b949cc155b304c881f06",
+      "postprocessing": "なし。内蔵生成結果をそのままコピー。",
+      "qa_evidence": "生成結果と指定保存先のPNGを実際に表示して、text_lines全行、数値、出典の留保、人物の特徴、手・ボール、配置・余白、AI表記を確認。",
+      "ready_executed": false,
+      "published": false,
+      "external_delivery": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T23:34:20.418563+00:00",
+  "publication_approved": false
+}
