@@ -3005,8 +3005,7 @@
           "TS": 0.3333333333333333,
           "USG": 25.276702659755227
         }
-      ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/507925/71.json"
+      ]
     },
     {
       "game_id": "506520",
@@ -4009,7 +4008,7 @@
           "PT2IN": 4,
           "PT2ND": 0,
           "EFF": 9,
-          "PLUSMINUS": -7,
+          "PLUSMINUS": -6,
           "AST_TO": 1,
           "EFG": 0.4,
           "TS": 0.4310344827586207,
@@ -4051,7 +4050,7 @@
           "PT2IN": 0,
           "PT2ND": 0,
           "EFF": 4,
-          "PLUSMINUS": 1,
+          "PLUSMINUS": 0,
           "AST_TO": 0,
           "EFG": 1,
           "TS": 1,
@@ -4171,12 +4170,12 @@
           "TO": 1,
           "AS": 2,
           "ST": 0,
-          "BS": 2,
+          "BS": 3,
           "BSON": 0,
           "PTFB": 0,
           "PT2IN": 5,
           "PT2ND": 3,
-          "EFF": 23,
+          "EFF": 24,
           "PLUSMINUS": -2,
           "AST_TO": 2,
           "EFG": 0.6,
@@ -4215,7 +4214,7 @@
           "ST": 0,
           "BS": 0,
           "BSON": 0,
-          "PTFB": 3,
+          "PTFB": 2,
           "PT2IN": 3,
           "PT2ND": 2,
           "EFF": 17,
@@ -4592,11 +4591,11 @@
           "AS": 5,
           "ST": 1,
           "BS": 0,
-          "BSON": 2,
+          "BSON": 3,
           "PTFB": 1,
           "PT2IN": 0,
           "PT2ND": 0,
-          "EFF": 13,
+          "EFF": 12,
           "PLUSMINUS": 3,
           "AST_TO": 2.5,
           "EFG": 0.42857142857142855,
@@ -4639,7 +4638,7 @@
           "PT2IN": 0,
           "PT2ND": 0,
           "EFF": 5,
-          "PLUSMINUS": 2,
+          "PLUSMINUS": 1,
           "AST_TO": 1.3333333333333333,
           "EFG": 0.55,
           "TS": 0.55,
@@ -4849,7 +4848,7 @@
           "PT2IN": 0,
           "PT2ND": 0,
           "EFF": 17,
-          "PLUSMINUS": 2,
+          "PLUSMINUS": 3,
           "AST_TO": 5,
           "EFG": 0.5,
           "TS": 0.6443298969072165,
@@ -4940,7 +4939,7 @@
           "USG": 25.05389025835115
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506519/57.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506519/62.json"
     },
     {
       "game_id": "506521",
