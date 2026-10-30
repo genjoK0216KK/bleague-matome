@@ -3631,11 +3631,11 @@
           "StartingFlg": 1,
           "PlayTime": "25:29",
           "PlayingFlg": true,
-          "Point": 8,
+          "Point": 10,
           "PT3M": 0,
           "PT3A": 4,
-          "PT2M": 2,
-          "PT2A": 3,
+          "PT2M": 3,
+          "PT2A": 4,
           "FTM": 4,
           "FTA": 7,
           "FOUL": 3,
@@ -3649,14 +3649,14 @@
           "BS": 0,
           "BSON": 0,
           "PTFB": 0,
-          "PT2IN": 2,
+          "PT2IN": 3,
           "PT2ND": 2,
-          "EFF": 9,
+          "EFF": 11,
           "PLUSMINUS": 7,
           "AST_TO": 0,
-          "EFG": 0.2857142857142857,
-          "TS": 0.3968253968253968,
-          "USG": 19.007815895726285
+          "EFG": 0.375,
+          "TS": 0.45126353790613716,
+          "USG": 20.893511917127704
         },
         {
           "Code": 546,
@@ -3757,11 +3757,11 @@
           "StartingFlg": 1,
           "PlayTime": "22:01",
           "PlayingFlg": false,
-          "Point": 4,
+          "Point": 2,
           "PT3M": 0,
           "PT3A": 1,
-          "PT2M": 2,
-          "PT2A": 5,
+          "PT2M": 1,
+          "PT2A": 4,
           "FTM": 0,
           "FTA": 0,
           "FOUL": 3,
@@ -3775,14 +3775,14 @@
           "BS": 1,
           "BSON": 0,
           "PTFB": 0,
-          "PT2IN": 2,
+          "PT2IN": 1,
           "PT2ND": 0,
-          "EFF": 6,
+          "EFF": 4,
           "PLUSMINUS": 0,
           "AST_TO": 0,
-          "EFG": 0.3333333333333333,
-          "TS": 0.3333333333333333,
-          "USG": 15.278277454245877
+          "EFG": 0.2,
+          "TS": 0.2,
+          "USG": 13.095666389353608
         },
         {
           "Code": 546,
@@ -3953,7 +3953,7 @@
           "USG": 8.860569197058227
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506520/132.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506520/134.json"
     },
     {
       "game_id": "506519",
