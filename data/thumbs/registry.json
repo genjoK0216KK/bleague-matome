@@ -310,31 +310,31 @@
   },
   "article-games-20261030.html": {
    "article_path": "article-games-20261030.html",
-   "editorial_fingerprint": "119913befcbf6b2ce74d07716178a7d5ac136f7eb2b84b35e65dc2b76fff038b",
+   "editorial_fingerprint": "9a6e4fea5350ee74214b4c322857a09a693deb10556eda762080f429b12545e8",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-games-20261030-b544d48b0312.jpg",
+     "path": "thumbs/auto/article-games-20261030-f380994eb286.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-games-20261030-b544d48b0312-og.jpg",
+     "path": "thumbs/auto/article-games-20261030-f380994eb286-og.jpg",
      "width": 1200
     }
    },
-   "id": "c39e144583cffda92155",
-   "image_sha256": "b544d48b0312830cc1c5c25a24510f6a9fff22ca74ae999094656fae8f0b06dd",
-   "imported_at": "2026-10-30T11:33:06.373883+00:00",
-   "prepared_at": "2026-10-30T11:30:43.702328+00:00",
-   "source_blob_sha": "df4af56e431efc80e246dde3f479ec96a0bc043a",
+   "id": "1237ac56ecfe95c7fd0a",
+   "image_sha256": "f380994eb2863d98f2716edc28e4459cd95d73309433cd70e0e76986741f633a",
+   "imported_at": "2026-10-30T12:49:27.526662+00:00",
+   "prepared_at": "2026-10-30T12:46:18.108619+00:00",
+   "source_blob_sha": "985d9e4e3787e5f80a3074ed9fcd976c954fa677",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "119913befcbf6b2ce74d07716178a7d5ac136f7eb2b84b35e65dc2b76fff038b",
+   "stable_fingerprint": "9a6e4fea5350ee74214b4c322857a09a693deb10556eda762080f429b12545e8",
    "style": "ink-lime-portrait-v3",
-   "title": "10/30 試合結果（公式記録の確定待ち）"
+   "title": "10/30 試合結果・当日のEFF"
   },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
@@ -715,12 +715,34 @@
    "event": "imported",
    "id": "2d836f0394de01c7d009",
    "image": "c12f8f60f7ea"
+  },
+  {
+   "article": "article-games-20261030.html",
+   "at": "2026-10-30T12:49:27.342500+00:00",
+   "by": "1237ac56ecfe95c7fd0a",
+   "event": "superseded",
+   "id": "44da7637029692ee5a53"
+  },
+  {
+   "article": "article-games-20261030.html",
+   "at": "2026-10-30T12:49:27.342524+00:00",
+   "by": "1237ac56ecfe95c7fd0a",
+   "event": "superseded",
+   "id": "c39e144583cffda92155"
+  },
+  {
+   "article": "article-games-20261030.html",
+   "at": "2026-10-30T12:49:27.526682+00:00",
+   "event": "imported",
+   "id": "1237ac56ecfe95c7fd0a",
+   "image": "f380994eb286"
   }
  ],
  "seen": {
+  "1237ac56ecfe95c7fd0a": "imported",
   "2d836f0394de01c7d009": "imported",
   "3d20be125ac18075c9b0": "imported",
-  "44da7637029692ee5a53": "superseded:c39e144583cffda92155",
+  "44da7637029692ee5a53": "superseded:1237ac56ecfe95c7fd0a",
   "64677ebbbdc4b4827d54": "superseded:b86acc20b06b8f02084d",
   "6e14b01b2117b3d326c8": "imported",
   "7323c5f3c2556686df0c": "imported",
@@ -732,7 +754,7 @@
   "b6b7904538b5644b6eb3": "imported",
   "b86acc20b06b8f02084d": "imported",
   "b8f222115a0883a9f7f2": "imported",
-  "c39e144583cffda92155": "imported",
+  "c39e144583cffda92155": "superseded:1237ac56ecfe95c7fd0a",
   "c65ae6fd90ffcf57f53b": "imported",
   "d4cd88fa21bd64b494f0": "imported",
   "d4ee196cd5adf437fb60": "imported",
