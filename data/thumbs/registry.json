@@ -336,6 +336,34 @@
    "style": "ink-lime-portrait-v3",
    "title": "10/30 試合結果・当日のEFF"
   },
+  "article-games-20261031.html": {
+   "article_path": "article-games-20261031.html",
+   "editorial_fingerprint": "380e424e45707806c601963e3eb2e0f9f1e8877876267834877426545c864694",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-games-20261031-72f0ad253251.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-games-20261031-72f0ad253251-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "de438e71b32369b2ee65",
+   "image_sha256": "72f0ad253251e00c743a7a317529f99b195269adca93a21b390b1a809f1bf946",
+   "imported_at": "2026-10-30T15:09:08.110347+00:00",
+   "prepared_at": "2026-10-30T15:08:47.351505+00:00",
+   "source_blob_sha": "417ea1c607bd2739bf02cb6f2b8aa83c085e5497",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "380e424e45707806c601963e3eb2e0f9f1e8877876267834877426545c864694",
+   "style": "ink-lime-portrait-v3",
+   "title": "10/31 出場予定選手（登録選手）のベスト5"
+  },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
    "editorial_fingerprint": "8ea4902b55a521e4629cc207d20aabde9e23b41e7a7fddfd69239de2bdc08c7f",
@@ -771,6 +799,13 @@
    "event": "imported",
    "id": "0784f83afb138807346a",
    "image": "8c0e9cd376e7"
+  },
+  {
+   "article": "article-games-20261031.html",
+   "at": "2026-10-30T15:09:08.110386+00:00",
+   "event": "imported",
+   "id": "de438e71b32369b2ee65",
+   "image": "72f0ad253251"
   }
  ],
  "seen": {
@@ -796,6 +831,7 @@
   "d4ee196cd5adf437fb60": "imported",
   "d87a8ec3bf24b1b0559b": "imported",
   "db1b08157b4974a77014": "imported",
+  "de438e71b32369b2ee65": "imported",
   "ec1f89cf4982bf75312d": "superseded:a2b6b2b44b3ab2922589",
   "ed5eafb2c5a54d0b60af": "superseded:3d20be125ac18075c9b0"
  },
