@@ -7,13 +7,16 @@
   2. 取り込み（import）：thumbs.yml（送信直後に起動・1時間ごとの保険）と update.yml がそのブランチを読み取り専用で展開し、本スクリプトが検査する。
        - manifest の形・status・style・ID（記事パス＋本文指紋から再計算）・画像の SHA256・PNG 寸法・制作側の5項目QA
        - 同梱の固定原文 source.html の blob SHA と本文指紋が manifest と一致すること
-       - いまの記事本文が、その固定原文と同じ版であること（違えば「古い版」として採用しない）
+       - 記事がまだあること。いまの本文と版が違っても採用する（本人 10/30「C」：空白にせず、新しい画像が届くまで
+         前の画像を出す。毎日の記事は本文が変わると thumb_requests.py が作り直しを積む）
      合格した画像だけを Web 用（本文 1280px JPEG）と OGP 用（1200×630、余白で全体を収める＝注記を切らない）に
      変換して thumbs/auto/ に置き、data/thumbs/registry.json に記録する。
-  3. 適用（apply）：build.py の最初に毎回呼ぶ。登録済みの画像を、本文がまだ同じ版の記事にだけ
-     eyecatch・og:image・Twitter 画像として入れる。記事が再生成されて既定の画像に戻っても次の build で入り直す。
-     本文が変わった記事には入れない（既定の画像のまま＝既存表示を維持）。差し替えで本文の指紋は変わらないので
-     再生成のループは起きない。同じ状態で再実行しても変更なし。
+  3. 適用（apply）：build.py の最初に毎回呼ぶ。登録済みの画像を eyecatch・og:image・Twitter 画像として入れる。
+     記事が再生成されて既定の画像に戻っても次の build で入り直す。本文が変わった記事にも、新しい画像が届くまで
+     前の画像を入れ続ける（10/30 まではここで外していたため、書き換わった記事のサムネが消えていた）。
+     ただし見出しまで変わった記事（試合前の「ベスト5」が試合後に「試合結果」になる等）は、画像の主題が違うので
+     外して既定の表示に戻す。thumb_requests.py が作り直しを積み、新しい画像が届けばまた入る。
+     差し替えで本文の指紋は変わらないので再生成のループは起きない。同じ状態で再実行しても変更なし。
 
 公開ゲート：data/thumbs/config.json の "enabled" が true の時だけ取り込み・適用する（既定 false）。
 false の間は本番の記事・一覧に一切触れない。有効化は本人確認の後。
@@ -206,14 +209,10 @@ def check_bundle(root, folder):
     if blob_sha(source) != manifest['source_blob_sha'] or manifest['editorial_fingerprint'] not in (
             stable_fingerprint(source), editorial_fingerprint(source)):
         raise Reject('source_mismatch', '固定原文が manifest と一致しない')
-    current_path = Path(root) / path
-    if not current_path.exists():
+    if not (Path(root) / path).exists():
         raise Reject('article_missing', path)
-    current = current_path.read_bytes()
-    if stable_fingerprint(current) != stable_fingerprint(source):
-        raise Reject('stale_source', '記事本文がこの画像の版から変わっている')
     return dict(manifest=manifest, image=image, width=width, height=height,
-                stable_fingerprint=stable_fingerprint(source))
+                stable_fingerprint=stable_fingerprint(source), title=_h1_text(source.decode('utf-8', 'replace')))
 
 
 def derive(root, cand):
@@ -242,34 +241,17 @@ def derive(root, cand):
     return files
 
 
-def newest_by_article(folders):
-    """記事ごとに、いちばん新しく完成した bundle（prepared_at が最大）の (id, prepared_at)。
-    いまの本文に合うかどうかに関わらず数える（合わない新しい版があれば、古い版へは戻らないため）。"""
-    newest = {}
-    for folder in folders:
-        m = load_json(folder / 'manifest.json', None)
-        if not isinstance(m, dict) or m.get('id') != folder.name or not isinstance(m.get('article_path'), str):
-            continue
-        prev = newest.get(m['article_path'])
-        stamp = m.get('prepared_at') or ''
-        if prev is None or stamp > prev[1]:
-            newest[m['article_path']] = (m['id'], stamp)
-    return newest
-
-
 def import_inbox(root, inbox):
-    """inbox/<id>/ を全部見るが、採用の候補は「記事ごとにいちばん新しく完成した画像」だけ。
-    それが「いまの本文と同じ版」なら採用する。古い版・不正は理由を記録して捨てる。
-    同じ記事のより古い画像は、本文が合っていても採用せず「置き換え済み（superseded）」の終わりの印を付ける
-    （本文が過去の版へ戻っても古い画像へは戻らない。送信側が未取り込みと誤って起動を繰り返さない）。
-    いちばん新しい画像が採用できない時は、それより古い採用中の画像を退役（retired）させ、既定の表示に戻す。
-    戻り値：{'imported': [...], 'rejected': [...], 'superseded': [...], 'retired': [...], 'unchanged': n}"""
+    """inbox/<id>/ を全部検査し、記事ごとに「検査に合格した中でいちばん新しく完成した画像」を採用する。
+    いまの本文と版が違っても採用する（空白にしない）。不正なものは理由を記録して捨てる（前の画像はそのまま）。
+    同じ記事のより古い画像には「置き換え済み（superseded）」の終わりの印を付ける（送信側が未取り込みと誤って
+    起動を繰り返さない）。採用中の画像より古い画像には戻らない。
+    戻り値：{'imported': [...], 'rejected': [...], 'superseded': [...], 'retired': [], 'unchanged': n}"""
     root, inbox = Path(root), Path(inbox)
     reg = registry(root)
     result = {'imported': [], 'rejected': [], 'superseded': [], 'retired': [], 'unchanged': 0}
     folders = sorted(p for p in inbox.iterdir() if p.is_dir()) if inbox.is_dir() else []
-    newest = newest_by_article(folders)
-    candidates = {}
+    valid = {}
     for folder in folders:
         mid = folder.name
         try:
@@ -288,39 +270,42 @@ def import_inbox(root, inbox):
             note(reg, 'rejected', id=mid, reason='error', detail=type(exc).__name__)
             result['rejected'].append({'id': mid, 'reason': 'error', 'detail': type(exc).__name__})
             continue
-        path = cand['manifest']['article_path']
-        top = newest.get(path, (mid, ''))[0]
-        if top != mid:
-            mark = 'superseded:' + top
+        valid.setdefault(cand['manifest']['article_path'], []).append(cand)
+    for path, cands in sorted(valid.items()):
+        entry = reg['entries'].get(path)
+        if entry and not entry.get('retired') and entry['id'] not in {c['manifest']['id'] for c in cands}:
+            # 採用中の画像（inbox から消えたものも）と比べる＝古い画像へは戻らない
+            cands = cands + [dict(manifest=dict(id=entry['id'], prepared_at=entry.get('prepared_at')), current=True)]
+        cands.sort(key=lambda c: (c['manifest'].get('prepared_at') or '', c['manifest']['id']))
+        top = cands[-1]
+        for cand in cands[:-1]:
+            mid = cand['manifest']['id']
+            if cand.get('current') or mid == top['manifest']['id']:
+                continue
+            mark = 'superseded:' + top['manifest']['id']
             if reg['seen'].get(mid) != mark:
                 reg['seen'][mid] = mark
-                note(reg, 'superseded', id=mid, article=path, by=top)
-                result['superseded'].append({'id': mid, 'article': path, 'by': top})
+                note(reg, 'superseded', id=mid, article=path, by=top['manifest']['id'])
+                result['superseded'].append({'id': mid, 'article': path, 'by': top['manifest']['id']})
             else:
                 result['unchanged'] += 1
+        if top.get('current'):
             continue
-        candidates[path] = cand
-    for path, (top, stamp) in sorted(newest.items()):
-        entry = reg['entries'].get(path)
-        if path in candidates or not entry or entry['id'] == top or entry.get('retired'):
-            continue
-        if (entry.get('prepared_at') or '') <= stamp:     # 採用中の画像より新しい版があるのに、その版が採用できない
-            entry['retired'] = top
-            note(reg, 'retired', id=entry['id'], article=path, by=top)
-            result['retired'].append({'id': entry['id'], 'article': path, 'by': top})
-    for path, cand in sorted(candidates.items()):
-        m = cand['manifest']
-        entry = reg['entries'].get(path)
+        m = top['manifest']
         if entry and entry['id'] == m['id'] and entry['image_sha256'] == m['image_sha256'] and not entry.get('retired') \
                 and all((root / f['path']).exists() for f in entry['files'].values()):
+            if reg['seen'].get(m['id']) != 'imported':      # 10/30 まで「古い版」として捨てていた画像
+                reg['seen'][m['id']] = 'imported'
+            entry.setdefault('title', top['title'])         # 10/30 より前に採用した画像
             result['unchanged'] += 1
             continue
-        files = derive(root, cand)
+        files = derive(root, top)
         reg['entries'][path] = dict(
             id=m['id'], article_path=path, image_sha256=m['image_sha256'],
-            editorial_fingerprint=m['editorial_fingerprint'], stable_fingerprint=cand['stable_fingerprint'],
+            editorial_fingerprint=m['editorial_fingerprint'], stable_fingerprint=top['stable_fingerprint'],
             source_blob_sha=m['source_blob_sha'], style=m['style'], files=files,
-            source_size=[cand['width'], cand['height']], prepared_at=m.get('prepared_at'), imported_at=now_iso())
+            source_size=[top['width'], top['height']], prepared_at=m.get('prepared_at'), imported_at=now_iso(),
+            title=top['title'])
         reg['seen'][m['id']] = 'imported'
         note(reg, 'imported', id=m['id'], article=path, image=m['image_sha256'][:12])
         result['imported'].append({'id': m['id'], 'article': path})
@@ -400,9 +385,10 @@ def restore_html(html):
 
 def apply_all(root, force=False):
     """登録済みの画像を記事へ入れる。設定が無効なら何もしない（force は試験・プレビュー用）。
-    戻り値：{'applied': [...], 'stale': [...], 'unchanged': n}"""
+    本文が画像の版から変わっていても入れる（outdated に記録するだけ）。
+    戻り値：{'applied': [...], 'stale': [...], 'outdated': [...], 'unchanged': n}"""
     root = Path(root)
-    result = {'applied': [], 'stale': [], 'unchanged': 0}
+    result = {'applied': [], 'stale': [], 'outdated': [], 'unchanged': 0}
     if not (force or enabled(root)):
         return result
     reg = registry(root)
@@ -413,14 +399,16 @@ def apply_all(root, force=False):
             continue
         html = target.read_text(encoding='utf-8')
         if entry.get('retired'):
-            # より新しい版の画像があるのに採用できない：古い画像は使わず、既定の表示に戻す。
+            # 10/30 より前の記録（新しい版を採用できなかった古い画像）：既定の表示に戻す。
             new = restore_html(html)
             result['stale'].append({'article': path, 'reason': 'retired'})
-        elif stable_fingerprint(html) != entry['stable_fingerprint']:
-            # 本文が変わった：古い版の画像は使わない。入っていれば外し、既定の表示に戻す。
+        elif entry.get('title') and entry['title'] != _h1_text(html):
+            # 見出しが変わった＝記事の主題が変わった：違う主題の画像は出さない（作り直しが届けば入る）。
             new = restore_html(html)
-            result['stale'].append({'article': path, 'reason': 'stale_source'})
+            result['stale'].append({'article': path, 'reason': 'title_changed'})
         else:
+            if stable_fingerprint(html) != entry['stable_fingerprint']:
+                result['outdated'].append(path)      # 本文は変わったが、新しい画像が届くまで前の画像を出す
             new = apply_html(html, entry)
         if new != html:
             tmp = target.with_suffix('.tmp')

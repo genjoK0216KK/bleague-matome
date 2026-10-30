@@ -1,6 +1,7 @@
 """自動生成サムネの取り込み・差し替え（MINI-8、10/25 本人「サムネの自動差し替えまで進めて」・未公開）。
 
-受入条件の検証：継続受渡し（thumb-inbox ブランチ）、本文指紋と画像SHAの照合（古い版・生成途中の更新は拒否）、
+受入条件の検証：継続受渡し（thumb-inbox ブランチ）、本文指紋と画像SHAの照合（10/30 本人「C」から、古い版の画像も
+新しい画像が届くまで出し続ける）、
 eyecatch・og:image・Twitter・TOP/一覧カードへの反映と再生成後の保持、同じ版の再実行は変更なし・ループなし、
 失敗時は既存画像を保持、無効設定では何もしない。
 """
@@ -96,17 +97,19 @@ class Import(Base):
         self.assertLess(max(abs(a - b) for a, b in zip(og.getpixel((5, 315)), ta.OG_BG)), 4)   # 左右は余白（全体を収める＝注記を切らない）
         self.assertGreater(og.getpixel((600, 3))[1], 150)             # 上下は画像（緑）で埋まる
 
-    def test_old_version_is_rejected(self):
-        """古い本文向けの画像（その後に本文が更新された）は採用しない。"""
-        bundle(self.inbox, self.PATH, article(body='12:00版の本文'))
+    def test_old_version_is_still_imported(self):
+        """10/30 本人「C」：古い本文向けの画像（その後に本文が更新された）も採用する（空白にしない）。"""
+        m = bundle(self.inbox, self.PATH, article(body='12:00版の本文'))
         r = self.run_import()
-        self.assertEqual([x['reason'] for x in r['rejected']], ['stale_source'])
-        self.assertEqual(json.loads((self.root / ta.REGISTRY).read_text())['entries'], {})
-        self.assertFalse((self.root / ta.OUT_DIR).exists())
+        self.assertEqual((r['imported'], r['rejected']), ([{'id': m['id'], 'article': self.PATH}], []))
 
-    def test_legacy_id_is_accepted_but_only_if_current(self):
-        bundle(self.inbox, self.PATH, article(body='旧'), legacy=True)
-        self.assertEqual(self.run_import()['rejected'][0]['reason'], 'stale_source')
+    def test_legacy_id_is_accepted_even_if_outdated(self):
+        m = bundle(self.inbox, self.PATH, article(body='旧'), legacy=True)
+        self.assertEqual([x['id'] for x in self.run_import()['imported']], [m['id']])
+
+    def test_missing_article_is_rejected(self):
+        bundle(self.inbox, 'article-daily-20261031.html', article())
+        self.assertEqual(self.run_import()['rejected'][0]['reason'], 'article_missing')
 
     def test_newest_matching_version_wins_and_stale_ones_are_ignored(self):
         bundle(self.inbox, self.PATH, article(body='旧'))
@@ -199,17 +202,26 @@ class Apply(Base):
         (self.root / self.PATH).write_text(ta.restore_html(page))
         self.assertNotIn('eyecatch', self.page())
 
-    def test_updated_article_keeps_its_own_image(self):
-        """本文が更新された記事には古い版の画像を入れない（既定の画像のまま）。"""
+    def test_updated_article_keeps_previous_image_until_a_new_one(self):
+        """10/30 本人「C」：本文が更新されても、新しい画像が届くまで前の画像を出す（再生成で既定に戻っても入れ直す）。"""
         ta.apply_all(self.root)
-        updated = ta.apply_html(article(body='19:10版の本文'), json.loads((self.root / ta.REGISTRY).read_text())['entries'][self.PATH])
-        (self.root / self.PATH).write_text(updated)                   # 古い画像が残ったまま本文だけ変わった場合も
+        (self.root / self.PATH).write_text(article(body='19:10版の本文'))   # 再生成されて既定の画像に戻った
         r = ta.apply_all(self.root)
-        self.assertEqual(r['stale'], [{'article': self.PATH, 'reason': 'stale_source'}])
+        self.assertEqual((r['applied'], r['outdated'], r['stale']), ([self.PATH], [self.PATH], []))
         page = self.page()
-        self.assertIn('<img class="eyecatch" src="thumb-daily-20261025.svg"', page)
-        self.assertNotIn('data-auto-thumb', page)
-        self.assertNotIn('og:image', page)
+        self.assertIn('data-auto-thumb', page)
+        self.assertIn('og:image', page)
+        self.assertIn('19:10版の本文', page)
+
+    def test_changed_headline_removes_image_of_other_subject(self):
+        """試合前の「ベスト5」が試合後に「試合結果」になった等。違う主題の画像は出さない。"""
+        ta.apply_all(self.root)
+        self.assertIn('data-auto-thumb', self.page())
+        (self.root / self.PATH).write_text(self.page().replace('<h1>10/25 見出し</h1>', '<h1>10/25 試合結果</h1>'))
+        r = ta.apply_all(self.root)
+        self.assertEqual(r['stale'], [{'article': self.PATH, 'reason': 'title_changed'}])
+        self.assertNotIn('data-auto-thumb', self.page())
+        self.assertIn('<img class="eyecatch" src="thumb-daily-20261025.svg"', self.page())
 
     def test_missing_derived_file_keeps_existing_display(self):
         entry = json.loads((self.root / ta.REGISTRY).read_text())['entries'][self.PATH]
@@ -221,7 +233,7 @@ class Apply(Base):
     def test_disabled_config_touches_nothing(self):
         self.enable(False)
         before = self.snapshot()
-        self.assertEqual(ta.apply_all(self.root), {'applied': [], 'stale': [], 'unchanged': 0})
+        self.assertEqual(ta.apply_all(self.root), {'applied': [], 'stale': [], 'outdated': [], 'unchanged': 0})
         with redirect_stdout(io.StringIO()) as out:
             self.assertEqual(ta.main(['import', '--root', str(self.root), '--inbox', str(self.inbox)]), 0)
         self.assertIn('無効', out.getvalue())
@@ -374,7 +386,7 @@ class ReviewFixes(Base):
         self.assertEqual(r['rejected'][0]['reason'], 'source_mismatch')
 
     def test_unchanged_producer_bundle_survives_view_count_changes(self):
-        """生成側は旧指紋のまま。閲覧数が何度変わっても同じ画像を使い続け、本文が変われば外す。"""
+        """生成側は旧指紋のまま。閲覧数が何度変わっても同じ画像を使い続ける。本文が変わっても外さない（10/30「C」）。"""
         src = article(body='本文A', pv=4)
         self.producer_bundle(src, ta.editorial_fingerprint(src.encode()))
         for pv in (5, 40, 400):
@@ -382,8 +394,8 @@ class ReviewFixes(Base):
             self.run_import(); ta.apply_all(self.root)
             self.assertIn('data-auto-thumb', self.page(), pv)
         (self.root / self.PATH).write_text(article(body='本文B', pv=400))
-        ta.apply_all(self.root)
-        self.assertNotIn('data-auto-thumb', self.page())
+        self.assertEqual(ta.apply_all(self.root)['outdated'], [self.PATH])
+        self.assertIn('data-auto-thumb', self.page())
 
     def test_view_count_only_change_keeps_producer_fingerprint(self):
         a, b = article(pv=4).encode(), article(pv=40).encode()
@@ -404,7 +416,7 @@ class ReviewFixes(Base):
         other = base.format('<!-- AUTO:STANDINGS:START --><p>1位</p><!-- AUTO:STANDINGS:END -->')
         self.assertNotEqual(ta.stable_fingerprint(other), ta.stable_fingerprint(base.format('')))
 
-    def test_body_score_change_makes_imported_image_stale(self):
+    def test_body_score_change_is_reported_but_image_stays(self):
         page = article(body='<!-- AUTO:BODY:START -->95-90<!-- AUTO:BODY:END -->')
         (self.root / self.PATH).write_text(page)
         self.producer_bundle(page, ta.stable_fingerprint(page.encode()))
@@ -413,8 +425,8 @@ class ReviewFixes(Base):
         self.assertIn('data-auto-thumb', self.page())
         (self.root / self.PATH).write_text(self.page().replace('95-90', '101-90'))
         r = ta.apply_all(self.root)
-        self.assertEqual(r['stale'][0]['reason'], 'stale_source')
-        self.assertNotIn('data-auto-thumb', self.page())
+        self.assertEqual(r['outdated'], [self.PATH])
+        self.assertIn('data-auto-thumb', self.page())
 
     def test_independent_repro_expectations(self):
         """ChatGPT の単独再現スクリプト（MINI-8-independent-repro-073cad6）と同じ条件で、修正後の期待値になる。"""
@@ -476,18 +488,38 @@ class NewestOnly(Base):
         (self.root / self.PATH).write_text(self.page().replace('本文v2', '本文v1'))   # 過去の版へ戻る
         r = self.run_import(); ta.apply_all(self.root)
         self.assertEqual(r['imported'], [])
-        self.assertNotIn('data-auto-thumb', self.page())                  # 既定の表示
+        self.assertIn(f'data-auto-thumb="{b["id"]}"', self.page())        # 新しい方の画像のまま
         self.assertTrue(ta.registry(self.root)['seen'][a['id']].startswith('superseded:'))
 
-    def test_newer_unusable_bundle_retires_older_adopted_image(self):
-        a = self.put('本文v1', None, '2026-10-26T01:00:00+00:00', (1, 1, 1))
+    def test_newer_bundle_for_other_version_replaces_older_image(self):
+        """10/30「C」：本文がまだv1でも、より新しく完成した画像（v2向け）を採用する（退役させて空白にしない）。"""
+        self.put('本文v1', None, '2026-10-26T01:00:00+00:00', (1, 1, 1))
         (self.root / self.PATH).write_text(article(body='本文v1'))
         self.run_import(); ta.apply_all(self.root)
-        self.put('本文v2', None, '2026-10-26T02:00:00+00:00', (2, 2, 2))   # 新しい版の画像だが、本文はv1のまま
+        b = self.put('本文v2', None, '2026-10-26T02:00:00+00:00', (2, 2, 2))
         r = self.run_import()
-        self.assertEqual([x['id'] for x in r['retired']], [a['id']])
+        self.assertEqual(([x['id'] for x in r['imported']], r['retired']), ([b['id']], []))
         ta.apply_all(self.root)
-        self.assertNotIn('data-auto-thumb', self.page())
+        self.assertIn(f'data-auto-thumb="{b["id"]}"', self.page())
+
+    def test_older_bundle_arriving_late_does_not_replace_newer_image(self):
+        b = self.put('本文v2', None, '2026-10-26T02:00:00+00:00', (2, 2, 2))
+        self.run_import()
+        a = self.put('本文v1', None, '2026-10-26T01:00:00+00:00', (1, 1, 1))
+        r = self.run_import()
+        self.assertEqual(r['imported'], [])
+        self.assertEqual(ta.registry(self.root)['entries'][self.PATH]['id'], b['id'])
+        self.assertEqual(ta.registry(self.root)['seen'][a['id']], 'superseded:' + b['id'])
+
+    def test_image_rejected_before_policy_change_is_marked_imported(self):
+        """10/30 まで「古い版」として捨てていた採用中の画像は、取り込み済みの印に直す（送信側の未取り込みに残さない）。"""
+        a = self.put('本文v1', None, '2026-10-26T01:00:00+00:00', (1, 1, 1))
+        self.run_import()
+        reg = ta.registry(self.root)
+        reg['seen'][a['id']] = 'rejected:stale_source'
+        ta.save_json(self.root / ta.REGISTRY, reg)
+        self.run_import()
+        self.assertEqual(ta.registry(self.root)['seen'][a['id']], 'imported')
 
 class DeliverCarryOver(Deliver):
     """記事ごとに最新の完成画像を渡す。生成側の台帳が保留（PV_ONLY_DUPLICATE）の job を指していても引き継ぐ。"""

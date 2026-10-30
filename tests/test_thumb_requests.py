@@ -1,4 +1,5 @@
-"""記事を作った時に1回だけサムネの依頼を積む（MINI-8、本人 10/26「サムネは記事を作成する時のみ。巡回は必要ない」）。"""
+"""記事を作った時に1回だけサムネの依頼を積む（MINI-8、本人 10/26「サムネは記事を作成する時のみ。巡回は必要ない」）。
+例外：毎日の記事は、本文が書き換わった時に作り直しを積む（本人 10/30「C」、1記事 REDO_MAX 回まで）。"""
 import json
 import tempfile
 import unittest
@@ -10,9 +11,9 @@ from scripts import thumb_auto as ta, thumb_requests as tr
 T0 = datetime(2026, 10, 27, 0, 0, tzinfo=timezone.utc)
 
 
-def page(body, pv=None):
+def page(body, pv=None, title='見出し'):
     pvb = f'<!-- AUTO:PV:START -->{pv} views<!-- AUTO:PV:END -->' if pv is not None else ''
-    return f'<html><body><article><h1>見出し</h1><div class="pmeta">{pvb}</div><p>{body}</p></article></body></html>'
+    return f'<html><body><article><h1>{title}</h1><div class="pmeta">{pvb}</div><p>{body}</p></article></body></html>'
 
 
 class Record(unittest.TestCase):
@@ -70,21 +71,86 @@ class Record(unittest.TestCase):
         self.assertEqual(e['editorial_fingerprint'], ta.editorial_fingerprint(raw))  # 生成側と同じ定義
         self.assertEqual(e['article_url'], 'https://basuke-matome.jp/article-daily-20261027.html')
 
-    def test_updates_reruns_and_view_counts_never_add_requests(self):
+    def test_reruns_view_counts_and_non_daily_updates_never_add_requests(self):
         tr.init(self.root, T0)
-        new = self.root / 'article-daily-20261027.html'
-        new.write_text(page('新しい記事'))
+        daily, games = self.root / 'article-daily-20261027.html', self.root / 'article-games-20261027.html'
+        daily.write_text(page('新しい記事'))
+        games.write_text(page('試合の記事'))
         tr.record(self.root, T0)
         before = (self.root / tr.REQUESTS).read_text()
-        new.write_text(page('本文を更新した', pv=40))                        # 本文更新・閲覧数
-        (self.root / 'article-daily-20261025.html').write_text(page('既存Aも更新'))
+        daily.write_text(page('新しい記事', pv=40))                          # 閲覧数だけ
+        games.write_text(page('試合の記事 第3Q 50-48'))                     # 試合の記事は数分おきに変わる
+        (self.root / 'article-daily-20261025.html').write_text(page('既存Aも更新'))   # 基準（baseline）の記事
         for _ in range(3):                                                  # 再実行
             self.assertEqual(tr.record(self.root, T0)['requested'], [])
         self.assertEqual((self.root / tr.REQUESTS).read_text(), before)      # 台帳は1文字も変わらない
 
-    def test_event_id_depends_only_on_article_path(self):
+    def test_daily_article_rewrite_requests_a_redo_with_pinned_source(self):
+        tr.init(self.root, T0)
+        daily = self.root / 'article-daily-20261027.html'
+        daily.write_text(page('08時版'))
+        tr.record(self.root, T0)
+        first = self.ledger()['article-daily-20261027.html']
+        daily.write_text(page('19時版', pv=3))
+        self.assertEqual(tr.record(self.root, T0)['requested'], ['article-daily-20261027.html'])
+        e = self.ledger()['article-daily-20261027.html']
+        raw = daily.read_bytes()
+        self.assertEqual((e['status'], e['revision']), ('requested', 1))
+        self.assertNotEqual(e['event_id'], first['event_id'])                     # 生成側は新しいイベントとして受け取る
+        self.assertRegex(e['event_id'], r'^[0-9a-f]{20}$')
+        self.assertEqual(e['source_blob_sha'], ta.blob_sha(raw))
+        self.assertEqual(e['editorial_fingerprint'], ta.editorial_fingerprint(raw))
+        self.assertEqual(tr.record(self.root, T0)['requested'], [])               # 同じ版の再実行では増えない
+
+    def test_game_article_is_redone_only_when_headline_changes(self):
+        tr.init(self.root, T0)
+        games = self.root / 'article-games-20261027.html'
+        games.write_text(page('予定', title='10/27 ベスト5'))
+        tr.record(self.root, T0)
+        games.write_text(page('第3Q 50-48', title='10/27 ベスト5'))
+        self.assertEqual(tr.record(self.root, T0)['requested'], [])
+        games.write_text(page('終了 80-78', title='10/27 試合結果'))
+        self.assertEqual(tr.record(self.root, T0)['requested'], ['article-games-20261027.html'])
+        self.assertEqual(self.ledger()['article-games-20261027.html']['revision'], 1)
+        games.write_text(page('終了 80-78 確定', title='10/27 試合結果'))
+        self.assertEqual(tr.record(self.root, T0)['requested'], [])
+
+    def test_baseline_article_is_never_redone(self):
+        tr.init(self.root, T0)
+        (self.root / 'article-games-20261026.html').write_text(page('結果', title='別の見出し'))
+        self.assertEqual(tr.record(self.root, T0)['requested'], [])
+
+    def test_redo_is_limited_per_article(self):
+        tr.init(self.root, T0)
+        daily = self.root / 'article-daily-20261027.html'
+        daily.write_text(page('v0'))
+        tr.record(self.root, T0)
+        counts = []
+        for n in range(1, tr.REDO_MAX + 3):
+            daily.write_text(page(f'v{n}'))
+            counts.append(len(tr.record(self.root, T0)['requested']))
+        self.assertEqual(counts, [1] * tr.REDO_MAX + [0, 0])
+        self.assertEqual(self.ledger()['article-daily-20261027.html']['revision'], tr.REDO_MAX)
+
+    def test_old_request_without_stable_fingerprint_gets_one_without_redo(self):
+        """作り直しを入れる前の依頼：いまの版を基準として記録するだけ（すぐには作り直さない）。"""
+        tr.init(self.root, T0)
+        daily = self.root / 'article-daily-20261027.html'
+        daily.write_text(page('v0'))
+        tr.record(self.root, T0)
+        data = json.loads((self.root / tr.REQUESTS).read_text())
+        del data['events']['article-daily-20261027.html']['stable_fingerprint'], data['events']['article-daily-20261027.html']['title']
+        (self.root / tr.REQUESTS).write_text(json.dumps(data))
+        daily.write_text(page('v1'))
+        self.assertEqual(tr.record(self.root, T0)['requested'], [])
+        self.assertEqual(self.ledger()['article-daily-20261027.html']['stable_fingerprint'], ta.stable_fingerprint(daily.read_bytes()))
+        daily.write_text(page('v2'))
+        self.assertEqual(tr.record(self.root, T0)['requested'], ['article-daily-20261027.html'])
+
+    def test_creation_event_id_depends_only_on_article_path(self):
         self.assertEqual(tr.event_id('article-daily-20261027.html'), tr.event_id('article-daily-20261027.html'))
         self.assertNotEqual(tr.event_id('article-daily-20261027.html'), tr.event_id('article-games-20261027.html'))
+        self.assertNotEqual(tr.event_id('article-daily-20261027.html'), tr.event_id('article-daily-20261027.html', 1, 'x'))
 
     def test_build_records_after_all_pages_are_written(self):
         text = (Path(__file__).resolve().parents[1] / 'scripts/build.py').read_text()

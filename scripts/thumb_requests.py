@@ -6,6 +6,10 @@
 
 - 記事1本につき1回きり。作成イベントIDは記事のパスから決まるので、同じ記事の本文更新・取得時刻・閲覧数・
   画像の差し替え・再実行では、新しい依頼は増えない。
+- 例外：毎日の記事（article-daily-*）は、記事ルーティンが本文を書き換えた時に作り直しを1件積む（本人 10/30「C」）。
+  画像の文字（「19時更新時点」など）が古くなるため。1記事あたり REDO_MAX 回まで。閲覧数・広告だけの変化では
+  積まない（stable_fingerprint で比べる）。試合の記事は数分おきに変わるので本文では作り直さず、見出しが変わった時
+  （試合前の「ベスト5」が試合後に「試合結果」になる等）だけ作り直す。
 - 依頼には、固定版の HTML（Git の blob SHA で GitHub から取り出せる）と、生成側と同じ定義の本文指紋を記録する。
   文章（TXT）は生成側が同じ HTML から作る。
 - この台帳が main へ push されると、GitHub の Webhook が Tailscale Funnel 経由で Mac mini の受け口
@@ -30,18 +34,30 @@ except ImportError:
 REQUESTS = 'data/thumbs/requests.json'
 START = '20261025'                      # 生成側 thumbnail_queue.py の START と同じ（それより前の記事は対象外）
 ARTICLE = re.compile(r'article-[A-Za-z0-9_-]*?(\d{8})\.html')
+REDO = re.compile(r'article-daily-\d{8}\.html')
+REDO_MAX = 3
 
 
-def event_id(path):
-    return hashlib.sha256(('create\0' + path).encode()).hexdigest()[:20]
+def event_id(path, revision=0, stable=''):
+    """作成イベントは記事のパスだけ、作り直し（revision 1〜）は本文の版も入れて決める。"""
+    key = 'create\0' + path if not revision else f'update\0{path}\0{revision}\0{stable}'
+    return hashlib.sha256(key.encode()).hexdigest()[:20]
 
 
-def _entry(article, raw, kind, stamp, date):
-    return dict(event_id=event_id(article.name), article_path=article.name,
-                article_url=thumb_auto.SITE + article.name, target_date=date,
-                source_blob_sha=thumb_auto.blob_sha(raw),
-                editorial_fingerprint=thumb_auto.editorial_fingerprint(raw),
-                status=kind, recorded_at=stamp)
+def _title(raw):
+    return thumb_auto._h1_text(raw.decode('utf-8', 'replace'))
+
+
+def _entry(article, raw, kind, stamp, date, revision=0):
+    stable = thumb_auto.stable_fingerprint(raw)
+    entry = dict(event_id=event_id(article.name, revision, stable), article_path=article.name,
+                 article_url=thumb_auto.SITE + article.name, target_date=date,
+                 source_blob_sha=thumb_auto.blob_sha(raw),
+                 editorial_fingerprint=thumb_auto.editorial_fingerprint(raw),
+                 stable_fingerprint=stable, title=_title(raw), status=kind, recorded_at=stamp)
+    if revision:
+        entry['revision'] = revision
+    return entry
 
 
 def _articles(root):
@@ -64,7 +80,7 @@ def init(root, now=None):
 
 
 def record(root, now=None):
-    """新しく現れた記事だけ依頼を積む。戻り値：{'enabled', 'initialized', 'baseline', 'requested'}。
+    """新しく現れた記事の依頼と、毎日の記事の作り直しを積む。戻り値：{'enabled', 'initialized', 'baseline', 'requested'}。
     台帳が無い（init 前）なら何もしない。"""
     root = Path(root)
     result = {'enabled': thumb_auto.enabled(root), 'initialized': False, 'baseline': [], 'requested': []}
@@ -77,12 +93,26 @@ def record(root, now=None):
     result['initialized'] = True
     stamp = (now or datetime.now(timezone.utc)).isoformat()
     events = data.setdefault('events', {})
+    changed = False
     for article, date in _articles(root):
-        if article.name in events:
+        old = events.get(article.name)
+        if old is None:
+            events[article.name] = _entry(article, article.read_bytes(), 'requested', stamp, date)
+            result['requested'].append(article.name)
             continue
-        events[article.name] = _entry(article, article.read_bytes(), 'requested', stamp, date)
-        result['requested'].append(article.name)
-    if result['requested']:
+        if old.get('status') != 'requested':
+            continue
+        raw = article.read_bytes()
+        stable, title = thumb_auto.stable_fingerprint(raw), _title(raw)
+        if not old.get('stable_fingerprint') or 'title' not in old:     # 作り直しを入れる前の依頼：いまの版を基準にするだけ
+            old.update(stable_fingerprint=stable, title=title)
+            changed = True
+            continue
+        rewritten = old['stable_fingerprint'] != stable if REDO.fullmatch(article.name) else old['title'] != title
+        if rewritten and old.get('revision', 0) < REDO_MAX:
+            events[article.name] = _entry(article, raw, 'requested', stamp, date, old.get('revision', 0) + 1)
+            result['requested'].append(article.name)
+    if result['requested'] or changed:
         thumb_auto.save_json(target, data)
     return result
 
