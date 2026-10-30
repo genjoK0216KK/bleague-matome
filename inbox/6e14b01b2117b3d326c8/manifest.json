@@ -1,0 +1,77 @@
+{
+  "id": "6e14b01b2117b3d326c8",
+  "article_path": "article-games-20261029.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261029.html",
+  "source_commit": "",
+  "source_blob_sha": "e209866d4ba632329e0c5f0181320407aa793817",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "021bf558f73207671e1404317ed134675e26fe25b611ae92099c4b5bf1a35c92",
+  "last_observed_blob_sha": "e209866d4ba632329e0c5f0181320407aa793817",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6e14b01b2117b3d326c8/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6e14b01b2117b3d326c8/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T11:32:51.657539+00:00",
+  "creation_event_id": "c8d927b756b4c08333c4",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/6e14b01b2117b3d326c8/thumbnail.png",
+  "image_sha256": "9f2ce3c7a1286b6be3775f6276bb9cf80bb798ebfb25c2fbde322f0cc28bb9a8",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "e209866d4ba632329e0c5f0181320407aa793817",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.29｜B.ONE 試合結果",
+      "東京U",
+      "1点差勝利",
+      "東京U 69–68 静岡",
+      "当日のEFF・ポジション別TOP3",
+      "公式記録は訂正される場合があります",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6e14b01b2117b3d326c8/source.html",
+        "role": "固定本文。記事タイトル・試合日・B.ONE・東京U 69–68 静岡（終了）・当日のEFF・ポジション別TOP3・公式記録訂正の留保を確認。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6e14b01b2117b3d326c8/source.txt",
+        "role": "固定本文の文章版。HTMLと同じ試合結果・日付・当日集計の範囲を確認。1点差勝利は69−68から算出。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルールのみ。本文の根拠には使用していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで確認した承認済みスタイル参照のみ。黒・ライム・太い和文・インクとブラシの画風を参照。人物・名前・日付・成績は流用していない。"
+      }
+    ],
+    "person_reference": {
+      "type": "no_named_person",
+      "description": "試合結果一覧の記事であり特定の選手を主役にせず、ボールと抽象的なコートのイラストを採用。画像に人物・顔・手・選手名・チームロゴ・スポンサー表示なし。実際の特定場面や決勝シュートを描いていない。"
+    },
+    "prompt": "Create exactly ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 1536x864 or higher, opaque PNG. Use case: ads-marketing, sports news editorial.\nApproved visual direction inspected: black #151A18 background, electric lime #CCF43B, warm ivory typography, bold oversized Japanese Gothic headlines, energetic hand-drawn ink and dry-brush texture, minimal elements. Match this aesthetic, without carrying over any people, names, dates or numbers from the reference.\nComposition: text fills about left 65 percent; right third has ONE orange basketball drawn in expressive ink and a few abstract court lines with diagonal lime brush strokes. NO people, NO hands, NO faces, NO team logos, NO sponsor lettering. The basketball is symbolic, not an actual match scene or a specific shot.\nEditorial evidence from supplied frozen article only: game date 2026-10-29, B.ONE, final score Tokyo U 69 to Shizuoka 68. Tokyo U therefore won by one point. The article also contains that day's EFF position-specific TOP3; do not present season statistics, a league table, MVP or individual player claims.\nRender only the following exact Japanese texts, with excellent legibility and ample safe margins:\nTop small: 「バスケまとめ」\nDate/category: 「2026.10.29｜B.ONE 試合結果」\nMain headline, two lines: 「東京U」「1点差勝利」\nScore below headline: 「東京U 69–68 静岡」\nSecondary line, clearly smaller than headline: 「当日のEFF・ポジション別TOP3」\nSmall legible footer qualifier: 「公式記録は訂正される場合があります」\nBottom disclosure on two short lines: 「イラスト（AI生成）」「成績をもとにしたイメージ」\nMake the numeral 1 and the main headline especially bold in lime, Tokyo U headline in ivory. Make score white/ivory, with accurate order and digits 69–68. Reserve footer space; don't place fine print on busy brushwork. No additional words, labels, numbers, invented logos or watermarks. All text fully inside frame. Polished editorial design, strong hierarchy, generous breathing room.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "correction_count": 0,
+      "output_format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "output_sha256": "9f2ce3c7a1286b6be3775f6276bb9cf80bb798ebfb25c2fbde322f0cc28bb9a8",
+      "visual_inspection": "生成された完成画像を目視。日付2026.10.29、B.ONE、東京U、1点差勝利、東京U 69–68 静岡、当日のEFF・ポジション別TOP3を照合。公式記録の訂正留保・AI生成と成績をもとにしたイメージの明記を確認。人物なし、文字見切れなし、十分なコントラスト、約16:9を確認。初回合格。",
+      "style_reference_note": "承認済みB-culver-black-lime-v3.pngを確認して使用。手順書記載のA-faison-ivory-v3.pngは同じフォルダに存在しなかったため使用していない。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T11:35:00.583625+00:00",
+  "publication_approved": false
+}

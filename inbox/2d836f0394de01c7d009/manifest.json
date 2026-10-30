@@ -1,0 +1,78 @@
+{
+  "id": "2d836f0394de01c7d009",
+  "article_path": "article-results-one-next-20261029.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261029.html",
+  "source_commit": "",
+  "source_blob_sha": "4eaa006af0d6684f6174cacad3bbcb0a29ecb77e",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "d69c2c6f56f1d02970fe70a90844cd12bc242f7a1882b0596f2e8d7a88af1df7",
+  "last_observed_blob_sha": "4eaa006af0d6684f6174cacad3bbcb0a29ecb77e",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2d836f0394de01c7d009/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2d836f0394de01c7d009/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T11:32:51.966988+00:00",
+  "creation_event_id": "e0f922878f186e5b0746",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/2d836f0394de01c7d009/thumbnail.png",
+  "image_sha256": "c12f8f60f7ea24183e023e4a836db0d923b628c69fba56e1e09069e97a288321",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "4eaa006af0d6684f6174cacad3bbcb0a29ecb77e",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.29｜B.ONE",
+      "東京U",
+      "1点差勝利",
+      "東京U 69–68 静岡",
+      "当日のEFF・ポジション別TOP3",
+      "10/30 20:18取得時点・公式記録は訂正される場合があります",
+      "イラスト（AI生成）　成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2d836f0394de01c7d009/source.html",
+        "role": "fixed_article_body",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261029.html",
+        "verified_blob_sha": "4eaa006af0d6684f6174cacad3bbcb0a29ecb77e",
+        "facts": "2026年10月29日、B.ONE、東京U 69–68 静岡、終了。1点差勝利は掲載スコアの差。",
+        "qualifiers": "資料取得2026-10-30 20:18 JST。公式記録・発表は訂正される場合がある。当日のEFFは実際に出場した選手を対象にリーグ別・公式登録ポジション別で選出。画像に個人成績や順位は掲載していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2d836f0394de01c7d009/source.txt",
+        "role": "fixed_article_body_text",
+        "verified": "HTMLの試合日、リーグ、スコア、当日EFFの選出範囲、資料取得時刻および留保と照合。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "approved_style_only",
+        "verified": "view_imageで目視。黒・ライム、太い見出し、インクとブラシ表現を参照。選手・日付・成績は転用していない。"
+      }
+    ],
+    "person_reference": {
+      "named_person": false,
+      "reference": null,
+      "reason": "試合結果と当日EFFのまとめ記事のため、人物を描かずボールと抽象的なコート線で構成。特定プレーの再現なし。"
+    },
+    "prompt": "Use case: ads-marketing.\nCreate exactly ONE finished Japanese basketball news thumbnail as a PNG, landscape 16:9, target 2048 × 1152 pixels.\nStyle: editorial hand-drawn ink and dry-brush illustration, like a bold Japanese sports magazine. Matte near-black #151A18 background, electric lime #CCF43B brush strokes, warm ivory lettering, a single orange basketball. Sparse strong composition with oversized heavy Japanese typography. High contrast, rough brush energy but crisp and correctly formed text.\nSubject: this is a results roundup, not an individual player story. Use a large hand-inked orange basketball at the right over a few abstract half-court line segments and one diagonal lime brush stroke. Ball fully inside canvas. No people, faces, hands, uniforms, team emblems, sponsors, logos, photos, arena reconstruction or specific game-winning-shot scene.\nLayout: generous 5% outer margins; upper-left small brand and game date; left two-thirds dominant headline on two lines; the large '1' in lime with the rest of the victory headline ivory, strongly legible on a phone. Score below on a clean dark area. One medium secondary line about the article's daily EFF rankings. Right one-third contains the basketball illustration without colliding with text. Bottom two lines of clear, small but comfortably readable disclosure. Avoid dense cards, charts, decorative numerals, extra copy and watermarks.\nRender ONLY these exact text lines, all Japanese characters accurate:\nバスケまとめ\n2026.10.29｜B.ONE\n東京U\n1点差勝利\n東京U 69–68 静岡\n当日のEFF・ポジション別TOP3\n10/30 20:18取得時点・公式記録は訂正される場合があります\nイラスト（AI生成）　成績をもとにしたイメージ\n\nContent grounding: the fixed source article lists a completed B.ONE game on October 29, 2026: Tokyo U 69, Shizuoka 68. One-point victory is arithmetic from that final score. Daily EFF rankings are by position for players who actually appeared; this is not season average, a prediction, or a cross-position overall ranking. No player numbers or individual names are needed. The source data acquisition is October 30, 2026 at 20:18 JST and official records may be corrected. Keep the exact date distinction and qualification in the footer.\nDo not copy any player, name, date, number or score from a prior style reference. Make a polished completed thumbnail, no mockup frame.",
+    "generator": {
+      "tool": "image_gen",
+      "mode": "built_in",
+      "generation_count": 1,
+      "revision_count": 0,
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "image_sha256": "c12f8f60f7ea24183e023e4a836db0d923b628c69fba56e1e09069e97a288321",
+      "visual_inspection": "生成時の全体画像および同一PNGから作成した1280px幅の検品用表示で、全テキスト、数値、留保、人物不使用、構図、AI表記を目視確認。納品PNGは無加工でコピー。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T11:37:59.296661+00:00",
+  "publication_approved": false
+}
