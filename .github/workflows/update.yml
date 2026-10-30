@@ -8,6 +8,12 @@ on:
     - cron: "17 3 * * *"    # JST 12:17
     - cron: "17 12 * * *"   # JST 21:17
     - cron: "17 14 * * *"   # JST 23:17（翌日プレビュー公開・当日結果更新）
+  # 定期実行は17分にずらしても3〜4時間遅れる・飛ばされる（10/29〜30）。記事ルーティン（クラウドのClaude）が
+  # 記事を main に push した時にも起動する（本人OK 10/30）。このワークフロー自身や thumbs.yml の push は
+  # GITHUB_TOKEN なので、ここは起動しない（ループしない）。
+  push:
+    branches: [main]
+    paths: ["article-daily-*.html"]
   workflow_dispatch:        # 手動実行用
 
 permissions:
