@@ -1,0 +1,48 @@
+{
+  "id": "9bbc15165c559181134d",
+  "article_path": "article-daily-20261028.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261028.html",
+  "source_commit": "",
+  "source_blob_sha": "e68edc72170b70e5c504bc1422965b62e5f91d42",
+  "style": "ink-lime-portrait-v4",
+  "editorial_fingerprint": "8b9c95c95bde687be2764a5905053520ab62b404f73e1f2516c1e8d9aab1202f",
+  "last_observed_blob_sha": "e68edc72170b70e5c504bc1422965b62e5f91d42",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9bbc15165c559181134d/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9bbc15165c559181134d/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T22:53:36.526307+00:00",
+  "creation_event_id": "a0a1ac84d5aa202eed74",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/9bbc15165c559181134d/thumbnail.png",
+  "image_sha256": "64926e18e72ff0f0dfcf3dd7bad44808fcac19fb970dc32a6eba40d3c24e29db",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "e68edc72170b70e5c504bc1422965b62e5f91d42",
+    "text_lines": [
+      "10/30 B.PREMIER",
+      "独自分析",
+      "3試合を",
+      "勝率差で比較",
+      "勝敗・出場の予測ではありません",
+      "10/28取得データ／日程変更なしの前提",
+      "イラスト（AI生成）｜架空の選手",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9bbc15165c559181134d/source.html",
+      "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9bbc15165c559181134d/source.txt"
+    ],
+    "person_reference": null,
+    "prompt": "Initial generation prompt:\nUse case: illustration-editorial.\nCreate exactly one finished Japanese basketball article thumbnail, landscape 16:9, preferably 2048 x 1152, PNG. High-impact hand-drawn ink and dry-brush sports editorial illustration, visibly drawn, never photographic.\n\nARTICLE FACTS (use only these facts): This article compares the winning-percentage gaps for three B.PREMIER fixtures scheduled for October 30. This is independent analysis based on data obtained October 28, assuming no schedule changes. It is not a prediction of wins/losses or player appearances. No individual player is the central subject. Do not invent game results, player statistics, team names, or decisive moments.\n\nSUBJECT: The picture must be led by ONE entirely fictional adult basketball player in a dynamic generic drive/gather pose, leaning forward while holding an orange basketball with two anatomically sound hands near the waist. The PERSON is the large dominant illustrated subject, clearly visible face and upper body, not a ball-only design. Stylized original angular face, short slightly tousled straight hair, clean-shaven, no resemblance to any identifiable real athlete or to the player in the approved style example. Neutral blank grayscale jersey and shorts, no number, name, logos, stripes or identifiable team colors. Plain neutral shoes. No other people. This is a conceptual sports image, not a depiction of an actual match or a winning shot. Show believable limbs and five fingers per hand, no extra fingers.\n\nSTYLE: Use the approved black-and-lime visual language: deep charcoal #151A18 background, vivid lime #CCF43B dry brush strokes, warm ivory lettering, expressive black ink hatching and brush edges on a monochrome player, restrained orange basketball. The lime belongs to the abstract background only, not the uniform. Minimal elements, confident graphic composition, strong Japanese typography.\n\nCOMPOSITION: Left 58% for large type, right 42% for the player. Keep face, hands, ball and all text fully inside safe margins, no collisions. Lower legs can be intentionally outside the illustrated crop but never crop the head, fingers or ball. Abstract lime diagonal brush sweep behind the person, no stadium, court, team insignia, scoreboard, chart, fake logo or watermark. Headline readable at thumbnail size; tiny texture must not damage glyphs.\n\nEXACT TEXT, no other words or numbers:\nTop left, medium ivory: \"10/30 B.PREMIER\"\nSmall lime badge: \"独自分析\"\nHuge bold headline, two lines:\n\"3試合を\"\n\"勝率差で比較\"\nBelow headline, clearly legible medium ivory:\n\"勝敗・出場の予測ではありません\"\nBelow that, smaller but readable ivory:\n\"10/28取得データ／日程変更なしの前提\"\nBottom left, two readable caption lines:\n\"イラスト（AI生成）｜架空の選手\"\n\"成績をもとにしたイメージ\"\n\nAll Japanese characters and punctuation must be exact, clean, legible. Emphasize 勝率差 in lime and other main text in ivory. Do not carry over the style example's player name, date, score, team names or numerical statistics. No team or league logos, no official photographs. Output one image only.\n\nSingle revision prompt (layout safe margins):\nUse case: precise-object-edit.\nEdit the attached basketball thumbnail once, changing ONLY the size and placement of the fictional player illustration, including the ball and both hands, to provide proper safe margins.\n\nThe original player's hair touches the top edge and the right-side fingers are too close to the right edge. Scale the player plus ball down uniformly to about 82% of the current size within the right-hand illustration area, and move it slightly down and left as necessary. Ensure at least 55 pixels of clear margin above all hair and at least 55 pixels to the right of every finger and the ball at the original 1672 x 941 resolution. Keep the player as the dominant illustrated subject; maintain the same fictional face, energetic driving/gather pose, believable anatomy and five fingers on each hand. The lower body may deliberately extend beyond the bottom but head, ball and hands must be entirely visible.\n\nPreserve all typography, exact wording, text positions and sizes, black #151A18 and lime #CCF43B palette, ivory text, ink and brush style, background, captions and aspect ratio. Fill any space exposed by scaling the player with a matching abstract black-and-lime background. No new symbols or text. Keep the uniform grayscale, with no names, numbers, team colors, sponsorship or logos. Remain visibly illustrated, not a photograph.\n\nPreserve this exact text without alteration:\n10/30 B.PREMIER\n独自分析\n3試合を\n勝率差で比較\n勝敗・出場の予測ではありません\n10/28取得データ／日程変更なしの前提\nイラスト（AI生成）｜架空の選手\n成績をもとにしたイメージ\n\nReturn exactly one landscape PNG, approximately 16:9 and at least 1000 pixels wide.",
+    "generator": "Built-in image_gen; one initial generation and one revision; final PNG visually inspected.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T22:56:01.785055+00:00",
+  "publication_approved": false
+}

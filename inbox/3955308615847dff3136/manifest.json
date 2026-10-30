@@ -1,0 +1,49 @@
+{
+  "id": "3955308615847dff3136",
+  "article_path": "article-daily-20261030.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261030.html",
+  "source_commit": "",
+  "source_blob_sha": "b9963e39a3929708a582f268c1cb492d1e930957",
+  "style": "ink-lime-portrait-v4",
+  "editorial_fingerprint": "8753a488d0f9f8b99bd6b9b75a3d3b129bbae81027c5d234a30d4d5b1cde9498",
+  "last_observed_blob_sha": "b9963e39a3929708a582f268c1cb492d1e930957",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3955308615847dff3136/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3955308615847dff3136/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T22:53:36.779267+00:00",
+  "creation_event_id": "6c000718f1459bbbdbe9",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/3955308615847dff3136/thumbnail.png",
+  "image_sha256": "2bd00be5f8124273571212a38d00b492e23e643afc64ca66eee833a06b768091",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "b9963e39a3929708a582f268c1cb492d1e930957",
+    "text_lines": [
+      "バスケまとめ｜2026.10.30",
+      "10/29 第1戦",
+      "東京U",
+      "1点差勝利",
+      "東京U 69–68 静岡",
+      "第2戦 10/30 19:05予定",
+      "原稿時点で第2戦の結果は未確認",
+      "イラスト（AI生成）｜架空の選手",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3955308615847dff3136/source.html",
+      "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3955308615847dff3136/source.txt"
+    ],
+    "person_reference": null,
+    "prompt": "INITIAL GENERATION:\nUse case: illustration-story\nAsset type: one final Japanese basketball news thumbnail, landscape 16:9, 1536x864 or larger, PNG.\nCreate exactly ONE finished thumbnail for バスケまとめ. Use an editorial hand-drawn ink / dry-brush illustration, bold Japanese typography, very dark near-black #151A18 background, vivid lime #CCF43B brush accents, warm off-white text, and sparse graphic elements. This is the approved aesthetic: black-and-lime sports editorial poster with massive legible Japanese type at left and one dynamic ink-illustrated athlete at right. Do not copy the reference athlete, name, numbers or team.\nSubject: ONE wholly FICTIONAL adult male basketball player in a controlled, athletic driving stance, waist-up or mid-thigh composition on the right 40% of frame. He is clearly the visual hero, with expressive invented facial features, medium-length loose swept hair, clean-shaven rounded jaw, in grayscale ink with visible illustrative strokes. No resemblance intended to any real athlete; do not depict Jordan Faison, Tredarius McCallum or Jarrett Culver. Plain neutral gray sleeveless uniform, absolutely no jersey number, team colors, name, lettering, logos, brand or sponsor. The player grips a basketball near his right hip with a natural anatomically plausible hand, opposite arm bent naturally in motion, complete fingers and both hands fully inside frame. Ball is a small prop held by the athlete, not the primary image. This is a generic illustrative action, not a specific scoring play or a recreation of an actual game. No hoop, scoreboard, opponent, crowd, photographic material or photorealistic rendering.\nComposition: left 56% reserved for sharp uncluttered text; right 40% for athlete, pale gray face and ink shadows visibly readable, with one diagonal lime dry-brush sweep behind him. Leave generous outer margins and keep the player's head, hands and entire ball inside frame. At least 4% safe margin for all text. Lower edge should contain the readable disclaimer strip with no overlap. Strong professional editorial hierarchy; do not crowd the score or compress Japanese glyphs.\nRender ONLY these exact text strings, carefully proofread, with these hierarchy and positions:\nSmall upper-left masthead: 「バスケまとめ｜2026.10.30」\nSmall left context label: 「10/29 第1戦」\nLarge off-white left headline: 「東京U」\nLargest bold lime headline directly below: 「1点差勝利」\nClearly readable score beneath: 「東京U 69–68 静岡」\nSmaller off-white subline: 「第2戦 10/30 19:05予定」\nSmaller qualifier directly below it: 「原稿時点で第2戦の結果は未確認」\nBottom small but readable disclosure line: 「イラスト（AI生成）｜架空の選手」\nBottom adjacent or below disclosure: 「成績をもとにしたイメージ」\nUse proper Japanese typography, exact full-width parentheses around AI生成, en dash between score numbers. There are no player statistics and no jersey numbers. Do not add any extra slogan, player name, logo or extra information.\nEditorial grounding (do not add these as image text): fixed article dated 2026-10-30 reports Tokyo United beat Shizuoka 69-68 in the first game on 10/29. It mentions two athletes only as comparison examples and does not identify a single star. The second game's result is unconfirmed in the fixed article. Preserve this qualifier. The fictional athlete is not an assertion about who appeared or scored.\n\nSINGLE CORRECTION (player framing; final image):\nEdit this thumbnail once, making ONLY the player framing correction. Keep the exact 16:9 landscape dimensions, black #151A18 and lime #CCF43B ink-brush aesthetic, all text and its positioning, hierarchy, score, dates, qualifier and disclosures unchanged. The player is wholly fictional, with a plain neutral grayscale jersey, no number, no lettering, no logos, no real athlete likeness. Reduce the illustrated player AND his held basketball together in scale by approximately 10 percent, keeping his face and both natural hands clear. Reposition him slightly down and left inside the right half so that ALL hair has at least 45 pixels of dark background clearance above it and the hand holding the ball has at least 45 pixels clearance from the right edge. His lower thighs may leave the bottom image edge naturally. Keep the basketball a small held prop. Ensure the entire head, all hair, both hands with plausible fingers, and the entire ball are inside the canvas. Do not move text or overlap it. Do not change his invented face or add any people, logo or objects.\nPreserve these exact text strings with no additions:\nバスケまとめ｜2026.10.30\n10/29 第1戦\n東京U\n1点差勝利\n東京U 69–68 静岡\n第2戦 10/30 19:05予定\n原稿時点で第2戦の結果は未確認\nイラスト（AI生成）｜架空の選手\n成績をもとにしたイメージ\nMake a polished finished PNG; exactly one image.",
+    "generator": "image_gen",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T22:58:19.100061+00:00",
+  "publication_approved": false
+}
