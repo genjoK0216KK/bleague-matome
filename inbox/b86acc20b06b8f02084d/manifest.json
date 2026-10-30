@@ -1,0 +1,58 @@
+{
+  "id": "b86acc20b06b8f02084d",
+  "article_path": "article-results-one-next-20261030.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261030.html",
+  "source_commit": "",
+  "source_blob_sha": "d64f2a7abfc01fff2bb81030ffc30c57b8237d85",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "119913befcbf6b2ce74d07716178a7d5ac136f7eb2b84b35e65dc2b76fff038b",
+  "last_observed_blob_sha": "d64f2a7abfc01fff2bb81030ffc30c57b8237d85",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b86acc20b06b8f02084d/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b86acc20b06b8f02084d/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T11:28:44.320768+00:00",
+  "creation_event_id": "3e6d168af7c5770bdf96",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/b86acc20b06b8f02084d/thumbnail.png",
+  "image_sha256": "263186a6a4b874d0c6e1c202b83a6b22d950f13453bad51c58f0d888bb49b2d5",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "d64f2a7abfc01fff2bb81030ffc30c57b8237d85",
+    "text_lines": [
+      "バスケまとめ",
+      "10/30 試合結果",
+      "公式記録の",
+      "確定待ち",
+      "B.PREMIER / B.ONE / B.NEXT",
+      "2026.10.30 20:17 JST 時点",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b86acc20b06b8f02084d/source.html",
+        "role": "固定版HTML。記事見出し、試合日、20:17 JST時点の状態、3リーグすべての公式記録確定待ちを確認。",
+        "source_blob_sha": "d64f2a7abfc01fff2bb81030ffc30c57b8237d85"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b86acc20b06b8f02084d/source.txt",
+        "role": "固定版文章。HTMLとの内容一致を確認。今季平均と当日実績を区別し、未確定の点数・勝敗・当日順位は画像に記載していない。"
+      }
+    ],
+    "person_reference": {
+      "used": false,
+      "reason": "複数リーグの公式記録確定待ちを扱う記事で、特定選手を主役にしない。人物・顔・手を描かず、ボールとコートのイラストを使用。"
+    },
+    "prompt": "Use case: ads-marketing.\nCreate exactly ONE finished Japanese basketball editorial article thumbnail, PNG, landscape 1600x900 pixels, approximately 16:9, width greater than 1000px.\n\nThe article's fixed manuscript is a game-results page for 2026-10-30. At 20:17 JST all games are awaiting official finalized records. No finalized scores or daily EFF rankings are available. This pending status is the central message. Do not invent scores, winners, player accomplishments, rankings, or moments of play.\n\nArt direction: approved バスケまとめ black-and-lime editorial ink style. Near-black background #151A18, acid lime #CCF43B, off-white Japanese lettering, a single orange basketball as a small accent. Bold, clean Japanese gothic headline with rough dry-brush strokes and subtle ink flecks in the illustration and background. Hand-drawn illustration, never a photograph or photorealistic render. Few elements, confident typography, high contrast, generous negative space. Left 70 percent is primarily text, right 30 percent contains one orange basketball resting on a minimally suggested empty court, drawn in expressive black ink with lime diagonal brushwork behind it. The basketball must look like a basketball. No people, faces, hands, uniforms, logos, team emblems or sponsors. No scoreboard. Do not depict a particular game action. Do not include names or statistics from any example thumbnail.\n\nRender ONLY the following exact text, with correct Japanese characters and numbers, no extra wording:\nTop left small brand: \"バスケまとめ\"\nUpper headline in off-white, large: \"10/30 試合結果\"\nMain headline, largest type in vivid lime, two lines:\n\"公式記録の\"\n\"確定待ち\"\nBelow headline, smaller off-white line: \"B.PREMIER / B.ONE / B.NEXT\"\nBelow it, clear as-of line: \"2026.10.30 20:17 JST 時点\"\nAt bottom, two small but fully legible off-white editorial disclosures:\n\"イラスト（AI生成）\"\n\"成績をもとにしたイメージ\"\n\nThe pending qualifier must be the most prominent message, not a tiny disclaimer. The as-of time states the fixed manuscript timestamp, not real-time live information. Keep all text inside a 5 percent safe inset with no cropping and no overlap with art. Bottom disclosures should be horizontally aligned in the footer, comfortably inside the edge. Preserve the exact word \"確定待ち\"; no typo, distorted kanji or garbled punctuation. Do not copy any athlete, date or score from the style examples. No additional labels, badges, watermark, charts, tables or decorations.",
+    "generator": "built-in image_gen (image_gen__imagegen); 1 generation; 0 revisions",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T11:32:43.657831+00:00",
+  "publication_approved": false
+}

@@ -1,0 +1,65 @@
+{
+  "id": "c39e144583cffda92155",
+  "article_path": "article-games-20261030.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261030.html",
+  "source_commit": "",
+  "source_blob_sha": "df4af56e431efc80e246dde3f479ec96a0bc043a",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "119913befcbf6b2ce74d07716178a7d5ac136f7eb2b84b35e65dc2b76fff038b",
+  "last_observed_blob_sha": "df4af56e431efc80e246dde3f479ec96a0bc043a",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c39e144583cffda92155/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c39e144583cffda92155/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T11:28:44.032261+00:00",
+  "creation_event_id": "153756aaadfb7b7f9b45",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/c39e144583cffda92155/thumbnail.png",
+  "image_sha256": "b544d48b0312830cc1c5c25a24510f6a9fff22ca74ae999094656fae8f0b06dd",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "df4af56e431efc80e246dde3f479ec96a0bc043a",
+    "text_lines": [
+      "10/30 試合結果",
+      "公式記録の",
+      "確定待ち",
+      "2026年10月30日 20:17 JST時点",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c39e144583cffda92155/source.html",
+        "role": "固定版本文",
+        "evidence": [
+          "h1: 10/30 試合結果（公式記録の確定待ち）",
+          "result-asof: 各試合の状態は 2026-10-30 20:17 JST 時点の公式記録です",
+          "game-eff-pending: 全試合の公式記録確定待ち。確定後に掲載します。"
+        ]
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c39e144583cffda92155/source.txt",
+        "role": "固定版文章の照合",
+        "evidence": [
+          "試合日 2026.10.30",
+          "B.PREMIER・B.ONE・B.NEXTすべて公式記録確定待ち",
+          "今季平均EFFと当日の試合実績は別集計。今季平均の選手名・数値を当日の成績として使用していない。"
+        ]
+      }
+    ],
+    "person_reference": {
+      "used": false,
+      "reason": "特定人物が主役ではない試合結果一覧のため、人物・顔・手を描かず、汎用のバスケットボールとコートのイラストで構成。特定の実際のプレーや勝敗を描いていない。"
+    },
+    "prompt": "Use case: ads-marketing\nAsset type: Japanese basketball editorial article thumbnail, ONE final landscape PNG, 16:9, requested 2048 x 1152 pixels.\nPrimary request: Design a bold and beautiful thumbnail for the article「10/30 試合結果（公式記録の確定待ち）」. All games in the fixed source are awaiting official confirmation as of 2026-10-30 20:17 JST. This is the essential editorial meaning and must be unmistakable.\nStyle: Deep near-black #151A18 background, electric lime #CCF43B brush strokes, warm ivory lettering, one orange basketball. Thick Japanese gothic typography, textured hand-drawn ink, dry-brush strokes, restrained ink flecks. Strong editorial clarity and very few elements. The approved style was inspected: large white Japanese headline on black, lime accent brush and expressive ink illustration. Use this visual language only; no old player names, dates, teams or stats.\nSubject: A single large orange basketball, fully in frame, on the right, rendered as a graphic hand-drawn ink illustration. Sparse court arc lines below the ball, and one energetic diagonal lime brush behind it. No people, no faces, no hands, no player silhouettes, no arena or real game scene.\nComposition: Left two-thirds dominated by very large text; right third by the ball. All text horizontal, correctly spelled Japanese, crisp and immediately readable. Clean safe margins of at least 5% around every text line. No overlap between ball and text. No crowded panels. Flat artwork filling the image, no mockup frame.\nText (verbatim; render exactly these six lines, no other text):\n\"10/30 試合結果\"\n\"公式記録の\"\n\"確定待ち\"\n\"2026年10月30日 20:17 JST時点\"\n\"イラスト（AI生成）\"\n\"成績をもとにしたイメージ\"\nTypography hierarchy: Line 1 at top-left in bold ivory, approximately 90 px at 2048px wide. Lines 2 and 3 form the main headline in the middle-left; line 2 bold ivory approximately 140 px, line 3 bold lime approximately 180 px. The word「確定待ち」must be the strongest visual message. Line 4 beneath the headline in clearly readable ivory approximately 40 px. Lines 5 and 6 at bottom-left, small but clearly legible ivory approximately 32 px, on separate lines or one well-spaced footer row, with full safe margins.\nConstraints: State only the pending status from the fixed article. Do not invent scores, rankings, performances, winners, final results, live status or shots. No EFF values, no athlete names, no teams, no numbers except the exact date/time text. No logos, sponsor text, badges, watermarks, photography, photorealism, or additional explanatory wording. The two AI illustration footer labels are required verbatim. The ball is a generic symbolic illustration and does not depict an actual event.",
+    "generator": "image_gen__imagegen（内蔵画像生成、初回1枚、修正0回）",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T11:30:43.702328+00:00",
+  "publication_approved": false
+}
