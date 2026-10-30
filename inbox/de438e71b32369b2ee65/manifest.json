@@ -1,0 +1,102 @@
+{
+  "id": "de438e71b32369b2ee65",
+  "article_path": "article-games-20261031.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261031.html",
+  "source_commit": "",
+  "source_blob_sha": "417ea1c607bd2739bf02cb6f2b8aa83c085e5497",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "380e424e45707806c601963e3eb2e0f9f1e8877876267834877426545c864694",
+  "last_observed_blob_sha": "417ea1c607bd2739bf02cb6f2b8aa83c085e5497",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/de438e71b32369b2ee65/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/de438e71b32369b2ee65/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T15:06:14.482693+00:00",
+  "creation_event_id": "f7da26b3395217668629",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/de438e71b32369b2ee65/thumbnail.png",
+  "image_sha256": "72f0ad253251e00c743a7a317529f99b195269adca93a21b390b1a809f1bf946",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "417ea1c607bd2739bf02cb6f2b8aa83c085e5497",
+    "text_lines": [
+      "バスケまとめ",
+      "10/31",
+      "試合予定",
+      "B.PREMIER / B.ONE / B.NEXT",
+      "当日EFF・TOP3は",
+      "公式記録確定後に掲載",
+      "2026.10.31 00:04〜00:05 JST取得時点",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/de438e71b32369b2ee65/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261031.html",
+        "source_blob_sha": "417ea1c607bd2739bf02cb6f2b8aa83c085e5497",
+        "verified_blob_sha": true,
+        "used_facts": [
+          "試合日2026.10.31。B.PREMIER・B.ONE・B.NEXTの試合予定が掲載されている。",
+          "固定原稿の掲載試合はすべて試合前。",
+          "当日のEFF・ポジション別TOP3は全試合の公式記録確定待ちで、確定後に掲載する。",
+          "資料取得は2026-10-31 00:04〜00:05 JST。",
+          "公式記録は訂正される場合があり、選手の出場は保証されない。"
+        ],
+        "editorial_decision": "本文にベスト5の選手・成績が載っていないため、ページタイトルだけを根拠に選手やランキングを描かず、試合予定と記録確定待ちを表現した。外部記事・公式サイトは内容根拠に使用していない。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/de438e71b32369b2ee65/source.txt",
+        "role": "固定HTML本文との照合"
+      },
+      {
+        "type": "production_rules",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "role": "制作と検品のルールのみ。記事内容の根拠には使わない。"
+      },
+      {
+        "type": "visual_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "viewed": true,
+        "role": "黒×ライム、太い日本語、インク・ブラシ、少ない要素。参照画像の人物、日付、得点、チーム名は引き継いでいない。"
+      }
+    ],
+    "person_reference": {
+      "used": false,
+      "named_person_depicted": false,
+      "reason": "固定本文に特定人物の主役はない。ボールとコートだけのイラストで構成し、人物・顔・手・ユニフォーム・ロゴは描かない。実在する試合場面の再現ではない。"
+    },
+    "prompt": "Use case: ads-marketing\nAsset type: ONE Japanese basketball news article thumbnail, landscape PNG, 16:9 composition, target 1536 × 864 or larger. Full bleed artwork with a generous 60 px safe margin for all lettering.\nCreate a finished Japanese editorial thumbnail for バスケまとめ. This is a brand-new image. Follow the approved black-and-lime reference visual style already inspected in this conversation: charcoal black #151A18, vivid lime #CCF43B, off-white type, bold Japanese headline, hand-drawn ink lines and dry-brush strokes, very few elements. Do not carry over the reference player, names, date, score or statistics.\nScene and subject: On the right, one expressive orange basketball drawn with black ink and rough brush texture, above a few minimal perspective basketball-court lines. Abstract editorial illustration, no human figures, no hands, no real match scene, no logos or sponsors. A broad diagonal lime brush stroke provides energy behind the basketball. Do not draw a trophy, leaderboard, medal, scoreboard, winner, or a shot entering a basket.\nComposition: Strong headline-dominant editorial layout. Left approximately 63 percent is reserved for very legible typography. Right approximately 37 percent holds the basketball illustration, separated cleanly from lettering. Small brand at upper left; oversized date and Japanese main headline below; three league names as a restrained supporting line; a readable status note below. Bottom two footer lines occupy a quiet dark strip with adequate space. Avoid excessive decorative particles.\nExact text to render, verbatim, once each, no extra text:\nSmall masthead: \"バスケまとめ\"\nVery large lime brush numerals: \"10/31\"\nVery large bold off-white Japanese headline: \"試合予定\"\nSupporting league line: \"B.PREMIER / B.ONE / B.NEXT\"\nStatus note, readable off-white, two lines if needed: \"当日EFF・TOP3は\" / \"公式記録確定後に掲載\"\nSmall timestamp above footer: \"2026.10.31 00:04〜00:05 JST取得時点\"\nBottom disclosure line 1: \"イラスト（AI生成）\"\nBottom disclosure line 2: \"成績をもとにしたイメージ\"\nUse solid, correctly shaped Japanese glyphs. All wording must be visible without cropping, including the exact AI disclosure. Minimum footer size approximately 22 px at 1536 px width. Main headline must remain legible at thumbnail size.\nEditorial ground truth from fixed local manuscript only: the article is dated 2026-10-31; all listed matches are pre-game as of source retrieval at 00:04–00:05 JST. All three leagues' daily EFF position TOP3 are awaiting confirmation of all official game records, and will be published afterwards. There is no verified named-player protagonist or finished score to feature. The mandatory second disclosure is a site style label and must not lead to invented performance facts. No player names, point totals, rankings, result scores, or promises of player appearances. No photorealism. Output only one polished final thumbnail image.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "correction_calls": 0,
+      "source_output": "/Users/genjo/.codex/generated_images/01a18d58-e0ce-7e42-a3e6-84b1de07cefd/exec-41fce2c0-6f12-49af-bf98-af1a54263adc.png",
+      "saved_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/de438e71b32369b2ee65/generated.png",
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "sha256": "72f0ad253251e00c743a7a317529f99b195269adca93a21b390b1a809f1bf946",
+      "postprocessing": "none; byte-for-byte copy",
+      "qa_observations": {
+        "text_and_numbers": "生成画像を目視で確認。10/31、試合予定、3リーグ名、EFF・TOP3、取得日時の文字と数字を固定原稿と照合。成績・得点・選手順位の創作なし。",
+        "source_qualifiers": "生成画像に「公式記録確定後に掲載」と資料取得日時を明記。確定済み結果や出場保証を表す描写なし。",
+        "likeness_or_no_named_person": "生成画像はボールとコートの抽象イラストのみ。人物、顔、手、選手名、チームロゴ、スポンサー文字なし。",
+        "layout": "生成画像を目視で確認。全ての文字が画面内に収まり、見切れや重なりなし。黒地にライムと白で高いコントラスト。1672×941px、約16:9。",
+        "ai_label": "生成画像の左下に「イラスト（AI生成）」「成績をもとにしたイメージ」の両方が読めることを確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T15:08:47.351505+00:00",
+  "publication_approved": false
+}
