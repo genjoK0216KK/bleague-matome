@@ -129,7 +129,7 @@
    "players": null,
    "holds": [],
    "excluded": [],
-   "content_as_of": "2026-10-30 18:59 JST",
+   "content_as_of": "2026-10-30 20:17 JST",
    "source": "data/match_articles/article-games-20261029.json"
   },
   "2026-10-30": {
@@ -142,7 +142,7 @@
      "key": "506519",
      "home": "秋田",
      "away": "A千葉",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -150,7 +150,7 @@
      "key": "506520",
      "home": "信州",
      "away": "京都",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -158,13 +158,13 @@
      "key": "506521",
      "home": "名古屋D",
      "away": "滋賀",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     }
    ],
    "excluded": [],
-   "content_as_of": "2026-10-30 18:59 JST",
+   "content_as_of": "2026-10-30 20:17 JST",
    "source": "data/match_articles/article-games-20261030.json"
   }
  },
