@@ -1,0 +1,70 @@
+{
+  "id": "3d20be125ac18075c9b0",
+  "article_path": "article-daily-20261030.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261030.html",
+  "source_commit": "",
+  "source_blob_sha": "4105b0457757441c4314ee080fad0bc5a960fe7e",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "68acc30218ce7e01b7d04172c20348296b1b52b0c2e88fa2c0a4dab97e1f5d09",
+  "last_observed_blob_sha": "4105b0457757441c4314ee080fad0bc5a960fe7e",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3d20be125ac18075c9b0/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3d20be125ac18075c9b0/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T10:34:00.158786+00:00",
+  "creation_event_id": "e9fca8028d1ec4b4bc39",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/3d20be125ac18075c9b0/thumbnail.png",
+  "image_sha256": "f2d17ad07667b786dc28ace1502f12eb3ed01f4d13a2b480e1ee55d5f31c3d22",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "4105b0457757441c4314ee080fad0bc5a960fe7e",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.30",
+      "第1戦｜10/29",
+      "東京U 競り勝ち",
+      "東京U",
+      "静岡",
+      "69-68",
+      "第2戦｜10/30 19:05開始予定",
+      "原稿時点：第2戦の結果は未確認",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3d20be125ac18075c9b0/source.html",
+        "role": "固定HTML。本文の根拠。外部リンク先は未参照。",
+        "article_url": "https://basuke-matome.jp/article-daily-20261030.html",
+        "verified_blob_sha": "4105b0457757441c4314ee080fad0bc5a960fe7e",
+        "evidence": [
+          "本文第1戦の結果：10/29、東京U 69-68 静岡。",
+          "記事日付：2026.10.30。",
+          "第2戦：10/30 19時05分開始予定。原稿19時台更新でも結果は未確認。"
+        ],
+        "qualifiers": "第1戦のスコアと第2戦の予定を画像上で分離。第2戦結果未確認を明記。独自予測、EFF値、出場選手、未確認の公式情報は画像に追加していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3d20be125ac18075c9b0/source.txt",
+        "role": "固定文章。HTML本文と同じ得点・日付・予定・未確認の留保を照合。",
+        "sha256": "68acc30218ce7e01b7d04172c20348296b1b52b0c2e88fa2c0a4dab97e1f5d09"
+      }
+    ],
+    "person_reference": {
+      "mode": "no_named_person",
+      "reason": "記事の主題はチームの第1戦結果と第2戦予定。特定人物を描かず、ボールと一般的なコート線だけで構成。人物、顔、手、ユニフォーム、チームロゴ、スポンサー文字は画像内にない。",
+      "official_profile_used": false
+    },
+    "prompt": "Use case: ads-marketing\nAsset type: A single finished editorial thumbnail for the Japanese basketball news site バスケまとめ.\nPrimary request: Generate ONE landscape PNG, 1920 x 1080 pixels (16:9), at least 1000 pixels wide. All typography and illustration must be generated together as a complete final image.\n\nStyle reference: Match the approved black-and-lime basketball thumbnail visible in this conversation: near-black #151A18 background, vivid lime #CCF43B brushwork, warm ivory typography, bold Japanese Gothic headline, expressive hand-painted ink hatching and diagonal dry-brush energy. Use this reference ONLY for its visual language. Its people, names, statistics and dates must NOT appear in this new thumbnail.\n\nSubject: ONE large orange basketball illustrated in rough expressive ink, on the right third, with a few subtle generic court lines and one strong diagonal lime brush stroke. This article is about a team game result, not an individual player. No people, faces, hands, uniforms, team badges, sponsors, logos, venue depiction or a reconstructed real match scene. The ball is a symbolic illustration, not a game-winning shot.\n\nComposition: Editorial sports poster with very few visual elements, generous safe margins of 70 pixels on all sides, clean and readable even at thumbnail size. Left two-thirds are the text field on uninterrupted dark background; the right third is the ball illustration. Bottom footer remains clean and unobstructed. Avoid clutter, tiny microtext, gradients, photographic realism, decorative pseudo-writing, or panels around every line.\n\nExact visible text and hierarchy:\n1. Small upper-left brand: \"バスケまとめ\"\n2. Small date adjacent to or under the brand: \"2026.10.30\"\n3. Clear compact label above the headline/score: \"第1戦｜10/29\"\n4. Very large ivory headline: \"東京U 競り勝ち\"\n5. Very large lime score: \"69-68\"\n   Place \"東京U\" directly above the left score 69 and \"静岡\" directly above the right score 68, as smaller clear labels. These are the two sides of the score. Make the score the dominant element.\n6. Across the lower portion, readable medium-size ivory line: \"第2戦｜10/30 19:05開始予定\"\n7. Directly below that, smaller but clearly readable qualifier: \"原稿時点：第2戦の結果は未確認\"\n8. Two mandatory footer phrases, legible ivory, not cut off: \"イラスト（AI生成）\" and \"成績をもとにしたイメージ\"\n\nText must be rendered exactly with correct Japanese glyphs, digits, and punctuation. Do not add any other words, numbers, English subheadings or team/player names. Do not carry over the reference's date, score, player name or point total.\n\nFactual grounding supplied by the frozen manuscript only: Tokyo United defeated Shizuoka 69 to 68 in Game 1 on October 29. Game 2 is scheduled for October 30 at 19:05; its result is unconfirmed at manuscript time. The first game's score must never be presented as the second game's score. Do not predict a winner, imply Game 2 is completed, assert any player appearance, or turn the article's independent forecast into a fact. All image content must respect these qualifiers.",
+    "generator": "built-in image_gen (image_gen__imagegen); 1 generation; 0 revisions",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T10:41:24.730449+00:00",
+  "publication_approved": false
+}
