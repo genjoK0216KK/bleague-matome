@@ -9,11 +9,14 @@ name: 自動生成サムネを取り込み
 # data/thumbs/config.json の enabled が true の時だけ動く（既定 false＝何もしない）。
 # 順番待ちの列 site-update には並ばない（2件目の待ちが古い待ちを取り消すため、通常更新を消さないように）。
 # 代わりに、公開が他の更新とぶつかったら最新の main から作り直して最大3回やり直す。
+# 記事の push で update.yml が動くようになったので、作り直しの画像は update.yml の実行中に届きやすい。先に公開すると
+# update.yml の最後の rebase が生成ページでぶつかって失敗する（10/30 19:18）ため、終わるまで待ってから取り込む。
 on:
   workflow_dispatch:
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: thumbs
@@ -24,6 +27,17 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      - name: 通常更新の実行中は待つ（公開がぶつからないように）
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 20); do
+            busy=$(gh run list -R "$GITHUB_REPOSITORY" -w update.yml -L 5 --json status \
+                   -q '[.[] | select(.status != "completed")] | length') || busy=0
+            [ "$busy" = "0" ] && exit 0
+            sleep 30
+          done
+          echo "::warning::通常更新が10分で終わらないため、待たずに取り込みます"
       - uses: actions/checkout@v4
         with:
           ref: main
