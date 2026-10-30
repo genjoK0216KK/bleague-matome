@@ -673,6 +673,15 @@ class Install(unittest.TestCase):
         self.assertEqual(w.DEFAULT_AUTOMATION.parents[1].name, 'automation')   # 原稿の作業フォルダ（parents[1]/work）も同じ下
         self.assertNotIn('/Documents/', (HOOK / 'com.genjo.basuke-thumb-hook.plist').read_text())
 
+    def test_prompt_requires_a_person_not_just_a_ball(self):
+        # 10/31 本人「バスケットボールだったらイラスト作る意味あんまりない」
+        w = load('thumb_worker')
+        job = dict(id='a', url='u', source='s', text='t', blob='b')
+        prompt = w.prompt_for(job, 'x.png', 'x.json')
+        self.assertIn('主役は必ず人物', prompt)
+        self.assertIn('実在しない架空の選手', prompt)
+        self.assertIn('チームロゴ', prompt)
+
     def test_gh_is_on_path_for_launchd(self):
         # 10/29 ingest_started=false：launchd の PATH に ~/.local/bin（gh の場所）が無かった
         w = load('thumb_worker')
