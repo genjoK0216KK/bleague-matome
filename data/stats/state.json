@@ -6,8 +6,7 @@
   "506508": "2026-10-25",
   "506509": "2026-10-25",
   "506519": "2026-10-30",
-  "506520": "2026-10-30",
-  "506521": "2026-10-30"
+  "506520": "2026-10-30"
  },
  "published": [
   "2026-10-12",
@@ -135,7 +134,7 @@
   "2026-10-30": {
    "state": "held",
    "games_total": 3,
-   "games_ready": 0,
+   "games_ready": 1,
    "players": null,
    "holds": [
     {
@@ -153,18 +152,10 @@
      "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
-    },
-    {
-     "key": "506521",
-     "home": "名古屋D",
-     "away": "滋賀",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
     }
    ],
    "excluded": [],
-   "content_as_of": "2026-10-30 22:03 JST",
+   "content_as_of": "2026-10-30 22:08 JST",
    "source": "data/match_articles/article-games-20261030.json"
   }
  },

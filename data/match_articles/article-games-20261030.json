@@ -4296,12 +4296,12 @@
           "TO": 6,
           "AS": 7,
           "ST": 2,
-          "BS": 0,
+          "BS": 1,
           "BSON": 0,
           "PTFB": 3,
           "PT2IN": 3,
           "PT2ND": 0,
-          "EFF": 22,
+          "EFF": 23,
           "PLUSMINUS": -2,
           "AST_TO": 1.1666666666666667,
           "EFG": 0.6923076923076923,
@@ -4417,8 +4417,8 @@
           "FOUL": 0,
           "FOULON": 1,
           "RB_OFF": 0,
-          "RB_DEF": 0,
-          "RB_TOT": 0,
+          "RB_DEF": 1,
+          "RB_TOT": 1,
           "TO": 2,
           "AS": 0,
           "ST": 1,
@@ -4427,7 +4427,7 @@
           "PTFB": 0,
           "PT2IN": 2,
           "PT2ND": 0,
-          "EFF": 2,
+          "EFF": 3,
           "PLUSMINUS": 7,
           "AST_TO": 0,
           "EFG": 0.6666666666666666,
@@ -4516,7 +4516,7 @@
           "AST_TO": 0,
           "EFG": 0.8,
           "TS": 0.8272058823529411,
-          "USG": 26.124271457138118
+          "USG": 25.819934650787484
         },
         {
           "Code": 546,
@@ -4537,7 +4537,7 @@
           "PT3M": 0,
           "PT3A": 2,
           "PT2M": 4,
-          "PT2A": 6,
+          "PT2A": 7,
           "FTM": 0,
           "FTA": 0,
           "FOUL": 4,
@@ -4549,16 +4549,16 @@
           "AS": 3,
           "ST": 0,
           "BS": 0,
-          "BSON": 0,
+          "BSON": 1,
           "PTFB": 1,
           "PT2IN": 4,
           "PT2ND": 1,
-          "EFF": 9,
+          "EFF": 7,
           "PLUSMINUS": 10,
           "AST_TO": 3,
-          "EFG": 0.5,
-          "TS": 0.5,
-          "USG": 15.150643942777188
+          "EFG": 0.4444444444444444,
+          "TS": 0.4444444444444444,
+          "USG": 16.637939216439072
         },
         {
           "Code": 546,
@@ -4600,7 +4600,7 @@
           "AST_TO": 2.5,
           "EFG": 0.42857142857142855,
           "TS": 0.4704301075268817,
-          "USG": 25.31363234793435
+          "USG": 25.018739147236143
         },
         {
           "Code": 546,
@@ -4642,7 +4642,7 @@
           "AST_TO": 1.3333333333333333,
           "EFG": 0.55,
           "TS": 0.55,
-          "USG": 35.18108416498046
+          "USG": 34.77123928887397
         },
         {
           "Code": 546,
@@ -4684,7 +4684,7 @@
           "AST_TO": 0,
           "EFG": 0.5,
           "TS": 0.5,
-          "USG": 11.347195759839678
+          "USG": 11.21500568808013
         },
         {
           "Code": 546,
@@ -4726,7 +4726,7 @@
           "AST_TO": 5,
           "EFG": 0.5,
           "TS": 0.5,
-          "USG": 9.11511040606823
+          "USG": 9.008923192577221
         },
         {
           "Code": 546,
@@ -4810,7 +4810,7 @@
           "AST_TO": 2,
           "EFG": 0.6875,
           "TS": 0.6875,
-          "USG": 27.846621691565755
+          "USG": 27.522220227311728
         },
         {
           "Code": 546,
@@ -4852,7 +4852,7 @@
           "AST_TO": 5,
           "EFG": 0.5,
           "TS": 0.6443298969072165,
-          "USG": 17.08794236699541
+          "USG": 16.88887500484495
         },
         {
           "Code": 546,
@@ -4894,7 +4894,7 @@
           "AST_TO": 0,
           "EFG": 0,
           "TS": 0.5681818181818182,
-          "USG": 5.56799534219961
+          "USG": 5.503130531596165
         },
         {
           "Code": 546,
@@ -4928,7 +4928,7 @@
           "ST": 0,
           "BS": 0,
           "BSON": 0,
-          "PTFB": 1,
+          "PTFB": 2,
           "PT2IN": 2,
           "PT2ND": 0,
           "EFF": 5,
@@ -4936,10 +4936,10 @@
           "AST_TO": 0,
           "EFG": 0.5833333333333334,
           "TS": 0.6211180124223602,
-          "USG": 25.05389025835115
+          "USG": 24.76202294406467
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506519/62.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506519/65.json"
     },
     {
       "game_id": "506521",
@@ -4947,10 +4947,10 @@
       "competition": "BP",
       "starts_at": "2026-10-30T10:35:00+00:00",
       "ended": true,
-      "fixed": false,
+      "fixed": true,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506521",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
-      "status": "unconfirmed",
+      "status": "final",
       "home": "名古屋D",
       "home_full": "名古屋ダイヤモンドドルフィンズ",
       "home_id": "729",
@@ -6011,7 +6011,7 @@
           "USG": 10.853985553344918
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506521/106.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506521/108.json"
     }
   ],
   "individual_candidates": [],
