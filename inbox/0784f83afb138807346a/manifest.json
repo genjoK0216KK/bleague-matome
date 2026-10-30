@@ -1,0 +1,82 @@
+{
+  "id": "0784f83afb138807346a",
+  "article_path": "article-stats-20261030.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261030.html",
+  "source_commit": "",
+  "source_blob_sha": "68b9f1b3684ecbc40bf4ba5ecb4b1cb692e5fd3c",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "9bcf5520f7116ce8bf1d4ba86536d8f71821f0c2f8390aff97d5e6608eb84937",
+  "last_observed_blob_sha": "68b9f1b3684ecbc40bf4ba5ecb4b1cb692e5fd3c",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/0784f83afb138807346a/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/0784f83afb138807346a/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T13:24:01.970194+00:00",
+  "creation_event_id": "a6ca0cada83e170900c2",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/0784f83afb138807346a/thumbnail.png",
+  "image_sha256": "8c0e9cd376e7935267c0d9ed6135356255171e4b1bf5086dc161046d0cbe03e5",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "68b9f1b3684ecbc40bf4ba5ecb4b1cb692e5fd3c",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.30｜3試合対象",
+      "貢献度ランキング",
+      "アンジェロ・カロイアロ（京都）",
+      "EFF 30　1位",
+      "22得点・3リバウンド・7アシスト",
+      "公式訂正により記録が変わる場合があります",
+      "イラスト（AI生成）　成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/0784f83afb138807346a/source.html",
+        "role": "固定版原稿・本文根拠",
+        "blob_sha": "68b9f1b3684ecbc40bf4ba5ecb4b1cb692e5fd3c",
+        "evidence": "2026年10月30日のB.PREMIER 3試合。アンジェロ・カロイアロ（京都）が貢献度1位、EFF 30、22得点・3リバウンド・7アシスト。",
+        "qualifiers": "当日3試合を対象とするランキング。記録は公式訂正で変わる場合がある。シーズン順位・得点1位・京都の勝利を示す表現は使用していない。国籍別の分類は使用していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/0784f83afb138807346a/source.txt",
+        "role": "固定版文章・本文根拠の照合",
+        "sha256": "9bcf5520f7116ce8bf1d4ba86536d8f71821f0c2f8390aff97d5e6608eb84937",
+        "evidence": "見出し・導入・貢献度TOP3・TOP10表・公式訂正の注記を照合。本文の根拠はこのTXTと固定HTMLのみ。外部ページは参照していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイル参照。view_imageで実見。黒・ライム・インク／ブラシと文字の強弱だけを参照し、選手名・数値・人物は転用していない。"
+      }
+    ],
+    "person_reference": {
+      "used": false,
+      "depicted_person": false,
+      "mode": "basketball_and_court_illustration",
+      "reason": "公式プロフィール写真による容姿確認をしていないため、手順書の代替規則に従い人物を描かず、ボールとコートで構成。選手名は本文に基づく文字としてのみ掲載。実際の特定プレーを再現していない。"
+    },
+    "prompt": "Use case: ads-marketing\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 1920×1080 or higher with the same aspect ratio, opaque PNG.\n\nVisual style: approved バスケまとめ editorial style: near-black #151A18 background, vivid lime #CCF43B dry-brush ink strokes, warm ivory bold Japanese lettering, a restrained orange basketball. Hand-drawn ink, screen-printed grit, bold dynamic sports editorial design. Few elements, generous breathing room. Illustration, never a photo.\n\nComposition: text on the left and center, an expressive illustrated basketball and a few perspective court lines on the right. No person, no portrait, no face, no hands, no silhouette of a player. Ball is a symbolic still-life, not a depiction of an actual decisive shot. No team logos, sponsor text, trophies, flags or invented statistics. Do not carry over names, dates or numbers from any prior reference.\n\nTypography hierarchy: at top left small brand and date; below a strong white title; below that medium athlete-name text; then dominant extra-large lime “30” with clear “EFF” and “1位” immediately beside it, making it unambiguous that 30 is contribution rating, not points scored. Supporting statistics sit below in one clearly readable line. At bottom, two compact but legible footer lines. Leave all text fully inside safe margins (5% horizontal, 4% vertical). Keep the right illustration away from all text. Japanese type must be exceptionally precise and readable.\n\nRender ONLY the following exact text, using these line groups:\n“バスケまとめ”\n“2026.10.30｜3試合対象”\n“貢献度ランキング”\n“アンジェロ・カロイアロ（京都）”\n“1位”\n“EFF 30”\n“22得点・3リバウンド・7アシスト”\n“公式訂正により記録が変わる場合があります”\n“イラスト（AI生成）　成績をもとにしたイメージ”\n\nContent ground truth: the fixed article says Angelo Caloiaro of Kyoto ranked first in contribution EFF among players in the three B.PREMIER games on October 30, 2026. EFF 30, 22 points, 3 rebounds, 7 assists. The ranking is for that day's three games only, not season standings, and records can change on official correction. The thumbnail must not imply Kyoto won or that this player led in scoring. No nationality classification. No other information or text.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "attempts": 1,
+      "revisions": 0,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "sha256": "8c0e9cd376e7935267c0d9ed6135356255171e4b1bf5086dc161046d0cbe03e5",
+      "qa_method": "生成画像を実見して文字・数値・留保・人物不在・レイアウト・AI表記を確認。sipsで形式と寸法を照合し、PNG各チャンクのCRCを検証。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T13:26:33.384760+00:00",
+  "publication_approved": false
+}
