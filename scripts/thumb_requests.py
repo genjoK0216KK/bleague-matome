@@ -143,8 +143,32 @@ def backfill(root, now=None):
     return {'requested': requested}
 
 
+def redo(root, names, now=None):
+    """指定の記事を、いまの版で依頼し直す。生成中に記事が変わって生成側で止まった時に手で実行する（10/30）。"""
+    root = Path(root)
+    target = root / REQUESTS
+    data = thumb_auto.load_json(target, None)
+    if not thumb_auto.enabled(root) or not isinstance(data, dict):
+        return {'requested': []}
+    stamp = (now or datetime.now(timezone.utc)).isoformat()
+    requested = []
+    for article, date in _articles(root):
+        old = data.get('events', {}).get(article.name)
+        if article.name in names and old:
+            data['events'][article.name] = _entry(article, article.read_bytes(), 'requested', stamp, date,
+                                                  old.get('revision', 0) + 1)
+            requested.append(article.name)
+    if requested:
+        thumb_auto.save_json(target, data)
+    return {'requested': requested}
+
+
 if __name__ == '__main__':
     import sys
     root = Path(__file__).resolve().parent.parent
-    action = init if '--init' in sys.argv[1:] else backfill if '--backfill' in sys.argv[1:] else record
-    print(json.dumps(action(root), ensure_ascii=False))
+    args = sys.argv[1:]
+    if args[:1] == ['--redo']:
+        print(json.dumps(redo(root, args[1:]), ensure_ascii=False))
+    else:
+        action = init if '--init' in args else backfill if '--backfill' in args else record
+        print(json.dumps(action(root), ensure_ascii=False))

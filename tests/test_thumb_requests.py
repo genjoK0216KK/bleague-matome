@@ -146,6 +146,19 @@ class Record(unittest.TestCase):
         self.assertEqual(tr.backfill(self.root, T0), {'requested': []})
         self.assertEqual((self.root / tr.REQUESTS).read_text(), before)
 
+    def test_manual_redo_makes_a_new_event_with_the_current_version(self):
+        tr.init(self.root, T0)
+        games = self.root / 'article-games-20261027.html'
+        games.write_text(page('v0'))
+        tr.record(self.root, T0)
+        first = self.ledger()['article-games-20261027.html']
+        games.write_text(page('v1'))
+        self.assertEqual(tr.redo(self.root, ['article-games-20261027.html'], T0)['requested'], ['article-games-20261027.html'])
+        e = self.ledger()['article-games-20261027.html']
+        self.assertNotEqual(e['event_id'], first['event_id'])
+        self.assertEqual((e['revision'], e['source_blob_sha']), (1, ta.blob_sha(games.read_bytes())))
+        self.assertEqual(tr.redo(self.root, ['article-games-20991231.html'], T0), {'requested': []})
+
     def test_redo_is_limited_per_article(self):
         tr.init(self.root, T0)
         daily = self.root / 'article-daily-20261027.html'
