@@ -476,6 +476,34 @@
    "style": "ink-lime-portrait-v3",
    "title": "10/30 試合結果（公式記録の確定待ち）"
   },
+  "article-results-one-next-20261031.html": {
+   "article_path": "article-results-one-next-20261031.html",
+   "editorial_fingerprint": "ecd9461a0817bbf22e8eafa92f8eaca10e6254b9d05493b69c9553834d2e1102",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-results-one-next-20261031-69e048314f70.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-results-one-next-20261031-69e048314f70-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "292138556e17df566d67",
+   "image_sha256": "69e048314f70e2f62aa8ca342988fdb0e09e3117eefa5cf429dd879f4d7c3ba4",
+   "imported_at": "2026-10-30T18:14:30.737832+00:00",
+   "prepared_at": "2026-10-30T18:14:09.648916+00:00",
+   "source_blob_sha": "b134f795e6a0c383d5f54d9dd4d385281a0554a5",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "ecd9461a0817bbf22e8eafa92f8eaca10e6254b9d05493b69c9553834d2e1102",
+   "style": "ink-lime-portrait-v3",
+   "title": "10/31 出場予定選手（登録選手）のベスト5"
+  },
   "article-stats-20261026.html": {
    "article_path": "article-stats-20261026.html",
    "editorial_fingerprint": "4dee189b42df9c61ab94a2baf32767384485b8e21e43078c6dd0012d21c150d2",
@@ -806,11 +834,19 @@
    "event": "imported",
    "id": "de438e71b32369b2ee65",
    "image": "72f0ad253251"
+  },
+  {
+   "article": "article-results-one-next-20261031.html",
+   "at": "2026-10-30T18:14:30.737855+00:00",
+   "event": "imported",
+   "id": "292138556e17df566d67",
+   "image": "69e048314f70"
   }
  ],
  "seen": {
   "0784f83afb138807346a": "imported",
   "1237ac56ecfe95c7fd0a": "imported",
+  "292138556e17df566d67": "imported",
   "2d836f0394de01c7d009": "imported",
   "3d20be125ac18075c9b0": "imported",
   "44da7637029692ee5a53": "superseded:1237ac56ecfe95c7fd0a",
