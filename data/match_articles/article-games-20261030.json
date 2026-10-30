@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "status": "pending",
+  "status": "ready",
   "article_key": "article-results-one-next-20261030",
   "games": [
     {
@@ -3957,10 +3957,10 @@
       "competition": "BP",
       "starts_at": "2026-10-30T10:30:00+00:00",
       "ended": true,
-      "fixed": false,
+      "fixed": true,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506519",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
-      "status": "unconfirmed",
+      "status": "final",
       "home": "秋田",
       "home_full": "秋田ノーザンハピネッツ",
       "home_id": "693",
@@ -3984,7 +3984,7 @@
           "PlayerNameE": "Troy Murphy Jr.",
           "StartingFlg": 1,
           "PlayTime": "20:36",
-          "PlayingFlg": false,
+          "PlayingFlg": true,
           "Point": 9,
           "PT3M": 0,
           "PT3A": 3,
@@ -4026,7 +4026,7 @@
           "PlayerNameE": "Shigehiro Taguchi",
           "StartingFlg": 1,
           "PlayTime": "15:50",
-          "PlayingFlg": true,
+          "PlayingFlg": false,
           "Point": 6,
           "PT3M": 2,
           "PT3A": 3,
@@ -4937,7 +4937,7 @@
           "USG": 24.766976339332537
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506519/73.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506519/78.json"
     },
     {
       "game_id": "506521",
@@ -6535,7 +6535,315 @@
     "aggregation": "game_total",
     "leagues": {
       "BP": {
-        "error": "全試合の公式記録確定待ち"
+        "positions": {
+          "PG": [
+            {
+              "player_id": "14301",
+              "team_id": "729",
+              "name": "齋藤 拓実",
+              "team": "名古屋D",
+              "positions": [
+                "PG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506521",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=729",
+              "game_id": "506521",
+              "formula_value": 23,
+              "pts": 15,
+              "reb": 1,
+              "ast": 4,
+              "eff": 23,
+              "rank": 1
+            },
+            {
+              "player_id": "51000410",
+              "team_id": "693",
+              "name": "マーク・スミス",
+              "team": "秋田",
+              "positions": [
+                "PG",
+                "SG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506519",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=693",
+              "game_id": "506519",
+              "formula_value": 23,
+              "pts": 20,
+              "reb": 5,
+              "ast": 7,
+              "eff": 23,
+              "rank": 1
+            },
+            {
+              "player_id": "8520",
+              "team_id": "2486",
+              "name": "杉本 慶",
+              "team": "A千葉",
+              "positions": [
+                "PG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506519",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2486",
+              "game_id": "506519",
+              "formula_value": 18,
+              "pts": 10,
+              "reb": 3,
+              "ast": 5,
+              "eff": 18,
+              "rank": 3
+            }
+          ],
+          "SG": [
+            {
+              "player_id": "51000410",
+              "team_id": "693",
+              "name": "マーク・スミス",
+              "team": "秋田",
+              "positions": [
+                "PG",
+                "SG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506519",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=693",
+              "game_id": "506519",
+              "formula_value": 23,
+              "pts": 20,
+              "reb": 5,
+              "ast": 7,
+              "eff": 23,
+              "rank": 1
+            },
+            {
+              "player_id": "14302",
+              "team_id": "729",
+              "name": "今村 佳太",
+              "team": "名古屋D",
+              "positions": [
+                "SG",
+                "SF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506521",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=729",
+              "game_id": "506521",
+              "formula_value": 20,
+              "pts": 17,
+              "reb": 2,
+              "ast": 4,
+              "eff": 20,
+              "rank": 2
+            },
+            {
+              "player_id": "8655",
+              "team_id": "699",
+              "name": "岸本 隆一",
+              "team": "京都",
+              "positions": [
+                "PG",
+                "SG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506520",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=699",
+              "game_id": "506520",
+              "formula_value": 12,
+              "pts": 16,
+              "reb": 0,
+              "ast": 7,
+              "eff": 12,
+              "rank": 3
+            }
+          ],
+          "SF": [
+            {
+              "player_id": "51000269",
+              "team_id": "699",
+              "name": "アンジェロ・カロイアロ",
+              "team": "京都",
+              "positions": [
+                "SF",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506520",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=699",
+              "game_id": "506520",
+              "formula_value": 30,
+              "pts": 22,
+              "reb": 3,
+              "ast": 7,
+              "eff": 30,
+              "rank": 1
+            },
+            {
+              "player_id": "32984",
+              "team_id": "716",
+              "name": "エリエット・ドンリー",
+              "team": "信州",
+              "positions": [
+                "SF",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506520",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=716",
+              "game_id": "506520",
+              "formula_value": 25,
+              "pts": 18,
+              "reb": 4,
+              "ast": 3,
+              "eff": 25,
+              "rank": 2
+            },
+            {
+              "player_id": "14302",
+              "team_id": "729",
+              "name": "今村 佳太",
+              "team": "名古屋D",
+              "positions": [
+                "SG",
+                "SF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506521",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=729",
+              "game_id": "506521",
+              "formula_value": 20,
+              "pts": 17,
+              "reb": 2,
+              "ast": 4,
+              "eff": 20,
+              "rank": 3
+            }
+          ],
+          "PF": [
+            {
+              "player_id": "51000269",
+              "team_id": "699",
+              "name": "アンジェロ・カロイアロ",
+              "team": "京都",
+              "positions": [
+                "SF",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506520",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=699",
+              "game_id": "506520",
+              "formula_value": 30,
+              "pts": 22,
+              "reb": 3,
+              "ast": 7,
+              "eff": 30,
+              "rank": 1
+            },
+            {
+              "player_id": "32984",
+              "team_id": "716",
+              "name": "エリエット・ドンリー",
+              "team": "信州",
+              "positions": [
+                "SF",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506520",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=716",
+              "game_id": "506520",
+              "formula_value": 25,
+              "pts": 18,
+              "reb": 4,
+              "ast": 3,
+              "eff": 25,
+              "rank": 2
+            },
+            {
+              "player_id": "51000521",
+              "team_id": "693",
+              "name": "ヤニー・ウェッツェル",
+              "team": "秋田",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506519",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=693",
+              "game_id": "506519",
+              "formula_value": 24,
+              "pts": 18,
+              "reb": 12,
+              "ast": 2,
+              "eff": 24,
+              "rank": 3
+            }
+          ],
+          "C": [
+            {
+              "player_id": "51000521",
+              "team_id": "693",
+              "name": "ヤニー・ウェッツェル",
+              "team": "秋田",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506519",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=693",
+              "game_id": "506519",
+              "formula_value": 24,
+              "pts": 18,
+              "reb": 12,
+              "ast": 2,
+              "eff": 24,
+              "rank": 1
+            },
+            {
+              "player_id": "51000321",
+              "team_id": "2486",
+              "name": "デレク・パードン",
+              "team": "A千葉",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506519",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2486",
+              "game_id": "506519",
+              "formula_value": 23,
+              "pts": 6,
+              "reb": 14,
+              "ast": 5,
+              "eff": 23,
+              "rank": 2
+            },
+            {
+              "player_id": "5100000046",
+              "team_id": "729",
+              "name": "スコット・エサトン",
+              "team": "名古屋D",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506521",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=729",
+              "game_id": "506521",
+              "formula_value": 23,
+              "pts": 13,
+              "reb": 7,
+              "ast": 0,
+              "eff": 23,
+              "rank": 2
+            }
+          ]
+        },
+        "eligible_players": 67,
+        "position_retrieved_at": "2026-10-29T11:46:23.600863+00:00",
+        "formula_differences": [],
+        "sources": [
+          "https://www.bleague.jp/club_detail/?TeamID=2486",
+          "https://www.bleague.jp/club_detail/?TeamID=693",
+          "https://www.bleague.jp/club_detail/?TeamID=698",
+          "https://www.bleague.jp/club_detail/?TeamID=699",
+          "https://www.bleague.jp/club_detail/?TeamID=716",
+          "https://www.bleague.jp/club_detail/?TeamID=729",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=506519",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=506520",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=506521"
+        ]
       },
       "B1": {
         "error": "出場選手の公式ポジションが未確認"
