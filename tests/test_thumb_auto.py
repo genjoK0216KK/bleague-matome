@@ -107,6 +107,14 @@ class Import(Base):
         m = bundle(self.inbox, self.PATH, article(body='旧'), legacy=True)
         self.assertEqual([x['id'] for x in self.run_import()['imported']], [m['id']])
 
+    def test_people_style_v4_is_accepted_and_other_styles_are_not(self):
+        raw = self.html.encode()
+        fp = ta.editorial_fingerprint(raw)
+        m = bundle(self.inbox, self.PATH, self.html, style='ink-lime-portrait-v4', id=ta.request_id(self.PATH, fp, 'ink-lime-portrait-v4'))
+        self.assertEqual([x['id'] for x in self.run_import()['imported']], [m['id']])
+        m = bundle(self.inbox, self.PATH, self.html, style='other', id=ta.request_id(self.PATH, fp, 'other'))
+        self.assertEqual(self.run_import()['rejected'][0]['reason'], 'manifest_invalid')
+
     def test_missing_article_is_rejected(self):
         bundle(self.inbox, 'article-daily-20261031.html', article())
         self.assertEqual(self.run_import()['rejected'][0]['reason'], 'article_missing')
