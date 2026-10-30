@@ -1039,10 +1039,10 @@
       "competition": "B1",
       "starts_at": "2026-10-30T10:05:00+00:00",
       "ended": true,
-      "fixed": false,
+      "fixed": true,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507311",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-      "status": "unconfirmed",
+      "status": "final",
       "home": "愛媛",
       "home_full": "愛媛オレンジバイキングス",
       "home_id": "723",
@@ -1527,7 +1527,7 @@
           "PlayerNameJ": "高橋 克実",
           "PlayerNameE": "Katsumi Takahashi",
           "StartingFlg": null,
-          "PlayTime": "23:10",
+          "PlayTime": "11:35",
           "PlayingFlg": false,
           "Point": 3,
           "PT3M": 1,
@@ -1550,11 +1550,11 @@
           "PT2IN": 0,
           "PT2ND": 1,
           "EFF": 0,
-          "PLUSMINUS": 10,
+          "PLUSMINUS": 18,
           "AST_TO": 0,
           "EFG": 0.1875,
           "TS": 0.1875,
-          "USG": 17.11070953663585
+          "USG": 32.732108152341624
         },
         {
           "Code": 546,
@@ -1596,7 +1596,7 @@
           "AST_TO": 1.5,
           "EFG": 0.6071428571428571,
           "TS": 0.5864197530864198,
-          "USG": 32.01676995989755
+          "USG": 30.62340503098761
         },
         {
           "Code": 546,
@@ -1638,7 +1638,7 @@
           "AST_TO": 2,
           "EFG": 0.7142857142857143,
           "TS": 0.6610576923076923,
-          "USG": 15.758198906082269
+          "USG": 15.072404501274288
         },
         {
           "Code": 546,
@@ -1680,7 +1680,7 @@
           "AST_TO": 0,
           "EFG": 0.8333333333333334,
           "TS": 0.8333333333333334,
-          "USG": 27.92992905836548
+          "USG": 26.714422820053066
         },
         {
           "Code": 546,
@@ -1737,7 +1737,7 @@
           "PlayerNameJ": "松本 礼太",
           "PlayerNameE": "Reita Matsumoto",
           "StartingFlg": null,
-          "PlayTime": "11:02",
+          "PlayTime": "13:31",
           "PlayingFlg": false,
           "Point": 6,
           "PT3M": 2,
@@ -1760,11 +1760,11 @@
           "PT2IN": 0,
           "PT2ND": 0,
           "EFF": 3,
-          "PLUSMINUS": -2,
+          "PLUSMINUS": -4,
           "AST_TO": 0,
           "EFG": 0.42857142857142855,
           "TS": 0.42857142857142855,
-          "USG": 31.436405549749665
+          "USG": 24.544036091420086
         },
         {
           "Code": 546,
@@ -1779,7 +1779,7 @@
           "PlayerNameJ": "佐古 竜誠",
           "PlayerNameE": "Ryusei Sako",
           "StartingFlg": null,
-          "PlayTime": "12:56",
+          "PlayTime": "10:27",
           "PlayingFlg": false,
           "Point": 2,
           "PT3M": 0,
@@ -1802,11 +1802,11 @@
           "PT2IN": 1,
           "PT2ND": 0,
           "EFF": 3,
-          "PLUSMINUS": 3,
+          "PLUSMINUS": 5,
           "AST_TO": 0,
           "EFG": 0.3333333333333333,
           "TS": 0.3333333333333333,
-          "USG": 11.493501734499734
+          "USG": 13.605750697294724
         },
         {
           "Code": 546,
@@ -1848,7 +1848,7 @@
           "AST_TO": 0,
           "EFG": 0.7,
           "TS": 0.7,
-          "USG": 19.393253633336734
+          "USG": 18.54926220309587
         },
         {
           "Code": 546,
@@ -1905,7 +1905,7 @@
           "PlayerNameJ": "小林 巧",
           "PlayerNameE": "Takumi Kobayashi",
           "StartingFlg": 1,
-          "PlayTime": "22:18",
+          "PlayTime": "24:47",
           "PlayingFlg": true,
           "Point": 4,
           "PT3M": 0,
@@ -1928,11 +1928,11 @@
           "PT2IN": 2,
           "PT2ND": 1,
           "EFF": 9,
-          "PLUSMINUS": 3,
+          "PLUSMINUS": 1,
           "AST_TO": 3.5,
           "EFG": 0.2857142857142857,
           "TS": 0.2857142857142857,
-          "USG": 20.00364237284322
+          "USG": 17.215402301635294
         },
         {
           "Code": 546,
@@ -1974,10 +1974,10 @@
           "AST_TO": 4,
           "EFG": 0.21428571428571427,
           "TS": 0.25380710659898476,
-          "USG": 19.04220552804057
+          "USG": 18.213491657618906
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/507311/123.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/507311/126.json"
     },
     {
       "game_id": "507925",
@@ -3068,7 +3068,7 @@
           "AST_TO": 5,
           "EFG": 0.09090909090909091,
           "TS": 0.11755485893416928,
-          "USG": 34.62165069287273
+          "USG": 34.21452874210988
         },
         {
           "Code": 546,
@@ -3110,7 +3110,7 @@
           "AST_TO": 1.5,
           "EFG": 1.125,
           "TS": 1.125,
-          "USG": 18.11125672561518
+          "USG": 17.89828333984831
         },
         {
           "Code": 546,
@@ -3152,7 +3152,7 @@
           "AST_TO": 0,
           "EFG": 0.5,
           "TS": 0.5710659898477157,
-          "USG": 22.82309303113699
+          "USG": 22.554712351090696
         },
         {
           "Code": 546,
@@ -3194,7 +3194,7 @@
           "AST_TO": 1,
           "EFG": 0.75,
           "TS": 0.75,
-          "USG": 7.112784459514327
+          "USG": 7.029144002558608
         },
         {
           "Code": 546,
@@ -3236,7 +3236,7 @@
           "AST_TO": 1,
           "EFG": 1,
           "TS": 1,
-          "USG": 17.036736527934387
+          "USG": 16.836398610155292
         },
         {
           "Code": 546,
@@ -3278,7 +3278,7 @@
           "AST_TO": 3,
           "EFG": 0,
           "TS": 0,
-          "USG": 7.732264333470083
+          "USG": 7.641339306030407
         },
         {
           "Code": 546,
@@ -3320,7 +3320,7 @@
           "AST_TO": 0,
           "EFG": 0,
           "TS": 0,
-          "USG": 9.583164296963126
+          "USG": 9.470474218212384
         },
         {
           "Code": 546,
@@ -3362,7 +3362,7 @@
           "AST_TO": 1,
           "EFG": 1,
           "TS": 0.6465517241379309,
-          "USG": 10.149003884439528
+          "USG": 10.029660000567945
         },
         {
           "Code": 546,
@@ -3404,7 +3404,7 @@
           "AST_TO": 0,
           "EFG": 0.6666666666666666,
           "TS": 0.6443298969072165,
-          "USG": 19.988842293768805
+          "USG": 19.75379005607162
         },
         {
           "Code": 546,
@@ -3425,7 +3425,7 @@
           "PT3M": 4,
           "PT3A": 8,
           "PT2M": 4,
-          "PT2A": 12,
+          "PT2A": 13,
           "FTM": 3,
           "FTA": 3,
           "FOUL": 3,
@@ -3437,16 +3437,16 @@
           "AS": 3,
           "ST": 0,
           "BS": 1,
-          "BSON": 0,
+          "BSON": 1,
           "PTFB": 3,
           "PT2IN": 4,
           "PT2ND": 5,
-          "EFF": 21,
+          "EFF": 19,
           "PLUSMINUS": 10,
           "AST_TO": 0.6,
-          "EFG": 0.5,
-          "TS": 0.5393996247654784,
-          "USG": 36.569138620330705
+          "EFG": 0.47619047619047616,
+          "TS": 0.5152329749103942,
+          "USG": 37.51218253438969
         },
         {
           "Code": 546,
@@ -3488,7 +3488,7 @@
           "AST_TO": 0,
           "EFG": 0,
           "TS": 1.1363636363636365,
-          "USG": 6.868239970581077
+          "USG": 6.787475154370106
         },
         {
           "Code": 546,
@@ -3767,17 +3767,17 @@
           "FOUL": 3,
           "FOULON": 1,
           "RB_OFF": 4,
-          "RB_DEF": 3,
-          "RB_TOT": 7,
+          "RB_DEF": 4,
+          "RB_TOT": 8,
           "TO": 1,
           "AS": 0,
           "ST": 0,
-          "BS": 0,
+          "BS": 1,
           "BSON": 0,
           "PTFB": 0,
           "PT2IN": 2,
           "PT2ND": 0,
-          "EFF": 4,
+          "EFF": 6,
           "PLUSMINUS": 0,
           "AST_TO": 0,
           "EFG": 0.3333333333333333,
@@ -3953,7 +3953,7 @@
           "USG": 8.860569197058227
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506520/130.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506520/132.json"
     },
     {
       "game_id": "506519",
