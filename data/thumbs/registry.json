@@ -142,29 +142,29 @@
   },
   "article-daily-20261030.html": {
    "article_path": "article-daily-20261030.html",
-   "editorial_fingerprint": "335bcac724679785afcd18f9655452ac1f08c827d5bea76b8d262b9bb87b8091",
+   "editorial_fingerprint": "68acc30218ce7e01b7d04172c20348296b1b52b0c2e88fa2c0a4dab97e1f5d09",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261030-0c3ffa85d3e5.jpg",
+     "path": "thumbs/auto/article-daily-20261030-f2d17ad07667.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261030-0c3ffa85d3e5-og.jpg",
+     "path": "thumbs/auto/article-daily-20261030-f2d17ad07667-og.jpg",
      "width": 1200
     }
    },
-   "id": "ed5eafb2c5a54d0b60af",
-   "image_sha256": "0c3ffa85d3e5cfc561ff138a1165a2b2541fd66031eae3bd778d8a2e6cf51c14",
-   "imported_at": "2026-10-30T02:09:09.863099+00:00",
-   "prepared_at": "2026-10-30T02:08:49.089406+00:00",
-   "source_blob_sha": "ea5b8192020a38aacb0cbb87c40003acf0bb0697",
+   "id": "3d20be125ac18075c9b0",
+   "image_sha256": "f2d17ad07667b786dc28ace1502f12eb3ed01f4d13a2b480e1ee55d5f31c3d22",
+   "imported_at": "2026-10-30T10:41:45.323972+00:00",
+   "prepared_at": "2026-10-30T10:41:24.730449+00:00",
+   "source_blob_sha": "4105b0457757441c4314ee080fad0bc5a960fe7e",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "335bcac724679785afcd18f9655452ac1f08c827d5bea76b8d262b9bb87b8091",
+   "stable_fingerprint": "68acc30218ce7e01b7d04172c20348296b1b52b0c2e88fa2c0a4dab97e1f5d09",
    "style": "ink-lime-portrait-v3",
    "title": "東京Uが静岡に69-68で競り勝ち、第2戦は今夜19時05分から同会場"
   },
@@ -603,9 +603,24 @@
    "event": "imported",
    "id": "db1b08157b4974a77014",
    "image": "a19bc409a914"
+  },
+  {
+   "article": "article-daily-20261030.html",
+   "at": "2026-10-30T10:41:45.136826+00:00",
+   "by": "3d20be125ac18075c9b0",
+   "event": "superseded",
+   "id": "ed5eafb2c5a54d0b60af"
+  },
+  {
+   "article": "article-daily-20261030.html",
+   "at": "2026-10-30T10:41:45.323994+00:00",
+   "event": "imported",
+   "id": "3d20be125ac18075c9b0",
+   "image": "f2d17ad07667"
   }
  ],
  "seen": {
+  "3d20be125ac18075c9b0": "imported",
   "44da7637029692ee5a53": "imported",
   "64677ebbbdc4b4827d54": "imported",
   "7323c5f3c2556686df0c": "imported",
@@ -622,7 +637,7 @@
   "d87a8ec3bf24b1b0559b": "imported",
   "db1b08157b4974a77014": "imported",
   "ec1f89cf4982bf75312d": "superseded:a2b6b2b44b3ab2922589",
-  "ed5eafb2c5a54d0b60af": "imported"
+  "ed5eafb2c5a54d0b60af": "superseded:3d20be125ac18075c9b0"
  },
  "version": 1
 }
