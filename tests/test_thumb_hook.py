@@ -674,12 +674,13 @@ class Install(unittest.TestCase):
         self.assertNotIn('/Documents/', (HOOK / 'com.genjo.basuke-thumb-hook.plist').read_text())
 
     def test_prompt_requires_a_person_not_just_a_ball(self):
-        # 10/31 本人「バスケットボールだったらイラスト作る意味あんまりない」
+        # 10/31 本人「バスケットボールだったらイラスト作る意味あんまりない」「架空の選手じゃなくて、選べなくてもランダムで」
         w = load('thumb_worker')
         job = dict(id='a', url='u', source='s', text='t', blob='b')
         prompt = w.prompt_for(job, 'x.png', 'x.json')
-        self.assertIn('主役は必ず人物', prompt)
-        self.assertIn('実在しない架空の選手', prompt)
+        self.assertIn('主役は必ず実在の選手1人', prompt)
+        self.assertIn('架空の選手は描かない', prompt)
+        self.assertIn('ランダムに1人選ぶ', prompt)
         self.assertIn('チームロゴ', prompt)
 
     def test_gh_is_on_path_for_launchd(self):
