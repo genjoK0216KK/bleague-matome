@@ -1,0 +1,82 @@
+{
+  "id": "b8f222115a0883a9f7f2",
+  "article_path": "article-games-20261028.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261028.html",
+  "source_commit": "",
+  "source_blob_sha": "e57c70a33ecec779f98ac39f44fcfd18e4a88c66",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "85c229bd36057ffbc698059d6a6bb8bfc0f45d31492b66b50ac5bf56f2435000",
+  "last_observed_blob_sha": "e57c70a33ecec779f98ac39f44fcfd18e4a88c66",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b8f222115a0883a9f7f2/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b8f222115a0883a9f7f2/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T10:07:32.827750+00:00",
+  "creation_event_id": "b4857dcc14f9f052bed6",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/b8f222115a0883a9f7f2/thumbnail.png",
+  "image_sha256": "f11a5f9586ab0b8c64ee1a844f1b7c02111e38d0dfcc14c8db0e3ac7aabb0dc6",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "e57c70a33ecec779f98ac39f44fcfd18e4a88c66",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.28",
+      "試合なし",
+      "B.PREMIER・B.ONE・B.NEXT",
+      "資料取得：2026-10-29 10:38〜10:39 JST",
+      "公式発表は訂正される場合があります",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b8f222115a0883a9f7f2/source.html",
+        "role": "fixed_article_html",
+        "article_url": "https://basuke-matome.jp/article-games-20261028.html",
+        "supports": [
+          "試合日 2026.10.28",
+          "この日試合なし：B.PREMIER・B.ONE・B.NEXT",
+          "資料取得 2026-10-29 10:38〜2026-10-29 10:39 JST",
+          "公式記録・発表は訂正される場合があります。"
+        ],
+        "note": "本文の根拠は指定固定ファイルだけ。記事内の外部リンクは閲覧していない。HTMLのblob SHAをローカルで計算し指定値と一致確認。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b8f222115a0883a9f7f2/source.txt",
+        "role": "fixed_article_text",
+        "note": "固定HTMLの見出し・対象日・対象3リーグ・資料取得時刻・訂正の留保と一致確認。閲覧数の取得時刻は資料取得時刻として使用していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "visual_style_only",
+        "note": "view_imageで確認。黒×ライム、太い日本語見出し、インク・ブラシのテイストのみを参照し、人物・名前・日付・得点・スコアは流用しない。"
+      }
+    ],
+    "person_reference": {
+      "mode": "no_named_person",
+      "reason": "特定人物が主役ではない試合日程の記事。ボールと無人のコートのみを描き、人物・顔・手・実在選手・特定プレー場面を描いていない。",
+      "official_profile_used": false
+    },
+    "prompt": "Use case: ads-marketing.\nCreate ONE finished Japanese sports-news thumbnail as a PNG, landscape 16:9, ideally 1920×1080 pixels, minimum width 1000 pixels. This is the thumbnail for the basketball article whose fixed manuscript says: October 28, 2026 had no games in B.PREMIER, B.ONE, or B.NEXT. Sources were retrieved October 29, 2026 at 10:38–10:39 JST and official announcements can be corrected. Do not imply cancellation or postponement.\nVisual style: approved バスケまとめ style: near-black #151A18 background, brilliant lime #CCF43B, warm ivory typography, confident thick Japanese Gothic headlines with subtle hand-ink texture, expressive dry-brush slashes, editorial hand-drawn ink illustration, very few objects, ample negative space, sharp legibility. No photography or photorealism.\nComposition: left two thirds dominated by the large clear headline 試合なし in ivory, with the date above it in bold lime. Small brand name above the date. Under the headline place one readable line naming all three leagues. Right third has one orange basketball resting motionless on a simple empty court drawn with sparse ivory ink lines and one lime brush accent. This is a generic conceptual illustration, no real arena, no people, no hands, no players, no silhouettes, no team logos, no sponsors, no scoreboards or results, no trophy, no dynamic scoring event. The complete ball remains inside the frame.\nUse only the following exact visible text, no additional words or numbers, and render every character correctly:\nTop left small: 「バスケまとめ」\nDate, large: 「2026.10.28」\nMain headline, extremely large: 「試合なし」\nScope line, medium: 「B.PREMIER・B.ONE・B.NEXT」\nBottom information band, readable small ivory text on solid dark background, each item on its own clean line:\n「資料取得：2026-10-29 10:38〜10:39 JST」\n「公式発表は訂正される場合があります」\nFooter final line, both required labels separated by generous space:\n「イラスト（AI生成）」 「成績をもとにしたイメージ」\nThe final two labels are required editorial disclosure labels. Do not depict or invent any player achievement, numbers, score, or match action. Preserve the no-games meaning.\nKeep all typography and the whole ball within generous 5% safe margins. No clipping, no overlap, no garbled text. All small notes must remain easy to read at the full image size. Deliver exactly one finished graphic.",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "built_in",
+      "generation_calls": 1,
+      "revision_calls": 0,
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "image_sha256": "f11a5f9586ab0b8c64ee1a844f1b7c02111e38d0dfcc14c8db0e3ac7aabb0dc6",
+      "postprocessing": "none; selected PNG copied byte-for-byte"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T10:23:18.014029+00:00",
+  "publication_approved": false
+}

@@ -1,0 +1,78 @@
+{
+  "id": "db1b08157b4974a77014",
+  "article_path": "article-stats-20261026.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261026.html",
+  "source_commit": "",
+  "source_blob_sha": "0626886e7c5aa7f429d0e684abb7d6783e09517e",
+  "style": "ink-lime-portrait-v3",
+  "editorial_fingerprint": "4dee189b42df9c61ab94a2baf32767384485b8e21e43078c6dd0012d21c150d2",
+  "last_observed_blob_sha": "0626886e7c5aa7f429d0e684abb7d6783e09517e",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/db1b08157b4974a77014/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/db1b08157b4974a77014/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-30T10:07:34.000627+00:00",
+  "creation_event_id": "6dd79ffb57701c5d6fae",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/db1b08157b4974a77014/thumbnail.png",
+  "image_sha256": "a19bc409a9147d6e986a4988109337d630bac11e006e46884fea4f9daeff939c",
+  "width": 1659,
+  "height": 948,
+  "brief": {
+    "source_blob_sha": "0626886e7c5aa7f429d0e684abb7d6783e09517e",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.26｜B.PREMIER",
+      "貢献度1位",
+      "EFF 46",
+      "ブラックシアー・ジュニア",
+      "群馬｜20得点・15リバウンド・6アシスト",
+      "公式記録の訂正により変更の場合あり",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/db1b08157b4974a77014/source.html",
+        "role": "固定版本文。日付、対象リーグ、当日貢献度1位、EFF 46、氏名、群馬、20得点・15リバウンド・6アシスト、公式訂正の留保。HTMLのblob SHAをローカル計算して指定値と一致確認。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/db1b08157b4974a77014/source.txt",
+        "role": "固定版本文の文章。画像の文字と数値を照合。本文の根拠はこの2ファイルのみ。"
+      }
+    ],
+    "person_reference": {
+      "name": "ケリー・ブラックシアー・ジュニア",
+      "page_url": "https://g-crane-thunders.jp/roster/players/detail/kerry-blackshear-jr",
+      "image_url": "https://g-crane-thunders.bl.kuroco-img.app/v=1789375653/files/user/images/roster/players/detail_2027/kerry-blackshear-jr/fv.jpg",
+      "role": "容姿確認のみ。本文の成績・日付等の根拠には使用していない。",
+      "viewed": true,
+      "observed_features": "短い刈り込みの黒髪、幅がありやや縦長の輪郭、太い眉、幅のある鼻、厚い唇、顎から頬へつながる短いひげ、厚い肩。",
+      "comparison": "生成画像を実際に見て短髪・輪郭・眉・鼻・唇・ひげの特徴を照合。写真貼り付けではないインク画。ロゴ・スポンサー文字なし。両手の握りと指の重なり、頭・ボールの収まりを確認。特定の実在プレー場面を表したものではない。"
+    },
+    "prompt": "Use case: ads-marketing\nCreate ONE finished Japanese basketball editorial thumbnail as a new original raster illustration. Landscape 16:9, target 1792×1024 or 1920×1080, at least 1000 pixels wide. Opaque PNG.\nApproved visual direction: nearly black #151A18 background, electric lime #CCF43B, off-white typography, expressive hand-drawn ink strokes and dry brush texture. Few large elements, very bold Japanese type, polished sports editorial composition.\nSubject: Kerry Blackshear Jr., as a clearly hand-drawn ink illustration, NOT photographic. I have visually checked his official Gunma club profile photo for appearance: very short close-cropped black hair with a low rounded hairline, strong broad but slightly elongated face, full lips, broad straight nose, thick expressive eyebrows, deep-set dark eyes, short neatly edged full jaw/chin beard connected to sideburns and a thinner moustache, muscular broad shoulders and substantial athletic build. Preserve these observed features. Do not draw the curly tall hair or slender face of the unrelated approved style-reference player. Use off-white/black crosshatching and visible brush marks, with enough face highlights to recognize him.\nComposition: left 61 percent reserved for the text hierarchy; right 39 percent a waist-up illustration of this player in a simple ready-to-pass pose holding ONE orange basketball at lower chest height. Both hands are anatomically plausible, five fingers per hand, partially occluded naturally by the ball. Head and ball fully inside the frame with generous margins. Plain dark sleeveless basketball jersey with a little lime trim, absolutely no logos, sponsor text, team insignia or jersey number. No other players. A diagonal lime ink brush stroke behind the player creates energy while keeping the typography clear. This is a symbolic illustration based on listed performance, not a specific actual moment or decisive shot.\nText EXACTLY as below; no additional text. Keep every line comfortably inside the image. Highly legible Japanese lettering with accurate punctuation and digits:\nSmall top left brand: \"バスケまとめ\"\nBelow brand: \"2026.10.26｜B.PREMIER\"\nLarge off-white heading: \"貢献度1位\"\nMain largest line, with lime numerals: \"EFF 46\"\nClear medium name line: \"ブラックシアー・ジュニア\"\nSupporting line: \"群馬｜20得点・15リバウンド・6アシスト\"\nSmall but legible qualifier near bottom: \"公式記録の訂正により変更の場合あり\"\nFooter labels, fully readable: \"イラスト（AI生成）\" and \"成績をもとにしたイメージ\"\nThe displayed ranking is only the contribution/EFF ranking for games on October 26, 2026, not season ranking, scoring rank, an award or a record. EFF 46 is NOT 46 points. Keep \"EFF\" directly attached to the large 46; the actual points scored are 20. All displayed article facts are exclusively from the supplied fixed source.html/source.txt. Do not add victory scores, claims about nationality, MVP, records, a trophy, or other claims.\nStrong mobile thumbnail readability; safe margins at least 4 percent. Footer must remain legible, not tiny or clipped. Avoid photorealism, logos, clutter, illegible text, extra fingers, cropped head or ball.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "attempts": 1,
+      "corrections": 0,
+      "approved_style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "style_reference_viewed": true,
+      "note": "黒×ライムの承認済み参照をview_imageで確認。白地のA-faison-ivory-v3.pngは指定フォルダに存在せず、黒×ライム案で制作。生成した画像を目視検品して採用。",
+      "qa_observations": {
+        "text_and_numbers": "氏名、群馬、2026.10.26、B.PREMIER、貢献度1位、EFF 46、20得点・15リバウンド・6アシストが判読でき、固定原稿と一致。",
+        "source_qualifiers": "日付とリーグを明記し、1位は貢献度であることを表示。公式訂正の留保あり。得点46・シーズン1位・MVP等の誤表現なし。",
+        "likeness_or_no_named_person": "公式プロフィール写真と生成画像を目視比較し、本人の短髪・ひげ・輪郭・目鼻を反映したイラストと確認。",
+        "layout": "左の見出しと数値、右の人物を分離。主要文字、頭、ボール、両手、注記に意味を損なう欠けや重なりなし。写真風ではなく手描きインク画。",
+        "ai_label": "画像下部の「イラスト（AI生成）」「成績をもとにしたイメージ」を目視で確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-30T10:33:51.979448+00:00",
+  "publication_approved": false
+}
