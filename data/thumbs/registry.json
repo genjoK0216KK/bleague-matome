@@ -475,6 +475,34 @@
    "stable_fingerprint": "253509c3edb9e8cac379ace2573b4dcf9c77c60aa90edfcd029b8d2995d379c2",
    "style": "ink-lime-portrait-v3",
    "title": "10月26日の貢献度ランキング 1位はケリー・ブラックシアー・ジュニア（群馬）の46"
+  },
+  "article-stats-20261030.html": {
+   "article_path": "article-stats-20261030.html",
+   "editorial_fingerprint": "9bcf5520f7116ce8bf1d4ba86536d8f71821f0c2f8390aff97d5e6608eb84937",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-stats-20261030-8c0e9cd376e7.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-stats-20261030-8c0e9cd376e7-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "0784f83afb138807346a",
+   "image_sha256": "8c0e9cd376e7935267c0d9ed6135356255171e4b1bf5086dc161046d0cbe03e5",
+   "imported_at": "2026-10-30T13:26:58.007044+00:00",
+   "prepared_at": "2026-10-30T13:26:33.384760+00:00",
+   "source_blob_sha": "68b9f1b3684ecbc40bf4ba5ecb4b1cb692e5fd3c",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "9bcf5520f7116ce8bf1d4ba86536d8f71821f0c2f8390aff97d5e6608eb84937",
+   "style": "ink-lime-portrait-v3",
+   "title": "10月30日の貢献度ランキング 1位はアンジェロ・カロイアロ（京都）の30"
   }
  },
  "log": [
@@ -736,9 +764,17 @@
    "event": "imported",
    "id": "1237ac56ecfe95c7fd0a",
    "image": "f380994eb286"
+  },
+  {
+   "article": "article-stats-20261030.html",
+   "at": "2026-10-30T13:26:58.007080+00:00",
+   "event": "imported",
+   "id": "0784f83afb138807346a",
+   "image": "8c0e9cd376e7"
   }
  ],
  "seen": {
+  "0784f83afb138807346a": "imported",
   "1237ac56ecfe95c7fd0a": "imported",
   "2d836f0394de01c7d009": "imported",
   "3d20be125ac18075c9b0": "imported",
