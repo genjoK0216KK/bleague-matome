@@ -120,6 +120,32 @@ class Record(unittest.TestCase):
         (self.root / 'article-games-20261026.html').write_text(page('結果', title='別の見出し'))
         self.assertEqual(tr.record(self.root, T0)['requested'], [])
 
+    def test_backfill_requests_baseline_articles_without_a_matching_image(self):
+        tr.init(self.root, T0)
+        ta.save_json(self.root / ta.REGISTRY, {'entries': {
+            'article-daily-20261025.html': {'id': 'a', 'title': '見出し'},        # 画像あり・見出しも同じ
+            'article-games-20261026.html': {'id': 'b', 'title': '別の見出し'}}})    # 見出しが違う
+        (self.root / 'article-daily-20261026.html').write_text(page('画像なし'))
+        tr.init(self.root, T0)
+        data = json.loads((self.root / tr.REQUESTS).read_text())
+        raw = (self.root / 'article-daily-20261026.html').read_bytes()
+        data['events']['article-daily-20261026.html'] = dict(event_id=tr.event_id('article-daily-20261026.html'),
+                                                             article_path='article-daily-20261026.html', status='baseline')
+        (self.root / tr.REQUESTS).write_text(json.dumps(data))
+        r = tr.backfill(self.root, T0)
+        self.assertEqual(r['requested'], ['article-daily-20261026.html', 'article-games-20261026.html'])
+        e = self.ledger()['article-daily-20261026.html']
+        self.assertEqual((e['status'], e['source_blob_sha']), ('requested', ta.blob_sha(raw)))
+        self.assertEqual(self.ledger()['article-daily-20261025.html']['status'], 'baseline')
+        self.assertEqual(tr.backfill(self.root, T0)['requested'], [])            # 2回目は何もしない
+
+    def test_backfill_does_nothing_when_disabled(self):
+        tr.init(self.root, T0)
+        self.enable(False)
+        before = (self.root / tr.REQUESTS).read_text()
+        self.assertEqual(tr.backfill(self.root, T0), {'requested': []})
+        self.assertEqual((self.root / tr.REQUESTS).read_text(), before)
+
     def test_redo_is_limited_per_article(self):
         tr.init(self.root, T0)
         daily = self.root / 'article-daily-20261027.html'

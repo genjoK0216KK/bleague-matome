@@ -117,7 +117,34 @@ def record(root, now=None):
     return result
 
 
+def backfill(root, now=None):
+    """基準（作らない）にした記事のうち、いま画像が出ていないものを依頼に変える（本人 10/30「まとめて作って」）。
+    1回だけ手で実行する。作成イベントIDは基準の時と同じで、生成側は基準を受領していないので新しい依頼になる。"""
+    root = Path(root)
+    target = root / REQUESTS
+    data = thumb_auto.load_json(target, None)
+    if not thumb_auto.enabled(root) or not isinstance(data, dict):
+        return {'requested': []}
+    stamp = (now or datetime.now(timezone.utc)).isoformat()
+    entries = thumb_auto.registry(root)['entries']
+    requested = []
+    for article, date in _articles(root):
+        old = data.get('events', {}).get(article.name)
+        if not old or old.get('status') != 'baseline':
+            continue
+        raw = article.read_bytes()
+        entry = entries.get(article.name)
+        if entry and not entry.get('retired') and entry.get('title') == _title(raw):
+            continue
+        data['events'][article.name] = _entry(article, raw, 'requested', stamp, date)
+        requested.append(article.name)
+    if requested:
+        thumb_auto.save_json(target, data)
+    return {'requested': requested}
+
+
 if __name__ == '__main__':
     import sys
     root = Path(__file__).resolve().parent.parent
-    print(json.dumps(init(root) if '--init' in sys.argv[1:] else record(root), ensure_ascii=False))
+    action = init if '--init' in sys.argv[1:] else backfill if '--backfill' in sys.argv[1:] else record
+    print(json.dumps(action(root), ensure_ascii=False))
