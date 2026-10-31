@@ -227,7 +227,6 @@ body{line-height:1.75;color:var(--ink)}
 main:focus{outline:0}
 a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid #151a18;outline-offset:2px;box-shadow:none}
 .hdr a:focus-visible,.hdr button:focus-visible{outline-color:#ccf43b}
-.hdr .gnav a:focus-visible,.hdr .menu-close:focus-visible{outline-color:#151a18}
 .skip-link{position:absolute;left:16px;top:-64px;z-index:60;display:flex;align-items:center;min-height:48px;padding:0 16px;background:#ccf43b;color:#151a18;font-weight:700}
 .skip-link:focus{top:8px}
 /* ヘッダーとメニュー */
@@ -243,9 +242,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .hdr-in{gap:0;padding-top:8px;padding-bottom:8px}
 .hdr .logo{flex:1 1 auto}
 .nav-enhanced .gnav{position:static;order:3;width:calc(100% + var(--edge-left) + var(--edge-right));margin:8px calc(-1*var(--edge-right)) -8px calc(-1*var(--edge-left));padding:16px var(--edge-right) 16px var(--edge-left);gap:8px;background:#fff;border-top:0;box-shadow:0 1px 0 var(--line);max-height:calc(100vh - 88px);max-height:calc(100dvh - 88px)}
-.hdr .gnav a,.nav-enhanced .gnav a{justify-content:flex-start;padding:8px 12px;color:#151a18;font-weight:700;border-radius:4px}
-.hdr .gnav a:hover{background:var(--soft);outline:0}
-.hdr .gnav a[aria-current]{background:#ccf43b;color:#151a18}
+.hdr .gnav a{justify-content:flex-start;padding:8px 12px;font-weight:700;border-radius:4px}
+.hdr.nav-enhanced .gnav a{color:#151a18}
+.hdr.nav-enhanced .gnav a:hover{background:var(--soft);outline:0}
+.hdr.nav-enhanced .gnav a[aria-current]{background:#ccf43b;color:#151a18}
+.hdr.nav-enhanced .gnav a:focus-visible,.hdr.nav-enhanced .menu-close:focus-visible{outline-color:#151a18}
 .nav-enhanced .gnav .menu-extra{display:flex;grid-column:1/-1;font-weight:400;text-decoration:underline;text-underline-offset:4px}
 .hdr .menu-close{align-items:center;justify-content:center;min-height:48px;border:1px solid #737b75;border-radius:4px;background:#fff;color:#151a18;font:inherit;font-weight:700;text-decoration:none;cursor:pointer}
 }

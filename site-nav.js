@@ -49,7 +49,18 @@
   nav.addEventListener('click', function (event) {
     if (event.target.closest('a')) setOpen(false, false);
   });
-  function resized() { setOpen(false, mobile.matches && nav.contains(document.activeElement)); }
+  // A browser may drop focus from a hidden item before the width change reaches us.
+  var lastFocus = null;
+  nav.addEventListener('focusin', function (event) { lastFocus = event.target; });
+  nav.addEventListener('focusout', function (event) { if (event.target.offsetParent) lastFocus = null; });
+  function resized() {
+    var focused = document.activeElement === document.body ? lastFocus : document.activeElement;
+    var inNav = nav.contains(focused);
+    lastFocus = null;
+    setOpen(false, mobile.matches && inNav);
+    // The extra items disappear on wide screens, so focus moves to a link that stays visible.
+    if (!mobile.matches && inNav && focused.classList.contains('menu-extra')) nav.querySelector('a').focus();
+  }
   if (mobile.addEventListener) mobile.addEventListener('change', resized);
   else mobile.addListener(resized);
   // Only now is it safe to hide the fallback navigation on small screens.
