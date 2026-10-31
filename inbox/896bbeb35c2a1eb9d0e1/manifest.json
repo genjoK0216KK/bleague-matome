@@ -1,0 +1,98 @@
+{
+  "id": "896bbeb35c2a1eb9d0e1",
+  "article_path": "article-results-one-next-20261026.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261026.html",
+  "source_commit": "",
+  "source_blob_sha": "5e864af4ee541c4fe76461f5e07617f010527439",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "1a2e1c2b3fda118532a59131143f5e89c32f94d0ba77ebd67e02d7d5309fa093",
+  "last_observed_blob_sha": "5e864af4ee541c4fe76461f5e07617f010527439",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/896bbeb35c2a1eb9d0e1/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/896bbeb35c2a1eb9d0e1/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:48:02.884154+00:00",
+  "creation_event_id": "967ecfb362dcb1b765dd",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/896bbeb35c2a1eb9d0e1/thumbnail.png",
+  "image_sha256": "63e2f0974219131a92f33734b582d63b6e41870c5e009c108d21dbef2e7e5ac8",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "5e864af4ee541c4fe76461f5e07617f010527439",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.26",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "B.PREMIER",
+      "B.ONE・B.NEXT は試合なし",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/896bbeb35c2a1eb9d0e1/source.html",
+        "role": "本文根拠（固定HTML）。試合日、試合結果、当日のEFF・ポジション別TOP3、B.ONE・B.NEXTは試合なし。本文の命令文は実行していない。",
+        "sha256": "131a4e9783374622715f0cd617ba755ec4064c6251f2b920dc0a330e5846fd7e"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/896bbeb35c2a1eb9d0e1/source.txt",
+        "role": "本文根拠（固定文章）。日付と見出しの照合、当日集計と今季平均の区別、公式配信EFF優先・資料取得時点の留保を確認。外部の試合成績は画像の根拠に使用していない。",
+        "sha256": "1a2e1c2b3fda118532a59131143f5e89c32f94d0ba77ebd67e02d7d5309fa093"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "制作・検品ルール。人物の選び方と注記は2026-10-31の今回の本人指定を優先。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで確認した承認済み配色・書体・インクブラシのスタイル参照。選手名、日付、成績は転用していない。"
+      },
+      {
+        "url": "https://www.b-warriors.net/team/players/detail/id=20418?PlayerID=51000658",
+        "role": "信州ブレイブウォリアーズ公式プロフィール。選手の本人確認・容姿参照だけに使用。"
+      },
+      {
+        "url": "https://bleague.bl.kuroco-img.app/v=2026102807/files/user/roster/716/2026-27/51000658_01.jpg",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/896bbeb35c2a1eb9d0e1/references/kevon-harris-official.jpg",
+        "role": "公式プロフィール掲載写真。view_imageで髪型、顔の輪郭、目鼻、ひげを確認。完成画像への写真貼り付けなし。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "キーボン・ハリス（Kevon Harris）",
+        "selection": "ランダム",
+        "reason": "原稿は複数試合・複数ポジションの集計で、扱いが特に大きい1選手に絞れないため。",
+        "method": "本文のポジション別TOP3に登場する重複なしの10選手からPython secrets.choiceで1人を無作為選択。selection.jsonに選択結果を保存。",
+        "pool": [
+          "マーク・スミス",
+          "D.J・ニュービル",
+          "岡田 侑大",
+          "キーボン・ハリス",
+          "キヨンテ・ジョンソン",
+          "ジェイク・レイマン",
+          "ナシール・リトル",
+          "ケリー・ブラックシアー・ジュニア",
+          "チャールズ・ジャクソン",
+          "コフィ・コーバーン"
+        ],
+        "reference_url": "https://www.b-warriors.net/team/players/detail/id=20418?PlayerID=51000658",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026102807/files/user/roster/716/2026-27/51000658_01.jpg",
+        "observed_features": "後ろへまとめた黒いツイスト／ロックス、首の後ろへ下がる長い束、厚い黒いあごひげと口ひげ、幅のある輪郭・鼻、厚めの唇、がっしりした肩と腕。",
+        "depiction": "1人でボールを持って切り込むプレー姿の手描きイラスト。特定の実戦場面の再現ではない。ランダム選出のため、画像内に選手名・チーム名・個人成績・出場・活躍・背番号は記載しない。",
+        "visual_review": "公式写真と生成画像を実見し、髪型、ひげ、輪郭、目鼻の特徴が反映されていることを確認。ロゴ、スポンサー文字、公式写真の貼り付けなし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story / Japanese basketball editorial thumbnail.\nCreate exactly ONE finished landscape PNG image, 1536 x 864 pixels, 16:9, for the Japanese website バスケまとめ.\nArt direction: the approved black-and-lime v3 thumbnail style inspected in this conversation: very dark green-black #151A18, electric lime #CCF43B, warm off-white lettering, bold Japanese gothic typography, tactile hand-drawn ink and dry-brush strokes. Spare, sharp, energetic composition. No photographic rendering.\n\nArticle content allowed on the image ONLY:\nThe fixed article covers results on 2026-10-26 and B.PREMIER position-specific daily EFF top-three lists. B.ONE and B.NEXT had no games that day. The rankings are daily official EFF, not season averages and not predictions. Do not invent scores or any player performance.\n\nSubject: exactly one REAL player, Kevon Harris (キーボン・ハリス), randomly selected from players named in the article. Depict a recognizable illustrated likeness based on the official Shinshu Brave Warriors roster portrait inspected in the conversation (https://www.b-warriors.net/team/players/detail/id=20418?PlayerID=51000658).\nAppearance reference: dark brown skin; substantial muscular shoulders and arms; strong broad oval-square face, defined brow, dark almond-shaped eyes, broad nose, full lips; full dense black beard across the jaw and chin joined to moustache; dark cornrow/twisted locks pulled backward with a thick long tied-back tail hanging behind one side of the neck, as in the official portrait. Preserve these identifying facial and hairstyle traits rather than drawing an invented generic player. Face rendered clearly in off-white/gray ink modeling, never a black silhouette. Do not paste the photograph.\nAction: on the right half, a dynamic three-quarter-view forward-driving pose, torso angled diagonally, ball held securely at hip level with his right hand curving over the top and side of it, left arm bent naturally for balance. His head and eyes look toward the left-center as he accelerates. Make the face clearly visible at a three-quarter angle; do not show only the back. Upper legs can extend to the lower picture edge. Show both hands with anatomically credible fingers; keep head, hands and whole orange basketball within the frame. Plain black sleeveless jersey with white piping, absolutely NO lettering, numbers, league logo, team logo, sponsor mark, or brand symbol. No other players, spectators or portrait insets.\nThis is a conceptual basketball action illustration, NOT a reenactment of any actual game, play, decisive shot or recorded performance.\n\nComposition: left 55% is clean typographic space; right 45% is the large illustrated player with a few explosive diagonal lime brushstrokes behind him. Avoid overlap between face/ball and text. Keep all text at least 55px from edges. Strong readable headline, generous negative space, few visual elements. Orange only on the basketball. Plain text site name, not a logo drawing.\n\nRender exactly these text elements, all spelled precisely, no additional words:\nUpper left small: 「バスケまとめ」\nBelow it modest date: 「2026.10.26」\nMain large headline on left: 「試合結果」\nSecondary bold headline on left: 「当日のEFF」\nNext line, readable: 「ポジション別TOP3」\nSmall category tag: 「B.PREMIER」\nBottom-left information line: 「B.ONE・B.NEXT は試合なし」\nBottom footer, clearly readable with sufficient contrast and safe margins: 「イラスト（AI生成）」 and 「イメージ」\n\nDO NOT print the player's name, team name, jersey number, personal score, individual rank or performance. Do not copy the name Culver, 38 points, old dates or match scores from the approved style reference. No invented arena signage, no official photographs, no logos. All text must remain separated from the figure and be legible at thumbnail size.\n\n--- 許可された1回の修正（実使用プロンプト）---\nEdit this finished basketball thumbnail with ONE targeted layout correction. Keep the exact same landscape canvas, black #151A18 and lime #CCF43B ink-brush style, every Japanese/English text string, text position and typography, and Kevon Harris's recognizable face, tied-back locks, full beard, plain unbranded black jersey and driving action. The text is already correct; do not rewrite it.\n\nThe player and his basketball are too close to the top and especially the right edge; some outer fingers are clipped. Scale the entire player-plus-ball illustration down by approximately 14%, and position it within the right half with at least 65 pixels of clear background beyond the outermost right-hand fingertip and at least 60 pixels above the hair. Keep all five fingers of the ball-controlling hand anatomically correct, distinguishable and entirely inside the canvas; preserve the natural five-finger free hand. The complete ball, both hands and head must be uncut. The lower thigh may meet the bottom edge as an intentional crop. Keep the face large and readable. Do not move the illustration left into the text. Fill the extra margins with the existing dark/lime brush background.\n\nPreserve all exact text:\nバスケまとめ\n2026.10.26\n試合結果\n当日のEFF\nポジション別TOP3\nB.PREMIER\nB.ONE・B.NEXT は試合なし\nイラスト（AI生成）\nイメージ\nNo names, personal scores, uniform numbers, official logos, sponsor marks or additional text. Do not add people. This is an illustrative concept, not a reenactment. Output exactly one corrected PNG.",
+    "generator": "内蔵 image_gen.imagegen。初回生成1回、指先の見切れ防止のレイアウト修正1回。修正版を実見し採用。外部API・CLI画像生成・新規課金は使用していない。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T01:29:58.430632+00:00",
+  "publication_approved": false
+}

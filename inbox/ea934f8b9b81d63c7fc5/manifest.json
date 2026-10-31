@@ -1,0 +1,106 @@
+{
+  "id": "ea934f8b9b81d63c7fc5",
+  "article_path": "article-games-20261031.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261031.html",
+  "source_commit": "",
+  "source_blob_sha": "749beece59bbe6302880c5fbac2dbaa777a8d647",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "40ca12104ff9bfac444f991ad543fcd3cecb2b36894757afe64cee92b1d72522",
+  "last_observed_blob_sha": "749beece59bbe6302880c5fbac2dbaa777a8d647",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ea934f8b9b81d63c7fc5/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ea934f8b9b81d63c7fc5/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:48:02.360979+00:00",
+  "creation_event_id": "d5af414cf674f742fb45",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/ea934f8b9b81d63c7fc5/thumbnail.png",
+  "image_sha256": "dbda5b1e6adec11a4b9396ad4cd0c67c0b9cb8093cbb2b99a2e29fc48c833b86",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "749beece59bbe6302880c5fbac2dbaa777a8d647",
+    "text_lines": [
+      "バスケまとめ",
+      "10/31 登録選手",
+      "ベスト5",
+      "＋サブ5",
+      "今季平均EFFでリーグ別に選出",
+      "試合前｜出場確定ではありません",
+      "イラスト（AI生成）　イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ea934f8b9b81d63c7fc5/source.html",
+        "role": "固定版本文の根拠。article要素を確認。HTMLバイト列からblob SHAを算出し依頼値と一致。",
+        "article_url": "https://basuke-matome.jp/article-games-20261031.html"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ea934f8b9b81d63c7fc5/source.txt",
+        "role": "固定版本文の根拠。2026-10-31の対象試合の登録選手を今季平均EFFでリーグ別に選出するベスト5・サブ5。出場確定ではなく当日実績ランキングとは別。",
+        "qualifiers_preserved": [
+          "試合前",
+          "今季平均EFF",
+          "リーグ別",
+          "登録選手",
+          "出場確定ではありません"
+        ],
+        "article_status_as_of": "2026-10-31 08:22 JST",
+        "individual_numbers_used": false
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "制作・検品手順のみ。今回の本人指定により実在選手必須、ランダム選出、イメージ表記、ready実行禁止を優先。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで確認した承認済み黒・ライムの絵柄参照。選手名・数値・日付は転用せず。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "山口 力也",
+        "romanized_name": "Rikiya Yamaguchi",
+        "selection": "ランダム",
+        "selection_reason": "記事は複数リーグの選手を同じ形式で比較し、特定の主役が絞れないため。本文に登場する重複のない30選手から1名抽選。",
+        "selection_method": "Python random.Random('ea934f8b9b81d63c7fc5').choice(names) による再現可能な一様擬似乱数抽選。候補順は本文のB.PREMIERベスト5・サブ5、B.ONEベスト5・サブ5、B.NEXTベスト5・サブ5の表示順。引き直しなし。",
+        "article_placement": "B.NEXT サブ5 SG",
+        "official_profile": "https://www.bleague.jp/roster_detail/?PlayerID=8545",
+        "official_portrait": "https://www.bleague.jp/files/user/roster/2487/2026-27/8545_03.png",
+        "reference_local_path": "/tmp/basuke-ea934f8b9b81d63c7fc5/rikiya-yamaguchi-03.png",
+        "reference_checked": "公式プロフィールページと写真を確認。写真をview_imageで実見し、修正時の人物参照にも使用。最終画像へ写真を貼り込まず、インク画として描画。",
+        "appearance_observed": "長めで細い卵形の輪郭、細い目、比較的まっすぐな眉、短めの茶黒色のくせ毛と額にかかる不揃いな前髪、見える耳、薄い口ひげ、あご中央の短いひげ、長く細い首。",
+        "final_visual_check": "修正版で公式写真に沿った目・輪郭・髪・耳・あごひげを確認。ドリブルするプレー姿のイラストで、選手名・背番号・個人成績・出場や活躍の断定はない。実際の試合場面の再現ではない。チーム・リーグ・スポンサーのロゴや公式写真なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT\nCreate exactly ONE finished Japanese basketball editorial thumbnail, PNG, landscape 16:9, preferably 1536x864 or 1792x1024, minimum 1000 pixels wide. This is for バスケまとめ, article dated 2026-10-31. Draw a fully illustrated ink-and-brush sports poster, emphatically NOT photorealistic.\n\nART DIRECTION: approved style is near-black #151A18 background, electric lime #CCF43B bold brush slashes, warm off-white huge Japanese typography, hand-inked scratchy crosshatching and dynamic gestural brushwork. Minimal elements, clear text hierarchy, excellent readability. Similar overall visual language to the black/lime sample seen in this conversation, but create an entirely new dribble-drive composition; do not reproduce the sample's player, name, score, date, or shooting pose.\n\nONE REAL ATHLETE, IDENTITY REFERENCE: Rikiya Yamaguchi (山口力也), the actual Japanese professional basketball player, official B.LEAGUE player ID 8545. He was randomly selected from the article's thirty named players; his name must NOT appear anywhere in the image. I visually inspected his official 2026-27 profile portrait at https://www.bleague.jp/files/user/roster/2487/2026-27/8545_03.png (page https://www.bleague.jp/roster_detail/?PlayerID=8545). Use these observed facial features faithfully: lean, long oval face and neck; angular cheekbones tapering to a narrow chin; dark brown-black shaggy tousled medium-short hair with long uneven fringe across forehead, short sides and visible ears; narrow dark eyes and relatively straight eyebrows; straight medium nose; thin faint moustache and a distinct small pointed goatee on the chin, cheeks otherwise clean shaven; lean wiry adult basketball guard build. His official portrait shows these characteristics. Draw his recognizable individual likeness in expressive monochrome ink, not a generic anime or fictional player. Plain off-white sleeveless jersey and shorts with dark brush shadows, NO lettering, NO numbers, NO badges, NO sponsors, NO team or league logos.\n\nPOSE / COMPOSITION: The athlete dominates the right 43% of the frame, three-quarter face visible, low forward-leaning athletic dribble drive toward the viewer and slightly right, bent legs, torso twisting, right hand controlling one orange basketball below waist level; the basketball is only his prop. Other arm naturally bent for balance, hand anatomy correct. Capture kinetic movement with sparse lime swashes behind him. Give face and both hands ample separation and visibility. Keep head and hands entirely inside frame. The lower legs may naturally disappear into brushwork above footer, never mutilated crop. This is an imagined editorial play illustration, NOT a reconstruction or claim about any real game, appearance, score, performance, winning shot or specific play. Only ONE player. No secondary faces, no opponents, no stadium logo, no scoreboards.\n\nEXACT JAPANESE TEXT. Render only the following 7 lines, without quotes, preserving all characters and numbers. Arrange cleanly on the left about 56% of image, except the footer which may span width:\n1. Small masthead at upper left: バスケまとめ\n2. Medium date/context line: 10/31 登録選手\n3. Dominant very large lime headline: ベスト5\n4. Large white second headline: ＋サブ5\n5. Readable off-white supporting line: 今季平均EFFでリーグ別に選出\n6. Readable qualification line: 試合前｜出場確定ではありません\n7. Small but clearly legible footer at bottom left: イラスト（AI生成）　イメージ\n\nThe text describes the article's league-by-league selection of current registered players from the scheduled games, based on season-average EFF, and covers both best five and substitute five. It is not today's actual performance ranking. Do not write any player name, individual stats, team name, appearance or achievement claim, and do not add other text. Use thick Japanese gothic display letters with subtly rough ink edges. Supporting lines must be crisp and completely legible with no invented glyphs. All text, including footer, must have generous 4% outer safe margins. Do not overlap text with athlete, hands or ball. Finish as a polished publication-ready poster.\n\nSINGLE REVISION PROMPT\nEdit the FIRST reference image (the generated black/lime thumbnail) once to fix the REAL PLAYER LIKENESS and safe margins. The SECOND reference image is an OFFICIAL IDENTITY REFERENCE ONLY for the same real athlete Rikiya Yamaguchi / 山口力也, B.LEAGUE PlayerID 8545, source https://www.bleague.jp/roster_detail/?PlayerID=8545 and https://www.bleague.jp/files/user/roster/2487/2026-27/8545_03.png. Do not paste any pixels of that official photograph into the artwork. Draw him from scratch in ink. Preserve the bold graphic ink illustration, not photorealism. Do not copy the official jersey's logos, sponsor marks, number, orange color or text.\n\nCRITICAL correction: make the right-side player recognizably match the actual face and hair in reference 2. Current version is too fictional/anime, wide-eyed, heavily moustached and over-muscled. Use narrow natural eyes with small dark irises and heavier upper eyelids, flatter straight eyebrows, long narrow oval face, flatter cheeks, slender chin, finer straighter nose, visible ears, long slim neck, thin small moustache and small short goatee limited to central chin. Hair is dark brown-black short shaggy tousled fringe, close to the scalp overall, NOT tall spiky anime hair. Compare actual official portrait closely. Retain the athlete's adult age and lean wiry guard proportions; reduce over-bulging muscles. Change only expression to focused athletic concentration (mouth softly open), keeping his actual individual features. Keep original dynamic forward dribble pose with one orange basketball and correctly formed hands.\n\nMove/scale the complete player and ball inward slightly so ALL hair, ears and both hands have a clearly visible safety margin of at least 35 pixels from outer edges. Do not cut fingertips at the right edge. Keep a minimum 35 pixels above the highest hair. Cropping lower legs at the bottom may be natural and intentional. All fingers correct, five per hand, with realistic perspective. The player and ball remain on the right side, and may NOT cover any text.\n\nPRESERVE all existing accurate Japanese text verbatim, its typography hierarchy and left-side layout. No other text, names, statistics, scores, logos or team marks:\nバスケまとめ\n10/31 登録選手\nベスト5\n＋サブ5\n今季平均EFFでリーグ別に選出\n試合前｜出場確定ではありません\nイラスト（AI生成）　イメージ\n\nThe picture is an imagined play illustration, not a recreation of an actual match; the pictured real athlete was randomly selected from the article. Make no individual performance or appearance claim. Maintain the same 16:9 canvas dimensions, near-black #151A18, electric lime #CCF43B, off-white hand-inked finish. Return exactly one final PNG.",
+    "generator": {
+      "tool": "image_gen",
+      "mode": "内蔵画像生成",
+      "generation_calls": 2,
+      "revisions": 1,
+      "initial_candidate": "/Users/genjo/.codex/generated_images/01a18f8a-b2e4-7723-b51e-2ab106b6330a/exec-c2aee077-d727-4e55-a405-884623db9274.png",
+      "initial_candidate_rejected_because": "顔が公式資料より漫画的で、頭髪と右端の手の余白が不足。",
+      "final_candidate": "/Users/genjo/.codex/generated_images/01a18f8a-b2e4-7723-b51e-2ab106b6330a/exec-b4c0529c-99a1-49d4-8675-43af95f8b820.png",
+      "output_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ea934f8b9b81d63c7fc5/generated.png",
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "sha256": "dbda5b1e6adec11a4b9396ad4cd0c67c0b9cb8093cbb2b99a2e29fc48c833b86",
+      "qa_observations": {
+        "text_and_numbers": "実際の修正版を見て全7行を確認。10/31、ベスト5、＋サブ5、EFFの綴りが一致。個人名・個人成績は表示しない。",
+        "source_qualifiers": "今季平均EFF・リーグ別・登録選手・試合前・出場未確定の文言を確認。当日の実績やスターティング5と断定しない。",
+        "likeness_or_no_named_person": "公式写真と修正版を見比べ、山口力也選手の髪・輪郭・目・耳・ひげをイラストとして確認。",
+        "layout": "約16:9。主見出しと人物は重ならず、文字・顔・両手・ボールが読める。頭髪と両手の見切れなし、指の形に明確な破綻なし。下腿は画面下で意図した構図上のトリミング。",
+        "ai_label": "下部に「イラスト（AI生成）」「イメージ」が読めることを確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T01:23:42.312032+00:00",
+  "publication_approved": false
+}

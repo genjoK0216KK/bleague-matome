@@ -1,0 +1,116 @@
+{
+  "id": "13dc704824ed84d25fee",
+  "article_path": "article-results-one-next-20261030.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261030.html",
+  "source_commit": "",
+  "source_blob_sha": "34fed32c8fbb243d3aab96c554bbea311765f080",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "a33747720622f1417cdb517c2fb47aa03afa78334a6187039fe104777aed7b2e",
+  "last_observed_blob_sha": "34fed32c8fbb243d3aab96c554bbea311765f080",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/13dc704824ed84d25fee/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/13dc704824ed84d25fee/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:48:03.441968+00:00",
+  "creation_event_id": "56b448bcf5225cafe914",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/13dc704824ed84d25fee/thumbnail.png",
+  "image_sha256": "862a54dcddcd6b40194a524974d102cc4ecd44393fd87f955f4c2b61889c5501",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "34fed32c8fbb243d3aab96c554bbea311765f080",
+    "text_lines": [
+      "バスケまとめ",
+      "10/30",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "B.ONE：公式ポジション確認待ち",
+      "10/31 08:23取得時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/13dc704824ed84d25fee/source.html",
+        "role": "本文の根拠（指定された固定版HTML）",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261030.html",
+        "git_blob_sha": "34fed32c8fbb243d3aab96c554bbea311765f080"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/13dc704824ed84d25fee/source.txt",
+        "role": "本文の根拠（指定された固定版文章）",
+        "used_facts": [
+          "2026年10月30日の試合結果",
+          "当日のEFF・ポジション別TOP3",
+          "B.ONEの出場選手の公式ポジションは未確認、確定後掲載",
+          "資料取得2026-10-31 08:23 JST"
+        ],
+        "qualifier_handling": "B.ONEの公式ポジション確認待ちと取得時点を画像に明記。個人成績・出場・活躍・選手名は画像に表示しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "制作・検品手順（本人10/31の実在選手必須・ランダム選出指示を優先）"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイルのみを目視参照。名前・日付・成績は転用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "サム・ティミンズ",
+        "selection": "ランダム",
+        "selection_reason": "記事は複数試合とポジション別ランキングの一覧で、単独の主役を絞れないため、本文に名前が出る21人を重複除去してランダムに1人選出。",
+        "selection_method": "Python random.SystemRandom().choice による1回の抽選。",
+        "selection_pool": [
+          "齋藤 拓実",
+          "マーク・スミス",
+          "杉本 慶",
+          "今村 佳太",
+          "岸本 隆一",
+          "アンジェロ・カロイアロ",
+          "エリエット・ドンリー",
+          "ヤニー・ウェッツェル",
+          "デレク・パードン",
+          "スコット・エサトン",
+          "山根 響",
+          "東野 恒紀",
+          "下地 秀一郎",
+          "石井 智大",
+          "髙木 慎哉",
+          "神田 壮一郎",
+          "イブラヒム・ディアビ",
+          "ジョーダン・ジャイルズ",
+          "サム・ティミンズ",
+          "ライアン・ローガン",
+          "ハイデン・コヴァル"
+        ],
+        "source": "B.LEAGUE公式プロフィール（容姿確認専用。記事本文や数値の根拠には不使用）",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=46904",
+        "image_url": "https://www.bleague.jp/files/user/roster/748/2026-27/46904_03.png",
+        "local_reference": "/private/tmp/basuke-13dc704824ed84d25fee/sam-timmins-official.png",
+        "reference_viewed": true,
+        "observed_features": "短い茶色の巻き髪、短い側頭部、太い眉、明るい目、目立つ鼻、角のある輪郭、短い口ひげと顎・頬のひげ、大柄な体格を公式写真と最終画像で目視照合。",
+        "illustration_scene": "ボールを両手で持って切り返すイメージ。実際の試合の特定場面の再現ではない。",
+        "image_restrictions_checked": "名前・個人成績・出場・活躍の文字なし。背番号・チームロゴ・リーグロゴ・スポンサー文字なし。公式写真の貼り付けなし。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail, landscape 16:9, requested size 1536x864 or larger. Opaque PNG.\nDesign follows the approved black/lime hand-ink sports illustration look: charcoal black #151A18, electric lime #CCF43B, warm ivory, an orange basketball, expressive dry brush diagonal slashes and sparse ink hatching. Sharp readable bold Japanese display typography, few elements, strong hierarchy, clear negative space. Do not copy any player name, old date, score, or statistics from the style reference.\nLayout: roughly left 56 percent for large typography; right 44 percent for one large real basketball player in active three-quarter view. All text sits on calm dark fields. No split panels. The figure must not overlap the copy. Keep all text, entire head, both hands and the basketball well inside the frame with safe margins. Lower legs may be cropped naturally below mid-thigh.\nSubject is the REAL player Sam Timmins (サム・ティミンズ), randomly chosen from the fixed article's named players. His official B.LEAGUE 2026-27 profile photograph was visually examined at https://www.bleague.jp/files/user/roster/748/2026-27/46904_03.png (profile https://www.bleague.jp/roster_detail/?PlayerID=46904). Render him as a clearly hand-drawn editorial illustration, never a photograph or generic fictional athlete. Faithful visible features: very tall, broad-shouldered sturdy athletic build; light skin; short dark-brown hair with a dense curly/wavy top and short sides; strong thick dark eyebrows; pale blue-gray eyes; elongated broad face with squared jaw, straight prominent nose and short brown moustache and beard/stubble following the mouth, chin and jaw. Use a focused natural expression, keeping features visible in the ink rendering. The beard is short, not a long beard. No headband.\nAction: a powerful low post pivot, torso twisting toward the left, knees flexed, BOTH hands securely holding the orange ball at lower chest/waist height on his right side, looking up for a pass. Dynamic motion through shoulders and fabric, not a static portrait. Anatomically coherent two arms, two hands, five fingers where visible, correct joint connections; ball does not obscure face. Plain black basketball jersey with narrow muted magenta piping and plain shorts, absolutely no logos, sponsor text, team wordmarks or jersey numbers. This is an imagined basketball action illustration, not a reconstruction or claim of a specific real game play.\nText: render ONLY these exact strings, with no additional words or numeric claims:\nTop left small: 「バスケまとめ」\nDate large in lime: 「10/30」\nMain headline very large ivory: 「試合結果」\nSecond headline large lime: 「当日のEFF」\nSupporting line medium ivory: 「ポジション別TOP3」\nQualification small but readable on one line below headline: 「B.ONE：公式ポジション確認待ち」\nNext small line: 「10/31 08:23取得時点」\nBottom footer clearly readable: 「イラスト（AI生成）」 followed by 「イメージ」\nJapanese quote brackets are delimiters, do not print them.\nThese words summarize the fixed article only: 2026-10-30 results and that day's position-based EFF rankings; B.ONE official positions remain unconfirmed. Do not imply all leagues have a complete ranking. Do not print the random player's name, individual performance, scores, appearance claims, awards or team name. No 22, 14, 35 or rank badges on the player. No team logo, league logo, copied official photo, photographic textures, watermark, extra people, championship or decisive-shot implication. Balance type and energetic illustration so it reads at thumbnail size.",
+      "correction": "Edit the first image, the finished basketball thumbnail. The second image is ONLY the official face/appearance reference for the same real athlete, Sam Timmins; do not paste or reproduce that photograph. Make one focused correction: improve the illustration's framing so the entire hair/head, both hands, every fingertip and the complete basketball have at least 45 pixels of safe margin from all canvas edges. Reduce the illustrated figure by about 8-10 percent while keeping him on the right and keeping the ball to his right; natural cropping of legs below mid-thigh is fine. Keep the face recognizably Sam Timmins with short curly dark-brown top, short sides, prominent eyebrows and nose, light eyes, a broad angular face and short brown stubble/moustache, consistent with reference 2. Do not make the beard longer or the face generic. Preserve the powerful two-handed ball-holding pivot and anatomically clear hands, the plain black jersey with muted magenta piping, no jersey numbers or logos. Preserve the black/lime ink-and-brush illustration style, orange ball, and all existing typography and copy unchanged. Do not shrink the copy.\nThe exact text remains: バスケまとめ / 10/30 / 試合結果 / 当日のEFF / ポジション別TOP3 / B.ONE：公式ポジション確認待ち / 10/31 08:23取得時点 / イラスト（AI生成） / イメージ.\nKeep all text readable and inside the canvas. No player name, player statistics, team or league logos, sponsor text, official photograph, additional people, realistic game recreation or photo-like rendering. Output just ONE finished 16:9 PNG thumbnail at least 1536 pixels wide.",
+      "correction_count": 1,
+      "correction_reason": "初稿の右手指とボールが右端に近かったため、人物を縮小して余白を確保。",
+      "final_visual_review": "最終画像を実見。頭・両手指・ボールの見切れなし。前景の手の親指と4本の指、後方の手の自然な遮蔽を確認。文字・日付・B.ONE留保・取得時点・AI注記が読める。"
+    },
+    "generator": "内蔵 image_gen（初回1回、修正1回。API/CLIは不使用）",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T01:36:23.061499+00:00",
+  "publication_approved": false
+}

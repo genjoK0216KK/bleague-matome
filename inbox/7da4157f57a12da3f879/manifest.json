@@ -1,0 +1,101 @@
+{
+  "id": "7da4157f57a12da3f879",
+  "article_path": "article-results-one-next-20261029.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261029.html",
+  "source_commit": "",
+  "source_blob_sha": "0ac86062b2de71f7ac9e692c07130cbd469035a1",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "d69c2c6f56f1d02970fe70a90844cd12bc242f7a1882b0596f2e8d7a88af1df7",
+  "last_observed_blob_sha": "0ac86062b2de71f7ac9e692c07130cbd469035a1",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7da4157f57a12da3f879/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7da4157f57a12da3f879/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:48:03.163341+00:00",
+  "creation_event_id": "93b0062a0770741dc79e",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/7da4157f57a12da3f879/thumbnail.png",
+  "image_sha256": "12956bf0a474fecea51a46c82602fe022a7513165a855d58a5dc653e00cba1bb",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "0ac86062b2de71f7ac9e692c07130cbd469035a1",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.29 | B.ONE",
+      "東京U　静岡",
+      "69-68",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "イラスト（AI生成） | イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_body",
+        "path": "source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261029.html",
+        "note": "唯一の本文根拠。hashlibでGit blob SHA一致を確認。"
+      },
+      {
+        "type": "article_body",
+        "path": "source.txt",
+        "note": "固定HTMLと照合。東京U69–68静岡、当日のEFF・ポジション別TOP3。"
+      },
+      {
+        "type": "style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "view_imageで目視確認。黒×ライム、太字、インク・ブラシ表現のみ参照。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジョーダン・フェイゾン",
+        "team_in_manuscript": "東京U",
+        "selection": "ランダム",
+        "selection_method": "本文は試合結果と複数ポジションの表が中心で単独主役を絞れないため、本文掲載の東京U6選手からPython random.SystemRandom().choiceで1人選出。",
+        "official_profile": "https://tubc.tokyo/team/players/detail/id=60151",
+        "official_image": "https://bleague.bl.kuroco-img.app/v=2026103109/files/user/roster/2725/2026-27/12648_01.jpg",
+        "reference_viewed": true,
+        "appearance_notes": "非常に短い髪、高めの生え際、黒い口ひげと顎全体のひげ、幅のある鼻と楕円形の輪郭、がっしりした体格。",
+        "usage": "容姿参照のみ。写真・ロゴは不使用。画像内に個人名・個人成績を記載しない。"
+      },
+      {
+        "name": "柏倉哲平",
+        "team_in_manuscript": "静岡",
+        "selection": "ランダム",
+        "selection_method": "本文掲載の静岡6選手からPython random.SystemRandom().choiceで1人選出。",
+        "official_profile": "https://veltex.co.jp/team/players/detail/id=48463",
+        "official_image": "https://veltex.bl.kuroco-img.app/files/user/team/players/10894.png?v=1788410162",
+        "reference_viewed": true,
+        "appearance_notes": "分け目のある短い茶髪、サイドは短く上へ流した毛束、ひげなし、やや丸い頬と締まった顎、切れ長の目。",
+        "usage": "容姿参照のみ。写真・ロゴは不使用。画像内に個人名・個人成績を記載しない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail, a landscape 16:9 PNG, preferably 1536x864 or 1600x900, width at least 1000px.\n\nArticle evidence, exclusively supplied frozen manuscript: 2026-10-29 B.ONE result, 東京U 69–68 静岡. Article also covers 当日のEFF・ポジション別TOP3, calculated separately by position from that day's official game statistics, NOT season averages or overall player rankings. Do not invent any other facts.\n\nVisual style: match the approved B-culver-black-lime-v3 aesthetic already inspected in this conversation: rich charcoal #151A18, electric lime #CCF43B, ivory-white bold Japanese lettering, expressive dry ink brush strokes and hand-drawn hatching, very few elements. It must unmistakably be an original illustration, not a photograph, photo collage or photorealistic painting. Do not copy that reference's athlete, names or numbers.\n\nComposition: left 48% clear bold typography, right 52% a dynamic two-player one-on-one basketball matchup. A vivid lime diagonal brush slash connects the players; deep charcoal negative space behind the typography. Use waist-to-knee three-quarter figures, both faces recognizable and visible; no need to show feet. Make hands clean and anatomically believable. Keep head, ball, arms, text and caption safely inside frame. One orange ball only, controlled by the ballhandler's hand. No additional people, crowd faces or logos.\n\nDepict these TWO specific real athletes, randomly selected from the manuscript, with likeness grounded in the official profiles visually inspected:\n1. Jordan Faison / ジョーダン・フェイゾン, Tokyo United. Official face reference https://tubc.tokyo/team/players/detail/id=60151 and official portrait https://bleague.bl.kuroco-img.app/v=2026103109/files/user/roster/2725/2026-27/12648_01.jpg . Very tall and broad athletic build (201cm); dark brown skin, extremely closely shaved dark hair with a high clean hairline, broad oval face, short full black beard extending along the jaw and chin, connected moustache, strong calm eyes, broad nose and full lips. Depict him in a low forward attacking stance, controlling the basketball low beside his body, face turned three-quarters toward viewer. Plain unbranded cyan basketball jersey and shorts.\n2. Teppei Kashiwagura / 柏倉哲平, Shizuoka. Official face reference https://veltex.co.jp/team/players/detail/id=48463 and official portrait https://veltex.bl.kuroco-img.app/files/user/team/players/10894.png?v=1788410162 . Shorter lean athletic build (180cm); warm light skin, short textured brown hair with a slight off-center part, swept up and sideways, close-cut sides, no beard or moustache, neat angled eyebrows, almond-shaped dark eyes, rounded cheekbones with a firm tapered jaw, straight nose and closed lips. Depict him in a low defensive shuffle facing the ballhandler, with his face also visible in three-quarter view, two arms spread naturally. Plain unbranded orange basketball jersey and shorts.\nThese are recognizable illustrated real people, NOT invented generic players. Do not paste any official photo. Do not copy any logo, sponsor or jersey text. No jersey numbers, no player names anywhere in the artwork. Their matchup is purely conceptual; do not portray a specific decisive shot, documented play, actual match moment or personal achievement.\n\nExact visible text, no additions:\nTop left small masthead: \"バスケまとめ\"\nBelow masthead, small: \"2026.10.29｜B.ONE\"\nMain team names on a single line, with 東京U above the left score and 静岡 above the right score: \"東京U\" and \"静岡\"\nHuge dominant lime score below the two team labels: \"69–68\"\nBelow score, bold white: \"当日のEFF\"\nBelow that, smaller bold white: \"ポジション別TOP3\"\nBottom safe footer, clearly legible white: \"イラスト（AI生成）｜イメージ\"\n\nThe team names and score are separate editorial information, not text attached to a player. No individual player statistics, names, appearance or performance claims. Preserve Japanese spelling and exact numbers. Typography should be confident, exceptionally readable at small thumbnail sizes, not covered by figures. Leave at least 5% safety margin for all text. All figures and lettering should feel unified with the brush-and-ink artwork. No team or league logos, watermarks, photo elements, fictional extra players, unnecessary court equipment or extra text.\n\n--- One permitted correction; edit target was the initial generated PNG ---\nEdit this existing thumbnail with ONE targeted layout correction. Keep the full 1672x941 approximately 16:9 canvas, background style, all text, all numbers, colors and typography exactly unchanged. Preserve the identities and facial features of both real players, Jordan Faison (cyan, shaved hair and full short beard) and Teppei Kashiwagura (orange, short swept brown hair, no beard). Preserve the dynamic two-person conceptual matchup and the exact AI illustration/imagination footer.\n\nOnly adjust the illustrated player grouping: make BOTH players about 12% smaller within the RIGHT half, reposition them slightly upward and inward from the right edge so that ALL visible hands, all fingers and elbows are completely inside the canvas with comfortable 35–50px margins. The first image clips Faison's lowered free-hand fingers at the bottom and Kashiwagura's outer arm at the right edge. Fix these specific cropping problems. Maintain recognizable faces and a natural height/build difference, don't hide a face. Keep the ball with Faison's ball-controlling hand. It is acceptable to crop the thighs below the hands, but not any hands, fingertips, heads, elbows, ball or text. Make each visible hand anatomically correct with five digits including the thumb, no extra or fused fingers. Do not add any people, logos, names, jersey numbers, facts or text. Do not change the Japanese text or score, do not use official photos or make this photorealistic. The illustration remains an imagined matchup, not a documented game scene.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 2,
+      "correction_count": 1,
+      "final_image": "generated.png",
+      "width": 1672,
+      "height": 941,
+      "png_sha256": "12956bf0a474fecea51a46c82602fe022a7513165a855d58a5dc653e00cba1bb",
+      "initial_review": "文字・数値・容姿・注記を確認。下端で手が切れたため配置のみ1回修正。",
+      "final_review": {
+        "text_and_numbers": "保存PNGをview_imageで確認。2026.10.29、B.ONE、東京U 69-68 静岡、当日のEFF、ポジション別TOP3の表記が固定原稿と一致。個人名・個人成績の表記なし。",
+        "source_qualifiers": "当日のEFFとポジション別TOP3の限定を保持。今季平均・全体順位と混同する表現なし。イメージ注記があり、決勝プレー等の実際の場面と断定しない。公式情報の本文根拠としての追加は行っていない。",
+        "likeness_or_no_named_person": "両公式写真と照合。フェイゾンの極短髪・ひげ・輪郭、柏倉の茶色の流した短髪・ひげのない顔と目鼻を反映したイラスト。写真貼付、ロゴ、スポンサー文字、追加の架空人物なし。",
+        "layout": "修正版を指定パスに保存後、再度view_imageで確認。顔・ボール・手と指・文字は見切れなし。脚の下側のみ意図的なフレーミング。数字と見出しが明瞭で重なりなし。約16:9、1672x941のPNG形式とCRCを確認。",
+        "ai_label": "フッターの『イラスト（AI生成） | イメージ』を目視確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T01:33:19.755484+00:00",
+  "publication_approved": false
+}

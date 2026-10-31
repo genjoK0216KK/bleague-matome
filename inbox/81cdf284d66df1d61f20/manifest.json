@@ -1,0 +1,119 @@
+{
+  "id": "81cdf284d66df1d61f20",
+  "article_path": "article-results-one-next-20261025.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261025.html",
+  "source_commit": "",
+  "source_blob_sha": "8f11c6ae35b6a4a6e59952238083a79e6e70bbee",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "e19b14f8f8d94cccdae186da2df34e0edfdbee28d446a577722d48f470c2eea5",
+  "last_observed_blob_sha": "8f11c6ae35b6a4a6e59952238083a79e6e70bbee",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/81cdf284d66df1d61f20/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/81cdf284d66df1d61f20/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:48:02.625912+00:00",
+  "creation_event_id": "e8c48cf91165cb432e67",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/81cdf284d66df1d61f20/thumbnail.png",
+  "image_sha256": "648ca38ce5330cc9fde81e8c135e0eee1f83ebebdf2d4d18a33101bd49b2a25e",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "8f11c6ae35b6a4a6e59952238083a79e6e70bbee",
+    "text_lines": [
+      "バスケまとめ",
+      "10/25",
+      "試合結果",
+      "公式記録の",
+      "確定待ち",
+      "10/26 17:40 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/81cdf284d66df1d61f20/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261025.html",
+        "use": "本文の根拠。記事タイトルは「10/25 試合結果（公式記録の確定待ち）」、各試合の状態は2026-10-26 17:40 JST時点。HTMLのGit blob形式SHA-1を計算し指定SHAとの一致を確認。gitコマンドは未使用。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/81cdf284d66df1d61f20/source.txt",
+        "use": "本文の根拠。B.PREMIER・B.ONEは公式記録確定待ち、B.NEXTはこの日試合なし。本文の今季平均EFFは当日実績と別集計であり出場確定を示さない。画像には個人成績、確定スコア、勝敗、出場の断定を入れていない。"
+      },
+      {
+        "type": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認。黒#151A18・ライム#CCF43B、太い日本語、インクとブラシのイラスト。参照内の選手名・スコア・日付は引き継いでいない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "トレイ・ボイド（Tray Boyd III）",
+        "selection": "ランダム",
+        "selection_reason": "複数リーグ・複数選手を同形式の今季平均表で扱う記事で、単独の主役を絞れないため、本文に登場する選手を最優先候補にした。",
+        "selection_method": "source.htmlのarticle内table td strongから本文登場順に重複除去した20選手を候補とし、Python random.Random('81cdf284d66df1d61f20').choice(players)で1人選択。",
+        "candidate_names": [
+          "齋藤 拓実",
+          "ジェイムズ・パルマージュニア",
+          "ネイト・ウィリアムズ",
+          "ジョシュ・ホーキンソン",
+          "セバスチャン・サイズ",
+          "富樫 勇樹",
+          "中東 泰斗",
+          "ラウリー・アルキンズ",
+          "スコット・エサトン",
+          "ライアン・ルーサー",
+          "レイナルド・ガルシア",
+          "トレイ・ボイド",
+          "チョンディー・ブラウン ジュニア",
+          "ラポラス・アイヴァナーカス",
+          "パトリック・ガードナー",
+          "アンソニー・クレモンズ",
+          "アンソニー・ゲインズ・ジュニア",
+          "エリック・マクリー",
+          "アルナルド・トロ",
+          "キーガン・レコード"
+        ],
+        "references": [
+          {
+            "title": "B.LEAGUE公式プロフィール",
+            "url": "https://www.bleague.jp/roster_detail/?PlayerID=43445",
+            "image_url": "https://www.bleague.jp/files/user/roster/714/2026-27/43445_03.png",
+            "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/81cdf284d66df1d61f20/references/tray-boyd-profile.png",
+            "use": "容姿確認のみ。公式プロフィール写真をview_imageで目視確認。外部ページの成績は本文の根拠に使用していない。"
+          },
+          {
+            "title": "横浜エクセレンス公式 2026-27シーズン選手契約継続発表",
+            "url": "https://yokohama-ex.jp/news/detail/id=25452",
+            "image_url": "https://yokohama-ex.bl.kuroco-img.app/files/user/2026TB_SIGNEDTH01.jpg?v=1779718099",
+            "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/81cdf284d66df1d61f20/references/tray-boyd-official.jpg",
+            "use": "本人のプレー時の容姿・体格確認のみ。view_imageで目視確認。写真やロゴを成果画像に貼り付けていない。"
+          }
+        ],
+        "observed_features": "肩付近までの細い編み髪、幅のある黒いヘッドバンド、口ひげとつながる濃いひげ、楕円形の輪郭、鼻・唇・目の特徴、細身で筋肉のある体格。生成画像でもこれらを目視照合した。",
+        "scene": "本人をイラストで描いた低い姿勢のドライブのイメージ。実際の10/25の試合場面を再現したものではない。1人のみ。衣服のロゴ・スポンサー文字・背番号なし。",
+        "caption_policy": "ランダム選出のため名前・個人成績・出場・活躍を画像に記載していない。注記は「イラスト（AI生成）」「イメージ」。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story.\nCreate exactly ONE finished editorial basketball thumbnail as a PNG, landscape approximately 16:9, target 1792x1008 (at least 1000 px wide). All text must be Japanese as specified below.\n\nContent source: the fixed supplied article is titled \"10/25 試合結果（公式記録の確定待ち）\". At 2026-10-26 17:40 JST, official game records remain unconfirmed. Do NOT invent results, points, statistics, ranking, attendance, or a win. The random illustrative player is a real person, Tray Boyd III (トレイ・ボイド), selected from the article's 20 named players. He is not presented as that day's star and no appearance is asserted.\n\nVisual art direction: approved Japanese basketball editorial ink-and-brush style, matte very dark charcoal #151A18 background, acid lime #CCF43B broad diagonal brush strokes, crisp off-white typography, sparse high-energy composition. Clearly hand-drawn illustration with visible dry brush, scratchy ink contours and limited halftone shading. Absolutely no photograph, photorealism or pasted photo. No team logos, league logos, sponsors, watermark or branded basketball.\n\nSubject and likeness: ONE real basketball player, Tray Boyd III, likeness grounded in his official B.LEAGUE 2026-27 portrait at https://www.bleague.jp/files/user/roster/714/2026-27/43445_03.png, which has been visually inspected. Preserve his medium-brown complexion rendered in warm grayscale, shoulder-length thin black braided/twisted hair around the face and neck, wide plain black headband across forehead, full dense rounded black beard connected to mustache, broad nose, full lips, expressive almond-shaped eyes, oval face with strong cheekbones, athletic lean muscular build. Black short-sleeved undershirt beneath plain dark basketball jersey with understated green panels. No lettering, number, crest or jewelry on clothing. Simplify arm tattoo texture into unlettered ink marks. This must resemble Tray Boyd III, not the player in the approved style sample.\n\nComposition: fresh dynamic left-side player, torso leaning forward in a powerful low crossover-driving stance, upper body three-quarter view facing toward the right, face large and readable, one hand naturally spread against the top/side of an orange basketball near hip level, other arm extended naturally for balance. The ball is a held/touched player prop, not a standalone subject. Show head, both hands, entire ball and body down to upper thighs clearly with safe margins; deliberate lower-thigh crop is acceptable. No other people or crowd faces. This is a conceptual sports illustration, not a recreation of an actual game or a decisive play. Athlete and lime brush motion occupy left 45%; typesetting fills right 50% with generous clear space, readable at small thumbnail size. Do not cover any text with the player or brush splatter.\n\nTypography, EXACT text only:\nSmall header at top right: \"バスケまとめ\"\nProminent date: \"10/25\"\nLarge off-white headline: \"試合結果\"\nVery prominent lime status headline, in two clear lines: \"公式記録の\" and \"確定待ち\"\nSmaller but readable qualification below: \"10/26 17:40 JST時点\"\nBottom footer on dark solid area, minimum 28 px equivalent at 1792 width: \"イラスト（AI生成）\" and \"イメージ\"\n\nNo player names, no player statistics, no scoreline, no match winner, no claim that Tray Boyd appeared in this game, no claim of actual scene reenactment. Do not copy any name, date, team or score from the style reference. Keep each glyph correct, no extra decorative words. Ensure natural arm/wrist anatomy and five fingers on visible hands.\n\nONE ALLOWED REVISION\nEdit this existing basketball thumbnail with ONE targeted layout correction only. Preserve the same real-person likeness of Tray Boyd III, same pose, illustration style, colors, background, all exact Japanese text, text size, typography, text positions and the 16:9 landscape aspect ratio.\nThe leftmost hand/fingertips nearly touch or cross the left canvas edge and the top hair is too close to the top. Within the LEFT illustration area, scale the entire illustrated athlete AND basketball together to about 88% of their current size and shift this group slightly right/down as needed, so the outermost left fingertips and ball have at least 55px safe margin at a 1672px-wide canvas, the head/hair has at least 45px top margin, and both hands are fully visible. Keep the existing lower thigh crop if needed. Keep the right-hand Japanese title block unchanged and unobstructed. Extend only the existing dark/brush background into newly exposed space. Do not add people or anything else. Keep the illustration looking unmistakably like the same real player with thin long braids, black headband, full beard and plain black/green uniform. Keep no logos, no uniform lettering, no player name, no stats. The exact text remains: バスケまとめ / 10/25 / 試合結果 / 公式記録の / 確定待ち / 10/26 17:40 JST時点 / イラスト（AI生成） / イメージ. Make sure the entire ball and all fingers are comfortably inside the frame.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "revision_calls": 1,
+      "final_source_png": "/Users/genjo/.codex/generated_images/01a18f8e-2fca-76e3-8c01-8b59e27054be/exec-77fa6bc0-f97f-486e-ba92-c424608c5076.png",
+      "initial_source_png": "/Users/genjo/.codex/generated_images/01a18f8e-2fca-76e3-8c01-8b59e27054be/exec-d3154aaf-cf90-4d52-a835-6948c8901f9c.png",
+      "revision_reason": "初稿のボール側の指が左端に近かったため、人物とボールの表示サイズを縮めて余白を確保。修正版をview_imageで再確認。",
+      "postprocessing": "なし。合格した内蔵生成PNGをそのままコピー。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T01:26:57.662771+00:00",
+  "publication_approved": false
+}
