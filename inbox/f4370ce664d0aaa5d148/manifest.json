@@ -1,0 +1,83 @@
+{
+  "id": "f4370ce664d0aaa5d148",
+  "article_path": "article-games-20261025.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261025.html",
+  "source_commit": "",
+  "source_blob_sha": "579db7b0f6c959476718c149164ed224c3413a07",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
+  "last_observed_blob_sha": "579db7b0f6c959476718c149164ed224c3413a07",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f4370ce664d0aaa5d148/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f4370ce664d0aaa5d148/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:48:00.586773+00:00",
+  "creation_event_id": "cf456bad774219428a8e",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/f4370ce664d0aaa5d148/thumbnail.png",
+  "image_sha256": "441ad4011f8487c79e964c622596737a66e0445ae358dc4829bc65377a89a5eb",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "579db7b0f6c959476718c149164ed224c3413a07",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.25",
+      "試合結果",
+      "公式記録の",
+      "確定待ち",
+      "10/26 17:40時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f4370ce664d0aaa5d148/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261025.html",
+        "evidence": "h1: 10/25 試合結果（公式記録の確定待ち）。result-asof: 2026-10-26 17:40 JST 時点。全試合の公式記録確定待ち。出場確定を示す選出ではありません。",
+        "blob_sha_verified": "579db7b0f6c959476718c149164ed224c3413a07"
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f4370ce664d0aaa5d148/source.txt",
+        "evidence": "固定HTMLと同内容のタイトル、対象日、公式記録の留保、本文登場選手20人を確認。外部の成績・結果は本文根拠に使用していない。"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "evidence": "view_imageで確認。黒×ライム、太い日本語文字、インク・ブラシの絵柄のみ参照。見本の選手名・数値・成績は不使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジョシュ・ホーキンソン",
+        "selection": "ランダム",
+        "selection_method": "SystemRandom.choice on every named player in frozen source.html tables, equal probability, one draw",
+        "candidate_count": 20,
+        "candidate_scope": "固定本文の表に名前のある20選手。単独の主役に絞れないため、等確率で1人を1回抽選。",
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f4370ce664d0aaa5d148/selection.json",
+        "official_profile_url": "https://www.sunrockers.jp/lp/josh-hawkinson/",
+        "official_image_urls": [
+          "https://sunrockers.bl.kuroco-img.app/v=1789703093/files/user/26-27_SEASON/lp/players/img/josh_profile_img01.png",
+          "https://sunrockers.bl.kuroco-img.app/v=1790335954/files/user/26-27_SEASON/lp/players/img/josh_mv_img01.png"
+        ],
+        "local_reference_files": [
+          "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f4370ce664d0aaa5d148/references/josh-official-profile.png",
+          "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f4370ce664d0aaa5d148/references/josh-official-main.png"
+        ],
+        "visual_reference_checked": "公式資料の2画像をview_imageで実見。短く刈った側頭部と後方へ流す明るい茶髪、長めの輪郭、高い額、明瞭な鼻筋、淡色の目、角のある顎、薄い口ひげ・あごの剃り跡、長身で肩幅のある体形を確認。生成後も顔・髪・輪郭・目鼻の特徴を照合。",
+        "depiction": "実在選手1人のリバウンド保持のイメージ。実際の試合場面の再現ではない。文字による氏名・背番号・成績・出場・活躍の言及なし。公式写真の貼付、ロゴ、スポンサー文字なし。"
+      }
+    ],
+    "prompt": "Create exactly ONE finished Japanese basketball editorial thumbnail as a PNG, landscape 16:9, ideally 1600x900 or higher. This is a brand-new illustration for バスケまとめ. Use case: illustration-story.\n\nVisual style: the approved reference thumbnail's near-black #151A18 and electric lime #CCF43B palette, warm off-white lettering, hand-painted sports ink / scratchy dry brush marks, confident thick Japanese typography, very few elements, strong thumbnail readability. It must be unmistakably a drawn editorial illustration, never photographic or photorealistic.\n\nComposition: left 54% reserved for highly legible type; right 46% for one large real player, Josh Hawkinson / ジョシュ・ホーキンソン, in a dynamic three-quarter rebound-catching pose. His torso twists, both arms reach up-right, BOTH hands firmly gripping opposite sides of ONE basketball above shoulder level. Show his face clearly in three-quarter view, looking toward the ball, focused expression. The ball and both hands must be completely inside the canvas. Upper thighs / torso may deliberately crop at bottom, but no awkward wrist, head, or ball cutoff. Keep all type at least 5% inside the canvas. One vigorous diagonal lime brushstroke behind the figure, sparse ink flecks, no audience or extra people.\n\nPerson identity: depict the actual Josh Hawkinson based on the official Tokyo Sunrockers 2026-27 profile reference visually inspected for this task, https://www.sunrockers.jp/lp/josh-hawkinson/ . Adult tall broad-shouldered athletic man; light skin; short dark blond/light brown hair with closely faded sides and longer neatly swept-back side-parted top; high forehead; elongated oval/angular face; straight prominent nose; light blue-gray eyes under fairly straight brows; pronounced square chin; thin lips; clean-shaven appearance with only faint stubble, NO full beard, NO mustache. Preserve these distinctive facial features in the ink drawing; do not substitute a generic fictional athlete. Strong natural anatomy. Right forearm black compression sleeve. Plain off-white basketball uniform with black ink shadows; NO jersey number, NO name, NO team/league/brand/sponsor logo or lettering. Orange ball may be the only warm color accent and must be unbranded. Do not paste or reproduce an official photograph; redraw him completely as expressive ink illustration.\n\nExact Japanese text, no additional text:\nSmall masthead upper-left: 「バスケまとめ」\nSmall date directly beneath it: 「2026.10.25」\nVery large bold off-white headline: 「試合結果」\nProminent lime qualifier below, in two clean lines: 「公式記録の」 then 「確定待ち」\nSmaller but clearly readable source-as-of line beneath the qualifier: 「10/26 17:40時点」\nBottom-left footer, clear off-white readable text, within safe margins: 「イラスト（AI生成）」 and 「イメージ」\n\nEditorial constraints: All article claims come solely from the supplied frozen article: 10/25 game results are awaiting official confirmation as of 2026-10-26 17:40 JST. Never imply results are confirmed or the selected player appeared or performed in that day's games. Josh was selected randomly from 20 named players in the article, so DO NOT put his name, number, individual statistics, team name, score, achievement, rank, victory, or participation claim anywhere in the image. This action pose is a generic conceptual image, NOT a recreation of any actual play. Use the footer wording exactly as above, NOT 成績をもとにしたイメージ. No logos, watermark, fake signatures, extra panels or copied sample text. Inspectable five-finger anatomy and clear facial features. Deliver one unified professional thumbnail.",
+    "generator": "Built-in image_gen.imagegen / tools.image_gen__imagegen; 1 initial generation; 0 revisions; no API or CLI fallback; original PNG /Users/genjo/.codex/generated_images/01a18f79-7e75-7693-9c28-00482adcbfac/exec-8558ca25-0907-49ee-8f25-646a2ec80fce.png",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T01:03:31.097280+00:00",
+  "publication_approved": false
+}

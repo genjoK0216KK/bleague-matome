@@ -1,0 +1,110 @@
+{
+  "id": "a080784863e72da1cb08",
+  "article_path": "article-daily-20261027.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261027.html",
+  "source_commit": "",
+  "source_blob_sha": "28b23834ad6954730c95abf873efcee238d9329f",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "d820827ecf055a383393bb2b74be6b2374c05d565e4d18c2bcee3570456eb46c",
+  "last_observed_blob_sha": "28b23834ad6954730c95abf873efcee238d9329f",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a080784863e72da1cb08/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a080784863e72da1cb08/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:47:59.957664+00:00",
+  "creation_event_id": "f2f05374469a6cbac184",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/a080784863e72da1cb08/thumbnail.png",
+  "image_sha256": "68f470db6c83c640c288aa60cf5a4fdbe8cc0a10dcf46a2c5349e49d53718791",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "28b23834ad6954730c95abf873efcee238d9329f",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.27",
+      "東京U×静岡",
+      "今季平均EFF",
+      "登録選手を比較",
+      "10/29・30の2連戦",
+      "出場・勝敗の予測ではありません",
+      "イラスト（AI生成）｜成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "role": "本文の根拠（固定版のみ）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a080784863e72da1cb08/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261027.html",
+        "source_blob_sha": "28b23834ad6954730c95abf873efcee238d9329f"
+      },
+      {
+        "role": "本文の根拠（固定版のみ）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a080784863e72da1cb08/source.txt",
+        "used_facts": [
+          "記事日2026年10月27日",
+          "東京U×静岡の10月29日・30日の2連戦",
+          "登録選手の今季平均EFFの独自比較",
+          "出場や勝敗を予測する記事ではない"
+        ],
+        "qualifiers_preserved": [
+          "画像に出場・勝敗の予測ではない旨を明記",
+          "当日のスタメン・出場を断定しない",
+          "実際のプレー場面の再現ではなくイメージ",
+          "10/28日程の未確認情報は画像に不使用",
+          "順位・最新インジュアリーリストを断定しない",
+          "個人のEFF数値・勝敗・スコア・選手名は画像に不使用"
+        ]
+      },
+      {
+        "role": "スタイル参照のみ（選手・数値・日付は引き継がない）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "visually_inspected": true
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジョーダン・フェイゾン",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿の比較本文で、東京Uの今季平均EFF最上位として個別に説明されている2人のうち1人。対戦記事の両チームから1人ずつ選択。",
+        "official_profile": "https://tubc.tokyo/team/players/detail/id=60151",
+        "official_image": "https://bleague.bl.kuroco-img.app/v=2026103109/files/user/roster/2725/2026-27/12648_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a080784863e72da1cb08/references/faison-official.jpg",
+        "reference_scope": "容姿だけ。本文の事実には使用しない。",
+        "visually_inspected": true,
+        "observed_features": "ごく短い髪、額から頭頂にかけた輪郭、太い眉と幅のある鼻、口ひげと顎を覆うひげ、厚い肩。",
+        "depiction": "水色の無地ユニフォームで両手にボールを持つプレーイラスト。特定の実試合の再現ではない。"
+      },
+      {
+        "name": "トレダリアス・マカラム",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿の比較本文で、静岡の今季平均EFF最上位として個別に説明されている2人のうち1人。対戦記事の両チームから1人ずつ選択。",
+        "official_profile": "https://www.bleague.jp/roster_detail/?PlayerID=51000685",
+        "official_image": "https://www.bleague.jp/files/user/roster/1637/2026-27/51000685_03.png",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a080784863e72da1cb08/references/mccallum-official.png",
+        "reference_scope": "容姿だけ。本文の事実には使用しない。",
+        "visually_inspected": true,
+        "observed_features": "短く丸いアフロ、口ひげと顎全体の豊かなひげ、幅のある鼻と口元、左腕のタトゥー。",
+        "depiction": "オレンジの無地ユニフォームで守備するプレーイラスト。特定の実試合の再現ではない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape 16:9, preferably 1600x900 or larger, opaque PNG. New artwork for バスケまとめ. The fixed article compares Tokyo United and Veltex Shizuoka registered players' season-average EFF before the October 29 and 30 games. It does NOT predict participation or results. Text below is the complete allowed content; do not import scores, player names or dates from prior example artwork.\n\nVisual style reference already inspected in conversation: B-culver-black-lime-v3.png. Match its dark charcoal #151A18, acid lime #CCF43B brush marks, warm ivory bold Japanese typography, confident hand-drawn black ink and dry-brush athletic illustration, minimal elements. No photorealism. Do not copy the example player's face or its statistics.\n\nDraw exactly TWO REAL athletes, with identity based on the two inspected OFFICIAL portraits:\n1. Jordan Faison (ジョーダン・フェイゾン), Tokyo United. Official portrait https://tubc.tokyo/team/players/detail/id=60151 ; image https://bleague.bl.kuroco-img.app/v=2026103109/files/user/roster/2725/2026-27/12648_01.jpg . Appearance: very closely shaved scalp with receding hairline, broad oval head, full neatly edged black beard below chin and along jaw, connected mustache, strong broad nose, defined brows, deep-set eyes, medium-dark skin, muscular broad shoulders. Plain muted cyan basketball jersey, NO logo, lettering or numbers.\n2. Tre'Darius McCallum (トレダリアス・マカラム), Shizuoka. Official portrait https://www.bleague.jp/roster_detail/?PlayerID=51000685 ; image https://www.bleague.jp/files/user/roster/1637/2026-27/51000685_03.png . Appearance: short rounded dense black afro, fuller projecting black beard, connected mustache, broad nose, warm wide mouth, dark skin, athletic build. Plain muted orange jersey, NO logo, lettering or numbers. His left arm has understated dark tattoo shapes. Distinguish the two actual faces clearly; keep highlights and recognizable facial features, do not obscure faces into silhouettes.\n\nComposition: left 48% for clean striking stacked Japanese type, right 52% for a dynamic imagined one-on-one basketball scene. Faison in foreground in a twisting low post/triple-threat stance holding an orange basketball securely in BOTH hands near his right hip. McCallum behind and to the right facing him in an athletic defensive stance, one hand raised and the other extended sideways with clear natural anatomy. Both faces visible in three-quarter angle. Frame around knees/thighs with all heads, visible arms, hands and the entire ball safely inside canvas. Legs can exit lower illustration region naturally, but do not overlap the bottom caption. Both same approximate body height. Space the bodies so hands and faces never merge. Two people only; no spectators, no hoop required, no extra balls. Energetic diagonal lime brush strokes behind athletes, restrained grain. This is an explicitly imagined illustration, never a claim these players actually matched up or participated.\n\nExact text, use clean thick Japanese gothic lettering, high contrast and no malformed glyphs. Hierarchy and location:\n- small top left masthead: \"バスケまとめ\"\n- adjacent small date: \"2026.10.27\"\n- largest main headline left: \"東京U×静岡\"\n- large lime line: \"今季平均EFF\"\n- large ivory line: \"登録選手を比較\"\n- smaller supporting line: \"10/29・30の2連戦\"\n- clear readable qualifier below supporting text: \"出場・勝敗の予測ではありません\"\n- bottom footer on solid dark band, fully readable with generous margins: \"イラスト（AI生成）｜成績をもとにしたイメージ\"\n\nText occupies left panel, illustration right. Around 5% safe inset. Footer approximately 3% of canvas height, visually legible. Keep typography bold and uncluttered. No player names on artwork, no score or EFF values, no performance claims, no league/team/sponsor logos, no branding on ball or clothing, no official photograph pasted anywhere. Preserve 16:9 aspect ratio.\n\nSINGLE REVISION\nEdit image 1, the finished basketball thumbnail, and return exactly one final 16:9 PNG at the same or higher resolution. Image 2 is the OFFICIAL Jordan Faison portrait, image 3 is the OFFICIAL Tre'Darius McCallum portrait, both supporting identity references only, not content to paste.\n\nMake only this focused illustration correction while keeping ALL typography, words, numbers, the dark charcoal/lime palette, brush texture, two-player action and the text-panel layout EXACTLY intact:\nRecompose the right-side illustrated athletes just enough within the canvas so the orange player's rightmost elbow and entire arm are visible, no arm or hand touches/crosses the outer edge, with about 3% horizontal margin and 3% clearance above the raised fingers. Keep bodies substantial in the same lower-right region. Keep complete ball and both faces visible. Lower thighs may naturally crop at the bottom. Do not add any new objects or people.\nRefine likeness from the two official supporting portraits. Faison in cyan must retain his very closely shaved scalp, broad oval face, broad nose, connected mustache and full close beard and strong build, matching image 2. McCallum in orange should match image 3: SHORT, evenly rounded dense afro, not tall/angular hair; full rounded beard, not a pointed goatee; broad nose, and characteristic wide mouth. Preserve the alert competitive expressions and hand-drawn illustration style. No photographs pasted, no photographic rendering. Both athletes have two anatomically coherent arms and natural five-digit hands, with Faison holding the ball in both hands and McCallum defending. Simplify overlapping fingers if necessary. No logos or clothing text.\n\nKeep these exact existing lines, spelling and punctuation:\nバスケまとめ\n2026.10.27\n東京U×静岡\n今季平均EFF\n登録選手を比較\n10/29・30の2連戦\n出場・勝敗の予測ではありません\nイラスト（AI生成）｜成績をもとにしたイメージ\n\nDo not change any article claim or add player names, points, performance claims, sponsors or numbers. This is an imagined matchup illustration, not a recreation of an actual game.",
+    "generator": {
+      "tool": "image_gen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "revision_calls": 1,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a18f73-33ab-7162-89f1-d5273ba1b1ce/exec-5f214b5a-e471-490b-ae87-4eb82de9cead.png",
+      "final_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a080784863e72da1cb08/generated.png",
+      "qa_method": "生成結果を目視。文字・日付・留保・本人の髪とひげと輪郭・手とボールの形・腕と文字の見切れ・AI表記を確認。初稿の右腕の見切れと髪型を1回修正し、修正版を再確認。",
+      "publication_or_external_delivery_performed": false,
+      "ready_executed": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T00:57:22.013215+00:00",
+  "publication_approved": false
+}

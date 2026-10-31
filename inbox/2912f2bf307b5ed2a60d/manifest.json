@@ -1,0 +1,117 @@
+{
+  "id": "2912f2bf307b5ed2a60d",
+  "article_path": "article-daily-20261029.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261029.html",
+  "source_commit": "",
+  "source_blob_sha": "b23bbba31e21f4c9020016d3981406c3551e088e",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "84ffb2c0d312490c8178c2a775aa10c592ba3f5800ab1b5ccbe7bedd4ce80394",
+  "last_observed_blob_sha": "b23bbba31e21f4c9020016d3981406c3551e088e",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2912f2bf307b5ed2a60d/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2912f2bf307b5ed2a60d/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:48:00.257088+00:00",
+  "creation_event_id": "56ddc92dfd9299045c21",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/2912f2bf307b5ed2a60d/thumbnail.png",
+  "image_sha256": "df1f8ac038d14720777bd1a14cf6d12117eace8d56cf085d8ad00c26a7fc0dca",
+  "width": 1659,
+  "height": 948,
+  "brief": {
+    "source_blob_sha": "b23bbba31e21f4c9020016d3981406c3551e088e",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.29",
+      "東京U × 静岡",
+      "今季平均EFF",
+      "試合前比較",
+      "独自分析｜出場メンバー未確認",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2912f2bf307b5ed2a60d/source.html",
+        "role": "本文根拠・固定HTMLのみ",
+        "article_url": "https://basuke-matome.jp/article-daily-20261029.html",
+        "verified_blob_sha": "b23bbba31e21f4c9020016d3981406c3551e088e",
+        "evidence": "本文は10/29東京U×静岡の試合前に登録選手の今季平均EFFを独自比較。19時更新でも出場メンバーと最新インジュアリーリストは未確認。勝敗・出場の予測ではない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2912f2bf307b5ed2a60d/source.txt",
+        "role": "本文根拠・固定文章のみ",
+        "evidence": "見出し・日付・対戦カード・今季平均EFF・試合前比較・出場メンバー未確認をHTMLと照合。関連記事や外部の成績は画像の内容根拠に使用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジョーダン・フェイゾン",
+        "club_in_article": "東京U",
+        "selection": "ランダム",
+        "selection_method": "記事が両クラブの登録選手比較で単独の主役に絞れないため、本文登場の東京U 6選手からSystemRandom.choiceで1人を抽選。抽選記録 selection.json。",
+        "source": "東京ユナイテッドBC公式プロフィール",
+        "url": "https://tubc.tokyo/team/players/detail/id=60151",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026103109/files/user/roster/2725/2026-27/12648_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2912f2bf307b5ed2a60d/references/faison-official.jpg",
+        "observed_features": "非常に短い刈り髪、丸い額、やや縦長の卵形の輪郭、頬骨、口ひげから顎へつながる厚い黒ひげ、太い首と肩。公式画像を実際に目視。",
+        "usage": "顔の特徴だけ参照してイラスト化。写真貼付なし。画像内に氏名・個人成績・背番号・ロゴなし。実際の対戦場面の再現ではない。"
+      },
+      {
+        "name": "ジェイデン・ガードナー",
+        "club_in_article": "静岡",
+        "selection": "ランダム",
+        "selection_method": "本文登場の静岡3選手からSystemRandom.choiceで1人を抽選。抽選記録 selection.json。",
+        "source": "ベルテックス静岡公式プロフィール",
+        "url": "https://veltex.co.jp/team/players/detail/id=52055?PlayerID=51000686",
+        "image_url": "https://veltex.bl.kuroco-img.app/files/user/team/players/ID_01_5.png?v=1789526389",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2912f2bf307b5ed2a60d/references/gardner-official.png",
+        "observed_features": "上方と横に広がる短中長の細いツイスト状の黒髪、サイドは短い、幅のある丸四角の顔、幅広い鼻、厚い唇、口ひげと短い顎ひげ、厚い肩。公式画像を実際に目視。",
+        "usage": "顔の特徴だけ参照してイラスト化。写真貼付なし。画像内に氏名・個人成績・背番号・ロゴなし。実際の対戦場面の再現ではない。"
+      }
+    ],
+    "prompt": {
+      "initial": "Create exactly ONE finished Japanese basketball editorial thumbnail as a PNG, landscape approximately 16:9, 1792x1024 or comparable dimensions above 1000px. Use case: illustration-story / sports editorial thumbnail.\n\nVisual direction: approved Basuke Matome style seen in the black-and-lime thumbnail reference in this conversation. Deep charcoal #151A18 background, electric lime #CCF43B dry-brush sweeps, warm ivory oversized heavy Japanese typography, powerful hand-drawn black ink hatching and brush illustration, few elements and spacious hierarchy. It must look unequivocally drawn, not photographic, not a 3D render. Do not copy any player, name, number, score or date from the style sample.\n\nSubject: TWO specific REAL professional basketball players in a hypothetical energetic one-on-one encounter. Jordan Faison of Tokyo United defends Jayden Gardner of Shizuoka. These two players were randomly selected from the names in the fixed article. This is an imagined illustration, not a record of their actual appearance or a specific moment on 2026-10-29. Do not depict unknown generic or fictional players.\n\nLikeness reference observations from their official profile photographs:\n- JORDAN FAISON (official Tokyo United profile https://tubc.tokyo/team/players/detail/id=60151, official portrait https://bleague.bl.kuroco-img.app/v=2026103109/files/user/roster/2725/2026-27/12648_01.jpg): dark warm brown skin, very closely cropped/shaved scalp with a high smoothly rounded forehead, substantial neat full black beard from sideburns around jaw and chin, connected mustache, slightly elongated oval head, prominent cheekbones, measured dark eyes, broad straight nose, full lips, thick athletic neck and muscular broad shoulders. Maintain these identifying features. Plain deep cyan basketball jersey with black trim.\n- JAYDEN GARDNER (official Veltex Shizuoka profile https://veltex.co.jp/team/players/detail/id=52055?PlayerID=51000686, official portrait https://veltex.bl.kuroco-img.app/files/user/team/players/ID_01_5.png?v=1789526389): warm brown skin, thick black short-to-medium upright textured twists forming a wide high crown, closely tapered sides, broad rounded-square face, pronounced brow, wide-set dark eyes, broad rounded nose, full lips, short neat jawline beard and mustache (much shorter beard than Faison), robust muscular shoulders. Maintain these identifying features. Plain muted orange basketball jersey with black trim.\nNo jersey numbers, no player names in visible text, no team/league logos, no sponsor lettering, no shoe logos. Official photographs are ONLY appearance references; do not paste, collage, trace photographic texture, reproduce portrait poses or use photographs in the output.\n\nComposition: Left 48% is clean typography. Right 52% contains two clearly distinct large dynamic ink-illustrated players from approximately knees upward, both faces recognizable and unobscured, with space around their heads and hands. Gardner in the right foreground is in a bent-knee attacking stance, torso turned toward the viewer, holding a single orange basketball firmly in both hands at his waist as he makes a pivot. Faison slightly behind and left of Gardner takes a balanced low defensive stance, looking toward the ball, one arm raised diagonally to guard and the other held outward. Dynamic diagonals and a small sweeping lime brush arc suggest movement. Limbs must attach naturally; hands anatomically coherent, normal five fingers, no extra hands/limbs, no intersecting or melted bodies. Ball must remain fully visible and held as a prop. Do not show a made shot, scoreboards, celebration, actual venue, game clock, crowds or a factual play result. Faces are drawn with readable planes and hatching, not dark silhouettes.\n\nRender ONLY these exact visible texts, all in Japanese heavy sans serif except the brush accent. Keep every line legible and safely inset at least 5% from edges:\nSmall top-left masthead: \"バスケまとめ\"\nSmall date below masthead: \"2026.10.29\"\nUpper-left strong white matchup line: \"東京U × 静岡\"\nVery large lime main line: \"今季平均EFF\"\nVery large ivory line below: \"試合前比較\"\nMedium white qualifier on dark clear area below headline: \"独自分析｜出場メンバー未確認\"\nBottom-left footer, clearly readable in ivory: \"イラスト（AI生成）\"\nNext to this footer, clearly readable: \"イメージ\"\n\nEditorial constraints: The article compares registered-player season-average EFF BEFORE the game, and does NOT confirm either depicted player's participation or performance. Do not add names, individual scores, statistics, wins, star claims, roster certainty, predictions, arrows implying gains, or any other text. Keep the uncertainty qualifier prominent. All article facts and exact copy come ONLY from supplied fixed source.html and source.txt. External official profiles provide likeness only. Show a complete polished single thumbnail, not a mockup or multiple panels.",
+      "correction_1": "Edit the supplied thumbnail ONE time only to fix its right-edge cropping and cramped top margin. Keep the canvas landscape approximately 16:9 and at least 1600 pixels wide. Preserve the exact current design, all Japanese text, date, colors, charcoal background, lime brush marks, typography, authentic ink illustration style, both real players' facial likenesses, hair and beards, plain logo-free uniforms, and the single hypothetical one-on-one scene.\n\nOnly adjust the placement and size of the two-player illustration: scale the entire pair to about 85% of its current size and move it inward toward center and slightly downward so the WHOLE basketball is visible with at least 65 pixels of clear space between its rightmost contour and the right canvas edge, and ALL raised fingertips and hair have at least 55 pixels of space below the top edge. Preserve relative positions and natural anatomy, ensure both hands holding the ball connect to Gardner's own arms; there are exactly two men, two arms per man, normal five-finger hands and one complete ball. No text overlaps faces, hands, or ball. A purposeful lower-body crop at the bottom is okay; cropping any ball, hand, finger, head or hair is not. Use the freed space as charcoal and sparse lime brush texture, not new objects.\n\nDo not change text or add other text. Keep these exact lines fully visible:\nバスケまとめ\n2026.10.29\n東京U × 静岡\n今季平均EFF\n試合前比較\n独自分析｜出場メンバー未確認\nイラスト（AI生成）\nイメージ\n\nJordan Faison, the left defender, retains the very closely cropped scalp, oval face and substantial full beard. Jayden Gardner, the right ball holder, retains the upright short-medium twists, broad rounded-square face, and short chin/jaw beard. This is an AI-generated imagined illustration, not an actual game scene, not a participation claim. No names, numbers, stats, logos, photos, sponsors or scoreboards."
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "内蔵画像生成",
+      "attempts": 2,
+      "corrections": 1,
+      "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "style_reference_visually_inspected": true,
+      "status": "passed_visual_qa",
+      "first_candidate": "/Users/genjo/.codex/generated_images/01a18f76-12a2-7d42-9d07-7a25f5203c93/exec-203cf541-ad36-49fd-a17a-cc371bb0b42a.png",
+      "initial_qa": {
+        "text_and_numbers": true,
+        "source_qualifiers": true,
+        "likeness_or_no_named_person": true,
+        "layout": false,
+        "ai_label": true
+      },
+      "correction_reason": "初稿を目視確認。右端でボールの輪郭が見切れ、上端の指先・髪に余白が不足。許可された1回の修正で人物とボールを内側に収める。",
+      "selected_output": "/Users/genjo/.codex/generated_images/01a18f76-12a2-7d42-9d07-7a25f5203c93/exec-a19565f7-2cc7-4c7d-87cc-fede6e84eb4c.png",
+      "qa_observations": {
+        "text_and_numbers": "最終画像を目視。2026.10.29、東京U × 静岡、今季平均EFF、試合前比較の表記が固定原稿と整合。個人名・背番号・個人成績・勝敗・スコアを描いていない。",
+        "source_qualifiers": "最終画像で「試合前比較」「独自分析｜出場メンバー未確認」「イメージ」を確認。出場の確定・試合結果・予測・特定場面の再現という表現なし。外部プロフィールの成績は使用していない。",
+        "likeness_or_no_named_person": "公式参照を目視した上で最終イラストを確認。左フェイゾンの極短髪・長めの卵形輪郭・厚い全体ひげ、右ガードナーの上に広がるツイスト髪・幅のある輪郭・短い顎ひげを反映。2名とも実在選手。写真風・写真貼付・ロゴ・スポンサーなし。",
+        "layout": "最終画像を目視。2人の動きが分かり、顔・手指・ボール全体が画面内に収まる。手・腕の接続と指に顕著な破綻なし。文字は読め、主要な顔やボールと重ならない。脚は意図した下端トリミング。黒とライムの承認スタイル。",
+        "ai_label": "最終画像左下に「イラスト（AI生成）」「イメージ」を目視確認。"
+      },
+      "saved_image": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2912f2bf307b5ed2a60d/generated.png",
+      "width": 1659,
+      "height": 948,
+      "image_sha256": "df1f8ac038d14720777bd1a14cf6d12117eace8d56cf085d8ad00c26a7fc0dca",
+      "saved_status": "generated_png_and_brief_only",
+      "ready_executed": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T01:01:06.399160+00:00",
+  "publication_approved": false
+}

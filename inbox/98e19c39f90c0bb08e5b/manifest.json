@@ -1,0 +1,106 @@
+{
+  "id": "98e19c39f90c0bb08e5b",
+  "article_path": "article-daily-20261026.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261026.html",
+  "source_commit": "",
+  "source_blob_sha": "e031eced66b6196bf65feb0c01af9991988af47b",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "e982891a7a59df580130b12303849d3427243c4357de5bbda20c69f6f884faeb",
+  "last_observed_blob_sha": "e031eced66b6196bf65feb0c01af9991988af47b",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/98e19c39f90c0bb08e5b/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/98e19c39f90c0bb08e5b/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:47:59.665682+00:00",
+  "creation_event_id": "db84aa62f32e1f6bd1a0",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/98e19c39f90c0bb08e5b/thumbnail.png",
+  "image_sha256": "bc3bf876d1b155d0adbe55ffc90d622383c782fc3a1a9419dbfa989c1321b0ee",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "e031eced66b6196bf65feb0c01af9991988af47b",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.26",
+      "試合前の",
+      "注目カード",
+      "今季平均EFFで比較",
+      "出場・結果は未確認",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_body",
+        "path": "source.html",
+        "url": "https://basuke-matome.jp/article-daily-20261026.html",
+        "used_as": "本文根拠は固定HTMLのみ。試合前の比較・分析であり、出場確定・勝敗や結果の検証を含まない。公開URLは識別用であり、公開本文は参照していない。"
+      },
+      {
+        "type": "article_body",
+        "path": "source.txt",
+        "used_as": "固定HTMLの文章版。独自分析①の京都—秋田・島根—仙台は並列に扱われており、その2ペアからランダム選択した。個人のEFF数値、試合結果、選手名は画像に掲載しない。"
+      },
+      {
+        "type": "style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "used_as": "view_imageで確認した承認済み黒・ライム、インクとブラシの作風のみ。元画像の選手・日付・成績は流用しない。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://hannaryz.jp/team/players/detail/id=19803?PlayerID=26922&Year=2026",
+        "used_as": "公式プロフィール画像によるチャールズ・ジャクソンの容姿確認だけ。外部の成績等は本文根拠に使用しない。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://northern-happinets.com/team/players/detail/id=22786?PlayerID=51000410",
+        "used_as": "公式プロフィール画像によるマーク・スミスの容姿確認だけ。外部の成績等は本文根拠に使用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "チャールズ・ジャクソン",
+        "selection": "ランダム",
+        "selection_method": "記事は複数比較で単一の主役に絞れない。本文『独自分析①』の2ペア（京都—秋田、島根—仙台）からPython secrets.choiceで京都—秋田を選び、本文に名前がある両選手を採用。selection.jsonに抽選記録を保存。",
+        "official_profile": "https://hannaryz.jp/team/players/detail/id=19803?PlayerID=26922&Year=2026",
+        "official_image": "https://bleague.bl.kuroco-img.app/v=2026100617/files/user/roster/699/2026-27/26922_01.jpg",
+        "local_reference": "references/charles-jackson-official.jpg",
+        "observed_features": "短く密な黒いカール、広い輪郭、太い眉・深い目、幅のある鼻、厚い唇、口ひげとつながる密なあごひげ、広い肩。公式画像をview_imageで実見。修正後の後方ディフェンダーを照合。",
+        "use": "人物の容姿を参照してイラスト化。写真貼付・ロゴ・スポンサー文字・背番号なし。氏名や成績は画像に入れない。"
+      },
+      {
+        "name": "マーク・スミス",
+        "selection": "ランダム",
+        "selection_method": "上記と同じ抽選で選ばれた京都—秋田のペア。本文に名前がある選手。",
+        "official_profile": "https://northern-happinets.com/team/players/detail/id=22786?PlayerID=51000410",
+        "official_image": "https://bleague.bl.kuroco-img.app/v=2026102815/files/user/roster/693/2026-27/51000410_01.jpg",
+        "local_reference": "references/mark-smith-official.jpg",
+        "observed_features": "短い黒いカール、細長い卵形の顔、はっきりした眉、比較的細い鼻筋、薄い口ひげ・あごの薄いひげ、あご沿いの濃いひげはない。公式画像をview_imageで実見。初稿の髪・ひげを1回修正し、前景のボール保持者を照合。",
+        "use": "人物の容姿を参照してイラスト化。写真貼付・ロゴ・スポンサー文字・背番号なし。氏名や成績は画像に入れない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT\nCreate ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 1536x864 or larger. It must be a striking hand-drawn ink-and-brush illustration, NOT a photograph or photorealistic render.\n\nVISUAL STYLE: Match the inspected approved black-and-lime thumbnail's editorial style: deep near-black #151A18 background, electric lime #CCF43B broad dry-brush streaks, warm ivory typography, bold black-and-white hand-inked players with visible crosshatching. An orange basketball is the only other strong accent. Sparse energetic elements, no decorative charts. Do not copy the prior sample's person, date, player name, scores or stats.\n\nSUBJECTS: Exactly TWO real professional basketball players, Charles Jackson (チャールズ・ジャクソン) and Mark Smith (マーク・スミス), based on the two official portrait photographs just inspected. Do not invent a generic athlete or blend faces.\nCharles Jackson reference: official Kyoto Hannaryz portrait at https://bleague.bl.kuroco-img.app/v=2026100617/files/user/roster/699/2026-27/26922_01.jpg — very tall, broad powerful shoulders, dark skin, compact short black textured curls with closely trimmed sides, broad rectangular face, heavy eyebrows, deep-set eyes, broad nose, full lips, dense full beard along jaw and chin with connected moustache. Preserve his distinctive face and beard.\nMark Smith reference: official Akita Northern Happinets portrait at https://bleague.bl.kuroco-img.app/v=2026102815/files/user/roster/693/2026-27/51000410_01.jpg — a somewhat shorter athletic guard, medium/light-brown skin, short dense black curls, narrow oval face, strong dark eyebrows, straight prominent nose, defined lips, very light moustache and small chin stubble, otherwise clean cheeks. Preserve his youthful slender face, short hair, and lack of full beard.\nBoth figures must remain clearly illustrated in ink. Use plain unbranded basketball jerseys (one ivory with dark trim, the other dark with ivory trim), without numbers, words, badges, team marks, sponsor marks, or brand marks. Do not paste or reproduce any photographic pixels.\n\nACTION AND COMPOSITION: A dynamic imaginary one-on-one drive, NOT a recreation of any actual game. On the right 55% of the image, Mark Smith is foreground, leaning forward in a low attacking step while securely gathering ONE orange ball at waist/chest height in two naturally formed hands, his face visible in three-quarter view. Charles Jackson faces him slightly farther right/back in a bent-knee defensive stance, one open hand raised and the other arm low, his face visible in three-quarter view. Their heads must be separated, not obscured by arms or the ball. Jackson is taller and broader. Keep correct anatomy, two arms per player, natural hands, no fused limbs, no overlapping confusing hands. Show a generous three-quarter action view, with no awkward head/hand/ball cutoffs. Use a diagonal lime brush trail behind the players to convey motion. No third person, crowd faces, court logos, trophy, scoreboard or game-specific venue. Reserve the left 45% for large typography. Use a composition distinctly different from the old single shooting-player example.\n\nTEXT: Render ONLY the following exact Japanese strings, each one time, cleanly and legibly. Do not show player names or any player statistics. Text hierarchy:\nSmall upper-left masthead: 「バスケまとめ」\nDate directly beneath: 「2026.10.26」\nLarge main title, two lines: 「試合前の」 then 「注目カード」\nMedium subtitle below main title: 「今季平均EFFで比較」\nA clear smaller qualification below: 「出場・結果は未確認」\nBottom-left/footer, clearly visible: 「イラスト（AI生成）」 and 「イメージ」\nDo not include quotation marks around these strings.\nMake 注目カード the largest text in lime, 試合前の ivory. Bold heavy Japanese sans-serif, crisp readable edges with restrained print texture. Everything must fit within the canvas with at least 4% safe margins. Footer comfortably readable, not microscopic, and not crossing either player's body.\n\nEDITORIAL SCOPE: The sole article evidence is the supplied fixed source.html/source.txt dated 2026-10-26, a pregame comparison using season-average EFF with appearances and results unconfirmed. The two players were randomly selected from a pair explicitly mentioned in that article. The picture is only an illustrative imagined matchup: do not imply confirmed participation, a real captured moment, a win, score, achievement or decisive shot. No additional text. No league/team logos. Produce exactly one finished thumbnail.\n\nONE ALLOWED REVISION PROMPT\nEdit the first image, the basketball thumbnail, with ONLY a targeted likeness and safe-margin correction. The second image is the official portrait of Charles Jackson; the third image is the official portrait of Mark Smith. The two photos are identity/appearance references ONLY: no photo pixels, logos, text, numbers or sponsor marks may be copied into the result.\n\nKeep the successful entire black #151A18 and lime #CCF43B ink-brush editorial illustration, two-player drive/defense action, composition and all existing Japanese wording. Keep the ball and both players' hands anatomically clear. Exactly two real players, not invented athletes. Keep the output landscape 16:9, minimum 1536x864, PNG.\n\nTARGETED FIXES:\n1. The foreground ball handler must much more closely resemble Mark Smith in the THIRD reference. He is young-looking, has short compact close-cropped dark curls lying close to the scalp (reduce the current tall curly hairstyle markedly), light/medium brown skin, an elongated oval face, a relatively narrow straight nose, strong arched dark eyebrows, prominent ears, and a long clean jaw/chin with just very faint moustache and a small faint chin patch. REMOVE the current thick dark moustache, heavy goatee and strong cheek stubble. Reproduce the specific facial proportions from that portrait in the same three-quarter action angle, with a focused expression and mouth closed or slightly open. Do not turn him into a different generic player.\n2. The taller background defender must more closely resemble Charles Jackson in the SECOND reference. Reduce the current overly tall dense hairstyle to his short compact natural curls with close sides, use his broad squared face, deep-set eyes, strong brow, broad nose, full lips and full dense beard with connected moustache as shown in the portrait. Preserve his large build relative to Smith.\n3. Move/scale the player group slightly inward/down if needed so Jackson's full head and raised fingertips have comfortable clearance (about 4% of image height) from top/right edges. Keep faces large and clear. No added subjects. Keep title fully readable and in frame.\n\nPRESERVE EXACT TEXT, with no extra text and no player names/statistics:\nバスケまとめ\n2026.10.26\n試合前の\n注目カード\n今季平均EFFで比較\n出場・結果は未確認\nイラスト（AI生成）\nイメージ\n\nThis is an imagined illustrative matchup accompanying a fixed pregame comparison article, not evidence of an actual match scene or confirmed appearances. Keep all jerseys completely plain and unbranded. Do not paste the reference portraits into the thumbnail. Maintain the hand-drawn ink style throughout, not photorealistic.",
+    "generator": {
+      "tool": "image_gen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "revisions": 1,
+      "revision_reference_order": [
+        "initial_generated_thumbnail",
+        "references/charles-jackson-official.jpg",
+        "references/mark-smith-official.jpg"
+      ],
+      "final_source_path": "/Users/genjo/.codex/generated_images/01a18f70-2307-7361-863b-83f6f0e05b65/exec-dd1d8ebd-c3f8-42b5-8ef2-1581da66fa8b.png",
+      "postprocessing": "none; approved final image copied byte-for-byte",
+      "review": "修正後の出力画像を実見。日付・本文の試合前留保・全見出し・2人の顔と髪・ひげ・4つの手・ボール・ロゴ不在・文字の収まり・AI表記を確認。特定の実戦場面の再現ではなくイメージ。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T00:54:14.028278+00:00",
+  "publication_approved": false
+}

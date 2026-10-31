@@ -1,0 +1,128 @@
+{
+  "id": "1c38428eb633005c7c3f",
+  "article_path": "article-daily-20261025.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261025.html",
+  "source_commit": "",
+  "source_blob_sha": "fa6f73baf295fdb14c97b0207a0f1abd11552117",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "eba848e16d819da3f1cdeee65e12a1c85ef56c88bf9c9760883054c4812d46d3",
+  "last_observed_blob_sha": "fa6f73baf295fdb14c97b0207a0f1abd11552117",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1c38428eb633005c7c3f/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1c38428eb633005c7c3f/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:47:59.363636+00:00",
+  "creation_event_id": "8efb38a1ea5545b5924c",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/1c38428eb633005c7c3f/thumbnail.png",
+  "image_sha256": "0e58fe77442bb23c69ebd41832e093beccf69489326ab973427cc8cd23f8d900",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "fa6f73baf295fdb14c97b0207a0f1abd11552117",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.25",
+      "今季平均EFFで",
+      "見どころ比較",
+      "試合前データの独自分析",
+      "19:10時点：結果・出場未確認",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1c38428eb633005c7c3f/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261025.html",
+        "scope": "固定HTML本文。タイトル、日付、今季平均EFFによる試合前比較、19:10時点でも結果・出場が未確認である留保。公開URLは取得せず識別子としてのみ記録。"
+      },
+      {
+        "role": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1c38428eb633005c7c3f/source.txt",
+        "scope": "固定本文テキスト。本文の根拠はsource.htmlとsource.txtだけ。"
+      },
+      {
+        "role": "production_rules",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "scope": "画像生成・検品ルール。人物の選択方法とランダム選出時の注記は今回の本人10/31指示を優先。"
+      },
+      {
+        "role": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "scope": "view_imageで実見。黒×ライム、太い日本語、インク・ブラシの絵柄のみ。旧選手・数値・日付は不使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ライアン・ルーサー",
+        "name_en": "Ryan Luther",
+        "selection": "ランダム",
+        "selection_method": "複数カード・選手を比較する本文で単独の主役を特定できないため、本文に実名のある14選手を候補にPython標準ライブラリsecrets.choiceで1回抽選。",
+        "selection_pool": [
+          "レイナルド・ガルシア",
+          "ラポラス・アイヴァナーカス",
+          "アンソニー・ゲインズ・ジュニア",
+          "キーガン・レコード",
+          "齋藤拓実",
+          "スコット・エサトン",
+          "ライアン・ルーサー",
+          "中東泰斗",
+          "ジョシュ・ホーキンソン",
+          "ラウリー・アルキンズ",
+          "セバスチャン・サイズ",
+          "ジェイムズ・パルマージュニア",
+          "ネイト・ウィリアムズ",
+          "富樫勇樹"
+        ],
+        "references": [
+          {
+            "publisher": "名古屋ダイヤモンドドルフィンズ公式",
+            "url": "https://nagoya-dolphins.jp/team/players/detail/id=23897?PlayerID=51000396",
+            "image_url": "https://bleague.bl.kuroco-img.app/v=2026103019/files/user/roster/729/2026-27/51000396_01.jpg",
+            "local_reference": "/tmp/basuke-thumb-1c38428eb633005c7c3f/ryan-luther-profile.jpg",
+            "scope": "公式プロフィール写真をダウンロードしview_imageで実見。容姿の参照専用。画像生成の人物参照入力。統計の本文根拠には使用しない。"
+          },
+          {
+            "publisher": "名古屋ダイヤモンドドルフィンズ公式",
+            "url": "https://nagoya-dolphins.jp/news/detail/id=23864",
+            "image_url": "https://nagoya-dolphins.bl.kuroco-img.app/v=1785748048/files/user/common/2026-27/player/%2311.png",
+            "scope": "公式契約発表の写真をview_imageで実見し容姿を補助確認。生成への写真貼付・ロゴ転用なし。"
+          }
+        ],
+        "appearance_observed": "短い茶色の髪、短く整えた側頭部、上部に流れのある髪、明るい目、直線的な鼻、縦長で顎が角張る輪郭、短い茶色のひげと口ひげ、明るい肌、大柄な体格。",
+        "depiction": "実在選手1人が両手でボールを確保して身体をひねるプレー姿のイラスト。特定試合の再現ではない。無地のユニフォーム。選手名・背番号・個人成績・出場や活躍の断定を画像に記載しない。"
+      }
+    ],
+    "prompt": "Use case: style-transfer / editorial sports illustration.\nEdit the provided black-and-lime thumbnail into ONE finished thumbnail for a different article, with a new composition, new lettering, and a different real player. Output PNG, landscape 16:9, preferably 1600×900 or larger, opaque.\nInput roles: the first image, B-culver-black-lime-v3.png, is the edit target and approved visual style reference ONLY. The second image, ryan-luther-profile.jpg, is a supporting IDENTITY reference ONLY. Do not paste any photograph. Remove all old text, old numbers and the former player.\nSubject: portray the real basketball player RYAN LUTHER based on the second official portrait. Preserve his short brown textured hair, closely cropped sides, light blue-gray eyes, straight nose, fairly long oval-to-square jaw, light skin, close brown beard/stubble and moustache, and tall strong build. Draw him recognizably in bold hand-inked monochrome illustration, not photorealistic.\nNew dynamic pose: on the RIGHT half, a three-quarter view of Luther securing a rebound with BOTH hands around an orange basketball near his upper shoulder, elbows bent, torso twisting diagonally, focused face visible. Show head, both arms, both hands, ball and torso down to upper thighs. Keep fingers anatomically plausible, clearly attached, gripping the ball. This is an imagined basketball action, not a reconstruction of any actual game. Only this one real player, no anonymous extra players.\nWardrobe: plain dark basketball jersey with thin ivory/lime trim. Absolutely no logos, team badges, sponsors, jersey numbers, or lettering on clothing, ball or background.\nArt direction: approved Japanese sports editorial style, charcoal black #151A18, electric lime #CCF43B, warm ivory, orange ball only. Hand-drawn brush/ink hatching, energetic curved lime brush arc behind the turning player rather than the old diagonal shooting composition. Bold silhouette with detailed recognizable illustrated face. Few elements, high contrast, no stadium clutter or extra objects.\nTypography: clean, very bold accurate Japanese sans, crisp generous spacing. LEFT half reserved for headline. Do not cover the player face or hands with text. Safe margins about 5%, bottom annotation strip unobstructed. Use the EXACT Japanese below and no additional text:\ntop-left small: \"バスケまとめ\"\nbelow it small: \"2026.10.25\"\nmain headline line 1 in ivory: \"今季平均EFFで\"\nmain headline line 2 very large in lime: \"見どころ比較\"\nunder headline medium: \"試合前データの独自分析\"\nlower-left clearly readable: \"19:10時点：結果・出場未確認\"\nbottom left readable: \"イラスト（AI生成）\"\nbottom beside it readable: \"イメージ\"\nEditorial constraints: the article compares several games using pregame season averages; results and player participation remain unconfirmed in the fixed source. Luther was randomly selected from the names in that article. Therefore do NOT show his name, any personal performance statistics, claims of participation or success, scores, victories, specific teams or matchup claims. The date is the article date. Maintain all disclaimers verbatim. Never copy the reference's Culver name, 38 points, score, old date or old annotation. Keep it visibly illustrated, no photo fragments, no watermark.",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "built-in",
+      "workflow": "承認済みスタイル画像を編集元とし、公式人物写真を容姿の補助入力にして新記事用サムネ1枚を生成。外部API・CLI画像生成なし。",
+      "generation_calls": 1,
+      "revisions": 0,
+      "generated_file": "/Users/genjo/.codex/generated_images/01a18f6d-8f6c-7a41-8693-d75a599348c6/exec-4ee0a689-f903-472a-b2f3-821335e2a04b.png",
+      "saved_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1c38428eb633005c7c3f/generated.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "sha256": "0e58fe77442bb23c69ebd41832e093beccf69489326ab973427cc8cd23f8d900",
+      "style_reference_note": "手順書の白地A-faison-ivory-v3.pngは指定フォルダに存在せず。実在する承認済み黒×ライムB画像を実見して使用。",
+      "qa_method": "生成結果の実画像と保存元PNGをview_imageで目視確認。公式プロフィール写真と比較。文字・数値は固定HTML/TXTと照合。",
+      "qa_observations": {
+        "text_and_numbers": "全8行を実画像で読了。2026.10.25、EFF、19:10、結果・出場未確認を固定本文と照合。旧画像の名前・得点・スコアなし。ランダム選出選手の名前や個人成績なし。",
+        "source_qualifiers": "『試合前データの独自分析』『19:10時点：結果・出場未確認』『イメージ』を確認。確定結果、出場、勝敗、実際の特定プレーの再現と受け取る文字なし。",
+        "likeness_or_no_named_person": "実在するライアン・ルーサーを公式写真に照らして確認。短い茶髪、刈り込んだ側頭部、短いひげ、輪郭、目鼻が参照に沿う。架空選手や別の人物はなし。",
+        "layout": "主見出し・顔・両手・ボール・注記に見切れなし。手の指とボールの接触を確認。右肘の端と下半身は画面端でトリミングした構図。黒×ライムの手描き調、ロゴ・スポンサー・公式写真の貼付なし。1672×941で約16:9。",
+        "ai_label": "『イラスト（AI生成）』『イメージ』を左下に目視確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T00:50:52.952366+00:00",
+  "publication_approved": false
+}
