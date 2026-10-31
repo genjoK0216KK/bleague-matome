@@ -306,13 +306,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 /* 表 */
 .wrap table{font-size:16px;line-height:24px;font-variant-numeric:tabular-nums}
 .wrap th,.wrap td{padding:12px 8px}
-.wrap th{background:var(--soft);color:var(--ink);font-size:16px;font-weight:700}
+.wrap th{background:var(--soft);color:var(--ink);font-size:16px;font-weight:700;white-space:nowrap}
+.wrap tbody th.pl,.wrap tbody th.cat,.wrap tbody th[scope="row"]{white-space:normal}
 .wrap td small,.wrap .daily-lineups td small,.wrap .game-eff td small,.wrap .home-ranking td small{display:block;font-size:14px;line-height:21px;color:var(--muted)}
 .wrap .match-article .daily-lineups table,.wrap .daily-lineups table,.wrap .game-eff table{font-size:16px;line-height:24px;table-layout:fixed}
 .wrap .daily-lineups table{min-width:343px}
 .wrap .match-article .daily-lineups th,.wrap .daily-lineups th,.wrap .game-eff th{font-size:16px;font-weight:700;padding:12px 8px;white-space:nowrap}
 .wrap .daily-lineups td,.wrap .game-eff td{padding:12px 8px}
-.wrap .daily-lineups th:first-child,.wrap .match-article .daily-lineups th:first-child{width:48px}
+.wrap .daily-lineups th:first-child,.wrap .match-article .daily-lineups th:first-child{width:52px}
 .wrap .daily-lineups th:nth-child(3),.wrap .match-article .daily-lineups th:nth-child(3){width:80px}
 .wrap .daily-lineups th:nth-child(4),.wrap .match-article .daily-lineups th:nth-child(4){width:64px}
 .wrap .daily-lineups td:first-child,.wrap .daily-lineups th:first-child{position:sticky;left:0;z-index:1}
@@ -322,7 +323,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .wrap .game-eff th:first-child,.wrap .game-eff td:first-child,.wrap .game-eff th:nth-child(n+3),.wrap .game-eff td:nth-child(n+3){padding-left:4px;padding-right:4px}
 .wrap .tablewrap{margin:8px 0 16px;scroll-margin-top:104px}
 .table-hint[hidden]{display:none}
-.table-hint{font-size:14px;line-height:21px;color:var(--muted);margin:8px 0 4px}
+.table-hint,.wrap .article .table-hint p,.table-hint p{font-size:14px;line-height:21px;color:var(--muted);margin:8px 0 4px}
+.table-hint p:last-child{margin-bottom:0}
+.caption-moved{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .wrap .stats-article .scroll-hint{display:none}
 .wrap .article .table-hint{line-height:21px;margin:8px 0 4px}
 .stats-article th,.stats-article td{padding:12px 8px}
@@ -358,6 +361,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .pager a{min-height:48px;min-width:48px;display:inline-flex;align-items:center;justify-content:center}
 .wrap .match-notes p,.wrap .match-notes a{font-size:14px;line-height:21px}
 .wrap details:not(.home-fold):not(.fetch-alert)>summary{display:list-item;min-height:48px;padding:12px 0;font-size:16px;line-height:24px}
+.wrap .schedule-calendar{border-color:var(--line);border-radius:4px}
 .wrap .schedule-calendar h2{font-size:22px;line-height:33px}
 .wrap .schedule-calendar h3{font-size:18px;line-height:27px}
 .calendar-game a{display:flex;align-items:center;min-height:48px}
@@ -369,3 +373,17 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .wrap .calendar-key,.wrap .calendar-days small{font-size:14px;line-height:21px}
 .wrap .preview-heading{background:var(--soft);padding:16px}
 .wrap .preview-heading .note{background:#fff}
+.wrap p,.wrap li,.wrap dd,.wrap .note,.wrap h1,.wrap h2,.wrap h3,.wrap h4{overflow-wrap:anywhere}
+/* 200%拡大など狭い幅：ヘッダーを2段にし、横並びの部品を縦に積む */
+@media(max-width:300px){
+.hdr-in{flex-wrap:wrap;gap:8px}
+.hdr .logo{flex:1 1 100%;max-width:100%}
+.brand-sub{padding-left:0}
+.hdr .nav-toggle{margin-left:0}
+.recent-list a.has-thumb{flex-direction:column}
+.wrap .calendar-controls{flex-wrap:wrap}
+.wrap .calendar-controls h3{order:-1;flex:1 0 100%;text-align:center}
+.recent-thumb{flex:none;width:100%}
+.wrap .match-row,.wrap .daily-score{grid-template-columns:minmax(0,1fr);gap:0;text-align:center}
+.wrap .match-row span:first-child,.wrap .daily-score span:first-child,.wrap .match-row span:nth-child(3),.wrap .daily-score span:nth-child(3){text-align:center}
+}

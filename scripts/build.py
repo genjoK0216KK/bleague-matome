@@ -540,7 +540,7 @@ def render_standings_card(standings):
         out.append("</div>")
     out.append(
         '<div style="margin-top:10px">'
-        '<a class="more" href="cat-data.html" style="font-size:13px">順位表を全部見る ›</a></div>'
+        '<a class="more" href="cat-data.html">順位表を全部見る ›</a></div>'
     )
     return "\n".join(out)
 
@@ -942,8 +942,8 @@ def render_x_side(url):
         f'<a class="twitter-timeline" data-lang="ja" data-tweet-limit="5" data-chrome="noheader nofooter" '
         f'data-dnt="true" href="{esc(url)}">クラブ公式Xのポストを見る</a>'
         '<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
-        f'<div style="margin-top:8px"><a class="more" href="x.html" style="font-size:13px">もっと見る ›</a> ・ '
-        f'<a href="{esc(url)}" target="_blank" rel="nofollow noopener" style="font-size:13px">Xでリストを開く</a></div>'
+        f'<div style="margin-top:8px"><a class="more" href="x.html">もっと見る ›</a> ・ '
+        f'<a href="{esc(url)}" target="_blank" rel="nofollow noopener">Xでリストを開く</a></div>'
         '</div>'
     )
 

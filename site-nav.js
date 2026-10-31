@@ -95,34 +95,61 @@
 /* Tell readers about wide tables only when a table really overflows. */
 (function () {
   'use strict';
+  var RULE = '横にスクロールできます';
+  function headingFor(wrap) {
+    var headings = document.querySelectorAll('main h1, main h2, main h3, main h4');
+    var name = [];
+    var level = 5;
+    for (var i = headings.length - 1; i >= 0 && level > 2; i--) {
+      var current = Number(headings[i].tagName.charAt(1));
+      if (current >= level || !(headings[i].compareDocumentPosition(wrap) & Node.DOCUMENT_POSITION_FOLLOWING)) continue;
+      name.unshift(headings[i].textContent.trim());
+      level = current;
+    }
+    return name.join(' ');
+  }
   function update(wrap) {
     var table = wrap.querySelector('table');
     if (!table) return;
+    var caption = table.querySelector('caption');
+    var over = wrap.scrollWidth > wrap.clientWidth + 1;
+    if (over) {
+      wrap.tabIndex = wrap.hasAttribute('tabindex') ? wrap.tabIndex : 0;
+      wrap.setAttribute('role', 'region');
+      if (!wrap.getAttribute('aria-label')) wrap.setAttribute('aria-label', caption ? caption.textContent.trim() : headingFor(wrap) || '横にスクロールできる表');
+    }
     var hint = wrap.previousElementSibling;
-    if (!hint || !hint.classList.contains('table-hint')) {
-      hint = document.createElement('p');
+    // Keep any wording an article already has, such as a reminder about player status.
+    if (hint && !hint.classList.contains('scroll-hint') && !hint.hasAttribute('data-auto') && hint.textContent.indexOf(RULE) >= 0) return;
+    if (!hint || !hint.hasAttribute('data-auto')) {
+      hint = document.createElement('div');
       hint.className = 'table-hint';
+      hint.setAttribute('data-auto', '');
       hint.hidden = true;
       wrap.parentNode.insertBefore(hint, wrap);
     }
-    var over = wrap.scrollWidth > wrap.clientWidth + 1;
     hint.hidden = !over;
+    // A caption scrolls with its table, so its rules move above the table while the table overflows.
+    if (caption) caption.classList.toggle('caption-moved', over);
     if (!over) return;
     var edge = wrap.getBoundingClientRect().right;
     var hidden = Array.prototype.filter.call(table.rows[0].cells, function (th) {
       return th.getBoundingClientRect().right > edge + 1;
     }).map(function (th) { return th.textContent.trim(); });
     var names = hidden.slice(0, 2).join('・');
-    hint.textContent = '表は横にスクロールできます。' + (names ? '右に' + names + (hidden.length > 2 ? 'など' : '') + 'が続きます' : '');
-    if (!wrap.hasAttribute('tabindex')) wrap.tabIndex = 0;
-    if (!wrap.getAttribute('aria-label')) {
-      var caption = table.querySelector('caption');
-      wrap.setAttribute('aria-label', caption ? caption.textContent.trim() : '横にスクロールできる表');
-      wrap.setAttribute('role', 'region');
+    hint.textContent = '';
+    if (caption) {
+      var rule = document.createElement('p');
+      rule.setAttribute('aria-hidden', 'true');
+      rule.textContent = caption.textContent.trim();
+      hint.appendChild(rule);
     }
+    var note = document.createElement('p');
+    note.textContent = '表は' + RULE + '。' + (names ? '右に' + names + (hidden.length > 2 ? 'など' : '') + 'が続きます' : '');
+    hint.appendChild(note);
   }
   function updateAll() {
-    Array.prototype.forEach.call(document.querySelectorAll('.tablewrap'), update);
+    Array.prototype.forEach.call(document.querySelectorAll('.tablewrap, .tblwrap'), update);
   }
   var waiting = false;
   window.addEventListener('resize', function () {
