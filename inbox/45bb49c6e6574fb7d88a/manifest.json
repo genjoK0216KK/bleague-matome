@@ -1,0 +1,96 @@
+{
+  "id": "45bb49c6e6574fb7d88a",
+  "article_path": "article-daily-20261031.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261031.html",
+  "source_commit": "",
+  "source_blob_sha": "b0ed3232790c4aaf54dc6f6d3293ff7650414f2e",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "16a0ee31e5d5f10afa68ce422e8ed291a45fbf757a1753b5cd7a4c97b143deb2",
+  "last_observed_blob_sha": "b0ed3232790c4aaf54dc6f6d3293ff7650414f2e",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/45bb49c6e6574fb7d88a/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/45bb49c6e6574fb7d88a/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T03:23:09.686845+00:00",
+  "creation_event_id": "5a19e2e31ba3ef0e129f",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/45bb49c6e6574fb7d88a/thumbnail.png",
+  "image_sha256": "d2a264c3b4065b3891e803e31d6b37b5c3a7223a6f3328488aae365af0a30883",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "b0ed3232790c4aaf54dc6f6d3293ff7650414f2e",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.31",
+      "神奈川",
+      "ダービー",
+      "川崎×横浜BC",
+      "司令塔対決",
+      "試合前プレビュー／出場未確認",
+      "本文は検索結果ベース・公式詳細未確認",
+      "イラスト（AI生成）／イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/45bb49c6e6574fb7d88a/source.html",
+        "role": "固定本文・唯一の本文根拠（source.txtと併用）",
+        "article_url": "https://basuke-matome.jp/article-daily-20261031.html",
+        "blob_sha_verified": true,
+        "evidence": [
+          "神奈川ダービー、川崎×横浜BCは米須と並里の司令塔対決",
+          "2026.10.31",
+          "試合前プレビュー"
+        ]
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/45bb49c6e6574fb7d88a/source.txt",
+        "role": "固定本文・本文の留保確認",
+        "evidence": [
+          "両チームの出場メンバーは、この記事の時点で未確認です。",
+          "この記録は、今夜の勝敗を保証するものではありません。",
+          "公式サイトの試合詳細・インジュアリーリストのページは内容を開けていません。",
+          "上記の事実は検索結果に表示された複数の記事で重ねて確認しましたが、記事本文を直接は開けていません。"
+        ],
+        "application": "画像内に試合前・出場未確認・検索結果ベース・公式詳細未確認を明記。戦績・試合時刻・勝敗予測・選手の出場や活躍の断定は載せず、想像上のプレー場面をイメージと表示。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "米須玲音",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿のタイトルと司令塔対決の節で中心的に扱われる川崎の選手。対戦両チームから1人ずつ採用。",
+        "source": "川崎ブレイブサンダース公式プロフィール",
+        "url": "https://kawasaki-bravethunders.com/team/players/detail/id=17436",
+        "image_url": "https://kawasaki-bravethunders.bl.kuroco-img.app/v=1787897526/files/user/_/team/players/2026-2027/11.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/45bb49c6e6574fb7d88a/references/yonesu-official.jpg",
+        "reference_viewed": true,
+        "appearance": "短い黒髪、太く直線的な眉、暗色の目、すっきりした鼻筋、やや角のある卵型の輪郭、ひげなし。生成後もこれらを目視照合。",
+        "depiction": "中央右のえんじ色の無地ユニフォーム、ドリブル姿のインク画。実際の試合場面の再現ではない。",
+        "usage": "公式写真は容姿の目視確認にのみ使用し、特徴をプロンプトで指定。写真の貼り付けなし。"
+      },
+      {
+        "name": "並里成",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿のタイトルと司令塔対決の節で中心的に扱われる横浜BCの選手。対戦両チームから1人ずつ採用。",
+        "source": "横浜ビー・コルセアーズ公式プロフィール",
+        "url": "https://b-corsairs.com/team/players/detail/id=22894?PlayerID=9489",
+        "image_url": "https://b-corsairs.bl.kuroco-img.app/v=1788768680/files/user/team/2026-27/33_NAMIZATO.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/45bb49c6e6574fb7d88a/references/namizato-official.jpg",
+        "reference_viewed": true,
+        "appearance": "額を見せた短いウェーブ髪、明るい色の毛先、細めの目、頬骨と先細りの輪郭、口ひげと顎ひげ。生成後もこれらを目視照合。",
+        "depiction": "右側の紺色の無地ユニフォーム、守備姿のインク画。実際の試合場面の再現ではない。",
+        "usage": "公式写真は容姿の目視確認にのみ使用し、特徴をプロンプトで指定。写真の貼り付けなし。"
+      }
+    ],
+    "prompt": "Create ONE finished Japanese basketball editorial thumbnail in PNG, landscape 16:9, 1672x941 or greater than 1000px width. Use case: illustration-story, final branded news thumbnail with integrated typesetting.\n\nApproved art direction: near-black #151A18 background, electric lime #CCF43B energetic broad diagonal ink/brush strokes, ivory-white extremely bold Japanese typography, rough hand-drawn black/ivory ink illustration, selective dark burgundy and navy uniform accents and an orange basketball. A small number of strong elements. Clearly illustrative sports editorial art, absolutely not photorealistic. Do not copy the example thumbnail's Culver, score, names, date or shooting composition.\n\nArticle evidence, only these facts may inform copy: the fixed October 31, 2026 manuscript is a PRE-GAME preview about Kawasaki versus Yokohama BC, a Kanagawa derby, centered on the point guards Reoto Yonesu and Narito Namizato. Participation of both players is unconfirmed. The manuscript says its news information comes from search results, with official match details not directly confirmed. No scores, winning predictions, claims of playing, current performance, captaincy, or start time on the thumbnail.\n\nMain subjects: TWO real players, Reoto Yonesu (米須玲音) and Narito Namizato (並里成), in an imagined energetic one-on-one basketball scene on the right 55% of the canvas. Yonesu on the center-right in a low moving dribble stance, upper body turning three-quarter toward viewer, one anatomically clear hand controlling an orange basketball near hip level; Namizato on the far right in a responsive defensive stance, face also clearly visible in three-quarter view, one arm out for defense. Show a plausible dynamic interaction, but NOT a recreation of an actual match or a claim these players appeared. No hoop, scoreboard, crowd, victory action or invented additional players. Keep limbs separated and readable. Upper thighs may crop at the illustration zone's lower edge; faces, hands and basketball fully inside canvas. Only ONE ball, as the player's prop. Not separate portrait headshots.\n\nLikeness is essential, from the official 2026-27 club profile portraits examined:\nYonesu: youthful adult Japanese man; compact athletic guard build; short dense straight BLACK hair with neat slightly side-parted irregular fringe; clean shaven; straight thick eyebrows, dark almond eyes, straight nose, defined oval/angular face with full lower lip, focused expression. Burgundy basketball jersey with simple dark neckline, NO lettering, number, logos or sponsor marks.\nNamizato: older adult Japanese man, slightly shorter compact athletic guard; short wavy/curly brown hair with lighter highlighted tips, pushed away from forehead; high forehead, defined arched dark eyebrows, narrow smiling eyes, pronounced cheekbones; distinctive thin moustache and separate small pointed chin goatee; longer tapered face. Focused alert expression with his characteristic facial structure. Navy basketball jersey with simple white/red edge trim, NO lettering, number, logos or sponsor marks. Distinguish the faces carefully rather than drawing two generic men.\nOfficial reference portraits were visually inspected, for likeness only, never paste or reproduce official photographs:\nhttps://kawasaki-bravethunders.bl.kuroco-img.app/v=1787897526/files/user/_/team/players/2026-2027/11.jpg\nhttps://b-corsairs.bl.kuroco-img.app/v=1788768680/files/user/team/2026-27/33_NAMIZATO.jpg\n\nLayout: left 45% is clean typography with generous readable negative space, right 55% holds the two active player illustrations backed by lime brushwork. Thin footer zone across full width on a clean dark background keeps qualifier text readable; never cover it with artwork. About 4% outer margins.\nExact typography, render every character correctly:\nTop-left small white brand: \"バスケまとめ\"\nNear brand small date: \"2026.10.31\"\nMain headline left, huge bold lime, split across TWO lines:\n\"神奈川\"\n\"ダービー\"\nBelow headline, large bold white: \"川崎 × 横浜BC\"\nUnder it, medium bold white: \"司令塔対決\"\nNear lower left, clearly readable white with lime accent rule: \"試合前プレビュー／出場未確認\"\nFooter first line smaller but legible white: \"本文は検索結果ベース・公式詳細未確認\"\nFooter second line white, not faint: \"イラスト（AI生成）／イメージ\"\n\nMaintain strong visual hierarchy and excellent Japanese typography. No other text. No player names on the image. Do not add team/league logos, uniform branding, watermarks, official photos, scores, invented facts, sponsor words or photorealistic photographic textures. The footer explicitly identifies this as an illustrative image and not a documented play. Finished professional thumbnail, one image only.",
+    "generator": "OpenAI built-in image_gen (image_gen__imagegen); PNG 1672x941; 1 generation; 0 revisions; visual QA passed.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T03:25:34.188594+00:00",
+  "publication_approved": false
+}
