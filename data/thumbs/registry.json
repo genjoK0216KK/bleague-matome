@@ -170,31 +170,31 @@
   },
   "article-daily-20261031.html": {
    "article_path": "article-daily-20261031.html",
-   "editorial_fingerprint": "3fcffb49b8e37c7ae96a9ed0e95fb99cfb1ac2756446b5b263e554c54ef86cad",
+   "editorial_fingerprint": "16a0ee31e5d5f10afa68ce422e8ed291a45fbf757a1753b5cd7a4c97b143deb2",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261031-a779ca6c372d.jpg",
+     "path": "thumbs/auto/article-daily-20261031-d2a264c3b406.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261031-a779ca6c372d-og.jpg",
+     "path": "thumbs/auto/article-daily-20261031-d2a264c3b406-og.jpg",
      "width": 1200
     }
    },
-   "id": "03f1109abc0d7ee744f9",
-   "image_sha256": "a779ca6c372d89f47d0e3c1e0d5b98525752374496b3b949cc155b304c881f06",
-   "imported_at": "2026-10-30T23:34:43.797090+00:00",
-   "prepared_at": "2026-10-30T23:34:20.418563+00:00",
-   "source_blob_sha": "9b543e066584d32739aeabdb5859caf0935dc81c",
+   "id": "45bb49c6e6574fb7d88a",
+   "image_sha256": "d2a264c3b4065b3891e803e31d6b37b5c3a7223a6f3328488aae365af0a30883",
+   "imported_at": "2026-10-31T03:25:56.504143+00:00",
+   "prepared_at": "2026-10-31T03:25:34.188594+00:00",
+   "source_blob_sha": "b0ed3232790c4aaf54dc6f6d3293ff7650414f2e",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "3fcffb49b8e37c7ae96a9ed0e95fb99cfb1ac2756446b5b263e554c54ef86cad",
+   "stable_fingerprint": "16a0ee31e5d5f10afa68ce422e8ed291a45fbf757a1753b5cd7a4c97b143deb2",
    "style": "ink-lime-portrait-v5",
-   "title": "東京U×静岡は1勝1敗に、第2戦は静岡が83-74で快勝"
+   "title": "神奈川ダービー、川崎×横浜BCは米須と並里の司令塔対決"
   },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
@@ -590,20 +590,6 @@
   }
  },
  "log": [
-  {
-   "article": "article-results-one-next-20261025.html",
-   "at": "2026-10-30T09:16:39.800262+00:00",
-   "event": "imported",
-   "id": "d87a8ec3bf24b1b0559b",
-   "image": "c3007fb63b54"
-  },
-  {
-   "article": "article-results-one-next-20261026.html",
-   "at": "2026-10-30T09:16:39.947924+00:00",
-   "event": "imported",
-   "id": "ec1f89cf4982bf75312d",
-   "image": "ac947ca18612"
-  },
   {
    "article": "article-daily-20261026.html",
    "at": "2026-10-30T10:20:25.700152+00:00",
@@ -1149,10 +1135,24 @@
    "event": "imported",
    "id": "602157ba437d2c7416b9",
    "image": "070deb6ca8ac"
+  },
+  {
+   "article": "article-daily-20261031.html",
+   "at": "2026-10-31T03:25:56.382020+00:00",
+   "by": "45bb49c6e6574fb7d88a",
+   "event": "superseded",
+   "id": "03f1109abc0d7ee744f9"
+  },
+  {
+   "article": "article-daily-20261031.html",
+   "at": "2026-10-31T03:25:56.504159+00:00",
+   "event": "imported",
+   "id": "45bb49c6e6574fb7d88a",
+   "image": "d2a264c3b406"
   }
  ],
  "seen": {
-  "03f1109abc0d7ee744f9": "imported",
+  "03f1109abc0d7ee744f9": "superseded:45bb49c6e6574fb7d88a",
   "0784f83afb138807346a": "superseded:602157ba437d2c7416b9",
   "1237ac56ecfe95c7fd0a": "superseded:a718e72ebd289b318965",
   "13dc704824ed84d25fee": "imported",
@@ -1164,6 +1164,7 @@
   "3955308615847dff3136": "superseded:9f2558d6277a776ef982",
   "3d20be125ac18075c9b0": "superseded:9f2558d6277a776ef982",
   "44da7637029692ee5a53": "superseded:a718e72ebd289b318965",
+  "45bb49c6e6574fb7d88a": "imported",
   "462d421c439cd54c6d5a": "imported",
   "4c4f1870a93c2d66f8f1": "imported",
   "602157ba437d2c7416b9": "imported",
