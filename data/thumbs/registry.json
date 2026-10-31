@@ -587,16 +587,37 @@
    "stable_fingerprint": "9bcf5520f7116ce8bf1d4ba86536d8f71821f0c2f8390aff97d5e6608eb84937",
    "style": "ink-lime-portrait-v5",
    "title": "10月30日の貢献度ランキング 1位はアンジェロ・カロイアロ（京都）の30"
+  },
+  "article-stats-20261031.html": {
+   "article_path": "article-stats-20261031.html",
+   "editorial_fingerprint": "78b403543ad1a2ecf03cb6a3391a24a0a92ed3a6a141bce5071b80aba50af2a7",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-stats-20261031-46d8d910e81b.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-stats-20261031-46d8d910e81b-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "fcf33c7c4f183753d4ec",
+   "image_sha256": "46d8d910e81b08e56367cb66a8addc9602135e1d8b3cfcdd200fcb4691b1c082",
+   "imported_at": "2026-10-31T12:04:15.419450+00:00",
+   "prepared_at": "2026-10-31T12:03:44.055288+00:00",
+   "source_blob_sha": "9b6a272add9d396a5bb0e0dc3d1d508c87ce5b9b",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "78b403543ad1a2ecf03cb6a3391a24a0a92ed3a6a141bce5071b80aba50af2a7",
+   "style": "ink-lime-portrait-v5",
+   "title": "10月31日の貢献度ランキング 1位はヴィック・ロー（茨城）の38"
   }
  },
  "log": [
-  {
-   "article": "article-games-20261028.html",
-   "at": "2026-10-30T10:34:15.786655+00:00",
-   "event": "imported",
-   "id": "b8f222115a0883a9f7f2",
-   "image": "f11a5f9586ab"
-  },
   {
    "article": "article-results-one-next-20261026.html",
    "at": "2026-10-30T10:34:15.786804+00:00",
@@ -1149,6 +1170,13 @@
    "event": "imported",
    "id": "0a5c2c0f2505974f6de8",
    "image": "ab09a51f8e78"
+  },
+  {
+   "article": "article-stats-20261031.html",
+   "at": "2026-10-31T12:04:15.419470+00:00",
+   "event": "imported",
+   "id": "fcf33c7c4f183753d4ec",
+   "image": "46d8d910e81b"
   }
  ],
  "seen": {
@@ -1203,7 +1231,8 @@
   "ea934f8b9b81d63c7fc5": "superseded:3370472f9c78336a4974",
   "ec1f89cf4982bf75312d": "superseded:896bbeb35c2a1eb9d0e1",
   "ed5eafb2c5a54d0b60af": "superseded:9f2558d6277a776ef982",
-  "f4370ce664d0aaa5d148": "imported"
+  "f4370ce664d0aaa5d148": "imported",
+  "fcf33c7c4f183753d4ec": "imported"
  },
  "version": 1
 }
