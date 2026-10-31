@@ -1,0 +1,70 @@
+{
+  "id": "602157ba437d2c7416b9",
+  "article_path": "article-stats-20261030.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261030.html",
+  "source_commit": "",
+  "source_blob_sha": "2f507ed567e393734251b0176ec0ae50f18e4683",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "9bcf5520f7116ce8bf1d4ba86536d8f71821f0c2f8390aff97d5e6608eb84937",
+  "last_observed_blob_sha": "2f507ed567e393734251b0176ec0ae50f18e4683",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/602157ba437d2c7416b9/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/602157ba437d2c7416b9/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:48:04.305361+00:00",
+  "creation_event_id": "06aac90410290232ab51",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/602157ba437d2c7416b9/thumbnail.png",
+  "image_sha256": "070deb6ca8ac17fffc606b2c7f8505ba9336c30dd468a06c94df718691cf220f",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "2f507ed567e393734251b0176ec0ae50f18e4683",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.30｜全3試合",
+      "貢献度1位",
+      "カロイアロ（京都）",
+      "EFF 30",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ",
+      "記録は公式訂正で変わる場合があります"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/602157ba437d2c7416b9/source.html",
+        "role": "本文・日付・対象3試合・京都所属・貢献度1位・EFF 30・公式訂正の留保の根拠。外部の試合記録や関連記事は本文根拠に使用していない。",
+        "article_url": "https://basuke-matome.jp/article-stats-20261030.html",
+        "blob_sha_verified": "2f507ed567e393734251b0176ec0ae50f18e4683"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/602157ba437d2c7416b9/source.txt",
+        "role": "固定HTMLとの内容照合。30は得点ではなく貢献度（EFF）。対象は2026年10月30日の全3試合であり、シーズン通算順位ではない。国籍分類は行っていない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "アンジェロ・カロイアロ",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿のタイトル・リード・TOP3で最大の扱いとなっている貢献度1位の選手。ランダム選出ではない。",
+        "source": "京都ハンナリーズ公式 選手プロフィール",
+        "url": "https://hannaryz.jp/team/players/detail/id=20796?PlayerID=51000269",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026103010/files/user/roster/699/2026-27/51000269_01.jpg",
+        "reference_viewed": true,
+        "observed_features": "短い濃色の巻き毛、短く整えた側頭部、縦長で角のある輪郭、濃い眉、通った鼻筋、短い口ひげとあごひげ、長身で引き締まった体格。",
+        "likeness_review": "公式写真と生成後のイラストを実際に見て髪型・輪郭・眉・目鼻・ひげを照合。写真そのものは貼り付けていない。",
+        "scene": "ボールを両手で保持して体を切り返すプレー姿のイメージ。実際の試合の特定場面の再現ではない。",
+        "uniform": "無地の黒いユニフォームと青い縁。チーム・リーグ・スポンサーのロゴや文字、背番号はない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT\nCreate exactly ONE final Japanese basketball news thumbnail, landscape 16:9, 1920x1080 pixels preferred, at least 1000 pixels wide. This is a new original illustration, not a photograph, for バスケまとめ.\n\nUse case: editorial-illustration.\nStyle reference already viewed: B-culver-black-lime-v3.png, approved black #151A18 and vivid lime #CCF43B sports editorial design. Match the bold Japanese typography, rough hand-drawn black ink hatching, broad dry-brush strokes and sparse energetic layout. Do not copy the reference's player, pose, name, date, scores or numbers.\nSubject likeness reference already viewed: official Kyoto Hannaryz profile photograph of ANGELO CALOIARO / アンジェロ・カロイアロ at https://hannaryz.jp/team/players/detail/id=20796?PlayerID=51000269 and portrait https://bleague.bl.kuroco-img.app/v=2026103010/files/user/roster/699/2026-27/51000269_01.jpg .\nDepict only the real player Angelo Caloiaro, not a generic or invented player. He has short dark tightly curly hair with short sides, slightly receded temples, a long oval/angular face, prominent straight nose, dark strong eyebrows, deep-set eyes, short dark stubble and connected neat moustache, light-to-medium tan skin, and a lean tall muscular build. Preserve these individual facial characteristics in hand-inked illustration. No photographic texture and no pasted official photo.\n\nComposition: ONE athlete on the LEFT 42% of frame, shown in dynamic three-quarter view from head to upper thighs, knees implied bent, torso turning in a strong attacking pivot. Both hands naturally grip a single orange basketball near his lower chest/hip as he scans forward. His face must be clearly visible, not hidden by the ball or hands. Each arm and hand anatomically correct; believable fingers contacting the ball, no extra limbs. Use a plain dark sleeveless basketball uniform with subtle blue piping, absolutely NO jersey logos, sponsor lettering, team badges, league marks, brand symbols, jersey name or jersey number. Keep the entire head, both hands and ball inside the frame with generous safe margins. Lower thigh may fade naturally into ink.\nBackground: matte dark black-green with one broad lime brush sweep behind the player and sparse ink flecks, mostly empty behind typography. Abstract editorial energy, no real arena or identifiable game scene, no second player, no crowd, no scoreboard, no trophy, no hoop needed.\n\nTypography on RIGHT 55%: big clear bold Japanese sans-serif, strong hierarchy, high contrast. Not too many elements. Put EFF 30 largest and always together so 30 cannot be mistaken for points. EFF white and 30 lime. Large white 貢献度1位 above; カロイアロ（京都） in clear white below/near it. The top masthead can be modest. Entire text safe from edges, no overlap with person, hands or ball.\nRender ONLY the following exact text, no extra text:\nTop small masthead: 「バスケまとめ」\nTop date/scope: 「2026.10.30｜全3試合」\nMain headline: 「貢献度1位」\nPlayer line: 「カロイアロ（京都）」\nLargest metric: 「EFF 30」\nBottom readable disclosure: 「イラスト（AI生成）」\nNext readable disclosure: 「成績をもとにしたイメージ」\nSmall but clearly readable bottom qualifier: 「記録は公式訂正で変わる場合があります」\nEnsure exact, correct Japanese glyphs, numerals and parentheses. Do not print Japanese quotation brackets. At 1920px width, footer type around 28-32px or larger.\nData evidence only from supplied fixed source.html/source.txt: On 2026-10-30 across three games, Kyoto's Angelo Caloiaro ranked first by EFF with 30. This is an imagined editorial basketball pose based on performance, NOT a recreation of any confirmed game event. Do not imply he scored 30 points, won the game, hit a game-winner, or leads the whole season. Do not include other statistics, names, dates, ranks, nationality, slogans or watermarks.\nProduce a polished finished thumbnail with all requested typography and disclosures integrated in the generated artwork.\n\nSINGLE REVISION PROMPT\nEdit the attached generated basketball thumbnail. This is the single allowed correction. Preserve the exact 16:9 canvas, black/lime ink-brush style, all right-hand typography, colors and footer text unchanged. Preserve the same recognizable illustrated Angelo Caloiaro, the same face, pose, hands, orange ball, plain unbranded jersey and all likeness details.\nONLY correct the left-side athlete framing: slightly reduce and reposition the whole player and basketball together so his COMPLETE curly hair outline has at least 40 pixels of background above it and ALL ball and leftmost fingertips have at least 45 pixels of background to the left. No top hair clipping, no fingertips at the edge. Keep the same body proportions, no stretching, no extra limbs, no extra fingers. The lower thighs may naturally continue through the bottom frame. Fill the resulting space with the same existing black/lime brush background. Do not shift, resize or change any text. Keep every Japanese glyph exactly correct.\nText remains exactly:\nバスケまとめ\n2026.10.30｜全3試合\n貢献度1位\nカロイアロ（京都）\nEFF 30\nイラスト（AI生成）\n成績をもとにしたイメージ\n記録は公式訂正で変わる場合があります\nNo logos or photo texture. Output one corrected final PNG.",
+    "generator": "内蔵 image_gen。初回生成1回、人物の余白修正1回。API・CLI・新規課金なし。修正後の画像を目視検品して採用。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T01:46:23.144735+00:00",
+  "publication_approved": false
+}

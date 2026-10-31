@@ -1,0 +1,86 @@
+{
+  "id": "a384f66c5c633ed9bdb1",
+  "article_path": "article-stats-20261026.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261026.html",
+  "source_commit": "",
+  "source_blob_sha": "9dba4ad7440d1f1f3f559953347975f6cefd5925",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "fa8bf9395b06c6d599e33f04949ace3dd509a5381fb0af173f99fa72386c4be5",
+  "last_observed_blob_sha": "9dba4ad7440d1f1f3f559953347975f6cefd5925",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a384f66c5c633ed9bdb1/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a384f66c5c633ed9bdb1/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:48:04.015405+00:00",
+  "creation_event_id": "2e9cd37ebd33d75bd17b",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/a384f66c5c633ed9bdb1/thumbnail.png",
+  "image_sha256": "a0cd81d386f28c16aa6bf4b497c965a224dfd996c0e14e9823b962df8ed6d536",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "9dba4ad7440d1f1f3f559953347975f6cefd5925",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.26",
+      "貢献度1位",
+      "EFF 46",
+      "ブラックシアー・ジュニア",
+      "群馬",
+      "イラスト（AI生成）｜成績をもとにしたイメージ",
+      "※記録は公式訂正で変更の場合あり"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a384f66c5c633ed9bdb1/source.html",
+        "article_url": "https://basuke-matome.jp/article-stats-20261026.html",
+        "use": "本文の根拠。h1・lead・貢献度TOP3・TOP10第1行から、10月26日、群馬、ケリー・ブラックシアー・ジュニア、貢献度1位、EFF46を確認。末尾注記から公式訂正の留保を確認。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a384f66c5c633ed9bdb1/source.txt",
+        "use": "固定HTMLと一致する本文・数値・留保の照合。記事内容の根拠はこのTXTと固定HTMLのみ。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認した黒×ライム、太い日本語見出し、手描きインク・ブラシの絵柄のみ。選手・日付・成績は引き継がない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ケリー・ブラックシアー・ジュニア",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿の見出しとリードで最大に扱われ、貢献度ランキング1位。ランダム選定ではない。",
+        "official_profile_url": "https://g-crane-thunders.jp/roster/players/detail/kerry-blackshear-jr",
+        "official_photo_url": "https://g-crane-thunders.bl.kuroco-img.app/v=1789375653/files/user/images/roster/players/detail_2027/kerry-blackshear-jr/fv.jpg",
+        "reference_scope": "容姿確認のみ。公式写真をview_imageで実見。修正時に顔の参照として入力し、写真を貼り付けず線画で描写。外部ページの成績は記事情報の根拠にしていない。",
+        "observed_features": "ごく短い刈り込み髪、太い眉、深い目元、幅のある鼻、厚い唇、幅のある輪郭、顎に沿った短いひげ、幅広い肩。",
+        "scene": "本人1人がボールを確保して体をひねるプレーのイメージ。実際の特定試合の場面再現ではない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: ads-marketing / editorial sports illustration.\nCreate exactly ONE finished Japanese basketball article thumbnail, landscape 16:9, ideally 1600x900 or larger. Fully opaque PNG.\nStyle: bold hand-drawn ink-and-dry-brush sports editorial art, visibly illustrated, NOT photographic. Near-black #151A18 background, electric lime #CCF43B, warm ivory. Orange only for the basketball. Coarse ink hatching, restrained paint texture, few elements, strong Japanese typography. Approved style was a black-and-lime basketball editorial poster, but vary the composition: player on the LEFT and typography on the RIGHT.\nSubject: the real professional basketball player Kerry Blackshear Jr. (ケリー・ブラックシアー・ジュニア), not a fictional person. His official Gunma profile portrait has been visually inspected. Likeness traits to match carefully: tall powerful broad-shouldered build; dark skin interpreted in black/ivory ink; very closely cropped black hair with neat hairline, NOT tall curls; strong broad slightly elongated face, defined jaw; short dense close-trimmed beard following the jaw and chin, subtle mustache; thick brows, deep-set focused eyes, broad nose, full lips. Preserve recognizable facial proportions; do not use the curly-haired player in the style example.\nPose: dynamic three-quarter upper-thigh-up rebound-protection / pivot illustration. Both hands naturally securing ONE basketball near his upper chest, elbows bent and torso twisting, face clearly visible above the ball and turned slightly toward viewer. The player is the visual protagonist; no other players. Anatomically sound five-finger hands, two arms, realistic athletic shoulders. Keep his head, hands, and ball entirely inside the frame. Wear a plain dark basketball jersey with ivory brush-lit folds and restrained lime edge highlights, no logos, no jersey number, no team or sponsor lettering. A broad sweeping lime brush arc behind the body suggests movement; no actual arena, scoreboard or identifiable game moment.\nThis is an imagined illustration inspired by the article statistics, NOT a recreation of a documented game scene.\nTypography: elegant but forceful heavy Japanese Gothic, accurate and very legible. No crowded elements, no text crossing the face. On right, date at top, large ivory headline, exceptionally large lime number 46 with smaller EFF. Below that player surname and team. Footer in ivory, readable, with safe padding. Minimum 5% safe margin for all text.\nRender EXACTLY the following visible text, preserving Japanese glyphs, punctuation, digits, with no other text:\nTop small brand: \"バスケまとめ\"\nTop/date: \"2026.10.26\"\nLarge headline: \"貢献度1位\"\nDominant statistic: \"EFF 46\"\nPlayer line: \"ブラックシアー・ジュニア\"\nTeam line: \"群馬\"\nFooter line 1: \"イラスト（AI生成）｜成績をもとにしたイメージ\"\nFooter line 2: \"※記録は公式訂正で変更の場合あり\"\nArrange the player name on one line if practical; do not reduce its size excessively.\nContent source facts only from fixed supplied article: on October 26, Kerry Blackshear Jr. of Gunma ranked first in EFF with 46. EFF is NOT points scored. Do not add 46得点, MVP, decisive shot, victory claims, additional stats or other names. Do not copy any performance numbers, date or identity from the style example. Do not reproduce or paste any official photo, any team/league logo, sponsor mark or watermark.\n\nSINGLE CORRECTION\nEdit the first input image, the finished black/lime Japanese basketball thumbnail. Second input is the official Gunma profile photo of Kerry Blackshear Jr., used ONLY to guide facial likeness.\nMake one targeted identity correction to the illustrated player: match the official portrait's broad face, substantial jaw, full lips, broad nose, thick brows, deep-set eyes and very closely cropped hair more faithfully. The first image's beard is too long and bulky under the chin: shorten it to the close-trimmed beard along the jaw and chin seen in the second reference, retaining the subtly trimmed mustache. Keep the athlete recognizable as Kerry Blackshear Jr. Draw the new face with the SAME visibly hand-drawn ivory/black ink hatching as the first image, NOT as a pasted photograph and not photorealistic.\nKeep the dynamic pivot / ball-protection pose, the powerful build, plain unbranded uniform, single basketball, layout, black #151A18 and lime #CCF43B brushwork, and ALL lettering EXACTLY unchanged. Both hands should remain naturally gripping the ball with anatomically plausible five-digit hands.\nDo not import the official photo's pose, jersey logos, sponsor lettering, jersey number, earrings or photographic texture.\nRetain all exact text:\n\"バスケまとめ\"\n\"2026.10.26\"\n\"貢献度1位\"\n\"EFF 46\"\n\"ブラックシアー・ジュニア\"\n\"群馬\"\n\"イラスト（AI生成）｜成績をもとにしたイメージ\"\n\"※記録は公式訂正で変更の場合あり\"\nPreserve the current landscape 16:9 canvas and resolution, all text fully within frame, same overall design. Exactly one finished image.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "corrections": 1,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a18f9d-7378-78d0-88ee-f10d4011ed43/exec-2774dd01-2b18-47b9-a63b-8bb271e8937c.png",
+      "visual_qa": {
+        "text_and_numbers": "最終画像を実見し、全8行の文字・2026.10.26・貢献度1位・EFF46・群馬を固定原稿と照合。EFFを得点として表示していない。",
+        "source_qualifiers": "公式訂正で記録が変わる旨と、成績をもとにしたイメージである旨を画像下部で実見。特定の決勝場面や国籍別順位など原稿にない断定なし。",
+        "likeness_or_no_named_person": "公式写真と最終イラストを見比べ、短髪・太い眉・目鼻・唇・輪郭・短いひげの特徴を確認。修正1回でひげと輪郭を調整。実在の主役1人のみ。",
+        "layout": "黒×ライムの手描きイラスト。人物左、見出し右。顔・両手・ボールと全テキストの見切れなし。両腕と指の形を目視確認。衣装にチーム・リーグ・スポンサーのロゴや文字なし。",
+        "ai_label": "画像下部の「イラスト（AI生成）」と「成績をもとにしたイメージ」を実見。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T01:43:32.070932+00:00",
+  "publication_approved": false
+}
