@@ -1,0 +1,90 @@
+{
+  "id": "49bbacec4ae3cfcad2fa",
+  "article_path": "article-games-20261101.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261101.html",
+  "source_commit": "",
+  "source_blob_sha": "2ebce4a136b28f932e513f72d72cecb8f035fa74",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "22e7a7900e65a855647af19e6ace8b22fb51ae923efa1c5f76bd679307a96b5c",
+  "last_observed_blob_sha": "2ebce4a136b28f932e513f72d72cecb8f035fa74",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/49bbacec4ae3cfcad2fa/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/49bbacec4ae3cfcad2fa/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T15:02:14.777499+00:00",
+  "creation_event_id": "54481cd407ea53a34240",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/49bbacec4ae3cfcad2fa/thumbnail.png",
+  "image_sha256": "e13cabfe31856e7c606e38bf2214d5ebae42db9b55bf80e619b2f97a3b0f9c33",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "2ebce4a136b28f932e513f72d72cecb8f035fa74",
+    "text_lines": [
+      "バスケまとめ",
+      "11/01",
+      "試合予定",
+      "当日TOP3は公式記録確定後",
+      "2026.11.01 00:00 JST時点",
+      "出場は保証されません",
+      "イラスト（AI生成）  イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/49bbacec4ae3cfcad2fa/source.html",
+        "role": "本文根拠（固定版HTMLのみ）",
+        "article_url": "https://basuke-matome.jp/article-games-20261101.html",
+        "support": "試合日2026.11.01、2026-11-01 00:00 JST時点は全試合が試合前。当日TOP3は全試合の公式記録確定後に掲載。出場は保証されません。本文に個別の選手名はないため、ベスト5や個別成績を画像では断定しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/49bbacec4ae3cfcad2fa/source.txt",
+        "role": "本文根拠（固定版文章のみ）",
+        "support": "HTMLと同じ試合予定・未確定の留保を確認。外部ページの数値・試合情報は本文根拠に使用していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "制作・検品手順。人物選出と注記は今回の本人指示を優先。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "目視した承認済み黒×ライムのスタイル参照のみ。名前・日付・成績は転用しない。"
+      },
+      {
+        "url": "https://g-crane-thunders.jp/team/players/",
+        "role": "本文に出てくる群馬の現役登録選手を確認するためのみ。"
+      },
+      {
+        "url": "https://g-crane-thunders.jp/roster/players/detail/kazuki-hosokawa",
+        "role": "細川一輝の所属・容姿の公式参照。成績は画像へ使用しない。"
+      },
+      {
+        "url": "https://g-crane-thunders.bl.kuroco-img.app/v=1789375672/files/user/images/roster/players/detail_2027/kazuki-hosokawa/fv.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/49bbacec4ae3cfcad2fa/player-reference.jpg",
+        "role": "公式プロフィール写真を実際に目視。2回目の内蔵画像生成では顔・髪型の参照入力として使用し、写真は貼り付けない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "細川一輝",
+        "team": "群馬クレインサンダーズ",
+        "selection": "ランダム",
+        "selection_reason": "固定本文は試合予定一覧で個別の選手名・主役がない。本文46チームからsecrets.choiceで群馬を選び、閲覧した公式ロスター12選手からsecrets.randbelowで細川一輝を選んだ。本文に出てくるチームの現役選手という優先順位に従った。",
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/49bbacec4ae3cfcad2fa/selection.json",
+        "official_profile": "https://g-crane-thunders.jp/roster/players/detail/kazuki-hosokawa",
+        "official_portrait": "https://g-crane-thunders.bl.kuroco-img.app/v=1789375672/files/user/images/roster/players/detail_2027/kazuki-hosokawa/fv.jpg",
+        "observed_features": "短いアッシュ系の金髪、暗い根元、短いサイド、上向きの前髪、太い濃い眉、細めの目、まっすぐな鼻、幅のある顎と輪郭、ひげの目立たない顔、厚い肩と腕。",
+        "depiction": "ドリブルするプレー姿の手描きイラスト。実際の試合場面の再現ではない。名前・背番号・所属・成績・出場・活躍の断定は画像に入れていない。チーム・リーグ・スポンサーのロゴなし。",
+        "visual_review": "初稿より長すぎた髪を1回の修正で短くし、公式写真の輪郭・眉・目鼻を参照して目視比較。最終画像の頭上余白・両手とボールの収まり・手指の形を確認。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: ads-marketing.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape 1792×1008 pixels, 16:9. Raster PNG. This is for バスケまとめ, based on the frozen November 1, 2026 pregame schedule article.\n\nVisual style: approved bold Japanese sports editorial look: nearly black #151A18 background, acid lime #CCF43B broad dry-brush diagonal strokes, warm ivory typography, sparse orange basketball accent. Hand-drawn expressive ink linework, black-and-white brush shading, visible pen hatching and rough paper texture. Clearly an illustration, never a photo or photoreal rendering. Minimal elements, high contrast, beautifully typeset with crisp fully correct Japanese.\n\nSubject: exactly one REAL basketball player, Kazuki Hosokawa / 細川一輝 of Gunma Crane Thunders, selected randomly from the current official roster. His identity is for visual likeness only; DO NOT print his name, club, jersey number, performance, or a claim that he will play. Likeness based on the official portrait examined: young adult Japanese man, muscular broad shoulders and strong upper arms, short bleached ash-blond hair with darker roots, tightly short sides and brushed-up slightly swept top, thick dark straight eyebrows, dark narrow almond eyes, straight substantial nose, broad angular jaw and squared chin, medium-full lips, clean-shaven face with faint stubble at most. Preserve these individual features rather than inventing a generic player. The face must be clearly visible and lit in the illustration with a three-quarter frontal orientation.\nDress him in a plain sleeveless dark basketball jersey and dark shorts, with ivory brush highlights and small lime piping; absolutely NO logo, sponsor, crest, team name, brand marking, letters or number on clothing.\n\nComposition: typography fills the left 56%, dynamic athlete occupies the right 44%. Show a powerful low forward-driving dribble stance, torso leaning diagonally inward, bent knees, head raised and eyes forward. His right hand naturally controls one orange basketball low beside the right thigh; the other arm balances the body naturally. Anatomically coherent hands with natural fingers, elbows and shoulders. Head, both hands, entire ball and bent knee must remain comfortably inside the canvas. Crop lower shins deliberately if necessary. No opponents or extra figures. Broad lime brush strokes behind the player provide motion, with simple low court-marking strokes. Do not add a hoop or realistic arena. Scene is a generic imagined pose, not a depiction of an actual game or decisive play. It does not assert appearance in today's games.\n\nExact visible text, and ONLY this text:\nTop left modest brand label: 「バスケまとめ」\nLeft main headline first line, VERY LARGE lime: 「11/01」\nLeft main headline second line, VERY LARGE ivory: 「試合予定」\nBelow headline, readable ivory: 「当日TOP3は公式記録確定後」\nBelow that, smaller but clear ivory: 「2026.11.01 00:00 JST時点」\nNext line, small and legible ivory: 「出場は保証されません」\nBottom footer, clearly legible with comfortable padding: 「イラスト（AI生成）  イメージ」\n\nKeep all text exactly as specified, including numerals, punctuation, Japanese parentheses and Latin uppercase. Do not print quote marks. No other words or numbers. Keep text off the player and ball, 65-pixel safe margins. Footer must not be clipped or hidden. Strong thumbnail legibility and generous negative space.\nArticle grounding: all games are pregame in the frozen article at 00:00 JST; daily TOP3 are pending official records. No actual stats, ranking winners, featured-player achievement or guaranteed participation may be added. Do not carry over names or scores from other thumbnail examples.\n\nSINGLE CORRECTIVE EDIT\nUse case: identity-preserve.\nMake ONE corrective edit to input image 1 (the existing basketball thumbnail). Input image 2 is the official portrait of Kazuki Hosokawa, supplied ONLY as a facial likeness reference, never to be pasted into the artwork.\n\nKeep the entire thumbnail composition, palette, ink-and-brush hand-drawn style, exact text, ball, jersey, pose, arms, hands, layout, and date unchanged. Keep the same landscape 16:9 dimensions and deliver a single PNG.\n\nChange ONLY the illustrated player's head/hair/face to more closely match the real individual in image 2. The current head has hair too long and tousled. Use considerably shorter cropped bleached ash-blond hair with dark roots, close clipped sides, a compact neatly brushed-up top as in the official portrait, not long spiky clumps. Match the official portrait's broad angular jaw, squared chin, sturdy neck, thick straight dark eyebrows, dark narrow almond eyes, straight substantial nose, medium-full lips and clean-shaven appearance. Avoid turning him into a generic handsome anime character. Maintain the current three-quarter action head orientation, alert expression and clearly visible face. Preserve strong, distinctive ink brushwork, not photographic skin. Ensure the shortened hair leaves at least 30px of uninterrupted dark/lime background above the head inside the canvas.\n\nDo not reproduce anything from the portrait's uniform: no logos, brands, jersey number, sponsor text, team name, or official photo fragments. Do not put the person's name anywhere. Do not change the existing exact Japanese text:\nバスケまとめ\n11/01\n試合予定\n当日TOP3は公式記録確定後\n2026.11.01 00:00 JST時点\n出場は保証されません\nイラスト（AI生成）  イメージ\n\nThis is an imagined dribble illustration, not an actual game scene, performance assertion or promised appearance. Keep all existing typography sharp and unchanged.",
+    "generator": "内蔵 image_gen（image_gen__imagegen）。初回生成1回＋髪型・顔の特徴・頭上余白を修正1回。最終PNGは1672×941。API/CLI・新規課金なし。保存元: /Users/genjo/.codex/generated_images/01a1927b-949d-7663-87d7-5dda46978ccb/exec-5c8aa948-402d-43cd-ac7d-32d093ae664e.png",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T15:05:40.716088+00:00",
+  "publication_approved": false
+}
