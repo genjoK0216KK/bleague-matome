@@ -1,0 +1,98 @@
+{
+  "id": "c1aaf417a1880194d3ac",
+  "article_path": "article-games-20261026.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261026.html",
+  "source_commit": "",
+  "source_blob_sha": "c176e281d775fb843405e4d3ebc4c5e5320900ab",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "c976a4ac29f76088f5ffb493ff33c405c316c1d7f413926704d1830d4fb35a4c",
+  "last_observed_blob_sha": "c176e281d775fb843405e4d3ebc4c5e5320900ab",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c1aaf417a1880194d3ac/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c1aaf417a1880194d3ac/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:48:00.891301+00:00",
+  "creation_event_id": "b60ac64a1bc679ddf5c5",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/c1aaf417a1880194d3ac/thumbnail.png",
+  "image_sha256": "16cd1b42779f23a4776ac901f201ff5c243420410f1eabc9a3c461f6543e0bd0",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "c176e281d775fb843405e4d3ebc4c5e5320900ab",
+    "text_lines": [
+      "バスケまとめ",
+      "10/26",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c1aaf417a1880194d3ac/source.html",
+        "role": "固定版の本文根拠。gitコマンドを使わずGit blob形式のSHA-1を計算し指定値と一致確認。",
+        "article_url": "https://basuke-matome.jp/article-games-20261026.html"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c1aaf417a1880194d3ac/source.txt",
+        "role": "本文の内容・見出し・留保の根拠。10/26試合結果、当日の公式EFFによるポジション別TOP3。今季平均・予想と混同せず、特定選手の成績を画像に記載していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール。人物を特定できない場合の構成は今回の本人指定を優先。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "目視確認済みの承認済みスタイル参照。黒×ライム、太い日本語文字、インク・ブラシ。元画像の選手・成績・文言は転用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジェイク・レイマン",
+        "selection": "ランダム",
+        "selection_reason": "当日の複数試合と各ポジションのTOP3が並ぶ記事で、特定の主役を一人に絞れないため、本文のTOP3表に名前が出る重複除外10選手から選択。",
+        "selection_method": "Python random.Random('c1aaf417a1880194d3ac').choice(pool)",
+        "pool": [
+          "マーク・スミス",
+          "D.J・ニュービル",
+          "岡田 侑大",
+          "キーボン・ハリス",
+          "キヨンテ・ジョンソン",
+          "ジェイク・レイマン",
+          "ナシール・リトル",
+          "ケリー・ブラックシアー・ジュニア",
+          "チャールズ・ジャクソン",
+          "コフィ・コーバーン"
+        ],
+        "source": "B.LEAGUE公式選手プロフィール",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000313",
+        "official_photo_url": "https://www.bleague.jp/files/user/roster/692/2026-27/51000313_03.png",
+        "reference_local_path": "/tmp/basuke-c1aaf417-jake-layman-official.png",
+        "verified_visual_features": "明るい肌、縦長の輪郭、高い額、横分けで上へ流す明るい茶髪、明るい目、長めでまっすぐな鼻、ひげのない顎を公式写真と生成イラストで目視照合。",
+        "use": "容姿のみを参照。公式写真の貼り付けなし。無地ユニフォーム。氏名・個人成績・出場や活躍を述べる文字なし。ドライブする姿はイメージであり実際の試合場面の再現ではない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate exactly ONE finished Japanese basketball news thumbnail by transforming the approved black/lime style reference into a different composition for a new article. Output PNG, landscape 16:9, preferably 1536x864 or 1792x1024, width over 1000px.\nInput image 1 (B-culver-black-lime-v3.png): style reference ONLY. Keep its charcoal-black #151A18 and acid-lime #CCF43B palette, bold Japanese typography and expressive hand-drawn ink/brush visual language. REMOVE all previous article text, numbers and previous person. Do not repeat its shooting pose.\nInput image 2 (official portrait): identity reference ONLY for the real professional player Jake Layman. Use his recognisable likeness as an INK ILLUSTRATION: fair skin, elongated oval/rectangular face and firm chin, high forehead, short light brown/dark blond hair side-parted and swept up/back with shorter sides, light eyes, straight long nose, broad mouth, clean-shaven. Athletic tall lean muscular build. No beard. Do not copy/paste or photomanipulate the photo.\nSubject: Jake Layman alone in an energetic driving pose, torso leaning diagonally forward, ball controlled under one hand at hip height, other arm naturally bent for balance. Face in a readable three-quarter view, focused expression. Keep both hands anatomically credible and visible, five fingers per hand, no extra limbs, ball connected naturally to the dribbling hand. Mid-thigh-up framing is fine. This is a generic imagined basketball action, not an actual game or scoring moment. Wear a plain unbranded sleeveless charcoal jersey with lime trim, WITHOUT any name, number, sponsors, team or league marks. No other people.\nComposition: large uncluttered headline block on the LEFT 55%; illustrated player filling RIGHT 45%, face comfortably inside frame, dynamic asymmetric curved lime brush sweep behind him. One orange basketball as his prop. Plenty of clean dark space around typography. Do not cover words with the person or ball. Preserve broad safe margins (at least 55px). Make the figure clearly drawn with black contour marks and painterly cream/gray shading, emphatically not photographic or 3D.\nText to render EXACTLY in Japanese, with no other text:\nsmall upper left: \"バスケまとめ\"\nlarge lime date below: \"10/26\"\nlargest white heavy headline: \"試合結果\"\nbold lime secondary headline: \"当日のEFF\"\nsmaller white descriptor: \"ポジション別TOP3\"\nclear footer along bottom left, readable with generous margin: \"イラスト（AI生成）\"\nand next to it: \"イメージ\"\nDo not add a player's name, individual stats, scoreline, player ranking, claims of participation or performance. The article is a roundup of 2026-10-26 game results and that day's position-specific official EFF top 3. Do not imply season-average ranking or predictions. The depicted player was chosen randomly from the article's names. No team/league logo, no official photo, no watermark besides the requested AI illustration footer. All text crisp and correctly spelled. Visually polished, restrained, mobile-readable.",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "内蔵画像生成",
+      "attempts": 1,
+      "revisions": 0,
+      "generated_source_path": "/Users/genjo/.codex/generated_images/01a18f7b-da5e-7052-9edb-f5a6e2a3dd48/exec-64ff1a2a-dec7-4962-8e22-cd53bf08dd70.png",
+      "output_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c1aaf417a1880194d3ac/generated.png",
+      "qa_method": "生成画像を実際に表示して目視検品。文字・数値、当日/ポジション別の限定、公式写真と顔の特徴、手の形、文字・顔・両手の見切れ、AI生成表記を確認。",
+      "ready_executed": false,
+      "published": false,
+      "external_delivery": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T01:06:10.861537+00:00",
+  "publication_approved": false
+}

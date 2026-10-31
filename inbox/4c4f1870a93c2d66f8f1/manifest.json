@@ -1,0 +1,135 @@
+{
+  "id": "4c4f1870a93c2d66f8f1",
+  "article_path": "article-games-20261029.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261029.html",
+  "source_commit": "",
+  "source_blob_sha": "a07dd57b84a2505080099551205f887ce459e00d",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "f09823827b48d8d70704ccaa6bb413e6e1c1874c58efa4e3c85edf1d9427a4d0",
+  "last_observed_blob_sha": "a07dd57b84a2505080099551205f887ce459e00d",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4c4f1870a93c2d66f8f1/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4c4f1870a93c2d66f8f1/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:48:01.755553+00:00",
+  "creation_event_id": "243ca5cd34a9312831f1",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/4c4f1870a93c2d66f8f1/thumbnail.png",
+  "image_sha256": "e129f63ca53c90aadcf028fc6cc4424f8444f35182013e849277f437a9ae2636",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "a07dd57b84a2505080099551205f887ce459e00d",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.29",
+      "B.ONE 試合結果",
+      "東京U",
+      "1点差勝利",
+      "東京U 69–68 静岡",
+      "イラスト（AI生成）｜イメージ",
+      "公式記録は訂正される場合があります"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4c4f1870a93c2d66f8f1/source.html",
+        "role": "固定版本文の根拠",
+        "article_url": "https://basuke-matome.jp/article-games-20261029.html",
+        "git_blob_sha_verified_without_git": true,
+        "evidence": "試合日2026.10.29、B.ONE 東京U 69–68 静岡・終了。69−68=1より東京Uの1点差勝利。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4c4f1870a93c2d66f8f1/source.txt",
+        "role": "固定版本文の照合",
+        "evidence": "試合結果と当日のEFF・ポジション別TOP3。複数の選手を並列掲載しているため、人物は本文掲載選手から各チーム1人をランダム選択。",
+        "qualifiers_preserved": "公式記録・発表は訂正される場合がある。個人の成績・出場・活躍・今季平均・順位に関する文字は画像に使わず、試合結果だけを表示。プレー場面は実際の再現ではなく「イメージ」。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイル参照のみ。人物・名前・成績は流用せず。"
+      },
+      {
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "role": "承認済みスタイルの目視確認。手順書指定フォルダにはAがなかったため、Notion記載の元保存先で確認。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "田口 暖",
+        "team_in_fixed_source": "東京U",
+        "selection": "ランダム",
+        "selection_reason": "試合結果と複数選手の一覧で、単一の主役が絞れないため、固定原稿に名前が出る東京U選手から選択。",
+        "selection_method": "Python random.Random('4c4f1870a93c2d66f8f1')を使用。東京U候補を最初にchoiceし、その後静岡候補をchoice。",
+        "candidate_pool": [
+          "田口 暖",
+          "東 宏輝",
+          "川島 蓮",
+          "マックス・ヒサタケ",
+          "ジョーダン・フェイゾン",
+          "ジェイディエル・コルディリア"
+        ],
+        "official_profile": "https://tubc.tokyo/team/players/detail/id=60002?PlayerID=9365",
+        "official_image": "https://bleague.bl.kuroco-img.app/v=2026103110/files/user/roster/2725/2026-27/9365_01.jpg",
+        "reference_viewed": true,
+        "appearance": "短い明るい茶色の髪、短く整えた側頭部、細めの楕円形の輪郭、切れ長の目、細めの眉、ひげなし。前景のシアン色ユニフォーム。",
+        "image_use": "容姿確認の参照のみ。公式写真の貼付けなし、描き起こしたイラスト。選手名・個人成績・出場・活躍の文字なし。"
+      },
+      {
+        "name": "トレダリアス・マカラム",
+        "team_in_fixed_source": "静岡",
+        "selection": "ランダム",
+        "selection_reason": "固定原稿に名前が出る静岡選手から、東京Uと対になる1人を選択。",
+        "selection_method": "同じ作業IDシードのRandomで東京U選択に続けてchoice。",
+        "candidate_pool": [
+          "山本 愛哉",
+          "柏倉 哲平",
+          "サイモン 拓海",
+          "トレダリアス・マカラム",
+          "ジェイデン・ガードナー",
+          "増田 啓介"
+        ],
+        "official_profile": "https://veltex.co.jp/team/players/detail/id=52054?PlayerID=51000685",
+        "official_image": "https://veltex.bl.kuroco-img.app/files/user/team/players/ID_01_2.png?v=1789526388",
+        "reference_viewed": true,
+        "appearance": "密な短いコイル状の黒髪、太い眉、幅のある鼻、厚めの唇、頬から顎までの豊かなひげと口ひげ。後方のオレンジ色ユニフォーム。",
+        "image_use": "容姿確認の参照のみ。公式写真の貼付けなし、描き起こしたイラスト。選手名・個人成績・出場・活躍の文字なし。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: ads-marketing, editorial sports illustration.\nAdapt the first approved thumbnail reference into ONE finished Japanese basketball article thumbnail. Output PNG, landscape approximately 16:9, at least 1600 px wide (target 1792x1008). This is one completed thumbnail, not a contact sheet.\n\nREFERENCE ROLES:\n1. B-culver-black-lime-v3.png: approved graphic STYLE only: deep ink black #151A18, acid lime #CCF43B, large heavy Japanese type, tactile dry-brush and pen strokes. Replace ALL prior text, names, numbers and the original player. Do not draw Culver.\n2. taguchi-official.jpg: official appearance reference ONLY for the real player Dan Taguchi (田口暖), Tokyo United. A compact lean guard, short sandy/light-brown hair swept up and sideways with close sides, high forehead, lean oval face and narrow jaw, dark slender eyebrows, almond-shaped eyes, straight nose, modest lips, clean shaven. Reference height 171 cm. Re-draw him entirely as a hand-inked illustration, retaining recognizable facial proportions; no photographic pixels or logos.\n3. mccallum-official.png: official appearance reference ONLY for real player Tre'Darius McCallum (トレダリアス・マカラム), Shizuoka. Tall athletic build, reference height 201 cm, medium-dark brown skin, dense dark textured coils/twists swept back and slightly sideways above the forehead (not long hanging dreadlocks), full thick beard framing the jaw and chin, connected moustache, strong brows, broad nose and full lips. Re-draw entirely as hand-inked illustration; no photographic pixels or logos.\n\nDESIGN:\nClean high-impact editorial cover. Upper-left small masthead, strong left text field ~43%; right ~57% is a dynamic two-player one-on-one scene. Taguchi in foreground making a low driving step with one basketball under control at his hip, McCallum behind and to his right in a balanced defensive stance with one open hand raised and one extended. Keep BOTH recognizable faces large enough, both in three-quarter view toward viewer. Show the height difference. Their silhouettes, hands and arms must remain readable and anatomically correct, not tangled. One ball only, entirely inside the frame. Crop lower legs deliberately if needed; never crop heads, hands or ball. The drawing is a conceptual basketball matchup, NOT a reconstruction of the October 29 game or any specific decisive play. Avoid a hoop, scoreboard arena, winning shot, celebration or a specific real-event setting.\nPlain sleeveless jerseys, no names, no numbers, NO team, league, manufacturer or sponsor logos. Taguchi has a restrained cyan jersey accent; McCallum a restrained orange jersey accent; predominately ivory/black ink rendering, warm restrained skin tones, orange ball. Bold lime diagonal brush marks behind the two figures create movement without covering faces or text.\nIllustration must look drawn: visible pen hatching, rough brush edges, expressive ink shadows, simplified painted planes. Never photorealistic, no photo collage, no 3D.\nKeep ample padding (about 4%) around important elements. Show both players clearly as the primary picture. Do not replace with a ball-only composition.\n\nONLY THE FOLLOWING TEXT, EXACTLY, with impeccable Japanese glyphs:\n- small top-left: 「バスケまとめ」\n- small date: 「2026.10.29」\n- small category: 「B.ONE 試合結果」\n- large left headline on two lines: 「東京U」「1点差勝利」\n- prominent score on a separate dark band below headline: 「東京U 69–68 静岡」\n- clearly readable footer: 「イラスト（AI生成）｜イメージ」\n- smaller readable footer beneath it: 「公式記録は訂正される場合があります」\nTypography: heavy Japanese Gothic, ivory headline with lime emphasis on 「1点差」, clean spacing and high contrast. No other writing.\nThe score is a TEAM RESULT from the supplied fixed article, never an individual statistic. No player names, no individual scoring/appearance/performance claims, no EFF values. Do not carry any score, date, player or claim from the style reference into this image.\n",
+      "initial_reference_paths": [
+        "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "/private/tmp/basuke-thumb-4c4f1870a93c2d66f8f1/taguchi-official.jpg",
+        "/private/tmp/basuke-thumb-4c4f1870a93c2d66f8f1/mccallum-official.png"
+      ],
+      "correction": "Edit the first image, the generated basketball thumbnail. This is the SINGLE allowed correction. Preserve its black/lime illustrated style, ALL Japanese text exactly as rendered, the typography hierarchy, date, correct TokyoU 69–68 Shizuoka score, colors, AI/imaginary disclosure, and all layout on the left.\nImage 2 is the official appearance reference for Dan Taguchi ONLY. Image 3 is the official appearance reference for Tre'Darius McCallum ONLY. Do not paste any photo pixels, logos or sponsor text.\n\nCorrect these issues together:\n1. Both players' hands are being cut off. Recompose and scale the two-player illustration down about 16% within the right-hand region, or bend their arms inward, to fit EVERY hand and every fingertip comfortably inside the canvas, with 45–60px clear space above the highest fingertip and at the right edge. The ball, both faces, and all four hands must be completely visible and anatomically plausible. Keep the overall image dimensions and left-side typography unchanged. Lower legs may intentionally continue past the bottom edge. Keep the two-player action energetic, faces large enough, and silhouettes separate.\n2. Taguchi, the cyan jersey foreground guard: match image 2's short neatly swept up/light-brown hair with close sides rather than a large untidy spiky hairstyle. Match his lean oval face, almond-shaped eyes, slender brows, straight nose and narrow jaw. He is clean shaven: absolutely NO moustache, NO goatee, NO beard, NO dark beard-like patches on chin or upper lip. Use skin-colored ink shadows to keep the face clean shaven.\n3. McCallum, the orange jersey defender: match image 3's dark dense coiled/twisted hair swept BACK and to the side, close at the temples, instead of a high round frizzy Afro. Keep the full thick beard around the cheeks, jaw and chin and connected moustache, broad nose, calm deep-set eyes and facial proportions of image 3. Preserve the size difference of the two real athletes.\nStill an unmistakably hand-drawn ink/brush illustration. Keep plain jerseys without any words/numbers/logos. No additional people, balls, words, or claims. This is a conceptual matchup marked イメージ, not any actual game moment.",
+      "correction_reference_paths": [
+        "/Users/genjo/.codex/generated_images/01a18f83-d36a-75b0-8829-c43e2b69d2de/exec-39ecb4ef-6ce6-4f3e-9495-0eeb6c560245.png",
+        "/private/tmp/basuke-thumb-4c4f1870a93c2d66f8f1/taguchi-official.jpg",
+        "/private/tmp/basuke-thumb-4c4f1870a93c2d66f8f1/mccallum-official.png"
+      ]
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "initial_generation_count": 1,
+      "correction_count": 1,
+      "accepted_image_count": 1,
+      "initial_review": "文字と数値は一致。上端と右端の手の見切れ、髪型とひげの調整を1回の修正で依頼。",
+      "final_review": "修正後PNGを原寸表示して確認。全ての手と指先、ボール、顔がフレーム内に収まり、手の形が成立。田口のひげなしの顔と短い明るい髪、マカラムの黒いコイル状の髪・豊かなひげ・目鼻を公式参照と照合。文字・スコア・日付・訂正留保・AI生成表記とイメージ表記を目視確認。ロゴ・スポンサー文字・選手名・個人成績の表記なし。",
+      "saved_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4c4f1870a93c2d66f8f1/generated.png",
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "sha256": "e129f63ca53c90aadcf028fc6cc4424f8444f35182013e849277f437a9ae2636",
+      "final_generated_path": "/Users/genjo/.codex/generated_images/01a18f83-d36a-75b0-8829-c43e2b69d2de/exec-e39f10ca-9f70-4761-bd0a-8765735fdf98.png"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T01:16:20.593315+00:00",
+  "publication_approved": false
+}

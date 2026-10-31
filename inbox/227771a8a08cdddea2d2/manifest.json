@@ -1,0 +1,92 @@
+{
+  "id": "227771a8a08cdddea2d2",
+  "article_path": "article-games-20261028.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261028.html",
+  "source_commit": "",
+  "source_blob_sha": "27814d2c2697447132f1b66c11bfa18dc83143d4",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "33e9041ff080a0013bd12160adaf6678414fa9f5eea3b92f6cc4706c40bd6b5d",
+  "last_observed_blob_sha": "27814d2c2697447132f1b66c11bfa18dc83143d4",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/227771a8a08cdddea2d2/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/227771a8a08cdddea2d2/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:48:01.448880+00:00",
+  "creation_event_id": "a3e3e9844715ffcd60a8",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/227771a8a08cdddea2d2/thumbnail.png",
+  "image_sha256": "499bff2b15b6bafcc26dfbbef86ee45c884966925746cdf88ac421f51fa04396",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "27814d2c2697447132f1b66c11bfa18dc83143d4",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.28",
+      "試合なし",
+      "B.PREMIER・B.ONE・B.NEXT",
+      "10/29 10:38〜10:39 JST取得時点",
+      "最新情報は公式サイトで",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/227771a8a08cdddea2d2/source.html",
+        "role": "記事本文の固定版。唯一の内容根拠（source.txtと併用）",
+        "blob_sha_verified": true
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/227771a8a08cdddea2d2/source.txt",
+        "role": "記事本文の固定テキスト。2026.10.28はB.PREMIER・B.ONE・B.NEXTとも試合なし。資料取得2026-10-29 10:38〜10:39 JST。公式記録等は訂正の可能性あり。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "目視済み承認スタイル参照。配色と画風のみ使用。選手・日付・数値は流用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "原修太",
+        "selection": "ランダム",
+        "selection_reason": "本文に選手名もチーム名もないため第3優先。B.LEAGUE選手の候補5人からPython random.SystemRandom().choiceで抽選後、当選した原修太選手の2026-27現役所属を公式プロフィールと公式契約継続発表で確認。",
+        "random_candidate_pool": [
+          "富樫勇樹",
+          "原修太",
+          "西村文男",
+          "金近廉",
+          "小川麻斗"
+        ],
+        "official_profile_url": "https://www.bleague.jp/roster_detail/?PlayerID=8584",
+        "official_club_profile_url": "https://chibajets.jp/team/players/detail/id=9627?PlayerID=8584",
+        "official_contract_url": "https://chibajets.jp/news/detail/id=26814",
+        "official_photo_url": "https://chibajets.bl.kuroco-img.app/v=1781472783/files/user/team/2026-27/syutahara-400x500.jpg",
+        "photo_inspected": true,
+        "appearance_observed": "暗い茶色の中央付近で分けたふんわりした髪、額中央を見せる前髪、幅のある頬と顎、太めの眉、細めの目、髭なし、厚い肩と上腕。",
+        "usage": "写真は容姿確認だけに使用。新規のプレー姿イラスト。氏名・背番号・成績・出場・活躍を画像文字に含めない。実際の場面の再現ではなくイメージ。",
+        "generated_likeness_check": "生成画像を目視で公式写真と比較。中央付近で分けた茶色の髪、眉・目鼻・輪郭、髭のない顔、厚い肩と上腕を確認。写真貼付なし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 1536x864 or larger, PNG. This is for バスケまとめ.\n\nVISUAL STYLE: The approved style is a near-black #151A18 background with electric lime #CCF43B dry-brush strokes, ivory-white typography and ink figure, very bold condensed Japanese sans-serif headlines, strong handmade brush/ink texture, sparse elements, editorial poster quality. Orange is reserved for one basketball held/dribbled by the player. Not photorealistic. Do not use a photo collage.\n\nCONTENT: The frozen article says there were NO GAMES on 2026-10-28 in B.PREMIER, B.ONE, B.NEXT. This was information retrieved 2026-10-29 10:38–10:39 JST and official records can change. There is no player named in the article. The depicted player was selected randomly as an illustrative motif; do not claim any appearance, result, performance or actual event involving him.\n\nPERSON: Draw exactly one real player, Shuta Hara (原修太), in a powerful low left-handed dribble drive. The club's official 2026-27 portrait was visually checked: Japanese adult man, broad muscular shoulders and thick upper arms; a broad oval face tapering to a softly squared chin, fuller cheeks, straight substantial dark eyebrows, narrower dark almond eyes, a straight medium-width nose, medium full lips, no beard or mustache. Distinctive dark chestnut brown medium-short hair, loosely parted near the middle, voluminous sweeping curtain-like front locks revealing the center forehead, sides covering the upper temples, NOT a buzz cut or spiky hair. Preserve these specific likeness cues, do not invent a generic player. Plain ivory basketball jersey and shorts with dark ink shadows; NO logo, sponsor, player name, team lettering or jersey number. New illustrated pose, not a copied photo: three-quarter view, bent knees, leaning into a drive, left hand in convincing contact with upper/side surface of the ball near hip/thigh, right arm bent naturally. One ball and exactly two hands with anatomically correct fingers. His face must remain big, readable and unobscured.\n\nCOMPOSITION: Typography occupies roughly left 55%, the dynamic player right 43%. Figure from head to knees, with head, both hands and ball fully inside the canvas and generous edge clearance. His movement and a curved lime brush trail create a diagonal different from a shooting pose. No hoop, opponents, crowd, arena, scoreboard or invented game scene. Keep background simple and abstract. This is expressly an imaginary illustration, not recreation of a match.\n\nTEXT, render these exact strings with correct Japanese, no other text:\nTop left small masthead: 「バスケまとめ」\nBelow masthead, prominent white date: 「2026.10.28」\nLargest dominant lime Japanese headline, one line if possible: 「試合なし」\nBelow headline, medium white league scope: 「B.PREMIER・B.ONE・B.NEXT」\nBelow that, smaller readable white qualifier: 「10/29 10:38〜10:39 JST取得時点」\nNext small line: 「最新情報は公式サイトで」\nBottom, readable label with wide margins: 「イラスト（AI生成）」\nNext to the AI label: 「イメージ」\n\nAll text must remain within 5% safe margins and never touch the player or brush splatters. Preserve comfortable spacing and clean typographic hierarchy. Date must be 10.28, not today. No player name and no player statistics anywhere. No inherited names, score or 38 from any style reference. No league or team logos, no sponsor marks, no official photos, no watermark.",
+    "generator": {
+      "name": "built-in image_gen",
+      "tool": "image_gen.imagegen",
+      "mode": "generate",
+      "api_or_cli_used": false,
+      "generation_calls": 1,
+      "revision_calls": 0,
+      "output_file": "generated.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "499bff2b15b6bafcc26dfbbef86ee45c884966925746cdf88ac421f51fa04396",
+      "visual_review": "生成結果を目視し、日付、試合なし、3リーグ名、取得日・時刻、最新情報の注記、原選手の特徴、両手と指、見切れ、ロゴ不使用、AI生成とイメージの表示を確認。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T01:12:23.500767+00:00",
+  "publication_approved": false
+}

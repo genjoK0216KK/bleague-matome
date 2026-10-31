@@ -1,0 +1,164 @@
+{
+  "id": "68dfe1f0dced4d4c7777",
+  "article_path": "article-games-20261027.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261027.html",
+  "source_commit": "",
+  "source_blob_sha": "d6df5dd97600022e5a4e40bc4a3b2f53f7f27e6c",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "18d78da8d6859e21a111956f349477cc0e6886edc3dc644f4a3182a2aebd7e0e",
+  "last_observed_blob_sha": "d6df5dd97600022e5a4e40bc4a3b2f53f7f27e6c",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/68dfe1f0dced4d4c7777/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/68dfe1f0dced4d4c7777/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:48:01.179934+00:00",
+  "creation_event_id": "aa407eeadc56769f9f5b",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/68dfe1f0dced4d4c7777/thumbnail.png",
+  "image_sha256": "f7d553001e243f72afdf9d7e2cec46e474cfd0a4a81844f68afc9b4e7dd0f705",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "d6df5dd97600022e5a4e40bc4a3b2f53f7f27e6c",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.27",
+      "試合なし",
+      "B.PREMIER・B.ONE",
+      "・B.NEXT",
+      "2026.10.28 18:27 JST取得",
+      "公式記録・発表は訂正される場合があります。",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "role": "本文の唯一の根拠",
+        "path": "source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261027.html",
+        "blob_sha_verified": true
+      },
+      {
+        "role": "本文の唯一の根拠（文章版）",
+        "path": "source.txt",
+        "facts": "2026.10.27はB.PREMIER・B.ONE・B.NEXTの試合なし。取得2026-10-28 18:27 JST。公式記録・発表は訂正される場合あり。"
+      },
+      {
+        "role": "スタイルのみ",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "visually_reviewed": true
+      },
+      {
+        "role": "スタイルのみ（手順書の指定位置にないため既存の原本を確認）",
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "visually_reviewed": true
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "荒川 颯",
+        "selection": "ランダム",
+        "selection_reason": "本文に選手名・チーム名がないため、B.LEAGUE現役選手から選出。",
+        "selection_method": {
+          "pool": [
+            {
+              "name": "田臥 勇太",
+              "link": 87
+            },
+            {
+              "name": "トレイ・ケル",
+              "link": 88
+            },
+            {
+              "name": "比江島 慎",
+              "link": 89
+            },
+            {
+              "name": "小川 敦也",
+              "link": 90
+            },
+            {
+              "name": "遠藤 祐亮",
+              "link": 91
+            },
+            {
+              "name": "竹内 公輔",
+              "link": 92
+            },
+            {
+              "name": "高島 紳司",
+              "link": 93
+            },
+            {
+              "name": "渡邉 裕規",
+              "link": 94
+            },
+            {
+              "name": "星川 開聖",
+              "link": 95
+            },
+            {
+              "name": "鵤 誠司",
+              "link": 96
+            },
+            {
+              "name": "オーティス・フレイジャー",
+              "link": 97
+            },
+            {
+              "name": "荒川 颯",
+              "link": 98
+            },
+            {
+              "name": "市岡 ショーン",
+              "link": 99
+            },
+            {
+              "name": "ギャビン・エドワーズ",
+              "link": 100
+            },
+            {
+              "name": "アイザック・フォトゥ",
+              "link": 101
+            }
+          ],
+          "draw": 0.7659612544458235,
+          "index": 11,
+          "selected": {
+            "name": "荒川 颯",
+            "link": 98
+          },
+          "method": "公式選手一覧の15名から一様乱数で1名選択。本文に選手・チーム指定なし。"
+        },
+        "roster_source": "https://www.utsunomiyabrex.com/team/players/",
+        "official_profile": "https://www.utsunomiyabrex.com/player_lp/hayate_arakawa/",
+        "official_image": "https://utsunomiyabrex.bl.kuroco-img.app/v=1789348993/files/user/lp/players/image/hayate_arakawa/kv_pc.jpg",
+        "local_reference": "references/hayate_arakawa-official.jpg",
+        "reference_use": "容姿のみ。公式写真を出力へ貼り付けない。",
+        "appearance_observed": "黒髪の中央分け、額の黒いヘッドバンド、面長の卵形輪郭、直線的な眉、切れ長の目、丸みのある鼻先、ひげなし。",
+        "visually_reviewed": true,
+        "scene": "低い姿勢のドリブルのイメージ。実際の試合場面の再現ではない。名前・成績・出場・活躍の文字表現なし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate ONE finished Japanese editorial basketball thumbnail, landscape approximately 16:9, 1600x900 or larger, PNG. This is a brand-new image.\n\nVisual art direction: follow the approved black-and-lime basketball editorial style visible in this conversation: charcoal #151A18, bright lime #CCF43B, ivory lettering, bold Japanese gothic typography, strong hand-drawn pen and dry-brush marks, restrained ink splatter, very few elements, crisp thumbnail readability. Orange only for the basketball. Clearly illustrated, not photographic or 3D. Do not copy any names, scores, numbers, or player identities from the approved sample thumbnails.\n\nArticle facts, exclusively from the supplied frozen source: 2026-10-27 had no scheduled games for B.PREMIER, B.ONE and B.NEXT. Source retrieval was 2026-10-28 18:27 JST. Official records and announcements may be corrected. There are no named players or teams in the article.\n\nMain figure: ONE real player, Hayate Arakawa (荒川颯), randomly selected from the official Utsunomiya Brex current roster. His official portrait was visually reviewed in this conversation. Render his recognizable likeness in drawn ink: Japanese male basketball guard, athletic lean build; fairly long oval face tapering gently to a rounded chin; clean-shaven; straight medium-width nose with rounded tip; dark almond-shaped eyes; straight dark eyebrows; defined upper lip and fuller lower lip; black medium-length hair parted centrally, curved strands falling toward the temples, high volume above a plain black headband. Preserve these specific facial features; do not use the curly-haired or bearded faces in the style samples. Use ivory/gray ink shading on face and arms with visible facial features. Headband must be blank. Plain dark sleeveless basketball uniform with a narrow ivory edge, absolutely no name, jersey number, lettering, team logo, league logo, sportswear logo or sponsors. No other people.\n\nPose/composition: new dynamic low right-handed dribble drive, knees bent, torso leaning forward, 3/4 view, head lifted and face fully readable, concentrated calm expression. The player's right hand rests naturally over the top/side of one orange basketball near hip/knee level; left arm naturally flexed for balance. Anatomically correct hands with 5 fingers each, no duplicated arms or ball. Keep full head, both hands and ball inside safe margins. Figure occupies right 43% of canvas, shown from head to around the knees. This is a generic imagined basketball movement and must NOT imply a real game occurred on the date. No arena photo, crowd, opponent, scoreboard, hoop or official venue. A broad curved lime brushstroke behind the figure implies motion. Text in the left 55%, generous breathing room, no overlap with face/ball. Avoid repeating the upright jump-shot pose of the approved sample.\n\nExact text only, with proper Japanese glyphs and punctuation:\nTop left smaller brand: \"バスケまとめ\"\nDate prominent above headline: \"2026.10.27\"\nLargest headline, very bold lime: \"試合なし\"\nBelow headline in ivory, on two clean lines:\n\"B.PREMIER・B.ONE\"\n\"・B.NEXT\"\nBottom info text, legible: \"2026.10.28 18:27 JST取得\"\nDirectly below: \"公式記録・発表は訂正される場合があります。\"\nBottom footer, clear and high contrast: \"イラスト（AI生成）｜イメージ\"\n\nNo player name or team name anywhere on the image. No performance, appearance, game result or activity claims for the randomly chosen player. Do NOT use 「成績をもとにした」. Keep footer and qualifier on the dark quiet background, with at least 40px canvas padding. No official photos pasted into the image, no watermarks or extra text.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "revision_count": 0,
+      "output": "generated.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "f7d553001e243f72afdf9d7e2cec46e474cfd0a4a81844f68afc9b4e7dd0f705",
+      "visual_qa": "内蔵生成結果と保存済みPNGを実見。日付、3カテゴリ、取得時点、訂正注記、AI生成とイメージの表記を確認。公式容姿の中央分け・無地ヘッドバンド・輪郭・目鼻・ひげなしを照合。両手とボールの形・文字の見切れなし・ロゴや氏名や成績なしを確認。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T01:08:46.896204+00:00",
+  "publication_approved": false
+}

@@ -1,0 +1,115 @@
+{
+  "id": "a718e72ebd289b318965",
+  "article_path": "article-games-20261030.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261030.html",
+  "source_commit": "",
+  "source_blob_sha": "bf8ffa67ba1fa2573f724ac5894df76bd376b112",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "d6f8482f0ea13696ac5dea3aabfdec35311d0005fca0c3ba32fd99d8804c48c9",
+  "last_observed_blob_sha": "bf8ffa67ba1fa2573f724ac5894df76bd376b112",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a718e72ebd289b318965/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a718e72ebd289b318965/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:48:02.074800+00:00",
+  "creation_event_id": "b72e98a509b69cc03828",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/a718e72ebd289b318965/thumbnail.png",
+  "image_sha256": "d36b02e8b46c8fe496887f2cc2c2520985f9ec63484a0bd84c965dac5f1fdb30",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "bf8ffa67ba1fa2573f724ac5894df76bd376b112",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.30",
+      "試合結果",
+      "当日のEFF",
+      "リーグ別・ポジション別TOP3",
+      "B.ONE：公式ポジション確認待ち",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a718e72ebd289b318965/source.html",
+        "role": "本文の根拠・固定HTML",
+        "article_url": "https://basuke-matome.jp/article-games-20261030.html",
+        "used_for": "見出し、試合日、当日EFF・リーグ別/公式登録ポジション別TOP3、B.ONEの公式ポジション未確認という留保。外部の試合記事・成績を本文の根拠に使用していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a718e72ebd289b318965/source.txt",
+        "role": "本文の根拠・固定文章",
+        "used_for": "固定HTMLと本文の要点・留保を照合。未取得値や未確認項目の確定扱いをしない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイルのみ",
+        "used_for": "view_imageで確認。黒#151A18・ライム#CCF43B、太い日本語、インク・ブラシ。氏名・日付・数値・成績は転用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "マーク・スミス / Mark Smith",
+        "selection": "ランダム",
+        "selection_reason": "複数の試合・ポジション別一覧を並列に扱う記事で、単独の主役を絞れないため。固定HTMLに名前がある選手を重複除去し、21人から抽選した。",
+        "selection_method": "Python random.Random('a718e72ebd289b318965').choice(unique_players_in_source_order)",
+        "candidate_names": [
+          "齋藤 拓実",
+          "マーク・スミス",
+          "杉本 慶",
+          "今村 佳太",
+          "岸本 隆一",
+          "アンジェロ・カロイアロ",
+          "エリエット・ドンリー",
+          "ヤニー・ウェッツェル",
+          "デレク・パードン",
+          "スコット・エサトン",
+          "山根 響",
+          "東野 恒紀",
+          "下地 秀一郎",
+          "石井 智大",
+          "髙木 慎哉",
+          "神田 壮一郎",
+          "イブラヒム・ディアビ",
+          "ジョーダン・ジャイルズ",
+          "サム・ティミンズ",
+          "ライアン・ローガン",
+          "ハイデン・コヴァル"
+        ],
+        "official_profile": "https://northern-happinets.com/team/players/detail/id=22786?PlayerID=51000410",
+        "official_image": "https://bleague.bl.kuroco-img.app/v=2026103110/files/user/roster/693/2026-27/51000410_01.jpg",
+        "reference_local_path": "/tmp/a718e72ebd289b318965-mark-smith-reference.jpg",
+        "reference_use": "公式プロフィール写真をview_imageで実見し、修正生成にも容姿参照として渡した。公式写真そのものは完成画像に貼付していない。外部ページは容姿確認のみで、記事内容や成績の追加根拠にしない。",
+        "observed_features": "短く密な黒い巻き毛、側面を短くした髪型、太く比較的まっすぐな眉、目鼻、幅のある卵形から角形の輪郭、厚めの唇、薄い口ひげと顎のひげ、筋肉質の肩を照合した。",
+        "depiction": "ロゴ・スポンサー・番号のないユニフォームで、1人がドリブルするイラスト。実際の10/30の場面の再現ではない。画像に選手名、個人成績、順位、出場・活躍の主張を入れていない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: ads-marketing.\nCreate ONE finished Japanese basketball editorial thumbnail for バスケまとめ, landscape 16:9, ideally 1792x1008 or another native approximately 16:9 PNG over 1000 px wide.\n\nVisual language: approved editorial sports poster style, deep near-black #151A18 background, electric lime #CCF43B dry-brush swath, warm ivory bold Japanese typography, a hand-drawn ink illustration with expressive crosshatching and rough brush marks. Minimal, confident, highly legible at small thumbnail size. Flat graphic illustration, never photographic. Do not use any team/league logo, sponsor, brand mark, or photograph.\n\nSubject: exactly ONE REAL basketball player, Mark Smith (マーク・スミス), the Akita player. His likeness must follow his official Akita Northern Happinets portrait, visually checked for this task: short dense black tight curls with low rounded top and trimmed sides, broad near-straight dark eyebrows, brown almond-shaped eyes, medium-long straight nose, broad oval/squared face, full lips, very light short moustache and small chin stubble (NOT a full beard), medium-brown skin, muscular broad shoulders and athletic guard build. Do not draw a generic invented athlete. Do not draw Jarrett Culver from the previous approved style example.\nPose: powerful low driving dribble in three-quarter view on the RIGHT 43% of the frame, chest leaning forward, knees flexing, head raised looking toward the left. Show head through upper thighs, both complete arms and natural hands. His right hand controls one complete orange basketball near his hip on the viewer's right, the other hand balanced forward. Strong sweeping diagonal movement and a small lime motion brush behind him. Face is clearly visible with enough ivory midtones, not crushed black. All fingers anatomically plausible, exactly two arms. Hands, head and ball comfortably within the canvas. Plain ivory/black sleeveless uniform with a very small muted pink trim, NO logos, NO sponsor writing, NO name, NO jersey number. It is a conceptual basketball-action illustration, NOT a reconstruction of any actual game moment.\n\nLayout: left roughly 56% dedicated to text, right to the player; text never overlaps his face, hands or ball. Large type with generous negative space. Header near top-left. Two massive headline lines in the upper-middle left. Smaller scope line beneath. Pending-information note set in clearly readable medium-small ivory type near lower-left. Footer labels left-aligned along bottom. Safe margins at least 5% around all text; all glyphs fully within frame. Keep very little texture behind text.\n\nRender ONLY the following exact text, with accurate Japanese glyphs:\nSmall header: 「バスケまとめ」\nDate next to or below header: 「2026.10.30」\nMain headline line 1, massive ivory: 「試合結果」\nMain headline line 2, massive lime: 「当日のEFF」\nSupporting line, medium ivory: 「リーグ別・ポジション別TOP3」\nImportant note, legible: 「B.ONE：公式ポジション確認待ち」\nFooter label 1: 「イラスト（AI生成）」\nFooter label 2: 「イメージ」\n\nEditorial constraints: this article reports multiple October 30 games and league/registered-position daily EFF lists. There is no single main player, so Mark Smith was randomly selected from the names in the supplied manuscript only as the illustrative subject. Do not print his name, scores, statistics, rank, club name, performance claim, participation claim, victory claim or a game matchup anywhere. Preserve the B.ONE pending official-position qualifier. Do not add a trophy, scoreboard, ranking medal, crowd or other people. Do not carry over any name, date, score or wording from earlier style-reference artworks. No extra text beyond the eight exact text lines above.\n\nREVISION 1 (FINAL)\nEdit the FIRST image, the existing black/lime バスケまとめ thumbnail, using the SECOND image ONLY as the facial likeness reference for the real basketball player Mark Smith. Produce one final approx 16:9 PNG over 1000px wide.\n\nKeep all eight existing text lines EXACTLY unchanged, with the same readable typography, wording, color and hierarchy. Keep the black #151A18 and lime #CCF43B brush-ink style, same low driving-dribble concept, one player only, plain ivory/black uniform and small pink trim. Preserve the entire left text area and footers.\n\nMake these targeted corrections:\n1. Shrink the complete PLAYER-AND-BALL illustration as a single compositional unit by about 12%, then position it fully inside the right side. There must be a generous visible margin (at least 45 pixels at 1672px width) to the RIGHT of the WHOLE basketball and every fingertip, and at least 40 pixels ABOVE his hair. The entire orange ball must be visible. Both hands must be fully visible, with exactly five anatomically plausible fingers each, no clipped fingertips. Maintain only two arms. Cropping below the thighs is acceptable. Do not crop the head, arms, hands, or basketball. Do not overlap text.\n2. Correct his head/face to the SECOND reference, the official Mark Smith portrait: shorter, closer, rounded tight black curls and modest top volume, trimmed sides, broad nearly straight dark eyebrows, medium-long straight nose, broad oval/squared lower face, full lips. He is almost clean-shaven: only very faint short moustache and faint chin stubble. REMOVE the first image's heavy dark moustache and pointed/full goatee. Preserve his medium-brown skin and muscular guard build. Translate the official face into the SAME expressive hand-drawn ink/crosshatched illustration, not a photo or a pasted head. The actual portrait is identity reference only, never include it as a photo. No new generic fictional face.\n\nDo not add any logos, sponsor lettering, player name, jersey number, individual statistic, score, matchup, trophy, medals, or new text. This is an illustrative imagined dribbling motion, not a recreation of an actual game.\nRetain exactly these text strings, no additions or deletions:\nバスケまとめ\n2026.10.30\n試合結果\n当日のEFF\nリーグ別・ポジション別TOP3\nB.ONE：公式ポジション確認待ち\nイラスト（AI生成）\nイメージ",
+    "generator": {
+      "name": "image_gen",
+      "tool": "image_gen__imagegen",
+      "mode": "built-in",
+      "generation_calls": 2,
+      "revision_count": 1,
+      "initial_output": "/Users/genjo/.codex/generated_images/01a18f87-7234-71d0-acb9-dfe988e46d22/exec-25b61a08-e87e-4e8a-ba82-b4efb6f06ac9.png",
+      "selected_output": "/Users/genjo/.codex/generated_images/01a18f87-7234-71d0-acb9-dfe988e46d22/exec-72570f1b-bd25-47a7-a6f9-ce4ec4ce0051.png",
+      "saved_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a718e72ebd289b318965/generated.png",
+      "revision_reason": "初稿で右端のボールと指先が切れていたため、人物とボールの縮小・余白確保を実施。公式写真に合わせ髪型とひげも修正。",
+      "visual_qa_notes": {
+        "text_and_numbers": "完成画像を実見。8つの文字列、日付2026.10.30、EFFとTOP3を確認。個人成績や選手名は描かれていない。",
+        "source_qualifiers": "当日のEFFのリーグ別・ポジション別TOP3という範囲と、B.ONE：公式ポジション確認待ちを目視確認。「イメージ」を明記し実際の場面や出場を断定していない。",
+        "likeness_or_no_named_person": "実在するマーク・スミスの公式写真と顔を比較。短い巻き毛、輪郭、目鼻、薄いひげを確認。写真風ではなくインク画。",
+        "layout": "最終画像を実見。全テキスト、頭、両手と指先、ボールが画面内にあり、文字と顔・手・ボールが重ならない。腕は2本で、手指に目立つ破綻なし。チーム・リーグロゴ、スポンサー文字なし。",
+        "ai_label": "イラスト（AI生成）とイメージが下部で読めることを実画像で確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T01:19:44.386485+00:00",
+  "publication_approved": false
+}
