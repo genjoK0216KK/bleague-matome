@@ -1,8 +1,7 @@
 {
  "pending": {
   "506508": "2026-10-25",
-  "506509": "2026-10-25",
-  "506531": "2026-10-31"
+  "506509": "2026-10-25"
  },
  "published": [
   "2026-10-12",
@@ -13,7 +12,8 @@
   "2026-10-22",
   "2026-10-24",
   "2026-10-26",
-  "2026-10-30"
+  "2026-10-30",
+  "2026-10-31"
  ],
  "days": {
   "2026-10-24": {
@@ -104,22 +104,13 @@
    "source": "data/match_articles/article-games-20261030.json"
   },
   "2026-10-31": {
-   "state": "held",
+   "state": "ready",
    "games_total": 10,
-   "games_ready": 9,
-   "players": null,
-   "holds": [
-    {
-     "key": "506531",
-     "home": "琉球",
-     "away": "三遠",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
-    }
-   ],
+   "games_ready": 10,
+   "players": 209,
+   "holds": [],
    "excluded": [],
-   "content_as_of": "2026-10-31 20:53 JST",
+   "content_as_of": "2026-10-31 20:58 JST",
    "source": "data/match_articles/article-games-20261031.json"
   }
  },

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-31",
-  "status": "pending",
+  "status": "ready",
   "article_key": "article-results-one-next-20261031",
   "games": [
     {
@@ -20988,10 +20988,10 @@
       "competition": "BP",
       "starts_at": "2026-10-31T09:05:00+00:00",
       "ended": true,
-      "fixed": false,
+      "fixed": true,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506531",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
-      "status": "unconfirmed",
+      "status": "final",
       "home": "琉球",
       "home_full": "琉球ゴールデンキングス",
       "home_id": "701",
@@ -21968,7 +21968,7 @@
           "USG": 14.682778569016403
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506531/135.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506531/136.json"
     }
   ],
   "individual_candidates": [],
@@ -22000,7 +22000,7 @@
     "aggregation": "game_total",
     "leagues": {
       "BP": {
-        "error": "全試合の公式記録確定待ち"
+        "error": "出場選手の公式ポジションが未確認"
       },
       "B1": {
         "positions": {
