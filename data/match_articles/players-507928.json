@@ -1,0 +1,522 @@
+{
+  "game": {
+    "game_id": "507928",
+    "season": "2026-27",
+    "competition": "BN",
+    "starts_at": "2026-11-01T16:05:00+09:00",
+    "ended": false,
+    "fixed": false,
+    "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507928",
+    "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE NEXT リーグ戦",
+    "status": "scheduled",
+    "players": [],
+    "home": "三重",
+    "home_full": "ヴィアティン三重",
+    "home_id": "2726",
+    "home_score": null,
+    "away": "山口",
+    "away_full": "山口パッツファイブ",
+    "away_id": "2487",
+    "away_score": null
+  },
+  "players": [
+    {
+      "player_id": "12597",
+      "name": "宮﨑 恭行",
+      "team": "三重",
+      "team_id": "2726",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": null,
+      "games": null,
+      "stats_source": null,
+      "coverage_complete": false
+    },
+    {
+      "player_id": "50011",
+      "name": "新本 風河",
+      "team": "三重",
+      "team_id": "2726",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "6.2",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "16023",
+      "name": "中嶋 正尭",
+      "team": "三重",
+      "team_id": "2726",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "SF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": null,
+      "games": null,
+      "stats_source": null,
+      "coverage_complete": false
+    },
+    {
+      "player_id": "40163",
+      "name": "佐脇 考哉",
+      "team": "三重",
+      "team_id": "2726",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "SG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "5.2",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "34792",
+      "name": "中村 瀬那",
+      "team": "三重",
+      "team_id": "2726",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "-0.8",
+      "games": 4,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "9269",
+      "name": "高松 勇介",
+      "team": "三重",
+      "team_id": "2726",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "-0.3",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "11482",
+      "name": "大西 一輝",
+      "team": "三重",
+      "team_id": "2726",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "SG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "-2.7",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "54146",
+      "name": "ジェヴォニー・スコット",
+      "team": "三重",
+      "team_id": "2726",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "PF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "6.5",
+      "games": 2,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "8578",
+      "name": "阿部 友和",
+      "team": "三重",
+      "team_id": "2726",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "-0.7",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000676",
+      "name": "ジャマル・ポップラー",
+      "team": "三重",
+      "team_id": "2726",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "PF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "19.3",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000677",
+      "name": "ジェイコブ・コナー",
+      "team": "三重",
+      "team_id": "2726",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "PF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "14.8",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "40168",
+      "name": "河井 竜",
+      "team": "三重",
+      "team_id": "2726",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "PF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "6.8",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "7482",
+      "name": "吉本 大心",
+      "team": "三重",
+      "team_id": "2726",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "SG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "2.0",
+      "games": 4,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "5100000038",
+      "name": "板橋 真平",
+      "team": "山口",
+      "team_id": "2487",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2487",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "4.5",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000652",
+      "name": "ヘイデン・ディークハンス",
+      "team": "山口",
+      "team_id": "2487",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "PF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2487",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": null,
+      "games": null,
+      "stats_source": null,
+      "coverage_complete": false
+    },
+    {
+      "player_id": "50002",
+      "name": "ケレンベアガー マシュウ翔",
+      "team": "山口",
+      "team_id": "2487",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "SF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2487",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "0.3",
+      "games": 3,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000649",
+      "name": "マイク・エドワーズ",
+      "team": "山口",
+      "team_id": "2487",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "C"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2487",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "16.2",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "8545",
+      "name": "山口 力也",
+      "team": "山口",
+      "team_id": "2487",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "SG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2487",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "8.2",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "45951",
+      "name": "下田平 翔",
+      "team": "山口",
+      "team_id": "2487",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "PG",
+        "SG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2487",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "0.3",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "43451",
+      "name": "田中 勇樹",
+      "team": "山口",
+      "team_id": "2487",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "PG",
+        "SG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2487",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "2.0",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000154",
+      "name": "井手 優希",
+      "team": "山口",
+      "team_id": "2487",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2487",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "5.5",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "26932",
+      "name": "田中 翔大",
+      "team": "山口",
+      "team_id": "2487",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "SG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2487",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "2.3",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000650",
+      "name": "チャナティップ・ジャクラワン",
+      "team": "山口",
+      "team_id": "2487",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "C",
+        "PF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2487",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "10.0",
+      "games": 4,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000651",
+      "name": "ベルナルド・ダ・シルバ",
+      "team": "山口",
+      "team_id": "2487",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "PF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2487",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "16.0",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000177",
+      "name": "榎田 拓真",
+      "team": "山口",
+      "team_id": "2487",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "SG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2487",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "4.8",
+      "games": 6,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    },
+    {
+      "player_id": "51000716",
+      "name": "デモンテ・フラニガン",
+      "team": "山口",
+      "team_id": "2487",
+      "season": "2026-27",
+      "competition": "BN",
+      "positions": [
+        "SF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2487",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": "9.0",
+      "games": 2,
+      "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
+      "coverage_complete": true
+    }
+  ],
+  "retrieved_at": "2026-10-31T11:21:06.635665+00:00"
+}

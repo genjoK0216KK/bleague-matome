@@ -2,9 +2,7 @@
  "pending": {
   "506508": "2026-10-25",
   "506509": "2026-10-25",
-  "506526": "2026-10-31",
   "506527": "2026-10-31",
-  "506528": "2026-10-31",
   "506531": "2026-10-31"
  },
  "published": [
@@ -109,29 +107,13 @@
   "2026-10-31": {
    "state": "held",
    "games_total": 10,
-   "games_ready": 6,
+   "games_ready": 8,
    "players": null,
    "holds": [
-    {
-     "key": "506526",
-     "home": "A東京",
-     "away": "宇都宮",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
-    },
     {
      "key": "506527",
      "home": "川崎",
      "away": "横浜BC",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
-    },
-    {
-     "key": "506528",
-     "home": "三河",
-     "away": "佐賀",
      "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
@@ -146,7 +128,7 @@
     }
    ],
    "excluded": [],
-   "content_as_of": "2026-10-31 18:38 JST",
+   "content_as_of": "2026-10-31 20:13 JST",
    "source": "data/match_articles/article-games-20261031.json"
   }
  },
