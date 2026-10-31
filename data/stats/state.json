@@ -2,7 +2,6 @@
  "pending": {
   "506508": "2026-10-25",
   "506509": "2026-10-25",
-  "506527": "2026-10-31",
   "506531": "2026-10-31"
  },
  "published": [
@@ -107,17 +106,9 @@
   "2026-10-31": {
    "state": "held",
    "games_total": 10,
-   "games_ready": 8,
+   "games_ready": 9,
    "players": null,
    "holds": [
-    {
-     "key": "506527",
-     "home": "川崎",
-     "away": "横浜BC",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
-    },
     {
      "key": "506531",
      "home": "琉球",
@@ -128,7 +119,7 @@
     }
    ],
    "excluded": [],
-   "content_as_of": "2026-10-31 20:28 JST",
+   "content_as_of": "2026-10-31 20:38 JST",
    "source": "data/match_articles/article-games-20261031.json"
   }
  },
