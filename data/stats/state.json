@@ -1,7 +1,20 @@
 {
  "pending": {
   "506508": "2026-10-25",
-  "506509": "2026-10-25"
+  "506509": "2026-10-25",
+  "506532": "2026-11-01",
+  "506533": "2026-11-01",
+  "506534": "2026-11-01",
+  "506535": "2026-11-01",
+  "506536": "2026-11-01",
+  "506537": "2026-11-01",
+  "506538": "2026-11-01",
+  "506539": "2026-11-01",
+  "506540": "2026-11-01",
+  "506541": "2026-11-01",
+  "506542": "2026-11-01",
+  "506543": "2026-11-01",
+  "506544": "2026-11-01"
  },
  "published": [
   "2026-10-12",
@@ -16,16 +29,6 @@
   "2026-10-31"
  ],
  "days": {
-  "2026-10-24": {
-   "state": "ready",
-   "games_total": 8,
-   "games_ready": 8,
-   "players": 164,
-   "holds": [],
-   "excluded": [],
-   "content_as_of": "2026-10-25 17:14 JST",
-   "source": "data/match_articles/article-games-20261024.json"
-  },
   "2026-10-25": {
    "state": "held",
    "games_total": 2,
@@ -112,6 +115,121 @@
    "excluded": [],
    "content_as_of": "2026-10-31 20:58 JST",
    "source": "data/match_articles/article-games-20261031.json"
+  },
+  "2026-11-01": {
+   "state": "held",
+   "games_total": 13,
+   "games_ready": 0,
+   "players": null,
+   "holds": [
+    {
+     "key": "506532",
+     "home": "仙台",
+     "away": "東京SR",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506533",
+     "home": "秋田",
+     "away": "A千葉",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506534",
+     "home": "茨城",
+     "away": "北海道",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506535",
+     "home": "群馬",
+     "away": "大阪",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506536",
+     "home": "千葉J",
+     "away": "富山",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506537",
+     "home": "A東京",
+     "away": "宇都宮",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506538",
+     "home": "川崎",
+     "away": "横浜BC",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506539",
+     "home": "信州",
+     "away": "京都",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506540",
+     "home": "三河",
+     "away": "佐賀",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506541",
+     "home": "名古屋D",
+     "away": "滋賀",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506542",
+     "home": "神戸",
+     "away": "長崎",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506543",
+     "home": "島根",
+     "away": "広島",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506544",
+     "home": "琉球",
+     "away": "三遠",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    }
+   ],
+   "excluded": [],
+   "content_as_of": "2026-11-01 00:00 JST",
+   "source": "data/match_articles/article-games-20261101.json"
   }
  },
  "definition": {
