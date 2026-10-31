@@ -22,7 +22,7 @@ img{max-width:100%;display:block}
 /* layout */
 .wrap{max-width:var(--maxw);margin:0 auto;padding:24px 18px 64px}
 .layout{display:grid;grid-template-columns:1fr 300px;gap:30px}
-@media(max-width:880px){.layout{grid-template-columns:1fr}.side{order:2}}
+@media(max-width:1023px){.layout{grid-template-columns:1fr}.side{order:2}}
 
 .sec-h{display:flex;align-items:center;gap:10px;margin:6px 0 16px}
 .sec-h h2{font-size:20px;margin:0;font-weight:900;letter-spacing:.02em}
@@ -160,7 +160,7 @@ tr:nth-child(even) td{background:var(--soft)}
 .nav-toggle-lines{display:flex;flex-direction:column;gap:4px;width:22px}
 .nav-toggle-lines span{height:2px;width:100%;background:currentColor;border-radius:1px}
 .nav-toggle-label{font-size:9px;font-weight:700;line-height:1}
-@media(max-width:899px){
+@media(max-width:1023px){
   .hdr-in{flex-wrap:wrap;gap:12px;padding:10px 16px}
   .gnav{margin:0;width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
   .gnav a{justify-content:flex-start;white-space:normal;overflow-wrap:anywhere;border-radius:6px;font-size:14px;padding:10px 12px}
@@ -172,5 +172,5 @@ tr:nth-child(even) td{background:var(--soft)}
 /* Approved lime identity: dark foreground on lime surfaces. */
 .hero .cat,.rank .n.top,.ticker,.ticker .roll a,.stand .row.jp .r{color:#151a18}
 .ticker .lbl{background:#151a18;color:#ccf43b}
-@media(min-width:900px) and (max-width:1050px){.brand-logo{width:200px}.gnav a{padding-left:7px;padding-right:7px}.hdr-in{gap:12px}}
-@media(max-width:899px){.brand-logo{width:200px}.brand-sub{padding-left:38px}.logo{max-width:calc(100% - 70px)}}
+@media(min-width:1024px) and (max-width:1120px){.brand-logo{width:200px}.gnav a{padding-left:7px;padding-right:7px}.hdr-in{gap:12px}}
+@media(max-width:1023px){.brand-logo{width:200px}.brand-sub{padding-left:38px}.logo{max-width:calc(100% - 70px)}}
