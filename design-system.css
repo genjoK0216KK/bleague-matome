@@ -297,7 +297,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .wrap .feed .compact-item.has-thumb:hover{background:var(--soft)}
 .wrap .feed .compact-item.has-thumb:hover h3{color:inherit;text-decoration:underline}
 .compact-item.has-thumb .item-thumb{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;margin:0 0 12px}
-.compact-item.has-thumb .c{display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:center}
+.compact-item.has-thumb .c{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px;align-items:center}
 .compact-item.has-thumb .c h3{grid-row:2;grid-column:1/-1}
 .compact-item.has-thumb .c .meta{grid-row:1;grid-column:2}
 .wrap .feed .compact-item h3{font-size:18px;line-height:27px;font-weight:700;margin:0}
@@ -323,10 +323,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .wrap .game-eff th:first-child,.wrap .game-eff td:first-child,.wrap .game-eff th:nth-child(n+3),.wrap .game-eff td:nth-child(n+3){padding-left:4px;padding-right:4px}
 .wrap .tablewrap{margin:8px 0 16px;scroll-margin-top:104px}
 .table-hint[hidden]{display:none}
-.table-hint,.wrap .article .table-hint p,.table-hint p{font-size:14px;line-height:21px;color:var(--muted);margin:8px 0 4px}
-.table-hint p:last-child{margin-bottom:0}
-.caption-moved{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-.wrap .stats-article .scroll-hint{display:none}
+.table-hint,.wrap .article .table-hint{font-size:14px;line-height:21px;color:var(--muted);margin:8px 0 4px}
+/* 表の説明はCSSだけで本文の幅に収める（JSが動かない時も読める） */
+.wrap .tablewrap{container-type:inline-size}
+.wrap .tablewrap caption{position:sticky;left:0;box-sizing:border-box;max-width:calc(100vw - 2*var(--gutter));max-width:100cqw;text-align:left;font-size:14px;line-height:21px;white-space:normal;overflow-wrap:anywhere}
+.stats-article .scroll-hint[hidden]{display:none}
+.wrap .article .scroll-hint{font-size:14px;line-height:21px;margin:8px 0 4px}
 .wrap .article .table-hint{line-height:21px;margin:8px 0 4px}
 .stats-article th,.stats-article td{padding:12px 8px}
 .stats-article .eff-table{min-width:656px;table-layout:fixed}
@@ -356,7 +358,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .wrap .card .gname,.wrap .stand,.wrap .stand .r,.wrap .stand .nm,.wrap .stand .mv,.wrap .rank .n{font-size:14px;line-height:21px}
 .wrap .stand .mv.up,.wrap .stand .mv.dn{color:var(--ink);font-weight:700}
 .wrap .rank{font-size:16px;line-height:24px}
-.wrap .rank a{display:flex;align-items:center;min-height:48px;font-size:16px;line-height:24px}
+.wrap .rank a{display:flex;align-items:center;min-width:0;min-height:48px;font-size:16px;line-height:24px;overflow-wrap:anywhere}
 .wrap .card .more{display:flex;align-items:center;min-height:48px;font-size:16px;line-height:24px;font-weight:700;text-decoration:underline;text-underline-offset:4px}
 .pager a{min-height:48px;min-width:48px;display:inline-flex;align-items:center;justify-content:center}
 .wrap .match-notes p,.wrap .match-notes a{font-size:14px;line-height:21px}
@@ -371,6 +373,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .wrap .next-list a,.wrap section li>a[target="_blank"]{display:inline-flex;align-items:center;min-height:48px}
 .wrap .more{font-size:16px;line-height:24px}
 .wrap .calendar-key,.wrap .calendar-days small{font-size:14px;line-height:21px}
+.calendar-hint{display:none;font-size:14px;line-height:21px;color:var(--muted);margin:0 0 4px}
 .wrap .preview-heading{background:var(--soft);padding:16px}
 .wrap .preview-heading .note{background:#fff}
 .wrap p,.wrap li,.wrap dd,.wrap .note,.wrap h1,.wrap h2,.wrap h3,.wrap h4{overflow-wrap:anywhere}
@@ -381,8 +384,16 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .brand-sub{padding-left:0}
 .hdr .nav-toggle{margin-left:0}
 .recent-list a.has-thumb{flex-direction:column}
+.wrap .feed .compact-item.has-thumb{padding:12px}
+.compact-item.has-thumb .c{grid-template-columns:minmax(0,1fr)}
+.compact-item.has-thumb .c .meta{grid-row:2;grid-column:1}
+.compact-item.has-thumb .c h3{grid-row:3}
+.compact-item.has-thumb .tag{justify-self:start}
 .wrap .calendar-controls{flex-wrap:wrap}
 .wrap .calendar-controls h3{order:-1;flex:1 0 100%;text-align:center}
+.calendar-scroll{overflow-x:auto}
+.calendar-scroll .calendar-week,.calendar-scroll .calendar-days{min-width:292px}
+.calendar-hint{display:block}
 .recent-thumb{flex:none;width:100%}
 .wrap .match-row,.wrap .daily-score{grid-template-columns:minmax(0,1fr);gap:0;text-align:center}
 .wrap .match-row span:first-child,.wrap .daily-score span:first-child,.wrap .match-row span:nth-child(3),.wrap .daily-score span:nth-child(3){text-align:center}

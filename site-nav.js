@@ -119,34 +119,24 @@
       if (!wrap.getAttribute('aria-label')) wrap.setAttribute('aria-label', caption ? caption.textContent.trim() : headingFor(wrap) || '横にスクロールできる表');
     }
     var hint = wrap.previousElementSibling;
+    var ours = hint && (hint.hasAttribute('data-auto') || hint.classList.contains('scroll-hint'));
     // Keep any wording an article already has, such as a reminder about player status.
-    if (hint && !hint.classList.contains('scroll-hint') && !hint.hasAttribute('data-auto') && hint.textContent.indexOf(RULE) >= 0) return;
-    if (!hint || !hint.hasAttribute('data-auto')) {
-      hint = document.createElement('div');
+    if (hint && !ours && hint.textContent.indexOf(RULE) >= 0) return;
+    if (!ours) {
+      hint = document.createElement('p');
       hint.className = 'table-hint';
       hint.setAttribute('data-auto', '');
       hint.hidden = true;
       wrap.parentNode.insertBefore(hint, wrap);
     }
     hint.hidden = !over;
-    // A caption scrolls with its table, so its rules move above the table while the table overflows.
-    if (caption) caption.classList.toggle('caption-moved', over);
     if (!over) return;
     var edge = wrap.getBoundingClientRect().right;
     var hidden = Array.prototype.filter.call(table.rows[0].cells, function (th) {
       return th.getBoundingClientRect().right > edge + 1;
     }).map(function (th) { return th.textContent.trim(); });
     var names = hidden.slice(0, 2).join('・');
-    hint.textContent = '';
-    if (caption) {
-      var rule = document.createElement('p');
-      rule.setAttribute('aria-hidden', 'true');
-      rule.textContent = caption.textContent.trim();
-      hint.appendChild(rule);
-    }
-    var note = document.createElement('p');
-    note.textContent = '表は' + RULE + '。' + (names ? '右に' + names + (hidden.length > 2 ? 'など' : '') + 'が続きます' : '');
-    hint.appendChild(note);
+    hint.textContent = '表は' + RULE + '。' + (names ? '右に' + names + (hidden.length > 2 ? 'など' : '') + 'が続きます' : '');
   }
   function updateAll() {
     Array.prototype.forEach.call(document.querySelectorAll('.tablewrap, .tblwrap'), update);
