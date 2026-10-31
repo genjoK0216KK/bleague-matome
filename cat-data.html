@@ -32,8 +32,9 @@
 <section class="schedule-calendar" aria-labelledby="calendar-title">
 <h2 id="calendar-title">試合カレンダー</h2><p>日付を選んで対戦カードを見る</p>
 <div class="calendar-controls"><button type="button" data-month-step="-1" aria-label="前の月">‹</button><h3 id="calendar-month"></h3><button type="button" data-month-step="1" aria-label="次の月">›</button></div>
-<div class="calendar-week" aria-hidden="true"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
-<div class="calendar-days" aria-label="試合日程の日付"></div>
+<p class="calendar-hint">カレンダーは横に動かせます</p>
+<div class="calendar-scroll"><div class="calendar-week" aria-hidden="true"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
+<div class="calendar-days" aria-label="試合日程の日付"></div></div>
 <p class="calendar-key">● 掲載試合あり　? 一部未確認</p>
 <div class="calendar-detail" aria-live="polite" aria-atomic="true"></div>
 <details class="calendar-notes"><summary>日程の出典・更新情報</summary><p>時刻は日本時間（JST）。日程・開始時刻は変更される場合があります。延期・中止はカードに表示します。</p><div class="calendar-sources"></div></details>

@@ -69,7 +69,7 @@ def render(state, now):
                 body+='<li>'+datetime.fromisoformat(g['starts_at']).astimezone(data.JST).strftime('%H:%M')+' '+articles.link(g['source'],g['home']+' vs '+g['away'])+'</li>'
             body+='</ul>'
         body+='</section>'
-    body+='<p><a href="cat-kekka.html">試合結果・当日の EFFを見る →</a></p><details class="match-notes"><summary>出典・選出ルール・注記</summary><p>登録は当日のエントリー・出場確定を意味しません。対象試合の現在登録選手を、取得時点の公式今季平均EFFで選出しています。</p><p>公式IL登録中・平均未確認の選手は除外。PG→SG→SF→PF→Cの順でベスト5、残りからサブ5を選びます。同一選手は1枠、同値は選手ID順です。</p>'
+    body+='<p><a class="day-detail" href="cat-kekka.html">試合結果・当日の EFFを見る →</a></p><details class="match-notes"><summary>出典・選出ルール・注記</summary><p>登録は当日のエントリー・出場確定を意味しません。対象試合の現在登録選手を、取得時点の公式今季平均EFFで選出しています。</p><p>公式IL登録中・平均未確認の選手は除外。PG→SG→SF→PF→Cの順でベスト5、残りからサブ5を選びます。同一選手は1枠、同値は選手ID順です。</p>'
     for league,result in state.get('lineups',{}).items():
         if result.get('retrieved_at'):body+='<p>'+official.LEAGUES[league][3]+' 選手資料取得：'+datetime.fromisoformat(result['retrieved_at']).astimezone(data.JST).strftime('%Y-%m-%d %H:%M JST')+'</p>'
         for team in result.get('teams',[]):

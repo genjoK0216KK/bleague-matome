@@ -219,3 +219,182 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #17
 .wrap .feed .compact-item.has-thumb{display:flex;gap:12px;align-items:flex-start}
 .compact-item .item-thumb{flex:0 0 128px;width:128px;height:72px;object-fit:contain;background:#151a18;border-radius:4px;margin-top:6px}
 @media (max-width:480px){.compact-item .item-thumb{flex-basis:96px;width:96px;height:54px}}
+/* サイト全体の見直し（10/31 チャッピー案7節・本人確認前の見本）：文字14px以上、行間1.5以上、余白4px単位、操作48px */
+:root{--ink:#151a18;--muted:#525b55;--line:#d5dad6;--soft:#f3f5f3;--brand2:#151a18;--maxw:1120px;--gutter:16px;--edge-left:max(var(--gutter),env(safe-area-inset-left));--edge-right:max(var(--gutter),env(safe-area-inset-right))}
+@media(min-width:1024px){:root{--gutter:24px}}
+html{scroll-padding-top:104px}
+body{line-height:1.75;color:var(--ink)}
+main:focus{outline:0}
+a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid #151a18;outline-offset:2px;box-shadow:none}
+.hdr a:focus-visible,.hdr button:focus-visible{outline-color:#ccf43b}
+.skip-link{position:absolute;left:16px;top:-64px;z-index:60;display:flex;align-items:center;min-height:48px;padding:0 16px;background:#ccf43b;color:#151a18;font-weight:700}
+.skip-link:focus{top:8px}
+/* ヘッダーとメニュー */
+.hdr-in{max-width:var(--maxw);min-height:72px;gap:12px;padding:8px var(--edge-right) 8px var(--edge-left)}
+.logo{max-width:calc(100% - 92px)}
+.brand-sub{font-size:14px;line-height:21px;font-weight:400;letter-spacing:.04em;color:#d5dad6}
+.hdr .nav-toggle{min-width:80px;min-height:48px;gap:4px;padding:4px 8px;border-color:#737b75}
+.nav-toggle-lines{width:24px}
+.hdr .nav-toggle-label{font-size:14px;line-height:21px;font-weight:400}
+.hdr .gnav a{min-height:48px;padding:8px;font-size:16px;line-height:24px;color:#d5dad6}
+.hdr .gnav .menu-extra{display:none}
+@media(max-width:1023px){
+.hdr-in{gap:0;padding-top:8px;padding-bottom:8px}
+.hdr .logo{flex:1 1 auto}
+.nav-enhanced .gnav{position:static;order:3;width:calc(100% + var(--edge-left) + var(--edge-right));margin:8px calc(-1*var(--edge-right)) -8px calc(-1*var(--edge-left));padding:16px var(--edge-right) 16px var(--edge-left);gap:8px;background:#fff;border-top:0;box-shadow:0 1px 0 var(--line);max-height:calc(100vh - 88px);max-height:calc(100dvh - 88px)}
+.hdr .gnav a{justify-content:flex-start;padding:8px 12px;font-weight:700;border-radius:4px}
+.hdr.nav-enhanced .gnav a{color:#151a18}
+.hdr.nav-enhanced .gnav a:hover{background:var(--soft);outline:0}
+.hdr.nav-enhanced .gnav a[aria-current]{background:#ccf43b;color:#151a18}
+.hdr.nav-enhanced .gnav a:focus-visible,.hdr.nav-enhanced .menu-close:focus-visible{outline-color:#151a18}
+.nav-enhanced .gnav .menu-extra{display:flex;grid-column:1/-1;font-weight:400;text-decoration:underline;text-underline-offset:4px}
+.hdr .menu-close{align-items:center;justify-content:center;min-height:48px;border:1px solid #737b75;border-radius:4px;background:#fff;color:#151a18;font:inherit;font-weight:700;text-decoration:none;cursor:pointer}
+}
+/* 本文の幅と文字の階層 */
+.wrap{padding:16px var(--edge-right) 48px var(--edge-left)}
+.article,.stats-article{max-width:800px}
+.wrap h1,.wrap .article h1{font-size:24px;line-height:36px;font-weight:700;margin:8px 0 16px}
+.wrap h2,.wrap .sec-h h2,.wrap .article h2,.wrap .home-today-c h2,.wrap .home-ranking .game-eff h2{font-size:22px;line-height:33px;font-weight:700}
+.wrap h3,.wrap .lead-article h3,.wrap .article h3,.wrap .own-card h3{font-size:18px;line-height:27px;font-weight:700}
+.wrap h4,.wrap .article h4{font-size:16px;line-height:24px;font-weight:700}
+.wrap .article h2{margin:32px 0 16px;padding-left:12px;border-left:4px solid var(--brand)}
+.wrap .article p,.wrap .article li{line-height:28px}
+.wrap .article p{margin:16px 0}
+.wrap .article .lead{font-size:16px;color:var(--ink)}
+@media(min-width:1024px){
+.wrap h1,.wrap .article h1{font-size:32px;line-height:48px}
+.wrap h2,.wrap .sec-h h2,.wrap .article h2,.wrap .home-today-c h2,.wrap .home-ranking .game-eff h2{font-size:24px;line-height:36px}
+.wrap h3,.wrap .article h3{font-size:20px;line-height:30px}
+.wrap .feed h3,.wrap .own-card h3,.wrap .lead-article h3{font-size:18px;line-height:27px}
+}
+.breadcrumb,.wrap .article .breadcrumb{font-size:16px;line-height:24px;margin:0;color:var(--muted)}
+.breadcrumb a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.wrap .tag{font-size:14px;line-height:21px;font-weight:400;padding:4px 8px;border:0;border-radius:4px;background:var(--soft);color:var(--ink)}
+.wrap .meta,.wrap .feed .meta,.feed .compact-item .meta,.wrap .article .pmeta,.wrap .match-article .pmeta,.wrap .article .source,.wrap .source,.wrap .article .note,.wrap .note,.wrap .pv,.recent-date,.lead-label,.own-date,.upd-meta,.section-note,.wrap .table-note,.wrap .article .table-note{font-size:14px;line-height:21px}
+.wrap .article .pmeta{flex-wrap:wrap;gap:8px 12px;margin:0 0 16px;padding-bottom:16px}
+.wrap .note{border-left-color:#ccf43b;border-radius:4px;color:var(--ink);padding:12px 16px;margin:16px 0}
+.wrap .card{margin:0 0 16px;padding:16px 0}
+/* リンクとボタン */
+.wrap .sec-h .more,.wrap .day-detail,.read-link,.games-link{font-size:16px;line-height:24px;font-weight:700;min-height:48px}
+.wrap .day-detail{display:flex;align-items:center;padding:12px 0}
+.wrap .primary-action,.quick-actions a{min-height:48px;padding:12px 16px;font-size:16px;line-height:24px;border-radius:4px;border-color:#737b75}
+.wrap .date-chips a{border-color:#737b75;border-radius:4px}
+.wrap .article .article-jumps a,.wrap .match-article .match-notes summary{font-size:16px}
+/* トップ（案Cの順番はそのまま） */
+.home-today{background:var(--soft);padding:16px;margin:0 0 32px}
+.home-today-c{padding:16px}
+.lead-article{padding:16px;margin:0 0 12px}
+.lead-desc{line-height:24px}
+.games-line{gap:0 16px;padding:12px 0 0}
+.games-line p{flex:1 0 100%;line-height:24px}
+.recent-list a{padding:12px 0}
+.recent-thumb{height:auto;aspect-ratio:16/9;object-fit:contain;margin-top:0}
+.home-updates .upd-list a{line-height:24px}
+@media(min-width:1024px){.home-today{margin-bottom:48px}.lead-article{padding:24px}}
+/* 記事カード：サムネを切らずに見せる */
+.feed:has(>.compact-item.has-thumb){gap:16px}
+.wrap .feed .compact-item.has-thumb{display:block;padding:16px;border:1px solid var(--line);border-radius:4px;background:#fff}
+.wrap .feed .compact-item.has-thumb:hover{background:var(--soft)}
+.wrap .feed .compact-item.has-thumb:hover h3{color:inherit;text-decoration:underline}
+.compact-item.has-thumb .item-thumb{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;margin:0 0 12px}
+.compact-item.has-thumb .c{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px;align-items:center}
+.compact-item.has-thumb .c h3{grid-row:2;grid-column:1/-1}
+.compact-item.has-thumb .c .meta{grid-row:1;grid-column:2}
+.wrap .feed .compact-item h3{font-size:18px;line-height:27px;font-weight:700;margin:0}
+.wrap .feed .item.ext h3{font-size:16px;line-height:24px;font-weight:400;margin:4px 0}
+@media(min-width:1024px){.feed:has(>.compact-item.has-thumb){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.wrap .feed .compact-item.has-thumb{padding:24px}}
+/* 表 */
+.wrap table{font-size:16px;line-height:24px;font-variant-numeric:tabular-nums}
+.wrap th,.wrap td{padding:12px 8px}
+.wrap th{background:var(--soft);color:var(--ink);font-size:16px;font-weight:700;white-space:nowrap}
+.wrap tbody th.pl,.wrap tbody th.cat,.wrap tbody th[scope="row"]{white-space:normal}
+.wrap td small,.wrap .daily-lineups td small,.wrap .game-eff td small,.wrap .home-ranking td small{display:block;font-size:14px;line-height:21px;color:var(--muted)}
+.wrap .match-article .daily-lineups table,.wrap .daily-lineups table,.wrap .game-eff table{font-size:16px;line-height:24px;table-layout:fixed}
+.wrap .daily-lineups table{min-width:343px}
+.wrap .match-article .daily-lineups th,.wrap .daily-lineups th,.wrap .game-eff th{font-size:16px;font-weight:700;padding:12px 8px;white-space:nowrap}
+.wrap .daily-lineups td,.wrap .game-eff td{padding:12px 8px}
+.wrap .daily-lineups th:first-child,.wrap .match-article .daily-lineups th:first-child{width:52px}
+.wrap .daily-lineups th:nth-child(3),.wrap .match-article .daily-lineups th:nth-child(3){width:80px}
+.wrap .daily-lineups th:nth-child(4),.wrap .match-article .daily-lineups th:nth-child(4){width:64px}
+.wrap .daily-lineups td:first-child,.wrap .daily-lineups th:first-child{position:sticky;left:0;z-index:1}
+.wrap .daily-lineups td:first-child{background:#fff}
+.wrap .game-eff table{min-width:340px}
+.wrap .game-eff th:first-child{width:36px}.wrap .game-eff th:nth-child(n+3){width:44px}
+.wrap .game-eff th:first-child,.wrap .game-eff td:first-child,.wrap .game-eff th:nth-child(n+3),.wrap .game-eff td:nth-child(n+3){padding-left:4px;padding-right:4px}
+.wrap .tablewrap{margin:8px 0 16px;scroll-margin-top:104px}
+.table-hint[hidden]{display:none}
+.table-hint,.wrap .article .table-hint{font-size:14px;line-height:21px;color:var(--muted);margin:8px 0 4px}
+/* 表の説明はCSSだけで本文の幅に収める（JSが動かない時も読める） */
+.wrap .tablewrap{container-type:inline-size}
+.wrap .tablewrap caption{position:sticky;left:0;box-sizing:border-box;max-width:calc(100vw - 2*var(--gutter));max-width:100cqw;text-align:left;font-size:14px;line-height:21px;white-space:normal;overflow-wrap:anywhere}
+.stats-article .scroll-hint[hidden]{display:none}
+.wrap .article .scroll-hint{font-size:14px;line-height:21px;margin:8px 0 4px}
+.wrap .article .table-hint{line-height:21px;margin:8px 0 4px}
+.stats-article th,.stats-article td{padding:12px 8px}
+.stats-article .eff-table{min-width:656px;table-layout:fixed}
+.stats-article .eff-table thead th:nth-child(n+3){width:64px}
+.stats-article .eff-table thead th:last-child{width:80px}
+.stats-article .eff-table thead th:first-child{width:48px}
+.stats-article .eff-table thead th:nth-child(2){width:144px}
+@media(max-width:767px){
+.stats-article .eff-table th.pl,.stats-article .eff-table thead th:nth-child(2){width:144px;min-width:144px;max-width:144px}
+}
+@media(max-width:319px){.stats-article .eff-table th.pl,.stats-article .eff-table thead th:nth-child(2){position:static;box-shadow:none}}
+/* 試合の結果 */
+.wrap .match-row,.wrap .daily-score{grid-template-columns:minmax(0,1fr) 120px minmax(0,1fr);min-height:72px;padding:12px 0;font-size:16px;line-height:24px}
+.wrap .match-row strong,.wrap .daily-score strong{font-size:24px;line-height:36px}
+.wrap .match-row small,.wrap .daily-score small{font-size:14px;line-height:21px}
+@media(min-width:1024px){.wrap .match-row,.wrap .daily-score{min-height:64px}}
+/* 広告枠とフッター */
+.adbox,.wrap .adbox{border:1px dashed #737b75;border-radius:4px;color:var(--muted);font-size:14px;line-height:21px;font-weight:400;padding:24px 16px;margin:16px 0}
+.ft{background:#fff;border-top:1px solid var(--line);color:var(--muted);font-size:16px;line-height:24px;margin-top:32px}
+.ft-in{max-width:var(--maxw);gap:8px 16px;padding:32px var(--edge-right) calc(32px + env(safe-area-inset-bottom)) var(--edge-left)}
+.ft a{display:inline-flex;align-items:center;min-height:48px;color:var(--muted);text-decoration:underline;text-underline-offset:4px}
+.ft .cp{color:var(--muted);font-size:14px;line-height:21px;border-top:0;padding-top:0;margin-top:0}
+.il-card p,.il-card dl,.il-badge,.lineup-rule summary,.lineup-rule p,.wrap .daily-lineups small,.calendar-days small,.calendar-key,.match-article .table-hint{font-size:14px;line-height:21px}
+/* サイドバーと小さな補助表示も同じ基準へ */
+.wrap .feed .compact-item .tag{font-size:14px;line-height:21px}
+.wrap .upd,.wrap .upd a{font-size:14px;line-height:21px;color:var(--muted)}
+.wrap .card .gname,.wrap .stand,.wrap .stand .r,.wrap .stand .nm,.wrap .stand .mv,.wrap .rank .n{font-size:14px;line-height:21px}
+.wrap .stand .mv.up,.wrap .stand .mv.dn{color:var(--ink);font-weight:700}
+.wrap .rank{font-size:16px;line-height:24px}
+.wrap .rank a{display:flex;align-items:center;min-width:0;min-height:48px;font-size:16px;line-height:24px;overflow-wrap:anywhere}
+.wrap .card .more{display:flex;align-items:center;min-height:48px;font-size:16px;line-height:24px;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.pager a{min-height:48px;min-width:48px;display:inline-flex;align-items:center;justify-content:center}
+.wrap .match-notes p,.wrap .match-notes a{font-size:14px;line-height:21px}
+.wrap details:not(.home-fold):not(.fetch-alert)>summary{display:list-item;min-height:48px;padding:12px 0;font-size:16px;line-height:24px}
+.wrap .schedule-calendar{border-color:var(--line);border-radius:4px}
+.wrap .schedule-calendar h2{font-size:22px;line-height:33px}
+.wrap .schedule-calendar h3{font-size:18px;line-height:27px}
+.calendar-game a{display:flex;align-items:center;min-height:48px}
+.wrap .stdtbl{font-size:16px;line-height:24px}
+.wrap .stdtbl th,.wrap .stdtbl td{padding:12px 8px;font-size:inherit}
+.wrap .stdtbl th{font-size:14px;line-height:21px}
+.wrap .next-list a,.wrap section li>a[target="_blank"]{display:inline-flex;align-items:center;min-height:48px}
+.wrap .more{font-size:16px;line-height:24px}
+.wrap .calendar-key,.wrap .calendar-days small{font-size:14px;line-height:21px}
+.calendar-hint{display:none;font-size:14px;line-height:21px;color:var(--muted);margin:0 0 4px}
+.wrap .preview-heading{background:var(--soft);padding:16px}
+.wrap .preview-heading .note{background:#fff}
+.wrap p,.wrap li,.wrap dd,.wrap .note,.wrap h1,.wrap h2,.wrap h3,.wrap h4{overflow-wrap:anywhere}
+/* 200%拡大など狭い幅：ヘッダーを2段にし、横並びの部品を縦に積む */
+@media(max-width:300px){
+.hdr-in{flex-wrap:wrap;gap:8px}
+.hdr .logo{flex:1 1 100%;max-width:100%}
+.brand-sub{padding-left:0}
+.hdr .nav-toggle{margin-left:0}
+.recent-list a.has-thumb{flex-direction:column}
+.wrap .feed .compact-item.has-thumb{padding:12px}
+.compact-item.has-thumb .c{grid-template-columns:minmax(0,1fr)}
+.compact-item.has-thumb .c .meta{grid-row:2;grid-column:1}
+.compact-item.has-thumb .c h3{grid-row:3}
+.compact-item.has-thumb .tag{justify-self:start}
+.wrap .calendar-controls{flex-wrap:wrap}
+.wrap .calendar-controls h3{order:-1;flex:1 0 100%;text-align:center}
+.calendar-scroll{overflow-x:auto}
+.calendar-scroll .calendar-week,.calendar-scroll .calendar-days{min-width:292px}
+.calendar-hint{display:block}
+.recent-thumb{flex:none;width:100%}
+.wrap .match-row,.wrap .daily-score{grid-template-columns:minmax(0,1fr);gap:0;text-align:center}
+.wrap .match-row span:first-child,.wrap .daily-score span:first-child,.wrap .match-row span:nth-child(3),.wrap .daily-score span:nth-child(3){text-align:center}
+}

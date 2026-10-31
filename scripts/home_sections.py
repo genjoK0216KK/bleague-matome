@@ -344,6 +344,7 @@ def games_line(root, now, rows):
                 + ('・' + '／'.join(times) + ' 開始' if times else ''))
     link = ('<a class="games-link" href="' + day_articles.filename(today) + '">試合の詳細 ›</a>'
             if row is not None else '')
+    link += '<a class="games-link" href="next-games.html">今季平均EFFのベスト5・サブ5 ›</a>'
     return '<div class="games-line"><p>' + escape(text) + '</p>' + link + '</div>'
 
 
