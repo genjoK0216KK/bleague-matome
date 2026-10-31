@@ -1,0 +1,87 @@
+{
+  "id": "fcf33c7c4f183753d4ec",
+  "article_path": "article-stats-20261031.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261031.html",
+  "source_commit": "",
+  "source_blob_sha": "9b6a272add9d396a5bb0e0dc3d1d508c87ce5b9b",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "78b403543ad1a2ecf03cb6a3391a24a0a92ed3a6a141bce5071b80aba50af2a7",
+  "last_observed_blob_sha": "9b6a272add9d396a5bb0e0dc3d1d508c87ce5b9b",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fcf33c7c4f183753d4ec/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fcf33c7c4f183753d4ec/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T11:59:58.186188+00:00",
+  "creation_event_id": "7936942e5b13a9b23300",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/fcf33c7c4f183753d4ec/thumbnail.png",
+  "image_sha256": "46d8d910e81b08e56367cb66a8addc9602135e1d8b3cfcdd200fcb4691b1c082",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "9b6a272add9d396a5bb0e0dc3d1d508c87ce5b9b",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.31",
+      "貢献度1位",
+      "ヴィック・ロー",
+      "茨城",
+      "EFF 38",
+      "28得点・8REB・5AST",
+      "イラスト（AI生成）｜成績をもとにしたイメージ",
+      "記録は公式の訂正により変わる場合があります"
+    ],
+    "sources": [
+      {
+        "role": "本文の根拠（固定HTML）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fcf33c7c4f183753d4ec/source.html",
+        "article_url": "https://basuke-matome.jp/article-stats-20261031.html",
+        "verified_blob_sha": "9b6a272add9d396a5bb0e0dc3d1d508c87ce5b9b",
+        "facts_used": "2026年10月31日。茨城のヴィック・ローが貢献度1位、EFF38。28得点・8リバウンド・5アシスト。記録は公式訂正により変わる場合がある。"
+      },
+      {
+        "role": "本文の根拠（固定文章）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fcf33c7c4f183753d4ec/source.txt",
+        "facts_used": "見出し・リード・貢献度TOP3・TOP10のヴィック・ロー行・末尾留保を照合。記事本文の根拠はこのTXTと上記HTMLのみ。"
+      },
+      {
+        "role": "制作手順",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "note": "最新依頼を優先し、実在選手を必須とする。ready・公開・外部送信は実行しない。"
+      },
+      {
+        "role": "承認済みスタイル参照・目視確認済み",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "黒#151A18×ライム#CCF43B、太い日本語見出し、インクとブラシを採用。参照画像の選手・成績・日付は転用しない。"
+      },
+      {
+        "role": "補助スタイル参照・目視確認済み",
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "note": "手順書のautomation側パスにA画像がなかったため、案件Notionに記載された既存の同名v3画像を参照。最終は黒×ライム案。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ヴィック・ロー（Vic Law）",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿の見出し・リード・貢献度ランキングで単独1位として最も大きく扱われているため。ランダム選定ではない。",
+        "official_profile_url": "https://www.ibarakirobots.win/team/players/detail/id=25047?PlayerID=51000166",
+        "official_photo_url": "https://ibarakirobots.bl.kuroco-img.app/v=1790071776/files/user/images/player/2026-27/player4.jpg",
+        "photo_inspected": true,
+        "features_observed": "短い密な黒い巻き毛、広い額、面長で細身の輪郭、頬骨、目鼻、厚めの唇、短い口ひげと顎・頬の薄いひげを公式プロフィール写真で確認。初稿の髪とひげ・輪郭を1回修正し、最終画像で特徴を照合。",
+        "usage": "公式写真は容姿の確認と生成時の参照にのみ使用。写真の貼付・写真風表現・ロゴ・スポンサー文字は無し。最終画像は1人のドリブルのイラストで、実際の試合の特定場面を再現したものではない。",
+        "qa_visual_notes": "顔、両手、ボール、見出し、注記は見切れず判読可能。下半身は動きのある構図としてフレーム下端にかかる。手指・腕に目立つ破綻なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION:\nUse case: ads-marketing / editorial sports illustration.\nCreate ONE finished Japanese basketball article thumbnail, landscape 1600 x 900 pixels (16:9), fully opaque PNG.\nThis is a new original illustration. Use the previously viewed approved black/lime thumbnail as the style guide only: deep charcoal #151A18, electric lime #CCF43B, warm white, hand-drawn ink hatching and rough dry-brush strokes, huge bold Japanese typography, strong legibility, few elements. Do NOT carry over that example's player, text, date, score or 38-points claim.\n\nSubject: exactly ONE real basketball player, Vic Law (ヴィック・ロー). Match the official Ibaraki Robots profile portrait that was viewed in this conversation for likeness only. He has very short dense black natural curls with a closely tapered outline, a broad high forehead, a long lean oval face, defined cheekbones and tapered jaw/chin, strong eyebrows, deep-set large eyes, a straight broad nose, full lips, a thin moustache and close short stubble along the chin/jaw. No long beard, no long locks. Tall lean athletic physique. Draw him by hand in expressive black-and-ivory ink, visibly an illustration, never photoreal. Preserve face readability. Plain dark basketball uniform with only a small simple numeral 4, no brands, no sponsor writing, no team or league logos. Skin may be interpreted in warm ivory/charcoal hatching with restrained warm brown. Orange basketball.\n\nComposition: Put Vic Law on the LEFT 43% in an energetic low driving/dribbling stance, knees bent, torso leaning forward, one hand naturally controlling an orange basketball at hip height, other arm naturally counterbalancing. Show head, shoulders, both arms and knees as feasible; keep face, both hands and the whole ball comfortably inside canvas and away from typography. Natural fingers and joints, no extra limbs. This is an imagined basketball movement, not a recreation of any actual moment from the game. No opponent, crowd, hoop, trophy, arena signage, camera effects or photographic inserts.\nOn the RIGHT 54% put the headline and a large EFF 38, on clear uninterrupted dark space. Diagonal lime brush texture behind the athlete only and a small underline near the type. Overall sophisticated bold editorial sports cover.\n\nExact text to render, without alteration or additional words:\nTop small brand/date: 「バスケまとめ」 「2026.10.31」\nRight headline in warm white: 「貢献度1位」\nRight player name in large warm white: 「ヴィック・ロー」\nSmall team label: 「茨城」\nDominant stat in lime: 「EFF 38」\nLower right supporting line: 「28得点・8REB・5AST」\nBottom footer, warm white, clearly readable and inside generous safe margins, two lines:\n「イラスト（AI生成）｜成績をもとにしたイメージ」\n「記録は公式の訂正により変わる場合があります」\n\nAll facts on the image come only from the fixed manuscript: on October 31, 2026, Vic Law of Ibaraki ranks first in efficiency EFF with 38, with 28 points, 8 rebounds and 5 assists. The 38 is EFF, NOT points. Do not write 38得点, MVP, season leader, final/decisive shot, real game scene, or other invented claims. The typography must clearly couple EFF and 38. All Japanese text must be spelled exactly as above, cleanly legible, no duplicated characters, no cropping, no clipping. Leave at least 45px safe margin around text. Keep the footer large enough to read. No official photographs are to be pasted or reproduced in the output.\n\nSINGLE CORRECTION (identity likeness):\nEdit the first image, the existing basketball thumbnail, with ONE targeted correction only: improve the identity likeness of the athlete's head/face to the real Vic Law in the second image, his official Ibaraki profile photograph. The photograph is identity reference only: do not paste any photographic pixels or logos, and maintain the same hand-drawn ink/brush illustration medium.\n\nKeep the entire composition, body pose, both hands, ball, plain jersey number 4, colors, layout, date, all Japanese typography, numbers, footer and dimensions exactly unchanged. Change only the athlete's facial structure and hair/beard.\nClosely study the official face: very short, close-cropped dense black curls of uniform compact height, with a flatter close contour and no tall tufts; broad high forehead; elongated lean oval face; flatter and straighter natural eyebrows (not thick arched caricature eyebrows); deep-set clear dark eyes; long straight nose with a broad base; pronounced full upper and lower lips; defined cheekbones; a lean tapered but squared lower jaw; thin moustache and very short stubble across the jaw and chin, NOT a thick pointed goatee. Make the head recognizably this man, not a generic athlete. Keep the action pose's three-quarter head orientation, looking toward the right side of the frame. Preserve face readability in the strongly illustrated charcoal/ivory/soft warm brown ink shading. No photorealism, no pasted photo, no sponsor marks, no team logo, no league logo.\n\nInvariant exact text, which must remain as already typeset:\nバスケまとめ\n2026.10.31\n貢献度1位\nヴィック・ロー\n茨城\nEFF 38\n28得点・8REB・5AST\nイラスト（AI生成）｜成績をもとにしたイメージ\n記録は公式の訂正により変わる場合があります\n\nReturn exactly one finished landscape PNG with the existing aspect ratio and size.",
+    "generator": "内蔵 image_gen.imagegen のみ。初回生成1回＋容姿修正1回。最終PNG: 1672x941 px。最終出力を実際に目視して5項目を検品。API/CLI/新規課金/画像の後加工なし。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T12:03:44.055288+00:00",
+  "publication_approved": false
+}
