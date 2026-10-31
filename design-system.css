@@ -335,7 +335,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 }
 @media(max-width:319px){.stats-article .eff-table th.pl,.stats-article .eff-table thead th:nth-child(2){position:static;box-shadow:none}}
 /* 試合の結果 */
-.wrap .match-row,.wrap .daily-score{min-height:72px;padding:12px 0;font-size:16px;line-height:24px}
+.wrap .match-row,.wrap .daily-score{grid-template-columns:minmax(0,1fr) 120px minmax(0,1fr);min-height:72px;padding:12px 0;font-size:16px;line-height:24px}
 .wrap .match-row strong,.wrap .daily-score strong{font-size:24px;line-height:36px}
 .wrap .match-row small,.wrap .daily-score small{font-size:14px;line-height:21px}
 @media(min-width:1024px){.wrap .match-row,.wrap .daily-score{min-height:64px}}
