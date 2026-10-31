@@ -1,0 +1,94 @@
+{
+  "id": "0a5c2c0f2505974f6de8",
+  "article_path": "article-results-one-next-20261031.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261031.html",
+  "source_commit": "",
+  "source_blob_sha": "4bb4de5856c46b9121c32c1d739f16a26c802acd",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "4a7432d76895acbeaf561ac06bb48b05a3cc4c70252525477dcb6b19dd35d14e",
+  "last_observed_blob_sha": "4bb4de5856c46b9121c32c1d739f16a26c802acd",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/0a5c2c0f2505974f6de8/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/0a5c2c0f2505974f6de8/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T09:49:27.396478+00:00",
+  "creation_event_id": "245f58d2f33c5dd0d6be",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/0a5c2c0f2505974f6de8/thumbnail.png",
+  "image_sha256": "ab09a51f8e789e2667f8e0f94d527f75ed245118cbd35c1005aacaf125ca4b9c",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "4bb4de5856c46b9121c32c1d739f16a26c802acd",
+    "text_lines": [
+      "バスケまとめ",
+      "10/31",
+      "試合結果",
+      "18:38時点",
+      "当日EFF：全試合の公式記録確定待ち",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "path": "source.html",
+        "role": "固定本文の根拠。全リーグの試合結果、2026-10-31 18:38 JST時点、一部開始・公式記録未確定。全リーグの当日EFF TOP3は全試合の公式記録確定待ち。",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261031.html"
+      },
+      {
+        "path": "source.txt",
+        "role": "固定本文の文章照合。本文の根拠はこの2ファイルのみ。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール。人物を絞れない時も実在選手をランダムに描くという今回の本人指示を優先。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで目視した承認済みスタイル参照。配色・インク表現のみ参照し、氏名・成績・日付・人物は流用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "富山仁貴",
+        "team": "佐賀バルーナーズ",
+        "selection": "ランダム",
+        "selection_method": "固定本文に選手名がなく、特定選手が主役ではない。本文に登場する44チームからPython random.SystemRandom().choiceで佐賀を抽選し、公式選手一覧に載る14名から同様に富山仁貴を抽選。",
+        "official_roster_url": "https://ballooners.jp/team/players/",
+        "official_profile_url": "https://ballooners.jp/team/players/detail/id=47825?PlayerID=51000440",
+        "official_image_url": "https://ballooners.bl.kuroco-img.app/v=1788969725/files/user/cheer/%E3%81%A8%E3%82%80.jpg",
+        "reference_inspected": true,
+        "observed_appearance": "黒い直毛、眉付近にかかる束状の前髪、卵形の輪郭と締まった顎、切れ長の目、まっすぐな鼻、厚みのある唇、ひげなし。公式写真をview_imageで確認し、修正時に容姿参照として使用。",
+        "usage": "公式資料は所属・容姿の確認専用。写真の貼付けや写真風表現、公式ユニフォームの文字・背番号・ロゴの転載は行わない。ドリブル姿のイラストはイメージであり実際の試合場面・出場・成績を示さない。画像内に選手名・個人成績は入れない。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: ads-marketing / editorial sports illustration.\nCreate ONE finished Japanese basketball news thumbnail, PNG, wide 16:9 at 1536x864 or higher. This is a brand new illustration for バスケまとめ, job 0a5c2c0f2505974f6de8.\n\nStyle: Approved in-context B-culver-black-lime-v3.png is STYLE ONLY: very dark charcoal green #151A18 background, electric lime #CCF43B energetic dry-brush strokes, off-white oversized heavy Japanese sans typography, crisp expressive ink/brush drawn sports illustration, few elements. Do not reuse any previous player's face, player name, 38, scores, dates, or content. Completely nonphotographic. Strong graphic hierarchy with sophisticated ink texture.\n\nSubject: exactly ONE REAL basketball player, Toshiki Tomiyama (富山仁貴), chosen randomly from Saga Ballooners current official roster, NOT an invented or anonymous athlete. Official appearance reference was visually inspected at https://ballooners.jp/team/players/detail/id=47825?PlayerID=51000440 and image https://ballooners.bl.kuroco-img.app/v=1788969725/files/user/cheer/%E3%81%A8%E3%82%80.jpg . Appearance seen: young Japanese adult man, tall broad-shouldered athletic build, clean-shaven, smooth light-medium skin; straight black short-to-medium hair with a dense textured top and separated slightly wet-looking fringe strands reaching to eyebrows; oval face and tapered jaw with firm chin, straight dark brows, narrow almond dark eyes, straight nose, softly full closed lips. Preserve these distinctive facial features in an explicitly hand-drawn black-and-ivory ink portrait. Face large, well lit, clearly visible at three-quarter front angle, not hidden by shadows. Do not depict the short curly hair/beard of the style reference athlete. Do not paste any photo. No photo texture.\nPose: explosive low driving dribble, torso leaning diagonally forward, one knee deeply bent, other leg stepping, orange basketball controlled by one naturally articulated hand near hip/knee, other arm naturally bent balancing. Energetic dynamic sports magazine illustration. Face readable. All hands, fingertips, ball and head entirely inside canvas; anatomically credible joints, exactly two arms and two legs. Single athlete only, no background crowd figures. Plain off-white and charcoal basketball jersey and shorts, NO numbers, player name, lettering, team/league logos, sponsor marks, or shoe logos.\nThis is a symbolic basketball-play illustration, not a reconstruction of a real game or a scoring moment, and not evidence of Tomiyama's participation, performance or ranking.\n\nComposition: Athlete fills the LEFT 45% and lower left, diagonal lime brush sweep behind him; RIGHT 55% holds the dominant title, clean separate negative space. Avoid the reference composition of a jump shooter on the right. Keep safe margins 5%. Ball is a prop controlled by the player, never the primary subject. No hoop or scoreboard needed. Bottom 20% has a quiet solid dark full-width text area for qualifier and disclosure; no overlap with figure or brush strokes.\n\nExact visible text, no additional text:\nsmall top right: 「バスケまとめ」\nvery large right center, line 1: 「10/31」\nvery large right center, line 2: 「試合結果」\nright lower small but clear: 「18:38時点」\nbottom full width qualifier, clear high contrast: 「当日EFF：全試合の公式記録確定待ち」\nbottom footer, clearly readable: 「イラスト（AI生成）｜イメージ」\nJapanese text must be spelled exactly and unclipped. Title can be ivory with 10/31 in lime. Qualifier must remain legible even at thumbnail scale.\n\nEditorial grounding: fixed source.html and source.txt only. Article date 2026-10-31, some completed results and other games still officially unconfirmed at 18:38 JST; EFF TOP3 for all leagues is pending confirmation of all official game records. Do not depict scores, winners, TOP3 podiums, player stats, player names, or imply that all games have finished. External pages are only for athlete appearance/roster selection. No logos, watermarks, photo montage, photorealism, extra lettering, or fictional players.",
+      "revision": "Edit the FIRST input image, the generated basketball thumbnail. SECOND image is an official appearance reference of the real player Toshiki Tomiyama (富山仁貴) ONLY. Redraw him as an ink illustration; never paste the official photograph or copy any logo/jersey text.\nMake this single corrective pass and deliver ONE finished 16:9 PNG, at least 1536 pixels wide.\n\nPreserve: charcoal #151A18, lime #CCF43B, strong brush/ink style, left player driving dribble, title on right, text meanings and exact numbers.\nCorrections:\n1. Reframe the player by reducing his size and moving him toward the center. Entire head including hair, both complete hands with fingertips, and the full ball MUST be comfortably INSIDE the canvas and ABOVE the footer panel. At least 65px empty outer margin around head/ball/hands at 1536px width. No part of the hands may be concealed by the footer. Cropping the body below mid-thigh is acceptable, but do not clip head/ball/fingers. The leftmost orange ball and leftmost fingers must be at least 65px from the left edge, NOT touching it. Hair must be at least 55px below the top edge. Render natural, anatomically sound hands.\n2. Match the player's recognizable facial traits to SECOND reference: straight dark black hair, modest flat crown (not a spiky high volume anime haircut), straight separated fringe reaching eyebrows; calm narrower almond eyes, oval face with straight nose and firm tapered jaw, softly full lips, no beard. Natural proportions, hand drawn sports editorial ink portrait, NOT a generic anime hero. Keep face visible and sufficiently large to see details.\n3. Give title comfortable right margin (60px), scale it down slightly if needed. Brand should be small. White and lime text crisp and exactly correct.\n4. Bottom full-width plain charcoal panel takes about 21% height and is fully separate from the player. Keep EFF qualifier LARGE and readable, but leave a second full line for disclosure. Disclosure must be at least 28px high at 1536px width, centered and easy to read, with at least 25px bottom padding. Do not put it tiny in a corner.\n\nExact text only:\nバスケまとめ\n10/31\n試合結果\n18:38時点\n当日EFF：全試合の公式記録確定待ち\nイラスト（AI生成）｜イメージ\n\nNo names/numbers/logos on clothing. No player name in typography. No results scores, claims of player appearance/performance, real-game reconstruction, trophies, extra figures, or photo texture. Tomiyama is randomly selected as an illustrative subject, with no claim about his participation or performance. All text remains grounded in fixed article dated 2026-10-31: results at 18:38 and all daily EFF rankings pending all official records."
+    },
+    "generator": {
+      "name": "image_gen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "revisions": 1,
+      "final_original_path": "/Users/genjo/.codex/generated_images/01a19160-5cf4-7cb2-9023-889232f8605c/exec-d26fd2ed-5c10-46f1-b690-279db585cc23.png",
+      "saved_file": "generated.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "ab09a51f8e789e2667f8e0f94d527f75ed245118cbd35c1005aacaf125ca4b9c",
+      "visual_qa_notes": {
+        "text_and_numbers": "最終生成画像を実際に表示して目視。10/31、試合結果、18:38時点、EFF留保、AI表記を確認。個人名・個人成績・試合スコアなし。",
+        "source_qualifiers": "『当日EFF：全試合の公式記録確定待ち』『18:38時点』が固定本文と一致。全試合終了やランキング確定を主張しない。",
+        "likeness_or_no_named_person": "公式写真と最終画像を比較し、直毛の前髪、輪郭、目鼻、口元、ひげなしを確認。実在の富山仁貴を主役にしたイラスト。架空人物は追加していない。",
+        "layout": "初稿の頭・ボール・指先の見切れは1回の修正で解消。最終画像の頭、両手と指先、ボールは画面内。主見出し・注記に見切れなし。人体と手の形を確認。約16:9、1672×941。",
+        "ai_label": "右下に『イラスト（AI生成）｜イメージ』を目視確認。表記は小さいが原寸で判読でき、見切れなし。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T09:56:15.968895+00:00",
+  "publication_approved": false
+}

@@ -1,0 +1,89 @@
+{
+  "id": "3370472f9c78336a4974",
+  "article_path": "article-games-20261031.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261031.html",
+  "source_commit": "",
+  "source_blob_sha": "0bb3401e8a135d237298b6a23a82fb9acfeccf1b",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "4a7432d76895acbeaf561ac06bb48b05a3cc4c70252525477dcb6b19dd35d14e",
+  "last_observed_blob_sha": "0bb3401e8a135d237298b6a23a82fb9acfeccf1b",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3370472f9c78336a4974/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3370472f9c78336a4974/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T09:49:27.090948+00:00",
+  "creation_event_id": "f11999e86e017d28c71d",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/3370472f9c78336a4974/thumbnail.png",
+  "image_sha256": "ec60bee1af60bd86ab22ca0c4f0bd5fb384285d1b5bdf59b1233df1191c35617",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "0bb3401e8a135d237298b6a23a82fb9acfeccf1b",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.31",
+      "試合結果",
+      "当日のEFF",
+      "全試合の公式記録",
+      "確定待ち",
+      "18:38 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3370472f9c78336a4974/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261031.html",
+        "blob_sha_verified": "0bb3401e8a135d237298b6a23a82fb9acfeccf1b"
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3370472f9c78336a4974/source.txt",
+        "facts_used": "試合日2026.10.31。試合状態は18:38 JST時点。終了済み試合と公式記録未確定の試合が混在。B.PREMIER・B.ONE・B.NEXTの当日EFFは全試合の公式記録確定待ち。選手名の掲載なし。"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "visually_inspected": true
+      },
+      {
+        "role": "selection_and_appearance_only",
+        "url": "https://www.koshigaya-alphas.com/team/players/",
+        "note": "本文登場チームの現役選手を選ぶために使用。記事本文の成績・出場・試合内容の根拠には使用しない。"
+      },
+      {
+        "role": "appearance_only",
+        "url": "https://www.koshigaya-alphas.com/team/players/detail/id=47602?PlayerID=30401",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026102715/files/user/roster/745/2026-27/30401_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3370472f9c78336a4974/references/oba-official.jpg",
+        "visually_inspected": true
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "大庭 岳輝",
+        "romanized_name": "Takeru Oba",
+        "team": "越谷アルファーズ",
+        "selection": "ランダム",
+        "selection_reason": "本文に選手名がなく、特定の選手が主役ではないため。本文登場の44チームから越谷、公式選手一覧14名から大庭岳輝を選択。",
+        "random_method": "Python random.Random('3370472f9c78336a4974').choice(本文順の44チーム) → 越谷。random.Random('3370472f9c78336a4974:player').randrange(14) → 7（0始まり、公式一覧順の大庭岳輝）。",
+        "official_profile": "https://www.koshigaya-alphas.com/team/players/detail/id=47602?PlayerID=30401",
+        "official_portrait": "https://bleague.bl.kuroco-img.app/v=2026102715/files/user/roster/745/2026-27/30401_01.jpg",
+        "observed_features": "短い黒髪と短い不揃いの前髪、横幅のある卵形の輪郭、自然な細めの目、直線的な眉、輪郭のある口元、ひげなし。公式写真を目視し、初稿の顔・髪型を1回修正して再検品。",
+        "depiction": "実在選手をモデルにしたドリブル姿の手描きインク風イラスト。実際の試合場面・当日の出場・成績を示すものではない。",
+        "image_restrictions_checked": "選手名・背番号・チーム名・成績・順位の文字なし。チーム／リーグロゴ・スポンサー文字・公式写真の貼付けなし。イラスト（AI生成）とイメージの表示あり。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT\nUse case: ads-marketing.\nCreate exactly ONE finished editorial basketball article thumbnail, landscape 16:9, 1536x864 or larger. All text must be correct Japanese and fully visible.\nUse the approved black-and-lime thumbnail already viewed in this conversation as STYLE reference only: dark charcoal #151A18 background, lime #CCF43B bold brush accents, warm ivory heavy Japanese headline, expressive hand-drawn ink strokes and restrained halftone texture. Do not copy its player, name, scores, date or layout verbatim.\n\nContent source: the fixed article is \"10/31 試合結果・当日のEFF\", match date 2026-10-31. Some matches have ended, others have official records unconfirmed as of 18:38 JST. All three leagues' daily EFF rankings await all official game records. Do NOT imply EFF rankings are already published. Do not invent scores or achievements.\n\nSubject: exactly one REAL basketball player, Takeru Oba (大庭岳輝), selected randomly from the Koshigaya Alphas official roster; he is the person in the official portrait viewed in this conversation. Depict his recognizable likeness as an ink illustration, never as a photograph. Appearance observed from official reference: young Japanese man with short, dense, straight black hair and slightly uneven short fringe, broad oval face narrowing to a softly squared chin, straight dark eyebrows, narrow almond-shaped dark eyes, straight nose, defined closed lips, clean-shaven, no glasses. Athletic compact muscular shoulders and arms. Preserve his individual facial proportions. Use the portrait ONLY to understand his face; do not paste any photo pixels or copy its standing pose. Plain ivory sleeveless uniform with dark trim and shorts, with NO logo, NO sponsor, NO lettering, NO jersey number.\n\nComposition: text dominates the left 58%; a single large dynamic three-quarter view of Oba driving forward in a low dribble pose fills the right 42%. Face clearly visible looking ahead, torso tilted, one knee bent. One orange basketball beneath his right hand at hip-to-thigh height, anatomically clear hands and fingers. Dynamic sweeping lime brush marks follow his movement. Use a fresh low diagonal motion composition, not the reference's overhead shooting pose. All head, hands and basketball remain comfortably within canvas; legs may crop at lower frame. Background abstract only: no crowds, other people, logos, arena signs or scoreboard.\nThis is a conceptual imagined basketball movement, not a recreation or evidence of an actual match, appearance or performance.\n\nTypography exact lines, no additional text:\ntop-left small brand: \"バスケまとめ\"\ndate tag: \"2026.10.31\"\nhuge primary headline: \"試合結果\"\nsecondary headline: \"当日のEFF\"\nprominent readable two-line qualifier immediately below secondary headline: \"全試合の公式記録\" then \"確定待ち\"\nsmall source-time line: \"18:38 JST時点\"\nbottom-left footer: \"イラスト（AI生成）\"\nnext to footer: \"イメージ\"\n\nText must have strong size hierarchy, generous margins, easy mobile readability, accurately formed kanji. Make the qualifier visibly tied to EFF, while the main title simply says match results. The face must remain a visibly illustrated likeness. Do not display the player's name, team name, statistics, rank, final scores, claimed performance, a league logo or any official photo. Output one clean complete PNG thumbnail, not a mockup or multiple variants.\n\nSINGLE REVISION PROMPT\nEdit image 1 (the generated basketball thumbnail), using image 2 (official portrait of Takeru Oba / 大庭岳輝) ONLY as a facial-likeness reference.\nMake one localized correction: redraw the illustrated player's head and face to faithfully match the real person in image 2, and fit the full hair silhouette inside the top edge with about 25 pixels of dark background margin. Preserve the current body pose, ball, hands, composition, colors, clothing, brush treatment and EVERY Japanese text character exactly. Do not alter or add any words.\nLikeness: the official photo shows compact SHORT straight black hair with a restrained short uneven fringe, not long wet spikes. Match his wider oval cheek area, natural narrower almond eyes and restrained brow angle, subtly rounded nose, small defined lips, soft squared chin, clean-shaven face and individual facial proportions. His face should look like the same real adult Japanese basketball player in the reference, interpreted with the existing hand-drawn ink and brush illustration technique. Avoid a generic angular anime hero face, exaggerated eyes, long fringe, exaggerated muscles in the face, or photorealism. Let the head's expression remain focused for dribbling.\nDo NOT copy the portrait's jersey, logos, sponsors, number or photo pixels. Keep the existing plain ivory uniform and existing image text. The scene remains an imagined basketball movement, not an actual match recreation. Only one final landscape PNG.",
+    "generator": "Built-in image_gen.imagegen; one initial generation and one permitted revision; no API or CLI fallback",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T09:52:53.823032+00:00",
+  "publication_approved": false
+}
