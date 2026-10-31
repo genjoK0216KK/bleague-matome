@@ -8976,10 +8976,10 @@
       "competition": "B1",
       "starts_at": "2026-10-31T08:35:00+00:00",
       "ended": true,
-      "fixed": false,
+      "fixed": true,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507303",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-      "status": "unconfirmed",
+      "status": "final",
       "home": "横浜EX",
       "home_full": "横浜エクセレンス",
       "home_id": "714",
@@ -9955,8 +9955,7 @@
           "TS": 0,
           "USG": 8.112788309904976
         }
-      ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/507303/125.json"
+      ]
     },
     {
       "game_id": "507926",
@@ -20097,7 +20096,7 @@
           "AST_TO": 0.75,
           "EFG": 0.16666666666666666,
           "TS": 0.29069767441860467,
-          "USG": 17.10135671287174
+          "USG": 16.9118469975252
         },
         {
           "Code": 546,
@@ -20139,7 +20138,7 @@
           "AST_TO": 3,
           "EFG": 0.25,
           "TS": 0.3658536585365854,
-          "USG": 20.50577493886716
+          "USG": 20.278538957718368
         },
         {
           "Code": 546,
@@ -20181,7 +20180,7 @@
           "AST_TO": 1.5,
           "EFG": 0.6363636363636364,
           "TS": 0.6964809384164222,
-          "USG": 23.47201767304834
+          "USG": 23.211911094224664
         },
         {
           "Code": 546,
@@ -20202,28 +20201,28 @@
           "PT3M": 0,
           "PT3A": 3,
           "PT2M": 4,
-          "PT2A": 10,
+          "PT2A": 11,
           "FTM": 1,
           "FTA": 2,
           "FOUL": 1,
           "FOULON": 3,
-          "RB_OFF": 4,
+          "RB_OFF": 5,
           "RB_DEF": 4,
-          "RB_TOT": 8,
+          "RB_TOT": 9,
           "TO": 2,
           "AS": 5,
           "ST": 1,
           "BS": 0,
-          "BSON": 0,
+          "BSON": 1,
           "PTFB": 1,
           "PT2IN": 4,
           "PT2ND": 0,
-          "EFF": 13,
+          "EFF": 12,
           "PLUSMINUS": -9,
           "AST_TO": 2.5,
-          "EFG": 0.3076923076923077,
-          "TS": 0.324207492795389,
-          "USG": 21.215750690881308
+          "EFG": 0.2857142857142857,
+          "TS": 0.3024193548387097,
+          "USG": 22.30184650833413
         },
         {
           "Code": 546,
@@ -20265,7 +20264,7 @@
           "AST_TO": 0,
           "EFG": 0,
           "TS": 0,
-          "USG": 22.0440734508531
+          "USG": 21.799790722009426
         },
         {
           "Code": 546,
@@ -20349,7 +20348,7 @@
           "AST_TO": 0,
           "EFG": 0.75,
           "TS": 0.75,
-          "USG": 5.1868408119654505
+          "USG": 5.129362522825763
         },
         {
           "Code": 546,
@@ -20433,7 +20432,7 @@
           "AST_TO": 0,
           "EFG": 1.5,
           "TS": 1.5,
-          "USG": 7.933265371693316
+          "USG": 7.845352413230402
         },
         {
           "Code": 546,
@@ -20475,7 +20474,7 @@
           "AST_TO": 0,
           "EFG": 0,
           "TS": 0.1288659793814433,
-          "USG": 21.91011614307134
+          "USG": 21.667317870209285
         },
         {
           "Code": 546,
@@ -20517,7 +20516,7 @@
           "AST_TO": 0,
           "EFG": 0.4166666666666667,
           "TS": 0.4658385093167702,
-          "USG": 23.573686714122747
+          "USG": 23.312453483691424
         },
         {
           "Code": 546,
@@ -20559,7 +20558,7 @@
           "AST_TO": 0.5,
           "EFG": 0.25,
           "TS": 0.3105590062111801,
-          "USG": 24.778903516866592
+          "USG": 24.504314603780745
         },
         {
           "Code": 546,
@@ -20716,13 +20715,13 @@
           "RB_TOT": 2,
           "TO": 0,
           "AS": 0,
-          "ST": 0,
+          "ST": 1,
           "BS": 0,
           "BSON": 0,
           "PTFB": 0,
           "PT2IN": 0,
           "PT2ND": 0,
-          "EFF": 5,
+          "EFF": 6,
           "PLUSMINUS": 8,
           "AST_TO": 0,
           "EFG": 0.6666666666666666,
@@ -20968,8 +20967,8 @@
           "RB_TOT": 4,
           "TO": 2,
           "AS": 0,
-          "ST": 2,
-          "BS": 0,
+          "ST": 1,
+          "BS": 1,
           "BSON": 0,
           "PTFB": 0,
           "PT2IN": 2,
@@ -20982,7 +20981,7 @@
           "USG": 16.907136341662074
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506527/107.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506527/113.json"
     },
     {
       "game_id": "506531",
@@ -20997,11 +20996,11 @@
       "home": "琉球",
       "home_full": "琉球ゴールデンキングス",
       "home_id": "701",
-      "home_score": 75,
+      "home_score": 84,
       "away": "三遠",
       "away_full": "三遠ネオフェニックス",
       "away_id": "697",
-      "away_score": 73,
+      "away_score": 80,
       "players": [
         {
           "Code": 546,
@@ -21016,34 +21015,34 @@
           "PlayerNameJ": "大浦 颯太",
           "PlayerNameE": "Sota Oura",
           "StartingFlg": 1,
-          "PlayTime": "24:23",
+          "PlayTime": "26:51",
           "PlayingFlg": true,
           "Point": 20,
           "PT3M": 4,
           "PT3A": 8,
           "PT2M": 1,
-          "PT2A": 4,
+          "PT2A": 5,
           "FTM": 6,
           "FTA": 8,
           "FOUL": 1,
           "FOULON": 6,
           "RB_OFF": 0,
-          "RB_DEF": 2,
-          "RB_TOT": 2,
+          "RB_DEF": 3,
+          "RB_TOT": 3,
           "TO": 2,
-          "AS": 2,
+          "AS": 3,
           "ST": 2,
           "BS": 0,
-          "BSON": 0,
+          "BSON": 1,
           "PTFB": 1,
           "PT2IN": 0,
           "PT2ND": 2,
           "EFF": 20,
-          "PLUSMINUS": 8,
-          "AST_TO": 1,
-          "EFG": 0.5833333333333334,
-          "TS": 0.6443298969072165,
-          "USG": 33.92474663146041
+          "PLUSMINUS": 10,
+          "AST_TO": 1.5,
+          "EFG": 0.5384615384615384,
+          "TS": 0.6053268765133172,
+          "USG": 32.14858353961434
         },
         {
           "Code": 546,
@@ -21058,13 +21057,13 @@
           "PlayerNameJ": "佐土原 遼",
           "PlayerNameE": "Ryo Sadohara",
           "StartingFlg": null,
-          "PlayTime": "24:12",
-          "PlayingFlg": true,
-          "Point": 10,
+          "PlayTime": "26:39",
+          "PlayingFlg": false,
+          "Point": 12,
           "PT3M": 1,
           "PT3A": 2,
-          "PT2M": 2,
-          "PT2A": 4,
+          "PT2M": 3,
+          "PT2A": 5,
           "FTM": 3,
           "FTA": 4,
           "FOUL": 1,
@@ -21074,18 +21073,18 @@
           "RB_TOT": 2,
           "TO": 0,
           "AS": 1,
-          "ST": 0,
+          "ST": 1,
           "BS": 0,
           "BSON": 1,
           "PTFB": 0,
-          "PT2IN": 2,
+          "PT2IN": 3,
           "PT2ND": 1,
-          "EFF": 10,
-          "PLUSMINUS": 12,
+          "EFF": 13,
+          "PLUSMINUS": 14,
           "AST_TO": 0,
-          "EFG": 0.5833333333333334,
-          "TS": 0.6443298969072165,
-          "USG": 15.137816280913773
+          "EFG": 0.6428571428571429,
+          "TS": 0.684931506849315,
+          "USG": 15.315706599688896
         },
         {
           "Code": 546,
@@ -21100,8 +21099,8 @@
           "PlayerNameJ": "キーファー・ラベナ",
           "PlayerNameE": "Kiefer Ravena",
           "StartingFlg": null,
-          "PlayTime": "17:28",
-          "PlayingFlg": false,
+          "PlayTime": "17:29",
+          "PlayingFlg": true,
           "Point": 11,
           "PT3M": 3,
           "PT3A": 6,
@@ -21127,7 +21126,7 @@
           "AST_TO": 0,
           "EFG": 0.6875,
           "TS": 0.6875,
-          "USG": 21.617580757655336
+          "USG": 21.327859649292503
         },
         {
           "Code": 546,
@@ -21142,34 +21141,34 @@
           "PlayerNameJ": "デイビッド・ヌワバ",
           "PlayerNameE": "David Nwaba",
           "StartingFlg": 1,
-          "PlayTime": "32:48",
+          "PlayTime": "35:16",
           "PlayingFlg": true,
-          "Point": 13,
+          "Point": 18,
           "PT3M": 1,
           "PT3A": 3,
-          "PT2M": 3,
-          "PT2A": 8,
-          "FTM": 4,
-          "FTA": 8,
+          "PT2M": 5,
+          "PT2A": 10,
+          "FTM": 5,
+          "FTA": 9,
           "FOUL": 2,
-          "FOULON": 7,
+          "FOULON": 8,
           "RB_OFF": 0,
           "RB_DEF": 2,
           "RB_TOT": 2,
           "TO": 2,
           "AS": 4,
-          "ST": 0,
+          "ST": 1,
           "BS": 1,
           "BSON": 1,
-          "PTFB": 2,
-          "PT2IN": 3,
+          "PTFB": 3,
+          "PT2IN": 5,
           "PT2ND": 1,
-          "EFF": 11,
-          "PLUSMINUS": 10,
+          "EFF": 18,
+          "PLUSMINUS": 12,
           "AST_TO": 2,
-          "EFG": 0.4090909090909091,
-          "TS": 0.4476584022038568,
-          "USG": 23.77186934413514
+          "EFG": 0.5,
+          "TS": 0.5306603773584906,
+          "USG": 25.05017135375664
         },
         {
           "Code": 546,
@@ -21211,7 +21210,7 @@
           "AST_TO": 1,
           "EFG": 0.3333333333333333,
           "TS": 0.3333333333333333,
-          "USG": 13.875076331469664
+          "USG": 13.698264584892858
         },
         {
           "Code": 546,
@@ -21226,11 +21225,11 @@
           "PlayerNameJ": "ケビン・ジョーンズ",
           "PlayerNameE": "Kevin Jones",
           "StartingFlg": 1,
-          "PlayTime": "21:18",
+          "PlayTime": "23:46",
           "PlayingFlg": true,
           "Point": 7,
           "PT3M": 0,
-          "PT3A": 3,
+          "PT3A": 4,
           "PT2M": 3,
           "PT2A": 4,
           "FTM": 1,
@@ -21241,7 +21240,7 @@
           "RB_DEF": 3,
           "RB_TOT": 5,
           "TO": 0,
-          "AS": 0,
+          "AS": 1,
           "ST": 0,
           "BS": 0,
           "BSON": 0,
@@ -21249,11 +21248,11 @@
           "PT2IN": 1,
           "PT2ND": 1,
           "EFF": 9,
-          "PLUSMINUS": -6,
+          "PLUSMINUS": -4,
           "AST_TO": 0,
-          "EFG": 0.42857142857142855,
-          "TS": 0.4704301075268817,
-          "USG": 16.482327239021824
+          "EFG": 0.375,
+          "TS": 0.4146919431279621,
+          "USG": 16.542824850669266
         },
         {
           "Code": 546,
@@ -21337,7 +21336,7 @@
           "AST_TO": 0,
           "EFG": 0,
           "TS": 0,
-          "USG": 6.616595979562702
+          "USG": 6.532279910692786
         },
         {
           "Code": 546,
@@ -21352,20 +21351,20 @@
           "PlayerNameJ": "ジャック・クーリー",
           "PlayerNameE": "Jack Cooley",
           "StartingFlg": 1,
-          "PlayTime": "30:44",
+          "PlayTime": "33:12",
           "PlayingFlg": true,
-          "Point": 10,
+          "Point": 12,
           "PT3M": 0,
           "PT3A": 0,
           "PT2M": 5,
           "PT2A": 12,
-          "FTM": 0,
-          "FTA": 0,
+          "FTM": 2,
+          "FTA": 2,
           "FOUL": 3,
-          "FOULON": 3,
+          "FOULON": 4,
           "RB_OFF": 5,
-          "RB_DEF": 6,
-          "RB_TOT": 11,
+          "RB_DEF": 7,
+          "RB_TOT": 12,
           "TO": 2,
           "AS": 4,
           "ST": 1,
@@ -21374,12 +21373,12 @@
           "PTFB": 1,
           "PT2IN": 4,
           "PT2ND": 2,
-          "EFF": 17,
-          "PLUSMINUS": 10,
+          "EFF": 21,
+          "PLUSMINUS": 12,
           "AST_TO": 2,
           "EFG": 0.4166666666666667,
-          "TS": 0.4166666666666667,
-          "USG": 21.50034875788561
+          "TS": 0.4658385093167702,
+          "USG": 20.883358832606323
         },
         {
           "Code": 546,
@@ -21463,7 +21462,7 @@
           "AST_TO": 0,
           "EFG": 1,
           "TS": 1,
-          "USG": 9.73162570190001
+          "USG": 9.60761443909477
         },
         {
           "Code": 546,
@@ -21478,8 +21477,8 @@
           "PlayerNameJ": "ジェイク・ヴァン・タバーゲン",
           "PlayerNameE": "Jake Van Tubbergen",
           "StartingFlg": null,
-          "PlayTime": "27:44",
-          "PlayingFlg": true,
+          "PlayTime": "30:11",
+          "PlayingFlg": false,
           "Point": 15,
           "PT3M": 0,
           "PT3A": 1,
@@ -21501,11 +21500,11 @@
           "PT2IN": 7,
           "PT2ND": 3,
           "EFF": 19,
-          "PLUSMINUS": 0,
+          "PLUSMINUS": -2,
           "AST_TO": 0.5,
           "EFG": 0.5833333333333334,
           "TS": 0.6028938906752411,
-          "USG": 22.685429959137124
+          "USG": 20.13216455317557
         },
         {
           "Code": 546,
@@ -21520,34 +21519,34 @@
           "PlayerNameJ": "テレンス・デイビス",
           "PlayerNameE": "Terence Davis",
           "StartingFlg": 1,
-          "PlayTime": "30:36",
-          "PlayingFlg": true,
-          "Point": 18,
+          "PlayTime": "33:03",
+          "PlayingFlg": false,
+          "Point": 20,
           "PT3M": 3,
-          "PT3A": 12,
+          "PT3A": 14,
           "PT2M": 3,
           "PT2A": 4,
-          "FTM": 3,
-          "FTA": 4,
-          "FOUL": 3,
+          "FTM": 5,
+          "FTA": 6,
+          "FOUL": 4,
           "FOULON": 4,
-          "RB_OFF": 3,
+          "RB_OFF": 4,
           "RB_DEF": 7,
-          "RB_TOT": 10,
+          "RB_TOT": 11,
           "TO": 3,
-          "AS": 3,
+          "AS": 5,
           "ST": 2,
           "BS": 1,
           "BSON": 1,
           "PTFB": 4,
           "PT2IN": 3,
           "PT2ND": 1,
-          "EFF": 20,
-          "PLUSMINUS": 4,
-          "AST_TO": 1,
-          "EFG": 0.46875,
-          "TS": 0.5067567567567567,
-          "USG": 29.558869214041625
+          "EFF": 22,
+          "PLUSMINUS": 2,
+          "AST_TO": 1.6666666666666667,
+          "EFG": 0.4166666666666667,
+          "TS": 0.4844961240310077,
+          "USG": 30.100575911825104
         },
         {
           "Code": 546,
@@ -21673,7 +21672,7 @@
           "AST_TO": 0,
           "EFG": 0,
           "TS": 0,
-          "USG": 8.967979039546998
+          "USG": 8.663613763849728
         },
         {
           "Code": 546,
@@ -21688,7 +21687,7 @@
           "PlayerNameJ": "湧川 颯斗",
           "PlayerNameE": "Hayato Wakugawa",
           "StartingFlg": null,
-          "PlayTime": "12:36",
+          "PlayTime": "12:37",
           "PlayingFlg": true,
           "Point": 0,
           "PT3M": 0,
@@ -21711,11 +21710,11 @@
           "PT2IN": 0,
           "PT2ND": 0,
           "EFF": -1,
-          "PLUSMINUS": -6,
+          "PLUSMINUS": -4,
           "AST_TO": 1,
           "EFG": 0,
           "TS": 0,
-          "USG": 10.373674166777613
+          "USG": 10.012330165833768
         },
         {
           "Code": 546,
@@ -21757,7 +21756,7 @@
           "AST_TO": 0,
           "EFG": 0,
           "TS": 0,
-          "USG": 26.67516214314298
+          "USG": 25.76983073634955
         },
         {
           "Code": 546,
@@ -21772,21 +21771,21 @@
           "PlayerNameJ": "ヴィット・ブラウン",
           "PlayerNameE": "Vitto Brown",
           "StartingFlg": 1,
-          "PlayTime": "27:03",
+          "PlayTime": "29:32",
           "PlayingFlg": true,
-          "Point": 13,
-          "PT3M": 1,
-          "PT3A": 2,
+          "Point": 16,
+          "PT3M": 2,
+          "PT3A": 3,
           "PT2M": 3,
           "PT2A": 7,
           "FTM": 4,
           "FTA": 6,
           "FOUL": 4,
           "FOULON": 6,
-          "RB_OFF": 4,
-          "RB_DEF": 2,
-          "RB_TOT": 6,
-          "TO": 2,
+          "RB_OFF": 5,
+          "RB_DEF": 3,
+          "RB_TOT": 8,
+          "TO": 4,
           "AS": 2,
           "ST": 0,
           "BS": 0,
@@ -21794,12 +21793,12 @@
           "PTFB": 0,
           "PT2IN": 3,
           "PT2ND": 3,
-          "EFF": 14,
-          "PLUSMINUS": 2,
-          "AST_TO": 1,
-          "EFG": 0.5,
-          "TS": 0.5584192439862543,
-          "USG": 21.963180006148324
+          "EFF": 17,
+          "PLUSMINUS": 0,
+          "AST_TO": 0.5,
+          "EFG": 0.6,
+          "TS": 0.6329113924050632,
+          "USG": 23.720579351082975
         },
         {
           "Code": 546,
@@ -21814,16 +21813,16 @@
           "PlayerNameJ": "佐々木 隆成",
           "PlayerNameE": "Ryusei Sasaki",
           "StartingFlg": 1,
-          "PlayTime": "24:48",
-          "PlayingFlg": false,
+          "PlayTime": "27:16",
+          "PlayingFlg": true,
           "Point": 13,
           "PT3M": 3,
-          "PT3A": 7,
+          "PT3A": 8,
           "PT2M": 2,
           "PT2A": 3,
           "FTM": 0,
           "FTA": 0,
-          "FOUL": 1,
+          "FOUL": 2,
           "FOULON": 5,
           "RB_OFF": 1,
           "RB_DEF": 2,
@@ -21831,17 +21830,17 @@
           "TO": 4,
           "AS": 5,
           "ST": 1,
-          "BS": 0,
+          "BS": 1,
           "BSON": 0,
           "PTFB": 1,
           "PT2IN": 1,
           "PT2ND": 0,
-          "EFF": 17,
-          "PLUSMINUS": 4,
+          "EFF": 16,
+          "PLUSMINUS": 0,
           "AST_TO": 1.25,
-          "EFG": 0.65,
-          "TS": 0.65,
-          "USG": 24.59564681477918
+          "EFG": 0.5909090909090909,
+          "TS": 0.5909090909090909,
+          "USG": 23.153628251594355
         },
         {
           "Code": 546,
@@ -21856,8 +21855,8 @@
           "PlayerNameJ": "津屋 一球",
           "PlayerNameE": "Kazuma Tsuya",
           "StartingFlg": 1,
-          "PlayTime": "20:15",
-          "PlayingFlg": false,
+          "PlayTime": "20:16",
+          "PlayingFlg": true,
           "Point": 3,
           "PT3M": 1,
           "PT3A": 5,
@@ -21883,7 +21882,7 @@
           "AST_TO": 0,
           "EFG": 0.3,
           "TS": 0.3,
-          "USG": 10.753459029321276
+          "USG": 10.38251690578114
         },
         {
           "Code": 546,
@@ -21925,7 +21924,7 @@
           "AST_TO": 1,
           "EFG": 0,
           "TS": 0,
-          "USG": 31.495974578650866
+          "USG": 30.427029062195963
         },
         {
           "Code": 546,
@@ -21940,37 +21939,37 @@
           "PlayerNameJ": "ジョシュ・ハレルソン",
           "PlayerNameE": "Josh Harrellson",
           "StartingFlg": 1,
-          "PlayTime": "31:13",
+          "PlayTime": "33:41",
           "PlayingFlg": true,
-          "Point": 11,
+          "Point": 13,
           "PT3M": 3,
-          "PT3A": 5,
-          "PT2M": 1,
-          "PT2A": 5,
+          "PT3A": 6,
+          "PT2M": 2,
+          "PT2A": 6,
           "FTM": 0,
           "FTA": 0,
           "FOUL": 2,
           "FOULON": 0,
           "RB_OFF": 3,
-          "RB_DEF": 6,
-          "RB_TOT": 9,
+          "RB_DEF": 7,
+          "RB_TOT": 10,
           "TO": 0,
           "AS": 4,
           "ST": 0,
           "BS": 0,
           "BSON": 0,
           "PTFB": 0,
-          "PT2IN": 0,
-          "PT2ND": 0,
-          "EFF": 16,
-          "PLUSMINUS": -13,
+          "PT2IN": 1,
+          "PT2ND": 1,
+          "EFF": 18,
+          "PLUSMINUS": -15,
           "AST_TO": 0,
-          "EFG": 0.55,
-          "TS": 0.55,
-          "USG": 13.957105659519119
+          "EFG": 0.5416666666666666,
+          "TS": 0.5416666666666666,
+          "USG": 14.994468826849959
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506531/109.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506531/119.json"
     }
   ],
   "individual_candidates": [],
@@ -22005,7 +22004,376 @@
         "error": "全試合の公式記録確定待ち"
       },
       "B1": {
-        "error": "全試合の公式記録確定待ち"
+        "positions": {
+          "PG": [
+            {
+              "player_id": "33100",
+              "team_id": "1639",
+              "name": "レイナルド・ガルシア",
+              "team": "岡山",
+              "positions": [
+                "PG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507307",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=1639",
+              "game_id": "507307",
+              "formula_value": 31,
+              "pts": 17,
+              "reb": 6,
+              "ast": 3,
+              "eff": 31,
+              "rank": 1
+            },
+            {
+              "player_id": "51000280",
+              "team_id": "745",
+              "name": "アンソニー・クレモンズ",
+              "team": "越谷",
+              "positions": [
+                "PG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507297",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=745",
+              "game_id": "507297",
+              "formula_value": 29,
+              "pts": 31,
+              "reb": 2,
+              "ast": 0,
+              "eff": 28,
+              "rank": 2
+            },
+            {
+              "player_id": "33026",
+              "team_id": "711",
+              "name": "森田 雄次",
+              "team": "福島",
+              "positions": [
+                "PG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507295",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=711",
+              "game_id": "507295",
+              "formula_value": 24,
+              "pts": 18,
+              "reb": 3,
+              "ast": 5,
+              "eff": 24,
+              "rank": 3
+            }
+          ],
+          "SG": [
+            {
+              "player_id": "51000616",
+              "team_id": "717",
+              "name": "ネルソン・フィリップス",
+              "team": "FE名古屋",
+              "positions": [
+                "SG",
+                "SF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507295",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=717",
+              "game_id": "507295",
+              "formula_value": 22,
+              "pts": 20,
+              "reb": 4,
+              "ast": 5,
+              "eff": 22,
+              "rank": 1
+            },
+            {
+              "player_id": "43445",
+              "team_id": "714",
+              "name": "トレイ・ボイド",
+              "team": "横浜EX",
+              "positions": [
+                "SG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507303",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=714",
+              "game_id": "507303",
+              "formula_value": 22,
+              "pts": 29,
+              "reb": 2,
+              "ast": 6,
+              "eff": 21,
+              "rank": 2
+            },
+            {
+              "player_id": "51000140",
+              "team_id": "722",
+              "name": "今林 萌",
+              "team": "香川",
+              "positions": [
+                "PG",
+                "SG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507312",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=722",
+              "game_id": "507312",
+              "formula_value": 21,
+              "pts": 18,
+              "reb": 2,
+              "ast": 2,
+              "eff": 21,
+              "rank": 2
+            }
+          ],
+          "SF": [
+            {
+              "player_id": "33038",
+              "team_id": "744",
+              "name": "ジョーダン・ハミルトン",
+              "team": "埼玉",
+              "positions": [
+                "SF",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507301",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=744",
+              "game_id": "507301",
+              "formula_value": 31,
+              "pts": 27,
+              "reb": 5,
+              "ast": 4,
+              "eff": 31,
+              "rank": 1
+            },
+            {
+              "player_id": "36795",
+              "team_id": "2727",
+              "name": "タッカー・ヘイモンド",
+              "team": "立川",
+              "positions": [
+                "SF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507291",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2727",
+              "game_id": "507291",
+              "formula_value": 30,
+              "pts": 25,
+              "reb": 2,
+              "ast": 2,
+              "eff": 30,
+              "rank": 2
+            },
+            {
+              "player_id": "51000619",
+              "team_id": "722",
+              "name": "ジョーダン・スキッパーブラウン",
+              "team": "香川",
+              "positions": [
+                "SF",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507312",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=722",
+              "game_id": "507312",
+              "formula_value": 27,
+              "pts": 8,
+              "reb": 15,
+              "ast": 3,
+              "eff": 27,
+              "rank": 3
+            }
+          ],
+          "PF": [
+            {
+              "player_id": "33038",
+              "team_id": "744",
+              "name": "ジョーダン・ハミルトン",
+              "team": "埼玉",
+              "positions": [
+                "SF",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507301",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=744",
+              "game_id": "507301",
+              "formula_value": 31,
+              "pts": 27,
+              "reb": 5,
+              "ast": 4,
+              "eff": 31,
+              "rank": 1
+            },
+            {
+              "player_id": "42691",
+              "team_id": "695",
+              "name": "ジェレミー・コームズ",
+              "team": "新潟",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507303",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=695",
+              "game_id": "507303",
+              "formula_value": 31,
+              "pts": 25,
+              "reb": 7,
+              "ast": 2,
+              "eff": 31,
+              "rank": 1
+            },
+            {
+              "player_id": "51000537",
+              "team_id": "710",
+              "name": "ノア・ウォーターマン",
+              "team": "山形",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507309",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=710",
+              "game_id": "507309",
+              "formula_value": 31,
+              "pts": 21,
+              "reb": 15,
+              "ast": 2,
+              "eff": 31,
+              "rank": 1
+            }
+          ],
+          "C": [
+            {
+              "player_id": "42691",
+              "team_id": "695",
+              "name": "ジェレミー・コームズ",
+              "team": "新潟",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507303",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=695",
+              "game_id": "507303",
+              "formula_value": 31,
+              "pts": 25,
+              "reb": 7,
+              "ast": 2,
+              "eff": 31,
+              "rank": 1
+            },
+            {
+              "player_id": "51000537",
+              "team_id": "710",
+              "name": "ノア・ウォーターマン",
+              "team": "山形",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507309",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=710",
+              "game_id": "507309",
+              "formula_value": 31,
+              "pts": 21,
+              "reb": 15,
+              "ast": 2,
+              "eff": 31,
+              "rank": 1
+            },
+            {
+              "player_id": "18432",
+              "team_id": "724",
+              "name": "グレゴリー・エチェニケ",
+              "team": "熊本",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507297",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=724",
+              "game_id": "507297",
+              "formula_value": 26,
+              "pts": 17,
+              "reb": 7,
+              "ast": 1,
+              "eff": 26,
+              "rank": 3
+            }
+          ]
+        },
+        "eligible_players": 217,
+        "position_retrieved_at": "2026-10-30T11:22:41.074790+00:00",
+        "formula_differences": [
+          {
+            "player_id": "51000640",
+            "name": "アレックス・コトフ",
+            "eff": 24,
+            "formula_value": 25,
+            "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507291"
+          },
+          {
+            "player_id": "51000364",
+            "name": "野口 侑真",
+            "eff": 0,
+            "formula_value": 1,
+            "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507291"
+          },
+          {
+            "player_id": "51000280",
+            "name": "アンソニー・クレモンズ",
+            "eff": 28,
+            "formula_value": 29,
+            "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507297"
+          },
+          {
+            "player_id": "51000426",
+            "name": "ミッチェル・ライトフット",
+            "eff": 9,
+            "formula_value": 10,
+            "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507297"
+          },
+          {
+            "player_id": "51000286",
+            "name": "ジャスティン・マッツ",
+            "eff": 9,
+            "formula_value": 10,
+            "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507297"
+          },
+          {
+            "player_id": "43445",
+            "name": "トレイ・ボイド",
+            "eff": 21,
+            "formula_value": 22,
+            "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507303"
+          }
+        ],
+        "sources": [
+          "https://www.bleague.jp/club_detail/?TeamID=1363",
+          "https://www.bleague.jp/club_detail/?TeamID=1639",
+          "https://www.bleague.jp/club_detail/?TeamID=2727",
+          "https://www.bleague.jp/club_detail/?TeamID=2890",
+          "https://www.bleague.jp/club_detail/?TeamID=2891",
+          "https://www.bleague.jp/club_detail/?TeamID=695",
+          "https://www.bleague.jp/club_detail/?TeamID=708",
+          "https://www.bleague.jp/club_detail/?TeamID=709",
+          "https://www.bleague.jp/club_detail/?TeamID=710",
+          "https://www.bleague.jp/club_detail/?TeamID=711",
+          "https://www.bleague.jp/club_detail/?TeamID=714",
+          "https://www.bleague.jp/club_detail/?TeamID=715",
+          "https://www.bleague.jp/club_detail/?TeamID=717",
+          "https://www.bleague.jp/club_detail/?TeamID=719",
+          "https://www.bleague.jp/club_detail/?TeamID=722",
+          "https://www.bleague.jp/club_detail/?TeamID=723",
+          "https://www.bleague.jp/club_detail/?TeamID=724",
+          "https://www.bleague.jp/club_detail/?TeamID=744",
+          "https://www.bleague.jp/club_detail/?TeamID=745",
+          "https://www.bleague.jp/club_detail/?TeamID=749",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507291",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507293",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507295",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507297",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507301",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507303",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507305",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507307",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507309",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507312"
+        ]
       },
       "BN": {
         "positions": {
