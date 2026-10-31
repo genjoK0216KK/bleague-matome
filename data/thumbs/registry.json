@@ -196,6 +196,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "神奈川ダービー、川崎×横浜BCは米須と並里の司令塔対決"
   },
+  "article-daily-20261101.html": {
+   "article_path": "article-daily-20261101.html",
+   "editorial_fingerprint": "c1a7e76358084ca59045509c9406ab7a04ab9fcbd5a4958f5feece71714b4810",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261101-82b6a1c1b29c.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261101-82b6a1c1b29c-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "6b5193f033d3228b846d",
+   "image_sha256": "82b6a1c1b29c879a8081ce11d804ff435ee327f498ccd4123af5c28cd81daebe",
+   "imported_at": "2026-10-31T23:26:18.074345+00:00",
+   "prepared_at": "2026-10-31T23:25:52.659747+00:00",
+   "source_blob_sha": "d0eba21d0dab965cd86e3e843425ea4b2219b79b",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "c1a7e76358084ca59045509c9406ab7a04ab9fcbd5a4958f5feece71714b4810",
+   "style": "ink-lime-portrait-v5",
+   "title": "神奈川ダービー第1戦は横浜BCが75-65で勝利、第2戦は今夜19時05分から同会場"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -674,13 +702,6 @@
   }
  },
  "log": [
-  {
-   "article": "article-stats-20261026.html",
-   "at": "2026-10-30T10:34:16.042191+00:00",
-   "event": "imported",
-   "id": "db1b08157b4974a77014",
-   "image": "a19bc409a914"
-  },
   {
    "article": "article-daily-20261030.html",
    "at": "2026-10-30T10:41:45.136826+00:00",
@@ -1233,6 +1254,13 @@
    "event": "imported",
    "id": "c59cee10214af1d2a8c4",
    "image": "c450a86ac9ac"
+  },
+  {
+   "article": "article-daily-20261101.html",
+   "at": "2026-10-31T23:26:18.074370+00:00",
+   "event": "imported",
+   "id": "6b5193f033d3228b846d",
+   "image": "82b6a1c1b29c"
   }
  ],
  "seen": {
@@ -1258,6 +1286,7 @@
   "619af1e58cddd34c14bc": "imported",
   "64677ebbbdc4b4827d54": "superseded:13dc704824ed84d25fee",
   "68dfe1f0dced4d4c7777": "imported",
+  "6b5193f033d3228b846d": "imported",
   "6e14b01b2117b3d326c8": "superseded:4c4f1870a93c2d66f8f1",
   "7323c5f3c2556686df0c": "superseded:f4370ce664d0aaa5d148",
   "7da4157f57a12da3f879": "imported",
