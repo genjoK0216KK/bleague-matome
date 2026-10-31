@@ -1,0 +1,103 @@
+{
+  "id": "619af1e58cddd34c14bc",
+  "article_path": "article-daily-20261028.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261028.html",
+  "source_commit": "",
+  "source_blob_sha": "ef0c5a121809039655d21e2322e21024cc736288",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "8b9c95c95bde687be2764a5905053520ab62b404f73e1f2516c1e8d9aab1202f",
+  "last_observed_blob_sha": "ef0c5a121809039655d21e2322e21024cc736288",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/619af1e58cddd34c14bc/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/619af1e58cddd34c14bc/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:26:40.047012+00:00",
+  "creation_event_id": "0f5d9d8973d0c2eed1bb",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/619af1e58cddd34c14bc/thumbnail.png",
+  "image_sha256": "892d07b78d00c7a34fbb6db9005a4a6a9dabdd5a561a4b2486f2a9f3688adf43",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "ef0c5a121809039655d21e2322e21024cc736288",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.28",
+      "独自分析｜10/30 B.PREMIER",
+      "3試合の",
+      "勝率差を比較",
+      "10/28 04:11 JST取得データ・日程変更なしの前提",
+      "出場・勝敗の予測ではありません",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/619af1e58cddd34c14bc/source.html",
+        "role": "固定版本文の根拠。記事URL https://basuke-matome.jp/article-daily-20261028.html のライブ本文は参照せず。Git blob形式のSHA-1をgitコマンドを使わず計算し、指定値と一致。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/619af1e58cddd34c14bc/source.txt",
+        "role": "固定版本文の根拠。3試合の勝率差比較、取得時点2026-10-28 04:11 JST、日程変更なしの前提、出場・勝敗を予測しない留保を確認。"
+      },
+      {
+        "url": "https://northern-happinets.com/team/players/detail/id=18199?PlayerID=12642",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026102918/files/user/roster/693/2026-27/12642_01.jpg",
+        "role": "秋田ノーザンハピネッツ公式プロフィール。人物の容姿確認にのみ使用。公式写真を完成画像へ貼り付けず、外部の成績・日程・IL情報を本文の根拠にしない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "目視した承認済み黒×ライムのスタイル参照。選手名・数値は転用しない。"
+      },
+      {
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "role": "手順書の受け口側フォルダには白地作例がなかったため、Notion記載の元保存先の同名承認済み作例を目視。今回の採用配色は黒×ライム。"
+      }
+    ],
+    "person_reference": {
+      "name": "アンジェロ・チョル",
+      "selection": "ランダム",
+      "selection_reason": "記事は3試合の比較で特定の選手が主役ではない。本人10/31指示を優先し、本文で実名が出る2選手を最優先の候補とした。",
+      "candidate_pool": [
+        "アンジェロ・チョル",
+        "エヴァンス・ルーク"
+      ],
+      "random_method": "Python標準ライブラリsecrets.choiceで上記2名から1名を選択（生成前に実行）。",
+      "source": "秋田ノーザンハピネッツ公式プロフィール",
+      "url": "https://northern-happinets.com/team/players/detail/id=18199?PlayerID=12642",
+      "image_url": "https://bleague.bl.kuroco-img.app/v=2026102918/files/user/roster/693/2026-27/12642_01.jpg",
+      "visual_observations": "公式写真をview_imageで確認。後ろへまとめた編み髪と襟足の束、縦長の輪郭、高めの額、目鼻・口元、短い口ひげと顎ひげを参照し、完成イラストでも照合。",
+      "treatment": "無地ユニフォームでボールを持ちパスする一般的なプレー姿。実際の試合場面・出場・復帰・活躍を表すものではない。画像に本人の名前・成績・出場情報を載せず、イラスト（AI生成）とイメージを表記。"
+    },
+    "prompt": "INITIAL GENERATION PROMPT\nCreate ONE finished Japanese editorial basketball article thumbnail, approximately 16:9 landscape, 1792×1008 or similar, minimum width 1000 px, opaque PNG. This is a NEW original illustration, not a photograph collage.\n\nVISUAL DIRECTION: Match the approved black-and-lime basketball thumbnail viewed in this conversation: dark ink black #151A18 ground, vivid lime #CCF43B, off-white huge bold Japanese sans-serif headline, expressive hand-drawn ink contours and dry-brush strokes, restrained ink flecks, few strong elements. Orange basketball is a secondary prop. Strong typographic hierarchy and generous margins. Text on the left ~60%, exactly one real player on the right ~40%. Keep all text and both hands within frame. The lower caption area is clean solid black. No team logo, league logo, sponsor wordmark, brand logo, uniform letters, jersey number, watermark, arena signage, scoreboards, other people or faces. B.PREMIER appears only as ordinary text, never a logo.\n\nPERSON: The single real athlete is Angelo Chol / アンジェロ・チョル, selected randomly from the two players named in the supplied article. His official Akita Northern Happinets portrait was visually inspected at https://northern-happinets.com/team/players/detail/id=18199?PlayerID=12642 (official portrait https://bleague.bl.kuroco-img.app/v=2026102918/files/user/roster/693/2026-27/12642_01.jpg). Use this identity and the visible features described here: very tall strong athletic man, deep brown skin rendered with expressive dark and warm-grey ink shading, elongated oval/angular face, high broad forehead, moderately broad nose, focused deep-set eyes, full lips, short moustache and close short chin/goatee beard with light jaw stubble. Black braided/twisted hair drawn back in cornrow-like sections into a small tied low cluster of locks behind the nape; no high afro and no bald haircut. Preserve the recognizable facial proportions and hairstyle. Clearly handmade sports illustration, not photographic or photorealistic. Plain dark sleeveless basketball uniform with subtle pale piping, NO lettering or number. Draw a dynamic three-quarter torso view, turning to make a basketball pass, with the orange basketball held naturally in both hands at chest/waist level, face clearly visible and focused. Correct arm and finger anatomy; no duplicated fingers or limbs. This is a generic imagined basketball movement, not a reconstruction of an actual game or a claimed return from injury. Do not copy or paste any official photograph into the artwork.\n\nEXACT TEXT, render verbatim with flawless Japanese characters. Do not add any other text, player name, individual statistic, match result, participation claim or personal achievement.\nTop small but bold:\n「バスケまとめ」\n「2026.10.28」\nLeft kicker, medium size:\n「独自分析｜10/30 B.PREMIER」\nMain headline, very large, arranged in two lines:\n「3試合の」\n「勝率差を比較」\nUse off-white for 3試合の and vivid lime for 勝率差を比較; keep headline away from the player and ball.\n\nBottom in clean, comfortably legible white text, with these three lines and no quotation brackets:\n「10/28 04:11 JST取得データ・日程変更なしの前提」\n「出場・勝敗の予測ではありません」\n「イラスト（AI生成）｜イメージ」\nThese notes are essential and must not be tiny, clipped or obscured. Keep at least 4% canvas margins.\n\nEDITORIAL BASIS: Only the supplied fixed source.html and source.txt provide article facts: on 10/28 no games in three leagues; independent comparison of win-percentage gaps for three 10/30 B.PREMIER games using data acquired 2026-10-28 04:11 JST, schedule unchanged assumption, not a forecast of player participation or results. No individual main subject, so the randomly selected actual athlete is visual illustration only. Do not portray injury status, winning, a buzzer-beater, a comeback or a specific match. The image itself must contain neither his name nor his individual stats.\n\nONE CORRECTION PROMPT\nEdit the supplied basketball thumbnail. Make ONE targeted composition correction only: the orange basketball is cut by the right edge, and the player's hair nearly touches the top. Reframe the existing single illustrated Angelo Chol and his basketball together so that his entire hair, both hands and the WHOLE basketball fit comfortably inside the canvas. Reserve at least 50 px of clear margin between the basketball and the right edge and at least 35 px above his hair. Slightly reduce the athlete-and-ball group if necessary, and adjust his pass pose with the ball held a little closer to his torso. Both hands must be anatomically natural. Maintain the same recognizable face, braided pulled-back hair, short moustache and goatee, same hand-drawn ink style, identical black/lime palette and plain dark uniform with NO logos or letters or number. Do not turn this into a photograph. The headline and ALL existing text are correct: preserve every word and number, with identical spelling, including バスケまとめ, 2026.10.28, 独自分析｜10/30 B.PREMIER, 3試合の, 勝率差を比較, 10/28 04:11 JST取得データ・日程変更なしの前提, 出場・勝敗の予測ではありません, イラスト（AI生成）｜イメージ. Keep every text line readable and unobscured. No additional text, no player name, no other people, no score/statistic. Preserve 16:9 aspect, high resolution and the rest of the layout.",
+    "generator": {
+      "tool": "built-in image_gen.imagegen",
+      "mode": "内蔵画像生成のみ",
+      "initial_generations": 1,
+      "corrections": 1,
+      "correction_reason": "初稿の右端でボールが見切れたため、人物とボールを枠内へ収める構図修正を1回実施。",
+      "final_source_file": "/Users/genjo/.codex/generated_images/01a18f59-f811-7bf1-b56c-01790d279a2d/exec-4b4a2ca0-ca10-49a3-8e3a-1ecbbd561a20.png",
+      "output": {
+        "saved": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/619af1e58cddd34c14bc/generated.png",
+        "width": 1672,
+        "height": 941,
+        "sha256": "892d07b78d00c7a34fbb6db9005a4a6a9dabdd5a561a4b2486f2a9f3688adf43",
+        "source_blob_matches": true
+      },
+      "qa_observations": {
+        "text_and_numbers": "最終画像で全8行を目視。2026.10.28、10/30、3試合、10/28 04:11 JSTと固定本文の一致、勝率差比較の表現を確認。個人成績・得点・選手名なし。",
+        "source_qualifiers": "最終画像で取得時刻、日程変更なしの前提、出場・勝敗の予測ではない注記を確認。",
+        "likeness_or_no_named_person": "実在選手アンジェロ・チョル1人のイラスト。公式写真と編み髪・輪郭・目鼻・短い口ひげと顎ひげの特徴を照合。ランダム選出につき画像内の氏名表記なし。",
+        "layout": "最終画像1672×941、約16:9。人物の頭部・ボール全体・手が枠内。前面の手の5本指と反対側の自然な握りを目視。本文見出しと注記に見切れや人物との重なりなし。ロゴ・スポンサー文字なし。",
+        "ai_label": "最終画像下部のイラスト（AI生成）とイメージを目視。写真風ではないインク・ブラシ画。"
+      },
+      "status": "PNGとbriefのローカル保存のみ。ready・git操作・公開・外部送信は未実行。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T00:30:00.102774+00:00",
+  "publication_approved": false
+}

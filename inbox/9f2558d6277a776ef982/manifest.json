@@ -1,0 +1,97 @@
+{
+  "id": "9f2558d6277a776ef982",
+  "article_path": "article-daily-20261030.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261030.html",
+  "source_commit": "",
+  "source_blob_sha": "bd6fa1a2dd09d09e93b0987172b69270792d4c27",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "8753a488d0f9f8b99bd6b9b75a3d3b129bbae81027c5d234a30d4d5b1cde9498",
+  "last_observed_blob_sha": "bd6fa1a2dd09d09e93b0987172b69270792d4c27",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9f2558d6277a776ef982/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9f2558d6277a776ef982/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-10-31T00:26:40.370948+00:00",
+  "creation_event_id": "7d2a61d8b85492fa9790",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/9f2558d6277a776ef982/thumbnail.png",
+  "image_sha256": "80a418f266040a6e91df8d0201d9b6edad6d589797d66d9292c8ed41dbff62b7",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "bd6fa1a2dd09d09e93b0987172b69270792d4c27",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.30",
+      "10/29 第1戦",
+      "東京U",
+      "1点差勝利",
+      "東京U 69–68 静岡",
+      "第2戦 10/30 19:05予定",
+      "原稿時点：第2戦結果・出場選手は未確認",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9f2558d6277a776ef982/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261030.html",
+        "source_blob_sha": "bd6fa1a2dd09d09e93b0987172b69270792d4c27",
+        "note": "固定HTMLを読み、Gitコマンドを使わずblob SHAを算出して指定値との一致を確認。第1戦10/29の東京U69-68静岡、第2戦10/30 19:05、固定原稿時点の第2戦結果・出場選手未確認のみを掲載根拠に使用。"
+      },
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9f2558d6277a776ef982/source.txt",
+        "note": "本文根拠はこの固定TXTと固定HTMLのみ。関連記事・外部の試合結果や成績は使用していない。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://tubc.tokyo/team/players/detail/id=60151",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026103109/files/user/roster/2725/2026-27/12648_01.jpg",
+        "note": "東京ユナイテッド公式プロフィール写真を取得しview_imageで目視。容姿確認のみに使用。公式写真の貼付・ロゴ・スポンサー文字の転用なし。"
+      },
+      {
+        "type": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "view_imageで確認。黒とライム、太い文字、手描きインク・ブラシの絵柄を参照。人物名・成績・日付は転用しない。"
+      }
+    ],
+    "person_reference": {
+      "name": "ジョーダン・フェイゾン",
+      "selection_method": "ランダム",
+      "selection_pool": [
+        "ジョーダン・フェイゾン",
+        "トレダリアス・マカラム"
+      ],
+      "selection_process": "本文の主役はチームと試合結果であり、主役選手1人には絞れない。本文に名前がある2選手からPython標準ライブラリsecrets.choiceで1回抽選し、ジョーダン・フェイゾンを選出。",
+      "reference_source": "東京ユナイテッドバスケットボールクラブ公式プロフィール",
+      "reference_url": "https://tubc.tokyo/team/players/detail/id=60151",
+      "reference_image_url": "https://bleague.bl.kuroco-img.app/v=2026103109/files/user/roster/2725/2026-27/12648_01.jpg",
+      "observed_features": "非常に短い黒髪、丸く高い額、やや縦長の輪郭、太い眉、目鼻と唇、口ひげから頬・あごにつながる濃い黒いひげ、肩幅のある体格を公式写真と生成画像で確認。",
+      "portrayal": "実在選手1人のプレー姿を描いたイラスト。ボールを両手で保持する一般的なプレーのイメージで、実際の試合場面・決勝シュート・当該試合の出場を示すものではない。",
+      "image_text_policy": "選手名・背番号・個人成績・出場・活躍を画像に記載しない。イラスト（AI生成）とイメージを表示。",
+      "visual_check": "短髪、額、目鼻、濃いひげと輪郭を照合。公式写真の貼付なし、写真風ではない。人物1人、ロゴ・スポンサー文字なし、両手とボールを目視確認。"
+    },
+    "prompt": "Create exactly ONE finished Japanese basketball editorial thumbnail, landscape 16:9, ideally 1600x900 or larger, at least 1000 pixels wide, opaque PNG. Use case: illustration-story / sports editorial thumbnail for バスケまとめ.\nSTYLE: Match the previously viewed approved B-culver-black-lime-v3 style: deep charcoal #151A18, vivid lime #CCF43B, warm ivory type, bold expressive hand-ink and dry-brush hatching, a few broad diagonal lime brush swashes behind the figure. Crisp, editorial, powerful, sparse. Clearly a hand-drawn illustration, absolutely not photographic or photorealistic. Do not copy any text, scores or identity from that style example.\n\nSUBJECT: Exactly ONE REAL basketball player: Jordan Faison (ジョーダン・フェイゾン), illustrated using the official Tokyo United profile appearance observed in this conversation (https://tubc.tokyo/team/players/detail/id=60151; official portrait https://bleague.bl.kuroco-img.app/v=2026103109/files/user/roster/2725/2026-27/12648_01.jpg). He is a broad-shouldered muscular adult male with warm brown complexion, very close buzz-cut almost shaved black hair, a tall rounded forehead, a gently elongated oval face with broad jaw, straight thick eyebrows, medium slightly almond-shaped dark eyes, broad rounded nose, full lips, and a dense neat black beard running along both cheeks and jaw with a connected mustache and longer rounded chin. Preserve these distinguishing traits, especially shaved hair and full beard. Do not draw a generic invented athlete or the Culver player in the style reference. Render his actual face with confident ink hatching, not a pasted photo.\nShow an energetic generic basketball driving / gathering stance, torso leaning slightly forward, one orange basketball held securely at lower chest by two anatomically clear hands, face unobstructed in a three-quarter front view and eyes looking into play, upper body and most of thighs visible. Only this player, no other people. Plain sleeveless uniform in ivory and charcoal, absolutely no logos, team symbols, league emblems, sponsor lettering, name or jersey number. Do not imply a documented game-winning shot, scoring achievement or actual appearance in this particular game; this is a generic illustration of the randomly selected real player.\n\nCOMPOSITION: Left 59% is clear bold typography. Right 41% is the large player illustration. Keep face, hands and ball fully inside canvas; an intentional lower-thigh crop at bottom is okay. Diagonal brush strokes frame the player without obscuring text. Generous margins 4%, all text readable, no overlapping text and face. Large main headline white + lime, score high contrast, smaller schedule and precise qualifier below. Orange used only for basketball. No charts, no panels, no excessive decorative objects.\n\nRENDER ONLY THESE EXACT JAPANESE TEXT LINES, with accurate glyphs and punctuation, no extra text:\nTop small masthead: \"バスケまとめ\"\nBelow masthead small date: \"2026.10.30\"\nSmall context above headline: \"10/29 第1戦\"\nMain headline line 1 in big ivory: \"東京U\"\nMain headline line 2 in biggest bold lime: \"1点差勝利\"\nScore line in big ivory: \"東京U 69–68 静岡\"\nLower information line, medium: \"第2戦 10/30 19:05予定\"\nQualifier line, smaller but clearly legible: \"原稿時点：第2戦結果・出場選手は未確認\"\nBottom margin, clearly legible: \"イラスト（AI生成）\"\nNear the figure at the bottom, clear label: \"イメージ\"\n\nEDITORIAL BASIS: ONLY the supplied fixed source.html and source.txt. They report Tokyo United won the FIRST game on October 29 by 69-68; the October 30 second game is scheduled at 19:05 and its result and participating players were unconfirmed at manuscript time. Do not introduce newer scores or web data. The article focuses on teams, and Jordan Faison was RANDOMLY selected from the two player names mentioned in the manuscript. NEVER put his name, personal stats, participation, achievement, or EFF on the image. Do not imply that 69 or 68 is his personal score. The first-game date and team labels must make this unambiguous.\nNo team/league logos, sponsor marks, official-photo compositing, fake watermarks or signature. Keep both AI illustration and image labels exactly as requested.",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "revision_calls": 0,
+      "output_format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "output_sha256": "80a418f266040a6e91df8d0201d9b6edad6d589797d66d9292c8ed41dbff62b7",
+      "generated_source_path": "/Users/genjo/.codex/generated_images/01a18f5d-0459-7c30-90b0-f56c4fe8c009/exec-88763411-b739-4370-aaef-175df724908d.png",
+      "qa_method": "内蔵生成ツールが表示した実画像を目視し、固定本文、公式プロフィール写真、承認済みスタイルと比較。ファイル寸法・PNG形式・SHA-256も確認。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-10-31T00:32:15.058527+00:00",
+  "publication_approved": false
+}
