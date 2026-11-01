@@ -422,31 +422,31 @@
   },
   "article-games-20261101.html": {
    "article_path": "article-games-20261101.html",
-   "editorial_fingerprint": "22e7a7900e65a855647af19e6ace8b22fb51ae923efa1c5f76bd679307a96b5c",
+   "editorial_fingerprint": "4798796c9eadf361957534bce4dc8e4cb8cb6f751a8e5d9780a2808e68a25154",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-games-20261101-e13cabfe3185.jpg",
+     "path": "thumbs/auto/article-games-20261101-5527a3270512.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-games-20261101-e13cabfe3185-og.jpg",
+     "path": "thumbs/auto/article-games-20261101-5527a3270512-og.jpg",
      "width": 1200
     }
    },
-   "id": "49bbacec4ae3cfcad2fa",
-   "image_sha256": "e13cabfe31856e7c606e38bf2214d5ebae42db9b55bf80e619b2f97a3b0f9c33",
-   "imported_at": "2026-10-31T15:06:03.798497+00:00",
-   "prepared_at": "2026-10-31T15:05:40.716088+00:00",
-   "source_blob_sha": "2ebce4a136b28f932e513f72d72cecb8f035fa74",
+   "id": "899945a3915a435651cc",
+   "image_sha256": "5527a3270512c37dc4653135e8dbacc8b42b174d90034044685d83c11dec0363",
+   "imported_at": "2026-11-01T10:44:47.748816+00:00",
+   "prepared_at": "2026-11-01T10:40:45.067214+00:00",
+   "source_blob_sha": "8c18236ef1fa073b9a3333c794670a94935d056a",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "22e7a7900e65a855647af19e6ace8b22fb51ae923efa1c5f76bd679307a96b5c",
+   "stable_fingerprint": "4798796c9eadf361957534bce4dc8e4cb8cb6f751a8e5d9780a2808e68a25154",
    "style": "ink-lime-portrait-v5",
-   "title": "11/01 出場予定選手（登録選手）のベスト5"
+   "title": "11/01 試合結果・当日のEFF"
   },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
@@ -590,31 +590,31 @@
   },
   "article-results-one-next-20261101.html": {
    "article_path": "article-results-one-next-20261101.html",
-   "editorial_fingerprint": "2435ab805706e8f209156a9036738f992e8e7f46867581265f8e2dd35941330d",
+   "editorial_fingerprint": "4798796c9eadf361957534bce4dc8e4cb8cb6f751a8e5d9780a2808e68a25154",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-results-one-next-20261101-c450a86ac9ac.jpg",
+     "path": "thumbs/auto/article-results-one-next-20261101-7adb2ae2dec0.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-results-one-next-20261101-c450a86ac9ac-og.jpg",
+     "path": "thumbs/auto/article-results-one-next-20261101-7adb2ae2dec0-og.jpg",
      "width": 1200
     }
    },
-   "id": "c59cee10214af1d2a8c4",
-   "image_sha256": "c450a86ac9ac0cf8a63de21c6f6110c7ce87fcf7d055fafc8b9a6870ffd69510",
-   "imported_at": "2026-10-31T17:28:39.817791+00:00",
-   "prepared_at": "2026-10-31T17:28:13.736975+00:00",
-   "source_blob_sha": "a44243cc04038d6f2700d70420299b56c88c5ff5",
+   "id": "f662c904491c9e820ed0",
+   "image_sha256": "7adb2ae2dec09bea8ac3e2fff5a38dcc5ec7987a29b66228ea1a9fdc826ca8d0",
+   "imported_at": "2026-11-01T10:44:47.846611+00:00",
+   "prepared_at": "2026-11-01T10:44:16.832529+00:00",
+   "source_blob_sha": "6e7fa05d260804812bf00e8bd4a1dc9996d1273d",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "2435ab805706e8f209156a9036738f992e8e7f46867581265f8e2dd35941330d",
+   "stable_fingerprint": "4798796c9eadf361957534bce4dc8e4cb8cb6f751a8e5d9780a2808e68a25154",
    "style": "ink-lime-portrait-v5",
-   "title": "11/01 出場予定選手（登録選手）のベスト5"
+   "title": "11/01 試合結果・当日のEFF"
   },
   "article-stats-20261026.html": {
    "article_path": "article-stats-20261026.html",
@@ -702,34 +702,6 @@
   }
  },
  "log": [
-  {
-   "article": "article-games-20261030.html",
-   "at": "2026-10-30T11:33:06.193825+00:00",
-   "by": "c39e144583cffda92155",
-   "event": "superseded",
-   "id": "44da7637029692ee5a53"
-  },
-  {
-   "article": "article-games-20261030.html",
-   "at": "2026-10-30T11:33:06.373908+00:00",
-   "event": "imported",
-   "id": "c39e144583cffda92155",
-   "image": "b544d48b0312"
-  },
-  {
-   "article": "article-results-one-next-20261030.html",
-   "at": "2026-10-30T11:33:06.374045+00:00",
-   "by": "b86acc20b06b8f02084d",
-   "event": "superseded",
-   "id": "64677ebbbdc4b4827d54"
-  },
-  {
-   "article": "article-results-one-next-20261030.html",
-   "at": "2026-10-30T11:33:06.520149+00:00",
-   "event": "imported",
-   "id": "b86acc20b06b8f02084d",
-   "image": "263186a6a4b8"
-  },
   {
    "article": "article-games-20261029.html",
    "at": "2026-10-30T11:38:22.016563+00:00",
@@ -1261,6 +1233,34 @@
    "event": "imported",
    "id": "39075cc4edcf56d9d90d",
    "image": "908706973dd2"
+  },
+  {
+   "article": "article-games-20261101.html",
+   "at": "2026-11-01T10:44:47.621161+00:00",
+   "by": "899945a3915a435651cc",
+   "event": "superseded",
+   "id": "49bbacec4ae3cfcad2fa"
+  },
+  {
+   "article": "article-games-20261101.html",
+   "at": "2026-11-01T10:44:47.748848+00:00",
+   "event": "imported",
+   "id": "899945a3915a435651cc",
+   "image": "5527a3270512"
+  },
+  {
+   "article": "article-results-one-next-20261101.html",
+   "at": "2026-11-01T10:44:47.749061+00:00",
+   "by": "f662c904491c9e820ed0",
+   "event": "superseded",
+   "id": "c59cee10214af1d2a8c4"
+  },
+  {
+   "article": "article-results-one-next-20261101.html",
+   "at": "2026-11-01T10:44:47.846642+00:00",
+   "event": "imported",
+   "id": "f662c904491c9e820ed0",
+   "image": "7adb2ae2dec0"
   }
  ],
  "seen": {
@@ -1281,7 +1281,7 @@
   "44da7637029692ee5a53": "superseded:a718e72ebd289b318965",
   "45bb49c6e6574fb7d88a": "imported",
   "462d421c439cd54c6d5a": "superseded:0a5c2c0f2505974f6de8",
-  "49bbacec4ae3cfcad2fa": "imported",
+  "49bbacec4ae3cfcad2fa": "superseded:899945a3915a435651cc",
   "4c4f1870a93c2d66f8f1": "imported",
   "602157ba437d2c7416b9": "imported",
   "619af1e58cddd34c14bc": "imported",
@@ -1293,6 +1293,7 @@
   "7da4157f57a12da3f879": "imported",
   "81cdf284d66df1d61f20": "imported",
   "896bbeb35c2a1eb9d0e1": "imported",
+  "899945a3915a435651cc": "imported",
   "92907f5e3191ad3e0565": "superseded:98e19c39f90c0bb08e5b",
   "98e19c39f90c0bb08e5b": "imported",
   "9bbc15165c559181134d": "superseded:619af1e58cddd34c14bc",
@@ -1309,7 +1310,7 @@
   "b8f222115a0883a9f7f2": "superseded:227771a8a08cdddea2d2",
   "c1aaf417a1880194d3ac": "imported",
   "c39e144583cffda92155": "superseded:a718e72ebd289b318965",
-  "c59cee10214af1d2a8c4": "imported",
+  "c59cee10214af1d2a8c4": "superseded:f662c904491c9e820ed0",
   "c65ae6fd90ffcf57f53b": "superseded:2912f2bf307b5ed2a60d",
   "d4cd88fa21bd64b494f0": "superseded:a080784863e72da1cb08",
   "d4ee196cd5adf437fb60": "superseded:619af1e58cddd34c14bc",
@@ -1320,6 +1321,7 @@
   "ec1f89cf4982bf75312d": "superseded:896bbeb35c2a1eb9d0e1",
   "ed5eafb2c5a54d0b60af": "superseded:9f2558d6277a776ef982",
   "f4370ce664d0aaa5d148": "imported",
+  "f662c904491c9e820ed0": "imported",
   "fcf33c7c4f183753d4ec": "imported"
  },
  "version": 1
