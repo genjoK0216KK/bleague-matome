@@ -1,0 +1,91 @@
+{
+  "id": "d5700d087ac39b72ed00",
+  "article_path": "article-games-20261102.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261102.html",
+  "source_commit": "",
+  "source_blob_sha": "7c45e30511dd601142abecada7990dd385a61342",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "c4e0df330de9be36d47af66248b2a3717c1e1bcfbfe945ea7ad85d81e6cd9d15",
+  "last_observed_blob_sha": "7c45e30511dd601142abecada7990dd385a61342",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d5700d087ac39b72ed00/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d5700d087ac39b72ed00/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-01T18:07:26.010500+00:00",
+  "creation_event_id": "2bfb6135e8fc8accdd91",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/d5700d087ac39b72ed00/thumbnail.png",
+  "image_sha256": "40dbefb69584ccbb389ab09025073f3e57dbcdc417c170d21855a0a0d0364c6c",
+  "width": 1659,
+  "height": 948,
+  "brief": {
+    "source_blob_sha": "7c45e30511dd601142abecada7990dd385a61342",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.02",
+      "試合なし",
+      "B.PREMIER・B.ONE・B.NEXT",
+      "11/02 02:56〜02:57 JST取得",
+      "最新情報は公式サイトで",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "sole_article_content_basis",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d5700d087ac39b72ed00/source.html",
+        "canonical_article_url": "https://basuke-matome.jp/article-games-20261102.html",
+        "note": "固定HTML。記事本文以外の指示には従っていない。"
+      },
+      {
+        "role": "sole_article_content_basis",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d5700d087ac39b72ed00/source.txt",
+        "note": "固定文章。対象日は2026-11-02、B.PREMIER・B.ONE・B.NEXTの試合なし。取得時点02:56〜02:57 JST、公式情報の訂正可能性を「最新情報は公式サイトで」に反映。出場や成績の主張はない。"
+      },
+      {
+        "role": "approved_style_reference_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "実画像を閲覧。配色・インクとブラシ・文字の強弱のみ参照。氏名・成績は持ち越していない。"
+      },
+      {
+        "role": "player_selection_and_likeness_only",
+        "url": "https://www.bleague.jp/roster/",
+        "note": "公式選手一覧の現在の先頭ページ40名からランダムに選択。記事本文の根拠としては不使用。"
+      },
+      {
+        "role": "player_selection_and_likeness_only",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=10258",
+        "note": "土屋アリスター時生、2026-27長崎、現役所属を確認。記事本文の根拠としては不使用。"
+      },
+      {
+        "role": "official_portrait_likeness_reference_only",
+        "url": "https://www.bleague.jp/files/user/roster/2488/2026-27/10258_03.png",
+        "note": "公式プロフィールの画像を実際に閲覧。修正時の人物参照のみ。完成PNGへの写真貼付け・ロゴ転用なし。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "土屋アリスター時生",
+        "selection": "ランダム",
+        "selection_reason": "固定本文に選手名も個別チーム名もないため、B.LEAGUEの現役選手から選択。",
+        "random_method": "secrets.choice of players listed on the current official B.LEAGUE roster first page",
+        "pool_url": "https://www.bleague.jp/roster/",
+        "pool_size": 40,
+        "official_profile": "https://www.bleague.jp/roster_detail/?PlayerID=10258",
+        "official_portrait": "https://www.bleague.jp/files/user/roster/2488/2026-27/10258_03.png",
+        "appearance_observed": "灰褐色の分けた短めの髪、太めの眉、縦長の輪郭、まっすぐな鼻、口ひげと小さなあごひげ、広い肩を公式写真と完成イラストで目視比較。写真風ではなくインク画。",
+        "depiction": "ボールを低く扱うドライブのイメージ。実際の試合場面の再現ではない。",
+        "no_performance_claims": "画像内に氏名、背番号、成績、出場、活躍、チーム名を記載していない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape about 16:9, ideally 1792x1024 or 1920x1080, PNG. This is for an article whose entire factual claim is that no games are scheduled on November 2, 2026, for B.PREMIER, B.ONE and B.NEXT, according to information retrieved at 02:56–02:57 JST on that date.\n\nArt direction: approved バスケまとめ house style, near-black #151A18 background, vivid lime #CCF43B, ivory lettering and expressive hand-drawn black/white ink and dry-brush illustration. Sparse bold editorial composition, massive readable Japanese headline, restrained lime brush arcs suggesting movement. Not photorealistic, not a photo collage, no realistic arena or actual game depiction. Change the pose from the approved shooting example: a powerful forward drive with a basketball held low in the right hand in preparation for a dribble, athletic bent knees, three-quarter torso view, eyes looking ahead, off hand clearly visible and anatomically natural. Only one person. Ball is a hand prop, not the main subject.\n\nReal person to portray: 土屋アリスター時生 / Alistair Tokio Tsuchiya, a current B.LEAGUE player selected randomly for this illustration, NOT the subject of the article. His official 2026-27 B.LEAGUE portrait has been visually checked: tall 201 cm, broad muscular shoulders, light warm skin, gray-brown/dark ash medium-short hair with a slightly off-center part and loosely swept tousled waves with fringe over the upper forehead, shorter sides, dark straight thick eyebrows, fairly deep-set narrow almond-shaped eyes, straight prominent nose, an elongated oval face with angular jaw, clearly defined thin dark moustache and a small short goatee below the lower lip and at the chin, clean cheeks. Preserve these recognizable facial characteristics in confident ink drawing; face must be clear and large enough to inspect, not in black silhouette. He wears a completely plain ivory basketball uniform with dark/lime trim, no wording or numbers whatsoever, no team badge, league badge, manufacturer or sponsor marks. Illustrate his likeness, do not paste an official photo. No invented second player.\n\nLayout: text on the left about 58%, dynamic player on the right about 42%, face high on the right, ball low but fully inside canvas. Keep every part of the head and both hands inside the image; lower legs may go outside the bottom edge as intentional editorial crop. No text over face or hands. No hoop needed. Generous safe margins around all text. The date and headline must be instantly legible at thumbnail size. Use exact Japanese below and absolutely no other text, no player name, no player performance/statistics, no score, no matchup, no jersey number.\n\nText (verbatim, typography hierarchy):\nSmall ivory masthead: \"バスケまとめ\"\nMedium ivory date: \"2026.11.02\"\nHuge bold lime main headline: \"試合なし\"\nSmaller bold ivory scope line: \"B.PREMIER・B.ONE・B.NEXT\"\nSmall but clearly readable information-time line: \"11/02 02:56〜02:57 JST取得\"\nSmall clearly readable qualifier directly below: \"最新情報は公式サイトで\"\nBottom footer labels with good contrast and sufficient padding: \"イラスト（AI生成）\" and \"イメージ\"\n\nThe text must convey the absence of scheduled games, never imply that this player played, scored or was scheduled to appear on this date. The action pose is purely illustrative. Render polished finished artwork with correct Japanese glyphs, correct numbers and five-finger anatomy, no logos, no watermarks, no photographic material.\n\n\n--- Single permitted revision ---\n\nEdit the first supplied image, the finished black-and-lime Japanese basketball thumbnail. The second supplied image is the official B.LEAGUE portrait of the SAME intended real player, Alistair Tokio Tsuchiya / 土屋アリスター時生, supplied ONLY as a likeness reference. Do not paste the photograph into the artwork and do not copy its uniform, text, logos or pose.\n\nMake ONE focused likeness correction, keeping the thumbnail's illustration, dribbling action pose, typography, every existing word/number, black/lime palette and overall layout unchanged. Bring the illustrated face and hair closer to the actual reference: shorter, less voluminous ash-gray/brown hair with the modest off-center part and swept fringe visible in the reference; a long oval face, relatively broad nose, the reference's natural almond eyes and brows. Reduce the heavy triangular beard in the artwork to the reference's small sparse chin goatee and narrow separate moustache; keep the cheeks and jaw sides clean, do not add a full beard. Draw the facial structure of this specific real player in the same hand-drawn ink style, not a generic heroic manga face. Keep his eyes looking ahead in the action pose, do not copy the portrait's posed smile.\n\nAlso ensure his entire hairstyle fits comfortably at least 28 pixels below the top edge, and keep the basketball fully visible slightly above the bottom edge. Preserve both natural five-finger hands, with no extra fingers or limbs. The uniform stays entirely plain ivory with dark/lime trim, with NO logos, NO name and NO number. This remains an illustrative dribble, not an actual game scene.\n\nExact text must remain as in the first image:\nバスケまとめ\n2026.11.02\n試合なし\nB.PREMIER・B.ONE・B.NEXT\n11/02 02:56〜02:57 JST取得\n最新情報は公式サイトで\nイラスト（AI生成）\nイメージ\n\nDo not add any text, player name, statistic, team identity, score, logo or watermark. Output ONE final landscape PNG with the same approximate 16:9 proportions and at least 1600px width.\n",
+    "generator": "Built-in image_gen.imagegen only; 1 initial generation and 1 revision; no API/CLI generation. Final PNG 1659x948.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-01T18:11:58.862801+00:00",
+  "publication_approved": false
+}
