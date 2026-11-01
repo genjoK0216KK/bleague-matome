@@ -1,0 +1,83 @@
+{
+  "id": "39075cc4edcf56d9d90d",
+  "article_path": "article-daily-20261101.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261101.html",
+  "source_commit": "",
+  "source_blob_sha": "42617381fd686dd0d91c6a1db186d2f1a992d603",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "d8bf57eac9fc73b8cd1f2931c5c98842b44970dce6ad87e55d53b59956a2ea34",
+  "last_observed_blob_sha": "42617381fd686dd0d91c6a1db186d2f1a992d603",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/39075cc4edcf56d9d90d/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/39075cc4edcf56d9d90d/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-01T03:16:20.151346+00:00",
+  "creation_event_id": "fde6142265e04bd6e18c",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/39075cc4edcf56d9d90d/thumbnail.png",
+  "image_sha256": "908706973dd2675c562b78038ad963e21882aaaad420595a88c4cd8cb15679d8",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "42617381fd686dd0d91c6a1db186d2f1a992d603",
+    "text_lines": [
+      "バスケまとめ",
+      "神奈川",
+      "ダービー",
+      "川崎 × 横浜BC",
+      "第2戦 11/1 19:05",
+      "出場メンバー未確認",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/39075cc4edcf56d9d90d/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261101.html",
+        "used_for": "本文の主役、神奈川ダービー、対戦カード、第2戦11月1日19時05分、当日出場メンバー未確認。HTML blob SHAをgitコマンドなしで照合。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/39075cc4edcf56d9d90d/source.txt",
+        "used_for": "固定HTMLと本文・日時・留保を照合。本文の根拠はこの2ファイルのみ。",
+        "source_qualifiers": "原稿は第1戦の結果・個人スタッツを検索結果のタイトルとスニペットで確認し、公式記事本文は直接未確認としている。第2戦の出場メンバーと当日の最新ILも未確認。サムネには第1戦のスコア、個人成績、予測結果、出場確定表現を掲載しない。出場メンバー未確認を表示。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "used_for": "view_imageで実見。黒×ライム、太い日本語文字、インク・ブラシの描画スタイルのみ参照。既存選手・成績・日付は転用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジェームズ・ベル",
+        "selection": "本文の主役",
+        "selection_reason": "固定本文で出場時間とオンコート時スコアが具体的に取り上げられる唯一の選手。他の選手名は留保・関連記事中の言及のみ。",
+        "reference_source": "横浜ビー・コルセアーズ公式プロフィール",
+        "reference_url": "https://b-corsairs.com/team/players/detail/id=23241?PlayerID=51000172",
+        "reference_image_url": "https://b-corsairs.bl.kuroco-img.app/v=1791970457/files/user/team/2026-27/31_BELL.jpg",
+        "reference_viewed": true,
+        "observed_features": "短く刈った黒髪、縦長寄りの輪郭、幅のある鼻、暗色の目、口ひげから顎下につながる濃いフルビアード、厚みのある肩と体格。",
+        "depiction": "公式写真は容姿の参照だけに使用。実在本人のドリブル姿をインク画で描く。特定試合の再現ではなくイメージ。人物名・成績・背番号は画像に入れず、ロゴ・スポンサー文字を使わない。",
+        "visual_qa": "最終生成画像を公式顔写真と目視比較し、短髪、輪郭、鼻、目、濃い口ひげと顎ひげを確認。写真貼付けではなくイラスト。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION:\nUse case: illustration-story\nAsset type: one finished Japanese basketball editorial thumbnail, wide 16:9, 1536x864 or larger.\nCreate exactly ONE image for バスケまとめ. Hand-drawn editorial ink and dry-brush illustration; unmistakably drawn, never photographic. Background near-black #151A18, vivid lime #CCF43B, warm ivory lettering, one restrained orange basketball accent. Strong typography and a small number of elements, matching the approved black/lime brush-poster style visible earlier in this conversation. Do not copy any old player, score or date from that style reference.\n\nSubject: real professional basketball player JAMES BELL (ジェームズ・ベル), selected because he is the player discussed substantively in the supplied article. His official portrait has just been visually inspected: closely cropped black hair with a rounded close hairline, medium-to-dark brown skin, a long oval face, broad nose, attentive almond-shaped dark eyes, thick connected moustache and a very full black beard extending below the chin, strong shoulders and stocky muscular forward build. Preserve these distinguishing facial features in expressive monochrome ink, with clear facial planes rather than blacked-out facial details. Small dark tattoo linework on his left upper arm may be simplified. Draw only this one real player. Plain dark sleeveless basketball uniform with ivory trim, NO names, NO numbers, NO logos, NO sponsor lettering. Do NOT paste in or reproduce the official photo.\n\nComposition: dramatic three-quarter view of Bell in an athletic low forward-driving stance on the RIGHT 43% of the poster, knee bent and torso leaning, right palm naturally contacting the upper side of an orange basketball at waist-to-hip level during a dribble. Face clearly visible looking toward play. Show both hands naturally, correct anatomy, no extra fingers. Head, hands and ball fully inside the image; lower legs can fade into an expressive ink brushstroke at the bottom. This is an invented illustrative pose, NOT a reconstruction of a specific game or proof of his appearance tonight. Energetic lime brush arc behind him, few ink spatters. No other people or crowd, no arena or official marks.\nLEFT 55% is a clean text zone with generous negative space and safe margins. Top small editorial label, big two-line Japanese headline, then compact matchup and schedule. All text unobstructed.\n\nRender these exact visible text lines, and no other text:\nバスケまとめ\n神奈川\nダービー\n川崎 × 横浜BC\n第2戦 11/1 19:05\n出場メンバー未確認\nイラスト（AI生成）｜イメージ\n\nTypography: very bold confident Japanese gothic headline, 神奈川 in ivory and ダービー in lime, large legible compact shapes. Matchup in ivory. The schedule is prominent and clear. The last two qualifier lines must be readable white text near the bottom left within a dark quiet strip, not tiny or clipped.\nEditorial constraints: the only content basis is the supplied fixed article. The schedule states the second game is November 1 at 19:05, and participating players are unconfirmed. Do not add victory predictions, Bell's name, player statistics, team scores, records, or claims of tonight's participation. No exact game-action claims. Both the AI label and イメージ must remain explicit.\nFinish as a polished single 16:9 PNG thumbnail.\n\nONE ALLOWED CORRECTION:\nEdit the FIRST image, the finished black/lime Japanese basketball thumbnail. This is the single final QA correction. Preserve its visual style, color palette, every Japanese text line, typography, text positions, and the identity of real player James Bell.\n\nFix the right-edge clipping and anatomy safety: reduce the entire player-and-ball illustration uniformly to about 87% of its current size, reposition within the right half, and leave at least 55 pixels of clear black/lime background between the rightmost fingers/ball and the canvas edge. Keep the head comfortably within the top edge. Both hands and the entire basketball must be visible, with five naturally jointed fingers on each hand, and none cut by the canvas. Keep the lively forward-driving dribble pose. The basketball must have only normal black seam lines: REMOVE ALL lettering, pseudo-lettering, words and brand marks from the ball. Plain unbranded dark jersey, no numbers or logos.\n\nSECOND image is an official James Bell portrait for facial likeness only, NOT to paste into the design. Keep his very close-cropped hair, broad nose, oval face, dark eyes, and full connected black beard and moustache. Slightly shorten the illustrated top hair to match the second image. Maintain clearly hand-drawn ink-and-brush rendering, not a photo. Keep arm ink understated, no fabricated readable tattoos.\n\nAll existing Japanese copy must stay exactly:\nバスケまとめ\n神奈川\nダービー\n川崎 × 横浜BC\n第2戦 11/1 19:05\n出場メンバー未確認\nイラスト（AI生成）｜イメージ\n\nDo not add any text, scores, player names, statistics, extra people, official branding, or claims about the actual game. Keep 16:9 and existing resolution. Produce ONE corrected image.",
+    "generator": {
+      "name": "image_gen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "corrections": 1,
+      "final_native_png": "/Users/genjo/.codex/generated_images/01a1951b-a8e6-7d80-b82b-19b4a84d680f/exec-5b820320-0f26-496f-a92e-a47ade3e4b7c.png",
+      "qa_observation": "生成結果を実見。初稿の右端の手・ボールの余白不足とボールの不要文字を1回修正。最終画像では文字・日時・留保・顔の特徴・手指・ボール全体・AI表記の可読性を確認。足の下部は意図した筆致のトリミング。保存時は画像加工せずPNGをコピー。",
+      "external_api_used": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-01T03:19:22.800546+00:00",
+  "publication_approved": false
+}
