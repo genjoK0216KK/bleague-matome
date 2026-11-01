@@ -198,29 +198,29 @@
   },
   "article-daily-20261101.html": {
    "article_path": "article-daily-20261101.html",
-   "editorial_fingerprint": "c1a7e76358084ca59045509c9406ab7a04ab9fcbd5a4958f5feece71714b4810",
+   "editorial_fingerprint": "d8bf57eac9fc73b8cd1f2931c5c98842b44970dce6ad87e55d53b59956a2ea34",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261101-82b6a1c1b29c.jpg",
+     "path": "thumbs/auto/article-daily-20261101-908706973dd2.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261101-82b6a1c1b29c-og.jpg",
+     "path": "thumbs/auto/article-daily-20261101-908706973dd2-og.jpg",
      "width": 1200
     }
    },
-   "id": "6b5193f033d3228b846d",
-   "image_sha256": "82b6a1c1b29c879a8081ce11d804ff435ee327f498ccd4123af5c28cd81daebe",
-   "imported_at": "2026-10-31T23:26:18.074345+00:00",
-   "prepared_at": "2026-10-31T23:25:52.659747+00:00",
-   "source_blob_sha": "d0eba21d0dab965cd86e3e843425ea4b2219b79b",
+   "id": "39075cc4edcf56d9d90d",
+   "image_sha256": "908706973dd2675c562b78038ad963e21882aaaad420595a88c4cd8cb15679d8",
+   "imported_at": "2026-11-01T03:19:49.140626+00:00",
+   "prepared_at": "2026-11-01T03:19:22.800546+00:00",
+   "source_blob_sha": "42617381fd686dd0d91c6a1db186d2f1a992d603",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "c1a7e76358084ca59045509c9406ab7a04ab9fcbd5a4958f5feece71714b4810",
+   "stable_fingerprint": "d8bf57eac9fc73b8cd1f2931c5c98842b44970dce6ad87e55d53b59956a2ea34",
    "style": "ink-lime-portrait-v5",
    "title": "神奈川ダービー第1戦は横浜BCが75-65で勝利、第2戦は今夜19時05分から同会場"
   },
@@ -702,20 +702,6 @@
   }
  },
  "log": [
-  {
-   "article": "article-daily-20261030.html",
-   "at": "2026-10-30T10:41:45.136826+00:00",
-   "by": "3d20be125ac18075c9b0",
-   "event": "superseded",
-   "id": "ed5eafb2c5a54d0b60af"
-  },
-  {
-   "article": "article-daily-20261030.html",
-   "at": "2026-10-30T10:41:45.323994+00:00",
-   "event": "imported",
-   "id": "3d20be125ac18075c9b0",
-   "image": "f2d17ad07667"
-  },
   {
    "article": "article-games-20261030.html",
    "at": "2026-10-30T11:33:06.193825+00:00",
@@ -1261,6 +1247,20 @@
    "event": "imported",
    "id": "6b5193f033d3228b846d",
    "image": "82b6a1c1b29c"
+  },
+  {
+   "article": "article-daily-20261101.html",
+   "at": "2026-11-01T03:19:48.956651+00:00",
+   "by": "39075cc4edcf56d9d90d",
+   "event": "superseded",
+   "id": "6b5193f033d3228b846d"
+  },
+  {
+   "article": "article-daily-20261101.html",
+   "at": "2026-11-01T03:19:49.140660+00:00",
+   "event": "imported",
+   "id": "39075cc4edcf56d9d90d",
+   "image": "908706973dd2"
   }
  ],
  "seen": {
@@ -1275,6 +1275,7 @@
   "292138556e17df566d67": "superseded:0a5c2c0f2505974f6de8",
   "2d836f0394de01c7d009": "superseded:7da4157f57a12da3f879",
   "3370472f9c78336a4974": "imported",
+  "39075cc4edcf56d9d90d": "imported",
   "3955308615847dff3136": "superseded:9f2558d6277a776ef982",
   "3d20be125ac18075c9b0": "superseded:9f2558d6277a776ef982",
   "44da7637029692ee5a53": "superseded:a718e72ebd289b318965",
@@ -1286,7 +1287,7 @@
   "619af1e58cddd34c14bc": "imported",
   "64677ebbbdc4b4827d54": "superseded:13dc704824ed84d25fee",
   "68dfe1f0dced4d4c7777": "imported",
-  "6b5193f033d3228b846d": "imported",
+  "6b5193f033d3228b846d": "superseded:39075cc4edcf56d9d90d",
   "6e14b01b2117b3d326c8": "superseded:4c4f1870a93c2d66f8f1",
   "7323c5f3c2556686df0c": "superseded:f4370ce664d0aaa5d148",
   "7da4157f57a12da3f879": "imported",
