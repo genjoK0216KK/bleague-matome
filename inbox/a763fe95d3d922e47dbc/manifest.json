@@ -1,0 +1,84 @@
+{
+  "id": "a763fe95d3d922e47dbc",
+  "article_path": "article-stats-20261101.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261101.html",
+  "source_commit": "",
+  "source_blob_sha": "dc60d59e746255a5b2cca13f9fb68282b9eae45a",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "026e58be438de28817dd5b59eab5f52ec8b12a6d197223953982f2ff68b67ba0",
+  "last_observed_blob_sha": "dc60d59e746255a5b2cca13f9fb68282b9eae45a",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a763fe95d3d922e47dbc/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a763fe95d3d922e47dbc/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-01T12:32:56.892258+00:00",
+  "creation_event_id": "5dde8f340e56cccc5a19",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/a763fe95d3d922e47dbc/thumbnail.png",
+  "image_sha256": "ec74f81a9da8c0696351d4746ade127845ae85f367d5fe65006b597251cf89c1",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "dc60d59e746255a5b2cca13f9fb68282b9eae45a",
+    "text_lines": [
+      "11月1日 貢献度ランキング",
+      "三河",
+      "ガードナー",
+      "EFF 41",
+      "26得点・14リバウンド・5アシスト",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ",
+      "記録は公式の訂正により変わる場合があります"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a763fe95d3d922e47dbc/source.html",
+        "article_url": "https://basuke-matome.jp/article-stats-20261101.html",
+        "usage": "本文の根拠。タイトル・リード・TOP10でガードナー、三河、EFF 41、26得点、14リバウンド、5アシスト、11月1日を照合。末尾の公式訂正による変更可能性を画像へ明記。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a763fe95d3d922e47dbc/source.txt",
+        "usage": "HTMLと照合した本文の根拠。外部の試合結果・成績は使用していない。"
+      },
+      {
+        "type": "official_likeness_reference",
+        "url": "https://go-seahorses.jp/team/players/detail/id=14186",
+        "image_url": "https://go-seahorses.bl.kuroco-img.app/v=1789089105/files/user/team/player/2026-27/54_blue.jpg",
+        "usage": "シーホース三河公式プロフィール写真を実際に見て容姿のみ参照。写真の貼り付け・ロゴの転載なし。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "view_imageで確認。黒×ライム、太い日本語、インク・ブラシの絵柄のみ参照。参照画像の選手・日付・成績は転用していない。"
+      },
+      {
+        "type": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "usage": "画像生成・検品ルールを適用。指定フォルダのA-faison-ivory-v3.pngは存在せず、確認できたB案を使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ダバンテ・ガードナー",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿のタイトルとリードで最も大きく扱われている選手。ランダム選出ではない。",
+        "official_profile_url": "https://go-seahorses.jp/team/players/detail/id=14186",
+        "official_image_url": "https://go-seahorses.bl.kuroco-img.app/v=1789089105/files/user/team/player/2026-27/54_blue.jpg",
+        "observed_features": "短くまとめた編み髪・ツイスト、短い側頭部、広く丸四角い輪郭、太い眉、幅のある鼻、口ひげにつながる濃く厚いひげ、大きな肩と厚い体格を確認し、イラストと比較した。",
+        "scene": "ボールを両手で持って切り返すプレーのイメージ。特定の試合場面や決勝シュートの再現ではない。",
+        "visual_qa": "顔の特徴、両腕と両手、自然な指の配置を目視確認。1回の修正後はボールと指先が画面内に収まり、顔・文字との重なりなし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: ads-marketing.\nCreate ONE finished Japanese basketball editorial thumbnail as a PNG, landscape 16:9, 1536x864 or larger equivalent. This is for the unofficial site バスケまとめ, article dated 2026-11-01. A fully illustrated sports poster with precise Japanese typography, not a photograph.\n\nVisual reference roles: the black and lime Culver thumbnail viewed earlier is STYLE REFERENCE ONLY: heavy Japanese lettering, brush ink, cream/black drawing and a restrained orange ball. Do not carry over its player, score, name, date or composition. The official Seahorses Mikawa Davante Gardner portrait viewed earlier is LIKENESS REFERENCE ONLY: do not paste or reproduce the photograph, sponsorships, logos, or its crossed-arms pose.\n\nSubject: only the real player DAVANTE GARDNER (ダバンテ・ガードナー), identified as the main subject in the supplied article. Match the inspected official portrait: dark skin translated into strong ink shadows, broad round-square face, strong brow, broad nose, full lips, dense full black beard connected to moustache with a broad squared lower shape, short tightly gathered twists/braids forming small knots above and behind the head with closely cut sides. Very powerful thick torso, wide shoulders and strong thick arms; avoid a thin generic guard body. Serious focused expression, head turned slightly toward viewer so identity remains readable. Draw him in an athletic low post pivot, torso dynamically rotated, one bent knee visible, gathering an orange basketball with both hands beside his waist before a move. Two coherent arms, anatomically plausible hands gripping opposite sides of the ball, exactly five fingers per hand with natural occlusion. No other people. This is a conceptual performance illustration, not a depiction of an actual recorded game moment.\n\nComposition: DIFFERENT from the style reference. Large player on the LEFT approximately 45% of canvas, head/face unobstructed and comfortably inside edges, torso and upper thighs visible, a purposeful lower thigh crop. Basketball fully visible. Main typography on RIGHT 52%, clean negative space, no overlap between face/ball/hands and text. Safe 5% outer margins for all typography. Background deep charcoal #151A18. Energetic sweeping curved lime #CCF43B brush mark behind the player, restrained scattered dry-brush grit. Hand-drawn high-contrast editorial ink and scratchy brush hatching. Cream and dark monochrome uniform and skin treatment, small orange basketball. Plain unbranded sleeveless basketball jersey and shorts: no logo, no sponsor, no club lettering, no league badge, no jersey number. No photorealism or photo collage.\n\nText VERBATIM, and no other text:\nTop small header: 「11月1日 貢献度ランキング」\nSmall team identifier above the main name: 「三河」\nMain large bold cream Japanese headline: 「ガードナー」\nLargest visual numeric emphasis in lime: 「EFF 41」\nSupporting line in clear cream type: 「26得点・14リバウンド・5アシスト」\nBottom footer, clearly readable cream on clean charcoal:\n「イラスト（AI生成）」\n「成績をもとにしたイメージ」\nSmaller but legible bottom qualifier:\n「記録は公式の訂正により変わる場合があります」\n\nTypography: strongest hierarchy for ガードナー and EFF 41; precise spelling, generous spacing, sharp legible Japanese. Put supporting statistics on one or two balanced lines if needed without changing the exact characters. Leave an uncluttered bottom band for the three footer strings. Do not label EFF 41 as 41 points. No \"単独首位\", no invented performance or score, no depiction of a specific winning shot, no real arena or opponent. All editorial claims and numerical data above come exclusively from the supplied fixed manuscript. The footer explicitly clarifies that the scene is an AI illustration based on statistics. Output only one polished thumbnail.\n\nONE PERMITTED REVISION\nEdit this thumbnail with exactly one targeted layout correction: reframe the illustrated player so that his entire basketball, both hands and every fingertip are safely inside the canvas, with at least 40 pixels of clean margin to the LEFT image boundary and at least 35 pixels above the hair. The first version clips the leftmost fingers at the image boundary. Reduce the player and basketball together about 9 percent and move them slightly right if required, without touching or overlapping the right-side typography. Keep the purposeful bottom crop of the thighs. Preserve the exact Davante Gardner likeness, face, full beard, hair, powerful broad build, ink style, plain unbranded uniform, pose, hand anatomy, colors, background brush theme and all existing text exactly unchanged. Text must remain: 11月1日 貢献度ランキング / 三河 / ガードナー / EFF 41 / 26得点・14リバウンド・5アシスト / イラスト（AI生成） / 成績をもとにしたイメージ / 記録は公式の訂正により変わる場合があります. Do not change facts or add logos, numbers, words or people. Keep landscape 16:9 dimensions at least 1536 pixels wide. Return just the corrected single PNG.",
+    "generator": "Built-in image_gen.imagegen only. Initial generation plus one layout correction. Final candidate: exec-12d67a11-fd7a-43c4-a25c-7b1e3efd6e0b.png. No API/CLI generation or new paid service.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-01T12:36:01.671802+00:00",
+  "publication_approved": false
+}
