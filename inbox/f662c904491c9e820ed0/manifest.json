@@ -1,0 +1,101 @@
+{
+  "id": "f662c904491c9e820ed0",
+  "article_path": "article-results-one-next-20261101.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261101.html",
+  "source_commit": "",
+  "source_blob_sha": "6e7fa05d260804812bf00e8bd4a1dc9996d1273d",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "4798796c9eadf361957534bce4dc8e4cb8cb6f751a8e5d9780a2808e68a25154",
+  "last_observed_blob_sha": "6e7fa05d260804812bf00e8bd4a1dc9996d1273d",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f662c904491c9e820ed0/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f662c904491c9e820ed0/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-01T10:37:05.007444+00:00",
+  "creation_event_id": "65ea48d6f87d24cfc17c",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/f662c904491c9e820ed0/thumbnail.png",
+  "image_sha256": "7adb2ae2dec09bea8ac3e2fff5a38dcc5ec7987a29b66228ea1a9fdc826ca8d0",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "6e7fa05d260804812bf00e8bd4a1dc9996d1273d",
+    "text_lines": [
+      "バスケまとめ",
+      "11/01",
+      "試合結果",
+      "当日のEFF",
+      "19:26時点｜一部公式記録未確定",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f662c904491c9e820ed0/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261101.html",
+        "source_blob_sha": "6e7fa05d260804812bf00e8bd4a1dc9996d1273d",
+        "used_for": "記事タイトル、11月1日、19:26 JST時点、一部公式記録未確定、掲載選手名。外部情報で本文を補完していない。"
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f662c904491c9e820ed0/source.txt",
+        "used_for": "固定HTMLとの本文内容照合。B.PREMIERとB.ONEの当日EFFは全試合の公式記録確定待ち。"
+      },
+      {
+        "role": "official_identity_and_appearance_only",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=8545",
+        "used_for": "山口力也選手の実在・プロフィール確認のみ。外部の成績は画像に使用していない。"
+      },
+      {
+        "role": "official_appearance_reference_only",
+        "url": "https://www.bleague.jp/mybleague_list/?TeamID=2487",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=1789593924/files/user/roster/2487/2026-27/8545_03.png",
+        "local_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f662c904491c9e820ed0/references/rikiya-yamaguchi-official-large.png",
+        "used_for": "2026-27公式プロフィール画像を実見。髪型・輪郭・ひげ・目鼻の照合と修正の参照。写真は成果PNGに貼り付けていない。"
+      },
+      {
+        "role": "supplementary_official_appearance_reference_only",
+        "url": "https://www.bleague.jp/valentine/2026/player/yp/",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=1769029625/files/user/_/valentines/2026/img/player/53_yp_01.png",
+        "local_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f662c904491c9e820ed0/references/rikiya-yamaguchi-official-portrait.png",
+        "used_for": "容姿の補助確認のみ。最終の髪型・ひげは2026-27公式プロフィールを優先。写真・文字・ロゴは転用しない。"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "used_for": "黒#151A18×ライム#CCF43B、インクとブラシ、太い日本語見出し、少ない要素。既存の選手名・成績は転用しない。"
+      },
+      {
+        "role": "production_rules",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "used_for": "本人最新指定を優先し、実在選手をランダム選出。内蔵画像生成のみ、目視検品、修正1回まで。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "山口 力也",
+        "selection": "ランダム",
+        "selection_reason": "複数試合の結果とポジション別EFFを扱う記事で、単独の主役を確定できないため。固定本文の重複を除いた掲載選手11人から一様ランダム抽選。",
+        "selection_method": "Python random.SystemRandom().choice",
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f662c904491c9e820ed0/selection.json",
+        "reference_source": "B.LEAGUE公式 2026-27プロフィール",
+        "reference_url": "https://www.bleague.jp/roster_detail/?PlayerID=8545",
+        "reference_image_url": "https://bleague.bl.kuroco-img.app/v=1789593924/files/user/roster/2487/2026-27/8545_03.png",
+        "appearance_observed": "短めで無造作な茶色の髪と前髪、細長い顔、目立つ耳、細めの目、まっすぐな鼻、薄い口ひげと短いあごひげ、細身の体格。",
+        "depiction": "ロゴ・名前・番号のないユニフォームで低いドリブル。実際の試合場面の再現ではない。",
+        "visual_review": "修正版を実見し、公式写真の髪・輪郭・耳・目鼻・口ひげ・あごひげに沿ったイラストであることを確認。選手名・個人成績・出場・活躍の文字は入れていない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: ads-marketing / editorial sports illustration.\nCreate exactly ONE finished Japanese basketball news thumbnail, landscape 16:9, preferably 1536x864 or larger, PNG. This is for the Japanese website バスケまとめ.\n\nVisual direction: premium hand-drawn ink and dry-brush sports poster, matching the already viewed approved B-culver-black-lime-v3 reference's rough ink, brush textures, sparse elements and strong Japanese typography. Near-black background #151A18, electric lime #CCF43B brush accent, warm off-white typography and skin highlights. Small orange accent for the ball only. Entirely an illustration, never photorealistic. Do not copy the reference's athlete, names, dates, scores, or pose.\n\nMain subject: exactly one REAL player, Rikiya Yamaguchi / 山口力也, randomly selected from the article's named players. Base his recognizable facial appearance on the official 2026-27 B.LEAGUE profile just inspected: slim long face, prominent ears, short tousled textured ash-brown hair with irregular fringe, fairly narrow dark eyes, straight medium-width nose, thin dark moustache, small distinct goatee on the chin, slender neck, lean athletic build. Keep those identity-specific traits in the ink drawing; do not substitute a generic or invented athlete. The reference photo is for facial observation only, never paste or reproduce any part of a photograph.\nSubject clothing: plain sleeveless off-white basketball uniform with charcoal shadows and restrained lime trim, no numbers, no lettering, no team or league logo, no sponsors, no headband.\nPose: energetic low dribble drive, three-quarter view with face clearly visible and eyes looking forward, one hand controlling a single basketball at hip-to-thigh height, other arm naturally bent for balance, torso leaning into motion. Natural anatomy and correctly drawn hands and fingers. This is a conceptual basketball illustration, NOT a reconstruction of a particular game, scoring event or achievement.\n\nComposition: put the athlete on the LEFT 43 percent, drawn from head through upper thighs with intentional lower-body crop; face and both hands fully inside frame. A wide diagonal lime brush swipe behind the athlete creates motion. Keep all headline text in the RIGHT 54 percent, clearly separated from hands, face and ball. Sparse background, no crowd, no other players, no scoreboard. Generous safe margins, approximately 5% of canvas. On the right, a small site title at top, large date below, massive Japanese main headline in off-white, subhead in lime. A readable qualifier line under the title block. A small but legible footer along bottom right.\n\nRender ONLY these exact text lines, each once, clean accurate Japanese lettering:\nバスケまとめ\n11/01\n試合結果\n当日のEFF\n19:26時点｜一部公式記録未確定\nイラスト（AI生成）\nイメージ\n\nTypographic hierarchy: \"試合結果\" is largest, \"11/01\" and \"当日のEFF\" secondary. Make the long qualifier much smaller but readable, allowed to wrap between \"19:26時点\" and \"一部公式記録未確定\" if necessary. Footer labels are legible and uncut. Never add the player's name, team name, jersey number, individual stats, scores, winners, rankings, personal achievement claims, or extra words. The fixed source article is a multi-game 2026-11-01 results/EFF roundup with some official records still pending as of 19:26 JST; do not suggest all results are final.\nNo official photographs, logos, sponsor marks, watermark, photographic rendering, fabricated players, or tiny illegible text.\n\nONE CORRECTION PASS\nEdit the FIRST image, the finished basketball thumbnail. The SECOND image is the official 2026-27 profile photograph of the real player Rikiya Yamaguchi (山口力也), used ONLY as a facial identity reference, never pasted into the artwork.\n\nThis is the one final correction pass. Keep the same near-black/lime ink-brush illustration style, 16:9 canvas, headline design, and ALL existing Japanese text exactly unchanged:\nバスケまとめ\n11/01\n試合結果\n当日のEFF\n19:26時点｜一部公式記録未確定\nイラスト（AI生成）\nイメージ\n\nCorrect the player illustration in two precise ways:\n1. Fit the player and basketball entirely inside the left illustration area with safe space. Currently the dribbling hand is clipped by the left canvas edge. Slightly reduce and reposition the whole illustrated player/ball group so that every finger of both hands, the whole ball and the top of the hair are fully visible, at least 35 pixels from the canvas edges. Maintain dynamic low dribble pose and allow only the lower thigh to crop at the bottom. Preserve all headline text unchanged.\n2. Bring his face clearly closer to the SECOND reference photo while preserving the illustrated rendering: same long slim face and jaw contour, prominent rounded ears, narrow eyes and eyelids, straight brows, medium straight nose, and the shaggy brown hair/fringe shape from the profile. The moustache must be THIN and subtle, and chin hair a small short sparse flat patch, as in the official reference; remove the heavy dark moustache and pointed beard of the current illustration. Use the actual facial proportions rather than a generic manga face. Keep a focused expression suitable for dribbling. He is a lean player, not bulky.\n\nNo other people. No names, jersey numbers, scores, stats, team/league logos or sponsor text. Plain uniform. Do not copy any orange uniform graphics, logos, or background from the photo. All pixels in final are an ink illustration, never photographic. No new text. This remains an imagined playing pose, not any documented match moment. Produce exactly one corrected PNG.",
+    "generator": "OpenAI built-in image_gen.imagegen; initial generation + exactly 1 correction; final PNG 1672x941; no API/CLI fallback",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-01T10:44:16.832529+00:00",
+  "publication_approved": false
+}
