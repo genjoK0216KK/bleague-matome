@@ -1,8 +1,5 @@
 {
- "pending": {
-  "506508": "2026-10-25",
-  "506509": "2026-10-25"
- },
+ "pending": {},
  "published": [
   "2026-10-12",
   "2026-10-17",
@@ -17,33 +14,6 @@
   "2026-11-01"
  ],
  "days": {
-  "2026-10-25": {
-   "state": "held",
-   "games_total": 2,
-   "games_ready": 0,
-   "players": null,
-   "holds": [
-    {
-     "key": "506508",
-     "home": "東京SR",
-     "away": "名古屋D",
-     "status": "unconfirmed",
-     "record_note": "official_record_not_loaded",
-     "reason": "record_not_fixed"
-    },
-    {
-     "key": "506509",
-     "home": "大阪",
-     "away": "千葉J",
-     "status": "unconfirmed",
-     "record_note": "official_record_not_loaded",
-     "reason": "record_not_fixed"
-    }
-   ],
-   "excluded": [],
-   "content_as_of": "2026-10-26 17:40 JST",
-   "source": "data/match_articles/article-games-20261025.json"
-  },
   "2026-10-26": {
    "state": "ready",
    "games_total": 9,
@@ -113,6 +83,16 @@
    "excluded": [],
    "content_as_of": "2026-11-01 21:31 JST",
    "source": "data/match_articles/article-games-20261101.json"
+  },
+  "2026-11-02": {
+   "state": "not_retrieved",
+   "games_total": null,
+   "games_ready": null,
+   "players": null,
+   "holds": [],
+   "excluded": [],
+   "content_as_of": null,
+   "source": "data/match_articles/article-games-20261102.json"
   }
  },
  "definition": {
