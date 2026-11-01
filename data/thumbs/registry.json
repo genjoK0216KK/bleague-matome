@@ -224,6 +224,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "神奈川ダービー第1戦は横浜BCが75-65で勝利、第2戦は今夜19時05分から同会場"
   },
+  "article-daily-20261102.html": {
+   "article_path": "article-daily-20261102.html",
+   "editorial_fingerprint": "0189fbec978344869bf516b8889e0032850372494f8ed152270b0cd420465cd9",
+   "files": {
+    "eyecatch": {
+     "height": 731,
+     "path": "thumbs/auto/article-daily-20261102-f0a50ea7554b.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261102-f0a50ea7554b-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "347558cc6a9b226d7c1c",
+   "image_sha256": "f0a50ea7554b2f298fc4515f191401d1e0ba93aa2854481d31b8e49d34a5e1a0",
+   "imported_at": "2026-11-01T23:29:16.142170+00:00",
+   "prepared_at": "2026-11-01T23:28:50.927819+00:00",
+   "source_blob_sha": "7f7c4853d3b3fa96b4bd6b77a710bc515eb90736",
+   "source_size": [
+    1660,
+    948
+   ],
+   "stable_fingerprint": "0189fbec978344869bf516b8889e0032850372494f8ed152270b0cd420465cd9",
+   "style": "ink-lime-portrait-v5",
+   "title": "神奈川ダービーは横浜BCが2連勝、第2戦も77-66で川崎に勝利"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -758,13 +786,6 @@
   }
  },
  "log": [
-  {
-   "article": "article-games-20261030.html",
-   "at": "2026-10-30T12:49:27.342500+00:00",
-   "by": "1237ac56ecfe95c7fd0a",
-   "event": "superseded",
-   "id": "44da7637029692ee5a53"
-  },
   {
    "article": "article-games-20261030.html",
    "at": "2026-10-30T12:49:27.342524+00:00",
@@ -1317,6 +1338,13 @@
    "event": "imported",
    "id": "d5700d087ac39b72ed00",
    "image": "40dbefb69584"
+  },
+  {
+   "article": "article-daily-20261102.html",
+   "at": "2026-11-01T23:29:16.142197+00:00",
+   "event": "imported",
+   "id": "347558cc6a9b226d7c1c",
+   "image": "f0a50ea7554b"
   }
  ],
  "seen": {
@@ -1331,6 +1359,7 @@
   "292138556e17df566d67": "superseded:0a5c2c0f2505974f6de8",
   "2d836f0394de01c7d009": "superseded:7da4157f57a12da3f879",
   "3370472f9c78336a4974": "imported",
+  "347558cc6a9b226d7c1c": "imported",
   "39075cc4edcf56d9d90d": "imported",
   "3955308615847dff3136": "superseded:9f2558d6277a776ef982",
   "3d20be125ac18075c9b0": "superseded:9f2558d6277a776ef982",
