@@ -1,0 +1,102 @@
+{
+  "id": "347558cc6a9b226d7c1c",
+  "article_path": "article-daily-20261102.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261102.html",
+  "source_commit": "",
+  "source_blob_sha": "7f7c4853d3b3fa96b4bd6b77a710bc515eb90736",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "0189fbec978344869bf516b8889e0032850372494f8ed152270b0cd420465cd9",
+  "last_observed_blob_sha": "7f7c4853d3b3fa96b4bd6b77a710bc515eb90736",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/347558cc6a9b226d7c1c/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/347558cc6a9b226d7c1c/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-01T23:25:23.535326+00:00",
+  "creation_event_id": "d4ca94330c2ea387e8c1",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/347558cc6a9b226d7c1c/thumbnail.png",
+  "image_sha256": "f0a50ea7554b2f298fc4515f191401d1e0ba93aa2854481d31b8e49d34a5e1a0",
+  "width": 1660,
+  "height": 948,
+  "brief": {
+    "source_blob_sha": "7f7c4853d3b3fa96b4bd6b77a710bc515eb90736",
+    "text_lines": [
+      "バスケまとめ",
+      "神奈川ダービー",
+      "横浜BC",
+      "2連勝",
+      "第2戦",
+      "横浜BC 77–66 川崎",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_fixed_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/347558cc6a9b226d7c1c/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261102.html",
+        "git_blob_sha_verified_without_git": "7f7c4853d3b3fa96b4bd6b77a710bc515eb90736",
+        "sha256": "027c046c61f42cac0ff7741d0a1f05337c3d06eeb198014ad41bcf3f1cf31147",
+        "used_facts": [
+          "神奈川ダービーで横浜BCが2連勝",
+          "第2戦は横浜BC77対66川崎"
+        ],
+        "qualifiers_preserved": "本文の試合結果・コメントは公式サイトの検索結果表示で確認されたもので、公式ページへの直接接続は未確認。個人スタッツ、出場時間、横浜BC側のコメント、11/1時点インジュアリーリストは未確認。シーズン戦績・通算対戦成績は当サイト独自集計。これら未確認の情報・独自集計値・選手の個人成績・当該試合のプレー描写は画像に使用しない。主役の選定は本文のみで行い、関連記事の選手名は候補に含めていない。"
+      },
+      {
+        "type": "article_fixed_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/347558cc6a9b226d7c1c/source.txt",
+        "role": "固定HTMLの本文と見出し・スコア・留保を照合。記事本文の根拠は固定HTML/TXTの2ファイルに限定。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで確認し、黒×ライム、太い文字、インク・ブラシの画風だけを生成参照に使用。過去記事の人物・文字・成績を流用しない。"
+      },
+      {
+        "type": "style_reference_viewed_only",
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "role": "手順書指定フォルダにはA画像が無いため既存制作フォルダの同名ファイルをview_imageで確認。白地案の画風の確認のみで生成入力には使用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "マット・ボンズ / Matt Bonds",
+        "team": "川崎ブレイブサンダース",
+        "selection": "ランダム",
+        "selection_reason": "記事の主役は2チームの試合結果であり、中心選手を特定できない。指定優先順の第1候補群（本文に名前が出る選手）にはマット・ボンズ1人のみのため、その1人を選出。関連記事の名前とヘッドコーチは除外。",
+        "candidate_pool": [
+          "マット・ボンズ"
+        ],
+        "official_profile_url": "https://kawasaki-bravethunders.com/team/players/detail/id=17192?PlayerID=26886",
+        "official_image_url": "https://kawasaki-bravethunders.bl.kuroco-img.app/v=1787897526/files/user/_/team/players/2026-2027/5.jpg",
+        "official_roster_reference": "https://kawasaki-bravethunders.com/news/detail/id=25373",
+        "reference_checked_at": "2026-11-02",
+        "reference_viewed": true,
+        "observed_features": "放射状に広がる中程度の長さの太い黒いドレッドヘア、額が見える髪際、眉と目、幅のある鼻、厚い唇、口ひげと顎先のひげ、輪郭、筋肉質の肩腕を公式プロフィール写真で目視し、イラストの顔・髪・ひげと照合。",
+        "depiction": "1人がボールを両手で保持して切り込む一般的なプレーのイメージ。特定の試合場面、出場、個人の活躍や成績の証拠ではない。名前・背番号・個人成績は画像に入れない。公式写真は容姿の参照だけに使用し貼り付けない。ロゴ・スポンサー表記は無し。",
+        "labels": [
+          "イラスト（AI生成）",
+          "イメージ"
+        ]
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT:\nUse case: ads-marketing, editorial sports illustration.\nCreate ONE final Japanese basketball article thumbnail by redesigning the supplied approved style-reference poster. Landscape 16:9, target 1792x1024 or 1672x941, at least 1000 px wide. Opaque PNG.\n\nReference image 1 is ONLY the approved visual style: near-black #151A18, electric lime #CCF43B, cream white, huge bold Japanese type, hand-painted ink and brush sports illustration. Replace all its previous words, numbers and player; never carry over Culver, Sendai, Kobe or 38.\nReference image 2 is the official face/appearance reference for the ONLY player to draw, real basketball player Matt Bonds (マット・ボンズ). Use it only to study his face and hair. Do not paste any photographic pixels into the design. His distinctive medium-length thick free-form black dreadlocks radiate outward, forehead and arched brows visible, oval face tapering to the chin, broad nose, full lips, short mustache and pointed dark chin beard connected along the jaw, warm deep-brown skin, powerful muscular shoulders. Preserve these recognizable facial features in expressive hand-drawn pen-and-brush illustration with readable eyes/nose/mouth and lit facial planes. He must not look like the man in reference 1 or an invented generic player.\n\nComposition: Novel left-player / right-type composition. On the LEFT 42 percent, Matt Bonds is in a dynamic forward-driving basketball stance, torso bent and twisting slightly, face in clear three-quarter view looking ahead, cradling a complete orange basketball with both hands at lower chest/waist while changing direction. Ball fully within the canvas and naturally grasped; coherent wrists and five fingers on each visible hand. Show head, shoulders, arms, hands, ball, upper legs. Body may naturally extend through lower edge but do not cut head, hair, hands, ball. Plain burgundy basketball jersey with simple cream trim, plain shorts. NO jersey names, numbers, team badges, sponsors, league logos, manufacturer marks. Bold cream ink contours and sparse burgundy shading; lime motion brush strokes behind him. No second person, no crowd, no trophy, no realistic arena, no actual game reenactment. This is a conceptual PLAY illustration, never a documented moment or winning-shot depiction.\nOn the RIGHT 56 percent, typography has clean negative space. Very large headline with strongest hierarchy on '2連勝'. All text is horizontal Japanese, accurately legible, bold and carefully spaced. Dark background throughout, enough contrast, minimal decorative elements. At least 50 px safe margins for all lettering, head, hands, ball. No overlapping face/text.\nOnly these text strings appear, verbatim:\nSmall masthead at top: 「バスケまとめ」\nUpper right eyebrow: 「神奈川ダービー」\nLarge right headline line 1 in cream: 「横浜BC」\nLargest right headline line 2 in electric lime, dynamic brush numerals: 「2連勝」\nLower right compact score block, two lines: 「第2戦」 and 「横浜BC 77–66 川崎」\nBottom footer, clearly legible cream Japanese: 「イラスト（AI生成）｜イメージ」\n\nEditorial truth: All headline/score facts come exclusively from the supplied frozen article: Yokohama BC won both October 31 and November 1; the second-game score was Yokohama BC 77, Kawasaki 66. The article focuses on the teams, so Matt Bonds is selected as the only named player in the article under the requested random-selection rule. Do not put his name in the artwork. Do not claim his individual statistics, his appearance in either game, or his contribution to Yokohama's wins. No individual points, no season records, no head-to-head records, no rankings: those are unverified or independently calculated in the article and are intentionally omitted. The figure represents a conceptual image of the named real player, not evidence of any game moment. Keep the AI label and the word イメージ exactly as specified.\nMake this a polished, bold, sparse, hand-illustrated sports thumbnail consistent with approved ink/brush style, not photorealistic, not a photo collage, not 3D. Output exactly one image.\n\nONE ALLOWED CORRECTION PROMPT:\nEdit this supplied thumbnail with ONE targeted layout correction only. Preserve ALL existing Japanese typography, exact words and scores, their locations, the near-black/lime palette, brush texture, Matt Bonds's facial likeness, dreadlocks, beard, burgundy logo-free uniform, dynamic ball-carrying pose, natural hand anatomy, and the visible AI/image footer.\nThe man's dreadlocks currently touch and clip the TOP border, and his far-left hand almost touches the LEFT border. Scale the entire illustrated PLAYER PLUS BALL uniformly to about 88% of its current size within the left panel, and move it slightly down and right so that every hair tip has at least 45 pixels of dark background above it, and all fingers and the ball have at least 45 pixels of breathing room from the left edge. Keep the player dominant and face clearly visible. Upper legs can still extend through the lower edge. Rebuild just the uncovered background as the same dark-and-lime brush texture. Do not add characters or logos. Do not change the face, pose, hair silhouette, hands, score, captions, or typography. Keep landscape approximately 16:9 at least 1000px width. All text remains:\nバスケまとめ\n神奈川ダービー\n横浜BC\n2連勝\n第2戦\n横浜BC 77–66 川崎\nイラスト（AI生成）｜イメージ\nOutput one corrected PNG. This is a concept illustration of real Matt Bonds, not a reenactment or a claim of his game appearance/statistics.",
+    "generator": {
+      "tool": "image_gen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "corrections": 1,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1996e-954c-7862-92d1-6c51e10cc427/exec-ee08b641-86fa-4a08-a7de-646030da4bc4.png",
+      "final_filename": "generated.png",
+      "format": "PNG",
+      "qa_method": "生成された初稿と修正版を実画像で目視。初稿の上端の髪の見切れに対し1回だけ縮小・余白の修正。修正版の文字・数値・顔と髪・両手・ボール・余白・AI表記を再確認。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-01T23:28:50.927819+00:00",
+  "publication_approved": false
+}
