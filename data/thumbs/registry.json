@@ -699,16 +699,37 @@
    "stable_fingerprint": "78b403543ad1a2ecf03cb6a3391a24a0a92ed3a6a141bce5071b80aba50af2a7",
    "style": "ink-lime-portrait-v5",
    "title": "10月31日の貢献度ランキング 1位はヴィック・ロー（茨城）の38"
+  },
+  "article-stats-20261101.html": {
+   "article_path": "article-stats-20261101.html",
+   "editorial_fingerprint": "026e58be438de28817dd5b59eab5f52ec8b12a6d197223953982f2ff68b67ba0",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-stats-20261101-ec74f81a9da8.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-stats-20261101-ec74f81a9da8-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "a763fe95d3d922e47dbc",
+   "image_sha256": "ec74f81a9da8c0696351d4746ade127845ae85f367d5fe65006b597251cf89c1",
+   "imported_at": "2026-11-01T12:36:28.551007+00:00",
+   "prepared_at": "2026-11-01T12:36:01.671802+00:00",
+   "source_blob_sha": "dc60d59e746255a5b2cca13f9fb68282b9eae45a",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "026e58be438de28817dd5b59eab5f52ec8b12a6d197223953982f2ff68b67ba0",
+   "style": "ink-lime-portrait-v5",
+   "title": "11月1日の貢献度ランキング 1位はダバンテ・ガードナー（三河）の41"
   }
  },
  "log": [
-  {
-   "article": "article-games-20261029.html",
-   "at": "2026-10-30T11:38:22.016563+00:00",
-   "event": "imported",
-   "id": "6e14b01b2117b3d326c8",
-   "image": "9f2ce3c7a128"
-  },
   {
    "article": "article-results-one-next-20261029.html",
    "at": "2026-10-30T11:38:22.168968+00:00",
@@ -1261,6 +1282,13 @@
    "event": "imported",
    "id": "f662c904491c9e820ed0",
    "image": "7adb2ae2dec0"
+  },
+  {
+   "article": "article-stats-20261101.html",
+   "at": "2026-11-01T12:36:28.551037+00:00",
+   "event": "imported",
+   "id": "a763fe95d3d922e47dbc",
+   "image": "ec74f81a9da8"
   }
  ],
  "seen": {
@@ -1303,6 +1331,7 @@
   "a384f66c5c633ed9bdb1": "imported",
   "a61987943aaf82c9dcaa": "superseded:c1aaf417a1880194d3ac",
   "a718e72ebd289b318965": "imported",
+  "a763fe95d3d922e47dbc": "imported",
   "ae8de66420a50e0a2591": "superseded:c1aaf417a1880194d3ac",
   "afa848da9cb4b37513f4": "superseded:68dfe1f0dced4d4c7777",
   "b6b7904538b5644b6eb3": "superseded:1c38428eb633005c7c3f",
