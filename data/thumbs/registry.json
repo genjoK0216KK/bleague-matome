@@ -252,6 +252,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "神奈川ダービーは横浜BCが2連勝、第2戦も77-66で川崎に勝利"
   },
+  "article-daily-20261103.html": {
+   "article_path": "article-daily-20261103.html",
+   "editorial_fingerprint": "25b6dc4d108edaa9d7621c67cebc76da8a1dea8696729180909163827c1f6a7f",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261103-9c3533d53344.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261103-9c3533d53344-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "d751b892af758cf975ea",
+   "image_sha256": "9c3533d53344511ac2d5e6ee48bcca3e5f2be34102866f1cb5f78911f7cbd0dc",
+   "imported_at": "2026-11-02T23:23:28.926520+00:00",
+   "prepared_at": "2026-11-02T23:22:55.413717+00:00",
+   "source_blob_sha": "e51b4dfd39a5023accd575e1263ebb59708ff987",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "25b6dc4d108edaa9d7621c67cebc76da8a1dea8696729180909163827c1f6a7f",
+   "style": "ink-lime-portrait-v5",
+   "title": "神戸が長崎に90-87で雪辱、2連戦は1勝1敗"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -815,13 +843,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261030.html",
-   "at": "2026-10-30T12:49:27.526682+00:00",
-   "event": "imported",
-   "id": "1237ac56ecfe95c7fd0a",
-   "image": "f380994eb286"
-  },
-  {
    "article": "article-stats-20261030.html",
    "at": "2026-10-30T13:26:58.007080+00:00",
    "event": "imported",
@@ -1373,6 +1394,13 @@
    "event": "imported",
    "id": "f310e7a998e8a9bdf127",
    "image": "0abe30071ef0"
+  },
+  {
+   "article": "article-daily-20261103.html",
+   "at": "2026-11-02T23:23:28.926545+00:00",
+   "event": "imported",
+   "id": "d751b892af758cf975ea",
+   "image": "9c3533d53344"
   }
  ],
  "seen": {
@@ -1429,6 +1457,7 @@
   "d4cd88fa21bd64b494f0": "superseded:a080784863e72da1cb08",
   "d4ee196cd5adf437fb60": "superseded:619af1e58cddd34c14bc",
   "d5700d087ac39b72ed00": "imported",
+  "d751b892af758cf975ea": "imported",
   "d87a8ec3bf24b1b0559b": "superseded:81cdf284d66df1d61f20",
   "db1b08157b4974a77014": "superseded:a384f66c5c633ed9bdb1",
   "de438e71b32369b2ee65": "superseded:3370472f9c78336a4974",
