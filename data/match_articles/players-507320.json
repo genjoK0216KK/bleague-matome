@@ -21,6 +21,25 @@
   },
   "players": [
     {
+      "player_id": "51217",
+      "name": "色摩 尊",
+      "team": "香川",
+      "team_id": "722",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=722",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": null,
+      "games": null,
+      "stats_source": null,
+      "coverage_complete": false
+    },
+    {
       "player_id": "51000231",
       "name": "高橋 克実",
       "team": "香川",
@@ -275,6 +294,25 @@
       "coverage_complete": true
     },
     {
+      "player_id": "51079",
+      "name": "權藤 隼斗",
+      "team": "東京U",
+      "team_id": "2725",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "PG"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=2725",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": null,
+      "games": null,
+      "stats_source": null,
+      "coverage_complete": false
+    },
+    {
       "player_id": "9365",
       "name": "田口 暖",
       "team": "東京U",
@@ -509,5 +547,5 @@
       "coverage_complete": true
     }
   ],
-  "retrieved_at": "2026-11-01T10:31:37.607617+00:00"
+  "retrieved_at": "2026-11-02T22:50:11.682470+00:00"
 }
