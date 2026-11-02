@@ -14,16 +14,6 @@
   "2026-11-01"
  ],
  "days": {
-  "2026-10-26": {
-   "state": "ready",
-   "games_total": 9,
-   "games_ready": 9,
-   "players": 193,
-   "holds": [],
-   "excluded": [],
-   "content_as_of": "2026-10-27 17:47 JST",
-   "source": "data/match_articles/article-games-20261026.json"
-  },
   "2026-10-27": {
    "state": "no_games",
    "games_total": 0,
@@ -93,6 +83,16 @@
    "excluded": [],
    "content_as_of": "2026-11-02 20:02 JST",
    "source": "data/match_articles/article-games-20261102.json"
+  },
+  "2026-11-03": {
+   "state": "not_retrieved",
+   "games_total": null,
+   "games_ready": null,
+   "players": null,
+   "holds": [],
+   "excluded": [],
+   "content_as_of": null,
+   "source": "data/match_articles/article-games-20261103.json"
   }
  },
  "definition": {
