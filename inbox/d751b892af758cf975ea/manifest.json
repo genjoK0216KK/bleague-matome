@@ -1,0 +1,95 @@
+{
+  "id": "d751b892af758cf975ea",
+  "article_path": "article-daily-20261103.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261103.html",
+  "source_commit": "",
+  "source_blob_sha": "e51b4dfd39a5023accd575e1263ebb59708ff987",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "25b6dc4d108edaa9d7621c67cebc76da8a1dea8696729180909163827c1f6a7f",
+  "last_observed_blob_sha": "e51b4dfd39a5023accd575e1263ebb59708ff987",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d751b892af758cf975ea/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d751b892af758cf975ea/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-02T23:18:53.531810+00:00",
+  "creation_event_id": "0eb818b090f3f16d0ef0",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/d751b892af758cf975ea/thumbnail.png",
+  "image_sha256": "9c3533d53344511ac2d5e6ee48bcca3e5f2be34102866f1cb5f78911f7cbd0dc",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "e51b4dfd39a5023accd575e1263ebb59708ff987",
+    "text_lines": [
+      "バスケまとめ　2026.11.03",
+      "神戸が雪辱",
+      "第2戦　神戸 90-87 長崎",
+      "2連戦は1勝1敗",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d751b892af758cf975ea/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261103.html",
+        "used_for": "本文内容の根拠。第2戦は神戸90-87長崎、2連戦は1勝1敗、記事日付2026.11.03。外部の試合ページは本文根拠として使用していない。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d751b892af758cf975ea/source.txt",
+        "used_for": "固定HTMLとの内容照合。順位は独自集計、外部記事は検索結果表示で確認したとの留保あり。個人スタッツ・公式IL・通算対戦成績は未確認のため画像に掲載していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "熊谷 航",
+        "team": "長崎ヴェルカ",
+        "selection": "ランダム",
+        "selection_reason": "記事の中心は両チームの2連戦結果で、単独の選手に主役を絞れないため、本文に名前が出ている選手を優先して抽選。",
+        "selection_method": "Python random.Random('d751b892af758cf975ea').choice(candidates)",
+        "candidates": [
+          "リーヴァイ・ランドルフ",
+          "熊谷 航",
+          "ジャレル・ブラントリー",
+          "馬場 雄大"
+        ],
+        "official_profile_url": "https://www.velca.jp/team/players/detail/id=47621?PlayerID=19957",
+        "official_roster_url": "https://www.velca.jp/team/players/",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026110211/files/user/roster/2488/2026-27/19957_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d751b892af758cf975ea/references/kumagai-official.jpg",
+        "appearance_verified": "公式写真を目視。短い黒髪と横へ流れる前髪、丸みのある頭頂部、やや角のある卵型の輪郭、細めの目、まっすぐな鼻、薄めの唇、ひげなしを参照し、修正版イラストと照合。",
+        "depiction": "単独のドライブ姿のイメージ。実際の試合場面や特定の決勝プレーの再現ではない。",
+        "restrictions_verified": "画像に選手名・背番号・個人成績・出場や活躍の主張なし。公式写真の貼付なし。ユニフォームは無地。チームロゴ・リーグロゴ・スポンサー文字なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT\nUse case: illustration-story\nAsset type: Japanese basketball news thumbnail, one final raster PNG, landscape 16:9, target 1536x864 or larger at exactly the same aspect ratio.\n\nCreate ONE finished thumbnail for バスケまとめ. Editorial brush-and-ink illustration, visibly hand-drawn, high contrast, dark near-black #151A18 background with restrained electric lime #CCF43B dry-brush accents and warm ivory text. Strong Japanese sports typography, few elements, readable at small thumbnail size. Match the approved black-and-lime thumbnail's energetic ink, crosshatching and brush texture; do NOT carry over its player, words, names, dates or scores.\n\nSubject: ONE real basketball player, Ko Kumagai / 熊谷航 of Nagasaki Velca, depicted as an illustrated likeness, NOT an imaginary athlete. I have visually checked his official club portrait at https://www.velca.jp/team/players/detail/id=47621?PlayerID=19957 and its official roster image https://bleague.bl.kuroco-img.app/v=2026110211/files/user/roster/2488/2026-27/19957_01.jpg . Appearance to preserve: short straight black hair, fuller slightly rounded crown and a soft side-swept fringe across the forehead, natural ears, straight dark brows, narrow almond-shaped dark eyes, a straight moderate-width nose, closed thin-to-medium lips, clean-shaven chin and upper lip, gently squared oval jaw, light-to-medium warm skin, compact lean athletic point-guard build. Do not give him beard, exaggerated muscles, a generic anime face or a different hairstyle.\n\nPose/composition: player is the prominent visual subject on the LEFT 40 percent, in a dynamic low driving stance, three-quarter face looking forward/right, torso leaning diagonally, one hand naturally contacting the upper side of an orange basketball as he drives, other arm balancing. Show head, both arms/hands and upper legs; keep head, face, hands and whole ball inside frame with generous margin. Natural joints and hands, no extra fingers/limbs. Jersey is plain dark navy with thin ivory trim, no numbers, no writing, no logos or sponsors. Face is legible, not shadowed out. No other players or spectators. Minimal energetic lime brush arcs behind the player suggest movement, no literal arena or scoreboard. This is a generic basketball action illustration, NOT a recreation of either actual game, NOT a winning shot, NOT a performance assertion about Kumagai.\n\nText region: RIGHT 55 percent, flat clean dark backdrop. All text must be horizontal, crisp, completely readable, with ample margins; no overlap with face, hand or ball.\nRender ONLY these exact Japanese text lines (quotation marks are not part of the image):\nSmall top brand/date: \"バスケまとめ　2026.11.03\"\nLargest bold ivory headline: \"神戸が雪辱\"\nClear result line, lime emphasis on score: \"第2戦　神戸 90–87 長崎\"\nLarge secondary line: \"2連戦は1勝1敗\"\nReadable footer, approximately 30px at 1536 width, bottom within safe margin: \"イラスト（AI生成）\"\nAdjacent readable footer: \"イメージ\"\n\nThe factual editorial basis is only the supplied fixed manuscript: Kobe won game 2 90-87, and the two-game series finished 1-1. The manuscript has qualifications on standings and individual statistics: therefore put NO rankings, player statistics, playing time, injury claims, or player achievements in the image. Kumagai was selected at random from players named in the article; do NOT include his name, number or claims about his appearance or success in those games. Use team names exactly as text above, do not associate the player with Kobe. Keep image caption explicitly \"イメージ\".\n\nAvoid: photography, photorealistic rendering, pasted/collaged official photos, club crests, league logos, sponsor marks, watermarks, invented text, copied text from style reference, gradients that obscure text, panels full of tiny details, cropping any text or important anatomy.\n\n\nONE CORRECTION PROMPT\nEdit image 1, the generated black-and-lime Japanese basketball thumbnail. Image 2 is an official portrait of the real player Ko Kumagai (熊谷航), provided ONLY as identity reference, never to be pasted or used photographically.\n\nMake the single correction pass for safe composition and identity. Preserve the headline, all editorial content, date, palette, black background, brush-ink hand-drawn texture, left-side driving pose and right-side typography. Keep the finished landscape canvas 16:9, width >=1536.\n\nThe current left edge clips the basketball and fingers, and head/text are too close to the top and right. Recompose by reducing the entire player group slightly and bringing it inward, leaving at least 55 pixels on left and above hair at 1536 width. Both hands with natural five-finger anatomy and the ENTIRE orange basketball must be comfortably visible inside the canvas. Head fully in frame. Leg crop below upper thigh is acceptable. Shift/scale headline and score typography slightly to have at least 55px right margin and maintain separation from the player. Bottom labels comfortably inset. No text clipping.\n\nUse image 2 to refine the illustrated face: Ko Kumagai's actual softly squared oval face, narrow dark almond eyes, straight moderate nose, thin-to-medium closed lips, clean-shaven face, short black hair with side-swept fringe and rounded silhouette, compact lean point-guard build. Keep it recognizably an ink illustration with visible hatching, never a photo. Plain navy jersey with ivory trim. No sponsor marks, no logos, no numbers, no player name.\n\nKeep exactly the existing text, all accurately spelled:\nバスケまとめ　2026.11.03\n神戸が雪辱\n第2戦　神戸 90–87 長崎\n2連戦は1勝1敗\nイラスト（AI生成）\nイメージ\n\nThis is an imagined basketball action illustration of a randomly selected real player, not an actual game scene or claim about his individual performance. Keep all six text lines, scores, dates, team names and footer labels. Add no other content. Return ONE final image.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 2,
+      "correction_count": 1,
+      "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "additional_style_reference_viewed": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+      "style_reference_note": "手順書のA画像は指定フォルダになかったため、案件Notionに記載された元の保存先で確認。黒×ライムのB案を採用。",
+      "first_candidate": "/Users/genjo/.codex/generated_images/01a19e8e-fdd0-7f60-935f-9564f87e1f69/exec-3ae0e8ca-7a51-431e-9e7c-96959cd80c00.png",
+      "first_candidate_result": "不合格。左端のボールと指の見切れ、髪と見出しの余白不足。",
+      "correction_input_images": [
+        "/Users/genjo/.codex/generated_images/01a19e8e-fdd0-7f60-935f-9564f87e1f69/exec-3ae0e8ca-7a51-431e-9e7c-96959cd80c00.png",
+        "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d751b892af758cf975ea/references/kumagai-official.jpg"
+      ],
+      "selected_output": "/Users/genjo/.codex/generated_images/01a19e8e-fdd0-7f60-935f-9564f87e1f69/exec-911595a1-df97-4d82-a5e0-d349babd0319.png",
+      "final_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d751b892af758cf975ea/generated.png",
+      "qa_method": "修正後の実画像を目視。文字・日付・スコア・チームの対応、余白、全体のボールと両手、手指の形、髪と顔、写真風でない描写、無地ユニフォーム、AI生成表記とイメージ表記を確認。",
+      "final_result": "合格",
+      "api_or_cli_fallback_used": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-02T23:22:55.413717+00:00",
+  "publication_approved": false
+}
