@@ -1,0 +1,86 @@
+{
+  "id": "f310e7a998e8a9bdf127",
+  "article_path": "article-games-20261103.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261103.html",
+  "source_commit": "",
+  "source_blob_sha": "a7de5f43a0d72600cd8ebf4cd4d30009eee78fc4",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "05aa87c4a58a091b96afffe80de94b63ada226ce01e427aa95cce437ba2624be",
+  "last_observed_blob_sha": "a7de5f43a0d72600cd8ebf4cd4d30009eee78fc4",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f310e7a998e8a9bdf127/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f310e7a998e8a9bdf127/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-02T21:51:21.305710+00:00",
+  "creation_event_id": "b046ea5dc422bedc3012",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/f310e7a998e8a9bdf127/thumbnail.png",
+  "image_sha256": "0abe30071ef0e90b61e61e1be02536a2d4898c4868df32a9ad8a497519772025",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "a7de5f43a0d72600cd8ebf4cd4d30009eee78fc4",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.03",
+      "試合なし",
+      "B.PREMIER・B.ONE・B.NEXT",
+      "11/03 06:44 JST 取得時点",
+      "最新情報は公式へ",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f310e7a998e8a9bdf127/source.html",
+        "role": "記事本文の根拠（固定HTML）",
+        "article_url": "https://basuke-matome.jp/article-games-20261103.html",
+        "verified_blob_sha": "a7de5f43a0d72600cd8ebf4cd4d30009eee78fc4",
+        "facts": [
+          "対象日2026-11-03",
+          "この日試合なし：B.PREMIER・B.ONE・B.NEXT",
+          "資料取得2026-11-03 06:44 JST",
+          "公式記録・発表は訂正される場合があり、最新情報は公式サイトで確認。出場は保証されない。"
+        ]
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f310e7a998e8a9bdf127/source.txt",
+        "role": "記事本文の根拠（固定文章）。HTMLと要点・日付・時刻・留保の一致を確認"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "富樫勇樹",
+        "selection": "ランダム",
+        "reason": "固定本文に選手名・チーム名がないため、第3優先のB.LEAGUE現役選手から選択。千葉ジェッツの公式選手一覧17名を候補にsecrets.randbelow(17)で抽選し、index 1を選択。",
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f310e7a998e8a9bdf127/selection.json",
+        "roster_url": "https://chibajets.jp/team/players/",
+        "official_profile_url": "https://chibajets.jp/team/players/detail/id=9633?PlayerID=9055",
+        "official_photo_url": "https://bleague.bl.kuroco-img.app/v=2026110306/files/user/roster/704/2026-27/9055_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f310e7a998e8a9bdf127/references/togashi-official.jpg",
+        "reference_use": "公式プロフィール写真を実際に開いて容姿を確認。写真自体は成果画像に貼り付けていない。公式ページは現役登録と容姿の確認にだけ使用し、本文内容の根拠には使用していない。",
+        "observed_features": "黒髪のセンターパート、耳の上で後ろへ流れる髪、中央の額が見える髪型、やや切れ長の目、輪郭と鼻筋、薄い口ひげと顎の短いひげ、コンパクトなガード体格。",
+        "image_treatment": "無地ユニフォームのドリブル姿をインクイラストで描写。選手名・チーム名・背番号・成績・出場や活躍の記述なし。特定試合の再現ではなく『イメージ』と明記。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail, horizontal 16:9, 1536 x 864 or larger, PNG, opaque.\n\nVisual design: the approved Basuke Matome black-and-lime house style. Deep charcoal black #151A18 background, vivid lime #CCF43B dry-brush diagonal streaks, warm ivory typography and hand-drawn black/ivory ink illustration. Bold, sparse, professional sports-poster composition. Rough ink hatching, confident brush marks, deliberately illustrated, never photographic. The date and headline occupy the left 57%; an energetic, recognizable real player occupies the right 43%. Maintain 5% safe outer margins around all text and hands. Use a dynamic low dribbling pose, not an overhead shooting pose.\n\nSubject: exactly one real professional player, Yuki Togashi (富樫勇樹). His official Chiba Jets profile photograph has been visually checked for appearance. Draw his likeness faithfully as a stylized ink illustration: Japanese adult male, compact muscular guard build (167 cm), black medium-length center-parted hair swept and curved back at the sides near the ears, exposed central forehead, straight eyebrows, slightly narrow almond-shaped eyes, oval face with a defined jaw, straight nose, softly full lips, light sparse moustache and a small short goatee on the chin. Do not give him curly hair, a heavy beard, or a tall lanky body. Three-quarter face remains large enough to recognize. He bends his knees and leans forward in an athletic crossover/driving stance, one hand naturally spread over an orange basketball under his control, other arm balancing. Anatomically plausible two arms and two hands, natural fingers. Plain ivory and charcoal sleeveless basketball jersey and shorts; NO jersey lettering, NO numbers, NO team/sponsor/league logos. No extra players or silhouettes. The basketball is only the player's prop.\nThis is a conceptual basketball illustration, not a depiction of a game played that day, not a specific event, result, score, performance, or appearance claim.\n\nExact visible text, and no other text:\n「バスケまとめ」 — small bold masthead at upper left\n「2026.11.03」 — large ivory date beneath masthead\n「試合なし」 — dominant, extremely bold lime Japanese headline in the left central area\n「B.PREMIER・B.ONE・B.NEXT」 — single smaller ivory line below headline, ordinary typeset letters, NOT a logo\n「11/03 06:44 JST 取得時点」 — readable small ivory line near lower left\n「最新情報は公式へ」 — readable small ivory line beneath it\n「イラスト（AI生成）」 and 「イメージ」 — visible small ivory labels along the bottom, on a clean dark band, not covered by player or brush strokes\n\nEditorial basis ONLY: frozen article says no games on 2026-11-03 for B.PREMIER, B.ONE, B.NEXT, information acquired 2026-11-03 06:44 JST, official information may be corrected. Do not add reasons, schedules, scores or records. The player was randomly selected from an official active roster because the article names no players or teams. DO NOT print his name, club name, jersey number, stats, or any suggestion that he played on this date. DO NOT copy the reference style image's player, name, old date, 38 points or score. No photos or photo collage. Crisp, accurate Japanese characters and punctuation, balanced spacing, no truncation.\n\nONE PERMITTED REVISION\nEdit this finished thumbnail with ONE targeted layout correction. Preserve the exact canvas size and all current Japanese and English text, their spelling, position, hierarchy, colors and all left-side typography. Preserve the black #151A18, lime #CCF43B, ivory ink and brush illustration aesthetic. Preserve the real player's identity and facial features (Yuki Togashi), center-parted dark hair, small goatee, plain blank jersey and the same low dribbling pose. Do not add any names, numbers, logos, captions, players or objects.\nCorrection: reduce the entire player AND his orange basketball together by approximately 14 percent and position them comfortably inside the RIGHT side of the canvas. Both hands including every fingertip must be fully visible with clear breathing room of at least 45 pixels above the bottom edge and away from the right edge. The ball must also be fully inside the frame. Maintain a natural five-finger hand on the ball and a natural fully visible balancing hand at lower right. Keep the hair safely inside the top edge. Extend only the abstract black/lime backdrop into the space released around the subject. Never crop the hands. It is fine for legs to continue beyond the lower frame as long as the hands and ball are fully shown. No other changes.",
+    "generator": {
+      "tool": "built-in image_gen.imagegen",
+      "mode": "内蔵画像生成のみ",
+      "generation_count": 1,
+      "revision_count": 1,
+      "approved_style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "style_reference_review": "view_imageで実物を確認し、黒・ライム・太い日本語・インクとブラシの表現を参照。参照画像の選手名や成績は転用していない。",
+      "final_source_image": "/Users/genjo/.codex/generated_images/01a19e3e-d957-7b41-bfbd-20fae0cbe423/exec-f22ceda9-b9d0-4a3d-a869-89ea1ead46f9.png",
+      "format": "PNG",
+      "final_visual_review": "生成結果を実際に見て検品。初回の右下の指先の見切れを1回修正。最終版は両手の指先・ボール・顔・全文が収まり、ロゴ・写真・余分な選手・捏造スコアなし。取得時刻と最新公式情報への案内で原稿の留保を維持。AI表記とイメージ表記を確認。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-02T21:55:19.167191+00:00",
+  "publication_approved": false
+}
