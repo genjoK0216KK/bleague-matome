@@ -226,57 +226,57 @@
   },
   "article-daily-20261102.html": {
    "article_path": "article-daily-20261102.html",
-   "editorial_fingerprint": "0189fbec978344869bf516b8889e0032850372494f8ed152270b0cd420465cd9",
+   "editorial_fingerprint": "030c529892d7a3eda88cf4259f7c0b7a6fe9e0a7d9c8c4140be04c2a3ca2c621",
    "files": {
     "eyecatch": {
-     "height": 731,
-     "path": "thumbs/auto/article-daily-20261102-f0a50ea7554b.jpg",
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261102-782133c8c4fa.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261102-f0a50ea7554b-og.jpg",
+     "path": "thumbs/auto/article-daily-20261102-782133c8c4fa-og.jpg",
      "width": 1200
     }
    },
-   "id": "347558cc6a9b226d7c1c",
-   "image_sha256": "f0a50ea7554b2f298fc4515f191401d1e0ba93aa2854481d31b8e49d34a5e1a0",
-   "imported_at": "2026-11-01T23:29:16.142170+00:00",
-   "prepared_at": "2026-11-01T23:28:50.927819+00:00",
-   "source_blob_sha": "7f7c4853d3b3fa96b4bd6b77a710bc515eb90736",
+   "id": "f60ec06f0d2f4ee967a2",
+   "image_sha256": "782133c8c4fae09af7b5a6cb1c9c475cd9923e04680dbe58485a6fc45d5dbeb2",
+   "imported_at": "2026-11-03T04:57:50.546783+00:00",
+   "prepared_at": "2026-11-03T04:52:06.589745+00:00",
+   "source_blob_sha": "bc358013850e99ddb6ddfb1749e4483e86ef89e7",
    "source_size": [
-    1660,
-    948
+    1672,
+    941
    ],
-   "stable_fingerprint": "0189fbec978344869bf516b8889e0032850372494f8ed152270b0cd420465cd9",
+   "stable_fingerprint": "030c529892d7a3eda88cf4259f7c0b7a6fe9e0a7d9c8c4140be04c2a3ca2c621",
    "style": "ink-lime-portrait-v5",
    "title": "神奈川ダービーは横浜BCが2連勝、第2戦も77-66で川崎に勝利"
   },
   "article-daily-20261103.html": {
    "article_path": "article-daily-20261103.html",
-   "editorial_fingerprint": "25b6dc4d108edaa9d7621c67cebc76da8a1dea8696729180909163827c1f6a7f",
+   "editorial_fingerprint": "4d6556024de925b7e20d3ae26a2762c3caf7e332b2219ba6e4ded80655082066",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261103-9c3533d53344.jpg",
+     "path": "thumbs/auto/article-daily-20261103-07f56b2405b6.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261103-9c3533d53344-og.jpg",
+     "path": "thumbs/auto/article-daily-20261103-07f56b2405b6-og.jpg",
      "width": 1200
     }
    },
-   "id": "d751b892af758cf975ea",
-   "image_sha256": "9c3533d53344511ac2d5e6ee48bcca3e5f2be34102866f1cb5f78911f7cbd0dc",
-   "imported_at": "2026-11-02T23:23:28.926520+00:00",
-   "prepared_at": "2026-11-02T23:22:55.413717+00:00",
-   "source_blob_sha": "e51b4dfd39a5023accd575e1263ebb59708ff987",
+   "id": "a5a194dfdf4bb060673e",
+   "image_sha256": "07f56b2405b615237fd1dce9b30a02407c390a0c9a7a048c30e63699dc3b340a",
+   "imported_at": "2026-11-03T04:57:50.688906+00:00",
+   "prepared_at": "2026-11-03T04:57:23.107679+00:00",
+   "source_blob_sha": "f831c0f3f424dbd6d744ef3070cd2ee236d0eb88",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "25b6dc4d108edaa9d7621c67cebc76da8a1dea8696729180909163827c1f6a7f",
+   "stable_fingerprint": "4d6556024de925b7e20d3ae26a2762c3caf7e332b2219ba6e4ded80655082066",
    "style": "ink-lime-portrait-v5",
    "title": "神戸が長崎に90-87で雪辱、2連戦は1勝1敗"
   },
@@ -843,34 +843,6 @@
  },
  "log": [
   {
-   "article": "article-daily-20261030.html",
-   "at": "2026-10-31T00:32:38.131668+00:00",
-   "event": "imported",
-   "id": "9f2558d6277a776ef982",
-   "image": "80a418f26604"
-  },
-  {
-   "article": "article-daily-20261025.html",
-   "at": "2026-10-31T01:04:02.962385+00:00",
-   "by": "1c38428eb633005c7c3f",
-   "event": "superseded",
-   "id": "b6b7904538b5644b6eb3"
-  },
-  {
-   "article": "article-daily-20261025.html",
-   "at": "2026-10-31T01:04:03.145866+00:00",
-   "event": "imported",
-   "id": "1c38428eb633005c7c3f",
-   "image": "0e58fe77442b"
-  },
-  {
-   "article": "article-daily-20261026.html",
-   "at": "2026-10-31T01:04:03.145892+00:00",
-   "by": "98e19c39f90c0bb08e5b",
-   "event": "superseded",
-   "id": "92907f5e3191ad3e0565"
-  },
-  {
    "article": "article-daily-20261026.html",
    "at": "2026-10-31T01:04:03.302419+00:00",
    "event": "imported",
@@ -1401,6 +1373,34 @@
    "event": "imported",
    "id": "a9d34f9ead8bbf40b841",
    "image": "903d335c8070"
+  },
+  {
+   "article": "article-daily-20261102.html",
+   "at": "2026-11-03T04:57:50.360375+00:00",
+   "by": "f60ec06f0d2f4ee967a2",
+   "event": "superseded",
+   "id": "347558cc6a9b226d7c1c"
+  },
+  {
+   "article": "article-daily-20261102.html",
+   "at": "2026-11-03T04:57:50.546809+00:00",
+   "event": "imported",
+   "id": "f60ec06f0d2f4ee967a2",
+   "image": "782133c8c4fa"
+  },
+  {
+   "article": "article-daily-20261103.html",
+   "at": "2026-11-03T04:57:50.546835+00:00",
+   "by": "a5a194dfdf4bb060673e",
+   "event": "superseded",
+   "id": "d751b892af758cf975ea"
+  },
+  {
+   "article": "article-daily-20261103.html",
+   "at": "2026-11-03T04:57:50.688931+00:00",
+   "event": "imported",
+   "id": "a5a194dfdf4bb060673e",
+   "image": "07f56b2405b6"
   }
  ],
  "seen": {
@@ -1415,7 +1415,7 @@
   "292138556e17df566d67": "superseded:0a5c2c0f2505974f6de8",
   "2d836f0394de01c7d009": "superseded:7da4157f57a12da3f879",
   "3370472f9c78336a4974": "imported",
-  "347558cc6a9b226d7c1c": "imported",
+  "347558cc6a9b226d7c1c": "superseded:f60ec06f0d2f4ee967a2",
   "39075cc4edcf56d9d90d": "superseded:a9d34f9ead8bbf40b841",
   "3955308615847dff3136": "superseded:9f2558d6277a776ef982",
   "3d20be125ac18075c9b0": "superseded:9f2558d6277a776ef982",
@@ -1444,6 +1444,7 @@
   "a080784863e72da1cb08": "imported",
   "a2b6b2b44b3ab2922589": "superseded:896bbeb35c2a1eb9d0e1",
   "a384f66c5c633ed9bdb1": "imported",
+  "a5a194dfdf4bb060673e": "imported",
   "a61987943aaf82c9dcaa": "superseded:c1aaf417a1880194d3ac",
   "a718e72ebd289b318965": "imported",
   "a763fe95d3d922e47dbc": "imported",
@@ -1462,7 +1463,7 @@
   "d4cd88fa21bd64b494f0": "superseded:a080784863e72da1cb08",
   "d4ee196cd5adf437fb60": "superseded:619af1e58cddd34c14bc",
   "d5700d087ac39b72ed00": "imported",
-  "d751b892af758cf975ea": "imported",
+  "d751b892af758cf975ea": "superseded:a5a194dfdf4bb060673e",
   "d87a8ec3bf24b1b0559b": "superseded:81cdf284d66df1d61f20",
   "db1b08157b4974a77014": "superseded:a384f66c5c633ed9bdb1",
   "de438e71b32369b2ee65": "superseded:3370472f9c78336a4974",
@@ -1471,6 +1472,7 @@
   "ed5eafb2c5a54d0b60af": "superseded:9f2558d6277a776ef982",
   "f310e7a998e8a9bdf127": "imported",
   "f4370ce664d0aaa5d148": "imported",
+  "f60ec06f0d2f4ee967a2": "imported",
   "f662c904491c9e820ed0": "imported",
   "fcf33c7c4f183753d4ec": "imported"
  },
