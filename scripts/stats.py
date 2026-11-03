@@ -412,7 +412,6 @@ def write_article(s):
 
     <p class="source">出典：B.LEAGUE公式 試合詳細（ボックススコア）<br>
     {source_links(s['games'])}</p>
-    <div class="note">本記事はB.LEAGUE公式記録を自動集計して作成しています。記録は公式の訂正により変わる場合があります。最新・正確な情報は出典元でご確認ください。</div>
     <div class="adbox">広告スペース（AdSense）</div>
     <div class="card" style="margin-top:24px"><h4>関連ページ</h4>
       <div class="rank"><span class="n">›</span><a href="stats.html">最新のスタッツリーダー</a></div>

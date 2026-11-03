@@ -5,7 +5,8 @@
 - 読点「、」が2つ以上の文
 - 3文以上の段落（本人 2026-11-03「改行とか」）
 - 作業の経緯の言葉（読者に関係ない「スニペット」「WebFetch」など）
-- 本文の念押し・確かめ方（「確認しました」「ご確認ください」など。本人 2026-11-03「注釈が多すぎる」）。記事末尾の免責1つは数えない
+- 本文の念押し・確かめ方（「確認しました」「ご確認ください」など。本人 2026-11-03「注釈が多すぎる」）
+- 記事ごとの免責（「本記事は各公式発表…」）。免責はサイト全体で about.html の1か所だけ（本人 2026-11-03）
 - 更新の注記が2つ以上
 - 出典欄：URLをそのままリンク文字にしたもの、リンクの外の説明書き
 使い方：python3 scripts/check_writing.py article-daily-20261028.html [...]  指摘があれば終了コード1。
@@ -20,7 +21,7 @@ MAX_COMMAS = 1
 MAX_SENTENCES = 2
 PROCESS_WORDS = ('スニペット', 'WebFetch', 'Web検索', '名前解決', '時台の再確認', '時台updates', '取得作業', 'egress', '接続先', '結果表示')
 NOTE_WORDS = ('確認しました', 'で一致して', 'ご確認ください', '可能性があります', '保証するものではありません', '独自に集計', '予測したものですか', '予測ですか')
-DISCLAIMER = '本記事は各公式発表'
+DISCLAIMER = re.compile(r'^本記事は|公式記録・発表は訂正される場合があります')
 UPDATE_NOTE = re.compile(r'\d{1,2}時台?[のに]?更新')
 SKIP_CLASSES = {'source', 'sources', 'tablewrap', 'table-note', 'card', 'breadcrumb', 'pmeta', 'adbox'}
 SKIP_TAGS = {'table', 'script', 'style', 'h1', 'h2', 'h3', 'h4'}
@@ -142,10 +143,12 @@ def check(html):
             found.append(f'段落{n}：{len(sents)}文あります（2文までに分ける）「{sents[0][:30]}…」')
         if UPDATE_NOTE.search(block):
             updates += 1
-        if not block.strip().startswith(DISCLAIMER):
-            for word in NOTE_WORDS:
-                if word in block:
-                    found.append(f'段落{n}：念押し・確かめ方の言葉「{word}」（本文から消す。根拠は出典欄だけ）')
+        if DISCLAIMER.search(block.strip()):
+            found.append(f'段落{n}：記事ごとの免責は書かない（サイト全体の about.html に1か所ある）「{block.strip()[:24]}…」')
+            continue
+        for word in NOTE_WORDS:
+            if word in block:
+                found.append(f'段落{n}：念押し・確かめ方の言葉「{word}」（本文から消す。根拠は出典欄だけ）')
         for s in sents:
             if s.count('、') > MAX_COMMAS:
                 found.append(f'段落{n}：読点が{s.count("、")}つ「{s[:60]}」')

@@ -23,11 +23,13 @@ class CheckWriting(unittest.TestCase):
         self.assertIn('3文', check_writing.check(page(three))[0])
         self.assertEqual(check_writing.check(page('<p>一。二。<br>三。四。</p>')), [])
 
-    def test_reminders_in_body_but_not_in_the_closing_disclaimer(self):
+    def test_reminders_and_per_article_disclaimer(self):
         found = check_writing.check(page('<p>順位は公式ページで確認しました。</p><p>今後変わる可能性があります。</p>'))
         self.assertEqual(sorted(f.split('「')[1].split('」')[0] for f in found), ['可能性があります', '確認しました'])
         disclaimer = '<div class="note">本記事は各公式発表・報道をもとに作成しました。最新情報は公式サイトでご確認ください。</div>'
-        self.assertEqual(check_writing.check(page(disclaimer)), [])
+        found = check_writing.check(page(disclaimer))
+        self.assertEqual(len(found), 1)
+        self.assertIn('記事ごとの免責は書かない', found[0])
 
     def test_only_one_update_note(self):
         notes = '<div class="note">8時台の更新：結果を追記しました。</div><div class="note">19時に更新：会場を追記しました。</div>'
