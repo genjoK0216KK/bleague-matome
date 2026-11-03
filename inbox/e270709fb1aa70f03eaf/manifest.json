@@ -1,0 +1,117 @@
+{
+  "id": "e270709fb1aa70f03eaf",
+  "article_path": "article-results-one-next-20261104.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261104.html",
+  "source_commit": "",
+  "source_blob_sha": "e75b7b19013934c7d125fa0269da4dc5cf7381d2",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "1e1e8ef64ebc2e7a13d927e03fc8863a9cd9ff30c5d983906c3482f9b6ca61bf",
+  "last_observed_blob_sha": "e75b7b19013934c7d125fa0269da4dc5cf7381d2",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e270709fb1aa70f03eaf/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e270709fb1aa70f03eaf/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-03T19:39:57.041872+00:00",
+  "creation_event_id": "2bd506095371d2316c9d",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/e270709fb1aa70f03eaf/thumbnail.png",
+  "image_sha256": "2d6adbe6fa8c33e45d4d1707164450696ff0cce08b969cf4691abb40ee6e3cf6",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "e75b7b19013934c7d125fa0269da4dc5cf7381d2",
+    "text_lines": [
+      "バスケまとめ",
+      "11/04｜B.ONE",
+      "登録選手の",
+      "ベスト5",
+      "今季平均EFFで選出",
+      "出場確定ではありません",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e270709fb1aa70f03eaf/source.html",
+        "role": "本文根拠。指定blob SHAはGitコマンドを使わずローカルのバイト列から算出し一致。"
+      },
+      {
+        "type": "fixed_article",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e270709fb1aa70f03eaf/source.txt",
+        "role": "本文根拠。11/04のB.ONE、試合前、登録選手のベスト5、今季平均EFF、出場確定ではないという留保。",
+        "qualifiers": [
+          "対象日2026-11-04",
+          "各試合の状態は2026-11-04 04:31 JST時点",
+          "B.ONE選手・平均資料取得2026-11-03 07:50 JST",
+          "当日成績は確定待ち。今季平均と別集計。",
+          "出場確定を示す選出ではない。"
+        ]
+      },
+      {
+        "type": "official_appearance_reference",
+        "url": "https://firebonds.jp/roster/players/detail/id=15894?PlayerID=51000505",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026101707/files/user/roster/711/2026-27/51000505_01.jpg",
+        "role": "選手の容姿だけを参照。外部ページの成績や他の内容はサムネの本文根拠に使用しない。写真はサムネに貼り付けない。",
+        "visually_inspected": true
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "色・インクとブラシ・見出しのスタイルのみ参照。名前・成績・日付は引き継がない。",
+        "visually_inspected": true
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "パトリック・ガードナー",
+        "selection": "ランダム",
+        "selection_reason": "複数の登録選手を並列で扱い、単独の主役に絞れない記事。本文に登場する10選手からPython secrets.choiceで1人を抽選。",
+        "candidate_pool": [
+          "レイナルド・ガルシア",
+          "トレイ・ボイド",
+          "トレダリアス・マカラム",
+          "ジョーダン・フェイゾン",
+          "パトリック・ガードナー",
+          "山本 愛哉",
+          "アンソニー・ゲインズ・ジュニア",
+          "LJ・ピーク",
+          "ケビン・ラーセン",
+          "アルナルド・トロ"
+        ],
+        "source": "福島ファイヤーボンズ公式選手プロフィール",
+        "url": "https://firebonds.jp/roster/players/detail/id=15894?PlayerID=51000505",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026101707/files/user/roster/711/2026-27/51000505_01.jpg",
+        "observed_likeness": "濃く波打つ黒髪と厚い前髪、縦長の輪郭、濃い眉、長めの鼻、薄い口ひげと短いあごひげ、長い腕。",
+        "illustration_scope": "本人に寄せたピボット姿のイメージ。実際の試合場面の再現ではない。選手名・成績・出場や活躍の主張・背番号は画像に載せない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT:\nUse case: illustration-story\nCreate exactly one finished Japanese basketball editorial thumbnail, landscape 16:9, 1536 x 864 pixels or larger. This is a new original illustration for バスケまとめ.\nVisual style: match the viewed approved black/lime ink-and-brush sample in boldness, palette and hand-drawn energy, but use a different composition: athlete on the LEFT, text on the RIGHT. Matte near-black #151A18, electric lime #CCF43B, ivory, and one orange basketball. Few strong elements; confident brush strokes and ink hatching, strong human portrait details. Clearly an illustration, never photorealistic, never paste a photograph. No glossy 3D.\nSubject: exactly ONE real basketball player, Patrick Gardner (パトリック・ガードナー), whose official Fukushima Firebonds roster portrait has just been viewed. The portrait is ONLY a likeness reference, not an image to paste or a uniform design to reproduce. He has thick dark near-black wavy/curly hair with a tousled heavy fringe, long oval angular face, strong eyebrows, relatively long straight nose, thin mustache and short sparse chin/jaw stubble, tan/olive skin, long lean-muscular arms and very tall athletic build. Preserve these recognizable facial features in detailed expressive ink illustration, with face clearly visible in a three-quarter view. Do not resemble the player in the approved style sample. Reference source: https://firebonds.jp/roster/players/detail/id=15894?PlayerID=51000505 and portrait https://bleague.bl.kuroco-img.app/v=2026101707/files/user/roster/711/2026-27/51000505_01.jpg .\nPose: dynamic low-post pivot/gather, knees bent, torso twisting, both hands naturally securing one orange basketball near his waist on the viewer-left side, eyes looking toward an imagined basket off to the right. Show from head to mid-thigh. Arms and ball fully within the canvas, natural hands with correct fingers, no extra limbs. Athletic loose sleeveless ivory and black basketball jersey and shorts, completely unbranded, no numbers, no words, no insignia. This is a generic imaginative basketball pose, NOT a depiction of an actual game or actual play. No other people, no cheering crowd, no arena signage.\nComposition: athlete occupies about 43% of the canvas on the left; right 55% is a clean large text area with generous separation. Sweeping lime dry-brush diagonal behind athlete, restrained speed strokes; keep clear dark background behind text. 5% safe margins. Face and ball unobstructed. No decorative basketballs, no logos.\nText must be exactly as follows, with correct Japanese glyphs, bold legible Japanese Gothic:\nSmall masthead at upper right: 「バスケまとめ」\nDate/league line underneath: 「11/04｜B.ONE」\nRight-side primary headline on two lines: 「登録選手の」 then 「ベスト5」. ベスト5 is the largest type, lime, with the 5 naturally part of the headline rather than a player statistic.\nSupporting line under headline in ivory: 「今季平均EFFで選出」\nClear smaller qualifier immediately below: 「出場確定ではありません」\nFooter at bottom, readable and well within safe area: 「イラスト（AI生成）」 and 「イメージ」\nAll Japanese quotes here are instructions, do not render the quotation marks.\nDo not include the player's name, jersey number, score, performance statistics, game result, matchup, winner, or claims that this athlete will play or has performed. The player was selected randomly from the fixed article's named players. Do not carry over the name カルバー, 38, 80-71, team names or date from the style reference. No league/team/sponsor logos or official photographs anywhere in the output.\nArticle basis only: fixed source.html/source.txt describe 11/04 B.ONE pregame best five among registered players, selected using season-average EFF, and explicitly say selection does not confirm participation. Use only the specified wording above.\n\nSINGLE CORRECTION PROMPT:\nEdit the FIRST attached image, the existing black/lime basketball thumbnail. The SECOND attached image is the official portrait of the same real player Patrick Gardner and is a likeness reference only. This is the single allowed correction.\nMake ONLY these coordinated refinements to the illustrated player on the LEFT:\n1. Match the reference portrait more closely: reduce the hair's height and width substantially; make it dense dark wavy hair with compact tousled fringe across the forehead, not large loose dramatic curls or an Afro. Match his long narrow angular oval face, heavy eyebrows, long straight nose and subtle thin mustache and sparse chin/jaw stubble. The mustache must be understated like the portrait. Preserve the likeness while drawing entirely in the existing ink/brush illustration medium. No pasted pixels or photo look.\n2. Scale the entire athlete plus ball uniformly slightly smaller, enough to provide clear padding above hair and left of the hand/ball, with about 35 px clear border. Keep the same dynamic pivot pose, exact natural hand anatomy, visible face, orange ball, unbranded jersey, and placement on the LEFT. The thigh may meet the bottom border naturally.\nStrictly preserve ALL typography and words, their sizes, right-side placement, black #151A18/lime #CCF43B palette, brush aesthetic, and all qualifiers. Do not alter the existing text:\nバスケまとめ\n11/04｜B.ONE\n登録選手の\nベスト5\n今季平均EFFで選出\n出場確定ではありません\nイラスト（AI生成）\nイメージ\nDo NOT add name, numbers on jersey, scores, team/sponsor/league logos, other people, official photo material or new wording. The only statistics-like number is the existing headline 5, not a player statistic. This is an imagined pose rather than a documented game.\nDeliver exactly one 16:9 finished illustration at the same resolution or higher.",
+    "generator": {
+      "name": "image_gen",
+      "mode": "built_in",
+      "original_generations": 1,
+      "corrections": 1,
+      "selected_candidate": "correction_1",
+      "size_px": [
+        1672,
+        941
+      ],
+      "sha256": "2d6adbe6fa8c33e45d4d1707164450696ff0cce08b969cf4691abb40ee6e3cf6",
+      "qa_observations": {
+        "text_and_numbers": "表示された最終画像で全文字を目視照合。11/04、B.ONE、ベスト5、今季平均EFFが固定原稿と整合。選手名・個人成績・出場実績の文字はない。",
+        "source_qualifiers": "最終画像の『今季平均EFFで選出』『出場確定ではありません』『イメージ』を目視確認。当日実績や出場確定と誤認させる表現がない。",
+        "likeness_or_no_named_person": "公式プロフィール写真と最終画像を目視比較。パトリック・ガードナーの濃い波打つ髪と前髪、縦長の顔、眉・鼻、薄い口ひげと短いあごひげを確認。初稿の過大な髪を1回だけ修正。実在選手1人のプレー姿のイラスト。",
+        "layout": "最終画像は1672x941。見出しと人物が重ならず、頭・ボール・両手は画面内。両手の指、腕のつながり、顔、注記を目視確認。ロゴ・スポンサー文字・公式写真の貼付けなし。",
+        "ai_label": "画像下部の『イラスト（AI生成）』『イメージ』を目視確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-03T19:44:05.230879+00:00",
+  "publication_approved": false
+}
