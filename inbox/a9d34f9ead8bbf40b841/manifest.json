@@ -1,0 +1,89 @@
+{
+  "id": "a9d34f9ead8bbf40b841",
+  "article_path": "article-daily-20261101.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261101.html",
+  "source_commit": "",
+  "source_blob_sha": "2ec5c6937c2581867a0bf3608c8b1b7c683b0feb",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "604f913a3dcdeed75eff77871837d05b0341450b0822cb5c80d48ef96a49d4a6",
+  "last_observed_blob_sha": "2ec5c6937c2581867a0bf3608c8b1b7c683b0feb",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a9d34f9ead8bbf40b841/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a9d34f9ead8bbf40b841/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-03T04:22:03.521159+00:00",
+  "creation_event_id": "ee1e11606ecf9708b22f",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/a9d34f9ead8bbf40b841/thumbnail.png",
+  "image_sha256": "903d335c8070f9530050a9198cce47f44644b09801751b5b539147f17e9fa0a4",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "2ec5c6937c2581867a0bf3608c8b1b7c683b0feb",
+    "text_lines": [
+      "神奈川ダービー｜10/31 第1戦",
+      "横浜BC 勝利",
+      "75–65",
+      "横浜BC 対 川崎",
+      "結果は原稿掲載の公式検索表示に基づく",
+      "公式ページ本文は未確認",
+      "イラスト（AI生成）｜成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a9d34f9ead8bbf40b841/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261101.html",
+        "blob_sha": "2ec5c6937c2581867a0bf3608c8b1b7c683b0feb",
+        "sha256": "07444f39ba1324522687848242f4da5470049c7b7318c0a7c0e5210f86852e42",
+        "evidence": "10月31日 神奈川ダービー第1戦、横浜BC 75対65 川崎。本文内でジェームズ・ベル選手の出場内容を記載。",
+        "qualifiers": "原稿は公式検索結果のタイトル・スニペットに基づき、公式ページ本文は直接未確認と明記。画像にもこの留保を掲載。第2戦の出場メンバー・負傷情報・勝敗は画像に含めていない。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a9d34f9ead8bbf40b841/source.txt",
+        "role": "HTML本文との内容照合。記事の根拠はこのTXTと固定HTMLのみ。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "目視した承認済み配色・インク/ブラシ・タイポグラフィのみ参照。氏名・成績・日付・構図は引き継がない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジェームズ・ベル",
+        "selection": "本文の主役",
+        "selection_reason": "固定本文で個人の出場時間とオンコート時スコアが具体的に扱われる選手。個人成績が未確認とされる他の選手は主役にしない。",
+        "source": "横浜ビー・コルセアーズ公式 選手プロフィール",
+        "url": "https://b-corsairs.com/team/players/detail/id=23241?PlayerID=51000172",
+        "image_url": "https://b-corsairs.bl.kuroco-img.app/v=1791970457/files/user/team/2026-27/31_BELL.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a9d34f9ead8bbf40b841/refs/james-bell-official.jpg",
+        "reference_visually_inspected": true,
+        "likeness_features": "短い黒髪、高めの額、縦長の輪郭、濃い眉、目鼻と厚めの唇、口ひげから顎下につながる濃いひげ、厚い肩と首。生成画像でも目視確認。",
+        "depiction": "実在選手1人がボールを扱い前傾してドライブするイラスト。特定の実戦場面の再現ではない。無地ユニフォーム、ロゴ・スポンサー・背番号なし。",
+        "excluded_reference": "同公式サイトの契約記事にあった長い編み髪の写真は現行プロフィールの容姿と異なるため描写の根拠に使用せず、現行プロフィールを優先。"
+      }
+    ],
+    "prompt": "Create ONE finished Japanese basketball editorial thumbnail, 1536 x 864 pixels, landscape 16:9, PNG. Use case: illustration-story / sports editorial cover.\n\nApproved art direction: very dark charcoal #151A18, vivid lime #CCF43B, warm ivory typography, expressive hand-drawn black ink hatching and broad dry-brush strokes. Sharp, readable, editorial and energetic with few elements. Match the approved black/lime basketball-thumbnail reference already inspected; do not carry over its player, dates, names, scores or other content.\n\nThe ONLY illustrated person must be the real basketball player JAMES BELL / ジェームズ・ベル. Identity is based on the CURRENT official player profile portrait, https://b-corsairs.com/team/players/detail/id=23241?PlayerID=51000172 , image https://b-corsairs.bl.kuroco-img.app/v=1791970457/files/user/team/2026-27/31_BELL.jpg . Visually inspected identity details: close-cropped black natural hair, broad high forehead with gently rounded hairline, calm deep-set dark eyes under gently arched eyebrows, broad straight nose, full lips, thick connected moustache and a full black beard extending below the chin with slightly tapered lower shape, elongated oval face, strong neck and shoulders, substantial athletic build. Render these specific features recognizably in strong drawn linework with visible facial detail, not a generic athlete. Do NOT use the different long-braided man from the older contract-image reference. No braids or long hair.\n\nComposition: left roughly 57% is bold clean Japanese typography; right roughly 43% is James Bell in a dynamic, low, forward-driving basketball stance, from head down to upper thighs. Torso leans diagonally forward; shoulders turn slightly toward viewer; his right hand is on top/side of ONE orange basketball near hip height as he moves forward, his other arm held naturally for balance. Hands anatomically clear with sensible fingers; face, both hands and entire ball inside frame. Show a plain dark sleeveless basketball jersey with subtle ivory edge trim, NO logos, NO sponsor text, NO name, NO jersey number. Hand-drawn warm grey skin rendering on the dark background, forceful ink contours, sparse lime strokes behind the movement. Orange only on the ball. Do not use photography, photorealism, official photographs pasted into the image, team emblems, league emblems, watermarks, other people, spectator faces, or fictional players. This is a conceptual sports illustration, NOT a recreation of any specific actual play, winning shot or recorded moment.\n\nPlace exactly these Japanese text lines, accurately and legibly:\nSmall top kicker:\n「神奈川ダービー｜10/31 第1戦」\nVery large bold main headline:\n「横浜BC 勝利」\nExtra large lime score:\n「75–65」\nImmediately under the score, clearly identifying score order:\n「横浜BC　対　川崎」\nLower-left readable source qualifier, two short lines, no decorative badge:\n「結果は原稿掲載の公式検索表示に基づく」\n「公式ページ本文は未確認」\nBottom footer with ample margin:\n「イラスト（AI生成）｜成績をもとにしたイメージ」\n\nUse the text without the Japanese quotation marks. No additional text at all. Heavy Japanese sans typography for headline, dry-brushed large numerals; retain clean letter shapes. Main message extremely readable in a thumbnail. Source qualifier and AI footer should be comfortably readable at full resolution, around 26–30 px at 1536px width. Keep all text at least 48px from left/right boundaries and 32px from top/bottom. Background behind the source qualifier/footer must be solid dark and uncluttered. Player must not overlap any lettering.\n\nArticle evidence ONLY: supplied fixed source.html/source.txt says Yokohama BC beat Kawasaki 75 to 65 in the Oct 31 first game. It gives James Bell playing details but NO individual point total, so do NOT invent one or imply he individually scored 75. The article explicitly says results were checked from official search-result titles/snippets and the official page body could not be opened; keep both qualifier lines visible. Do not claim independently verified final official box score. Do not mention the second game's lineup, outcome, injuries, predictions, or today/tonight. Do not add any personal performance claim, name caption, sensational slogan or statement of a decisive play.\n",
+    "generator": {
+      "tool": "image_gen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "correction_calls": 0,
+      "output": "generated.png",
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "sha256": "903d335c8070f9530050a9198cce47f44644b09801751b5b539147f17e9fa0a4",
+      "qa_method": "内蔵画像生成が表示した実画像を目視検品。見出し・75対65・対戦順・10/31第1戦・検索表示由来の留保・AI注記、本人の顔の特徴、手指、ボール全体、文字の見切れと重なりを確認。保存コピーは元PNGとのハッシュ一致、PNG寸法、全チャンクCRCを検証。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-03T04:47:08.751662+00:00",
+  "publication_approved": false
+}

@@ -1,0 +1,116 @@
+{
+  "id": "cba03e879d01718161f9",
+  "article_path": "article-daily-20261025.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261025.html",
+  "source_commit": "",
+  "source_blob_sha": "6b58f7bc2f365ff72575c3dba015a8958686adc8",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "d9b807a86f51d965cd9418f1b87d825b486b3bf971b49abc769e304f816697ab",
+  "last_observed_blob_sha": "6b58f7bc2f365ff72575c3dba015a8958686adc8",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/cba03e879d01718161f9/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/cba03e879d01718161f9/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-03T04:22:02.422862+00:00",
+  "creation_event_id": "8fc89e80a3656a666867",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/cba03e879d01718161f9/thumbnail.png",
+  "image_sha256": "57089ffd4fcf14daddfe61d3b7a8c01063f0433b9644e6ed701995bc223b8459",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "6b58f7bc2f365ff72575c3dba015a8958686adc8",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.25",
+      "今季平均EFF",
+      "岡山 vs 徳島",
+      "上位対決を比較",
+      "試合前比較｜結果未確認",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_body",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/cba03e879d01718161f9/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261025.html",
+        "sections": [
+          "タイトル",
+          "独自分析①",
+          "19:10時点の確認状況（追記）",
+          "Q&A"
+        ],
+        "usage": "本文の唯一の根拠。岡山—徳島の今季平均EFF上位選手の試合前比較。出場・勝敗を保証せず、結果未確認という留保を画像に維持。記事URLの現行本文や他記事は根拠にしていない。"
+      },
+      {
+        "type": "article_body",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/cba03e879d01718161f9/source.txt",
+        "usage": "固定版文章をHTMLと照合。日付と岡山—徳島、今季平均EFF、試合前比較、結果未確認の根拠。画像では選手の数値・勝敗・出場確定を表示しない。"
+      },
+      {
+        "type": "procedure",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "usage": "黒×ライム、手描き、本人容姿の公式参照、AI注記、目視検品。実在選手必須・ready禁止などは今回の本人指示を優先。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "view_imageで実見。色・ブラシ・文字階層のみ参照。選手名・成績・日付・構図は持ち越していない。もう一方のA-faison-ivory-v3.pngは指定ディレクトリに存在せず、実見できた黒×ライム案を採用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "レイナルド・ガルシア",
+        "selection": "本文の主役",
+        "selection_reason": "タイトルで最初に挙げられた対戦カードと独自分析①の岡山側の中心選手。対戦記事の両チームから1人ずつ選定。",
+        "official_profile": "https://tryhoop.com/team/players/detail/id=50472?PlayerID=33100",
+        "official_image": "https://tryhoop.com/files/user/raynaldo_garcia_hp_main.png",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/cba03e879d01718161f9/references/garcia.png",
+        "observed_features": "短い黒髪と整った生え際、長く密な黒いひげと口ひげ、太い鼻と眉、筋肉質な肩、上腕のタトゥー。公式プロフィール写真をview_imageで実見。",
+        "usage": "容姿だけを手描きイラストへ反映。公式写真の貼付・ロゴ・スポンサー文字なし。"
+      },
+      {
+        "name": "ラポラス・アイヴァナーカス",
+        "selection": "本文の主役",
+        "selection_reason": "タイトルで最初に挙げられた対戦カードと独自分析①の徳島側の中心選手。対戦記事の両チームから1人ずつ選定。",
+        "official_profile": "https://gambarous.jp/team/players/detail/id=52349?PlayerID=51000272",
+        "official_image": "https://gambarous.jp/files/user/25-rapo.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/cba03e879d01718161f9/references/ivanauskas.jpg",
+        "observed_features": "茶色い前髪、明るい目、長い輪郭とまっすぐな鼻、細い茶色の口ひげ、長身で広い肩。公式プロフィール写真をview_imageで実見。",
+        "usage": "容姿だけを手描きイラストへ反映。公式写真の貼付・ロゴ・スポンサー文字なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration\nCreate ONE finished Japanese editorial basketball thumbnail for バスケまとめ. Landscape 16:9, ideally 1792x1024 or 1536x864, at least 1000 pixels wide. A striking handmade ink and brush sports illustration, emphatically illustrated, not photographic.\nStyle reference viewed in this conversation: B-culver-black-lime-v3.png. Match its near-black #151A18 background, acid lime #CCF43B brush streaks, warm ivory heavy Japanese typography, rough expressive ink crosshatching, small amount of orange basketball color, and restrained number of elements. Do not carry over any Culver text, date, score, player or shooting pose.\nEditorial content is ONLY the supplied fixed article dated 2026-10-25: an analysis comparing pregame season-average EFF and scheduled matchups, focusing on Okayama versus Tokushima. Results and participation were unconfirmed in that article. No final score, no winner, no game highlights claim.\n\nReal subjects, exactly TWO players, using the official profile photographs already viewed in this conversation for facial likeness only:\n1. Reynaldo Garcia / レイナルド・ガルシア (official Tryhoop Okayama portrait, https://tryhoop.com/files/user/raynaldo_garcia_hp_main.png): muscular dark-skinned man, very short close-cropped black hair and precise hairline, especially distinctive LONG thick full black beard tapering down the chest, connected moustache, strong broad nose, serious deep-set dark eyes, rounded strong brow, tattooed upper arms. This is the man with the long beard in the reference, not the man from the style sample.\n2. Rapolas Ivanauskas / ラポラス・アイヴァナーカス (official Tokushima portrait, https://gambarous.jp/files/user/25-rapo.jpg): much taller lean broad-shouldered fair-skinned man, straight brown hair with textured fringe forward across forehead, long angular face, blue eyes, prominent straight nose, thin brown moustache and otherwise largely clean shaven, no full beard.\nTransform both into hand-drawn ink illustrations. Do not paste, trace as photographic cutouts, or reproduce official photographs.\nScene: expressive one-on-one basketball play concept, NOT a reconstruction of a documented moment. On the right 55% of the composition show Garcia in the nearer foreground leaning diagonally into a driving step, controlling an orange basketball low at his side with a natural five-finger hand. Ivanauskas is a step farther back to the right, taller and in a low athletic defensive stance, looking toward Garcia, one arm naturally extended sideways and the other bent. Clear separate torsos, arms, hands and readable faces in three-quarter views; no merging, no extra limbs, no distorted fingers. Players from heads to around knees, lower legs may be intentionally outside frame; no chopped head, face, hand, or basketball. Stylized blank basketball uniforms with no lettering, no numbers, no badges, no branding: Garcia dark jersey with ivory piping, Ivanauskas ivory jersey with subtle dark trim. No team or league logos, no sponsor logos, no additional persons, no photo realism.\nComposition: strong typographic block on the left 45%, face and figure action on right. Energetic lime diagonal brushwork connects the whole scene. Keep text off faces and hands. At least 4% safe margins for all text, both heads and visible hands. Clear hierarchy, no busy scoreboard or tables.\nRender ONLY these exact Japanese text lines, impeccably spelled, sharp and readable:\nSmall top left: 「バスケまとめ」\nSmall date below: 「2026.10.25」\nMain headline, very large on two lines: 「岡山 vs 徳島」\n「上位対決を比較」\nSupporting compact lime label above the main headline: 「今季平均EFF」\nA clear smaller editorial qualifier below the headline: 「試合前比較｜結果未確認」\nBottom footer, clearly readable ivory on dark: 「イラスト（AI生成）」\nNext to it or below: 「成績をもとにしたイメージ」\nNo quotation brackets in rendered text. Do not render player names, statistics, scores, extra slogans or any other text. The words 上位対決 are explicitly framed as 今季平均EFF and 試合前比較, never a confirmed on-court meeting. The artwork is conceptual and the footer must be visible. Produce one polished thumbnail only.\n\nONE ALLOWED REVISION\nEdit the FIRST image, the generated basketball thumbnail. Images 2 and 3 are OFFICIAL FACE REFERENCES ONLY: Reynaldo Garcia (long black beard) and Rapolas Ivanauskas (brown fringe and a narrow light moustache).\nMake ONE targeted finishing correction to composition and anatomy while preserving the typography, text, palette, brushwork, illustrated style, the two real players, and their relative poses:\n- Shrink and reposition the entire two-player-and-ball illustration enough that the ENTIRE orange basketball is inside the frame, with at least 45 pixels of dark-background clearance beneath it. Keep all of Garcia's ball-control fingertips inside and clearly visible. The basketball must not touch the bottom edge.\n- Keep the entirety of Ivanauskas's hair inside with at least 40 pixels above. Give his rightmost visible hand and elbow breathing room on the right. Lower legs may be cropped deliberately, but never heads, hands or ball. Do not extend or crop the canvas; preserve landscape approx 16:9.\n- Correct all visible hands to natural basketball anatomy, exactly five digits per hand (one thumb plus four fingers), no duplicated or fused fingers. Garcia's controlling hand rests naturally on the upper side of the ball. Ivanauskas's extended hand has a simple relaxed defensive pose with distinct fingers.\n- Bring Ivanauskas's facial appearance closer to official reference image 3: longer youthful face, blue eyes, straight brown textured fringe, NARROW light brown moustache (not a thick large moustache), otherwise clean-shaven jaw. Keep Garcia's very short hair and long dense full black beard from image 2.\nThe official reference photos are for likeness ONLY; output must remain a richly hand-drawn ink sports illustration. No photo collage. No team/league/sponsor logos or uniform text/numbers.\nPreserve exact existing Japanese text and legibility:\nバスケまとめ\n2026.10.25\n今季平均EFF\n岡山 vs 徳島\n上位対決を比較\n試合前比較｜結果未確認\nイラスト（AI生成）\n成績をもとにしたイメージ\nDo not add names, results, statistics, scores or any extra text. Keep text wholly inside the canvas and unobscured. The scene is conceptual and must not imply a documented play. Produce only the corrected finished thumbnail.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 2,
+      "revision_count": 1,
+      "first_candidate": "/Users/genjo/.codex/generated_images/01a19fa4-8ed3-7311-a2ee-058ccb96aa3e/exec-4d954323-a7e7-4312-b3c1-37c230107112.png",
+      "final_candidate": "/Users/genjo/.codex/generated_images/01a19fa4-8ed3-7311-a2ee-058ccb96aa3e/exec-a139c082-c8da-47b7-a62a-3a0853c20c51.png",
+      "revision_reason": "初稿でボールの下端が見切れたため、人物・ボールの余白と手指・口ひげを1回修正。",
+      "visual_qa": "修正画像を実際に目視。全8行の日本語と日付、EFF表記、記事の結果未確認・試合前比較の留保、両選手の髪・輪郭・ひげ、見える手指、文字の重なり、頭・手・ボールの見切れなし、AI注記を確認。実際の試合場面の再現とする文言・勝敗・出場断定なし。膝下は構図として画面外。",
+      "result": "pass",
+      "output": {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/cba03e879d01718161f9/generated.png",
+        "format": "PNG",
+        "width": 1672,
+        "height": 941,
+        "sha256": "57089ffd4fcf14daddfe61d3b7a8c01063f0433b9644e6ed701995bc223b8459"
+      },
+      "source_sha256": {
+        "source.html": "fae146c5b02d8fe79e6fb7e788bd8e75ed6f09b996bf8be4c2e1a1dee91ea3fa",
+        "source.txt": "d9b807a86f51d965cd9418f1b87d825b486b3bf971b49abc769e304f816697ab"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-03T04:27:57.141798+00:00",
+  "publication_approved": false
+}

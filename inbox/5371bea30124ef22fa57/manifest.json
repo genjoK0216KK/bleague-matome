@@ -1,0 +1,115 @@
+{
+  "id": "5371bea30124ef22fa57",
+  "article_path": "article-daily-20261026.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261026.html",
+  "source_commit": "",
+  "source_blob_sha": "87d78948176b4af215572244d14da38fde8f9d96",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "c74cccc950844f3bb0202ca4b1391ca0305335bc8b856db4a2daaf60543167f4",
+  "last_observed_blob_sha": "87d78948176b4af215572244d14da38fde8f9d96",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5371bea30124ef22fa57/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5371bea30124ef22fa57/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-03T04:22:02.691344+00:00",
+  "creation_event_id": "3802db064d295c5dbc98",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/5371bea30124ef22fa57/thumbnail.png",
+  "image_sha256": "749a14ac9e5303a76a2298a1f3ea7128bcc91062951966938a44f256d1374da9",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "87d78948176b4af215572244d14da38fde8f9d96",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.26",
+      "注目カード",
+      "今季平均EFFで比較",
+      "試合前データの独自分析",
+      "出場・勝敗の予測ではありません",
+      "記事掲載時点の情報・更新時の再確認なし",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content_only",
+        "path": "source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261026.html",
+        "sections": [
+          "lead",
+          "独自分析①",
+          "独自分析②",
+          "Q&A",
+          "本文末尾の留保"
+        ],
+        "notes": "本文の根拠は固定HTMLとTXTのみ。外部資料の成績・試合情報は使用しない。HTMLのblob SHAをhashlibで照合済み。"
+      },
+      {
+        "type": "article_content_only",
+        "path": "source.txt",
+        "notes": "複数カード比較で単独の中心選手を絞れない。出場や勝敗の予測ではないこと、08時台・12時台・19時台に再確認できていないことを保持。PV取得時刻は記事の確認時刻として使用しない。"
+      },
+      {
+        "type": "style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "notes": "view_imageで目視確認。黒×ライム、太い日本語、手描きのインクとブラシのみ参照。固有名や成績は転用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ニック・ケイ",
+        "selection": "ランダム",
+        "selection_reason": "複数カード・複数選手を比較する記事で、単独の主役を絞れないため。本文に実名のある6選手を候補としてrandom.Random('5371bea30124ef22fa57').choiceで抽選。",
+        "candidate_names": [
+          "チャールズ・ジャクソン",
+          "マーク・スミス",
+          "ニック・ケイ",
+          "ジャレット・カルバー",
+          "ドウェイン・エバンス",
+          "コフィ・コーバーン"
+        ],
+        "official_profile_url": "https://www.susanoo-m.com/lp_page/roster202526_04",
+        "official_image_url": "https://www.susanoo-m.com/files/user/lp09/images/202526lineup/04/main_kay.jpg",
+        "current_roster_url": "https://www.bleague.jp/roster_detail/?PlayerID=5100000088",
+        "reference_scope": "公式画像をview_imageで確認し容姿のみ参照。公式写真を貼り付けずイラストを生成。現在の選手登録はB.LEAGUE公式で確認。",
+        "observed_features": [
+          "短い茶髪、サイドは短くトップは横に流れる",
+          "整えた茶色のひげと口ひげ",
+          "四角い顎、幅のある輪郭、通った鼻",
+          "青い目と太い眉、筋肉質な体格"
+        ],
+        "depiction": "ドリブルのイメージ。実試合の特定場面ではない。画像に名前・個人成績・出場や活躍・背番号を入れない。"
+      }
+    ],
+    "prompt": "Use case: ads-marketing / editorial sports illustration.\nCreate ONE finished Japanese basketball article thumbnail, landscape 1792x1008 pixels (16:9), PNG, opaque background.\nThe approved art direction visible in context is black #151A18, vivid lime #CCF43B, off-white, handmade ink/brush strokes, energetic sports editorial illustration, few elements, bold beautifully typeset Japanese. Do not reuse text, player, statistics, pose or scores from the example thumbnail.\n\nSubject: exactly ONE REAL player, Nick Kay (ニック・ケイ), the Australian basketball forward, based on the official Shimane Susanoo Magic profile portrait that was visually inspected. His likeness: fair skin, broad angular face and strong square jaw, short brown hair with clipped sides and slightly wavy swept-over top/fringe, substantial neat brown beard and moustache, straight prominent nose, light blue eyes, strong eyebrows, tall muscular broad-shouldered athletic build. The viewed official portrait is a likeness reference ONLY: redraw entirely as hand-inked illustration, with expressive black hatching and off-white highlights; no photographic pixels, no photorealism. Do not draw the previous example's Culver face or an invented generic player.\nPose: an original dynamic basketball dribble drive, on the LEFT 43% of the design. Low athletic crouch and torso leaning diagonally forward, one hand naturally controlling an orange basketball near the hip/knee, other arm naturally bent for balance. Face in readable three-quarter view, gaze looking toward the court ahead. Show head, both arms/hands, torso and upper legs with anatomical clarity. Keep the whole ball, head, hands and elbows comfortably inside canvas. Correct fingers, natural wrists, only two arms. Plain unbranded off-white and dark basketball uniform, no names, numbers, logos, sponsor text or club marks. Orange ball is merely a prop in the real player's hands; figure is clearly the hero. No other people, no crowd faces. No specific opponent or actual match moment is recreated. One restrained rising lime brush stroke behind the player, textured charcoal background. Asymmetric composition, very different from the previous sample's right-side jump shot.\n\nTypography: right 54% holds clean, big legible Japanese, with ample 5% safe margins. The headline has strongest hierarchy; off-white heading and lime comparison text. All text below must be rendered EXACTLY, without additions. Arrange the two longest qualification lines across a quiet flat dark footer with enough size and contrast to read. No text on the character.\nExact text:\nSmall brand at upper right: \"バスケまとめ\"\nSmall date beside it: \"2026.10.26\"\nVery large main headline: \"注目カード\"\nLarge secondary headline: \"今季平均EFFで比較\"\nMedium small tag: \"試合前データの独自分析\"\nFooter qualification line 1: \"出場・勝敗の予測ではありません\"\nFooter qualification line 2: \"記事掲載時点の情報・更新時の再確認なし\"\nBottom small labels, clearly readable: \"イラスト（AI生成）\" and \"イメージ\"\n\nEditorial constraints: This is a comparison preview based only on the supplied frozen article, not confirmed match results. Nick Kay was randomly selected from the players mentioned in that article as an illustrative figure. DO NOT print his name, personal stats, appearance, performance, team, jersey number, score, result, victory claim or any player-specific fact. Do not print the 38-point statistic or any sample's date/team/score. The illustration is an imagined basketball pose, not documentation of an actual event. Keep the AI-generated illustration label exactly visible. No official photographs, no team or league logos, no watermarks. High quality brush artwork with readable facial identity and clean, accurate Japanese typography.\n\n--- One permitted correction; exact edit prompt ---\n\nEdit the supplied Japanese basketball thumbnail once. Preserve ALL the Japanese text verbatim, palette, style, facial identity of the real player Nick Kay, pose, orange ball, and overall layout. Fix ONLY the unsafe framing: currently the player's dribbling hand/fingers and ball touch or crop at the LEFT edge and head has almost no upper margin. Reduce the illustrated player-and-ball group by about 12%, move it inward to the right a little, and reflow background so the entire head, BOTH elbows, BOTH hands, all visible fingers and full round basketball sit well inside the image with at least 45 pixels of clear margin from top and left. Keep the face at least as legible. Natural two arms and correct fingers. Lower thighs may end at the footer. Also make the right text block a little narrower so the final character of the main/subhead has at least 45 pixels right margin. Keep all text the same, including date 2026.10.26, 注目カード, 今季平均EFFで比較, 試合前データの独自分析, 出場・勝敗の予測ではありません, 記事掲載時点の情報・更新時の再確認なし, イラスト（AI生成）, イメージ, バスケまとめ. Keep the two footer qualifiers exactly unchanged. No player name, team names, number, statistics, logos, photographs or new text. Maintain non-photoreal hand-inked black/lime editorial artwork. Output one opaque PNG at approximately 16:9 and at least 1600 pixels wide.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "attempts": 2,
+      "corrections": 1,
+      "status": "passed_saved",
+      "output": "generated.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "749a14ac9e5303a76a2298a1f3ea7128bcc91062951966938a44f256d1374da9",
+      "first_candidate": "/Users/genjo/.codex/generated_images/01a19fa9-f292-7fc2-8115-d2016cdc9f53/exec-3fb063cd-2525-49fa-ab55-3b5875fa618c.png",
+      "selected_candidate": "/Users/genjo/.codex/generated_images/01a19fa9-f292-7fc2-8115-d2016cdc9f53/exec-665897c9-9c8d-4a2b-b497-f79320b1ac6f.png",
+      "correction_reason": "初稿は左端の手とボールに余白が足りなかった。1回の修正で人物を縮小して内側へ配置。",
+      "visual_inspection": {
+        "text_and_numbers": "実画像の全9テキストを照合。2026.10.26、今季平均EFF、独自分析の表記は固定原稿と一致。ランダム選手の氏名・個人成績・出場・活躍の記載なし。",
+        "source_qualifiers": "『出場・勝敗の予測ではありません』『記事掲載時点の情報・更新時の再確認なし』が実画像で読める。確定出場や結果を示していない。",
+        "likeness_or_no_named_person": "公式プロフィール画像と見比べ、短い茶髪・サイドの刈り込み・ひげと口ひげ・顎の輪郭・眉と鼻・目を反映したニック・ケイのイラストを確認。実在選手1名。公式写真の貼付なし。",
+        "layout": "修正版を目視。頭・両手・両肘・ボールが画面内。指と腕が自然で大きな破綻なし。見出しと人物の重なりなし。文字・AI表記の見切れなし。1672×941、約16:9。",
+        "ai_label": "『イラスト（AI生成）』『イメージ』が下部に明瞭。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-03T04:32:51.714373+00:00",
+  "publication_approved": false
+}

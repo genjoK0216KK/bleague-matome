@@ -1,0 +1,114 @@
+{
+  "id": "5e231e28b370cb26f1f6",
+  "article_path": "article-daily-20261031.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261031.html",
+  "source_commit": "",
+  "source_blob_sha": "83db1915143ea42396f6df861146e78209c218b0",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "742e7fdd330de141f962170d73cc91482d2b76ba5b9f532d5f9d46004d5f80b5",
+  "last_observed_blob_sha": "83db1915143ea42396f6df861146e78209c218b0",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5e231e28b370cb26f1f6/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5e231e28b370cb26f1f6/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-03T04:22:03.247456+00:00",
+  "creation_event_id": "1890588dd50f307fda42",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/5e231e28b370cb26f1f6/thumbnail.png",
+  "image_sha256": "e9999e7a8d873ddd406d448f6c34801b5e611ae51f9b8de2e0809c915312eea4",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "83db1915143ea42396f6df861146e78209c218b0",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.10.31",
+      "試合前プレビュー",
+      "神奈川",
+      "ダービー",
+      "川崎 × 横浜BC",
+      "司令塔対決",
+      "米須玲音",
+      "並里成",
+      "記事時点：出場未確認",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5e231e28b370cb26f1f6/source.html",
+        "role": "fixed_article_body_only",
+        "blob_sha": "83db1915143ea42396f6df861146e78209c218b0"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5e231e28b370cb26f1f6/source.txt",
+        "role": "fixed_article_body_only",
+        "qualifiers": "試合前プレビュー。両チームの出場メンバーは記事時点で未確認。勝敗は予測せず、結果は次の更新で確認。記事出典は検索結果ベースで、記事本文・公式試合詳細・インジュアリーリストは直接未確認。画像には成績・結果・勝敗予測・出場確定を載せない。"
+      },
+      {
+        "url": "https://basuke-matome.jp/article-daily-20261031.html",
+        "role": "article_identifier_only_live_body_not_used"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "approved_style_only_visually_inspected"
+      },
+      {
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "role": "approved_style_only_visually_inspected",
+        "note": "手順書のautomation/outputs側にはA画像なし。同名の既存制作フォルダで確認。採用する基本配色はBの黒×ライム。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "米須玲音",
+        "selection": "本文の主役",
+        "selection_reason": "記事の表題と司令塔対決節で並里成と並ぶ主役。ランダム選出なし。",
+        "source_url": "https://www.bleague.jp/roster_detail/?PlayerID=5100000022",
+        "image_url": "https://www.bleague.jp/files/user/roster/727/2026-27/5100000022_03.png",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5e231e28b370cb26f1f6/references/yonesu-official-current.png",
+        "visual_features": "短い黒髪を横に流した髪型、短い側頭部、卵形で顎へ細くなる輪郭、黒い眉、ひげなし。",
+        "reference_use": "公式2026-27プロフィール写真を目視し容姿のみ参照。写真・ロゴ・スポンサー文字を成果物に貼付しない。"
+      },
+      {
+        "name": "並里成",
+        "selection": "本文の主役",
+        "selection_reason": "記事の表題と司令塔対決節で米須玲音と並ぶ主役。ランダム選出なし。",
+        "source_url": "https://www.bleague.jp/roster_detail/?PlayerID=9489",
+        "image_url": "https://www.bleague.jp/files/user/roster/694/2026-27/9489_03.png",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5e231e28b370cb26f1f6/references/namizato-official-current.png",
+        "visual_features": "黒い根元と明るい毛先の短い巻き髪、太い眉、頬骨、薄い口ひげと独立したあごひげ。",
+        "reference_use": "公式2026-27プロフィール写真を目視し容姿のみ参照。旧公式写真の金髪丸刈りは採用しない。写真・ロゴ・スポンサー文字を成果物に貼付しない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, wide 16:9 landscape, ideally 1600x900 or larger, PNG, opaque.\nThis is a pregame preview for the fixed article dated 2026.10.31, NOT a depiction of a verified actual game or result.\n\nSTYLE: Match the already viewed approved black/lime basketball thumbnail: deep almost-black #151A18, electric lime #CCF43B, warm ivory lettering, hand-drawn ink contours, dry-brush swipes and sparse ink flecks, print-editorial illustration. Very bold readable Japanese gothic headlines. Restrained elements, sophisticated sports editorial, not photorealism, not anime, not a photographic collage. Faces must be clearly drawn but recognizably based on the two real players described below.\n\nSUBJECTS: Exactly TWO real players, Reoto Yonesu (米須玲音) and Narito Namizato (並里成), chosen because both are the article's protagonists. The official 2026-27 portraits shown in the conversation are identity references ONLY, never paste the photographs into the image.\nYonesu official appearance reference: https://www.bleague.jp/files/user/roster/727/2026-27/5100000022_03.png . Young clean-shaven man with short straight black hair swept slightly to the side, short neat sides, softly oval face tapering to chin, dark eyes, straight dark brows, relatively full lips. Light natural skin, slender athletic guard. Draw him in a plain dark burgundy basketball kit with ivory edge trim, absolutely no logos, sponsor text, team symbols or jersey numbers.\nNamizato official appearance reference: https://www.bleague.jp/files/user/roster/694/2026-27/9489_03.png . Short wavy/curly hair with dark roots and blond/light-brown tips and a slightly parted irregular top, strong dark eyebrows, tan skin, pronounced cheekbones, narrower chin, thin mustache and small separated chin beard/goatee, no full beard. Compact muscular guard. Draw him in a plain navy basketball kit with subtle red and white edge trim, absolutely no logos, sponsor text, team symbols or jersey numbers.\nDo not substitute fictional athletes, celebrities, or the players from the approved style samples. Do not use Namizato's older bleached buzz cut from the 2025 portrait; use the current short highlighted curls.\n\nCOMPOSITION: A bold symmetrical editorial confrontation with movement: Yonesu on the left third in a low forward dribbling drive, body and eyes oriented toward the center/right, hand visibly controlling ONE orange basketball at hip/lower torso height. Namizato on the right third in a low defensive side-step with one open hand extending toward the ball and the other naturally balanced, oriented toward the center/left. Both faces clearly visible in three-quarter view, large enough to identify. Show from approximately mid-thigh upward, intentional lower-body framing, whole heads and all hands/ball contained inside the canvas, no awkward joint cropping. Natural limb proportions, five anatomically sensible fingers per visible hand, no merging arms.\nThe central area carries the typography, with clear spacing from the faces and hands. The players are original illustrative poses expressing a possible matchup, not a reconstruction of an actual play. Sparse diagonal lime strokes behind figures suggest motion. Keep typography over clean dark negative space and do not put text over faces.\n\nEXACT TEXT, no other writing:\nSmall top-left masthead: 「バスケまとめ」\nSmall top-right date and clear context badge: 「2026.10.31」 and 「試合前プレビュー」\nThe central dominant title split into two large lines: 「神奈川」 / 「ダービー」\nBelow in clear ivory: 「川崎 × 横浜BC」\nBelow in bold lime or ivory: 「司令塔対決」\nSmall player labels directly below their own portrait: LEFT 「米須玲音」, RIGHT 「並里成」\nClear full-width footer qualifier in ivory: 「記事時点：出場未確認」\nBottom credit text fully readable: 「イラスト（AI生成）」 and 「イメージ」\n\nCONTENT LIMITS: The fixed article does not verify either player's participation. Preserve the pregame and unconfirmed-participation wording visibly. No scores, performance statistics, win predictions, game result, captain claims, start time, arena details, awards, official seals, other player names, watermarks, or tiny filler text. Do not carry over 38 points, 24 points or other text from style samples. Keep enough margins that all Japanese glyphs, footer and credit remain fully visible. Render Japanese text accurately as written, especially 米須玲音, 並里成, 神奈川, 出場未確認 and イラスト（AI生成）.\n\n--- ONE ALLOWED REVISION ---\n\nUse case: identity-preserve.\nInput image 1 is the EDIT TARGET: the finished 16:9 Japanese black/lime basketball thumbnail. Images 2 and 3 are identity references ONLY: official portraits of Reoto Yonesu (left player, image 2) and Narito Namizato (right player, image 3). Do not paste the photos or their logos into the output.\nMake ONLY one targeted refinement: improve the likeness of both illustrated players' FACES AND HAIR to the respective official portraits while maintaining the target's hand-drawn ink / dry-brush illustration style. Keep everything else unchanged, including the canvas size, composition, all poses, the single basketball, hands and fingers, kits without logos/numbers, colors, text and text placement.\nLEFT Yonesu: match image 2's short black hair and compact neat sides, the slightly side-swept top without long bangs, rounder open eyes, dark brows, softer oval cheeks/jaw tapering to a neat chin, clean-shaven. His face in the target is somewhat too sharp/angular; make it recognizably the real player's softer features. Keep the focused playing expression and current three-quarter head orientation; do not copy the portrait smile.\nRIGHT Namizato: match image 3's actual cheek and eye shapes, mature facial structure, short highlighted curls with dark roots, thin mustache and small chin beard. Retain focused playing expression and head orientation. No full beard.\nPreserve ALL exact existing Japanese text in image 1, including 「バスケまとめ」「2026.10.31」「試合前プレビュー」「神奈川」「ダービー」「川崎 × 横浜BC」「司令塔対決」「米須玲音」「並里成」「記事時点：出場未確認」「イラスト（AI生成）」「イメージ」. Do not introduce new words or numbers. This is a pregame illustrative concept, not an actual game reconstruction.\nNo photography, no photographic faces, no logo, no sponsor text, no league mark, no jersey numbers, no additional figures. Output exactly ONE complete PNG thumbnail, same landscape aspect ratio.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built_in",
+      "api_or_cli_used": false,
+      "status": "generated_and_visually_verified",
+      "attempts": 2,
+      "corrections": 1,
+      "initial_image_path": "/Users/genjo/.codex/generated_images/01a19fb2-4912-7650-a0db-1175e0281687/exec-90a270a7-6d12-4d5f-824f-eae728aef4ed.png",
+      "final_image_path": "/Users/genjo/.codex/generated_images/01a19fb2-4912-7650-a0db-1175e0281687/exec-a1ae5bad-a2a0-4810-91e4-fc071511b090.png",
+      "width": 1671,
+      "height": 941,
+      "sha256": "e9999e7a8d873ddd406d448f6c34801b5e611ae51f9b8de2e0809c915312eea4",
+      "post_processing": "none; copy final selected PNG without modification",
+      "qa_notes": {
+        "text_and_numbers": "生成結果の全画像を目視。神奈川ダービー、川崎×横浜BC、司令塔対決、2人の氏名、2026.10.31が固定原稿と一致。成績・スコア・勝敗断定なし。",
+        "source_qualifiers": "試合前プレビュー、記事時点：出場未確認、イメージを画像で確認。実際の対戦場面再現や出場確定を主張していない。",
+        "likeness_or_no_named_person": "実在する本文主役2人。公式2026-27画像と比較し、米須の短い黒髪・ひげなし・輪郭、並里の明るい巻き髪・眉・口ひげ・あごひげを目視確認。顔と髪のみ1回補正。",
+        "layout": "1671×941、約16:9。見出し・選手名・注記は判読可能。顔・ボール・両選手の手が収まり、指・関節に明瞭な破綻なし。下半身は動きに合わせた意図的フレーミング。ロゴ・スポンサー文字なし、写真風なし。",
+        "ai_label": "右下のイラスト（AI生成）とイメージを実画像で確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-03T04:43:15.991073+00:00",
+  "publication_approved": false
+}
