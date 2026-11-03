@@ -1,0 +1,164 @@
+{
+  "id": "a9203bddc87bf3510643",
+  "article_path": "article-games-20261104.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261104.html",
+  "source_commit": "",
+  "source_blob_sha": "0c453a53f8516b2a8e5b06348e2a6565e54716f4",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "3ff4e230364768452d0ac5be56e4d06331973e5e75a00b42d42a88e26bca9717",
+  "last_observed_blob_sha": "0c453a53f8516b2a8e5b06348e2a6565e54716f4",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a9203bddc87bf3510643/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a9203bddc87bf3510643/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-03T16:59:15.288149+00:00",
+  "creation_event_id": "a91054f5ea9812ac6bc5",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/a9203bddc87bf3510643/thumbnail.png",
+  "image_sha256": "d9d85d31eddd63099cb37cc918364b646059bd2919533fbaa0af70851528648e",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "0c453a53f8516b2a8e5b06348e2a6565e54716f4",
+    "text_lines": [
+      "バスケまとめ",
+      "11/04",
+      "試合予定",
+      "B.ONE",
+      "当日TOP3は公式記録確定後",
+      "2026年11月4日 01:58 JST時点",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a9203bddc87bf3510643/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261104.html",
+        "role": "本文内容の根拠。HTMLのgit blob SHAをバイト列から計算して指定値との一致を確認。gitコマンドは不使用。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a9203bddc87bf3510643/source.txt",
+        "role": "本文内容の根拠。2026年11月4日のB.ONE全10試合は01:58 JST時点で試合前。当日TOP3は全試合の公式記録確定後。本文に選手名はない。タイトルのベスト5と本文の当日TOP3を混同せず、画像は試合予定を主題にした。"
+      },
+      {
+        "type": "official_current_roster",
+        "url": "https://broncos20.jp/team/players/",
+        "role": "本文に登場する埼玉の現役選手をランダム抽選する候補の確認専用。記事内容・成績・出場の根拠には使用しない。"
+      },
+      {
+        "type": "official_player_profile",
+        "url": "https://broncos20.jp/team/players/detail/id=60242?PlayerID=12500",
+        "role": "古牧昌也の本人確認・容姿参照専用。公式プロフィール写真をダウンロードして実際に目視。写真の貼付け、ロゴ、スポンサー、背番号は使用しない。"
+      },
+      {
+        "type": "official_player_portrait",
+        "url": "https://bleague.bl.kuroco-img.app/v=2026110402/files/user/roster/744/2026-27/12500_01.jpg",
+        "role": "クラブ公式プロフィールのimg srcから取得。顔・髪型の目視参照および唯一の修正時の本人参照画像。"
+      },
+      {
+        "type": "official_identity_crosscheck",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=12500",
+        "role": "同一人物・2026-27埼玉所属の照合専用。外部の成績値を画像に持ち込まない。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで確認。黒#151A18・ライム#CCF43B、太い見出し、インク・ブラシ表現のみ参照。参照元の人物・名前・数値・試合結果は転用しない。"
+      },
+      {
+        "type": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール。人物を絞れない場合の主役、注記、readyの扱いは本依頼の最新指定を優先。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "古牧 昌也",
+        "name_romanized": "Masaya Komaki",
+        "team": "さいたまブロンコス（本文表記：埼玉）",
+        "selection": "ランダム",
+        "reason": "本文に選手名がなく特定選手の主役を絞れないため、本文に登場するチームの現役選手から選択。",
+        "randomization": {
+          "method": "Python random.Random(job_id).choiceをチーム一覧、公式ロスターの順に各1回適用",
+          "seed": "a9203bddc87bf3510643",
+          "candidate_teams": [
+            "香川",
+            "東京U",
+            "山形",
+            "東京Z",
+            "福島",
+            "新潟",
+            "埼玉",
+            "愛媛",
+            "立川",
+            "横浜EX",
+            "金沢",
+            "八王子",
+            "福井",
+            "鹿児島",
+            "静岡",
+            "FE名古屋",
+            "福岡",
+            "岡山",
+            "熊本",
+            "岩手"
+          ],
+          "selected_team": "埼玉",
+          "candidate_players": [
+            "トレント・バットリック",
+            "島﨑 輝",
+            "ギャリソン・ブルックス",
+            "ジョーダン・ハミルトン",
+            "古牧 昌也",
+            "多嶋 朝飛",
+            "小西 聖也",
+            "栗原 ルイス",
+            "長島 蓮",
+            "鈴木 悠介",
+            "川邉 亮平",
+            "マシュー・ライト",
+            "ポーグ 健",
+            "松下 裕汰"
+          ]
+        },
+        "reference_source": "https://broncos20.jp/team/players/detail/id=60242?PlayerID=12500",
+        "portrait_url": "https://bleague.bl.kuroco-img.app/v=2026110402/files/user/roster/744/2026-27/12500_01.jpg",
+        "observed_features": "黒のセンター分けの直毛、額の見える前髪、やや縦長の卵形の輪郭、まっすぐな眉、細めの目、直線的な鼻、ひげなし。修正版で髪型とひげのない口元・顎を照合。",
+        "depiction": "単独のドライブ姿。実際の試合場面の再現ではなくイメージ。選手名、背番号、成績、当日の出場・活躍の断定を画像に入れていない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: ads-marketing\nCreate exactly ONE finished Japanese basketball editorial thumbnail for バスケまとめ. Landscape 16:9, target 1536x864 pixels or larger.\nUse the previously viewed approved black-and-lime thumbnail only as visual style guidance: deep almost-black #151A18, electric lime #CCF43B, warm ivory, forceful Japanese headline, hand-drawn ink hatching and rough dry-brush streaks, few elements. Do NOT copy any of its player identity, words, numbers or scores.\nSubject: the REAL player Masaya Komaki / 古牧昌也, selected randomly from a team mentioned in the supplied article. Use the viewed official Saitama Broncos profile photograph as his likeness reference only. Adult Japanese man, athletic lean-muscular build, straight black hair with a center part and ear-length curtain fringe, open forehead, long oval face, defined jaw and chin, straight thick eyebrows, narrow almond eyes, straight medium nose, slightly full lips, no moustache or beard. Preserve these visible features. Do not invent a generic player. Do not paste any photo into the result.\nIllustration: dynamic three-quarter low driving pose on the RIGHT 44% of the canvas; torso leaning into the drive, head facing slightly left and eyes looking upcourt, hair moving slightly, one hand naturally controlling one orange basketball at waist level while the other arm extends for balance. Anatomically credible hands, fingers and arms. Depict only this one player. Face, hair, hands and ball fully visible. Use strongly hand-inked black/ivory illustration with limited warm skin accents, no photorealistic rendering. Plain unbranded ivory basketball jersey and shorts with black trim; NO letters, names, numbers, badges, team logos, league logos or sponsor marks on clothing or ball. This is a conceptual basketball illustration, NOT a reconstruction of any actual game action or a prediction of participation.\nLayout: LEFT 54% large bold typography, RIGHT 44% player with energetic sweeping lime brush arc behind him. Dark quiet text area. Generous 6% safe margins on all text. All required text must be cleanly separated from player and readable at thumbnail size. Oversized date and headline, smaller qualifiers and footer. Avoid scoreboards, statistics, medals, crowds and other people.\nRender ONLY the following exact text:\nsmall upper-left masthead: 「バスケまとめ」\nlarge lime date: 「11/04」\nlargest ivory main headline on one line: 「試合予定」\nsmall lime category tag: 「B.ONE」\nclear supporting line below main headline: 「当日TOP3は公式記録確定後」\nsmall but legible time qualifier: 「2026年11月4日 01:58 JST時点」\nfooter, clearly legible ivory on dark: 「イラスト（AI生成）｜イメージ」\nThe article snapshot has all fixtures pregame and no finalized TOP3. Never imply a completed result. Do NOT put the player's name, his appearance, performance or any statistics in the image. Do NOT write best five, points or scores. Keep the exact AI disclosure and image disclaimer. One image only.\n\nSINGLE CORRECTION\nEdit reference image 1 (the existing black/lime Japanese basketball thumbnail) ONCE. Reference image 2 is the OFFICIAL identity reference of the real player Masaya Komaki / 古牧昌也 and must be used to correct the face and hair ONLY. Keep image 1's composition, body pose, hands, orange ball, clothing, black/lime/ivory palette, all Japanese text and numbers EXACTLY unchanged.\nCritical identity correction: Image 1 currently incorrectly suggests a moustache and chin stubble, and the hair is too wavy/shaggy. Masaya Komaki in reference image 2 is clean-shaven with NO facial hair. Remove all moustache, goatee, beard and stubble indications. Render smooth clean skin around the upper lip, chin and jaw, with sparse directional ink shading that does not read as hair. Closely match reference 2's straight center-parted black curtain hair, neat sides near the ears, open forehead, oval moderately long face, jaw/chin contour, slightly narrow almond eyes, straight eyebrows, straight nose and closed to slightly parted lips. Retain the dynamic three-quarter upcourt gaze while making the face recognizably the photographed real player.\nKeep the final artwork as visibly hand-drawn ink editorial illustration, NOT a photograph, do not paste the photograph. Do not copy any uniform logos, sponsor lettering, numbers or badge from reference 2. The jersey remains plain ivory with black trim. No additional people.\nPreserve EXACT visible text:\nバスケまとめ\n11/04\n試合予定\nB.ONE\n当日TOP3は公式記録確定後\n2026年11月4日 01:58 JST時点\nイラスト（AI生成）｜イメージ\nDo not add the player's name or any achievement, participation claim or score. Maintain landscape approximately 16:9 and at least 1536 pixels wide. Return exactly one corrected image.",
+    "generator": {
+      "tool": "built-in image_gen",
+      "mode": "内蔵画像生成のみ",
+      "generation_calls": 2,
+      "correction_count": 1,
+      "initial_candidate": "/Users/genjo/.codex/generated_images/01a1a259-c87f-7d92-845a-0ccbc03c207a/exec-3b8ce50f-1b12-43d0-9c2a-fdb09dcaf449.png",
+      "initial_qa_issue": "顔の口元・顎に公式写真にないひげの表現、髪のうねりがあったため不採用。",
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1a259-c87f-7d92-845a-0ccbc03c207a/exec-ee29e4c0-7188-45f8-8329-4d4862759081.png",
+      "saved_png": {
+        "width": 1672,
+        "height": 941,
+        "png_sha256": "d9d85d31eddd63099cb37cc918364b646059bd2919533fbaa0af70851528648e",
+        "bytes": 2539724,
+        "source_blob_sha": "0c453a53f8516b2a8e5b06348e2a6565e54716f4",
+        "saved_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a9203bddc87bf3510643/generated.png"
+      },
+      "qa_observations": {
+        "text_and_numbers": "生成結果を目視し、全7行の表記・11/04・B.ONE・TOP3・2026年11月4日01:58 JSTを照合。余計な選手名・得点・順位はない。",
+        "source_qualifiers": "『試合予定』『当日TOP3は公式記録確定後』『2026年11月4日 01:58 JST時点』が読め、固定原稿の試合前・未確定状態を保持。画像はイメージと明記。",
+        "likeness_or_no_named_person": "実在選手の公式写真を目視し、最終画像のセンター分け直毛、輪郭、眉・目鼻、ひげのない口元・顎を照合。写真風ではなくインク画。",
+        "layout": "横長1672x941。見出し、日時、注記が判読でき、顔・両手・ボールが収まる。両腕と両手の指を目視し、不自然な増殖・欠損なし。胴体下部の意図したフレームアウト以外に重要な見切れなし。チーム・リーグロゴ、スポンサー文字なし。",
+        "ai_label": "下部に『イラスト（AI生成）｜イメージ』を目視確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-03T17:04:01.600824+00:00",
+  "publication_approved": false
+}
