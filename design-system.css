@@ -398,3 +398,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .wrap .match-row,.wrap .daily-score{grid-template-columns:minmax(0,1fr);gap:0;text-align:center}
 .wrap .match-row span:first-child,.wrap .daily-score span:first-child,.wrap .match-row span:nth-child(3),.wrap .daily-score span:nth-child(3){text-align:center}
 }
+/* 出典欄：閉じた形で1件1行（本人 11/3「注釈が多すぎる」） */
+.wrap .article .sources{margin:24px 0 16px;border-top:1px solid var(--line)}
+.wrap .article .sources ul{margin:0 0 8px;padding-left:20px}
+.wrap .article .sources li{font-size:14px;line-height:21px;margin:0 0 8px;color:var(--muted)}
+.wrap .article .sources a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}

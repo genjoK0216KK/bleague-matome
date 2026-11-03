@@ -60,8 +60,7 @@ def page(title, date, category, body, filename, sources, updated):
 <h1>{esc(title)}</h1><div class="pmeta"><span class="tag {category}">{label}</span><span>{esc(date.replace('-', '.'))}</span><span>最終データ取得 {esc(updated)}</span></div>
 <img class="eyecatch" src="{filename.replace("article-", "thumb-").replace(".html", ".svg")}" alt="{esc(title)}">
 {body}
-<p class="source">出典：B.LEAGUE公式<br>{source_html}</p>
-<div class="note">公式記録・発表は訂正される場合があります。出場は保証されません。最新情報は公式サイトをご確認ください。</div>'''
+<p class="source">出典：B.LEAGUE公式<br>{source_html}</p>'''
     return stats.page(title, title, filename, content).replace('<article class="article">', '<article class="article match-article">')
 
 
