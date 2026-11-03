@@ -254,29 +254,29 @@
   },
   "article-daily-20261103.html": {
    "article_path": "article-daily-20261103.html",
-   "editorial_fingerprint": "4d6556024de925b7e20d3ae26a2762c3caf7e332b2219ba6e4ded80655082066",
+   "editorial_fingerprint": "280d68be9f8c38840ba1db246e40680fce60a6fdd9c7e05cbb1e0a4030e90274",
    "files": {
     "eyecatch": {
-     "height": 720,
-     "path": "thumbs/auto/article-daily-20261103-07f56b2405b6.jpg",
+     "height": 721,
+     "path": "thumbs/auto/article-daily-20261103-3e8d2daa96de.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261103-07f56b2405b6-og.jpg",
+     "path": "thumbs/auto/article-daily-20261103-3e8d2daa96de-og.jpg",
      "width": 1200
     }
    },
-   "id": "a5a194dfdf4bb060673e",
-   "image_sha256": "07f56b2405b615237fd1dce9b30a02407c390a0c9a7a048c30e63699dc3b340a",
-   "imported_at": "2026-11-03T04:57:50.688906+00:00",
-   "prepared_at": "2026-11-03T04:57:23.107679+00:00",
-   "source_blob_sha": "f831c0f3f424dbd6d744ef3070cd2ee236d0eb88",
+   "id": "faacf40f2eedbd5f216f",
+   "image_sha256": "3e8d2daa96de5094588d9f071a7e5ad9b130eb3a27d3c9d3717c3b516cf68d9c",
+   "imported_at": "2026-11-03T10:22:27.861706+00:00",
+   "prepared_at": "2026-11-03T10:21:57.413237+00:00",
+   "source_blob_sha": "2446e234c49173928f5e9edc390fe0c9c34c17e9",
    "source_size": [
-    1672,
+    1671,
     941
    ],
-   "stable_fingerprint": "4d6556024de925b7e20d3ae26a2762c3caf7e332b2219ba6e4ded80655082066",
+   "stable_fingerprint": "280d68be9f8c38840ba1db246e40680fce60a6fdd9c7e05cbb1e0a4030e90274",
    "style": "ink-lime-portrait-v5",
    "title": "神戸が長崎に90-87で雪辱、2連戦は1勝1敗"
   },
@@ -843,27 +843,6 @@
  },
  "log": [
   {
-   "article": "article-daily-20261026.html",
-   "at": "2026-10-31T01:04:03.302419+00:00",
-   "event": "imported",
-   "id": "98e19c39f90c0bb08e5b",
-   "image": "bc3bf876d1b1"
-  },
-  {
-   "article": "article-daily-20261027.html",
-   "at": "2026-10-31T01:04:03.302442+00:00",
-   "by": "a080784863e72da1cb08",
-   "event": "superseded",
-   "id": "d4cd88fa21bd64b494f0"
-  },
-  {
-   "article": "article-daily-20261027.html",
-   "at": "2026-10-31T01:04:03.452130+00:00",
-   "event": "imported",
-   "id": "a080784863e72da1cb08",
-   "image": "68f470db6c83"
-  },
-  {
    "article": "article-daily-20261029.html",
    "at": "2026-10-31T01:04:03.452257+00:00",
    "by": "2912f2bf307b5ed2a60d",
@@ -1401,6 +1380,27 @@
    "event": "imported",
    "id": "a5a194dfdf4bb060673e",
    "image": "07f56b2405b6"
+  },
+  {
+   "article": "article-daily-20261103.html",
+   "at": "2026-11-03T10:22:27.683660+00:00",
+   "by": "faacf40f2eedbd5f216f",
+   "event": "superseded",
+   "id": "d751b892af758cf975ea"
+  },
+  {
+   "article": "article-daily-20261103.html",
+   "at": "2026-11-03T10:22:27.683686+00:00",
+   "by": "faacf40f2eedbd5f216f",
+   "event": "superseded",
+   "id": "a5a194dfdf4bb060673e"
+  },
+  {
+   "article": "article-daily-20261103.html",
+   "at": "2026-11-03T10:22:27.861728+00:00",
+   "event": "imported",
+   "id": "faacf40f2eedbd5f216f",
+   "image": "3e8d2daa96de"
   }
  ],
  "seen": {
@@ -1444,7 +1444,7 @@
   "a080784863e72da1cb08": "imported",
   "a2b6b2b44b3ab2922589": "superseded:896bbeb35c2a1eb9d0e1",
   "a384f66c5c633ed9bdb1": "imported",
-  "a5a194dfdf4bb060673e": "imported",
+  "a5a194dfdf4bb060673e": "superseded:faacf40f2eedbd5f216f",
   "a61987943aaf82c9dcaa": "superseded:c1aaf417a1880194d3ac",
   "a718e72ebd289b318965": "imported",
   "a763fe95d3d922e47dbc": "imported",
@@ -1463,7 +1463,7 @@
   "d4cd88fa21bd64b494f0": "superseded:a080784863e72da1cb08",
   "d4ee196cd5adf437fb60": "superseded:619af1e58cddd34c14bc",
   "d5700d087ac39b72ed00": "imported",
-  "d751b892af758cf975ea": "superseded:a5a194dfdf4bb060673e",
+  "d751b892af758cf975ea": "superseded:faacf40f2eedbd5f216f",
   "d87a8ec3bf24b1b0559b": "superseded:81cdf284d66df1d61f20",
   "db1b08157b4974a77014": "superseded:a384f66c5c633ed9bdb1",
   "de438e71b32369b2ee65": "superseded:3370472f9c78336a4974",
@@ -1474,6 +1474,7 @@
   "f4370ce664d0aaa5d148": "imported",
   "f60ec06f0d2f4ee967a2": "imported",
   "f662c904491c9e820ed0": "imported",
+  "faacf40f2eedbd5f216f": "imported",
   "fcf33c7c4f183753d4ec": "imported"
  },
  "version": 1
