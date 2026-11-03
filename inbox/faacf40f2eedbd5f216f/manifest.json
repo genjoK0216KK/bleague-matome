@@ -1,0 +1,93 @@
+{
+  "id": "faacf40f2eedbd5f216f",
+  "article_path": "article-daily-20261103.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261103.html",
+  "source_commit": "",
+  "source_blob_sha": "2446e234c49173928f5e9edc390fe0c9c34c17e9",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "280d68be9f8c38840ba1db246e40680fce60a6fdd9c7e05cbb1e0a4030e90274",
+  "last_observed_blob_sha": "2446e234c49173928f5e9edc390fe0c9c34c17e9",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/faacf40f2eedbd5f216f/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/faacf40f2eedbd5f216f/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-03T10:17:20.505884+00:00",
+  "creation_event_id": "92799fbad297e4540015",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/faacf40f2eedbd5f216f/thumbnail.png",
+  "image_sha256": "3e8d2daa96de5094588d9f071a7e5ad9b130eb3a27d3c9d3717c3b516cf68d9c",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "2446e234c49173928f5e9edc390fe0c9c34c17e9",
+    "text_lines": [
+      "バスケまとめ｜11/1 第2戦",
+      "神戸、雪辱",
+      "神戸 90–87 長崎",
+      "木村圭吾 22得点",
+      "3P 6本成功｜2連戦は1勝1敗",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "source.html",
+        "blob_sha": "2446e234c49173928f5e9edc390fe0c9c34c17e9",
+        "verified": true
+      },
+      {
+        "type": "article_content",
+        "path": "source.txt",
+        "facts": [
+          "第2戦は11月1日、神戸90-87長崎",
+          "木村圭吾22得点、3ポイント10本中6本成功",
+          "10月31日と11月1日の2連戦は1勝1敗"
+        ],
+        "qualifiers": [
+          "第2戦の結果であり11月3日の試合とはしない",
+          "画像は特定の実際の場面を再現しない"
+        ]
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "配色・インク表現・文字階層のみ。人物と本文数値は転用しない"
+      },
+      {
+        "type": "visual_qa",
+        "observations": [
+          "最終画像の全7行を目視確認し、神戸90-87長崎、木村圭吾22得点、3P6本成功、2連戦1勝1敗が固定原稿と一致。",
+          "11/1 第2戦の表記と成績をもとにしたイメージの注記を確認。特定の決勝シュートを描いたとは記していない。",
+          "両手とボールのつながりに明瞭な破綻なし。頭・手・ボールに見切れなし。文字の重なりなし。ボール上の余白を修正後に確認。",
+          "チーム・リーグ・スポンサーロゴ、スポンサー文字、公式写真の貼り付けなし。",
+          "イラスト（AI生成）の注記を目視確認。"
+        ]
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "木村圭吾",
+        "selection": "本文の主役",
+        "selection_reason": "第2戦の22得点と3P6本成功が本文と更新注記で具体的に扱われるため",
+        "source": "神戸ストークス公式プロフィール",
+        "url": "https://www.storks.jp/player_lp/keigo_kimura/",
+        "image_url": "https://storks.bl.kuroco-img.app/v=1759394556/files/user/_/player_25-26/image/2025_pc_12.webp",
+        "local_reference": "references/keigo-kimura-official.webp",
+        "reference_viewed": true,
+        "appearance": "トップは明るい毛先のある短く密なパーマ状の髪、サイドは短い濃色。太い眉、丸みのある卵型の輪郭、厚めの唇、ひげなし。",
+        "use": "容姿のみ参照。公式写真を完成画像へ貼り付けない。",
+        "visual_qa": "最終生成画像を目視確認。細かく密な明るい毛先の髪、短いサイド、眉・目鼻・唇・丸みのある輪郭を公式画像と照合。ひげなし。実在の木村圭吾を描いた非写実イラスト。"
+      }
+    ],
+    "prompt": "Use case: illustration-story / editorial sports thumbnail.\nCreate exactly ONE finished Japanese basketball-news thumbnail as an opaque PNG, wide 16:9, preferably 1536x864 or larger. This is for バスケまとめ.\nVisual design: hand-drawn ink and dry-brush sports editorial illustration, bold simplified shapes, strong black #151A18 background and electric lime #CCF43B brush accent, ivory Japanese typography. Same visual family as the approved black-and-lime thumbnail viewed in this conversation, but reverse the composition: player on LEFT, headline and score on RIGHT. A few confident directional strokes behind the player, no busy arena, no crowd, no photo texture, no photorealism.\nSubject: exactly one real person, Japanese professional basketball player 木村圭吾 (Keigo Kimura), based on the official Kobe Storks profile image we reviewed at https://www.storks.jp/player_lp/keigo_kimura/ . Depict his recognizable observed appearance: youthful Japanese male with fairly broad oval face tapering into a rounded jaw, prominent ears, thick dark straight eyebrows, almond-shaped dark eyes, straight medium-width nose, full closed lips, clean-shaven face with no moustache or beard, short dense textured/tousled curly hair with dark roots and many ash-blond/light-brown tips on top, much shorter dark faded sides. Tall lean athletic guard physique. Keep the face clearly illuminated in ivory and warm light tan ink shapes, do not black out facial features and do not use a generic anonymous face. Plain dark-green basketball kit with ivory trim, absolutely no team logos, league logos, sponsor logos, sponsor text, jersey name or number. No other people.\nAction: dynamic three-quarter view of Kimura rising into a jump-shot, upper torso turned slightly toward viewer and face looking up to the right. Basketball still supported near/above his forehead by natural hands in a shooting set position; fingers and both arms anatomically correct. Full ball, hands and head comfortably within the frame, shoulder and waist lower in left half. This is an imagined general basketball action, NOT a recreation of a particular basket or moment in the reported game. No hoop needed.\nLayout: left approximately 43% for the drawn player, right 57% for a clear typographic block. Leave at least 55px safe margins around the canvas, no overlaps between face/hands and text. Oversized Japanese heavy-gothic headline and very bold score, small supporting lines, crisp readable characters, no boxy dashboard or decorative badges.\nRender ONLY the following exact text, with no additional text:\nSmall top-right kicker: \"バスケまとめ｜11/1 第2戦\"\nVery large headline: \"神戸、雪辱\"\nLarge score beneath: \"神戸 90–87 長崎\"\nMedium bold line: \"木村圭吾 22得点\"\nSmaller line: \"3P 6本成功｜2連戦は1勝1敗\"\nTwo small but clearly legible footer lines: \"イラスト（AI生成）\" and \"成績をもとにしたイメージ\"\nAll names, results and statistics above come exclusively from the supplied frozen article source.html/source.txt. Do not import any text, player name, dates or statistics from other sources or previous thumbnails. The official source is for appearance only. Do not add a victory buzzer-beater claim, a championship claim, dramatic invented match details, a photographer credit, a signature, or a watermark. Photographs must not be pasted into the design: everything depicting Kimura must be a newly drawn illustration. Keep restrained ink hatching on his face and kit and an orange ball with black seams as the only orange accent.\n\n--- One revision, applied to the first generated image with the official appearance image as reference ---\nEdit image 1, the finished black/lime Japanese basketball thumbnail. Image 2 is the OFFICIAL APPEARANCE REFERENCE ONLY for the same real player, 木村圭吾 / Keigo Kimura. Make ONE tightly scoped refinement:\n(1) Correct the illustrated player's likeness to the photograph in image 2: make his oval cheeks/jaw a little broader and softer, eyes and nose shape closer to the reference, and replace the oversized ringlet curls with his shorter dense fine crimped/tousled hair, dark roots and thin ash-brown/blond highlighted tips, short dark faded sides. Preserve no facial hair. Keep the player's identity, youth and three-quarter shooting gaze, his original ink-illustrated face, not a photo or a pasted photograph.\n(2) Slightly reduce and reposition the PLAYER AND BALL together within the left side so that the TOP of the ball has clearly at least 45 pixels of black background clearance from the upper edge in this 1672x941 frame. Keep head, hands, ball fully inside the canvas and separated from text. Retain the same general shooting-set pose, correct natural hands with five fingers each, plain dark-green unbranded jersey and ivory piping. Lower torso may continue off the bottom as a deliberate portrait crop.\nEverything else is invariant: retain the 16:9 landscape dimensions, exact black #151A18 and lime #CCF43B brushwork visual style, all typography, positions and sizes on the right, score and every text line EXACTLY as image 1:\nバスケまとめ｜11/1 第2戦\n神戸、雪辱\n神戸 90–87 長崎\n木村圭吾 22得点\n3P 6本成功｜2連戦は1勝1敗\nイラスト（AI生成）\n成績をもとにしたイメージ\nDo not copy any logo, lettering, uniform branding, jersey number, signature or photograph from image 2. No new elements. This remains a hand-drawn imagined sports illustration, not a real-game moment reconstruction. Output one opaque PNG.",
+    "generator": "built-in image_gen.imagegen; initial generation + 1 revision; final file exec-77afd13a-b6d4-4dad-9583-8c605ffc0d5d.png",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-03T10:21:57.413237+00:00",
+  "publication_approved": false
+}
