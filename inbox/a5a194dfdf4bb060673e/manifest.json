@@ -1,0 +1,95 @@
+{
+  "id": "a5a194dfdf4bb060673e",
+  "article_path": "article-daily-20261103.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261103.html",
+  "source_commit": "",
+  "source_blob_sha": "f831c0f3f424dbd6d744ef3070cd2ee236d0eb88",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "4d6556024de925b7e20d3ae26a2762c3caf7e332b2219ba6e4ded80655082066",
+  "last_observed_blob_sha": "f831c0f3f424dbd6d744ef3070cd2ee236d0eb88",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a5a194dfdf4bb060673e/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a5a194dfdf4bb060673e/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-03T04:22:04.051557+00:00",
+  "creation_event_id": "701ba14313ea8b06140f",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/a5a194dfdf4bb060673e/thumbnail.png",
+  "image_sha256": "07f56b2405b615237fd1dce9b30a02407c390a0c9a7a048c30e63699dc3b340a",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "f831c0f3f424dbd6d744ef3070cd2ee236d0eb88",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.03",
+      "神戸が雪辱",
+      "第2戦",
+      "神戸 90-87 長崎",
+      "2連戦は1勝1敗",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a5a194dfdf4bb060673e/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261103.html",
+        "role": "本文内容の根拠。Git blob形式のSHA-1をgitを使わず計算し指定値と一致。第2戦は神戸90対87長崎、2連戦は1勝1敗、記事日付2026.11.03。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a5a194dfdf4bb060673e/source.txt",
+        "role": "本文内容の根拠。HTML本文と見出し・点数・2連戦結果を照合。"
+      },
+      {
+        "type": "official_player_profile",
+        "url": "https://www.velca.jp/team/players/detail/id=50907?PlayerID=51000670",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026110115/files/user/roster/2488/2026-27/51000670_01.jpg",
+        "role": "人物の同定・容姿のみ。外部ページの試合結果や個人成績は画像文言の根拠に使用していない。公式写真は目視参照のみで、完成画像への貼り付けはしていない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで確認した承認済みスタイル。黒・ライム、太い日本語見出し、インクとブラシの参考。参照画像の選手名・成績は転用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "リーヴァイ・ランドルフ",
+        "team": "長崎ヴェルカ",
+        "selection": "ランダム",
+        "selection_reason": "原稿の主題は神戸と長崎の2連戦で、特定選手を単独の主役に絞れないため。",
+        "selection_method": "本文に名前がある4名からPython secrets.choiceで1回抽選。抽選結果はランドルフ。",
+        "selection_pool": [
+          "ランドルフ",
+          "熊谷",
+          "ブラントリー",
+          "馬場雄大"
+        ],
+        "reference_source": "https://www.velca.jp/team/players/detail/id=50907?PlayerID=51000670",
+        "reference_image": "https://bleague.bl.kuroco-img.app/v=2026110115/files/user/roster/2488/2026-27/51000670_01.jpg",
+        "appearance_verified": "公式写真をview_imageで目視。短く頭に沿って編み込んだ黒髪、黒いヘッドバンド、やや幅のある頬骨と卵型の輪郭、黒い眉と目、鼻・厚めの唇、口ひげとつながる整った黒いひげを参照。修正版を見比べて確認。",
+        "depiction": "1人のドリブル姿のイラスト。実際の2連戦の特定場面を再現したものではない。選手名・背番号・個人成績・出場や活躍を主張する文言なし。チームロゴ・リーグロゴ・スポンサー文字なし。",
+        "qualifiers_checked": "第2戦のチーム得点と2連戦結果だけを表示。ランダム選手の個人成績として読める表現を避け、イラスト（AI生成）およびイメージを表示。原稿にある馬場選手のベンチ外について断定を加えていない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story\nAsset type: one finished Japanese basketball news thumbnail, landscape 16:9, 2048 x 1152 PNG.\n\nCreate exactly ONE original editorial illustration. Follow the approved thumbnail style already visually inspected: near-black #151A18, electric lime #CCF43B, warm off-white, energetic hand-painted ink and dry-brush textures, very bold crisp Japanese lettering, few elements, graphic rather than photographic.\n\nEditorial content is ONLY from the supplied fixed article: Kobe won the second game 90–87 against Nagasaki on November 1; the two-game series ended one win each. Do not add any other fact, player statistic, ranking, or game date. Publication date is 2026.11.03.\n\nSubject: one REAL player, Levi Randolph (リーヴァイ・ランドルフ), randomly selected from names in the article. His name must NOT appear on the image. Use the official Nagasaki Velca portrait visually inspected in this conversation ONLY as facial appearance guidance, never as a pasted photograph:\nhttps://www.velca.jp/team/players/detail/id=50907?PlayerID=51000670\nhttps://bleague.bl.kuroco-img.app/v=2026110115/files/user/roster/2488/2026-27/51000670_01.jpg\nAppearance observed: brown skin, tall athletic build, oval face with relatively broad cheekbones, neatly shaped full black beard connected to moustache, full lips, broad straight nose, dark eyes and thick eyebrows; short tight braids pulled back with a wide plain black headband across the forehead. No voluminous afro. Preserve these facial traits in a confident hand-drawn illustration. Dark plain sleeveless basketball uniform with subtle cool navy highlights; no lettering, logos, numbers, or sponsor marks. Plain dark arm sleeve on his left forearm is optional. Any arm tattoo texture should remain abstract ink detail.\n\nComposition: place the player on the LEFT 40–43 percent, a dynamic three-quarter-view forward dribbling drive, torso leaning, one hand naturally guiding an orange basketball near hip level. Show his face clearly and both arms with plausible anatomy; keep the entire ball and hands inside the frame. Use an original generic basketball movement, NOT a recreation of either actual match and NOT a winning-shot, buzzer-beater, scoring, or celebration scene. No other people or anonymous background players. No hoop needed. Lime brush sweeps and restrained ink scratches imply movement behind the player. Keep right side as clean typographic negative space.\n\nTypesetting on RIGHT, strong hierarchy and ample breathing room:\nsmall header: \"バスケまとめ\"\nsmall publication date: \"2026.11.03\"\nlargest headline in bold warm off-white or lime: \"神戸が雪辱\"\nsmall score qualifier above the score: \"第2戦\"\nclear bold score line with unmistakable team-score association: \"神戸 90-87 長崎\"\nsecondary line: \"2連戦は1勝1敗\"\nPlace the following two required readable notes along the bottom, safely inside the canvas and visibly separated from main copy: \"イラスト（AI生成）\" and \"イメージ\".\nRender ALL Japanese text verbatim with correct glyphs, punctuation, digits and parentheses. No other text. No individual player's name, points, appearance or contribution claim. The 90 and 87 are TEAM scores only.\n\nConstraints: retain generous outer safe margins of at least 5 percent. No clipped lettering, hands, face or ball. No team or league logos, sponsor text, trademarks, official photograph fragments or realistic photo treatment. No medals, trophy, championship motifs or extra statistics. This must read as a bold ink-and-brush illustration with a clearly real player's recognizable facial traits. Keep the whole image visually coherent and legible at thumbnail size.\n\nONE PERMITTED CORRECTION\nEdit the first image: this is the existing finished black-and-lime Japanese basketball thumbnail. The second image is Levi Randolph's official portrait for APPEARANCE REFERENCE ONLY; never paste or reproduce that photograph in the thumbnail.\n\nMake one final correction pass:\n1. Improve the player's likeness to the official portrait: keep a wide plain black headband; make the hair short, tightly braided close to the scalp and pulled back, with little height above the headband and NO long protruding braids/twists or ponytail behind the head. Match his oval face, broad cheekbones, dark almond eyes, nose and full lips; use the official portrait's neatly shaped full beard and moustache, with a compact rounded chin silhouette. Keep the lively dribbling pose and obvious brush-and-ink illustrative rendering. Preserve brown skin.\n2. Add adequate outer padding: shrink/reposition the foreground illustration and type as needed so that the head, both complete hands, the whole ball, all letters and all labels have at least 4% breathing room to the outer canvas edge. Intentional torso/leg continuation through the bottom edge is acceptable; face, hair, fingers, ball and all text must remain fully inside. Keep the player on the left and text on the right. Keep both hands anatomically plausible with five fingers.\nPreserve the near-black #151A18 / lime #CCF43B / warm-white palette, dry brush energy, navy blank uniform, graphic style, orange ball and single-player composition. Do not add any people, logos, uniforms with lettering, jersey numbers or sponsor marks. Do not make this photographic.\n\nKeep EXACTLY all the existing editorial wording and correct digits, with the same strong hierarchy:\n\"バスケまとめ\"\n\"2026.11.03\"\n\"神戸が雪辱\"\n\"第2戦\"\n\"神戸 90-87 長崎\"\n\"2連戦は1勝1敗\"\n\"イラスト（AI生成）\"\n\"イメージ\"\nNo player name, personal stats, contribution or appearance claims. This is a generic illustrative movement and NOT an actual match-scene reconstruction.\nReturn one finished PNG at 16:9 landscape, at least 1672 pixels wide. No additional variants.\n\nCorrection reference image 1: /Users/genjo/.codex/generated_images/01a19fc0-10aa-7a62-9961-1ba83dcc9118/exec-bc922ef4-75a6-41e2-9bea-adf6f5d52b7d.png\nCorrection reference image 2: /tmp/a5a194dfdf4bb060673e-randolph-official.jpg",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 2,
+      "corrections": 1,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a19fc0-10aa-7a62-9961-1ba83dcc9118/exec-f63c2c96-d8cd-4b2e-89ee-2ae57bee5c14.png",
+      "final_file": "generated.png",
+      "api_or_cli_generation": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-03T04:57:23.107679+00:00",
+  "publication_approved": false
+}

@@ -1,0 +1,125 @@
+{
+  "id": "f60ec06f0d2f4ee967a2",
+  "article_path": "article-daily-20261102.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261102.html",
+  "source_commit": "",
+  "source_blob_sha": "bc358013850e99ddb6ddfb1749e4483e86ef89e7",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "030c529892d7a3eda88cf4259f7c0b7a6fe9e0a7d9c8c4140be04c2a3ca2c621",
+  "last_observed_blob_sha": "bc358013850e99ddb6ddfb1749e4483e86ef89e7",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f60ec06f0d2f4ee967a2/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f60ec06f0d2f4ee967a2/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-03T04:22:03.797675+00:00",
+  "creation_event_id": "d008d0c71f6b4f7aeca1",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/f60ec06f0d2f4ee967a2/thumbnail.png",
+  "image_sha256": "782133c8c4fae09af7b5a6cb1c9c475cd9923e04680dbe58485a6fc45d5dbeb2",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "bc358013850e99ddb6ddfb1749e4483e86ef89e7",
+    "text_lines": [
+      "バスケまとめ",
+      "神奈川ダービー",
+      "横浜BC",
+      "2連勝",
+      "第2戦　横浜BC 77–66 川崎",
+      "記事記載の結果／個人スタッツ未確認",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content_only",
+        "paths": [
+          "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f60ec06f0d2f4ee967a2/source.html",
+          "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f60ec06f0d2f4ee967a2/source.txt"
+        ],
+        "article_url": "https://basuke-matome.jp/article-daily-20261102.html",
+        "facts_used": [
+          "神奈川ダービーの2連戦は横浜BCが2連勝",
+          "第2戦は横浜BC 77–66 川崎"
+        ],
+        "qualifiers": "固定原稿は公式ページへの直接接続ではなく検索結果表示で試合結果を確認したと記載。画像も『記事記載の結果』と表記。個人スタッツ・出場時間・当日のインジュアリーリストは未確認。画像に個人成績、出場確定、活躍、当日の実際のプレー再現は記載しない。今季戦績・通算成績は独自集計なので画像には採用しない。"
+      },
+      {
+        "type": "operational_rules",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "precedence": "今回の本人指定により実在選手を必ず描き、ランダム選出時は名前・個人成績を画像に入れない。ready・公開・外部送信は実施しない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "visually_inspected": true,
+        "usage": "黒×ライム、太い日本語見出し、手描きインクとブラシの絵柄のみ参照。人物・数字・日付は引き継がない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "マット・ボンズ",
+        "team": "川崎ブレイブサンダース",
+        "selection": "ランダム",
+        "selection_reason": "チーム結果が主題で主役選手を絞れないため、本文中に名前が登場する選手を優先。本文中の選手候補はマット・ボンズ1名（桶谷大はHC）。この1名を川崎側に採用。",
+        "reference_url": "https://kawasaki-bravethunders.com/news/detail/id=25373",
+        "official_image_url": "https://kawasaki-bravethunders.bl.kuroco-img.app/v=1783492454/files/user/260708matt.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f60ec06f0d2f4ee967a2/references/matt-bonds-official.jpg",
+        "visually_inspected": true,
+        "features": "丸く豊かなアフロ、縦長の輪郭、口元と顎から顎線のひげ、厚めの唇、力強い体格を公式写真で確認。",
+        "depiction": "無地のえんじ色ユニフォームで守備姿勢。氏名・背番号・成績の表示なし。実際の試合場面の再現ではない。"
+      },
+      {
+        "name": "並里 成",
+        "team": "横浜ビー・コルセアーズ",
+        "selection": "ランダム",
+        "selection_reason": "対戦両チームから1人ずつ描くため、本文に選手名がない横浜BC側は公式現役選手一覧から抽選。Python random.Random('f60ec06f0d2f4ee967a2').choice(roster)で並里成を選出。",
+        "candidate_order": [
+          "キャメロン・マクガスティ",
+          "アイザイア・リバース",
+          "新井 楽人",
+          "前野 幹太",
+          "佐藤 卓磨",
+          "森井 健太",
+          "マイク・コッツァー",
+          "キング 開",
+          "ウィタカ ケンタ",
+          "須藤 昂矢",
+          "ジェームズ・ベル",
+          "並里 成",
+          "カイル・リチャードソン"
+        ],
+        "roster_url": "https://b-corsairs.com/team/players/",
+        "reference_url": "https://b-corsairs.com/team/players/detail/id=22894?PlayerID=9489",
+        "official_image_url": "https://b-corsairs.bl.kuroco-img.app/v=1788768680/files/user/team/2026-27/33_NAMIZATO.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f60ec06f0d2f4ee967a2/references/narito-namizato-official.jpg",
+        "visually_inspected": true,
+        "features": "短めのウェーブした黒髪と茶色のハイライト、細めの面長の輪郭、頬骨、口ひげと顎ひげ、コンパクトな筋肉質の体格を公式写真で確認。",
+        "depiction": "無地の紺色ユニフォームでドリブル姿勢。氏名・背番号・成績の表示なし。実際の試合場面の再現ではない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION:\nUse case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail, landscape 1600×900 (16:9), PNG. This is a brand-new artwork.\n\nReference guidance: The previously viewed B-culver-black-lime-v3.png is a STYLE reference only: near-black #151A18, electric lime #CCF43B, ivory typography, hand-drawn ink and rough dry-brush energy. Do NOT copy its player, names, scores, date or pose.\nThe two previously viewed official portraits are LIKENESS references only: Matt Bonds and Narito Namizato. Never paste, trace photographically, or reproduce any official photograph or logo in the artwork.\n\nEditorial concept: Kanagawa derby, Yokohama BC won both games. Team result shown is from the supplied fixed manuscript only. Game 2 is Yokohama BC 77–66 Kawasaki. These are team points, never an individual statistic. Do not add any other statistics or claims.\n\nLayout: left 48% bold Japanese typography with clear hierarchy; right 52% a dynamic two-player basketball illustration. Let a broad lime brush arc sweep diagonally behind the players and a short rough lime underline support the headline. Restrained composition with generous negative space. Keep all text within safe margins of at least 55 pixels; keep the complete orange ball, faces and hands inside the canvas. No busy arena, crowd, trophies or charts.\nIllustrate exactly TWO REAL PLAYERS, with natural anatomically coherent bodies and hands:\n1. Narito Namizato (並里成), Yokohama BC: shorter, lean and compact muscular Japanese guard; short softly wavy black hair with visible subtle brown highlights, tapered sides; longish narrow oval face, pronounced cheekbones, straight brows, slim mustache and compact pointed goatee on chin. See his official viewed portrait for likeness. Foreground, head and torso visible in three-quarter view, a low forward-driving dribble stance, one hand poised on a fully visible orange basketball near waist/knee height and the other arm naturally balancing. Plain navy-blue basketball uniform with thin white and red piping, no text, no numerals, no symbols or logos.\n2. Matt Bonds (マット・ボンズ), Kawasaki: taller and broad, powerful build; medium-dark skin, very full round black afro, elongated oval face, distinctive fuller lips, short mustache plus full chin/jaw beard. See his official viewed portrait for likeness. Behind and to the far right, three-quarter defensive stance facing Namizato, one open hand raised to contest and other arm naturally out. Plain dark burgundy basketball uniform, no text, no numerals, no symbols or logos. Keep faces bright enough to recognize likeness; strong ivory ink highlights and dark hatching, not black silhouettes.\n\nThis is a conceptual basketball matchup illustration featuring randomly selected actual players. It is NOT a recreation of an actual game moment and NOT evidence they played, scored, or were a key performer. Do not portray a winning shot, celebration or a recorded specific play. Do not print either player's name, jersey number, individual points, appearance or achievement. The only ball is the prop used by Namizato.\n\nStyle: unmistakably hand-drawn expressive sports ink illustration, confident contours, chunky cross-hatching, limited flat painted colors, tactile dry brush. No photorealism, no photo collage, no glossy 3D. Strong editorial polish. Faces must match their official portrait features, not generic fictional athletes.\n\nRender ONLY these exact Japanese text lines, correctly spelled, with no extra words:\nTop small brand text: 「バスケまとめ」\nUpper-left eyebrow: 「神奈川ダービー」\nLarge ivory headline: 「横浜BC」\nLargest lime headline: 「2連勝」\nBelow headline, one clearly legible score line: 「第2戦　横浜BC 77–66 川崎」\nSmall readable lower note: 「記事記載の結果／個人スタッツ未確認」\nBottom readable disclosure: 「イラスト（AI生成）」\nAlongside disclosure: 「イメージ」\n\nMake '2連勝' the largest typographic element, and make '横浜BC' sufficiently large and clearly linked to it. The score should be subordinate but legible, with 横浜BC immediately before 77 and 川崎 after 66 so the winner is unambiguous. Footer annotations must be legible and separated from brush texture. No official team logo, league logo, sponsor lettering or watermark. No player names. No other statistics.\n\nONE PERMITTED REVISION:\nEdit this existing thumbnail with ONE precise correction only. The raised defensive hand of Matt Bonds (the afro-haired player in a burgundy uniform in the background right) is clipped by the TOP canvas edge. Lower that raised hand by about 65 pixels and adjust only the adjacent forearm/elbow angle naturally so the WHOLE HAND and all FIVE fingertips are fully inside the image, with at least 35 pixels of clear background above the highest fingertip. Anatomically correct natural fingers, no extra hands or limbs. Do not move the rest of the illustration, alter either face or hairstyle, change the other hands or basketball, or change the text/layout/colors/style. Preserve exactly every existing Japanese text string including 横浜BC, 2連勝, 第2戦 横浜BC 77–66 川崎, 記事記載の結果／個人スタッツ未確認, イラスト（AI生成）, イメージ. Preserve the wide approximately 16:9 canvas and existing resolution. No logos, no new text, no other edits.",
+    "generator": {
+      "tool": "built-in image_gen",
+      "mode": "initial generation plus one targeted edit",
+      "initial_image": "/Users/genjo/.codex/generated_images/01a19fbb-aa84-7370-ab1b-90ddc089c76d/exec-a5dc2e1a-f0d2-49a2-ad24-0c2530a08961.png",
+      "accepted_image": "/Users/genjo/.codex/generated_images/01a19fbb-aa84-7370-ab1b-90ddc089c76d/exec-4cd3d5ba-4b34-4b78-bbbb-0b1a799a1681.png",
+      "revision_count": 1,
+      "qa_observations": {
+        "text_and_numbers": "完成画像で全8行を目視確認。横浜BCの2連勝、第2戦の横浜BC77対66川崎が固定原稿と一致。選手名・個人成績の追加なし。",
+        "source_qualifiers": "『記事記載の結果／個人スタッツ未確認』『イメージ』を目視確認。未確認の個人成績や独自集計の公式化なし。",
+        "likeness_or_no_named_person": "公式資料の2名と完成画像を比較。並里の髪型・輪郭・口ひげと顎ひげ、ボンズのアフロ・輪郭・ひげをイラストに反映。選手名を画像に表示せず実在2選手のイメージとして扱う。",
+        "layout": "初稿の守備側指先の上端見切れを1回修正。最終画像では両顔、ボール、指先、全テキストの収まりを目視確認。手の形に明らかな破綻なし。チーム・リーグ・スポンサーのロゴなし。写真風でない。",
+        "ai_label": "『イラスト（AI生成）』『イメージ』が下部に読み取れることを目視確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-03T04:52:06.589745+00:00",
+  "publication_approved": false
+}
