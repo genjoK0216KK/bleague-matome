@@ -115,6 +115,50 @@ class Record(unittest.TestCase):
         games.write_text(page('終了 80-78 確定', title='10/27 試合結果'))
         self.assertEqual(tr.record(self.root, T0)['requested'], [])
 
+
+    def save_day(self, date, finals, rankings):
+        games = [dict(game_id=str(i), competition='BP', status='final' if f else 'unconfirmed', ended=f, fixed=f,
+                      source='https://www.bleague.jp/game_detail/?ScheduleKey=' + str(i),
+                      home_score=80 if f else None, away_score=70 if f else None) for i, f in enumerate(finals)]
+        leagues = {'BP': {'positions': {}}} if rankings else {'BP': {'error': '全試合の公式記録確定待ち'}}
+        path = self.root / 'data/match_articles' / f'article-games-{date}.json'
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(dict(games=games, game_day_rankings={'leagues': leagues})))
+
+    def test_game_day_is_redone_once_when_all_results_and_top3_are_in(self):
+        """11/4：途中で「試合結果」の見出しになった後、全試合確定・TOP3掲載でも画像が「確定待ち」のままだった。"""
+        tr.init(self.root, T0)
+        for name in ('article-games-20261104.html', 'article-results-one-next-20261104.html'):
+            (self.root / name).write_text(page('2試合確定', title='11/04 試合結果・当日のEFF'))
+        self.save_day('20261104', [True, False], rankings=False)
+        tr.record(self.root, T0)
+        self.assertFalse(self.ledger()['article-games-20261104.html']['settled'])
+        self.save_day('20261104', [True, True], rankings=False)          # 全試合確定・TOP3まだ
+        self.assertEqual(tr.record(self.root, T0)['requested'], [])
+        self.save_day('20261104', [True, True], rankings=True)           # TOP3まで揃った
+        for name in ('article-games-20261104.html', 'article-results-one-next-20261104.html'):
+            (self.root / name).write_text(page('10試合確定・EFF表', title='11/04 試合結果・当日のEFF'))
+        self.assertEqual(tr.record(self.root, T0)['requested'],
+                         ['article-games-20261104.html', 'article-results-one-next-20261104.html'])
+        e = self.ledger()['article-games-20261104.html']
+        self.assertEqual((e['revision'], e['settled']), (1, True))
+        self.assertEqual(tr.record(self.root, T0)['requested'], [])     # 再実行で増えない
+
+    def test_old_request_without_settled_gets_baseline_without_redo(self):
+        tr.init(self.root, T0)
+        (self.root / 'article-games-20261104.html').write_text(page('確定', title='11/04 試合結果'))
+        tr.record(self.root, T0)
+        data = json.loads((self.root / tr.REQUESTS).read_text())
+        data['events']['article-games-20261104.html'].pop('settled')
+        (self.root / tr.REQUESTS).write_text(json.dumps(data))
+        self.save_day('20261104', [True], rankings=True)
+        self.assertEqual(tr.record(self.root, T0)['requested'], [])
+        self.assertTrue(self.ledger()['article-games-20261104.html']['settled'])
+
+    def test_settled_is_not_tracked_for_daily_articles(self):
+        self.assertIsNone(tr.settled(self.root, 'article-daily-20261104.html'))
+        self.assertFalse(tr.settled(self.root, 'article-games-20261199.html'))   # 保存データが無い
+
     def test_baseline_article_is_never_redone(self):
         tr.init(self.root, T0)
         (self.root / 'article-games-20261026.html').write_text(page('結果', title='別の見出し'))

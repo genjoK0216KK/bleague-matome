@@ -36,6 +36,9 @@ START = '20261025'                      # 生成側 thumbnail_queue.py の START
 ARTICLE = re.compile(r'article-[A-Za-z0-9_-]*?(\d{8})\.html')
 REDO = re.compile(r'article-daily-\d{8}\.html')
 REDO_MAX = 3
+# 試合の記事（日付記事とその旧URL）。見出しに加えて「その日の全試合の結果と当日TOP3が揃った」時に1回作り直す
+# （11/4：19:54の「確定待ち」の画像が、全試合確定・EFF表の掲載後も残った。見出しは途中から変わらないため）。
+GAME_DAY = re.compile(r'article-(?:games|results-one-next)-(\d{8})\.html')
 
 
 def event_id(path, revision=0, stable=''):
@@ -48,13 +51,40 @@ def _title(raw):
     return thumb_auto._h1_text(raw.decode('utf-8', 'replace'))
 
 
-def _entry(article, raw, kind, stamp, date, revision=0):
+def _final(game):
+    """結果側（preview_data.is_verified_final）と同じ確定条件。"""
+    return (game.get('status') not in ('cancelled', 'postponed') and game.get('ended') is True
+            and game.get('fixed') is True and bool(game.get('source'))
+            and all(type(game.get(k)) is int and game[k] >= 0 for k in ('home_score', 'away_score')))
+
+
+def settled(root, name):
+    """試合の記事の日が「全試合の結果と当日TOP3が揃った」か。試合の記事でなければ None。
+    保存データ（data/match_articles/article-games-YYYYMMDD.json）だけを見る。読めなければ False。"""
+    m = GAME_DAY.fullmatch(name)
+    if not m:
+        return None
+    saved = thumb_auto.load_json(Path(root) / 'data/match_articles' / f'article-games-{m[1]}.json', None)
+    if not isinstance(saved, dict):
+        return False
+    live = [g for g in saved.get('games', []) if g.get('status') not in ('cancelled', 'postponed')]
+    if not live or not all(_final(g) for g in live):
+        return False
+    leagues = (saved.get('game_day_rankings') or {}).get('leagues') or {}
+    return all(isinstance(leagues.get(g.get('competition')), dict) and 'error' not in leagues[g.get('competition')]
+               for g in live)
+
+
+def _entry(article, raw, kind, stamp, date, revision=0, root=None):
     stable = thumb_auto.stable_fingerprint(raw)
     entry = dict(event_id=event_id(article.name, revision, stable), article_path=article.name,
                  article_url=thumb_auto.SITE + article.name, target_date=date,
                  source_blob_sha=thumb_auto.blob_sha(raw),
                  editorial_fingerprint=thumb_auto.editorial_fingerprint(raw),
                  stable_fingerprint=stable, title=_title(raw), status=kind, recorded_at=stamp)
+    done = settled(root or article.parent, article.name)
+    if done is not None:
+        entry['settled'] = done
     if revision:
         entry['revision'] = revision
     return entry
@@ -109,6 +139,12 @@ def record(root, now=None):
             changed = True
             continue
         rewritten = old['stable_fingerprint'] != stable if REDO.fullmatch(article.name) else old['title'] != title
+        now_settled = settled(root, article.name)
+        if now_settled and 'settled' in old and not old['settled']:
+            rewritten = True      # 依頼の時は確定待ち → いま全試合確定・TOP3あり（画像の「確定待ち」が古くなった）
+        elif now_settled is not None and 'settled' not in old:
+            old['settled'] = now_settled          # この項目を入れる前の依頼：いまの状態を基準にするだけ
+            changed = True
         if rewritten and old.get('revision', 0) < REDO_MAX:
             events[article.name] = _entry(article, raw, 'requested', stamp, date, old.get('revision', 0) + 1)
             result['requested'].append(article.name)
