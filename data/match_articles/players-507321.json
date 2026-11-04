@@ -8,7 +8,7 @@
     "fixed": false,
     "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507321",
     "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-    "status": "scheduled",
+    "status": "unconfirmed",
     "players": [],
     "home": "福岡",
     "home_full": "ライジングゼファー福岡",
@@ -17,7 +17,8 @@
     "away": "岡山",
     "away_full": "トライフープ岡山",
     "away_id": "1639",
-    "away_score": null
+    "away_score": null,
+    "record_note": "official_record_not_loaded"
   },
   "players": [
     {
@@ -542,5 +543,5 @@
       "coverage_complete": true
     }
   ],
-  "retrieved_at": "2026-11-02T22:50:11.682470+00:00"
+  "retrieved_at": "2026-11-04T10:56:06.030226+00:00"
 }
