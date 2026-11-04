@@ -1,0 +1,124 @@
+{
+  "id": "5a86fec3857da89d996f",
+  "article_path": "article-results-one-next-20261104.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261104.html",
+  "source_commit": "",
+  "source_blob_sha": "a947e473a8b77978dd7423af9a39e5fd9660cc77",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "595a56fde15b16bf222b25982b7e28a2e9fec707cb52f4ee2e36d22c74b25829",
+  "last_observed_blob_sha": "a947e473a8b77978dd7423af9a39e5fd9660cc77",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5a86fec3857da89d996f/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5a86fec3857da89d996f/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-04T11:03:46.731011+00:00",
+  "creation_event_id": "fb4f406e14ac812b30d7",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/5a86fec3857da89d996f/thumbnail.png",
+  "image_sha256": "19d99808b6741e55e568026e5e23cd8ad66f2cea6f04c5664fb7dc00fbec8539",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "a947e473a8b77978dd7423af9a39e5fd9660cc77",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.04",
+      "B.ONE",
+      "試合結果",
+      "当日のEFF",
+      "全試合の公式記録確定待ち",
+      "19:54 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5a86fec3857da89d996f/source.html",
+        "role": "記事本文の根拠（固定HTML）",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261104.html",
+        "evidence": "試合日2026.11.04。試合状態は19:54 JST時点。B.ONEは1試合の結果確定と9試合の公式記録未確定が併存。EFFは全試合の公式記録確定待ち。",
+        "verified_blob_sha": "a947e473a8b77978dd7423af9a39e5fd9660cc77"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5a86fec3857da89d996f/source.txt",
+        "role": "記事本文の根拠（固定文章）",
+        "evidence": "固定HTMLと見出し・日付・リーグ・時点・EFF確定待ちの留保が一致。選手名は本文にない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "制作手順のみ。記事内容の根拠には不使用。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済み黒×ライム、インク・ブラシ表現のスタイル参照のみ。view_imageで確認。名前・成績・日付は不転用。"
+      },
+      {
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "role": "承認済みスタイル補助参照のみ。手順書の配置先には無かったため既存成果の同名v3をview_imageで確認。名前・成績・日付は不転用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "新川敬大",
+        "team": "福島ファイヤーボンズ",
+        "selection": "ランダム",
+        "selection_reason": "固定本文に選手名がなく、単一の主役選手を絞れないため、本文に登場するチームの現役選手から選択。",
+        "selection_method": "Python random.Random('5a86fec3857da89d996f')。本文登場順の20チームからchoiceで福島を選び、同じ乱数列の次のchoiceで公式選手一覧13人から新川敬大を選択。",
+        "team_candidates": [
+          "香川",
+          "東京U",
+          "山形",
+          "東京Z",
+          "福島",
+          "新潟",
+          "埼玉",
+          "愛媛",
+          "立川",
+          "横浜EX",
+          "金沢",
+          "八王子",
+          "福井",
+          "鹿児島",
+          "静岡",
+          "FE名古屋",
+          "福岡",
+          "岡山",
+          "熊本",
+          "岩手"
+        ],
+        "roster_candidates": [
+          "大久保友貴",
+          "渡邊翔太",
+          "新川敬大",
+          "アキ・チェンバース",
+          "森田雄次",
+          "小川翔矢",
+          "パトリック・ガードナー",
+          "ワイリー光希スカイ",
+          "ジャック・ナンジ",
+          "益子拓己",
+          "米山ジャバ偉生",
+          "ケニー・マニゴールト",
+          "アルタンゲレル・アズバヤル"
+        ],
+        "roster_url": "https://firebonds.jp/team/players/",
+        "profile_url": "https://firebonds.jp/team/players/detail/id=15892?PlayerID=15824",
+        "official_portrait_url": "https://firebonds.bl.kuroco-img.app/v=1789014405/files/user/2026-27-FB-WEB-BUSTUP-9.jpg",
+        "official_portrait_local_viewed": "/private/tmp/5a86fec3857da89d996f-shinkawa-official.jpg",
+        "appearance_observed": "丸みのある暗褐色の直毛、額にかかる横流しの前髪、短い側頭部、やや縦長の顔、目の形と間隔、鼻先、唇、耳、顎の形を公式写真で確認。濃いひげはない。公式プロフィールで左利きも確認。",
+        "rendered_as": "左手でドリブルする実在選手1人のインクイラスト。想像した動作であり実際の試合場面の再現ではない。",
+        "restrictions_checked": "画像に選手名・背番号・本人の成績・出場・活躍の主張はなし。公式写真の貼付、チーム／リーグロゴ、スポンサー文字なし。",
+        "visual_review": "初稿は若すぎる漫画的な顔と頭頂の余白不足で不採用。公式肖像を参照した1回の編集で顔・髪型・収まりを修正。最終画像を実際に見て容姿の特徴、左右の手の5本指、左手とボールの接触、頭・手・ボールの見切れなしを確認。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story.\nCreate ONE finished Japanese basketball news thumbnail, landscape 16:9, 1792x1008 or another exact 16:9 size above 1000px wide. Make a new original editorial illustration, visibly hand-drawn and never photographic.\n\nAPPROVED ART DIRECTION: charcoal black #151A18 background, vivid lime #CCF43B dry brush sweeps, warm off-white heavyweight Japanese typography, expressive black-ink hatching and irregular brush edges. Restrained elements and strong hierarchy, like an ink sports editorial poster. Orange basketball as a prop, no floating ball-only concept. Flat printed colors and loose energetic ink, no glossy 3D or photoreal skin.\n\nREAL PERSON (ONLY ONE PERSON): Keita Shinkawa / 新川敬大 of Fukushima Firebonds, current official roster #9. His name and number MUST NOT appear anywhere in the image. This is a real player selected randomly for an illustrative image, not the article's highlighted performer. I examined his official 2026-27 bust-up portrait at https://firebonds.bl.kuroco-img.app/v=1789014405/files/user/2026-27-FB-WEB-BUSTUP-9.jpg. Match these specific visible features: straight dense dark-brown hair with a rounded smooth crown, short close-cut sides, a fairly long side-swept fringe hanging diagonally across the forehead just above the eyes; long clean-shaven oval face with defined but gently tapered chin; relatively prominent ears; straight thick dark eyebrows; almond-shaped dark eyes, fairly straight nose with rounded tip, thin relaxed lips. No full beard, no moustache, no curly hair, no headband. Athletic shoulders and arms. Keep his actual recognizable facial features in expressive ink rendering, without inventing a generic different athlete. His official profile confirms left-handedness.\n\nCOMPOSITION: Reverse the usual text-left/player-right layout. The entire LEFT 43% features Shinkawa in a dynamic low driving dribble, torso leaned forward diagonally, head clearly visible in upper left, focused gaze angled into the court. His LEFT hand contacts the top/side of a basketball in mid-dribble near his left knee; right forearm bent naturally for balance. Three-quarter body to knees, anatomically plausible two arms and visible natural hands. The face, both hands, and complete basketball stay inside the image with safe margins. Plain off-white basketball jersey and shorts with black ink shading and a tiny muted-purple trim only. No jersey lettering, no team name, no number, no sponsor, no logo. This is a generic imagined movement of the real player, not a depiction or reconstruction of any actual game or scoring play. Abstract lime diagonal brush energy behind him, no other players or crowd faces, no actual arena.\n\nTEXT AND LAYOUT: All article text occupies the RIGHT 53% over calm charcoal, not over the face or hands. At top, small brand text then date. Large bold Japanese headline. Beneath, a clear EFF information block; the pending qualification MUST clearly apply to EFF, not claim that no game has ended. Generous margins around every letter, readable Japanese at thumbnail size. Use ONLY these exact visible strings, each once:\n\"バスケまとめ\"\n\"2026.11.04\"\n\"B.ONE\"\n\"試合結果\"\n\"当日のEFF\"\n\"全試合の公式記録確定待ち\"\n\"19:54 JST時点\"\n\"イラスト（AI生成）\"\n\"イメージ\"\n\nSuggested hierarchy: top right バスケまとめ and 2026.11.04 modest; B.ONE small lime plain text; 試合結果 very large off-white; 当日のEFF medium large; 全試合の公式記録確定待ち on one or two neat lines with lime emphasis immediately under 当日のEFF; 19:54 JST時点 smaller directly below. Bottom footer across lower right, high contrast and clearly legible: イラスト（AI生成） | イメージ. These two annotations must remain separate exact strings (full-width parentheses in Japanese AI label).\n\nSOURCE BOUNDARY: Copy comes exclusively from supplied frozen article source.html/source.txt. It states 2026-11-04 results as of 19:54 JST; B.ONE EFF listing waits for all games' official statistics. Some game results are already final. Do not add a score, statistics, standings, rankings, a TOP3 result, a victory claim, player appearance or performance claims, or a player name. No '成績をもとにしたイメージ' because this randomly selected player is not tied to those results. Do not use any photo pixels, team/league logos, sponsor words, or player name text. The full real-player action illustration is the visual protagonist. Deliver only a single finished thumbnail.\n\nSINGLE CORRECTION\nEdit image 1, the existing black-and-lime Japanese basketball thumbnail. Image 2 is the official photographic appearance reference for the ONE existing real basketball player, Keita Shinkawa (新川敬大). Use image 2 only to understand his actual face/hair; DO NOT paste any photographic pixels into the artwork and do not copy its logos, sponsors, jersey lettering, or backdrop.\n\nThis is the single allowed correction. Correct the face/likeness and character framing only. Preserve every existing Japanese text string, its spelling, size, position and the right-side composition exactly. Preserve the black #151A18 / lime #CCF43B palette and energetic expressive ink-and-brush illustration. Preserve the left-handed low dribble and orange basketball.\n\nLikeness correction: image 1 currently looks like a generic younger manga athlete. Use the actual adult face from image 2 faithfully: smooth rounded straight dark-brown hair with a lower, heavier straight side-swept fringe and short close sides, not spiky windswept anime hair; relatively longer clean-shaven oval face, prominent rounded ears, actual almond eye shape and spacing, less stylized eyebrows, slightly wider rounded nose tip, subtle full lower lip and the actual tapered jaw/chin. Render him as a mature adult in editorial ink with recognizable proportions, no huge anime eyes and no angular heroic face. Keep focused expression. He is the exact real person in the official reference. Do not print his name or jersey number.\n\nFraming correction: scale the illustrated player and his ball together down slightly, about 6%, and position inside the left illustration zone so the entire crown has at least 25 px of clear space to the top, the leftmost elbow has at least 20 px to the left edge, the whole ball and both hands remain fully inside with at least 25 px from edges. Natural crop of legs below thighs is fine. Preserve natural anatomy, five fingers on each visible hand, and contact between left hand and ball. Text is never covered.\n\nKeep the plain white-and-purple-trim jersey with no marks, no names, no logo. Keep the exact text, including the EFF pending qualifier and both footer annotations:\nバスケまとめ\n2026.11.04\nB.ONE\n試合結果\n当日のEFF\n全試合の公式記録確定待ち\n19:54 JST時点\nイラスト（AI生成）\nイメージ\n\nNo extra text, numbers, score, player name or performance claim. Keep the 16:9 output with width above 1000px. This depicts imagined basketball movement, not an actual game scene.",
+    "generator": "OpenAI built-in image_gen only. Initial generation 1, corrective edit 1. Final 1671x941 PNG. Final source: /Users/genjo/.codex/generated_images/01a1a63e-f81c-7693-ab31-621aa05331c2/exec-c2f8a06e-150a-4fa7-9ac1-6063d55cdaed.png. SHA256: 19d99808b6741e55e568026e5e23cd8ad66f2cea6f04c5664fb7dc00fbec8539. Final image visually reviewed: exact text/date/time, EFF pending scope, official-portrait likeness, natural hands, unclipped head/hands/ball, readable layout, and both AI/image labels. No API/CLI generation, git operation, ready command, publication, or external delivery.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-04T11:13:39.731146+00:00",
+  "publication_approved": false
+}

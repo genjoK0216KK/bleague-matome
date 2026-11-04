@@ -1,0 +1,150 @@
+{
+  "id": "d5c983c0cf4a52db9a3a",
+  "article_path": "article-games-20261104.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261104.html",
+  "source_commit": "",
+  "source_blob_sha": "520cf2013d0a921c2aebdc3ab443e0208723ac91",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "595a56fde15b16bf222b25982b7e28a2e9fec707cb52f4ee2e36d22c74b25829",
+  "last_observed_blob_sha": "520cf2013d0a921c2aebdc3ab443e0208723ac91",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d5c983c0cf4a52db9a3a/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d5c983c0cf4a52db9a3a/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-04T11:03:46.446578+00:00",
+  "creation_event_id": "d6f23b0e2337252e80ed",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/d5c983c0cf4a52db9a3a/thumbnail.png",
+  "image_sha256": "9ee2add1162a9df5d26e416069bec71adf70c2dbc2f43635348c2e0b1e3728fe",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "520cf2013d0a921c2aebdc3ab443e0208723ac91",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.04",
+      "試合結果",
+      "当日のEFFは",
+      "確定待ち",
+      "19:54時点・一部試合は未確定",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d5c983c0cf4a52db9a3a/source.html",
+        "role": "本文根拠（固定HTML）",
+        "article_url": "https://basuke-matome.jp/article-games-20261104.html",
+        "facts_used": [
+          "2026.11.04の試合結果",
+          "試合状態は19:54 JST時点",
+          "一部試合は開始・公式記録未確定",
+          "当日のEFFは全試合の公式記録確定待ち"
+        ]
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d5c983c0cf4a52db9a3a/source.txt",
+        "role": "本文根拠（固定文章）"
+      },
+      {
+        "url": "https://www.albirex.com/team/players/",
+        "role": "本文登場チーム・新潟の現役選手の抽選母集団確認のみ。記事本文・試合結果・成績の根拠には不使用"
+      },
+      {
+        "url": "https://www.albirex.com/news/detail/id=24930",
+        "role": "新潟アルビレックスBB 2026-27シーズン公式ロスター確認のみ"
+      },
+      {
+        "url": "https://www.albirex.com/team/players/detail/id=24944?PlayerID=42691",
+        "role": "ジェレミー・コームズの公式プロフィール・容姿確認のみ"
+      },
+      {
+        "url": "https://bleague.bl.kuroco-img.app/v=2026102015/files/user/roster/695/2026-27/42691_01.jpg",
+        "role": "公式プロフィール写真。実際に表示し容姿を確認。修正時の参照画像として使用。写真そのものは成果に貼り付けていない"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済み絵柄参照。目視確認。人物・日付・数値は引継ぎなし"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "制作・検品手順。人物選定は依頼文の10/31本人指示を優先"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジェレミー・コームズ",
+        "english_name": "Jeremy Combs",
+        "team": "新潟アルビレックスBB",
+        "selection": "ランダム",
+        "selection_reason": "固定本文に選手名がなく、多数のチームを同列に扱う記事のため、本文登場チームの現役選手から抽選。本文の主役・当日の出場選手・好成績選手として選んだものではない。",
+        "selection_method": {
+          "algorithm": "Python random.Random(job_id) による再現可能な擬似乱数抽選",
+          "seed": "d5c983c0cf4a52db9a3a",
+          "team_candidates": [
+            "香川",
+            "東京U",
+            "山形",
+            "東京Z",
+            "福島",
+            "新潟",
+            "埼玉",
+            "愛媛",
+            "立川",
+            "横浜EX",
+            "金沢",
+            "八王子",
+            "福井",
+            "鹿児島",
+            "静岡",
+            "FE名古屋",
+            "福岡",
+            "岡山",
+            "熊本",
+            "岩手"
+          ],
+          "team_selected_index": 5,
+          "player_candidates": [
+            "ジェレミー・コームズ",
+            "星野曹樹",
+            "堀内星夜",
+            "デビン・オリバー",
+            "長谷川智伸",
+            "五十嵐圭",
+            "濵高康明",
+            "キム・ミンウク",
+            "大森尊之",
+            "濱田貴流馬",
+            "松井啓十郎",
+            "ジャンピエール・ムトンボ",
+            "ジャスティン・バーレル",
+            "丸山賢人"
+          ],
+          "player_selected_index": 0
+        },
+        "reference_url": "https://www.albirex.com/team/players/detail/id=24944?PlayerID=42691",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026102015/files/user/roster/695/2026-27/42691_01.jpg",
+        "appearance_observed": "耳から首上部までの黒いロックス、額に垂れた房、高めの額、やや縦長の輪郭、濃い顎ひげとつながった口ひげ、眉・目・幅のある鼻・唇、長身で筋肉質な体型を公式写真で確認。最終画像はこれらを反映したインク画。",
+        "visual_qa": "公式写真と完成画像を目視比較した。氏名・チーム名・背番号・当日の成績や出場を示す文字なし。実際の試合場面の再現とはしない。"
+      }
+    ],
+    "prompt": "INITIAL PROMPT\nUse case: illustration-story / editorial basketball thumbnail.\nCreate exactly ONE finished Japanese editorial thumbnail for バスケまとめ, PNG, landscape 16:9, ideally 1600x900 or 1536x864, width at least 1000 pixels. This is a new hand-drawn illustration, not a photo.\n\nART DIRECTION: approved black-and-lime ink/brush style. Near-black #151A18 background, electric lime #CCF43B broad expressive diagonal brush streaks, warm ivory bold Japanese display type, a little orange only on the basketball. Strong handmade ink strokes and crosshatching, clean highly legible typography, few elements, premium sports editorial design. Match the black/lime sports illustration art direction already viewed, but never carry over its player, names, score, date or shooting composition.\n\nMAIN SUBJECT: exactly one REAL professional player, Jeremy Combs (ジェレミー・コームズ), currently on Niigata Albirex BB roster, selected randomly solely as an illustrative subject. His official roster portrait has been visually checked at https://www.albirex.com/team/players/detail/id=24944?PlayerID=42691 and https://bleague.bl.kuroco-img.app/v=2026102015/files/user/roster/695/2026-27/42691_01.jpg .\nAppearance observed in that official portrait: adult Black man, tall athletic muscular build, medium-dark brown skin, oval slightly long face, high forehead, medium length black locs loosely hanging around ears down to upper neck with several distinct locks over his forehead; thick full dense black beard extended below the chin, connected moustache; relatively straight dark eyebrows, calm almond-shaped dark eyes, broad nose and full lips. Maintain these recognizable facial features; do not give him a short afro, a clean shaven face, a different athlete's likeness, or a fictional generic basketball face. Render his face clearly with warm ivory highlights and ink shadows, not blacked out. Keep the real athlete's likeness in a clearly drawn illustration.\nPose: dynamic three-quarter view, crouching and stepping forward strongly, both hands firmly and naturally holding the orange basketball at chest-to-waist height in preparation for a powerful drive. Shoulders twisted slightly, face visible looking diagonally left/up toward the play. Show from head through knees, keep the complete head, both elbows, both hands and whole basketball inside frame; five natural fingers where visible, no extra arms. Cropping below the thighs/knees is acceptable. Plain unbranded charcoal and ivory sleeveless basketball uniform, no lettering, no jersey numbers, no team logos, no sponsor marks. Subtle drawn arm tattoo shapes may be visible, no readable tattoo words.\nThis is ONLY a generic imagined basketball action illustration of a real athlete; NOT a reconstruction of any actual game, point, winning shot, appearance or achievement. No hoop, opponent, crowd, scoreboard, trophies or medals.\n\nLAYOUT: subject occupies right 45 percent, with strong upward-left diagonal energy and a few controlled lime brush marks behind him. Left 55 percent is spacious editorial type, all text clear and separated from the subject. Keep all text within 5 percent safe margins. Header small at top left. Main headline huge, warm ivory, strong Japanese Gothic. Date lime. The EFF pending state is clear, high contrast, and separate from game results. Footer disclaimers comfortably readable and never cropped. Do not imitate an official league graphic.\n\nTEXT: Render ONLY the following exact strings, with no other text, no player's name, no team names, no scores or player statistics:\nTop left small: 「バスケまとめ」\nDate: 「2026.11.04」\nMain headline very large: 「試合結果」\nSecondary headline: 「当日のEFFは」\nNext line emphasized lime: 「確定待ち」\nSupporting qualifier below: 「19:54時点・一部試合は未確定」\nFooter: 「イラスト（AI生成）」 and 「イメージ」\n\nEDITORIAL FACT BOUNDARY: The fixed article says game statuses are as of 2026-11-04 19:54 JST. Some matches are not yet officially finalized. The day's EFF ranking will be posted after all games' official records are finalized; no EFF player names or ranks are available. Do not imply this randomly selected athlete appeared, scored, won, or led EFF that day. The illustration's labels must be exactly イラスト（AI生成） and イメージ, not 成績をもとにしたイメージ.\nAvoid photorealism, photo collage, official photographic pixels, generic fictional player, league/team/sponsor logos, badges, garbled Japanese, excessive small print, clipped ball or fingers, duplicated limbs, and visual clutter.\n\nONE CORRECTION PROMPT\nEdit the first input image, a finished Japanese black/lime basketball thumbnail. This is the ONE final correction. Preserve the entire exact text, colors, typographic hierarchy, and editorial meaning. Fix ONLY the athlete's framing and refine his likeness against the second input official portrait.\n1. The top of his locs is currently touching/clipped by the upper edge. Scale the athlete with ball uniformly about 8 percent smaller and position so every hair tip has at least 45 pixels of clear background above it. Keep both hands, both elbows and the complete ball comfortably within the canvas. Natural crop of legs at the lower edge is fine. Do not add a panel or change the landscape 1672x941 approximately 16:9 format.\n2. The depicted real athlete is Jeremy Combs, the second input image is his official Niigata roster portrait used ONLY to verify appearance. Preserve his oval slightly long face, high forehead, black medium length loose locs around ears/upper neck with several locks on forehead, connected full dense beard and moustache, nose/eyes/lips from that portrait. Keep the drawn face identifiable, clear, and not in heavy shadow. Do not paste any photographic pixels. Do not copy official uniform logos or text. Keep the original drawing's plain charcoal and ivory uniform with NO words, numbers, symbols or logos. Keep the dynamic both-hands-holding-ball crouched stepping pose and natural hands.\nAll exact thumbnail text must remain unchanged and fully visible:\nバスケまとめ\n2026.11.04\n試合結果\n当日のEFFは\n確定待ち\n19:54時点・一部試合は未確定\nイラスト（AI生成）\nイメージ\nDo not add the player's name or stats. This is an illustrative imagined action, not an actual game recreation. Preserve the hand drawn ink-and-brush editorial illustration style and the black #151A18 / lime #CCF43B palette. This must remain one final thumbnail, not a comparison sheet.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 2,
+      "corrections": 1,
+      "initial_candidate": "/Users/genjo/.codex/generated_images/01a1a63a-b19e-7240-944e-9f31342ce157/exec-f56c1bad-e68e-4f06-b192-36ebe4bee8da.png",
+      "correction_reason": "初稿は頭頂部が上端に触れていたため人物を縮小し、頭上の余白を確保。公式写真を修正時の容姿参照にも使用。",
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1a63a-b19e-7240-944e-9f31342ce157/exec-fe997620-a144-47b7-b038-fb7f5fea795a.png",
+      "visual_qa_notes": "最終画像を目視確認。8行の文字・日付・19:54・一部未確定・EFF確定待ちを照合。顔の特徴、髪の余白、両手と指、ボール全体、文字の見切れなしを確認。AI表記とイメージ注記あり。ロゴ・スポンサー文字・写真貼付けなし。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-04T11:08:26.901986+00:00",
+  "publication_approved": false
+}
