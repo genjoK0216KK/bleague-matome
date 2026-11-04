@@ -1,0 +1,120 @@
+{
+  "id": "221f82c44ae5094ac68b",
+  "article_path": "article-games-20261105.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261105.html",
+  "source_commit": "",
+  "source_blob_sha": "062e05fad8fbd29b9ac7a5cea8cf15046c85fcc6",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "02fab13a34a45f1bc1cd33f16aee992d738241fba0c8c173b71eec6efeca7cba",
+  "last_observed_blob_sha": "062e05fad8fbd29b9ac7a5cea8cf15046c85fcc6",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/221f82c44ae5094ac68b/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/221f82c44ae5094ac68b/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-04T17:03:57.357526+00:00",
+  "creation_event_id": "b647312e4012e22fde7e",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/221f82c44ae5094ac68b/thumbnail.png",
+  "image_sha256": "903855ab95e4d5696c99ad4df7a9115a820e05d813b55896a2981a8b0d85df47",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "062e05fad8fbd29b9ac7a5cea8cf15046c85fcc6",
+    "text_lines": [
+      "バスケまとめ",
+      "11/05 試合予定",
+      "品川 VS 三重",
+      "B.NEXT｜19:05",
+      "試合前・公式記録確定待ち",
+      "2026/11/05 02:03 JST時点",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261105.html",
+        "evidence": "B.NEXT 品川—三重 19:05 試合前。各試合の状態は2026-11-05 02:03 JST時点。全試合の公式記録確定待ち。確定後に掲載。",
+        "usage": "サムネの対戦・リーグ・日付・時刻・留保の根拠。公開ページは本文根拠として取得していない。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "source.txt",
+        "evidence": "HTMLと同内容を確認。本文に個人名・確定成績の掲載なし。",
+        "usage": "固定本文の照合。見出しのベスト5を確定結果として描かず、本文の試合予定を採用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "山根 響",
+        "team": "しながわシティバスケットボールクラブ",
+        "selection": "ランダム",
+        "selection_reason": "固定本文に選手名がないため、本文の品川の公式2026-27ロスター掲載選手から抽選。出場・活躍・成績を示す選出ではない。",
+        "selection_record": "selection.json",
+        "official_roster_url": "https://basketball.shinagawa-city.com/news/detail/id%3D60116",
+        "official_profile_url": "https://www.bleague.jp/roster_detail/?PlayerID=43471",
+        "official_photo_url": "https://www.bleague.jp/files/user/roster/748/2026-27/43471_03.png",
+        "local_reference": "references/yamane-official.png",
+        "appearance_observed": "黒いストレートのセンターパート、耳付近まで丸みのある髪、柔らかい卵形の輪郭と小さめの顎、細めの眉と目、頬の小さなほくろ、ひげなし。",
+        "depiction": "黒地に細いピンクの縁の無地ユニフォームでドリブル。氏名・背番号・スポンサー・ロゴなし。",
+        "reference_use": "公式写真は容姿参照のみ。最終画像に写真を貼り付けていない。"
+      },
+      {
+        "name": "宮﨑 恭行",
+        "team": "ヴィアティン三重",
+        "selection": "ランダム",
+        "selection_reason": "固定本文に選手名がないため、本文の三重の公式現行選手一覧から抽選。出場・活躍・成績を示す選出ではない。",
+        "selection_record": "selection.json",
+        "official_roster_url": "https://veertien-basketball.jp/team/players/",
+        "official_profile_url": "https://veertien-basketball.jp/team/players/detail/id=60008?PlayerID=12597",
+        "official_photo_url": "https://bleague.bl.kuroco-img.app/v=2026110502/files/user/roster/2726/2026-27/12597_01.jpg",
+        "local_reference": "references/miyazaki-official.jpg",
+        "appearance_observed": "額の見える短めで整った黒いセンターパート、山根選手より角のある輪郭・しっかりした顎、まっすぐな眉と鼻筋、コンパクトな口元、ひげなし。",
+        "depiction": "オレンジ地に黒の縁の無地ユニフォームで守備。氏名・背番号・スポンサー・ロゴなし。",
+        "reference_use": "公式写真は容姿参照のみ。最終画像に写真を貼り付けていない。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, a wide 16:9 canvas approximately 1536 x 864 or larger, PNG. This is for バスケまとめ and is based on a frozen pregame article dated 2026-11-05 02:03 JST. Deliver a fully composed illustration with all Japanese typography.\n\nArt direction: approved black-and-lime sports ink illustration style: near-black #151A18 background, vivid lime #CCF43B angular dry-brush strokes, warm ivory type, tactile hand-drawn ink crosshatching, strong minimal editorial hierarchy. Not a photograph, not photorealistic, no pasted photos, no official logo or sponsor mark. A clear expressive ink illustration with enough precise facial detail to recognize both real athletes.\n\nComposition: two real basketball players in an energetic 1-on-1 concept scene on the right 56 percent of the canvas, shown from head to lower legs in a low athletic stance. One orange basketball is a handheld/dribbling prop with a natural ball-hand relationship. Strong diagonal rhythm and negative space. The left 44 percent is clean readable typography. Let the player silhouettes create a dynamic zigzag, not a static portrait and not a shooting pose copied from the previous reference thumbnail. Faces and hands are fully visible and anatomically coherent. Keep all text, both heads, both hands and the ball comfortably inside the canvas, with at least 45 px safe margin. Deliberately frame lower legs if necessary, not accidental head or hand clipping.\n\nThe illustrated people must be these TWO REAL people, selected randomly from the article's two teams; no invented athlete:\n1. Hibiki Yamane / 山根響 of Shinagawa, based on his official B.LEAGUE 2026-27 profile photograph, visually inspected. Adult Japanese man, relatively youthful oval face tapering to a small rounded chin, smooth clean-shaven skin, black medium-length center-parted curtain hair with rounded volume beside the temples and ears, forehead partly visible, fine gently arched eyebrows, narrow warm almond eyes, straight modest nose, softly curved lips and small cheek beauty marks. Athletic compact guard build. Draw him nearer the center-right, in a low driving dribble stance, three-quarter face visible, wearing a plain near-black sleeveless basketball uniform with thin muted magenta edging. NO number, NO name, NO letters, NO logos.\n2. Yasuyuki Miyazaki / 宮﨑恭行 of Mie, based on his official club 2026-27 profile photograph, visually inspected. Adult Japanese man with a slightly more mature angular rectangular-oval face, strong squared chin and jaw, taller open forehead, straight dark eyebrows, focused almond eyes, straight prominent nose, compact closed lips, clean-shaven. Black hair neatly center-parted, shorter and flatter than Yamane's, swept smoothly down to ear level, forehead clearly exposed. Athletic guard build, a little shorter than Yamane. Draw him to the far right facing the dribbler in a low defensive stance, three-quarter face visible. Plain orange sleeveless basketball uniform with black trim, no pinstripe branding, NO number, NO name, NO letters, NO logos.\nRender skin and faces mostly in warm ivory and black ink, preserving these distinct facial structures, hairstyles and hairlines. Uniform colors are simple accents. Keep both real faces distinct; do not make generic identical cartoon faces. Expressions can be focused for the imagined basketball action. Do not reproduce either official photo composition.\n\nExact text only, no additions:\nSmall masthead at top left: \"バスケまとめ\"\nLarge date and topic below: \"11/05 試合予定\"\nMain headline, biggest bold Japanese type, can split into stacked lines: \"品川 vs 三重\"\nMedium readable information: \"B.NEXT｜19:05\"\nHigh-contrast status line below: \"試合前・公式記録確定待ち\"\nSmaller but clear reference-time line: \"2026/11/05 02:03 JST時点\"\nBottom footer, clearly visible: \"イラスト（AI生成）｜イメージ\"\n\nThe Japanese lines must be exact, crisp and correctly spelled. Main matchup is the visual focal text, lime highlight for the date or the vs. Keep status and time on a clean dark strip so they are readable. This image is an imagined basketball illustration, not an actual scene from this game. Do not claim either player's appearance in the game, performance, points or outcome. No player names in the image, no scores, no rankings, no BEST5 or TOP3 claim, no fabricated statistics, no date or statistics from the old style reference. No team logo, league logo, sponsor logo, signature, badge, photographic faces, or extra people. The label \"B.NEXT\" is plain text, not a logo.",
+      "revision": "Edit image 1, the existing finished バスケまとめ basketball thumbnail. This is the single final correction pass. Image 1 is the edit target. Image 2 is the official portrait reference for the player in the BLACK jersey (Hibiki Yamane / 山根響). Image 3 is the official portrait reference for the player in the ORANGE jersey (Yasuyuki Miyazaki / 宮﨑恭行). These official photographs are ONLY for identity and facial/hair feature reference. Do not paste them or reproduce photo textures, logos, names, lettering, numbers or sponsors.\n\nCorrect BOTH players' facial likeness and hair to the attached real-person references; keep the same non-photorealistic hand-drawn ink illustration medium, action poses, uniform colors and matchup concept. Yamane: remove the wavy fluffy stylized hair; replace it with his actual smooth straight black center-parted curtain haircut, rounded silhouette down the sides at ear level, longer straight front pieces framing the forehead, softer oval face, smaller rounded chin, fine natural eyebrows, narrow eyes, his modest nose, softly shaped mouth and visible tiny cheek beauty marks. Use the actual proportions in image 2 and avoid a generic sharply sculpted manga hero. Miyazaki: match image 3's high open forehead, tidy short smooth center-parted black hair, mature rectangular-oval face, sturdy jaw and rounded-square chin, actual straight brow and eye shape, nose, compact lips, and clean-shaven skin. Use his actual face, not an invented square-jawed comic-book character. Faces should remain visible in three-quarter angle in the existing athletic 1-on-1 positions.\n\nImprove edge clearance by making the two-player illustration slightly smaller (roughly 8 percent) and moving it a little inward while keeping it on the right. Both heads and every hand and the basketball must have comfortable space inside the canvas; fit the shoes if possible. Preserve the entire left typography block and footer unchanged, preserve the black #151A18 and lime #CCF43B palette, orange ball and orange uniform, sparse brush marks and all these exact text contents:\nバスケまとめ\n11/05 試合予定\n品川 vs 三重\nB.NEXT｜19:05\n試合前・公式記録確定待ち\n2026/11/05 02:03 JST時点\nイラスト（AI生成）｜イメージ\n\nNo player names in the image. No additional words, statistics, logos or brand marks. Keep black uniform with magenta trim and orange uniform with black trim plain with no number, logo or lettering. Exactly 2 real players, no extra people. Anatomy: 2 arms per player, natural hands with 5 fingers, one basketball controlled by the dribbler. This is an imagined play illustration, NOT an actual game photo or reenactment. Maintain wide 16:9 output at least 1536 pixels wide.",
+      "revision_reference_images": [
+        "/Users/genjo/.codex/generated_images/01a1a784-7244-7f73-a330-12f30fa21732/exec-946f1790-5058-4910-bb83-6e2cbbf92391.png",
+        "references/yamane-official.png",
+        "references/miyazaki-official.jpg"
+      ],
+      "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "style_reference_inspected": true,
+      "unused_style_reference": "A-faison-ivory-v3.png は指定ディレクトリに存在しなかったため未使用。確認できた承認済み黒×ライム案を採用。"
+    },
+    "generator": {
+      "name": "OpenAI built-in image_gen",
+      "tool": "image_gen.imagegen",
+      "generation_count": 1,
+      "revision_count": 1,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1a784-7244-7f73-a330-12f30fa21732/exec-d27853cb-1fa0-40ff-914a-10177cda76c7.png",
+      "format": "PNG",
+      "qa_method": "生成ツールが表示した最終画像を目視。公式プロフィール写真2枚との比較、全テキスト・数値・留保、顔と髪型、両者の手指とボール、文字と顔と手の見切れ、AIラベルを確認。",
+      "qa_notes": {
+        "text_and_numbers": "11/05、品川VS三重、B.NEXT、19:05、2026/11/05 02:03 JST時点を固定原稿と照合。選手名・成績・出場の断定なし。",
+        "source_qualifiers": "試合前・公式記録確定待ちを明記。イメージと明記し特定の実試合場面や勝敗を主張しない。",
+        "likeness_or_no_named_person": "2名とも実在選手。公式写真を見て参照し、修正で山根選手の直毛センターパートと柔らかい輪郭、宮﨑選手の額と顎・目鼻を反映。似顔イラストとして確認。",
+        "layout": "太い見出しとライムの状態表示は読み取れる。両者の顔・手とボールは画面内。関節と指の明白な破綻なし。右選手の下半身の一部は意図的にフレーム外。",
+        "ai_label": "下端に「イラスト（AI生成）｜イメージ」を確認。"
+      },
+      "ready_executed": false,
+      "published": false,
+      "external_delivery": false,
+      "width": 1672,
+      "height": 941,
+      "output_sha256": "903855ab95e4d5696c99ad4df7a9115a820e05d813b55896a2981a8b0d85df47",
+      "saved_at_utc": "2026-11-04T17:10:01.929361+00:00"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-04T17:10:20.524931+00:00",
+  "publication_approved": false
+}
