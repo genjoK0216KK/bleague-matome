@@ -1,0 +1,112 @@
+{
+  "id": "6670e21fc5cefcf17877",
+  "article_path": "article-daily-20261105.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261105.html",
+  "source_commit": "",
+  "source_blob_sha": "902346a7b7566f149eb7731f6e7b43467fcfe044",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "392bbae9387ca1087f6303e38c911c0aa158fb59081c9798f661c5672190e332",
+  "last_observed_blob_sha": "902346a7b7566f149eb7731f6e7b43467fcfe044",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6670e21fc5cefcf17877/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6670e21fc5cefcf17877/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-04T23:18:08.945927+00:00",
+  "creation_event_id": "c3dcb715527dffdb5085",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/6670e21fc5cefcf17877/thumbnail.png",
+  "image_sha256": "25fc1067356a671f0ba67388d8ab78c49b93150448443ee7ab34655cf52503c9",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "902346a7b7566f149eb7731f6e7b43467fcfe044",
+    "text_lines": [
+      "バスケまとめ",
+      "西地区順位",
+      "名古屋D",
+      "開幕10戦全勝",
+      "広島 12勝1敗",
+      "広島は3試合多く消化",
+      "11月1日時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6670e21fc5cefcf17877/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261105.html",
+        "use": "本文の根拠。名古屋Dは開幕10勝0敗、広島12勝1敗、広島は3試合多く消化、11月1日時点。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6670e21fc5cefcf17877/source.txt",
+        "use": "固定HTMLと照合した本文の根拠。外部ページの成績は画像本文の根拠に使用していない。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認した承認済み黒×ライム、太字、手描きインクのスタイル参照。選手・成績・日付は転用していない。"
+      },
+      {
+        "type": "official_roster_for_selection_only",
+        "url": "https://nagoya-dolphins.jp/team/players/",
+        "use": "本文に選手名がないため、本文の主題である名古屋Dの現役選手一覧を選択母集団とした。"
+      },
+      {
+        "type": "official_profile_for_likeness_only",
+        "url": "https://nagoya-dolphins.jp/team/players/detail/id=23841?PlayerID=51000576",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026110418/files/user/roster/729/2026-27/51000576_01.jpg",
+        "use": "公式プロフィール写真を実際に目視し、容姿のみ参照。写真は完成画像へ貼り付けていない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "クエンティン・ミロラ・ブラウン",
+        "team": "名古屋ダイヤモンドドルフィンズ",
+        "selection": "ランダム",
+        "selection_reason": "記事はチーム順位分析で選手名がなく、特定の主役選手を絞れないため。本文に登場するチームの現役選手という優先順位で選択。",
+        "selection_method": "公式選手一覧の13人から一様ランダムに1人選択",
+        "selection_pool": [
+          "齋藤 拓実",
+          "加藤 嵩都",
+          "小澤 飛悠",
+          "アイザイア・マーフィー",
+          "張本 天傑",
+          "ライアン・ルーサー",
+          "中東 泰斗",
+          "ジェイク幸輝・ホルツ",
+          "今村 佳太",
+          "若野 瑛太",
+          "クエンティン・ミロラ・ブラウン",
+          "スコット・エサトン",
+          "アーロン・ヘンリー"
+        ],
+        "selected_index_zero_based": 10,
+        "profile_url": "https://nagoya-dolphins.jp/team/players/detail/id=23841?PlayerID=51000576",
+        "photo_url": "https://bleague.bl.kuroco-img.app/v=2026110418/files/user/roster/729/2026-27/51000576_01.jpg",
+        "appearance_observed": "後ろへなで付けた黒髪、縦長の輪郭、直線的な眉、切れ長の目、通った鼻筋、細い口ひげと顎ひげ、頬のひげは少ない。生成後もこれらの特徴を確認。",
+        "depiction": "両手でボールを持ち、上体をひねるプレーのイメージ。実際の特定試合の再現ではない。",
+        "visible_name_or_individual_stats": false,
+        "official_photo_composited": false
+      }
+    ],
+    "prompt": "Use case: ads-marketing.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 1536×864 or larger. Brand: バスケまとめ.\nVisual style: the previously inspected approved B-culver-black-lime-v3.png is STYLE ONLY: charcoal black #151A18 background, sharp lime #CCF43B brush strokes, ivory typography, energetic hand-drawn ink and dry brush illustration. Do NOT reuse the reference player's face, name, date, numbers, or score. This is a new article and a different real player.\n\nEditorial content, derived ONLY from the supplied fixed article: Nagoya Diamond Dolphins opened with 10 wins, 0 losses; Hiroshima has 12 wins, 1 loss, with 3 more games played. These standings are as of November 1. It is a standings analysis, not a head-to-head match report.\nExact visible Japanese text:\n「バスケまとめ」\n「西地区順位」\n「名古屋D」\n「開幕10戦全勝」\n「広島 12勝1敗」\n「広島は3試合多く消化」\n「11月1日時点」\n「イラスト（AI生成）」\n「イメージ」\nRender these exact words cleanly and correctly, without quotation marks. Main emphasis: 名古屋D and 開幕10戦全勝 in oversized heavy Japanese sans-serif, with the 10 especially prominent and lime. 広島 12勝1敗 is a clear secondary line with the extra-games qualifier immediately below. The date qualifier 11月1日時点 must remain easily legible. The two labels イラスト（AI生成） and イメージ must be readable in a quiet bottom footer. No other text or numbers.\n\nSubject: exactly one REAL athlete, Quentin Millora-Brown / クエンティン・ミロラ・ブラウン, selected randomly from the official Nagoya current roster, as an imagined basketball play illustration. The official portrait just inspected is APPEARANCE REFERENCE ONLY. Maintain his recognizable likeness: dark straight hair slicked straight back close to the head, long oval face, defined narrow jaw and chin, straight eyebrows, dark almond eyes, straight nose, narrow short moustache and small goatee/chin beard, very little beard on the cheeks, medium warm skin, tall strong lean center build. Do not substitute an invented athlete. Do not resemble the Culver style-reference person. Do not put this player's name, jersey number, statistics, participation, or performance claims anywhere.\nPose: dynamic three-quarter mid-thigh-up power pivot with a bent athletic stance, shoulders rotating, both hands gripping an orange basketball at one side of his torso, head turned toward the viewer's left and face large enough to recognize. This is an illustrative basketball movement, NOT a recreation of any real game or decisive shot. Keep the ball fully visible, both hands anatomically clear with plausible fingers, clear face and hair silhouette. Plain red basketball jersey and matching shorts with no writing, no numbers, no logos; an ivory/black ink treatment of skin and face with careful facial detail. Absolutely no photo pasted into artwork, no photorealism, no photographic face. No additional athletes.\nComposition: bold uncluttered editorial poster, text occupying about the left 58%, athlete on the right 42%, diagonal lime dry-brush sweep behind the athlete, fine ink texture and sparse splashes. Strong asymmetry and movement, plenty of separation between text and body. Maintain a safe margin at all edges; no cropped ball, hands, head, text or footer. Simplify background into charcoal and brush gestures, no arena, hoop, scoreboard or actual game scene.\nConstraints: no team logo, league logo, sponsor text, brand logo, watermark, official photograph, player name or jersey number. All depicted team records are TEAM standings, visually attached to the team names. Date and game-count qualifiers must not be omitted. All text must fit and be readable. Output one polished PNG thumbnail only.",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "内蔵画像生成",
+      "generation_calls": 1,
+      "correction_calls": 0,
+      "original_output": "/Users/genjo/.codex/generated_images/01a1a8db-07c7-7d53-adf8-597586b1b8e7/exec-a96ffc58-5bcf-4785-973f-dd657290e7b3.png",
+      "output": "generated.png",
+      "visual_qa": "実際の生成画像を目視。全文字と数値、チームへの成績帰属、11月1日時点と消化試合数の差、本人の髪・輪郭・目鼻・ひげ、両手とボール、文字と顔の見切れなし、AI表記とイメージ表記を確認。ロゴ・スポンサー・選手名・個人成績なし。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-04T23:21:11.339102+00:00",
+  "publication_approved": false
+}
