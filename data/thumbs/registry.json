@@ -280,6 +280,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "神戸が長崎に90-87で雪辱、2連戦は1勝1敗"
   },
+  "article-daily-20261105.html": {
+   "article_path": "article-daily-20261105.html",
+   "editorial_fingerprint": "392bbae9387ca1087f6303e38c911c0aa158fb59081c9798f661c5672190e332",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261105-25fc1067356a.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261105-25fc1067356a-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "6670e21fc5cefcf17877",
+   "image_sha256": "25fc1067356a671f0ba67388d8ab78c49b93150448443ee7ab34655cf52503c9",
+   "imported_at": "2026-11-04T23:21:42.521639+00:00",
+   "prepared_at": "2026-11-04T23:21:11.339102+00:00",
+   "source_blob_sha": "902346a7b7566f149eb7731f6e7b43467fcfe044",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "392bbae9387ca1087f6303e38c911c0aa158fb59081c9798f661c5672190e332",
+   "style": "ink-lime-portrait-v5",
+   "title": "名古屋Dが開幕10戦全勝、広島は12勝1敗で西地区を追う"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -955,13 +983,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261027.html",
-   "at": "2026-10-31T01:20:12.657785+00:00",
-   "event": "imported",
-   "id": "68dfe1f0dced4d4c7777",
-   "image": "f7d553001e24"
-  },
-  {
    "article": "article-games-20261028.html",
    "at": "2026-10-31T01:20:12.657805+00:00",
    "by": "227771a8a08cdddea2d2",
@@ -1513,6 +1534,13 @@
    "event": "imported",
    "id": "4367b17c7960b99cb3ea",
    "image": "761c15e017b7"
+  },
+  {
+   "article": "article-daily-20261105.html",
+   "at": "2026-11-04T23:21:42.521672+00:00",
+   "event": "imported",
+   "id": "6670e21fc5cefcf17877",
+   "image": "25fc1067356a"
   }
  ],
  "seen": {
@@ -1544,6 +1572,7 @@
   "602157ba437d2c7416b9": "imported",
   "619af1e58cddd34c14bc": "imported",
   "64677ebbbdc4b4827d54": "superseded:13dc704824ed84d25fee",
+  "6670e21fc5cefcf17877": "imported",
   "68dfe1f0dced4d4c7777": "imported",
   "6b5193f033d3228b846d": "superseded:a9d34f9ead8bbf40b841",
   "6e14b01b2117b3d326c8": "superseded:4c4f1870a93c2d66f8f1",
