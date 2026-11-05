@@ -280,6 +280,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "神戸が長崎に90-87で雪辱、2連戦は1勝1敗"
   },
+  "article-daily-20261104.html": {
+   "article_path": "article-daily-20261104.html",
+   "editorial_fingerprint": "833f74b00aec27a185ddbd3f9adf3e2cbade12a16af80d4aa22b18e2629ce685",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261104-1c20914c93d5.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261104-1c20914c93d5-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "7181c496e97c8dc59d57",
+   "image_sha256": "1c20914c93d509e897cbb8f2b80f8784e634e7dba1b241f80a925d5d7294aa68",
+   "imported_at": "2026-11-05T20:15:01.385467+00:00",
+   "prepared_at": "2026-11-05T20:10:50.612132+00:00",
+   "source_blob_sha": "2242367784b08e6ec0bf689408f4a484e85759f9",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "833f74b00aec27a185ddbd3f9adf3e2cbade12a16af80d4aa22b18e2629ce685",
+   "style": "ink-lime-portrait-v5",
+   "title": "東地区はA東京が独走、2位仙台と11月6日に直接対決"
+  },
   "article-daily-20261105.html": {
    "article_path": "article-daily-20261105.html",
    "editorial_fingerprint": "eb29c3dc5588c60f58f3e81ce39db912b44b2a4fea806e38d3571dd098a4d158",
@@ -896,6 +924,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "11/05 試合結果・当日のEFF"
   },
+  "article-results-one-next-20261106.html": {
+   "article_path": "article-results-one-next-20261106.html",
+   "editorial_fingerprint": "5d9cb1193e048808feae2bca28474d3d60067aa7e565798b8c49e47358afa6fb",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-results-one-next-20261106-a943d484f9a2.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-results-one-next-20261106-a943d484f9a2-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "cfa0f4e414a3d04bd5f5",
+   "image_sha256": "a943d484f9a231755bf397dc1203a832a8947c6f20400a1c02a022ee52252ec2",
+   "imported_at": "2026-11-05T20:15:01.530616+00:00",
+   "prepared_at": "2026-11-05T20:14:25.659757+00:00",
+   "source_blob_sha": "72489177391c511528ceb44dffb7f7c77ff47459",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "5d9cb1193e048808feae2bca28474d3d60067aa7e565798b8c49e47358afa6fb",
+   "style": "ink-lime-portrait-v5",
+   "title": "11/06 出場予定選手（登録選手）のベスト5"
+  },
   "article-stats-20261026.html": {
    "article_path": "article-stats-20261026.html",
    "editorial_fingerprint": "fa8bf9395b06c6d599e33f04949ace3dd509a5381fb0af173f99fa72386c4be5",
@@ -1010,20 +1066,6 @@
   }
  },
  "log": [
-  {
-   "article": "article-results-one-next-20261026.html",
-   "at": "2026-10-31T01:36:52.239222+00:00",
-   "by": "896bbeb35c2a1eb9d0e1",
-   "event": "superseded",
-   "id": "a2b6b2b44b3ab2922589"
-  },
-  {
-   "article": "article-results-one-next-20261026.html",
-   "at": "2026-10-31T01:36:52.387463+00:00",
-   "event": "imported",
-   "id": "896bbeb35c2a1eb9d0e1",
-   "image": "63e2f0974219"
-  },
   {
    "article": "article-results-one-next-20261029.html",
    "at": "2026-10-31T01:36:52.387487+00:00",
@@ -1569,6 +1611,20 @@
    "event": "imported",
    "id": "a6af1d6804c82023ebf1",
    "image": "2fc0dcef343c"
+  },
+  {
+   "article": "article-daily-20261104.html",
+   "at": "2026-11-05T20:15:01.385495+00:00",
+   "event": "imported",
+   "id": "7181c496e97c8dc59d57",
+   "image": "1c20914c93d5"
+  },
+  {
+   "article": "article-results-one-next-20261106.html",
+   "at": "2026-11-05T20:15:01.530638+00:00",
+   "event": "imported",
+   "id": "cfa0f4e414a3d04bd5f5",
+   "image": "a943d484f9a2"
   }
  ],
  "seen": {
@@ -1605,6 +1661,7 @@
   "68dfe1f0dced4d4c7777": "imported",
   "6b5193f033d3228b846d": "superseded:a9d34f9ead8bbf40b841",
   "6e14b01b2117b3d326c8": "superseded:4c4f1870a93c2d66f8f1",
+  "7181c496e97c8dc59d57": "imported",
   "7323c5f3c2556686df0c": "superseded:f4370ce664d0aaa5d148",
   "7d40ba767806af33dbf4": "superseded:ca69b5d16263483eb1ed",
   "7da4157f57a12da3f879": "imported",
@@ -1639,6 +1696,7 @@
   "c65ae6fd90ffcf57f53b": "superseded:b54717dd6365eef30b2d",
   "ca69b5d16263483eb1ed": "imported",
   "cba03e879d01718161f9": "imported",
+  "cfa0f4e414a3d04bd5f5": "imported",
   "d4cd88fa21bd64b494f0": "superseded:a080784863e72da1cb08",
   "d4ee196cd5adf437fb60": "superseded:619af1e58cddd34c14bc",
   "d5700d087ac39b72ed00": "imported",
