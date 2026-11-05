@@ -282,31 +282,31 @@
   },
   "article-daily-20261105.html": {
    "article_path": "article-daily-20261105.html",
-   "editorial_fingerprint": "392bbae9387ca1087f6303e38c911c0aa158fb59081c9798f661c5672190e332",
+   "editorial_fingerprint": "eb29c3dc5588c60f58f3e81ce39db912b44b2a4fea806e38d3571dd098a4d158",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261105-25fc1067356a.jpg",
+     "path": "thumbs/auto/article-daily-20261105-521157d802f7.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261105-25fc1067356a-og.jpg",
+     "path": "thumbs/auto/article-daily-20261105-521157d802f7-og.jpg",
      "width": 1200
     }
    },
-   "id": "6670e21fc5cefcf17877",
-   "image_sha256": "25fc1067356a671f0ba67388d8ab78c49b93150448443ee7ab34655cf52503c9",
-   "imported_at": "2026-11-04T23:21:42.521639+00:00",
-   "prepared_at": "2026-11-04T23:21:11.339102+00:00",
-   "source_blob_sha": "902346a7b7566f149eb7731f6e7b43467fcfe044",
+   "id": "2fad4903e119f5b6b0ea",
+   "image_sha256": "521157d802f78608546afcef8177926ba108d46805f0d5d522546782c669f6fa",
+   "imported_at": "2026-11-05T10:26:33.636301+00:00",
+   "prepared_at": "2026-11-05T10:26:01.415348+00:00",
+   "source_blob_sha": "1ba1c3da7d4301586865f13cca1b5e2d0bad91f0",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "392bbae9387ca1087f6303e38c911c0aa158fb59081c9798f661c5672190e332",
+   "stable_fingerprint": "eb29c3dc5588c60f58f3e81ce39db912b44b2a4fea806e38d3571dd098a4d158",
    "style": "ink-lime-portrait-v5",
-   "title": "名古屋Dが開幕10戦全勝、広島は12勝1敗で西地区を追う"
+   "title": "千葉Jのランドルフが復帰へ、6日のアルティーリ千葉戦でエントリー可能に"
   },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
@@ -983,20 +983,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261028.html",
-   "at": "2026-10-31T01:20:12.657805+00:00",
-   "by": "227771a8a08cdddea2d2",
-   "event": "superseded",
-   "id": "b8f222115a0883a9f7f2"
-  },
-  {
-   "article": "article-games-20261028.html",
-   "at": "2026-10-31T01:20:12.783501+00:00",
-   "event": "imported",
-   "id": "227771a8a08cdddea2d2",
-   "image": "499bff2b15b6"
-  },
-  {
    "article": "article-games-20261029.html",
    "at": "2026-10-31T01:20:12.783523+00:00",
    "by": "4c4f1870a93c2d66f8f1",
@@ -1541,6 +1527,20 @@
    "event": "imported",
    "id": "6670e21fc5cefcf17877",
    "image": "25fc1067356a"
+  },
+  {
+   "article": "article-daily-20261105.html",
+   "at": "2026-11-05T10:26:33.457602+00:00",
+   "by": "2fad4903e119f5b6b0ea",
+   "event": "superseded",
+   "id": "6670e21fc5cefcf17877"
+  },
+  {
+   "article": "article-daily-20261105.html",
+   "at": "2026-11-05T10:26:33.636323+00:00",
+   "event": "imported",
+   "id": "2fad4903e119f5b6b0ea",
+   "image": "521157d802f7"
   }
  ],
  "seen": {
@@ -1555,6 +1555,7 @@
   "2912f2bf307b5ed2a60d": "superseded:b54717dd6365eef30b2d",
   "292138556e17df566d67": "superseded:0a5c2c0f2505974f6de8",
   "2d836f0394de01c7d009": "superseded:7da4157f57a12da3f879",
+  "2fad4903e119f5b6b0ea": "imported",
   "3370472f9c78336a4974": "imported",
   "347558cc6a9b226d7c1c": "superseded:f60ec06f0d2f4ee967a2",
   "39075cc4edcf56d9d90d": "superseded:a9d34f9ead8bbf40b841",
@@ -1572,7 +1573,7 @@
   "602157ba437d2c7416b9": "imported",
   "619af1e58cddd34c14bc": "imported",
   "64677ebbbdc4b4827d54": "superseded:13dc704824ed84d25fee",
-  "6670e21fc5cefcf17877": "imported",
+  "6670e21fc5cefcf17877": "superseded:2fad4903e119f5b6b0ea",
   "68dfe1f0dced4d4c7777": "imported",
   "6b5193f033d3228b846d": "superseded:a9d34f9ead8bbf40b841",
   "6e14b01b2117b3d326c8": "superseded:4c4f1870a93c2d66f8f1",
