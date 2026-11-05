@@ -336,6 +336,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "千葉Jのランドルフが復帰へ、6日のアルティーリ千葉戦でエントリー可能に"
   },
+  "article-daily-20261106.html": {
+   "article_path": "article-daily-20261106.html",
+   "editorial_fingerprint": "5aa76afb976ea1c0e046623d218a09e40ac81230fd09ab6f374d76dc8178d139",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261106-10109327554f.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261106-10109327554f-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "7ad8c412ccd18f5f073f",
+   "image_sha256": "10109327554f905c69661a5cc9a302570763979aaae5c41f211bfa19ea985e2d",
+   "imported_at": "2026-11-05T23:27:43.366136+00:00",
+   "prepared_at": "2026-11-05T23:23:37.313707+00:00",
+   "source_blob_sha": "3bb5fce88b6de74098469e57f23f073e1b3b8d99",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "5aa76afb976ea1c0e046623d218a09e40ac81230fd09ab6f374d76dc8178d139",
+   "style": "ink-lime-portrait-v5",
+   "title": "仙台とA東京、今夜19時05分に東地区首位攻防"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -1068,13 +1096,6 @@
  "log": [
   {
    "article": "article-results-one-next-20261029.html",
-   "at": "2026-10-31T01:36:52.387487+00:00",
-   "by": "7da4157f57a12da3f879",
-   "event": "superseded",
-   "id": "2d836f0394de01c7d009"
-  },
-  {
-   "article": "article-results-one-next-20261029.html",
    "at": "2026-10-31T01:36:52.538636+00:00",
    "event": "imported",
    "id": "7da4157f57a12da3f879",
@@ -1625,6 +1646,13 @@
    "event": "imported",
    "id": "cfa0f4e414a3d04bd5f5",
    "image": "a943d484f9a2"
+  },
+  {
+   "article": "article-daily-20261106.html",
+   "at": "2026-11-05T23:27:43.366181+00:00",
+   "event": "imported",
+   "id": "7ad8c412ccd18f5f073f",
+   "image": "10109327554f"
   }
  ],
  "seen": {
@@ -1663,6 +1691,7 @@
   "6e14b01b2117b3d326c8": "superseded:4c4f1870a93c2d66f8f1",
   "7181c496e97c8dc59d57": "imported",
   "7323c5f3c2556686df0c": "superseded:f4370ce664d0aaa5d148",
+  "7ad8c412ccd18f5f073f": "imported",
   "7d40ba767806af33dbf4": "superseded:ca69b5d16263483eb1ed",
   "7da4157f57a12da3f879": "imported",
   "81cdf284d66df1d61f20": "imported",
