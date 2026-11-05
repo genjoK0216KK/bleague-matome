@@ -1,0 +1,71 @@
+{
+  "id": "2fad4903e119f5b6b0ea",
+  "article_path": "article-daily-20261105.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261105.html",
+  "source_commit": "",
+  "source_blob_sha": "1ba1c3da7d4301586865f13cca1b5e2d0bad91f0",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "eb29c3dc5588c60f58f3e81ce39db912b44b2a4fea806e38d3571dd098a4d158",
+  "last_observed_blob_sha": "1ba1c3da7d4301586865f13cca1b5e2d0bad91f0",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2fad4903e119f5b6b0ea/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2fad4903e119f5b6b0ea/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-05T10:22:14.080157+00:00",
+  "creation_event_id": "126babaf05784acd640b",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/2fad4903e119f5b6b0ea/thumbnail.png",
+  "image_sha256": "521157d802f78608546afcef8177926ba108d46805f0d5d522546782c669f6fa",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "1ba1c3da7d4301586865f13cca1b5e2d0bad91f0",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.05",
+      "千葉J",
+      "ランドルフ",
+      "復帰へ",
+      "11月6日 アルティーリ千葉戦から",
+      "エントリー可能",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2fad4903e119f5b6b0ea/source.html",
+        "role": "本文の根拠となる固定HTML",
+        "article_url": "https://basuke-matome.jp/article-daily-20261105.html",
+        "evidence": "記事見出しおよびlead段落。11月5日にIL抹消を発表、11月6日のアルティーリ千葉戦からエントリー可能。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2fad4903e119f5b6b0ea/source.txt",
+        "role": "本文の根拠となる固定文章",
+        "evidence": "「千葉Jのランドルフが復帰へ」「11月6日のアルティーリ千葉戦からエントリーできます」。",
+        "qualifiers_preserved": "「復帰へ」「エントリー可能」を画像内で維持。プレー姿は「イメージ」と明記。出場実績・得点・活躍・出場確定は表現していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ブランドン・ランドルフ",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿の見出し、冒頭、各本文節で最も大きく扱われている選手。",
+        "official_profile_url": "https://chibajets.jp/team/players/detail/id=26997?PlayerID=51000643",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026110513/files/user/roster/704/2026-27/51000643_01.jpg",
+        "reference_accessed_on": "2026-11-05",
+        "appearance_verified": "千葉ジェッツ公式プロフィールから参照画像を取得し、view_imageで目視。頭皮に沿ったコーンロウ、縦長の輪郭、頬骨、目鼻、厚めの唇、細い口ひげと顎ひげ、細身で長い腕、左腕のタトゥーを確認。",
+        "depiction": "本人の顔の特徴を寄せた手描きインクのドライブ姿。プレー動作はイメージ。ユニフォームは無地で、ロゴ・スポンサー文字・背番号を含めない。",
+        "visual_qa": "生成PNGを実見し、参照写真と髪型・顔の輪郭・目鼻・ひげの特徴を照合。両手とボールの接点、指の形、頭と手の見切れも確認。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nTransform the approved basketball thumbnail design reference into ONE finished Japanese editorial thumbnail for a different article, landscape 16:9, at least 1600x900 pixels.\nReference image 1 is ONLY the approved graphic style. Use its near-black #151A18 and acid-lime #CCF43B palette, ivory lettering, strong Japanese typography, expressive hand-drawn ink / dry-brush textures. Replace all its old words, numbers, player and pose.\nReference image 2 is ONLY the official appearance reference for the real player Brandon Randolph (ブランドン・ランドルフ). Draw a new unmistakably hand-inked illustration of this SAME real person. Preserve the close-to-scalp black cornrow braids swept backward, narrow long oval face, high cheekbones, almond eyes, broad nose, full lips, thin moustache and compact pointed goatee, long lean athletic build, and subtle left-arm tattoo pattern. His eyes and face must be visible. Do not paste any photo pixels. No photorealism.\nComposition: large player illustration on the right 42%, executing a dynamic low dribble and forward drive in three-quarter view, body leaning inward, ball controlled with one hand low beside his hip, other arm naturally bent, head and both hands entirely within the canvas. A single orange basketball is a prop held/controlled by the player. Waist-to-knees crop is fine. One real player only. Plain sleeveless ivory/dark uniform with understated red trim. No jersey number, logos, branding, sponsor text or team emblems. Lime sweeping dry-brush arc behind the body emphasizes the drive. Keep all headline letters unobscured on the left 58%. Generous 5% safe margins. Restrained background with no arena details, no opponent, no scoreboard, no crowd.\nTypography: heavy, exceptionally clear Japanese gothic lettering, high contrast. Visual hierarchy is name in ivory and the largest short headline in lime. Enough breathing space between the text blocks. Render ONLY the following exact text, without substitutions, duplicated letters, or extra text:\nsmall upper-left masthead: 「バスケまとめ」\nsmall article date below the masthead: 「2026.11.05」\nmedium team label: 「千葉J」\nlarge name: 「ランドルフ」\nlargest main headline: 「復帰へ」\nsupport line 1, clearly legible: 「11月6日 アルティーリ千葉戦から」\nsupport line 2, clearly legible: 「エントリー可能」\nbottom-left disclosure, legible and fully inside the canvas: 「イラスト（AI生成）」 and 「イメージ」\nFactual basis is only the supplied fixed article. It states the injury-list removal was announced November 5 and entry is possible from November 6. Preserve the tentative phrase 復帰へ and eligibility phrase エントリー可能 exactly. This illustration is a conceptual playing pose, not a reconstruction of an actual game. Do not imply that he has already played, scored, won, or is confirmed to appear. No performance numbers, score, league rank or medical recovery claim. No league or team logos and no official photographic content in the output. Deliver one polished complete thumbnail.",
+    "generator": "内蔵 image_gen（image_gen__imagegen）。初回生成1回、修正0回。黒×ライムの承認済み参照 B-culver-black-lime-v3.png を使用。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-05T10:26:01.415348+00:00",
+  "publication_approved": false
+}
