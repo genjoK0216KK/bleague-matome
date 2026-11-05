@@ -1,0 +1,120 @@
+{
+  "id": "ca69b5d16263483eb1ed",
+  "article_path": "article-results-one-next-20261105.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261105.html",
+  "source_commit": "",
+  "source_blob_sha": "853202168ebb486c38f86c750a00cb60b0b6d064",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "ee80bca8d6ab14a1e749d66a88bf854776c6f4e407348e87d2dcb13eb7b768ac",
+  "last_observed_blob_sha": "853202168ebb486c38f86c750a00cb60b0b6d064",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca69b5d16263483eb1ed/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca69b5d16263483eb1ed/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-05T13:29:28.275113+00:00",
+  "creation_event_id": "4bc92a50bd4b2357b566",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/ca69b5d16263483eb1ed/thumbnail.png",
+  "image_sha256": "c5f011a9f5e16ac7fe2b54bee51dc2e9180088e0ad713b3d0d4418d960ce74fb",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "853202168ebb486c38f86c750a00cb60b0b6d064",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.05｜B.NEXT",
+      "品川が勝利",
+      "66–57",
+      "品川",
+      "三重",
+      "当日のEFF・ポジション別TOP3",
+      "イラスト（AI生成）　イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca69b5d16263483eb1ed/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261105.html",
+        "blob_sha_verified": "853202168ebb486c38f86c750a00cb60b0b6d064",
+        "facts_used": [
+          "試合日 2026.11.05",
+          "B.NEXT 品川 66–57 三重 終了",
+          "当日のEFF・ポジション別TOP3"
+        ],
+        "qualifiers_preserved": "当日・ポジション別を明記。個人の成績や当日の起用位置は画像に書かない。絵は実際の試合場面の再現とせずイメージと明記。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca69b5d16263483eb1ed/source.txt",
+        "role": "HTMLとともに記事本文の唯一の根拠として使用"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "黒×ライム、太い日本語見出し、インク・ブラシ表現のみ参照。選手と成績は転用せず。",
+        "visually_inspected": true
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジョーダン・ジャイルズ",
+        "selection": "ランダム",
+        "selection_reason": "ポジション別一覧が主で、本文で単独の人物が大きく扱われる構成ではないため、本文に名前がある選手から選出。",
+        "selection_method": "本文の重複を除いた全11選手からSystemRandomで等確率に1人を抽選",
+        "candidate_names": [
+          "山根 響",
+          "新本 風河",
+          "中村 瀬那",
+          "原田 大和",
+          "景井 武蔵",
+          "佐脇 考哉",
+          "落合 知也",
+          "ジョーダン・ジャイルズ",
+          "中嶋 正尭",
+          "サム・ティミンズ",
+          "ジャマル・ポップラー"
+        ],
+        "official_references": [
+          {
+            "page_url": "https://www.bleague.jp/roster_detail/?PlayerID=50010",
+            "image_url": "https://www.bleague.jp/files/user/roster/748/2026-27/50010_03.png",
+            "publisher": "B.LEAGUE公式",
+            "role": "公式プロフィール写真で髪型、輪郭、ひげ、目鼻、体格を目視確認",
+            "visually_inspected": true
+          },
+          {
+            "page_url": "https://www.shinagawa-city.com/basketball/11009",
+            "image_url": "https://www.shinagawa-city.com/basketball/wp-content/uploads/sites/2/2026/08/%E3%82%B8%E3%83%A7%E3%83%BC%E3%83%80%E3%83%B3.jpg",
+            "publisher": "しながわシティ公式",
+            "role": "動きによる髪型と体格を補助確認。写真自体は完成画像に使用せず。",
+            "visually_inspected": true
+          }
+        ],
+        "appearance_notes": "後ろにまとめた肩付近までのドレッド、長い卵形の輪郭、高い頬骨、目と眉の形、鼻・唇、顎周りに厚みのある短いひげをイラストで表現。",
+        "depiction": "ボールを両手で保持して運ぶ一般的なプレーのイメージ。特定の試合場面の再現ではない。",
+        "name_or_individual_performance_in_image": false
+      }
+    ],
+    "prompt": "Use case: ads-marketing\nAsset type: Japanese basketball news editorial thumbnail, one single finished raster image.\nPrimary request: Create one landscape 16:9 thumbnail, target 1600x900 or larger (minimum width 1000px), for バスケまとめ. Hand-drawn ink sports illustration plus exceptionally legible bold Japanese typography. Exactly one real player: Jordan Giles (ジョーダン・ジャイルズ), selected randomly from the article's named players. No fictional players and no additional people.\nEditorial facts allowed: fixed article dated 2026.11.05, B.NEXT, final result 品川 66–57 三重, article includes 当日のEFF・ポジション別TOP3. These are the only game facts. Do not invent any player statistics or a specific actual game moment.\n\nStyle/medium: Approved black-and-lime editorial style: near-black #151A18 background, acid lime #CCF43B brush swaths, warm ivory heavy Japanese Gothic type, rough black-and-white ink hatching, dry-brush sports illustration, few elements, high contrast. Orange basketball as the only strong extra color. This is visibly an illustration, never photorealistic, never a photo collage.\nSubject likeness from visually inspected official B.LEAGUE 2026-27 portrait: Jordan Giles has dark shoulder-length dreadlocks pulled back from a high smooth forehead, medium-dark brown skin translated to ink/ivory tones, long oval face, prominent cheekbones, medium-thick brows, almond-shaped eyes, straight broad nose, full lips, short full beard stronger along jaw/chin, connected short mustache, athletic muscular shoulders and arms. Preserve these specific traits. Official portrait https://www.bleague.jp/files/user/roster/748/2026-27/50010_03.png and official club action reference https://www.shinagawa-city.com/basketball/11009 were consulted only for likeness. Do NOT paste or reproduce any official photograph, logos, sponsor text, numbers, or photo composition.\nScene/backdrop: Abstract energetic lime brush arcs on near-black; no scoreboard, stadium signage, or detailed venue.\nComposition/framing: Left 58 percent is clear organized typography with generous breathing room. Right 42 percent shows Giles in an energetic low driving stance, torso in three-quarter view, gaze toward the left, hair trailing naturally behind, carrying/gathering one orange basketball near his waist with both hands. The pose is a newly imagined generic basketball action, NOT a recreation of the reported match. His face is large enough to recognize; hair, face, both hands and ball are wholly within the canvas; crop at upper thighs deliberately. Exactly two arms, natural wrists and five fingers per hand, physically plausible ball grip. Plain ivory basketball jersey with understated lime edge only, entirely unbranded and without numbers. Simplified ink tattoo textures on upper arms, no invented text. Keep drawing out of the text zone.\nTypography/text: Copy the following text exactly. Render no other text. Main Japanese headline is very large and bold; score is the largest lime element.\nTop-left small brand line: \"バスケまとめ\"\nBelow brand, compact date/category line: \"2026.11.05｜B.NEXT\"\nLarge headline: \"品川が勝利\"\nHuge score: \"66–57\"\nDirectly below score, separate team labels aligned under their own score: \"品川\" under 66, \"三重\" under 57.\nSmaller supporting line near bottom left: \"当日のEFF・ポジション別TOP3\"\nReadable footer at bottom inside a safe margin: \"イラスト（AI生成）　イメージ\"\nConstraints: At least 5 percent safe margin around all type; no text clipped, obscured or overlapping illustration. Footer must remain clearly readable and contain full-width Japanese parentheses around AI生成. Do not display Jordan Giles's name, number, performance, participation claim, individual statistics or personal achievement. No copied names/statistics from the approved style samples. No league/team/sponsor logos, no watermark, no official photos. No winning-shot claim or actual-match-scene claim. One polished image only.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "revision_count": 0,
+      "output_size": [
+        1672,
+        941
+      ],
+      "output_format": "PNG",
+      "output_sha256": "c5f011a9f5e16ac7fe2b54bee51dc2e9180088e0ad713b3d0d4418d960ce74fb",
+      "qa_method": "生成ツールの完成画像表示を目視検品。固定原稿と文字・数値・留保を照合し、公式画像と顔の特徴を照合。文字・手・ボールの欠け、重なり、AI表記を確認。PNGの構造・寸法・CRCとコピー後のSHA256も検証。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-05T13:39:28.437337+00:00",
+  "publication_approved": false
+}

@@ -1,0 +1,130 @@
+{
+  "id": "c422e01f21c312cd1a36",
+  "article_path": "article-games-20261105.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261105.html",
+  "source_commit": "",
+  "source_blob_sha": "4e77f6255ac94d718e9a428a2aad72384e3c347d",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "ee80bca8d6ab14a1e749d66a88bf854776c6f4e407348e87d2dcb13eb7b768ac",
+  "last_observed_blob_sha": "4e77f6255ac94d718e9a428a2aad72384e3c347d",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c422e01f21c312cd1a36/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c422e01f21c312cd1a36/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-05T13:29:27.968451+00:00",
+  "creation_event_id": "4b8dc3306c208206f132",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/c422e01f21c312cd1a36/thumbnail.png",
+  "image_sha256": "6247991913db53a89ccbc1202979ed2bafe8470c7385f807b9da30c850ff2d0a",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "4e77f6255ac94d718e9a428a2aad72384e3c347d",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.05｜B.NEXT",
+      "品川 66",
+      "三重 57",
+      "試合結果・当日のEFF",
+      "ポジション別TOP3",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c422e01f21c312cd1a36/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261105.html",
+        "use": "本文の根拠。2026-11-05のB.NEXT 品川66–57三重（終了）、当日のEFF・ポジション別TOP3。Git blob形式のSHAをローカル計算し指定値と一致確認。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c422e01f21c312cd1a36/source.txt",
+        "use": "HTMLと併読した本文の唯一の補助根拠。資料取得2026-11-05 22:29 JST。ポジションは登録資料上の分類で当日の起用位置は断定しない。今季平均や個人成績の強調、全リーグ順位への拡張は行わない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで目視確認。黒×ライム、インク・ブラシ、太い日本語文字のスタイルのみ。旧選手・旧成績・旧日付は不使用。"
+      },
+      {
+        "type": "official_visual_reference",
+        "url": "https://www.shinagawa-city.com/basketball/7997",
+        "image_url": "https://www.shinagawa-city.com/basketball/wp-content/uploads/sites/2/2025/05/%E5%B1%B1%E6%A0%B9%E9%9F%BF_web.jpg",
+        "local_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c422e01f21c312cd1a36/references/yamane-official-full.jpg",
+        "use": "しながわシティ公式の2025-05-20契約継続発表に掲載された山根響の写真。容姿・体格の目視参照だけに使用。公式写真の貼付・ロゴ・スポンサー文字・実際の場面の再現には使用しない。"
+      },
+      {
+        "type": "official_portrait_reference",
+        "url": "https://www.bleague.jp/valentine/2025/cr/",
+        "image_url": "https://www.bleague.jp/files/user/_/valentines/2025/profile-img/cr_body.jpg",
+        "local_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c422e01f21c312cd1a36/references/yamane-official-portrait.jpg",
+        "use": "B.LEAGUE公式の山根響紹介ページの全身ポートレート。髪型・輪郭・眉・目鼻・ひげなしをview_imageで確認。容姿の補助参照のみ。"
+      },
+      {
+        "type": "official_identity_reference",
+        "url": "https://basketball.shinagawa-city.com/team/players/detail/id=60025?PlayerID=43471",
+        "use": "山根響の公式選手プロフィールの人物同定のみ。外部ページの成績をサムネの本文根拠に使用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "山根 響",
+        "english_name": "Hibiki Yamane",
+        "selection": "ランダム",
+        "selection_reason": "記事は試合結果と複数ポジション別TOP3を同様に扱い、一人を特別に主役とする本文ではないため、本文に名前がある11人の重複除外リストから選択。",
+        "selection_method": "Python random.Random('c422e01f21c312cd1a36').choice(candidates)",
+        "candidates": [
+          "山根 響",
+          "新本 風河",
+          "中村 瀬那",
+          "原田 大和",
+          "景井 武蔵",
+          "佐脇 考哉",
+          "落合 知也",
+          "ジョーダン・ジャイルズ",
+          "中嶋 正尭",
+          "サム・ティミンズ",
+          "ジャマル・ポップラー"
+        ],
+        "reference_sources": [
+          "https://www.shinagawa-city.com/basketball/7997",
+          "https://www.bleague.jp/valentine/2025/cr/",
+          "https://basketball.shinagawa-city.com/team/players/detail/id=60025?PlayerID=43471"
+        ],
+        "observed_features": "明るい茶色の短めのレイヤー髪と分かれた前髪、白い肌、やや丸い卵形の輪郭と締まった顎、直線的な眉、細めの目、まっすぐな鼻、ひげなし、コンパクトなガードの体格。",
+        "depiction": "本人の特徴に寄せたインク調のドリブル姿1人。架空選手ではない。イメージであり、対象試合の特定場面の再現ではない。",
+        "visible_name_or_individual_stats": false,
+        "logos_or_official_photo_pixels_used": false
+      }
+    ],
+    "prompt": "Use case: illustration-story\nCreate one finished Japanese editorial basketball thumbnail by completely reworking the supplied approved black/lime design into a NEW composition for the fixed article below. Landscape 16:9, 1536x864 or larger, PNG, opaque.\n\nInput image roles:\n1. B-culver-black-lime-v3.png is STYLE ONLY: charcoal #151A18, acid-lime #CCF43B, ivory, bold Japanese sports typography, ink drawing, rough dry-brush energy and sparse elements. Do not transfer its person, name, numbers, date, team names, or jump-shot pose.\n2. yamane-official-full.jpg is an official club visual reference for the REAL athlete 山根 響 (Hibiki Yamane), the man with brown hair on the right. Use ONLY his appearance and athletic proportions, never paste pixels, copy logos, copy text, reproduce that photo, or add background people.\n3. yamane-official-portrait.jpg is the official B.LEAGUE portrait of the SAME man, for facial likeness only.\n\nSubject: one recognizable illustrated Hibiki Yamane, fair skin rendered in ivory/gray ink, youthful rounded-oval face with tapered jaw, straight medium-brown layered hair with separated bangs and shorter sides, straight eyebrows, narrow almond eyes, straight nose, no beard or moustache. Preserve those distinctive face features. Concentrated game expression. Compact athletic basketball-guard proportions.\nPose: fresh dynamic low driving dribble, three-quarter angle, leaning forward with bent knees; one hand clearly controlling an orange basketball, the other bent naturally as he accelerates. This is a conceptual sports illustration, NOT a recreation or claim about a specific play in this match. Keep his face, both hands, ball and bent knees inside the frame, with natural anatomy. Right half of image. Plain ivory and charcoal sleeveless basketball jersey and shorts; absolutely NO team/league logos, sponsors, lettering, names, or uniform numbers. Monochrome hand-inked athlete with restrained brown hair and orange ball accents. Bold visible drawing marks, not photorealistic, not a photograph, not generic anime.\n\nLayout: large graphic scoreboard at left, approximately 55% width; player at right about 45%. Use a curved lime brush arc behind the driving player, not the original straight diagonal jump-shot arrangement. Lots of clear negative space behind all type. No panels or clutter. All content at least 50px inside edges.\nTypography, EXACT visible text only:\nTop-left small bold: \"バスケまとめ\"\nBelow, medium white: \"2026.11.05｜B.NEXT\"\nMain scoreboard: two exceptionally large aligned rows:\n\"品川 66\"\n\"三重 57\"\nMake team names white and numbers lime, same size and aligned vertical columns so the team-score association is unmistakable. This is the completed match result (Shinagawa 66, Mie 57).\nBelow score, medium bold white: \"試合結果・当日のEFF\"\nThen smaller white: \"ポジション別TOP3\"\nBottom-left legible caption with generous bottom margin: \"イラスト（AI生成）｜イメージ\"\n\nFacts: The fixed article reports ONLY this B.NEXT match on 2026-11-05, 品川66–57三重, and official daily EFF position-specific TOP3. Do not invent league-wide MVP claims, records, individual numbers, individual achievement claims, starting positions or season averages.\nSelection: Hibiki Yamane was randomly selected from the named players in the fixed article; his identity is for the drawing only. Do NOT put his name, individual stats, appearances, accolades, jersey number, or claims of activity in the visible image text. The only numbers allowed are the date, the 66 and 57 TEAM scores, and the 3 in TOP3. Do not depict another person or any tiny spectators. Do not add any other text. Crisp readable Japanese, professional approved-style sports editorial finish.",
+    "generator": {
+      "tool": "image_gen",
+      "execution": "built-in image_gen__imagegen",
+      "generation_count": 1,
+      "correction_count": 0,
+      "output_format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "reference_paths": [
+        "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c422e01f21c312cd1a36/references/yamane-official-full.jpg",
+        "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c422e01f21c312cd1a36/references/yamane-official-portrait.jpg"
+      ],
+      "qa_notes": {
+        "text_and_numbers": "生成画像を実際に見て、2026.11.05、B.NEXT、品川66、三重57、試合結果・当日のEFF、ポジション別TOP3、AI表記を確認。選手名・個人成績・背番号はなし。",
+        "source_qualifiers": "B.NEXTと当日のEFFを明記。今季平均・実起用位置・全リーグMVPの主張なし。ランダム選手には個人成績や活躍の文言なし。『イメージ』で実際の試合場面と区別。",
+        "likeness_or_no_named_person": "描写対象は実在の山根響。公式写真と見比べ、茶色の髪・前髪・輪郭・眉・細めの目・鼻・ひげなしをイラストで確認。",
+        "layout": "文字の可読性、左右の分離、顔・両手・ボールの収まり、自然な指と腕、ロゴなしを目視確認。脚の画面下へのトリミングは意図的な動的構図。1672x941で約16:9。",
+        "ai_label": "左下の『イラスト（AI生成）｜イメージ』が読めることを実画像で確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-05T13:35:06.291586+00:00",
+  "publication_approved": false
+}
