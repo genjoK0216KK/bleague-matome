@@ -1,0 +1,115 @@
+{
+  "id": "7ad8c412ccd18f5f073f",
+  "article_path": "article-daily-20261106.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261106.html",
+  "source_commit": "",
+  "source_blob_sha": "3bb5fce88b6de74098469e57f23f073e1b3b8d99",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "5aa76afb976ea1c0e046623d218a09e40ac81230fd09ab6f374d76dc8178d139",
+  "last_observed_blob_sha": "3bb5fce88b6de74098469e57f23f073e1b3b8d99",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7ad8c412ccd18f5f073f/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7ad8c412ccd18f5f073f/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-05T23:19:32.191840+00:00",
+  "creation_event_id": "dcffce1ddf9c46e789e3",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/7ad8c412ccd18f5f073f/thumbnail.png",
+  "image_sha256": "10109327554f905c69661a5cc9a302570763979aaae5c41f211bfa19ea985e2d",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "3bb5fce88b6de74098469e57f23f073e1b3b8d99",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.06",
+      "仙台 × A東京",
+      "東地区",
+      "首位攻防",
+      "今夜 19:05",
+      "試合前展望 / 独自予測",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7ad8c412ccd18f5f073f/source.html",
+        "role": "固定原稿。記事内容・見出し・日付・開始時刻・試合前展望／独自予測の唯一の根拠（source.txtと併用）",
+        "article_url": "https://basuke-matome.jp/article-daily-20261106.html",
+        "editorial_note": "本文にA東京11勝3敗・仙台10勝4敗と、仙台勝利時に両者10勝4敗との不整合があるため、勝敗数・勝利条件・首位タイの断定は画像に採用しない。記事自体の修正は行っていない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7ad8c412ccd18f5f073f/source.txt",
+        "role": "固定本文の照合。関連記事は根拠に含めない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "制作・検品ルール。ユーザー10/31の実在選手必須・ランダム選出の指示を優先。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで確認済みの承認済み絵柄参照。選手名・数字・成績は引き継がない。"
+      },
+      {
+        "url": "https://www.89ers.jp/team/players/",
+        "role": "仙台の公式掲載現役選手からランダム選出するためだけに使用。"
+      },
+      {
+        "url": "https://www.alvark-tokyo.jp/team/players/",
+        "role": "A東京の公式掲載現役選手からランダム選出するためだけに使用。CUE7は人間の選手ではないため候補から除外。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジェイク・レイマン",
+        "team": "仙台89ERS",
+        "selection": "ランダム",
+        "selection_method": "本文に選手名がないため、公式掲載の仙台の現役選手13名からPython random.SystemRandom.choiceで1名抽選。selection.jsonに抽選結果を保存。",
+        "official_profile": "https://www.89ers.jp/team/players/detail/id=21448?PlayerID=51000313",
+        "official_image": "https://bleague.bl.kuroco-img.app/v=2026102905/files/user/roster/692/2026-27/51000313_01.jpg",
+        "appearance_checked": "公式プロフィール画像を取得しview_imageで目視。短いサイドパートの明るい茶髪、縦長で細い輪郭、まっすぐな鼻、淡い目、ひげのない顔。修正1回で髪型と顔を公式参照へ近づけた。",
+        "depiction": "前景のライム色無地ユニフォーム。実際の試合場面・出場・成績を示すものではない。"
+      },
+      {
+        "name": "ザック・バランスキー",
+        "team": "アルバルク東京",
+        "selection": "ランダム",
+        "selection_method": "本文に選手名がないため、公式掲載のA東京の人間の現役選手13名からPython random.SystemRandom.choiceで1名抽選。selection.jsonに抽選結果を保存。",
+        "official_profile": "https://www.alvark-tokyo.jp/player_lp/zack_baranski/",
+        "official_image": "https://alvark-tokyo.bl.kuroco-img.app/v=1789441131/files/user/_/player_lp/2026-27/zack_baranski/images/bg_section_01_sp.jpg",
+        "appearance_checked": "公式選手紹介の写真を取得しview_imageで目視。短い波打つ茶髪、太めの眉、レイマンより幅のある顔、口ひげと顎ひげを描写。",
+        "depiction": "後景の黒い無地ユニフォームの守備姿。実際の試合場面・出場・成績を示すものではない。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: illustration-story\nCreate ONE finished Japanese basketball editorial thumbnail, landscape 16:9, ideally 1536x864 or larger, PNG, for バスケまとめ. This is a new illustration, not a photograph and not a recreation of an actual game.\n\nSTYLE: match the approved thumbnail's visual vocabulary: near-black #151A18 background, electric lime #CCF43B brush slashes, warm ivory Japanese headline typography, bold hand-drawn ink and dry-brush hatching. Very high contrast, expressive sports editorial drawing, minimal elements. Sharp typography, generous safe margins. No photorealism. No official photo pixels, team/league logos, sponsor marks, brand marks, watermarks or jersey lettering.\n\nLAYOUT: left 46% is an uncluttered text block. Right 54% shows TWO real players in a dynamic one-on-one basketball scene; bodies angled and knees bent, with contrasting silhouettes and visible faces. Jake Layman drives forward with one orange basketball controlled in his right hand at hip height, Zack Baranski guards him in an athletic defensive stance. Show heads, torsos, both arms, and enough upper legs to convey movement. Keep the ball, all hands, all faces inside the canvas. Anatomically natural five-fingered hands, no merged arms, no extra limbs. The scene is purely illustrative. Do not show a scoreboard, basket result, winning shot or celebratory victory. Keep small footer clear of figures.\n\nREAL PLAYER LIKENESS based on the official photographs inspected:\n1. Jake Layman (Sendai 89ERS): tall, lean white adult man, narrow elongated rectangular face, angular jaw, clean-shaven, straight prominent nose, pale blue eyes, short light-brown/dark-blond hair with a neat side part and lifted swept-back top. No beard. Lime/yellow plain basketball singlet with black edging, no logo, no name, no number.\n2. Zack Baranski (Alvark Tokyo): white adult man, sturdier build than Layman, short wavy light-brown hair swept upward/back with trimmed sides, strong eyebrows, deeper-set eyes, fuller angular face, distinct medium full brown beard and moustache. Plain near-black singlet with narrow ivory edging, no logo, no name, no number. Distinguish his beard and face shape clearly from Layman. Both faces must read as individual people in an ink illustration, not generic fictional players.\n\nEXACT TEXT ONLY, spell all Japanese accurately:\nsmall masthead: 「バスケまとめ」\nsmall date: 「2026.11.06」\nmatchup kicker: 「仙台 × A東京」\nlarge headline on two lines: 「東地区」 and 「首位攻防」\nprominent time line: 「今夜 19:05」\nsmall but readable qualifier: 「試合前展望 / 独自予測」\nbottom footer, clearly legible: 「イラスト（AI生成）｜イメージ」\n\nHierarchy: 首位攻防 is largest and lime; 東地区 ivory, matchup ivory. Leave breathing room. All text contained safely with at least 4% edge margins. The qualifiers and AI footer must remain legible. Do not add any other text or numerals. In particular no player names, no individual results, no score, no team records, no claim of confirmed player participation. This matchup and time are from the fixed supplied article; player selection is random from the teams' official rosters, so their action is only an image, not reporting of their appearance or achievement.\n",
+      "revision_1": "Edit image 1, the completed black-and-lime Japanese basketball thumbnail, making ONLY a precise likeness correction to the two players' head/face/hair. Keep every Japanese text, every number, all lettering placement, the dynamic poses, hands, basketball, uniforms without logos, black/lime/ivory palette, margins, background and brush illustration style unchanged. Keep 16:9 landscape and original resolution.\nImage 2 is the official appearance reference for Jake Layman, the foreground player in lime. Match this particular real person's likeness in the SAME hand-drawn ink style: shorter neater light brown/dark blond side-parted hair, swept up and back, shorter sides (reduce the overlong wavy golden quiff in image 1); long narrow rectangular face, high forehead, straight narrow prominent nose, pale blue eyes, subtle thin lips, angular narrow clean-shaven jaw. No beard or moustache. Retain his intense sports expression and current gaze/pose, but make the facial proportions match reference 2.\nImage 3 is the official appearance reference for Zack Baranski, the rear defender in black. Match his short brown wavy hair, fuller face, thick eyebrows, and full brown beard/moustache, still clearly illustrated. Preserve the current readable beard and just align his face and hair with reference 3. Do NOT copy any photograph pixels or change into photorealism. Do not transfer any logos, sponsors, jersey names, numbers or photo backgrounds from either reference.\nExactly the same text remains: バスケまとめ ; 2026.11.06 ; 仙台 × A東京 ; 東地区 ; 首位攻防 ; 今夜 19:05 ; 試合前展望 / 独自予測 ; イラスト（AI生成）｜イメージ . No other text. This is only an imagined basketball scene, no claim of actual participation or achievements. Return ONE corrected image.\n",
+      "revision_reference_roles": [
+        "初回生成PNGを編集対象",
+        "レイマン公式画像は容姿参照のみ",
+        "バランスキー公式画像は容姿参照のみ"
+      ]
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "内蔵画像生成",
+      "initial_generations": 1,
+      "corrections": 1,
+      "approved_candidate": "/Users/genjo/.codex/generated_images/01a1ae02-a8dd-7ca1-818d-8bdc7b50b5dc/exec-7c04b13d-10eb-4125-979d-5f0147d3b03c.png",
+      "output": "generated.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "sha256": "10109327554f905c69661a5cc9a302570763979aaae5c41f211bfa19ea985e2d",
+      "visual_review": "修正後の生成画像を実際に表示して、下記5項目を確認。文字と数字の一致、予測留保、実在2選手の容姿、手とボール・顔の見切れ、イラスト表現・ロゴなし、AI注記を確認。",
+      "ready_executed": false,
+      "published_or_sent": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-05T23:23:37.313707+00:00",
+  "publication_approved": false
+}
