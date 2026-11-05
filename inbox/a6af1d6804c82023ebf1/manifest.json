@@ -1,0 +1,96 @@
+{
+  "id": "a6af1d6804c82023ebf1",
+  "article_path": "article-games-20261106.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261106.html",
+  "source_commit": "",
+  "source_blob_sha": "05e4fd3cce518aad20c0e0d02c0fa4dc29f2cfcf",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "8780faca2ecb0ed4bb83d130aa80b19aa2d4958dbd4c4f26fe79278dc57df37d",
+  "last_observed_blob_sha": "05e4fd3cce518aad20c0e0d02c0fa4dc29f2cfcf",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a6af1d6804c82023ebf1/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a6af1d6804c82023ebf1/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-05T17:19:18.838277+00:00",
+  "creation_event_id": "52dae89948fad336deb8",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/a6af1d6804c82023ebf1/thumbnail.png",
+  "image_sha256": "2fc0dcef343c179af52d4056eb919c988391fc321069dbea995c960d08a0c730",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "05e4fd3cce518aad20c0e0d02c0fa4dc29f2cfcf",
+    "text_lines": [
+      "バスケまとめ",
+      "11/06",
+      "試合予定",
+      "当日の成績は",
+      "公式記録の確定待ち",
+      "11/06 02:18 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a6af1d6804c82023ebf1/source.html",
+        "role": "記事本文の根拠。指定blob SHAと一致を確認。2026-11-06 02:18 JST時点で全試合が試合前、各リーグの当日EFFは全試合の公式記録確定待ち。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a6af1d6804c82023ebf1/source.txt",
+        "role": "記事本文の根拠。選手名の記載なし。本文の試合予定と確定待ちの留保を使用。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール。本人の10/31指定により実在選手をランダム選出。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済み黒×ライムのスタイル参照。目視確認。"
+      },
+      {
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "role": "承認済み白地案を目視確認。手順書のoutputs側に当該Aファイルが無かったため、案件正本に記載された元の保存先で確認。今回の採用配色は黒×ライム。"
+      },
+      {
+        "url": "https://www.bleague.jp/club_detail/?TeamID=698",
+        "role": "ランダム選出のための現役選手一覧の確認。記事内容・成績の根拠としては使用しない。"
+      },
+      {
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000101",
+        "role": "ライアン・クリーナーの2026-27滋賀所属を確認。記事内容・成績の根拠としては使用しない。"
+      },
+      {
+        "url": "https://shigalakes.com/team/players/detail/id=18935?PlayerID=51000101",
+        "role": "クラブ公式プロフィールの容姿参照のみ。記事内容・成績の根拠としては使用しない。"
+      },
+      {
+        "url": "https://bleague.bl.kuroco-img.app/v=2026110602/files/user/roster/698/2026-27/51000101_01.jpg",
+        "role": "上記公式プロフィールの顔写真をダウンロードして目視確認し、1回の容姿修正の参照に使用。写真の貼付・転載なし。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ライアン・クリーナー",
+        "name_en": "Ryan Kriener",
+        "team": "滋賀レイクス",
+        "selection": "ランダム",
+        "selection_reason": "固定原稿に選手名がなく、特定選手が主役と判定できないため、本人指定の優先順2（本文に出てくるチームの現役選手）から選出。",
+        "selection_method": "Python secrets.choiceで本文の16チームから滋賀を抽選し、B.LEAGUE公式の現役14選手一覧からライアン・クリーナーを抽選。",
+        "official_profile": "https://shigalakes.com/team/players/detail/id=18935?PlayerID=51000101",
+        "official_photo": "https://bleague.bl.kuroco-img.app/v=2026110602/files/user/roster/698/2026-27/51000101_01.jpg",
+        "appearance_checked": "公式写真の短い黒褐色の横分け髪、額、目鼻、ひげのない顔、頬から顎の輪郭を目視確認。初稿の髪型と顔の輪郭を公式写真参照で1回修正し、最終画像を再確認。",
+        "depiction": "本人を主役にしたパス動作のイラスト。特定試合の再現を意図しないイメージ。画像内の氏名・成績・出場・活躍の記載なし。",
+        "photo_usage": "公式写真は容姿の参照のみ。最終画像はインク・ブラシ調のイラスト。無地ユニフォーム、ロゴ・スポンサー文字なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: ads-marketing.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape 16:9, ideally 1600x900 or larger. This is for the Japanese site バスケまとめ.\n\nContent grounded in the supplied fixed manuscript: 2026-11-06 has scheduled games, all were pregame as of 02:18 JST. Daily individual performance records are awaiting official finalization. Do not imply anyone played, scored, won, or was selected to a best five. No scores or player statistics.\n\nVisual style: match the approved black-and-lime basketball ink illustration style viewed in this conversation. Deep nearly black background #151A18, vivid lime #CCF43B brush marks, warm ivory bold Japanese headlines. Energetic hand-drawn ink, expressive hatching, rough dry-brush textures, highly legible typography and few elements. Visibly hand-illustrated editorial art, no photographic rendering.\n\nPerson: exactly one real professional basketball player, Ryan Kriener (ライアン・クリーナー) of Shiga Lakes, randomly selected from the teams named in the manuscript. His official current portrait has been inspected for likeness. Preserve these actual features: tall broad powerful athletic build, fair/light skin, short straight dark-brown hair swept to his right with a neat side part, short sides, broad forehead, straight eyebrows, light gray-blue eyes, straight fairly narrow nose, medium-width mouth, angular oval jaw, clean-shaven face with only faint natural jaw shadow. Use the inspected official profile portrait as likeness guidance, but draw original ink illustration, never paste a photograph. His recognizable face should be clear and light enough to inspect, with a focused expression. Plain dark sleeveless basketball jersey with light trim. Completely blank uniform with no names, numbers, branding, logos or sponsors.\n\nComposition: player occupies the LEFT 45% of the picture, shown in a dynamic three-quarter body pivot stance, torso twisting toward the right, one knee bent, holding an orange basketball firmly in BOTH hands near waist/chest level as he prepares a quick pass. It is a generic imagined playing pose. Clear anatomically correct two arms, two hands, plausible fingers gripping the sides of the ball. Keep head, elbows, hands and entire ball inside the frame. Strong diagonal lime brush stroke behind him, restrained court-like curved line low in the background. No additional people, no arena-specific scene, no hoop needed. All important text on the RIGHT 50%, uncluttered. Player lower body may end at mid-thigh at the lower composition boundary. Never obscure his face or hands with text. This is an illustration/image concept, not a recreation of an actual game or a depicted performance claim.\n\nExact text to render, no other text:\nSmall upper-right masthead: \"バスケまとめ\"\nLarge lime date: \"11/06\"\nLargest very bold ivory Japanese headline: \"試合予定\"\nSmaller readable white two-line subtitle:\n\"当日の成績は\"\n\"公式記録の確定待ち\"\nSmall but clearly readable timestamp beneath subtitle: \"11/06 02:18 JST時点\"\nBottom footer, clearly readable in ivory with generous margins:\n\"イラスト（AI生成）\" and \"イメージ\"\n\nHierarchy: date and 試合予定 dominate, pending qualifier remains clearly visible, footer label is intact and legible. Minimum 5% safe margins for text. High contrast, professional sports editorial composition. All letters and numbers must be accurate Japanese. No player name in the graphic. No claim about Ryan's participation or performance. No team logo, league logo, sponsor text, watermarks, official photographs, scoreboards, statistics, medals, trophy or invented slogans. Return only one finished artwork.\n\nONE ALLOWED REVISION\nEdit the FIRST image, the finished black-and-lime Japanese basketball thumbnail. The SECOND image is the official profile photograph of the real player Ryan Kriener, and serves ONLY as a facial identity reference.\n\nMake exactly one targeted correction: improve the illustrated player's likeness to Ryan Kriener from the second image. Preserve the existing hand-ink/brush illustration style. Draw his actual short DARK brown nearly black hair, neat compact shape with short sides and a flatter side-parted top swept to his right. Reduce the tall voluminous quiff and golden highlights. Match the reference's fuller oval facial proportions, broader cheeks, slightly softer angular chin, straight narrower nose, straighter eyebrows, medium-width lips, visible ears, and young clean-shaven face. Keep faint jaw shadow only. His face must visibly resemble the real reference person while maintaining the current focused playing expression and three-quarter head direction. Render the head as original ink artwork. Do not paste the photo or make the face photorealistic.\n\nKeep the exact current canvas ratio and resolution, composition, orange ball, athletic body, passing pose, two hands and fingers, plain blank uniform, lime brush strokes and every Japanese text string. All text must read exactly:\nバスケまとめ\n11/06\n試合予定\n当日の成績は\n公式記録の確定待ち\n11/06 02:18 JST時点\nイラスト（AI生成）\nイメージ\n\nNo name, number, logo, sponsor or performance statistic. No second person. Return exactly one corrected finished thumbnail.",
+    "generator": "内蔵 image_gen.imagegen。初回生成1回、公式顔写真を参照した容姿修正1回。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-05T17:26:01.033191+00:00",
+  "publication_approved": false
+}
