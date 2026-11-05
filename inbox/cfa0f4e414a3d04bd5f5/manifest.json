@@ -1,0 +1,108 @@
+{
+  "id": "cfa0f4e414a3d04bd5f5",
+  "article_path": "article-results-one-next-20261106.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261106.html",
+  "source_commit": "",
+  "source_blob_sha": "72489177391c511528ceb44dffb7f7c77ff47459",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "5d9cb1193e048808feae2bca28474d3d60067aa7e565798b8c49e47358afa6fb",
+  "last_observed_blob_sha": "72489177391c511528ceb44dffb7f7c77ff47459",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/cfa0f4e414a3d04bd5f5/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/cfa0f4e414a3d04bd5f5/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-05T20:05:35.500210+00:00",
+  "creation_event_id": "d4463a3e9de3d69d2150",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/cfa0f4e414a3d04bd5f5/thumbnail.png",
+  "image_sha256": "a943d484f9a231755bf397dc1203a832a8947c6f20400a1c02a022ee52252ec2",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "72489177391c511528ceb44dffb7f7c77ff47459",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.06｜試合前",
+      "今季平均EFF",
+      "登録選手の",
+      "ベスト5",
+      "出場確定ではありません",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_fixed_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/cfa0f4e414a3d04bd5f5/source.html",
+        "blob_sha": "72489177391c511528ceb44dffb7f7c77ff47459"
+      },
+      {
+        "type": "article_fixed_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/cfa0f4e414a3d04bd5f5/source.txt",
+        "basis": "対象日2026-11-06、試合前、今季平均EFFから登録選手を選出。リーグ間は比較しない。出場確定を示す選出ではない。当日成績は公式記録確定待ち。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "目視済み。黒×ライム、太字日本語、インクとブラシの画風のみ。旧選手・成績は転用しない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "use": "手順書指定フォルダにAが無いため、既存制作フォルダの同名承認済み画像を目視確認。今回は黒地を採用。"
+      },
+      {
+        "type": "official_appearance_only",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=8568",
+        "image_url": "https://www.bleague.jp/files/user/roster/719/2026-27/8568_03.png",
+        "use": "公式プロフィール写真を実際に目視し、人物の容姿だけ参照。外部の成績を記事内容に使用していない。"
+      },
+      {
+        "type": "official_appearance_only",
+        "url": "https://bambitious.jp/news/detail/id=21796",
+        "image_url": "https://bambitious.bl.kuroco-img.app/v=1780907874/files/user/202606081737_2-540x0.jpg",
+        "use": "クラブ公式発表の写真を目視し、動作時の髪型・輪郭を補足確認。写真・文字・ロゴは完成画像に貼り付けていない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "鈴木 達也",
+        "selection": "ランダム",
+        "selection_reason": "複数リーグのベスト5・サブ5を扱い、単独の主役選手に絞れない記事。固定HTMLに名前が出る選手を優先し、Python random.SystemRandom().choice で抽選して鈴木達也を選択。",
+        "reference_sources": [
+          "https://www.bleague.jp/roster_detail/?PlayerID=8568",
+          "https://www.bleague.jp/files/user/roster/719/2026-27/8568_03.png",
+          "https://bambitious.jp/news/detail/id=21796"
+        ],
+        "observed_appearance": "短い側頭部と中央付近から分けた黒髪、細めの目、面長であご先が細い輪郭、目立つ耳、小さなあごひげ、コンパクトなガード体形。",
+        "depiction": "右側に低いドリブル姿の手描きイラスト1人。無地のえんじ色ウェア。一般的な動作のイメージで、特定の実戦場面の再現ではない。",
+        "restrictions_checked": "画像中に選手名・背番号・個人成績・出場・活躍の記述なし。ロゴ・スポンサー文字・公式写真の貼付なし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story / editorial sports thumbnail.\nCreate exactly ONE finished Japanese basketball article thumbnail, landscape approximately 16:9, target 1792 x 1008 pixels. This is a new editorial illustration, not a photograph.\n\nContent authority: the supplied fixed article is dated 2026-11-06 and describes PRE-GAME selection of registered players by current season average EFF. Participation is not confirmed. Results are not final. It is not a report of a particular player's performance. Only the exact text below may appear.\n\nArt direction: approved バスケまとめ style: charcoal black #151A18 background, vivid lime #CCF43B brush strokes, warm off-white typography, expressive rough hand-drawn ink and dry-brush hatching, restrained composition. Reference visual direction is the black/lime Culver thumbnail already viewed; use its ink style, NOT its person, name, date, score or numbers. Two or three broad energetic diagonal brush marks, little visual clutter. A sophisticated sports editorial print, clearly illustrated, never photorealistic.\n\nSubject: exactly one real basketball player, Tatsuya Suzuki / 鈴木達也, selected randomly from the people named in the article. His identity is a visual reference only. Do NOT write his name, number, team, statistics, achievements, or any claim that he will play. Use the official 2026-27 profile visually inspected at https://www.bleague.jp/roster_detail/?PlayerID=8568 and portrait https://www.bleague.jp/files/user/roster/719/2026-27/8568_03.png . Likeness details from the portrait: adult Japanese male, compact lean athletic guard build, straight black hair with loose center/off-center part and short sides, strands descending at the temples, long oval face tapering to a small pointed chin, narrow almond-shaped eyes, straight dark brows, prominent ears, straight nose, a small sparse dark goatee on the tip and underside of his chin, no full beard, no thick mustache. Keep the face recognizable in ink illustration, with clear light facial planes rather than crushed black shadows. The official portrait is for identity reference only; do not paste, trace, or reproduce the photographic pose or logos.\n\nPose/composition: dynamic low dribble drive, bent knees and torso leaning forward, shown from head to below the knees, face in a three-quarter view looking alertly toward the open court to the left. Place the player on the right 40 percent, within margins. One hand controlling an orange basketball near knee height, the other arm naturally counterbalancing. Anatomically plausible two arms and hands, no fused fingers or extra limbs. The entire ball, head, and both hands must fit inside the image. Uniform is a plain sleeveless dark oxblood jersey with simple off-white edging, no letters, numerals, team marks, brand marks or sponsor logos. The ball is a player-held/dribbled prop, not the primary subject. Abstract brush-mark background, no scoreboard, crowd, other players or depictions of an identifiable actual game.\n\nTypography/layout: left 58 percent, huge bold Japanese gothic headlines, exact readable characters, clean separation from the player's face, deliberate negative space, safe outer margins at least 65 pixels. The title dominates at thumbnail scale.\nExact text, and no other text:\nsmall top brand: \"バスケまとめ\"\ndate/status beneath it: \"2026.11.06｜試合前\"\nmedium-large line: \"今季平均EFF\"\nsupporting line: \"登録選手の\"\nmain oversized lime headline: \"ベスト5\"\nclear caveat below the headline, legible off-white: \"出場確定ではありません\"\nbottom footer, clearly legible: \"イラスト（AI生成）\"\nfooter next to that: \"イメージ\"\n\nNo player name, no team name, no jersey number, no individual numerical stat, no scores, no win/loss claims, no official league logo or club logo, no photographic inserts, no watermark. This is a general imagined basketball movement, never a recreation of a verified game moment. Only the article-level information is in the headline. Preserve the pre-game / season-average qualifiers exactly.",
+    "generator": {
+      "tool": "built-in image_gen",
+      "mode": "text-to-image",
+      "calls": 1,
+      "corrections": 0,
+      "width": 1672,
+      "height": 941,
+      "output": "generated.png",
+      "generated_source": "/Users/genjo/.codex/generated_images/01a1ad55-e88d-7b00-a53d-fdbe6d02bc3a/exec-7bcc7506-2a67-416a-9104-7e2426f61e38.png",
+      "qa_evidence": {
+        "text_and_numbers": "生成結果を目視。見出し・2026.11.06・ベスト5は固定原稿と一致。不要な数値や個人名なし。",
+        "source_qualifiers": "画像の『試合前』『今季平均EFF』『登録選手の』『出場確定ではありません』『イメージ』を目視確認。結果・当日成績を断定していない。",
+        "likeness_or_no_named_person": "公式写真と比較し、分けた黒髪・面長の輪郭・細めの目元・あごひげを確認。本人を参照したイラスト1人で、選手名は表示していない。",
+        "layout": "約16:9。文字・顔・ボール・両手が見える。2本の腕、手指の自然なつながりを確認。文章と顔の重なりなし。",
+        "ai_label": "左下に『イラスト（AI生成）』『イメージ』が判読可能。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-05T20:14:25.659757+00:00",
+  "publication_approved": false
+}

@@ -1,0 +1,116 @@
+{
+  "id": "7181c496e97c8dc59d57",
+  "article_path": "article-daily-20261104.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261104.html",
+  "source_commit": "",
+  "source_blob_sha": "2242367784b08e6ec0bf689408f4a484e85759f9",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "833f74b00aec27a185ddbd3f9adf3e2cbade12a16af80d4aa22b18e2629ce685",
+  "last_observed_blob_sha": "2242367784b08e6ec0bf689408f4a484e85759f9",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7181c496e97c8dc59d57/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7181c496e97c8dc59d57/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-04T03:14:19.964763+00:00",
+  "creation_event_id": "8e14a507c84d07859429",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/7181c496e97c8dc59d57/thumbnail.png",
+  "image_sha256": "1c20914c93d509e897cbb8f2b80f8784e634e7dba1b241f80a925d5d7294aa68",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "2242367784b08e6ec0bf689408f4a484e85759f9",
+    "text_lines": [
+      "試合前展望",
+      "11/6",
+      "首位",
+      "攻防戦",
+      "A東京 × 仙台",
+      "イラスト（AI生成）　イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_body",
+        "path": "source.html",
+        "url": "https://basuke-matome.jp/article-daily-20261104.html",
+        "used_for": "11月6日のA東京対仙台、首位攻防戦という試合前展望。記事本文の根拠は固定HTML/TXTのみ。"
+      },
+      {
+        "type": "article_body",
+        "path": "source.txt",
+        "used_for": "固定版本文との突合。見出しの「独走」は使わず、本文の僅差という文脈に合う「首位攻防戦」を採用。"
+      },
+      {
+        "type": "workflow",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "used_for": "画像生成・検品ルール。本人10/31の実在選手優先指示を適用。"
+      },
+      {
+        "type": "style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "used_for": "目視した承認済み黒×ライム、太い日本語見出し、インク・ブラシの画風。"
+      },
+      {
+        "type": "style",
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "used_for": "手順書指定のautomation配下にA画像がなかったため、案件正本記載の元保存先で同名v3を発見し目視。今回は黒×ライムを採用。"
+      }
+    ],
+    "person_reference": {
+      "selection": "ランダム。本文に選手名がないため、本文の対戦チームの公式現役選手一覧から各1人選出。",
+      "method": "Python random.Random(int('7181c496e97c8dc59d57', 16))で公式名簿の表示順に並べた各チーム13人からchoiceを1回ずつ実行。アルバルクのロボットCUE7は人間の選手候補から除外。",
+      "players": [
+        {
+          "name": "テーブス海",
+          "team": "アルバルク東京",
+          "selection": "ランダム",
+          "roster_url": "https://www.alvark-tokyo.jp/team/players/PR",
+          "reference_url": "https://www.alvark-tokyo.jp/player_lp/kai_toews/",
+          "image_url": "https://alvark-tokyo.bl.kuroco-img.app/v=1789441774/files/user/_/player_lp/2026-27/kai_toews/images/bg_section_01_pc.jpg",
+          "appearance_observed": "中央付近で分けた中長めの黒髪、額からこめかみへ下りる前髪、面長の輪郭、細めの目、まっすぐな鼻筋、ひげのない口元。公式ページ掲載写真をダウンロードしてview_imageで確認。"
+        },
+        {
+          "name": "片岡大晴",
+          "team": "仙台89ERS",
+          "selection": "ランダム",
+          "roster_url": "https://www.89ers.jp/team/players/",
+          "reference_url": "https://www.89ers.jp/team/players/detail/id=13899?PlayerID=8481",
+          "image_url": "https://bleague.bl.kuroco-img.app/v=2026102415/files/user/roster/692/2026-27/8481_01.jpg",
+          "appearance_observed": "立ち上げた短い黒髪、短いサイド、角ばった輪郭、濃い眉、口ひげと顎・輪郭の短いひげ。公式プロフィール写真をダウンロードしてview_imageで確認。"
+        }
+      ],
+      "portrayal": "実際の試合場面の再現を意図しない1対1のイメージ。選手名・個人成績・出場や活躍を示す文字を画像に入れない。公式写真の貼り付けなし。"
+    },
+    "prompt": {
+      "initial": "Create exactly one finished Japanese basketball editorial thumbnail, landscape 16:9, 1600x900 or larger, PNG. Use case illustration-story, sports-news thumbnail for バスケまとめ.\n\nVisual design follows the approved black-and-lime ink illustration style that was viewed. Near-black background #151A18, vivid lime #CCF43B brush swashes, ivory Japanese extra-bold gothic typography, textured hand-drawn brush and cross-hatching, striking limited palette, few elements, clear small-screen hierarchy. Entire image must be unmistakably an illustrated poster, never photorealistic. Do not copy text, statistics, identity or composition from the earlier sample thumbnails.\n\nLayout: reserve about 48 percent of the left side for text with generous margins. Top-left small editorial qualifier, then lime date, then two massive Japanese headline rows. Below them a medium-large matchup line. Right 52 percent depicts TWO real male professional basketball players in a fresh dynamic one-on-one ballhandling and defense illustration, with both faces visible at three-quarter angles. A single orange basketball stays completely inside the image. Camera at a slightly low court-side angle, players bending their knees, diagonal movement. Keep hands and ball away from typography. Heads and hands fully inside safe margins, lower thighs may end at the deliberate lower composition boundary above the caption. No crowd, no additional people, no scoreboard.\n\nThe two real players were randomly selected from the current official team rosters because the supplied article names teams and no players. They MUST be recognizable drawings of these two real people, never generic invented athletes.\n1. Kai Toews / テーブス海, Alvark Tokyo. Appearance verified in his official player-page photograph at https://www.alvark-tokyo.jp/player_lp/kai_toews/ and image https://alvark-tokyo.bl.kuroco-img.app/v=1789441774/files/user/_/player_lp/2026-27/kai_toews/images/bg_section_01_pc.jpg . Young adult Japanese-Canadian man, fair skin, long oval face with tapering chin, straight medium-length black hair parted around the middle with curved curtain bangs falling beside the temples, ears partly visible, thick gently arched eyebrows, narrow dark eyes, straight relatively long nose, thin upper lip and slightly fuller lower lip, clean-shaven. Tall lean-athletic body. He is nearer the center-right, leaning into a low right-hand dribble, eyes looking toward the defender. Simple black sleeveless basketball kit with a small red trim, absolutely no letters, logos, sponsors or numbers on it.\n2. Masaharu Kataoka / 片岡大晴, Sendai 89ers. Appearance verified in official profile https://www.89ers.jp/team/players/detail/id=13899?PlayerID=8481 and portrait https://bleague.bl.kuroco-img.app/v=2026102415/files/user/roster/692/2026-27/8481_01.jpg . Japanese man around 40, lightly tanned skin, short black hair with spiky textured top brushed up and back and closely tapered sides, angular rectangular face and strong jaw, medium straight dark eyebrows, dark slightly hooded eyes, straight nose, a distinct short dark moustache connected visually to short beard around the mouth and jaw. Compact muscular-athletic build. Positioned to the far right in a low defensive stance facing Toews, arms naturally spread, face visible in three-quarter view. Plain yellow basketball jersey with dark trim, absolutely no letters, logos, sponsors or numbers.\n\nBoth illustrations should retain those distinct facial features under expressive ink shading. Faces should have readable ivory highlights rather than becoming black silhouettes. Natural anatomy with two arms per person and five properly formed fingers on visible hands. This is an imagined basketball action illustration for a preview, not the reconstruction of an actual game or an assertion that either player appeared or performed well. Do not include their names anywhere in the visible image.\n\nRender ONLY the following exact Japanese text, with crisp correct glyphs:\nSmall top-left: \"試合前展望\"\nMedium-large lime date: \"11/6\"\nVery large ivory headline, split into two rows: \"首位\" and \"攻防戦\"\nMedium-large matchup below headline: \"A東京 × 仙台\"\nBottom-left to bottom-center, unobstructed high-contrast caption at a readable size: \"イラスト（AI生成）　イメージ\"\n\nContent comes solely from the provided fixed article, which previews A東京 versus 仙台 on November 6. No extra claims, no player names, no player statistics, no scores, no outcome predictions, no unqualified rankings, no player-appearance claims, no fabricated actual-game moment. No team logos, league logos, sponsors, brand marks, signatures, photographs, photomontage, or watermarks. Keep all text at least 5 percent inside the outer edge.",
+      "revision": "Edit image 1, the finished Japanese black/lime basketball thumbnail. This is the single allowed revision. Image 2 is the official Kai Toews appearance reference. Image 3 is the official Masaharu Kataoka portrait reference. Use reference photographs solely to redraw recognizable likenesses in hand-drawn ink illustration. Never paste pixels of photographs or recreate reference-photo poses.\n\nCorrect and strengthen the likeness of BOTH real players, with primary focus on their faces and hair. The black/red-kit ballhandler in image 1 is Kai Toews from image 2. His real hair is straight and fairly smooth, dark black, parted near the middle, medium-length curtain fringe around the sides of his forehead and ears. Reduce the large fluffy curls and exaggerated manga styling. Capture his actual elongated oval facial proportions, narrower calmly focused eyes, softly arched natural eyebrows, straight nose, thinner lips, slight open mouth and clean-shaven jaw, light skin. He should look clearly like the man in reference 2 while remaining a visibly hand-drawn sports illustration.\nThe yellow-kit defender is Masaharu Kataoka from image 3. Match his actual short spiky black hair with tapered sides, angular face, actual eyebrow and eye shapes, medium-width straight nose, short moustache and compact dark beard around jaw and chin. Capture his authentic mature facial proportions, not an exaggerated anime villain expression.\n\nPreserve the action concept, 16:9 composition, brush-ink texture, near-black #151A18 and lime #CCF43B style, orange ball, clean plain logo-free uniforms, and ALL current Japanese words and numbers. Keep all hands anatomically plausible, every visible hand with five fingers, no added arms, both faces unobstructed and ball completely in frame. Keep the visible typography exactly:\n試合前展望\n11/6\n首位\n攻防戦\nA東京 × 仙台\nイラスト（AI生成）　イメージ\n\nThis remains an imagined one-on-one preview illustration. Do not add player names, uniform numbers, statistics, actual-game claims, logos, sponsors or any other words. Deliver one finished high-resolution landscape PNG."
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "attempts": 2,
+      "revision_count": 1,
+      "accepted_attempt": 2,
+      "output_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7181c496e97c8dc59d57/generated.png",
+      "accepted_source": "/Users/genjo/.codex/generated_images/01a1ad51-1908-7b83-b6a8-e3043b55c55c/exec-1d05e621-7f34-4a12-8292-067ae4c40d62.png",
+      "revision_reason": "初稿のテーブス海の髪が強く波打ち、顔の特徴が弱かったため、公式写真2枚を画像編集の容姿参照として1回だけ追加し、両選手の顔と髪を修正。",
+      "visual_inspection": {
+        "text_and_numbers": "修正版実画像を表示して試合前展望、11/6、首位、攻防戦、A東京 × 仙台、AI生成・イメージの文字を一字ずつ確認。個人成績・スコア・選手名なし。",
+        "source_qualifiers": "固定本文の試合前展望・11月6日のA東京対仙台という範囲を維持。画像に試合前展望とイメージを明記し、出場・活躍や試合結果の断定なし。",
+        "likeness_or_no_named_person": "公式写真と修正版を目視比較。テーブス海の中央分けの滑らかな黒髪、面長の顔、目鼻、ひげのない口元、片岡大晴の短い立ち髪、角ばった輪郭、口ひげ・顎ひげを確認。",
+        "layout": "頭部、顔、ボール、見える手指と文字が収まり、重なりによる読字障害なし。見える3つの手は各5指。片岡の奥側の手は相手の背後に隠れる構図。体の右端・下端は意図したスポーツイラストのトリミング。",
+        "ai_label": "画像下部のイラスト（AI生成）およびイメージを実画像で確認。"
+      },
+      "width": 1672,
+      "height": 941,
+      "sha256": "1c20914c93d509e897cbb8f2b80f8784e634e7dba1b241f80a925d5d7294aa68"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-05T20:10:50.612132+00:00",
+  "publication_approved": false
+}
