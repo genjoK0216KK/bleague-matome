@@ -1,0 +1,106 @@
+{
+  "id": "7d40ba767806af33dbf4",
+  "article_path": "article-results-one-next-20261105.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261105.html",
+  "source_commit": "",
+  "source_blob_sha": "9794e853b16ef9e6499dbbae85e421ad56f0dd89",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "d384665488eea7ee621cdcab7b6b37ed6965994f6f188b384dd2a464323dd9a3",
+  "last_observed_blob_sha": "9794e853b16ef9e6499dbbae85e421ad56f0dd89",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7d40ba767806af33dbf4/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7d40ba767806af33dbf4/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-05T11:01:11.853647+00:00",
+  "creation_event_id": "9f3825ce9a4403e5f6f5",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/7d40ba767806af33dbf4/thumbnail.png",
+  "image_sha256": "45edc6a5706689237c1e70bb4b122868d835013a4d30d4c782abf3f049d7d89c",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "9794e853b16ef9e6499dbbae85e421ad56f0dd89",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.05｜B.NEXT",
+      "品川 vs 三重",
+      "公式記録",
+      "確定待ち",
+      "11/05 19:53 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7d40ba767806af33dbf4/source.html",
+        "role": "本文内容の根拠（固定HTML）。Git blob形式のSHA-1をPython標準ライブラリで照合。gitコマンド未使用。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7d40ba767806af33dbf4/source.txt",
+        "role": "本文内容の根拠（固定文章）。品川—三重、B.NEXT、2026-11-05 19:53 JST時点で公式記録未確定。試合成績・出場確定は主張しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "制作・検品手順のみ。最新の本人指定を優先。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "目視した承認済みスタイル参照のみ。氏名・数値・構図を持ち越さない。白地A画像は指定先に存在しなかったため黒×ライム案を使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "落合 知也",
+        "selection": "ランダム",
+        "selection_reason": "記事は試合記録の確定待ちで複数の登録選手を扱い、本文の主役を1人に絞れないため、本文に名前が出る8人から1人を抽選。",
+        "method": "Python random.Random('7d40ba767806af33dbf4').choice(candidates)",
+        "candidates": [
+          "新本 風河",
+          "原田 大和",
+          "ジョーダン・ジャイルズ",
+          "サム・ティミンズ",
+          "山根 響",
+          "佐脇 考哉",
+          "落合 知也",
+          "ケーレン ジョエル・アレン"
+        ],
+        "official_sources": [
+          {
+            "url": "https://www.bleague.jp/roster_detail/?PlayerID=8648",
+            "role": "公式プロフィール。容姿確認のみ。本文・成績の根拠には不使用。"
+          },
+          {
+            "url": "https://www.bleague.jp/files/user/roster/748/2026-27/8648_03.png",
+            "role": "2026-27公式プロフィール写真をダウンロードしてview_imageで目視。主な容姿参照。"
+          },
+          {
+            "url": "https://www.shinagawa-city.com/basketball/7988",
+            "role": "クラブ公式発表の写真をview_imageで目視。動作・容姿の補助参照のみ。"
+          },
+          {
+            "url": "https://www.shinagawa-city.com/basketball/wp-content/uploads/sites/2/2025/05/%E8%90%BD%E5%90%88%E7%9F%A5%E4%B9%9F_web-1024x576.jpg",
+            "role": "クラブ公式写真。画像そのものは成果物へ貼り付けていない。"
+          }
+        ],
+        "appearance_verified": "金髪の長めのトップを横へ流し、根元と短い側頭部は黒。額、細長い輪郭、目鼻、ひげのない口元、長い首、肩の特徴を参照した手描きイラスト。",
+        "depiction": "1人のドリブル姿。特定試合の場面再現ではなくイメージ。画像には選手名・背番号・出場・成績・活躍の主張を入れていない。公式写真・ロゴ・スポンサー文字を不使用。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story.\nCreate exactly ONE finished Japanese editorial basketball thumbnail, wide 16:9, preferably 1600x900 or larger, opaque PNG. This is a brand-new illustration, not a photograph.\nVisual style: match the previously viewed approved B-culver-black-lime-v3 style: deep charcoal #151A18 background, electric lime #CCF43B broad dry-brush strokes, ivory chunky Japanese typography, energetic pen-and-ink crosshatching, sparse purposeful composition. Do not transfer any player, text, date or score from the style sample.\nSubject: ONE real basketball player, Tomoya Ochiai / 落合知也, selected randomly from the fixed article's listed players. No fictional people, no opponent. Use the official portrait just viewed (B.LEAGUE 2026-27 roster, PlayerID 8648) solely as visual likeness reference, never paste or reproduce the photograph. Distinctive features: Japanese man with light tan skin, short dark undercut sides and longer blond-dyed top swept over to one side with visible dark roots; high forehead, elongated oval face, slightly angular defined jaw, expressive almond-shaped eyes, gently arched eyebrows, straight nose, clean-shaven mouth and chin, long neck and strong athletic shoulders. Keep face clearly legible in warm ivory and gray ink, not blacked out. Keep a mature athletic face resembling the portrait, not generic anime.\nPose and framing: place him on LEFT 43% of canvas, in a low forward-driving basketball dribble pose, three-quarter view, bent knees, torso angled diagonally forward, one hand on top of a single orange basketball near hip/lower-left foreground, other arm naturally bent for balance. Render correct hands, natural finger count and joint structure. Face, hands and the full basketball inside the image with comfortable margins; lower legs may intentionally finish outside the lower edge. Plain black sleeveless jersey with a thin magenta neckline detail and plain shorts. No jersey numbers, names, sponsorship text, team/league logos or brand marks. Do NOT include other people, hoop, crowd or arena signage. The pose is an imagined basketball illustration, not a reconstruction of this actual game. No victory, score, appearance, performance or decisive-shot claim.\nComposition: player on LEFT; clear spacious headline block on RIGHT occupying approximately 52%, clear separation between ink figure and Japanese type. Lime dry-brush diagonal motion accents behind player, dark quiet field behind type. All text fully inside canvas, no clutter or overlaps. High-contrast exceptionally legible Japanese letters; heavy editorial Gothic type. The huge focal headline has two lines, the first in ivory and second in lime.\nUse ONLY the following exact visible text, and render every line accurately:\nTop small: 「バスケまとめ」\nUpper right date/category: 「2026.11.05｜B.NEXT」\nMedium right matchup: 「品川 vs 三重」\nMain headline line 1: 「公式記録」\nMain headline line 2: 「確定待ち」\nBelow headline, small but legible: 「11/05 19:53 JST時点」\nFooter with generous margin: 「イラスト（AI生成）」 and 「イメージ」\nDo not print Japanese quotation marks. Do not add any other text. In particular no player name, statistics, score, best-five label, win/loss wording or '成績をもとにしたイメージ'.\nEditorial grounding: the only article evidence is the supplied fixed source.html/source.txt: 2026-11-05 Shinagawa versus Mie, B.NEXT, official records pending as of 19:53 JST. Preserve that qualification prominently, not as a tiny disclaimer. Never imply that the randomly chosen player played or achieved anything in this game.\nFinish as polished print-like sports ink illustration with a clean thumbnail hierarchy, not photorealistic, not 3D, not official photography.\n\nONE PERMITTED REVISION\nEdit this existing basketball thumbnail. Make ONE targeted layout correction only: the bottom of the orange basketball is cut off, and the player's leftmost elbow meets the edge. Keep the entire basketball and every visible hand fully inside the canvas, with at least 35px dark margin from the left/bottom edges at this resolution. Scale down the entire illustrated player plus basketball together by approximately 12%, maintaining anatomical proportions and his position on the left. Keep his full hair comfortably below the top edge. The lower legs can remain intentionally cropped, but the ball must be a fully visible closed circle and both hands uncut. Preserve his likeness as the real player Tomoya Ochiai: side-swept blond top with dark roots and short dark sides, long clean-shaven face, expressive eyes, strong athletic body. Preserve the ink-and-brush style, charcoal background, lime accents, plain unbranded jersey and magenta neckline. Preserve ALL typography exactly as already drawn and its current placement: バスケまとめ; 2026.11.05｜B.NEXT; 品川 vs 三重; 公式記録; 確定待ち; 11/05 19:53 JST時点; イラスト（AI生成）; イメージ. Do not add names, statistics, scores, jersey numbers, extra people, logos, or photo elements. Keep 1672x941 landscape or equivalent 16:9 dimensions. This is an imagined basketball illustration, not a depiction of an actual game moment.",
+    "generator": "Built-in image_gen (image_gen__imagegen). 1 initial generation + 1 layout correction. No image API, paid CLI or local pixel editing.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    },
+    "qa_notes": {
+      "text_and_numbers": "最終画像を目視。日付2026.11.05、B.NEXT、品川vs三重、11/05 19:53 JST時点、見出しの全文を固定原稿と照合。スコア・EFF・個人成績・氏名なし。",
+      "source_qualifiers": "『公式記録 確定待ち』を大見出しにし、固定原稿の時点を明記。当日の成績や出場を断定しない。『イメージ』表記あり。",
+      "likeness_or_no_named_person": "公式写真の髪色・髪型・輪郭・目鼻・口元を最終の落合知也選手のイラストと目視比較。ランダム選出を明示し、匿名の架空人物として描いていない。",
+      "layout": "初稿はボール下端が見切れたため不採用。1回の修正後、ボール全体・両手・頭部が画面内に収まり、指・腕の形に明らかな破綻なし。見出し・注記の欠けや重なりなし。太腿以下は意図的なトリミング。約16:9。",
+      "ai_label": "『イラスト（AI生成）』と『イメージ』を画像の下部で目視確認。写真風ではなくインクのイラスト。"
+    }
+  },
+  "prepared_at": "2026-11-05T11:09:56.202570+00:00",
+  "publication_approved": false
+}

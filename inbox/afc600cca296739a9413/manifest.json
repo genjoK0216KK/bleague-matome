@@ -1,0 +1,78 @@
+{
+  "id": "afc600cca296739a9413",
+  "article_path": "article-games-20261105.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261105.html",
+  "source_commit": "",
+  "source_blob_sha": "e4b0b215ed92a2f4a6d02b3852dc918b1c524b41",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "d384665488eea7ee621cdcab7b6b37ed6965994f6f188b384dd2a464323dd9a3",
+  "last_observed_blob_sha": "e4b0b215ed92a2f4a6d02b3852dc918b1c524b41",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/afc600cca296739a9413/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/afc600cca296739a9413/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-05T11:01:11.566055+00:00",
+  "creation_event_id": "22e1315886849e105ef7",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/afc600cca296739a9413/thumbnail.png",
+  "image_sha256": "ae498d110258c908f9f86d43b377bf1d47ca277ffcfee235d75152d57c3f481d",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "e4b0b215ed92a2f4a6d02b3852dc918b1c524b41",
+    "text_lines": [
+      "バスケまとめ",
+      "11/05 試合結果",
+      "B.NEXT",
+      "品川 vs 三重",
+      "公式記録の",
+      "確定待ち",
+      "2026.11.05 19:53 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/afc600cca296739a9413/source.html",
+        "role": "記事内容の根拠となる固定HTML。試合日2026-11-05、B.NEXT品川対三重、19:53 JST時点で開始・公式記録未確定。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/afc600cca296739a9413/source.txt",
+        "role": "記事内容の根拠となる固定文章。全試合の公式記録確定待ち。当日のEFF未掲載、今季平均選出は出場確定を示さない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "新本 風河",
+        "selection": "ランダム",
+        "selection_method": "本文で各選手は同じ表形式で扱われ、単独の主役が絞れないため、本文に名前がある8選手を候補にPython secrets.choiceで1人選出。",
+        "candidate_names": [
+          "新本 風河",
+          "原田 大和",
+          "ジョーダン・ジャイルズ",
+          "サム・ティミンズ",
+          "山根 響",
+          "佐脇 考哉",
+          "落合 知也",
+          "ケーレン ジョエル・アレン"
+        ],
+        "official_profile": "https://veertien-basketball.jp/team/players/detail/id=60009?PlayerID=50011",
+        "official_league_profile": "https://www.bleague.jp/roster_detail/?PlayerID=50011",
+        "official_portrait": "https://bleague.bl.kuroco-img.app/v=2026110520/files/user/roster/2726/2026-27/50011_01.jpg",
+        "reference_usage": "公式プロフィールの本人写真をローカル取得しview_imageで目視。容姿の参照だけに使用。公式写真の貼り付けなし。記事の結果・出場・成績の根拠には使用していない。",
+        "observed_features": "中央分けの黒髪と左右に下がる前髪、丸みのある頬と顎、細めの目、小ぶりの鼻、ひげなし。コンパクトな体格。",
+        "rendering": "選手1人が低い姿勢でドリブルするイメージ。承認済みの黒×ライムと手描きインク表現。無地のユニフォーム。名前・背番号・成績・出場・活躍の文字なし。実際の試合場面の再現を示す表現なし。",
+        "visual_qa": "生成PNGを実際に表示して公式容姿と照合。髪型・輪郭・目鼻・ひげなしの特徴、両手とボールの収まりを確認。文字・数値は固定原稿と照合し、未確定の留保とAI表記を確認。初回生成で合格、修正0回。"
+      }
+    ],
+    "prompt": "Create exactly one finished Japanese basketball editorial thumbnail, PNG, landscape approximately 16:9, preferably 1536x864 or 1792x1024 with width above 1000px.\n\nUse case: illustration-story / editorial sports thumbnail.\nArt direction: premium hand-drawn pen-and-ink sports illustration, bold visible black ink contours, expressive dry-brush hatching, sparse large diagonal brush strokes, slightly textured print. Deep charcoal #151A18 background, electric lime #CCF43B accents, warm ivory text. Match the approved visual language of dramatic ink basketball posters. It must clearly look illustrated, never photorealistic. Few elements with generous negative space.\n\nScene and subject: exactly ONE real basketball player, Fuga Aramoto (新本 風河), in an imagined dynamic low driving-dribble pose on the RIGHT 44 percent of the image, three-quarter frontal view, leaning forward with bent knees, looking alert toward the left. Face large enough to recognize. His right hand rests naturally above an orange basketball at hip-to-knee height, left arm extends out for balance. Keep all fingers anatomically correct, exactly two arms and two hands, ball and both hands completely inside the frame with margins. This is only a general basketball illustration, not a reconstruction of an actual game moment or a claim he played that date.\nAppearance based on the visually checked official 2026-27 portrait from Veertien Mie/B.LEAGUE: young adult Japanese male guard, compact athletic 171cm/72kg build, medium-light warm skin, clean shaven, smooth youthful oval-to-rounded face with a relatively broad lower cheek area and softly squared small chin. Straight glossy black hair with a CENTER PART and long curved curtain fringe on both sides of the forehead down toward eyebrow/temple level, short sides over the ears, not spiky and not a buzz cut. Dark straight eyebrows, moderately narrow almond dark eyes, small straight nose with rounded tip, defined closed lips and subtly fuller lower lip. Preserve these individual facial features even with the expressive ink style. No beard, no mustache, no headband. Plain ivory basketball uniform with charcoal trim, NO name, NO number, NO team/league/sponsor marks. Draw skin in warm ivory with black/gray crosshatching. Ball orange with black seams as a handheld playing prop.\n\nLayout: left 55 percent devoted to large, bold, perfectly legible Japanese typography. Player on right over one restrained diagonal lime brush swash. At least 5 percent safe padding around all text. Strong typographic hierarchy with headline and status immediately readable on a phone. Use robust Japanese gothic type, slightly rough print edge but no distorted letters. Do not decorate with extra badges, logos, or extra words.\n\nRender ONLY these exact text strings, verbatim, with no added text:\nTop-left small masthead: 「バスケまとめ」\nBelow masthead medium date/category: 「11/05 試合結果」\nSmall plain league label near headline: 「B.NEXT」\nMain left headline, very large ivory: 「品川 vs 三重」\nStatus below, prominent lime type, may break after の across two lines: 「公式記録の確定待ち」\nLower-left small timestamp: 「2026.11.05 19:53 JST時点」\nBottom-left clearly legible disclosure: 「イラスト（AI生成）」\nBeside the disclosure: 「イメージ」\n\nThe article is a fixed snapshot awaiting official game records. No score is available. Do not invent results, score, winner, points, EFF, rankings, performances, availability, player name, jersey number, or victory language. No league or team logos. No official photo pixels or collage. No realistic arena, scoreboard, opponents, crowd faces, or photographic texture. Keep the status qualifier clearly visible and prominent. This single illustration should be polished and ready to use.",
+    "generator": "image_gen__imagegen (built-in image generation)",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-05T11:05:16.645228+00:00",
+  "publication_approved": false
+}
