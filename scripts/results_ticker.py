@@ -49,31 +49,51 @@ def open_games(saved):
             if g.get("status") not in ("cancelled", "postponed") and not is_verified_final(g)]
 
 
-def due_since(saved, now):
-    """更新が必要になった時刻（未確定試合の終了見込みのうち最も新しい過去時刻）。不要なら None。
-    保存データが無い日は、その日の予定取得のため now を返す。"""
+def need(saved, now):
+    """(更新が必要になった時刻, 理由)。不要なら (None, None)。理由ごとに間引き方が違う。
+      games    : 未確定の試合が終了見込みを過ぎた（due＝最も新しい過去の終了見込み）
+      rankings : 全試合確定でTOP3だけ未作成（due＝その日の最後の試合の終了見込み。古ければ間引く）
+      missing  : 保存データが無い日（試合なしの日も公式取得の結果を保存しないため、毎回確認すると繰り返す）
+      unknown  : 開始時刻が読めない未確定試合がある
+    """
     if saved is None:
-        return now
+        return now, "missing"
     if update_results.done(saved):
-        return None
+        return None, None
     games = open_games(saved)
     if not games:
-        return now          # 全試合確定済みで、TOP3や予定の取得だけが残っている
+        ends = [s + FINISH_AFTER for s in map(starts_at, saved.get("games", [])) if s is not None]
+        past = [e for e in ends if e <= now]
+        return (max(past) if past else now), "rankings"
     ends = [s + FINISH_AFTER for s in map(starts_at, games) if s is not None]
     past = [e for e in ends if e <= now]
     if past:
-        return max(past)
+        return max(past), "games"
     if len(ends) < len(games):
-        return now          # 開始時刻が読めない試合は、終了見込みを決めずに確認する
-    return None             # まだどの試合も終わっていない
+        return now, "unknown"
+    return None, None             # まだどの試合も終わっていない
 
 
-def should_dispatch(due, now, last_dispatch):
+def due_since(saved, now):
+    """need() の時刻だけ（互換用）。"""
+    return need(saved, now)[0]
+
+
+def should_dispatch(due, now, last_dispatch, kind="games"):
+    """last_dispatch はその日付に対して最後に起動した時刻（日付ごとに持つ）。"""
     if due is None:
         return False
-    if now - due > STALE_AFTER and last_dispatch and now - last_dispatch < STALE_INTERVAL:
-        return False        # 終了見込みから時間が経っても未確定（公式記録待ち）。公式への負荷を抑える
+    recent = last_dispatch is not None and now - last_dispatch < STALE_INTERVAL
+    if kind in ("missing", "unknown"):
+        return not recent     # 初回は起動、以後は30分ごと（試合なしの日に5分ごと繰り返さない）
+    if now - due > STALE_AFTER and recent:
+        return False          # 終了見込みから時間が経っても未確定・TOP3待ち。公式への負荷を抑える
     return True
+
+
+def should_stop(now, started):
+    """見張りを終える時刻か。外部起動の前に判定する（終了時刻の直前・遅延起動で1回余計に起動しない）。"""
+    return 2 <= now.hour < 12 or now - started >= RUN_LIMIT
 
 
 def load(date):
@@ -110,9 +130,12 @@ def dispatch():
 
 def main():
     started = datetime.now(JST)
-    last_dispatch = None
+    last_by_date = {}             # 日付 → 最後に結果更新を起動した時刻
     while True:
         now = datetime.now(JST)
+        if should_stop(now, started):
+            log("見張りの時間帯を終了")
+            return 0
         subprocess.run(["git", "fetch", "-q", "--depth=1", "origin", "main"], check=False)
         today, yesterday = now.date(), now.date() - timedelta(days=1)
         saved_today, saved_yday = load(today), load(yesterday)
@@ -120,17 +143,23 @@ def main():
                 and (saved_yday is None or update_results.done(saved_yday))):
             log("当日・前日とも全試合確定・TOP3作成済み。終了")
             return 0
-        dues = [d for d in (due_since(saved_today, now),
-                            due_since(saved_yday, now) if saved_yday is not None else None) if d]
-        due = max(dues) if dues else None
-        if should_dispatch(due, now, last_dispatch):
+        wanted = []
+        for date, saved in ((today, saved_today), (yesterday, saved_yday)):
+            if saved is None and date == yesterday:
+                continue          # 前日の保存データが無い＝試合なし（前日分は取りに行かない）
+            due, kind = need(saved, now)
+            if should_dispatch(due, now, last_by_date.get(date), kind):
+                wanted.append((date, kind))
+        if wanted:
             if site_update_busy():
                 log("同じ順番待ちの処理が動作中・待機中のため今回は起動しない")
             elif dispatch():
-                last_dispatch = now
+                for date, kind in wanted:
+                    last_by_date[date] = now
+                log("対象: " + ", ".join(f"{d}({k})" for d, k in wanted))
         else:
-            log("まだ更新の必要なし（試合中・試合前、または未確定の間引き中）")
-        if 2 <= now.hour < 12 or now + timedelta(seconds=TICK) - started > RUN_LIMIT:
+            log("まだ更新の必要なし（試合中・試合前、または間引き中）")
+        if should_stop(now + timedelta(seconds=TICK), started):
             log("見張りの時間帯を終了")
             return 0
         time.sleep(TICK)
