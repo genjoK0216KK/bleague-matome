@@ -1,0 +1,112 @@
+{
+  "id": "ee9fc0eaf9e0a69a8c68",
+  "article_path": "article-games-20261104.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261104.html",
+  "source_commit": "",
+  "source_blob_sha": "dda3cc27d4f1ce115962e0fb2e237cad036ff5f6",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "a4382d7385d2a31caabe6a9ee4b7ee0538bdbb2e7243731e98f1f1d63df24107",
+  "last_observed_blob_sha": "dda3cc27d4f1ce115962e0fb2e237cad036ff5f6",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ee9fc0eaf9e0a69a8c68/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ee9fc0eaf9e0a69a8c68/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-06T20:38:51.938579+00:00",
+  "creation_event_id": "6ecd830ca4446b950f30",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/ee9fc0eaf9e0a69a8c68/thumbnail.png",
+  "image_sha256": "1164eb0a71d7afeaf5557564c47faabe53ba039ee69bb37814d11997b88f730c",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "dda3cc27d4f1ce115962e0fb2e237cad036ff5f6",
+    "text_lines": [
+      "11/04｜B.ONE",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ee9fc0eaf9e0a69a8c68/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261104.html",
+        "verified_blob_sha": "dda3cc27d4f1ce115962e0fb2e237cad036ff5f6",
+        "used": "11/04、B.ONE、試合結果、当日のEFF、ポジション別TOP3。記事内容はこの固定HTMLと固定TXTのみを根拠とした。"
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ee9fc0eaf9e0a69a8c68/source.txt",
+        "sha256": "a4382d7385d2a31caabe6a9ee4b7ee0538bdbb2e7243731e98f1f1d63df24107",
+        "qualifiers_reviewed": [
+          "当日出場選手の公式EFFによるリーグ別・ポジション別集計であり、今季平均や予想ではない",
+          "兼任は各部門の対象、同率は同順位で最大3人",
+          "公式配信EFFを優先し、内訳式との差異がある",
+          "B.PREMIER・B.NEXTはこの日試合なし",
+          "資料取得 2026-11-05 19:53〜19:54 JST"
+        ],
+        "image_treatment": "個人順位・個人成績・試合の再現を掲げず、記事全体の見出しに限定。TOP3はポジション別を明記。ランダム選出選手の名前・成績・出場・活躍の記述なし。"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "visually_inspected": true,
+        "used": "黒#151A18×ライム#CCF43B、太い日本語見出し、インク・ブラシ。参照画像の人物・名前・日付・成績は転用していない。"
+      },
+      {
+        "role": "likeness_only",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000634",
+        "image_url": "https://www.bleague.jp/files/user/roster/750/2026-27/51000634_03.png",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ee9fc0eaf9e0a69a8c68/reference-keegan-records.png",
+        "visually_inspected": true,
+        "used": "公式プロフィール写真の容姿参照のみ。公式写真を完成画像へ貼り付けていない。外部ページの成績を記事の根拠にしていない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "キーガン・レコード",
+        "english_name": "Keegan Records",
+        "selection": "ランダム",
+        "selection_reason": "複数試合とポジション別TOP3が並列で、本文全体の単独主役を特定できないため。固定HTMLのTOP3表にある重複を除いた13選手からsecrets.choiceで1人抽選。",
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ee9fc0eaf9e0a69a8c68/selection.json",
+        "reference_source": "B.LEAGUE公式 選手プロフィール",
+        "reference_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000634",
+        "reference_image_url": "https://www.bleague.jp/files/user/roster/750/2026-27/51000634_03.png",
+        "visual_features": "短い茶髪の横分け、広い額、眉と目の間隔、長めで柔らかい輪郭、直線的な鼻、丸みのある顎、明るい肌、ひげはごく薄い。",
+        "depiction": "ボールを両手で保持してピボットするプレー姿のイラスト。実際の試合場面の再現ではなくイメージ。",
+        "name_in_image": false,
+        "personal_stats_in_image": false,
+        "likeness_review": "初回の髪のボリュームと顔の濃い陰影を公式写真に合わせて1回だけ修正し、修正版を目視確認。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: ads-marketing.\nCreate exactly ONE finished Japanese basketball editorial thumbnail as a PNG, wide 16:9, 1536x864 or larger. This is a new original ink illustration, not a photograph.\nArticle content comes only from the fixed article: November 4 game results for B.ONE, and that day's official EFF rankings by position, TOP3. Do not infer player achievements.\n\nStyle reference: the approved black/lime basketball thumbnail shown in this conversation, B-culver-black-lime-v3.png. Match its dark green-black #151A18 ground, electric lime #CCF43B dry-brush gestures, off-white heavy Japanese typography, hand-cut ink texture, bold brush contours, restrained elements. Do NOT copy any player, name, number, score or date from that style example. Do not make a photographic or photorealistic collage.\n\nThe sole person MUST depict the real basketball player Keegan Records (キーガン・レコード), whose official B.LEAGUE portrait has just been viewed in this conversation. Reference is for his physical likeness only, not to paste the official photograph. Closely preserve these visible traits: fair skin, large tall strong athletic build and broad shoulders; short straight medium-brown hair neatly swept to his right with a soft side part and slightly raised front; high broad forehead; moderately thick dark eyebrows; slightly hooded eyes; long oval/angular face; straight prominent nose with rounded tip; broad mouth; squared rounded chin; nearly clean-shaven with only very light jaw stubble, NO full beard. Render him as an unmistakably hand-drawn editorial sports illustration with cream highlights and charcoal hatching. Do not depict a generic invented player or the player in the style sample.\n\nScene/composition: a dynamic three-quarter view of Records alone on the RIGHT 45% of the canvas, knees flexed and torso rotating into a strong basketball pivot, both hands naturally gripping ONE orange basketball in front of his lower chest/waist, looking toward the left with focused game energy. Head, both arms, hands and ball entirely inside the frame, generous 6% padding. Crop his lower body around mid-thigh naturally at lower right if needed. Plain cream basketball jersey with dark ink shading and tiny lime trim; absolutely no logos, sponsor words, team name, jersey numbers or branding on clothing. Anatomically correct hands with five digits each, natural wrists, no extra limbs. The left 55% is a clean typography field, no text over face, hands or ball. Broad diagonal lime brushstrokes behind the player with a small amount of ink splatter, no busy crowd, no extra players, no scoreboard, no reconstructed game scene.\n\nText must be EXACTLY the following six lines, with no other words or numbers:\n1. \"11/04｜B.ONE\" — small clear header upper left.\n2. \"試合結果\" — enormous bold off-white Japanese main headline.\n3. \"当日のEFF\" — very large bold lime second headline.\n4. \"ポジション別TOP3\" — medium bold off-white subheading; legible and keep ポジション別 tied directly to TOP3.\n5. \"イラスト（AI生成）\" — clearly legible off-white footer at bottom left.\n6. \"イメージ\" — beside the AI label in the same footer.\nUse superb Japanese typesetting, large glyphs, ample line spacing, crisp edges, no clipping and a minimum 5% safe text margin. Footer must not touch the lower edge.\n\nThis is a representative imaginative basketball illustration. Keegan Records was selected RANDOMLY from the article's named players, not singled out as the article's main star. Never print his name, personal points, stats, appearance or performance claims. Never claim this is an actual November 4 play. The footer explicitly says イメージ. No team logos, league logos, official photo pixels, watermarks, decorative fake letters, additional text, championship claims or match-winning shot claims. Deliver only one complete finished thumbnail.",
+      "correction": "Edit the FIRST image only. It is the finished 16:9 basketball thumbnail. The SECOND image is the official B.LEAGUE portrait of the real player Keegan Records, supplied strictly as a physical-likeness reference.\n\nMake ONE localized correction: redraw the player's head/face in the FIRST image to closely match Keegan Records in the SECOND image. Keep the first image's head position, focused leftward playing gaze and body pose, but match the portrait's facial identity: lower/flatter short medium-brown side-swept hairstyle (not a voluminous quiff), broad exposed forehead with the reference's slight temple recession; softer long oval face and less exaggerated angular cheeks; the same eyebrows, eye spacing, slightly hooded eyes, straight nose with rounded tip, broader mouth and rounded chin. His skin is fair, cheeks almost clean-shaven. Remove the heavy/aged stubble and overly rugged facial shading; use the source portrait's youthful clean-shaven features. This must remain a hand-drawn ink-and-brush sports illustration, never paste photo pixels or become photorealistic. Use the second image only for the person, and never copy its jersey, numbers, logos, sponsor names, photograph background, or smiling portrait pose.\n\nKeep EVERYTHING ELSE in the first image: same composition, same player body, shoulders, pivot stance, two anatomically correct hands holding one ball, blank uniform, black #151A18 and lime #CCF43B brushwork, orange ball, off-white type. Do not change or add any typography. Retain these exact visible lines:\n\"11/04｜B.ONE\"\n\"試合結果\"\n\"当日のEFF\"\n\"ポジション別TOP3\"\n\"イラスト（AI生成）\"\n\"イメージ\"\n\nThe player was randomly selected. Do not add player names, jersey numbers, personal statistics, performance claims or actual-game claims. No extra people, no team or league logos. Keep a 16:9 PNG at least 1536 pixels wide. Return just ONE final corrected thumbnail."
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "correction_generations": 1,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1b295-ec8a-7413-b31c-609acd199fd1/exec-ff184574-f101-4c46-be6b-0da0698c9e32.png",
+      "saved_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ee9fc0eaf9e0a69a8c68/generated.png",
+      "format": "PNG",
+      "width": 1671,
+      "height": 941,
+      "sha256": "1164eb0a71d7afeaf5557564c47faabe53ba039ee69bb37814d11997b88f730c",
+      "inspection": "生成された修正版を実際に目視して全5項目を確認。文字・数値の一致、ポジション別の限定、ランダム選出人物の個人成績なし、本人の容姿、両手の形、重要要素の見切れなし、AI注記を確認。PNG署名・全チャンクCRC・画像サイズ・IDAT展開を確認。",
+      "ready_executed": false,
+      "published": false,
+      "externally_sent": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-06T20:42:57.470272+00:00",
+  "publication_approved": false
+}
