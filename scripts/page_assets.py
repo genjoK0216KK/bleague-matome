@@ -21,6 +21,27 @@ def ensure_ga(text, ga_id):
     return text
 
 
+# ヒートマップ（Microsoft Clarity・プロジェクト「バスケまとめ」）。2026-11-07 本人「今後すべてのサイトにヒートマップを入れる」
+CLARITY_ID = "z9kto3yxr3"
+
+
+def clarity_snippet(cid=CLARITY_ID):
+    return (
+        '<!-- AUTO:CLARITY:START -->\n'
+        '<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};'
+        't=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})'
+        f'(window, document, "clarity", "script", "{cid}");</script>\n'
+        '<!-- AUTO:CLARITY:END -->\n'
+    )
+
+
+def ensure_clarity(text, cid=CLARITY_ID):
+    text = re.sub(r"<!-- AUTO:CLARITY:START -->.*?<!-- AUTO:CLARITY:END -->\n?", "", text, flags=re.DOTALL)
+    if cid and "</head>" in text:
+        text = text.replace("</head>", clarity_snippet(cid) + "</head>", 1)
+    return text
+
+
 DEFAULT_OG_IMAGE = "https://basuke-matome.jp/og-default.png"
 DEFAULT_OG = re.compile(r'[ \t]*<meta\b[^>]*\bdata-default-og\b[^>]*>\n?')
 
@@ -45,4 +66,4 @@ def ensure_default_og(text):
 def ensure(text, ga_id):
     if 'href="design-system.css?v=1"' not in text:
         text = text.replace('</head>', '<link rel="stylesheet" href="design-system.css?v=1">\n</head>', 1)
-    return ensure_default_og(ensure_ga(text, ga_id))
+    return ensure_clarity(ensure_default_og(ensure_ga(text, ga_id)))
