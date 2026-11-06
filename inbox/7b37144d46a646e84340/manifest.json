@@ -1,0 +1,112 @@
+{
+  "id": "7b37144d46a646e84340",
+  "article_path": "article-daily-20261104.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261104.html",
+  "source_commit": "",
+  "source_blob_sha": "7664d2128e8b8773e80bf5528f9013e242aee849",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "0b01f8d37f6b9c783eee85c918126c788ecdbde63d7759ba9e3bed73dea84aed",
+  "last_observed_blob_sha": "7664d2128e8b8773e80bf5528f9013e242aee849",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7b37144d46a646e84340/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7b37144d46a646e84340/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-06T20:47:54.137832+00:00",
+  "creation_event_id": "4723ed239a9c02bc5cf6",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/7b37144d46a646e84340/thumbnail.png",
+  "image_sha256": "b0027360a039b9cc66c43a9184c22570cf64a7d5f3aabf44736a5e2a4ab51853",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "7664d2128e8b8773e80bf5528f9013e242aee849",
+    "text_lines": [
+      "バスケまとめ",
+      "試合前展望",
+      "1勝差の",
+      "首位攻防",
+      "A東京 × 仙台",
+      "11/6 19:05",
+      "順位は11/1終了時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "本文の根拠・固定HTML",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7b37144d46a646e84340/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261104.html",
+        "source_blob_sha": "7664d2128e8b8773e80bf5528f9013e242aee849",
+        "used_facts": [
+          "11月1日全試合終了時点のA東京11勝3敗、仙台10勝4敗、差は1勝",
+          "11月6日19時05分のA東京対仙台",
+          "試合前展望・独自分析であり、試合結果ではない"
+        ]
+      },
+      {
+        "role": "本文の根拠・固定テキスト",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7b37144d46a646e84340/source.txt",
+        "note": "本文の主張は固定HTML/TXTのみを根拠とし、外部の順位・試合結果・選手成績を追加していない。"
+      },
+      {
+        "role": "制作手順のみ・本文根拠ではない",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "note": "実在選手のランダム選出、注記、ready未実行は今回の本人指示を優先。"
+      },
+      {
+        "role": "承認済みスタイルのみ・本文根拠ではない",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "view_imageで確認。黒×ライム、太い日本語見出し、手描きインク表現のみ参照。名前・成績・日付は転用していない。白地A案は指定場所に見つからず、B案のみ使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "キヨンテ・ジョンソン",
+        "team": "アルバルク東京",
+        "selection": "ランダム",
+        "selection_reason": "固定本文に選手名がなくチーム同士の展望が主題のため、本文の主要対戦チームの現役選手から1人選出。",
+        "selection_method": "Python random.Random('7b37144d46a646e84340')。A東京公式選手一覧の人間の選手13人を背番号順に並べてchoice、続いて仙台公式選手一覧13人からchoice。ロボットCUE7は対象外。",
+        "current_roster_url": "https://www.alvark-tokyo.jp/team/players/",
+        "official_profile_url": "https://www.alvark-tokyo.jp/player_lp/keyontae_johnson/",
+        "official_photo_url": "https://alvark-tokyo.bl.kuroco-img.app/v=1787327354/files/user/players/2026-27/serious/2627_11_400-500_serious.jpg",
+        "appearance_reference_viewed": true,
+        "observed_features": "短くまとまった黒い自然なカール、サイドの刈り上げ、幅のある輪郭、はっきりした眉と目、幅のある鼻、厚めの唇、薄い口ひげと小さな顎ひげ、厚い肩。",
+        "depiction": "黒地に赤縁の無地ユニフォームでドライブするイメージ。顔・髪・ひげを公式プロフィール写真に照合。名前・背番号・個人成績・出場断定は画像に入れていない。"
+      },
+      {
+        "name": "ジェイク・レイマン",
+        "team": "仙台89ERS",
+        "selection": "ランダム",
+        "selection_reason": "固定本文に選手名がなくチーム同士の展望が主題のため、本文の主要対戦チームの現役選手から1人選出。",
+        "selection_method": "同じjob_idをシードにしたPRNGの2回目のchoice。仙台公式選手一覧13人、背番号順。",
+        "current_roster_url": "https://www.89ers.jp/team/players/",
+        "official_profile_url": "https://www.89ers.jp/team/players/detail/id=21448?PlayerID=51000313",
+        "official_photo_url": "https://bleague.bl.kuroco-img.app/v=2026110703/files/user/roster/692/2026-27/51000313_01.jpg",
+        "appearance_reference_viewed": true,
+        "observed_features": "明るい肌、縦に長く細い輪郭、長いまっすぐな鼻、明るい目、短いライトブラウンの髪を横分けで上後方に流した髪型、顎ひげのない顔、細身で長い体格。",
+        "depiction": "黄色と黒縁の無地ユニフォームで守るイメージ。顔・髪型を公式プロフィール写真に照合。名前・背番号・個人成績・出場断定は画像に入れていない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story\nAsset type: Japanese basketball editorial thumbnail for バスケまとめ. Create exactly ONE finished image, landscape 16:9, target 1536×864 or larger. Not a photo.\n\nStyle: match the approved black-and-lime ink illustration reference viewed in this conversation. Deep charcoal #151A18 background, vivid lime #CCF43B brushstrokes, warm ivory typography, hand-drawn black/ivory ink hatching with restrained natural skin tones. Very bold readable Japanese headline, sparse elements, powerful movement. Do not copy any player, name, statistic or date from the style reference.\n\nSubject: EXACTLY TWO real professional basketball players, never fictional substitute athletes. They are chosen at random from the two main teams' current official rosters; their presence represents only an imagined matchup, not evidence of actual participation or a real game event.\n1. Keyontae Johnson (キヨンテ・ジョンソン), Alvark Tokyo: based on the official portrait just viewed, dark brown skin, short textured black tapered natural curls with a slightly taller rounded top, broad strong angular face, focused almond eyes under defined brows, broad nose, full lips, fine mustache and small trimmed chin goatee, muscular broad shoulders. Plain black sleeveless uniform with a narrow red edge, no letters, no number, no symbols. Keep face recognizably Johnson, not Jarrett Culver from the style image.\n2. Jake Layman (ジェイク・レイマン), Sendai: based on the official portrait just viewed, fair skin, elongated narrow face and long straight nose, light eyes, short light-brown hair neatly swept back/up with a side part, clean-shaven, lean tall build. Plain muted yellow sleeveless uniform with charcoal edge, no letters, no number, no symbols. Keep face recognizably Layman.\nOfficial appearance sources: https://www.alvark-tokyo.jp/player_lp/keyontae_johnson/ and https://www.89ers.jp/team/players/detail/id=21448?PlayerID=51000313 . These are appearance references only. Do not paste or reuse photographic pixels.\n\nComposition: left 49% clean typography, right 51% an energetic invented one-on-one basketball illustration. Johnson in the foreground leaning into a drive, controlling one orange basketball with his right hand at waist height, his face three-quarter visible. Taller Layman slightly farther right in a defensive stance, face three-quarter visible, knees bent, one open hand reaching laterally toward the dribble, other hand open near shoulder. Keep their arms distinct, both faces unobstructed, natural human anatomy, each visible hand with plausible fingers. Crop around upper thighs intentionally; keep heads, hands and the complete ball inside the canvas with margin. The figures may partially overlap each other but never the headline. No hoop, no scoreboard, no crowd, no third person. Diagonal lime dry-brush movement behind figures. Show expressive manual ink lines, visibly illustrated rather than photographic.\n\nRender only these exact Japanese texts, no other text:\nSmall top-left: 「バスケまとめ」\nAdjacent small readable badge: 「試合前展望」\nLargest stacked headline on left: 「1勝差の」 then 「首位攻防」\nBelow headline in bold ivory: 「A東京 × 仙台」\nDate below: 「11/6 19:05」\nSmall but clearly legible source qualifier immediately under date: 「順位は11/1終了時点」\nBottom left in highly readable ivory: 「イラスト（AI生成）」 followed by 「イメージ」\nUse Japanese gothic typography with heavy weight; headline may have subtle brush texture but no broken strokes. Exact characters and numerals, strong hierarchy, no collisions, all text inside at least 4% safe margins. '1勝差' means team standings difference, not a score; do not imply a final result.\n\nEditorial grounding ONLY the supplied frozen article: A東京 and 仙台 are one win apart at end of Nov 1; Nov 6 at 19:05 is a previewed game. Do not add any result, win prediction, player names, appearances or player statistics in the image. Do not portray this as a recreation of an actual game scene. Visible labels 試合前展望 and イメージ must remain. No official team logo, league logo, sponsorship, jersey lettering, watermark or photorealism.\n\nCORRECTION 1 (ONLY CORRECTION)\nEdit the first input image, the complete black/lime basketball thumbnail. The second input is Keyontae Johnson's OFFICIAL PORTRAIT and the third is Jake Layman's OFFICIAL PORTRAIT. Use both portraits solely as anatomical likeness references, never paste their photographic pixels. Keep a clearly hand-inked illustration. This is the one permitted correction pass.\n\nFix two problems precisely:\n1. Improve both actual players' likeness to the provided portraits. Johnson (foreground in black) must have the SHORT compact natural black curls and taper of portrait 2, NOT the tall fluffy long curls in the first thumbnail. He has a broad, slightly rectangular face, forward-set focused almond eyes, a straight broad nose, full lips, a very thin neat mustache and a small narrow chin goatee; eliminate the full heavy jawline beard. Keep broad muscular shoulders and the active driving pose. Do not depict Jarrett Culver or a generic player. Layman (defender in yellow) must have portrait 3's longer narrow face, longer straight narrow nose, lighter eyes, very short light-brown side hair, top swept UP AND BACK with a side part, and clean-shaven cheeks and chin with no beard. Keep an alert defensive expression.\n2. Reframe the entire TWO-player illustration slightly smaller and shifted DOWN/LEFT within its right-hand area so Layman's WHOLE HAIR silhouette has at least 35 pixels of dark background above it and the rightmost extended hand has at least 35 pixels of breathing room from the right edge. Both heads, all visible hands, and the entire orange basketball must be inside the canvas. Natural hands, no extra digits or fused fingers. The whole ball already fits; keep it that way. Do not obscure any text. Make Layman's near reaching arm anatomically readable and do not create a third player.\n\nPreserve ALL existing text exactly, typography hierarchy, relative text positions, dark #151A18 + lime #CCF43B brush style, orange ball, black-and-red plain uniform for Johnson, plain yellow/charcoal uniform for Layman, and the imagined one-on-one action. All uniforms stay completely unbranded without letters, names, numbers, logos or sponsors.\nThe visible text must remain:\nバスケまとめ\n試合前展望\n1勝差の\n首位攻防\nA東京 × 仙台\n11/6 19:05\n順位は11/1終了時点\nイラスト（AI生成）\nイメージ\nKeep all text legible with a small safe outer margin, no clipping.\nNo player names, player statistics, final scores or actual-game claims. No photography, official logos, watermark, arena details or added elements. Exactly one finished landscape 16:9 thumbnail, at least 1536 pixels wide.",
+    "generator": {
+      "tool": "image_gen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "corrections": 1,
+      "external_api_or_cli": false,
+      "final_generated_file": "/Users/genjo/.codex/generated_images/01a1b2bc-03ab-71b1-83cf-9e399248f301/exec-a393a712-ca7d-49bb-b6cb-15e1f1d812d7.png",
+      "output_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7b37144d46a646e84340/generated.png",
+      "qa_method": "最終生成画像を実際に表示して目視確認。見出し・対戦・11/6 19:05・順位の11/1終了時点・試合前展望・AI表記・イメージが読めることを確認。両者の顔と髪を公式写真に照合し、頭部・見える手・ボールの見切れなし、指の形と文字への重なりに問題なし。選手名・個人成績・出場断定・公式ロゴ・スポンサー文字なし。初稿の髪型と頭上余白は1回の修正で改善。",
+      "ready_executed": false,
+      "published_or_sent": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-06T21:27:44.661739+00:00",
+  "publication_approved": false
+}
