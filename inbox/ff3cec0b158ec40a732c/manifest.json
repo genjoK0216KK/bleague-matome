@@ -1,0 +1,118 @@
+{
+  "id": "ff3cec0b158ec40a732c",
+  "article_path": "article-daily-20261107.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261107.html",
+  "source_commit": "",
+  "source_blob_sha": "1c78ae33081c5d680785a1933babfcb6c1fba058",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "ce1a16d902ecd4934548fa16b7312d43b934b249b8142d8e56b5c4a71ae47905",
+  "last_observed_blob_sha": "1c78ae33081c5d680785a1933babfcb6c1fba058",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ff3cec0b158ec40a732c/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ff3cec0b158ec40a732c/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-06T23:22:52.145443+00:00",
+  "creation_event_id": "3aa14d3b62514dc3f0f5",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/ff3cec0b158ec40a732c/thumbnail.png",
+  "image_sha256": "45f152b4df0bcc90050526d2e67bbb014bb49d9bd524afb6befeb6013cf0113f",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "1c78ae33081c5d680785a1933babfcb6c1fba058",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.07",
+      "仙台",
+      "東地区首位へ",
+      "仙台 96-69 A東京",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_fixed_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ff3cec0b158ec40a732c/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261107.html",
+        "usage": "本文内容の根拠。仙台の96-69の勝利、東地区首位浮上、記事日付2026.11.07。関連記事やリンク先記事は本文の根拠に使用していない。"
+      },
+      {
+        "type": "article_fixed_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ff3cec0b158ec40a732c/source.txt",
+        "sha256": "ce1a16d902ecd4934548fa16b7312d43b934b249b8142d8e56b5c4a71ae47905",
+        "usage": "固定HTML本文との照合。本文に選手名はない。日程説明には前日/翌々日/中1日の混在があるため、画像には日程や休養日数を記載していない。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "view_imageで目視した承認済みの黒×ライム・太字日本語・インク/ブラシ表現。選手名、個人成績、過去の試合結果は引き継がない。"
+      },
+      {
+        "type": "official_roster",
+        "url": "https://www.89ers.jp/team/players/",
+        "usage": "現役選手の候補確認とランダム選出のみに使用。記事の試合結果の根拠には使用しない。"
+      },
+      {
+        "type": "official_profile",
+        "url": "https://www.89ers.jp/team/players/detail/id=14514?PlayerID=30526",
+        "usage": "渡辺翔太の容姿と所属の確認のみ。個人成績は画像へ使用しない。"
+      },
+      {
+        "type": "official_portrait",
+        "url": "https://bleague.bl.kuroco-img.app/v=2026110708/files/user/roster/692/2026-27/30526_01.jpg",
+        "usage": "公式プロフィールHTMLから写真URLを取得し、ダウンロード後view_imageで目視。本人の容姿参照のみ。写真の貼り付けやロゴ転用なし。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "渡辺翔太",
+        "team": "仙台89ERS",
+        "selection": "ランダム",
+        "selection_reason": "固定本文ではチームが主役で選手名が出ていないため、本文に登場する仙台の現役選手から選出。",
+        "selection_method": "公式選手一覧の掲載順13名に対してPython secrets.randbelow(13)を1回実行し、0始まりのindex=6を採用。再抽選なし。",
+        "candidate_names": [
+          "岡島和真",
+          "船生誠也",
+          "ジャレット・カルバー",
+          "セルジオ・エル ダーウィッチ",
+          "ジェイク・レイマン",
+          "杉浦佑成",
+          "渡辺翔太",
+          "半澤凌太",
+          "新沼康生",
+          "シェーファー アヴィ幸樹",
+          "ネイサン・ブース",
+          "片岡大晴",
+          "阿部真冴橙"
+        ],
+        "reference_url": "https://www.89ers.jp/team/players/detail/id=14514?PlayerID=30526",
+        "portrait_url": "https://bleague.bl.kuroco-img.app/v=2026110708/files/user/roster/692/2026-27/30526_01.jpg",
+        "observed_features": "黒い幅広のヘッドバンド、短く立ち上がる暗い髪、ひげのない卵形の輪郭、黒い眉、目鼻と口元、コンパクトで引き締まった体格。",
+        "depiction": "実在選手1人のドリブルのイメージ。特定の試合場面の再現や当該試合への出場・活躍の主張ではない。",
+        "visible_player_name": false,
+        "visible_individual_stats": false,
+        "likeness_review": "公式肖像と生成画像を目視比較。黒いヘッドバンド、髪、ひげのない輪郭、目鼻口の特徴をイラストとして確認。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset type: Japanese basketball editorial website thumbnail, one finished landscape PNG, approximately 16:9, ideally 1672x940 or 1600x900 and at least 1000px wide.\n\nCreate ONE bold hand-inked basketball editorial illustration with Japanese typography, following the approved black-and-lime style reference visible in this conversation. Background deep charcoal #151A18; fluorescent lime #CCF43B broad dry brush sweeps and subtle ink flecks; ivory text and grayscale ink figure; orange basketball accent. Clearly drawn illustration, not photography, not photorealistic. Few elements and very strong small-screen hierarchy.\n\nArticle facts, exclusively from the supplied fixed manuscript: Sendai beat Alvark Tokyo 96-69 on November 6 and moved into first place in the Eastern district; article dated 2026.11.07. Only the exact team-result copy below may appear. Do not imply this selected player scored, participated in, or determined this game.\n\nSubject: exactly ONE real player, Shota Watanabe / 渡辺翔太, randomly selected from Sendai's current official roster because the manuscript names no players. Match the official portrait just inspected in this conversation: young adult Japanese man with short, slightly spiky dark brown-black hair above a broad plain black headband, a few irregular upward strands and short sides; clean-shaven oval face tapering to a fairly compact rounded chin; straight dark eyebrows, dark almond-shaped eyes, straight nose and gently closed medium lips. Lean compact muscular point-guard build. Preserve recognizable hair, headband, face shape, eyes and mouth in crisp expressive black/ivory ink shading, with sufficient lit facial detail. The reference photo is for likeness only; redraw completely. Plain sleeveless ivory basketball jersey with small lime edge accents, plain dark shorts, generic unbranded shoes, plain headband. Absolutely no logos, sponsor marks, jersey lettering, name or jersey number.\n\nComposition: large stacked headline on the LEFT, roughly 55% of the frame, with generous negative space. On the RIGHT, the player in an energetic low driving dribble, bent knees, forward leaning torso, three-quarter front face visible, right hand naturally controlling one orange basketball at hip-to-knee level, left arm bent naturally for balance. Show full figure and both shoes within the frame. Clear anatomically coherent hands and limbs, one ball only, no duplicated fingers, no cut-off ball, no extra players. Use a fresh low diagonal driving composition, NOT the upright shooting pose from the style sample. Abstract brush background only, no exact arena, crowd or identifiable game moment. This is a conceptual illustration, never a reconstruction of the reported match.\n\nText, verbatim and only these strings:\nTop left small brand: \"バスケまとめ\"\nBelow brand small date: \"2026.11.07\"\nMain headline, huge ivory first line: \"仙台\"\nMain headline, large lime second line: \"東地区首位へ\"\nLower-left score line in bold ivory: \"仙台 96-69 A東京\"\nBottom footer legible ivory: \"イラスト（AI生成）\"\nBeside footer: \"イメージ\"\n\nTypeface: thick Japanese gothic with an editorial brush texture, precise clean kanji and numerals. All text fully inside canvas with at least 5% edge margin. Keep player face, hand and ball off the text. Footer must be easily legible and unbroken. Do not copy the style example's player name, 38 points, Kobe score, old date, or qualifier. Do not put Watanabe's name or any individual performance text anywhere. No B.LEAGUE or team logos. Generate the finished art and typography together.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "correction_count": 0,
+      "generated_source": "/Users/genjo/.codex/generated_images/01a1b32c-1254-7742-83a3-f97e916ed0fe/exec-0dc8fe5e-6c5f-411e-b74c-07a8fefa94bb.png",
+      "output_format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "qa_method": "内蔵生成結果の実画像を目視検品し、sipsでPNG形式と寸法を確認。文字・数字、チームに限った結果表現、イメージ注記、容姿、手足・ボール・見切れ、AI生成表記を確認。レタリングの空白幅は意匠上の差で意味は同一。画像内容の後処理なし。",
+      "scope": "ローカルのgenerated.pngとbrief.jsonの保存のみ。ready実行・git操作・公開・外部送信なし。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-06T23:26:06.169765+00:00",
+  "publication_approved": false
+}
