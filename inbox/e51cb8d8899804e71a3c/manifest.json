@@ -1,0 +1,77 @@
+{
+  "id": "e51cb8d8899804e71a3c",
+  "article_path": "article-daily-20261106.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261106.html",
+  "source_commit": "",
+  "source_blob_sha": "c8029ff5e73c730692cb3f5a5b9d8524edb8db00",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "64c525c3ae05efd1ca762a678098f8187613208d9d9372a380af580d66f03e70",
+  "last_observed_blob_sha": "c8029ff5e73c730692cb3f5a5b9d8524edb8db00",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e51cb8d8899804e71a3c/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e51cb8d8899804e71a3c/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-06T03:14:10.881288+00:00",
+  "creation_event_id": "851fe302116f9158bec8",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/e51cb8d8899804e71a3c/thumbnail.png",
+  "image_sha256": "9441381c0adf00005a0fb05ec487ff8d4a450ff5bca17c6f3a73babfcae27939",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "c8029ff5e73c730692cb3f5a5b9d8524edb8db00",
+    "text_lines": [
+      "バスケまとめ",
+      "試合前展望 / 独自予測",
+      "仙台 × A東京",
+      "東地区",
+      "首位攻防",
+      "11/6 19:05",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "role": "記事内容の唯一の根拠（固定HTML）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e51cb8d8899804e71a3c/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261106.html",
+        "notes": "見出し、2026.11.06、試合前展望 / 独自予測、11月6日19時05分の対戦から採用。11月1日時点の順位と勝利時の勝敗数に整合しない記述があるため、勝敗数・ゲーム差・勝利時の順位予測を画像へ載せていない。ジャロウ選手の今夜の出場は未確認という留保を保持し、選手名・出場・成績・活躍を画像で主張していない。"
+      },
+      {
+        "role": "記事内容の唯一の根拠（固定文章）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e51cb8d8899804e71a3c/source.txt"
+      },
+      {
+        "role": "容姿参照のみ（本文内容の根拠には不使用）",
+        "url": "https://www.alvark-tokyo.jp/news/detail/team/id=24550",
+        "image_url": "https://alvark-tokyo.bl.kuroco-img.app/v=1791706547/files/user/77_Jarreau%20%281%29.jpg",
+        "notes": "アルバルク東京公式のプロフィール写真を実際に表示して確認。写真の貼り付けなし。"
+      },
+      {
+        "role": "スタイル参照のみ",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "notes": "view_imageで確認。人物、名前、日付、成績は引き継がず、黒×ライムとインク・ブラシの表現を参照。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "デジョン・ジャロウ（DeJon Jarreau）",
+        "selection": "ランダム",
+        "selection_reason": "記事の主役は仙台とA東京の対戦。本人指定の候補優先順位に従い、本文に名前が出る選手を候補にした。該当候補はジャロウ1名のみのため選択結果は同選手。",
+        "reference_source": "アルバルク東京公式プロフィール写真",
+        "reference_url": "https://www.alvark-tokyo.jp/news/detail/team/id=24550",
+        "reference_image_url": "https://alvark-tokyo.bl.kuroco-img.app/v=1791706547/files/user/77_Jarreau%20%281%29.jpg",
+        "observed_features": "白い太いヘッドバンド、短い黒髪、縦長の輪郭、しっかりした眉、アーモンド形の目、丸みのある幅広の鼻、厚い唇、口ひげとつながった濃い顎ひげ。",
+        "depiction": "1人でボールを両手に持って踏み込むプレー姿のイラスト。特定の試合場面の再現ではなく、今夜の出場を意味しない。画像内に名前・選手成績・出場・活躍の記載なし。公式写真・ロゴ・スポンサー文字の転載なし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate exactly ONE finished Japanese editorial basketball thumbnail for バスケまとめ. Brand-new original raster illustration, landscape approximately 16:9, preferred 1536x864 or larger, PNG. Do not make variants or a contact sheet.\n\nArticle facts used for visible copy ONLY: frozen source.html/source.txt title says 仙台とA東京、今夜19時05分に東地区首位攻防, dated 2026.11.06. This is 試合前展望 / 独自予測. No score or win/loss record belongs in this image. No final result.\nArt direction: approved black #151A18 and lime #CCF43B basketball editorial style with thick expressive Japanese typography, off-white ink, energetic hand-painted dry-brush texture, sparse deliberate details, strong contrast, a few lime diagonal motion strokes. Clearly a drawn illustration, absolutely not photography or photorealistic rendering. Style similar to the approved black/lime sample visible in context, but do NOT copy that sample's player, any lettering, name, number, score, or its raised-arms shooting composition.\n\nSubject: exactly one real player, DeJon Jarreau (デジョン・ジャロウ), as a dynamic basketball PLAYING illustration, not a generic invented athlete. The official Alvark Tokyo profile portrait viewed in context is an appearance reference only. Likeness: very short dark tightly curled hair showing above a broad plain WHITE headband; medium-dark skin; an elongated oval face with high cheekbones, short lower hairline, straight strong brows and almond-shaped eyes, broad rounded nose, full defined lips; a dense neatly shaped full black beard following cheeks/jaw into a rounded slightly pointed chin and connected moustache. Slim, tall athletic build with long arms. Preserve these specific distinguishing features in expressive black-and-ivory ink lines and modeled drawing. No photographic cutout or photo pixels. No earrings needed during play.\nComposition: place the athlete on the LEFT 44% of frame, in a low, powerful forward-driving pose, knees bent, torso leaning diagonally forward, head clearly visible around upper-left third, face three-quarter turned toward viewer, intent gaze across frame. He gathers a single orange basketball near his left-front hip with two anatomically clear hands, preparing to drive; both arms and both hands clearly connected to the torso, plausible fingers. Keep head, hands and ball fully inside frame with padding. Crop only below the upper legs if necessary. Plain unbranded black/off-white basketball jersey; NO team logos, league logos, sponsor names, uniform text, numbers or badges. Do not reproduce photo uniform markings. No other humans or shadow opponents. The pose is a generic imagined action, not any actual game moment; the player's participation in this previewed game is UNCONFIRMED. Do not imply a decisive shot, his participation, performance or stats. No player name anywhere.\n\nText in the RIGHT 54% of frame, generous margins, bold and instantly legible:\ntop small off-white line: \"バスケまとめ\"\na restrained lime outlined or filled small tag: \"試合前展望 / 独自予測\"\nnext medium-large bold line: \"仙台 × A東京\"\nhuge main headline on two stacked lines: \"東地区\" (smaller than main) then \"首位攻防\" (largest, in lime, strong thick Japanese display lettering). Keep all four characters of 首位攻防 clear, with no player overlap.\nbelow main headline large off-white date/time: \"11/6 19:05\"\noptional tiny date line is NOT needed. Do not add any other editorial text.\nBottom safe margin across the image: legible off-white note exactly \"イラスト（AI生成）｜イメージ\". Make this annotation visibly present, not microscopic, not cropped.\n\nAll text must match the quoted Japanese strings exactly. No fabricated scoring, no player name, no playing/appearance claim, no photorealism, no watermark, no logos. Keep a flat dark background behind all copy so text is highly readable. Avoid clutter. Make a polished final thumbnail, not a mockup.\n\n--- One permitted correction ---\nEdit the first image, the generated black/lime Japanese basketball thumbnail. The second image is the official DeJon Jarreau face reference ONLY. Return exactly ONE corrected final PNG, keeping the first image's approximately 16:9 landscape canvas, black/lime/ivory ink-brush art style, player identity, dynamic basketball-gathering pose, and ALL Japanese wording unchanged.\nMake only these tightly scoped corrections:\n1. Increase safe framing. Scale down and reposition the existing entire illustration/lettering composition within the same canvas, so the player's complete hair, BOTH complete hands including every fingertip, the entire ball, and every Japanese glyph have at least 4% canvas inset. Fill newly exposed outer margins with the same dark #151A18 background and minimal matching brush texture. In particular the leftmost fingers currently touch/cross the left image edge, the curls touch the top edge, and the rightmost 防 is too near the right edge. Solve all three through smaller framing, not by hiding hands or removing the basketball. Preserve clearly connected arms and anatomically plausible hands. The figure may still be cropped below upper thighs, but no hair, hands or ball should be cropped.\n2. Correct the hair above the plain white headband to the very short close-cropped black curls in the official reference, only a small amount of hair visible above the headband, NOT the current tall curly top. Retain the recognizable long oval face, dense full shaped black beard, connected moustache, broad rounded nose, full lips, almond eyes and specific facial structure of the real DeJon Jarreau. The second photo must NEVER be pasted, made photorealistic, or have its uniform logos copied; only appearance details guide the drawn illustration. No sponsor marks, team/league logos, jersey letters or numbers.\nThe text remains exactly: バスケまとめ; 試合前展望 / 独自予測; 仙台 × A東京; 東地区; 首位攻防; 11/6 19:05; イラスト（AI生成）｜イメージ.\nDo not add his name, scoring, participation claim, or any new text. The scene is imagined generic play, not a game reenactment. Keep thick clearly readable letters and readable AI/image disclaimer. No additional variants.",
+    "generator": "内蔵 image_gen（初回1回＋修正1回）。最終PNGは内蔵生成出力を無加工でコピー。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-06T03:19:03.476214+00:00",
+  "publication_approved": false
+}
