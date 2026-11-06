@@ -338,29 +338,29 @@
   },
   "article-daily-20261106.html": {
    "article_path": "article-daily-20261106.html",
-   "editorial_fingerprint": "5aa76afb976ea1c0e046623d218a09e40ac81230fd09ab6f374d76dc8178d139",
+   "editorial_fingerprint": "64c525c3ae05efd1ca762a678098f8187613208d9d9372a380af580d66f03e70",
    "files": {
     "eyecatch": {
-     "height": 720,
-     "path": "thumbs/auto/article-daily-20261106-10109327554f.jpg",
+     "height": 721,
+     "path": "thumbs/auto/article-daily-20261106-9441381c0adf.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261106-10109327554f-og.jpg",
+     "path": "thumbs/auto/article-daily-20261106-9441381c0adf-og.jpg",
      "width": 1200
     }
    },
-   "id": "7ad8c412ccd18f5f073f",
-   "image_sha256": "10109327554f905c69661a5cc9a302570763979aaae5c41f211bfa19ea985e2d",
-   "imported_at": "2026-11-05T23:27:43.366136+00:00",
-   "prepared_at": "2026-11-05T23:23:37.313707+00:00",
-   "source_blob_sha": "3bb5fce88b6de74098469e57f23f073e1b3b8d99",
+   "id": "e51cb8d8899804e71a3c",
+   "image_sha256": "9441381c0adf00005a0fb05ec487ff8d4a450ff5bca17c6f3a73babfcae27939",
+   "imported_at": "2026-11-06T03:19:31.265925+00:00",
+   "prepared_at": "2026-11-06T03:19:03.476214+00:00",
+   "source_blob_sha": "c8029ff5e73c730692cb3f5a5b9d8524edb8db00",
    "source_size": [
-    1672,
+    1671,
     941
    ],
-   "stable_fingerprint": "5aa76afb976ea1c0e046623d218a09e40ac81230fd09ab6f374d76dc8178d139",
+   "stable_fingerprint": "64c525c3ae05efd1ca762a678098f8187613208d9d9372a380af580d66f03e70",
    "style": "ink-lime-portrait-v5",
    "title": "仙台とA東京、今夜19時05分に東地区首位攻防"
   },
@@ -1095,20 +1095,6 @@
  },
  "log": [
   {
-   "article": "article-results-one-next-20261029.html",
-   "at": "2026-10-31T01:36:52.538636+00:00",
-   "event": "imported",
-   "id": "7da4157f57a12da3f879",
-   "image": "12956bf0a474"
-  },
-  {
-   "article": "article-results-one-next-20261030.html",
-   "at": "2026-10-31T01:36:52.538662+00:00",
-   "by": "13dc704824ed84d25fee",
-   "event": "superseded",
-   "id": "64677ebbbdc4b4827d54"
-  },
-  {
    "article": "article-results-one-next-20261030.html",
    "at": "2026-10-31T01:36:52.538667+00:00",
    "by": "13dc704824ed84d25fee",
@@ -1653,6 +1639,20 @@
    "event": "imported",
    "id": "7ad8c412ccd18f5f073f",
    "image": "10109327554f"
+  },
+  {
+   "article": "article-daily-20261106.html",
+   "at": "2026-11-06T03:19:31.140984+00:00",
+   "by": "e51cb8d8899804e71a3c",
+   "event": "superseded",
+   "id": "7ad8c412ccd18f5f073f"
+  },
+  {
+   "article": "article-daily-20261106.html",
+   "at": "2026-11-06T03:19:31.265941+00:00",
+   "event": "imported",
+   "id": "e51cb8d8899804e71a3c",
+   "image": "9441381c0adf"
   }
  ],
  "seen": {
@@ -1691,7 +1691,7 @@
   "6e14b01b2117b3d326c8": "superseded:4c4f1870a93c2d66f8f1",
   "7181c496e97c8dc59d57": "imported",
   "7323c5f3c2556686df0c": "superseded:f4370ce664d0aaa5d148",
-  "7ad8c412ccd18f5f073f": "imported",
+  "7ad8c412ccd18f5f073f": "superseded:e51cb8d8899804e71a3c",
   "7d40ba767806af33dbf4": "superseded:ca69b5d16263483eb1ed",
   "7da4157f57a12da3f879": "imported",
   "81cdf284d66df1d61f20": "imported",
@@ -1735,6 +1735,7 @@
   "db1b08157b4974a77014": "superseded:a384f66c5c633ed9bdb1",
   "de438e71b32369b2ee65": "superseded:3370472f9c78336a4974",
   "e270709fb1aa70f03eaf": "superseded:5a86fec3857da89d996f",
+  "e51cb8d8899804e71a3c": "imported",
   "ea934f8b9b81d63c7fc5": "superseded:3370472f9c78336a4974",
   "ec1f89cf4982bf75312d": "superseded:896bbeb35c2a1eb9d0e1",
   "ed5eafb2c5a54d0b60af": "superseded:9f2558d6277a776ef982",
