@@ -364,6 +364,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "仙台とA東京、今夜19時05分に東地区首位攻防"
   },
+  "article-daily-20261107.html": {
+   "article_path": "article-daily-20261107.html",
+   "editorial_fingerprint": "ce1a16d902ecd4934548fa16b7312d43b934b249b8142d8e56b5c4a71ae47905",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261107-45f152b4df0b.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261107-45f152b4df0b-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "ff3cec0b158ec40a732c",
+   "image_sha256": "45f152b4df0bcc90050526d2e67bbb014bb49d9bd524afb6befeb6013cf0113f",
+   "imported_at": "2026-11-06T23:26:42.319728+00:00",
+   "prepared_at": "2026-11-06T23:26:06.169765+00:00",
+   "source_blob_sha": "1c78ae33081c5d680785a1933babfcb6c1fba058",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "ce1a16d902ecd4934548fa16b7312d43b934b249b8142d8e56b5c4a71ae47905",
+   "style": "ink-lime-portrait-v5",
+   "title": "仙台がA東京に96-69で勝利、東地区首位に浮上"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -1179,13 +1207,6 @@
  },
  "log": [
   {
-   "article": "article-daily-20261101.html",
-   "at": "2026-11-01T03:19:49.140660+00:00",
-   "event": "imported",
-   "id": "39075cc4edcf56d9d90d",
-   "image": "908706973dd2"
-  },
-  {
    "article": "article-games-20261101.html",
    "at": "2026-11-01T10:44:47.621161+00:00",
    "by": "899945a3915a435651cc",
@@ -1737,6 +1758,13 @@
    "event": "imported",
    "id": "7b37144d46a646e84340",
    "image": "b0027360a039"
+  },
+  {
+   "article": "article-daily-20261107.html",
+   "at": "2026-11-06T23:26:42.319759+00:00",
+   "event": "imported",
+   "id": "ff3cec0b158ec40a732c",
+   "image": "45f152b4df0b"
   }
  ],
  "seen": {
@@ -1838,7 +1866,8 @@
   "f60ec06f0d2f4ee967a2": "imported",
   "f662c904491c9e820ed0": "imported",
   "faacf40f2eedbd5f216f": "imported",
-  "fcf33c7c4f183753d4ec": "imported"
+  "fcf33c7c4f183753d4ec": "imported",
+  "ff3cec0b158ec40a732c": "imported"
  },
  "version": 1
 }
