@@ -65,6 +65,9 @@ PAUSE = 60                 # 周と周の最小間隔（秒）
 ROUNDS_PER_HOUR = 30       # 依頼の取得・送信の周の上限
 DELIVER_BACKOFF = (60, 120, 300, 600, 900)   # 送信の再挑戦の間隔。尽きたら止めて本人判断
 MAX_FAILURES = 2
+LIMIT_WAIT = 30 * 60      # Codex の利用上限に当たった時に休む秒数（失敗には数えない）
+LIMIT_ROUNDS = 12         # 利用上限で続けて休むのは12回（約6時間）まで。その後は次の通知を待つ
+USAGE_LIMIT = re.compile(r'usage limit|rate limit|try again at', re.I)
 CODEX_TIMEOUT = 20 * 60
 DELIVER_TIMEOUT = 10 * 60
 ARTICLE = re.compile(r'article-[A-Za-z0-9_-]*?\d{8}\.html\Z')
@@ -76,6 +79,10 @@ QA_KEYS = ('text_and_numbers', 'source_qualifiers', 'likeness_or_no_named_person
 
 class Stop(Exception):
     pass
+
+
+class UsageLimit(RuntimeError):
+    """Codex の利用上限。時間がたてば直るので、生成の失敗としては数えない。"""
 
 
 def log(msg):
@@ -187,7 +194,10 @@ def generate(job):
            prompt_for(job, png, brief)]
     out = run(cmd, timeout=CODEX_TIMEOUT)
     if out.returncode:
-        raise RuntimeError('codex exec failed: ' + (out.stderr or out.stdout).strip()[-400:])
+        text = (out.stderr or out.stdout).strip()[-400:]
+        if USAGE_LIMIT.search((out.stderr or '') + (out.stdout or '')):
+            raise UsageLimit('codex usage limit: ' + text)
+        raise RuntimeError('codex exec failed: ' + text)
     data = load(brief, None)
     if not png.exists() or not isinstance(data, dict) or any(k not in data for k in BRIEF_KEYS):
         raise RuntimeError('codex did not produce a PNG and a complete brief.json')
@@ -210,6 +220,9 @@ def process_round(status, now=time.time):
     log(f"依頼の確認：新規 {result.get('new', 0)}件 / 未完成 {len(pending)}件")
     left, _ = hour_left(status, now())
     batch = pending[:max(0, min(PER_ROUND, left))]
+    if status.get('limit_until', 0) > now():
+        batch = []
+        log('利用上限のため休み中：生成は次の周に回す')
     for job in batch:
         check_go()
         jid = str(job.get('id'))
@@ -219,8 +232,15 @@ def process_round(status, now=time.time):
             persist(status)
             generate(job)
             failures.pop(jid, None)
+            status.pop('limit_rounds', None)
             status.setdefault('done', {})[jid] = time.strftime('%Y-%m-%dT%H:%M:%S')
             log('完成：' + jid + ' ' + str(job.get('article_path', ''))[:80])
+        except UsageLimit as exc:                         # 利用上限：失敗に数えず、この周の生成をやめて休む
+            status['limit_until'] = now() + LIMIT_WAIT
+            status['limit_rounds'] = status.get('limit_rounds', 0) + 1
+            log(f"利用上限のため休む（{status['limit_rounds']}回目・失敗には数えない）：{jid} {str(exc)[:200]}")
+            persist(status)
+            break
         except ValueError as exc:                         # 値の形式が違う：生成せず止める（再挑戦しない）
             failures[jid] = MAX_FAILURES
             log('形式違いのため生成しない：' + jid[:40] + ' ' + str(exc))
@@ -344,6 +364,14 @@ def main(sleep=time.sleep, now=time.time):
                             status['deliver_blocked'] = time.strftime('%Y-%m-%dT%H:%M:%S')
                             status['deliver_failures'] = len(DELIVER_BACKOFF)   # 次の通知で1回だけ試し直す
                             log('停止：送信が続けて失敗したため、次の通知まで止める（本人判断待ち）')
+                            more = False
+                    if result['remaining'] and status.get('limit_until', 0) > now():   # 利用上限：戻るまで待つ
+                        if status.get('limit_rounds', 0) < LIMIT_ROUNDS:
+                            status['next_round_at'] = max(status.get('next_round_at', 0), status['limit_until'])
+                            more = True
+                        else:
+                            log('利用上限が続くため、次の通知まで待つ')
+                            status.pop('limit_rounds', None)
                             more = False
                     made = status.get('generated_at', [])
                     if result['remaining'] and len(made) >= PER_HOUR:      # 1時間の生成の上限：空くまで待つ

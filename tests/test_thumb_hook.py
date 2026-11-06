@@ -323,6 +323,9 @@ plan = Path({str(self.plan)!r})
 lines = plan.read_text().split()
 mode = lines.pop(0) if lines else 'ok'
 plan.write_text(' '.join(lines))
+if mode == 'limit':
+    sys.stderr.write("ERROR: You've hit your usage limit. Visit https://chatgpt.com/settings/usage to purchase more credits or try again at 3:36 PM.")
+    sys.exit(1)
 if mode != 'ok':
     sys.exit(3)
 work = Path(args[args.index('-C') + 1])
@@ -393,6 +396,25 @@ work = Path(args[args.index('-C') + 1])
         self.assertEqual(blocks[0][blocks[0].index('--reason') + 1], 'generation_failed_twice')
         self.assertIn('%020x' % 1, self.status()['blocked'])
         self.assertEqual(len(self.calls_of('codex')), 2)            # 2回で止まる（無限に再挑戦しない）
+
+    def test_usage_limit_is_not_a_failure_and_waits_then_finishes(self):
+        """11/4：Codex の利用上限で2回失敗し block された。上限は数えず、休んでから作る。"""
+        self.plan.write_text('limit limit ok')
+        self.wake_and_run()
+        self.assertEqual(len(self.calls_of('codex')), 3)
+        self.assertEqual([c[1] for c in self.calls_of('queue') if c[1] in ('ready', 'block')], ['ready'])
+        self.assertNotIn('%020x' % 1, self.status().get('blocked', {}))
+        self.assertGreaterEqual(sum(self.slept), 2 * self.w.LIMIT_WAIT)
+        self.assertNotIn('limit_rounds', self.status())
+
+    def test_usage_limit_that_lasts_stops_waiting_without_blocking(self):
+        self.w.LIMIT_ROUNDS = 2
+        self.plan.write_text('limit limit limit limit')
+        self.wake_and_run()
+        self.assertEqual(len(self.calls_of('codex')), 2)
+        self.assertEqual([c for c in self.calls_of('queue') if c[1] == 'block'], [])
+        self.assertNotIn('%020x' % 1, self.status().get('blocked', {}))
+        self.assertFalse((self.home / 'dirty').exists())
 
     def test_hourly_cap_waits_instead_of_exceeding(self):
         """指摘1：1時間の上限（20件）を超えない。超えたら空くまで待ってから続ける。"""
