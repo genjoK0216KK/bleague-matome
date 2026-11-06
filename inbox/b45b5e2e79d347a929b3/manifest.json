@@ -1,0 +1,78 @@
+{
+  "id": "b45b5e2e79d347a929b3",
+  "article_path": "article-results-one-next-20261107.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261107.html",
+  "source_commit": "",
+  "source_blob_sha": "5c6c5c6d8395107083bb6cc2dc3b8bb6803f0069",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "72f1bf04fb1449b8d05b69e591e427caeb6143b94c297671da17e281632fd4ed",
+  "last_observed_blob_sha": "5c6c5c6d8395107083bb6cc2dc3b8bb6803f0069",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b45b5e2e79d347a929b3/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b45b5e2e79d347a929b3/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-06T19:36:32.684113+00:00",
+  "creation_event_id": "7fecd5eb4522d6cd0ef8",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/b45b5e2e79d347a929b3/thumbnail.png",
+  "image_sha256": "974abca59410bde84be3a3e79a87529e08582ec4cc5205f53b894a89a1092ed8",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "5c6c5c6d8395107083bb6cc2dc3b8bb6803f0069",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.07",
+      "本日の対戦クラブから",
+      "登録選手",
+      "ベスト5",
+      "リーグ別・今季平均EFFで選出",
+      "出場確定ではありません",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b45b5e2e79d347a929b3/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261107.html",
+        "source_blob_sha": "5c6c5c6d8395107083bb6cc2dc3b8bb6803f0069",
+        "use": "本文の根拠。2026-11-07の対象試合の現在登録選手を今季平均EFFでリーグ別に選出。出場確定を示さず、当日の実績ランキングとは別集計。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b45b5e2e79d347a929b3/source.txt",
+        "use": "固定HTMLの本文との照合。試合前の登録選手ベスト5と出場非確定の留保。描画選手の名前・成績・出場・活躍は画像に記載しない。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで実確認。黒・ライム、太い日本語、インクとブラシの画風のみ参照。選手・成績・日付は流用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ケビン・ラーセン",
+        "selection": "ランダム",
+        "selection_method": "固定source.htmlの選手名30人からrandom.SystemRandom().choiceで1人抽選（スコア欄のダッシュを除外）。",
+        "selection_reason": "複数リーグの選手が同じ表形式で扱われており、本文の単独の主役を絞れないため。",
+        "source_title": "鹿児島レブナイズ公式 ケビン・ラーセン選手プロフィール",
+        "source_url": "https://www.rebnise.jp/team/players/detail/id=19494?PlayerID=51000628",
+        "reference_image_url": "https://bleague.bl.kuroco-img.app/v=2026110704/files/user/roster/725/2026-27/51000628_01.jpg",
+        "reference_image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b45b5e2e79d347a929b3/reference-kevin-larsen.jpg",
+        "visually_checked": true,
+        "appearance": "公式写真をview_imageで確認。剃った頭、黒い眉と目、鼻と輪郭、口ひげにつながる黒いあごひげ、褐色の肌、幅広い肩と大柄な体格をイラストに反映。",
+        "usage": "容姿の確認のみ。公式写真は貼り付けず、実際の試合を再現しないボールを持ったピボットのイメージ。無地のユニフォーム、選手名・背番号・個人成績・ロゴ・スポンサー文字なし。"
+      }
+    ],
+    "prompt": "Create ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 1600x900 pixels or larger. Use case: illustration-story. This is a new illustrated thumbnail for バスケまとめ.\n\nVISUAL STYLE: Follow the previously viewed approved black-and-lime thumbnail only for its design language: deep near-black #151A18, electric lime #CCF43B, warm white Japanese heavy sans-serif headlines, hand-inked sports illustration and energetic dry-brush marks. Few strong elements, highly legible. Do not reuse its player's identity, headline, numbers or date. Clearly drawn ink illustration, not photography, photorealism, a collage, or a photographic filter.\n\nSUBJECT: Depict exactly one REAL player: Kevin Larsen (ケビン・ラーセン), randomly selected from the article's named players. His official Kagoshima Rebnise portrait was visually inspected in this conversation. Use that identity and the observed appearance: fully shaved/bald rounded head, medium-brown skin, dark eyebrows, dark eyes, straight substantial nose, dense black full beard tapering below the chin, connected black moustache, broad athletic shoulders and a tall strong center's build. Keep facial features visible and recognizably based on Kevin Larsen, never a generic invented player. The official photo is a likeness reference ONLY; redraw from scratch as ink illustration. Do not paste or reproduce the photograph, its clothing graphics or sponsors.\n\nACTION AND COMPOSITION: Right 42% of canvas contains Kevin Larsen in a dynamic low-post pivot, three-quarter view with face visible, torso turning toward the left and knees bent. Hold an orange basketball firmly at waist level with both anatomically correct hands, as if preparing a pass. Show both hands clearly and all of the ball. Broad shoulder and upper body silhouette, large enough to recognize the bald head and full beard. This is a conceptual pose, not an actual game or a documented moment. Plain dark sleeveless uniform with understated white edge piping; NO jersey number, NO team name, NO lettering, NO team logo, NO league logo, NO sponsor. No second person, crowd, scoreboard or identifiable arena. Use an angled lime brush trail behind the player to give motion. Keep face, hands and ball inside the frame with margins. Player and brush marks must not touch the type.\n\nTYPOGRAPHY: Left 56% reserved for text; wide safe margins of at least 5%. Japanese glyphs must be correct. Clear hierarchy. Small top brand/date, then short scope line, then the two huge headline lines, then method and qualifier. Bottom footer is fully legible and visible. Render ONLY these exact text lines, without quotation marks:\nバスケまとめ\n2026.11.07\n本日の対戦クラブから\n登録選手\nベスト5\nリーグ別・今季平均EFFで選出\n出場確定ではありません\nイラスト（AI生成）\nイメージ\n\nText placement: brand and date top left; 本日の対戦クラブから above the main headline; 登録選手 in large warm white, ベスト5 in even larger lime; method line and 出場確定ではありません beneath the title on calm dark space. Footer combines イラスト（AI生成） and イメージ on one line with a generous space between them. Keep important qualifier text clear and not tiny. Do not add player name or personal stats, appearances, performances, achievements or a score.\n\nEDITORIAL FACTS (not extra text): The supplied frozen article is dated 2026-11-07. It selects best fives separately for each league using current-season average EFF from players registered with that day's scheduled teams. Selection does NOT confirm appearance and is NOT the day's performance ranking. No actual game result is available in this frozen article. Kevin Larsen was selected at random as an illustrative subject; do not label him as the best five, MVP, star of the day or someone who played. The headline describes the article's list, not the pictured player. Nothing outside the exact text list should be printed.",
+    "generator": "image_gen.imagegen（内蔵画像生成）。初回1枚、修正0回。PNG 1672×941。目視検品済み。画像SHA256: 974abca59410bde84be3a3e79a87529e08582ec4cc5205f53b894a89a1092ed8",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-06T19:39:50.554703+00:00",
+  "publication_approved": false
+}
