@@ -1,0 +1,84 @@
+{
+  "id": "aaf2e90765c55026bfd5",
+  "article_path": "article-games-20261106.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261106.html",
+  "source_commit": "",
+  "source_blob_sha": "34d29f6a59a259b2ef6b5643c9686a4c6348c0ee",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "0d852201977762774ad8a0cf665eb231b2e7f1b71b1bb185fc96ee77cb0db181",
+  "last_observed_blob_sha": "34d29f6a59a259b2ef6b5643c9686a4c6348c0ee",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/aaf2e90765c55026bfd5/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/aaf2e90765c55026bfd5/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-06T13:17:51.361568+00:00",
+  "creation_event_id": "ca20462da708f48e6624",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/aaf2e90765c55026bfd5/thumbnail.png",
+  "image_sha256": "f50b2564aba639260c3ea2c2ba291ca78bd5ea14f809e88dbc7b5e35a1d83c49",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "34d29f6a59a259b2ef6b5643c9686a4c6348c0ee",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.06",
+      "試合結果",
+      "当日のEFF",
+      "リーグ別・ポジション別TOP3",
+      "イラスト（AI生成）　イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/aaf2e90765c55026bfd5/source.html",
+        "role": "固定原稿・本文根拠",
+        "article_url": "https://basuke-matome.jp/article-games-20261106.html",
+        "blob_sha_verified": true,
+        "evidence": [
+          "見出し：11/06 試合結果・当日のEFF",
+          "試合日 2026.11.06",
+          "当日のEFF・ポジション別TOP3",
+          "当日TOP3は全試合の公式記録確定後、出場時間がある選手の公式EFFでリーグ別・ポジション別に選出",
+          "複数リーグ・ポジションの一覧であり、特定の選手を主役にしていない"
+        ],
+        "qualifiers_preserved": "当日のEFFであることとリーグ別・ポジション別の範囲を明記。今季平均、総合順位、当日の起用位置への読み替えなし。個人成績・出場・活躍を画像に記載せず、イラストを特定の実際の試合場面として扱わない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/aaf2e90765c55026bfd5/source.txt",
+        "role": "固定原稿・文章照合"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール。人物選定は今回の本人指示を優先。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで確認した承認済みスタイル参照。配色・インク画の表現のみ参照し、人物・旧文字・成績は持ち越さない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "西田 優大",
+        "selection": "ランダム",
+        "selection_reason": "本文は複数の試合と選手を一覧で扱い、唯一の主役を絞れないため。本文の成績表に実際に名前が出る重複除外37人から選択。",
+        "selection_method": "Python random.Random('aaf2e90765c55026bfd5').choice(本文の表の出現順で重複を除いた選手名37人)",
+        "reference_source": "シーホース三河 公式プロフィール",
+        "reference_url": "https://go-seahorses.jp/team/players/detail/id=17209?PlayerID=30403",
+        "official_photo_url": "https://go-seahorses.bl.kuroco-img.app/v=1789089098/files/user/team/player/2026-27/19_blue.jpg",
+        "reference_viewed": true,
+        "observed_features": "暗い髪に明るいブラウン系の筋、額へ流れる分けた前髪、縦長の輪郭、細めの目、まっすぐな鼻、厚みのある唇、ひげのない顔。",
+        "visual_qa": "生成PNGをview_imageで再確認。前髪・明るい髪の筋・縦長の顔・鼻と唇・ひげなしの特徴をイラストに反映。両手・ボールは全体が見え、余分な手足や破綻なし。",
+        "usage": "容姿の参照のみ。公式写真の貼り付けなし。氏名・個人成績・出場・活躍・背番号を画像に表示しない。実在選手の一般的なプレーのイメージ。"
+      }
+    ],
+    "prompt": "Use case: ads-marketing.\nCreate exactly ONE finished editorial thumbnail for the Japanese basketball website バスケまとめ. Landscape approximately 16:9, at least 1000 pixels wide, ideally 1600x900.\n\nDesign reference: the black/lime approved thumbnail B-culver-black-lime-v3.png already viewed in this conversation. Match its restrained dark charcoal #151A18, acid lime #CCF43B, ivory type, hand-drawn ink and bold dry-brush energy. Use its style only: DO NOT copy its athlete, names, score, date, shooting pose or any old text.\n\nSubject identity reference: the official 2026-27 Seahorses Mikawa portrait of Yudai Nishida (西田優大) already viewed, from https://go-seahorses.bl.kuroco-img.app/v=1789089098/files/user/team/player/2026-27/19_blue.jpg . Depict this REAL athlete, not an invented generic player. Preserve the observed elongated oval face, clean-shaven jaw, straight nose, full lips, relatively narrow dark eyes, straight dark hair with ash-brown/blond highlights swept and parted across the forehead, and athletic physique. Reinterpret him as an unmistakable hand-drawn monochrome ink illustration; never paste the photograph or make a photographic rendering.\n\nComposition: sophisticated spacious sports editorial. On the RIGHT 40% of the canvas, show Nishida in an energetic low diagonal drive, bent knees, torso leaning forward, both anatomically correct hands gathering an orange basketball near his hip, ready to move. Include head, both arms, both hands and entire ball clearly inside the image; natural legs can extend toward the lower edge without awkward joint crops. Face large enough to show recognizable features. Plain unbranded dark jersey and shorts with ivory ink highlights; no lettering, no number, no badges, no logos. A single sweeping diagonal lime brush stroke behind the athlete and sparse ink texture imply movement. No other people, no hoop, no detailed arena.\nOn LEFT 58%, place a clean, carefully kerned Japanese text block. Huge thick Japanese Gothic display letters, excellent legibility and clear hierarchy, no overlap with athlete or ball. Keep all type comfortably inside a 5% safe margin. More readable than decorative.\n\nRender EXACTLY this text, with no additions:\nTop small ivory: 「バスケまとめ」\nBelow it modest ivory date: 「2026.11.06」\nMain enormous ivory headline: 「試合結果」\nSecond large lime headline: 「当日のEFF」\nBelow in medium ivory: 「リーグ別・ポジション別TOP3」\nBottom small but clearly readable ivory footer: 「イラスト（AI生成）　イメージ」\n\nEditorial constraints: The only article claims are the exact above date, game-results theme and daily EFF broken down by league and position. This image is a general illustrative play, NOT a reconstruction of the 11/06 game or a decisive real play. Nishida was randomly selected from the article's equally treated player list. Do not display his name, team name, individual stats, his rank, achievements, win/loss, appearance claims or jersey number. Do not imply he is overall number one. The TOP3 text describes the article's league/position tables only. Do not include individual scores or other names. No team/league/sponsor logos. No official photo pixels. Do not imitate a broadcast screenshot. Keep it a bold ink illustration.\nFinal output: one fully composed landscape PNG thumbnail, no mockup border, no variant grid.",
+    "generator": "内蔵 image_gen / image_gen__imagegen。新規生成1回、修正0回。PNG 1672×941。API・CLI生成なし。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-06T13:21:16.534972+00:00",
+  "publication_approved": false
+}

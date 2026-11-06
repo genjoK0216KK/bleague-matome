@@ -1,0 +1,84 @@
+{
+  "id": "063daeab6587291acbe0",
+  "article_path": "article-stats-20261106.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261106.html",
+  "source_commit": "",
+  "source_blob_sha": "4ca587960289a99d1def1839e1521b6501cac8ca",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "8a42535c00c3bdfcc680f7dd9af824945665666cf07efa77d708bb9b4092a696",
+  "last_observed_blob_sha": "4ca587960289a99d1def1839e1521b6501cac8ca",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/063daeab6587291acbe0/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/063daeab6587291acbe0/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-06T13:17:51.907737+00:00",
+  "creation_event_id": "646cc45919d351b6f0cc",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/063daeab6587291acbe0/thumbnail.png",
+  "image_sha256": "7c4053cf7eb9c9553a479bff71fcb9f7ab7fbe261d466392359ce2b91511ae65",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "4ca587960289a99d1def1839e1521b6501cac8ca",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.06",
+      "貢献度1位",
+      "EFF 44",
+      "ケリー・ブラックシアー",
+      "ジュニア（群馬）",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/063daeab6587291acbe0/source.html",
+        "role": "固定原稿・本文内容の根拠",
+        "article_url": "https://basuke-matome.jp/article-stats-20261106.html",
+        "verified_blob_sha": "4ca587960289a99d1def1839e1521b6501cac8ca",
+        "locations": "h1 / p.lead / 貢献度TOP3 / 貢献度ランキングTOP10の1位行",
+        "evidence": "2026年11月6日。ケリー・ブラックシアー・ジュニア（群馬）がこの日の貢献度1位、EFF 44。",
+        "qualifiers": "当日の6試合のランキング。シーズン1位やMVPを意味しない。国籍別ランキングは未掲載のため国籍分類は表示しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/063daeab6587291acbe0/source.txt",
+        "role": "固定文章・HTMLとの内容照合",
+        "evidence": "11月6日の貢献度ランキング。1位ケリー・ブラックシアー・ジュニア群馬 EFF 44。",
+        "scope": "画像の本文上の主張はこのTXTと固定HTMLだけに基づく。外部資料は容姿確認のみに使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ケリー・ブラックシアー・ジュニア",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿の見出し・リード・TOP3で貢献度1位として最も大きく扱われている選手。ランダム選出ではない。",
+        "reference_source": "B.LEAGUE公式選手プロフィール",
+        "profile_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000145",
+        "photo_url": "https://www.bleague.jp/files/user/roster/713/2026-27/51000145_03.png",
+        "reference_checked": "公式プロフィールHTML内の画像パスを確認し、取得した公式プロフィール写真をview_imageで目視確認。",
+        "observed_features": "非常に短い黒髪、縦長の輪郭、目と眉の位置、丸みのある鼻先、口ひげ・顎と輪郭沿いの短いひげ、長身で広い肩幅。",
+        "illustration_qa": "出力画像をview_imageで確認。上記の髪・輪郭・目鼻・短いひげを反映した手描き調。公式写真の貼り付けなし、写真風でない。チーム・リーグ・スポンサー・メーカーのロゴや文字なし。",
+        "scene": "パスへ踏み出す姿のイメージ。特定の実際のプレーを再現したとは表示しない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story / editorial sports thumbnail.\nCreate exactly ONE finished Japanese basketball article thumbnail, landscape 16:9, 1536x864 pixels or larger, PNG. This is a new original illustration, not a photograph.\n\nApproved visual direction: match the viewed black-and-lime basketball sample's bold Japanese typography, near-black #151A18 background, electric lime #CCF43B brush streaks, ivory lettering, hand-inked sports illustration, confident sparse editorial composition. Do not copy the sample's player, name, date, statistics or team information. Make a fresh composition: player on the RIGHT, diagonally pivoting into a forceful two-handed pass with the ball at chest/waist level, knees bent and torso turning, three-quarter view with face clearly visible. Orange basketball is held as a prop. No additional people. No hoop or match-specific venue necessary. This is a conceptual play illustration, not a recreation of an actual game moment.\n\nThe only athlete is the real Kerry Blackshear Jr. (ケリー・ブラックシアー・ジュニア), the article's main subject. His official B.LEAGUE profile photo has been visually checked: https://www.bleague.jp/files/user/roster/713/2026-27/51000145_03.png (profile https://www.bleague.jp/roster_detail/?PlayerID=51000145). Match the viewed official portrait's recognizable facial features: very close-cropped black buzz cut, long oval face, medium-brown skin translated into expressive monochrome ink and warm gray shading, slightly narrow relaxed eyes and strong eyebrows, prominent straight nose with rounded broad base, medium-full lips, short neat mustache and close short beard around chin and jaw, athletic broad shoulders and tall long-limbed build. He must look like this actual player, not a generic invented athlete. Keep face clear and sufficiently large. Give him a plain dark sleeveless basketball jersey with ivory highlights and a plain black sleeve on his left arm. NO letters, numbers, team marks, league marks, sponsor text, brand logos, tattoos added, or copied photographic pixels. All body, face, jersey and ball must be visibly drawn in ink with brush hatching; no photorealism.\n\nDesign: left roughly 55 percent is clean text, right roughly 45 percent is the player, with a lime sweeping brush shape behind him. Maintain strong text/figure separation, generous edge margins, and no clipping of any text, head, hands or ball. Hands anatomically plausible with proper fingers and grip. The lower torso may end naturally at bottom, but keep important play gesture in frame.\n\nText exactly as follows, no extra copy:\nAt upper left, small ivory:\n「バスケまとめ」\n「2026.11.06」\nLarge ivory headline below:\n「貢献度1位」\nLargest central stat: 「EFF 44」, EFF clearly associated with 44, 44 in vivid lime brush numerals. This is an efficiency figure, NOT 44 points. Do not add 得点 next to 44.\nBelow stat, clear bold ivory name across two lines:\n「ケリー・ブラックシアー」\n「ジュニア（群馬）」\nBottom left footer, legible small ivory with breathing room:\n「イラスト（AI生成）」\n「成績をもとにしたイメージ」\n\nContent grounding ONLY in supplied fixed source.html/source.txt: date 2026-11-06; daily contribution ranking 1st is Kerry Blackshear Jr., Gunma, EFF 44. Do not imply a season ranking, MVP award, nationality classification, a decisive play or game reenactment. Avoid scores, additional stats and unsupported superlatives. Footer explicitly distinguishes illustration from documented scene. Correct every Japanese glyph, punctuation and number. Crisp professional typography, very high contrast, fewer elements, no watermarks or decorative pseudo-text.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "revision_calls": 0,
+      "qa_method": "生成画像の全体と、実ファイルをview_imageで目視確認。文字・数値、日付による対象範囲、イメージ注記、容姿、指とボールの握り、見切れ、AI表記を確認。",
+      "style_reference_used": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "style_reference_note": "承認済み黒×ライムv3画像をview_imageで確認。指定白地案A-faison-ivory-v3.pngは同フォルダに見つからなかったため使用していない。",
+      "original_output": "/Users/genjo/.codex/generated_images/01a1b108-823f-7f21-bf14-69c27d03966c/exec-0863c391-1d9b-4233-82d8-880d2eae4afc.png",
+      "output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/063daeab6587291acbe0/generated.png"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-06T13:28:37.129139+00:00",
+  "publication_approved": false
+}

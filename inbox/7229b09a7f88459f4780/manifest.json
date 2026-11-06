@@ -1,0 +1,90 @@
+{
+  "id": "7229b09a7f88459f4780",
+  "article_path": "article-results-one-next-20261106.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261106.html",
+  "source_commit": "",
+  "source_blob_sha": "f87e66fc1656f364f440c4994f8f0c361295dbe9",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "0d852201977762774ad8a0cf665eb231b2e7f1b71b1bb185fc96ee77cb0db181",
+  "last_observed_blob_sha": "f87e66fc1656f364f440c4994f8f0c361295dbe9",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7229b09a7f88459f4780/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7229b09a7f88459f4780/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-06T13:17:51.628751+00:00",
+  "creation_event_id": "d10dedf90141bddc2feb",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/7229b09a7f88459f4780/thumbnail.png",
+  "image_sha256": "03f5316e33e10351e2bfbce992576a972b95304c7b0897e77a8cba52f8187773",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "f87e66fc1656f364f440c4994f8f0c361295dbe9",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.06",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "リーグ別・公式試合スタッツ",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7229b09a7f88459f4780/source.html",
+        "role": "本文根拠（固定HTML）",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261106.html",
+        "verified_blob_sha": "f87e66fc1656f364f440c4994f8f0c361295dbe9",
+        "sections": [
+          "11/06 試合結果・当日のEFF",
+          "試合結果",
+          "当日のEFF・ポジション別TOP3",
+          "出典・選出ルール・注記"
+        ]
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7229b09a7f88459f4780/source.txt",
+        "role": "本文根拠（固定文章）",
+        "source_qualifiers": "当日TOP3は全試合の公式記録確定後、出場時間がある選手の公式EFFでリーグ別・公式登録ポジション別に選出。今季平均や予想とは別集計。兼任は各部門対象。同率同順位で最大3人。登録ポジションは当日の起用位置を断定しない。公式EFFを優先。資料取得2026-11-06 22:13 JST。画像は選手別数値・全体順位・出場やプレー場面の事実認定を載せない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジョーダン・ジャイルズ",
+        "selection": "ランダム",
+        "selection_reason": "複数リーグの試合結果・EFF順位表が中心で、本文の主役選手を1名に絞れないため。固定HTMLの順位表に出る実名37人を重複排除し、Python secrets.choiceで均等抽選。",
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7229b09a7f88459f4780/selection.json",
+        "references": [
+          {
+            "url": "https://www.bleague.jp/roster_detail/?PlayerID=50010",
+            "role": "B.LEAGUE公式プロフィール・本人照合"
+          },
+          {
+            "url": "https://www.bleague.jp/files/user/roster/748/2026-27/50010_03.png",
+            "local_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7229b09a7f88459f4780/reference/jordan-giles-profile.png",
+            "role": "公式プロフィール写真。view_imageで容姿を実確認。"
+          },
+          {
+            "url": "https://www.shinagawa-city.com/basketball/11009",
+            "image_url": "https://www.shinagawa-city.com/basketball/wp-content/uploads/sites/2/2026/08/ジョーダン.jpg",
+            "local_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7229b09a7f88459f4780/reference/jordan-giles-official.jpg",
+            "role": "クラブ公式加入告知。動作中の髪型・横顔・体格の確認だけに使用。view_imageで実確認。"
+          }
+        ],
+        "observed_features": "額から後ろへまとめた肩までのロックス、輪郭と頬骨、丸みのある鼻、厚い唇、口ひげと顎ひげ、筋肉質な肩と腕。写真貼り付けや写真風表現をせず、インク画で反映。",
+        "depiction": "ボールを両手で抱えて切り込むプレーのイメージ。実際の試合場面の再現ではない。",
+        "caption_policy": "ランダム選出のため画像に選手名・個人成績・出場・活躍を記載しない。注記は「イラスト（AI生成）」「イメージ」。"
+      }
+    ],
+    "prompt": "Use case: ads-marketing\nAsset type: One Japanese basketball news thumbnail, landscape PNG, approximately 16:9, ideally 1536x864 or 1792x1024, at least 1000px wide.\nPrimary request: Create ONE finished editorial thumbnail for バスケまとめ, matching the approved black-and-lime hand-ink sports illustration style viewed earlier. This is a NEW artwork, not a copy of the reference thumbnail.\nPalette and medium: Near-black #151A18 background, electric lime #CCF43B bold dry-brush strokes, ivory-white headline and hand-inked figure, orange basketball accent. Energetic brush and crosshatched ink illustration, clearly drawn, NOT a photograph or photorealistic render. Use clean breathing room, few elements, extremely clear Japanese typography.\nLayout: Upper-left small publication/date. Left roughly 57% bold headline block; right roughly 43% a large dynamic three-quarter figure of the ONE real basketball player Jordan Giles (ジョーダン・ジャイルズ). Show his face clearly in three-quarter view, shoulders and torso twisted during a forceful drive, holding ONE basketball securely with both hands around waist height; one bent leg visible. Head, moving dreadlocks, both hands and ball completely inside frame with generous padding. Dynamic sweeping lime brush arcs behind him. Do not reuse the reference's overhead shooting pose. No other people, no realistic arena.\nPlayer identity (appearance reference only, visually checked against official B.LEAGUE 2026-27 profile https://www.bleague.jp/roster_detail/?PlayerID=50010 and its portrait https://www.bleague.jp/files/user/roster/748/2026-27/50010_03.png; also official club signing image https://www.shinagawa-city.com/basketball/11009):\nJordan Giles: adult Black man, athletic muscular shoulders, medium-dark brown complexion rendered in ivory and charcoal ink, oval face with high forehead and fairly broad cheekbones, broad rounded nose, full lips, dark almond eyes, neatly shaped connected moustache and full short beard concentrated along jaw and chin. His long dark locks are pulled back from forehead, with shoulder-length ropes at sides/back flowing with movement; NOT a short afro, NOT bald. Dark plain basketball sleeveless jersey with a subtle pink edge at neck and arm openings, loose shorts. Render the real man's facial features carefully from the appearance reference. Visible arm tattoo shading may be abstract ink, with no text or symbols. No jewelry needed. No jersey numbers, player name, team name, logos, sponsors, or brands.\nScene meaning: An explicitly illustrative imaginary basketball movement, NOT a recreation or claim about a real game moment. This player was RANDOMLY selected from the players named in the supplied article; DO NOT state or imply any individual score, rank, performance or appearance, and DO NOT print his name. The text is only about the article as a whole.\nText (verbatim, correct Japanese, no added text):\ntop-left small: 「バスケまとめ」\nunder it: 「2026.11.06」\nmain left, very large ivory-white: 「試合結果」\nsecondary left, large lime: 「当日のEFF」\nbelow that, bold ivory-white: 「ポジション別TOP3」\nsmall qualifier below headline: 「リーグ別・公式試合スタッツ」\nbottom-left, legible white footer: 「イラスト（AI生成）」\nbeside footer: 「イメージ」\nText hierarchy: Make 試合結果 largest; 当日のEFF second; ポジション別TOP3 third. Keep headlines on an uncluttered dark field; ensure Japanese glyphs and EFF / TOP3 are sharp and correct. Footer within safe margins.\nContent grounding: These text phrases come only from fixed source.html/source.txt for 2026-11-06, which list completed results and same-day official EFF by league and registered position. This is NOT season averages and NOT one overall player ranking. Print no scores, no individual performance numbers, no ranking badges next to the person, no top-player or victory claim.\nHard constraints: exactly ONE real player, not a fictional generic player. Hand anatomy natural with five fingers per hand, no duplicated limbs. Do not copy or paste any official photo pixels. No team or league logo. No reference thumbnail's names/scores/date. No additional words, watermark, decorative lettering, photorealism, or cropped fingers/ball.",
+    "generator": "内蔵 image_gen.imagegen（初回生成1回、修正0回。API・CLI課金への切替なし）",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-06T13:24:47.008981+00:00",
+  "publication_approved": false
+}
