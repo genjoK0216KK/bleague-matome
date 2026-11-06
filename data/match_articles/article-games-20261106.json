@@ -8311,8 +8311,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "28.4",
-              "games": 13,
+              "average": "29.4",
+              "games": 14,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -8335,11 +8335,11 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "28.7",
-              "games": 13,
+              "average": "28.9",
+              "games": 14,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
               "coverage_complete": true,
-              "rank": 1
+              "rank": 2
             }
           ],
           [
@@ -8359,8 +8359,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "27.5",
-              "games": 12,
+              "average": "28.0",
+              "games": 13,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -8369,22 +8369,22 @@
           [
             "PF",
             {
-              "player_id": "51000312",
-              "name": "ザック・オーガスト",
-              "team": "滋賀",
-              "team_id": "698",
+              "player_id": "51000145",
+              "name": "ケリー・ブラックシアー・ジュニア",
+              "team": "群馬",
+              "team_id": "713",
               "season": "2026-27",
               "competition": "BP",
               "positions": [
                 "C",
                 "PF"
               ],
-              "position_source": "https://www.bleague.jp/club_detail/?TeamID=698",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=713",
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "26.2",
-              "games": 12,
+              "average": "26.3",
+              "games": 14,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -8406,8 +8406,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "30.1",
-              "games": 13,
+              "average": "30.4",
+              "games": 14,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -8432,8 +8432,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "23.6",
-              "games": 14,
+              "average": "23.1",
+              "games": 15,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -8442,21 +8442,21 @@
           [
             "SG",
             {
-              "player_id": "19755",
-              "name": "富永 啓生",
-              "team": "北海道",
-              "team_id": "702",
+              "player_id": "51000643",
+              "name": "ブランドン・ランドルフ",
+              "team": "千葉J",
+              "team_id": "704",
               "season": "2026-27",
               "competition": "BP",
               "positions": [
                 "SG"
               ],
-              "position_source": "https://www.bleague.jp/club_detail/?TeamID=702",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=704",
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "23.7",
-              "games": 12,
+              "average": "25.0",
+              "games": 1,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
               "coverage_complete": true,
               "rank": 3
@@ -8478,8 +8478,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "26.0",
-              "games": 14,
+              "average": "25.5",
+              "games": 15,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
               "coverage_complete": true,
               "rank": 3
@@ -8488,21 +8488,21 @@
           [
             "PF",
             {
-              "player_id": "51000145",
-              "name": "ケリー・ブラックシアー・ジュニア",
-              "team": "群馬",
-              "team_id": "713",
+              "player_id": "51000312",
+              "name": "ザック・オーガスト",
+              "team": "滋賀",
+              "team_id": "698",
               "season": "2026-27",
               "competition": "BP",
               "positions": [
                 "C",
                 "PF"
               ],
-              "position_source": "https://www.bleague.jp/club_detail/?TeamID=713",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=698",
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "24.9",
+              "average": "25.9",
               "games": 13,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
               "coverage_complete": true,
@@ -8512,22 +8512,22 @@
           [
             "C",
             {
-              "player_id": "9040",
-              "name": "ダバンテ・ガードナー",
-              "team": "三河",
-              "team_id": "728",
+              "player_id": "51000627",
+              "name": "ジェイデン・リディ",
+              "team": "川崎",
+              "team_id": "727",
               "season": "2026-27",
               "competition": "BP",
               "positions": [
                 "C",
                 "PF"
               ],
-              "position_source": "https://www.bleague.jp/club_detail/?TeamID=728",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=727",
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "24.5",
-              "games": 10,
+              "average": "23.9",
+              "games": 14,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
               "coverage_complete": true,
               "rank": 4
@@ -8535,7 +8535,7 @@
           ]
         ]
       ],
-      "retrieved_at": "2026-11-05T10:15:35.586518+00:00",
+      "retrieved_at": "2026-11-06T23:13:48.462384+00:00",
       "sources": [
         "https://www.bleague.jp/club_detail/?TeamID=2486",
         "https://www.bleague.jp/club_detail/?TeamID=2488",
@@ -8596,8 +8596,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "8.6",
-              "games": 13,
+              "average": "8.1",
+              "games": 14,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -8620,8 +8620,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "12.8",
-              "games": 12,
+              "average": "13.5",
+              "games": 13,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -8644,8 +8644,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "26.6",
-              "games": 13,
+              "average": "26.5",
+              "games": 14,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -8667,8 +8667,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "18.2",
-              "games": 13,
+              "average": "17.9",
+              "games": 14,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -8692,8 +8692,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "7.4",
-              "games": 13,
+              "average": "7.5",
+              "games": 14,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -8738,8 +8738,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "6.4",
-              "games": 13,
+              "average": "6.6",
+              "games": 14,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 3
@@ -8761,8 +8761,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "19.5",
-              "games": 4,
+              "average": "21.2",
+              "games": 5,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -8784,8 +8784,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "17.5",
-              "games": 13,
+              "average": "16.7",
+              "games": 14,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 3
@@ -8793,7 +8793,7 @@
           ]
         ]
       ],
-      "retrieved_at": "2026-11-05T10:17:22.540265+00:00",
+      "retrieved_at": "2026-11-06T23:15:30.007589+00:00",
       "sources": [
         "https://www.bleague.jp/club_detail/?TeamID=2890",
         "https://www.bleague.jp/club_detail/?TeamID=719",
@@ -8807,21 +8807,21 @@
           [
             "PG",
             {
-              "player_id": "50011",
-              "name": "新本 風河",
-              "team": "三重",
-              "team_id": "2726",
+              "player_id": "43471",
+              "name": "山根 響",
+              "team": "品川",
+              "team_id": "748",
               "season": "2026-27",
               "competition": "BN",
               "positions": [
                 "PG"
               ],
-              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=748",
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "8.0",
-              "games": 10,
+              "average": "8.7",
+              "games": 12,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -8843,8 +8843,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "5.1",
-              "games": 10,
+              "average": "7.5",
+              "games": 12,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -8866,8 +8866,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "12.3",
-              "games": 10,
+              "average": "12.5",
+              "games": 12,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -8890,8 +8890,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "27.7",
-              "games": 10,
+              "average": "29.3",
+              "games": 12,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -8906,21 +8906,21 @@
           [
             "PG",
             {
-              "player_id": "43471",
-              "name": "山根 響",
-              "team": "品川",
-              "team_id": "748",
+              "player_id": "50011",
+              "name": "新本 風河",
+              "team": "三重",
+              "team_id": "2726",
               "season": "2026-27",
               "competition": "BN",
               "positions": [
                 "PG"
               ],
-              "position_source": "https://www.bleague.jp/club_detail/?TeamID=748",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "7.6",
-              "games": 10,
+              "average": "8.3",
+              "games": 12,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -8942,8 +8942,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "4.2",
-              "games": 10,
+              "average": "3.1",
+              "games": 12,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -8966,8 +8966,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "6.6",
-              "games": 8,
+              "average": "7.2",
+              "games": 10,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -8976,21 +8976,21 @@
           [
             "PF",
             {
-              "player_id": "49710",
-              "name": "ケーレン ジョエル・アレン",
-              "team": "品川",
-              "team_id": "748",
+              "player_id": "51000676",
+              "name": "ジャマル・ポップラー",
+              "team": "三重",
+              "team_id": "2726",
               "season": "2026-27",
               "competition": "BN",
               "positions": [
                 "PF"
               ],
-              "position_source": "https://www.bleague.jp/club_detail/?TeamID=748",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "20.9",
-              "games": 7,
+              "average": "22.5",
+              "games": 12,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -9002,7 +9002,7 @@
           ]
         ]
       ],
-      "retrieved_at": "2026-11-05T10:17:48.401056+00:00",
+      "retrieved_at": "2026-11-06T23:15:55.492463+00:00",
       "sources": [
         "https://www.bleague.jp/club_detail/?TeamID=2726",
         "https://www.bleague.jp/club_detail/?TeamID=748",
@@ -9309,7 +9309,7 @@
           ]
         },
         "eligible_players": 131,
-        "position_retrieved_at": "2026-11-05T10:15:35.586518+00:00",
+        "position_retrieved_at": "2026-11-06T23:13:48.462384+00:00",
         "formula_differences": [
           {
             "player_id": "51000180",
@@ -9630,7 +9630,7 @@
           ]
         },
         "eligible_players": 20,
-        "position_retrieved_at": "2026-11-05T10:17:22.540265+00:00",
+        "position_retrieved_at": "2026-11-06T23:15:30.007589+00:00",
         "formula_differences": [],
         "sources": [
           "https://www.bleague.jp/club_detail/?TeamID=2890",
@@ -9889,7 +9889,7 @@
           ]
         },
         "eligible_players": 20,
-        "position_retrieved_at": "2026-11-05T10:17:48.401056+00:00",
+        "position_retrieved_at": "2026-11-06T23:15:55.492463+00:00",
         "formula_differences": [],
         "sources": [
           "https://www.bleague.jp/club_detail/?TeamID=2726",
