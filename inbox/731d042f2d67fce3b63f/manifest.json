@@ -1,0 +1,112 @@
+{
+  "id": "731d042f2d67fce3b63f",
+  "article_path": "article-games-20261106.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261106.html",
+  "source_commit": "",
+  "source_blob_sha": "153ae0ceb0edaf926d1a4ad615c1a3fa3f49ae5c",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "b8dc2cae31596385f4d459192a6f4df35309e0e24b33054259762a72ff1fb756",
+  "last_observed_blob_sha": "153ae0ceb0edaf926d1a4ad615c1a3fa3f49ae5c",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/731d042f2d67fce3b63f/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/731d042f2d67fce3b63f/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-06T11:01:57.061327+00:00",
+  "creation_event_id": "2b4447017434378fb0bb",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/731d042f2d67fce3b63f/thumbnail.png",
+  "image_sha256": "e2df036ad601f17b244c6dc19fa3c1faaed700d39f655788808217c3b08dcf4e",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "153ae0ceb0edaf926d1a4ad615c1a3fa3f49ae5c",
+    "text_lines": [
+      "バスケまとめ",
+      "11/06",
+      "試合結果",
+      "公式記録の",
+      "確定待ち",
+      "2026.11.06 19:51 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/731d042f2d67fce3b63f/source.html",
+        "role": "固定本文の根拠。見出し・対象日・全試合の公式記録確定待ち・19:51 JST時点の留保。blob SHAを実計算し一致確認。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/731d042f2d67fce3b63f/source.txt",
+        "role": "固定本文の文章確認。名前が登場する18選手を候補にし、主役を限定できないためランダム選出。本文の根拠は固定HTML/TXTの2点のみ。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール。人物選定と中立の注記は今回の本人指示を優先。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "目視した承認済みスタイル参照。黒・ライム、インク・ブラシ、太字。作例の人物・名前・数値は転用していない。白地のA-faison-ivory-v3.pngは指定場所に存在しなかったため未使用。"
+      },
+      {
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=46904",
+        "role": "描く人物の公式プロフィール確認に限って参照。本文・試合結果・成績の根拠には使用していない。"
+      },
+      {
+        "url": "https://www.shinagawa-city.com/basketball/11132",
+        "role": "人物容姿を確認した公式クラブ資料。掲載のSam Timmins紹介写真のみ容姿参照。記事の試合内容の根拠には使用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "サム・ティミンズ",
+        "selection": "ランダム",
+        "selection_method": "固定HTMLの選手表に登場する18名からPython secrets.choiceで1名選出。本文は全試合の記録確定待ちと複数の選手一覧で、最大の主役を一人に絞れないため。",
+        "candidate_names": [
+          "鈴木 達也",
+          "オリバー・シュウ",
+          "チュディアー・バイル",
+          "ラポラス・アイヴァナーカス",
+          "アイザック・バッツ",
+          "中谷 衿夢",
+          "西田 公陽",
+          "森山 修斗",
+          "ユージーン・フェルプス",
+          "ゲイブ・クィラン",
+          "新本 風河",
+          "原田 大和",
+          "ジョーダン・ジャイルズ",
+          "サム・ティミンズ",
+          "山根 響",
+          "佐脇 考哉",
+          "落合 知也",
+          "ケーレン ジョエル・アレン"
+        ],
+        "official_profile": "https://www.bleague.jp/roster_detail/?PlayerID=46904",
+        "reference_page": "https://www.shinagawa-city.com/basketball/11132",
+        "reference_image": "https://www.shinagawa-city.com/basketball/wp-content/uploads/sites/2/2026/08/%E3%83%86%E3%82%A3%E3%83%9F%E3%83%B3%E3%82%BA%E3%81%95%E3%82%93%E6%9C%80%E7%B5%82.jpeg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/731d042f2d67fce3b63f/references/sam-timmins-official.jpeg",
+        "visual_reference_checked": true,
+        "observed_features": "短く濃い茶色の波打つ髪、太い眉、目鼻の配置、広い鼻筋、大きめの耳、口ひげにつながる濃いフルベアード、幅のある顎と肩を公式写真で目視確認。",
+        "depiction": "実在人物を手描きインク調で描いた、両手でボールを保持して体をひねるプレーのイメージ。実際の当該試合や特定プレーの再現ではない。",
+        "restrictions_checked": "氏名、背番号、チーム名、個人成績、出場・活躍の断定なし。チーム・リーグ・スポンサーのロゴなし。公式写真の貼付なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT\nUse case: illustration-story.\nCreate exactly ONE finished editorial thumbnail for Japanese basketball news site バスケまとめ. Canvas 1920 × 1080, landscape 16:9, PNG. Full-bleed designed artwork with clean legible Japanese typography.\n\nReference roles: the previously inspected B-culver-black-lime-v3 image is STYLE REFERENCE ONLY: near-black #151A18, acid lime #CCF43B, ivory ink drawing, bold Japanese type, energetic hand-painted dry-brush strokes, few elements. Do not copy any name, date, score, number or player from that sample. The previously inspected official club portrait of Sam Timmins is LIKENESS REFERENCE ONLY; redraw him entirely as ink illustration, never paste or reproduce any photograph.\n\nSubject: exactly one real basketball player, Sam Timmins (サム・ティミンズ), a very tall, broad-shouldered strong adult man. Match the official portrait: light skin rendered ivory, short thick dark brown softly wavy hair with slightly tousled fringe, thick straight eyebrows, deep-set eyes, broad straight nose, prominent ears, full neatly shaped dark brown beard connected to moustache, strong wide jaw. Clearly recognisable facial features, not a generic or invented athlete. Focused playing expression. Plain ivory basketball vest and dark shorts with no logos, no numbers, no lettering, no sponsors, no team identity marks.\n\nComposition: player occupies LEFT 43% of frame, shown from head to upper thigh in an energetic pivot immediately after catching a rebound: torso twists toward the center, both hands gripping a single orange basketball firmly at upper chest / shoulder height, elbows angled naturally. Face remains large and visible, with clear beard and hair silhouette. Five anatomically coherent fingers on each visible hand, no extra limbs. The ball is held by the player, not a standalone main subject. Abstract lime brush arc and sparse ink marks suggest motion, no other people or player silhouettes, no literal stadium or actual game reconstruction. Make the image demonstrably a drawn editorial basketball impression, no camera realism.\n\nRight 54% holds a very clear typography hierarchy with generous breathing room. Top small ivory site text, then a large date, then a large ivory Japanese headline, then high contrast lime qualification text. The qualification is prominent and cannot be mistaken for a confirmed result. Strong typography without busy panels or excessive detail. Keep every text block within a 5% safe inset and away from the player's hands and face. No letters cropped.\n\nRender ONLY these exact text strings:\n\"バスケまとめ\"\n\"11/06\"\n\"試合結果\"\n\"公式記録の\"\n\"確定待ち\"\n\"2026.11.06 19:51 JST時点\"\n\"イラスト（AI生成）\"\n\"イメージ\"\n\nSuggested placement: site upper right, date and 試合結果 large beneath, 公式記録の and 確定待ち in large lime bold type beneath headline. Timestamp modest but readable below qualification. At bottom in a clean dark safe band, show イラスト（AI生成） and イメージ in readable ivory letters.\n\nEditorial grounding: the locked article is November 6, 2026 game results, but ALL games' official records remain unconfirmed as of 19:51 JST. No results, scores, rankings or player performance should be inferred. Sam Timmins was chosen randomly from the players named in the locked article and is solely an illustration subject. DO NOT print his name, number, team, statistics, claimed appearance or claimed achievement. Do not suggest that this is a real moment from today's game. No winning language or final-shot implication. Do not use the phrase 成績をもとにしたイメージ; the required neutral note is イメージ.\n\nStyle and quality: confident visible pen/brush linework, ivory and charcoal cross-hatched shading, intentional rough edges, high visual contrast, editorial sports poster with restrained lime diagonals and a single orange ball, not photorealistic, not a photo collage, not cartoon caricature. No team logo, league logo, watermark, sponsor text, unrequested words, or numerical score.\n\nONE CORRECTION PROMPT\nEdit the provided completed basketball thumbnail once. Make ONLY the following layout correction: zoom out and reframe the existing artwork so the entire player's hair/head is fully inside the canvas with at least 5% dark margin above the highest hair, and the left arm/elbow and both hands are also completely inside the left edge. The upper-thigh portrait may naturally end at the bottom. Add comfortable 4% margins above the site name and around text. Preserve all the exact Japanese typography and dates from the image, preserve the portrait identity of real player Sam Timmins, his facial features, full dark beard, short wavy dark hair, pose holding the orange basketball, clothing, black #151A18 and lime #CCF43B palette, hand-drawn ink style, and overall left-player/right-text composition. No other changes. Exact existing text remains: バスケまとめ / 11/06 / 試合結果 / 公式記録の / 確定待ち / 2026.11.06 19:51 JST時点 / イラスト（AI生成） / イメージ. No new text, no name, no logos, no stats. Keep face and hands large enough to inspect. Keep headline and qualification large and clear. Landscape 16:9 PNG, ideally 1920x1080 or larger. The top margin and full hair silhouette must be clearly visible.",
+    "generator": {
+      "tool": "OpenAI built-in image_gen",
+      "mode": "内蔵画像生成のみ",
+      "generation_calls": 2,
+      "corrections": 1,
+      "initial_file": "/Users/genjo/.codex/generated_images/01a1b085-be39-70a2-8104-f7098c5834da/exec-7f02193c-6e06-4dc5-9b48-a29a9d8d49fa.png",
+      "selected_file": "/Users/genjo/.codex/generated_images/01a1b085-be39-70a2-8104-f7098c5834da/exec-143a7473-c46a-414c-9fc9-8d439f5f99b9.png",
+      "review": "初回の頭頂部と左肘の余白を修正。修正版の実画像で、文字・日付・時刻、未確定の留保、参照写真との顔の特徴、指と両手・両腕・頭頂部の収まり、AI表記を目視確認して合格。PNGは1枚だけ採用。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-06T11:07:05.389606+00:00",
+  "publication_approved": false
+}

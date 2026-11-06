@@ -1,0 +1,115 @@
+{
+  "id": "1913b0272098f45815bd",
+  "article_path": "article-results-one-next-20261106.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261106.html",
+  "source_commit": "",
+  "source_blob_sha": "cdc545730668732ab9c2d7df339df97952f0bc7b",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "b8dc2cae31596385f4d459192a6f4df35309e0e24b33054259762a72ff1fb756",
+  "last_observed_blob_sha": "cdc545730668732ab9c2d7df339df97952f0bc7b",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1913b0272098f45815bd/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1913b0272098f45815bd/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-06T11:01:57.325393+00:00",
+  "creation_event_id": "a98d2ab0874e61e360fd",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/1913b0272098f45815bd/thumbnail.png",
+  "image_sha256": "59eed658b704d11accdc7b0733146731876c5f29b08366f52da3bebdf5abc800",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "cdc545730668732ab9c2d7df339df97952f0bc7b",
+    "text_lines": [
+      "バスケまとめ",
+      "11/06 試合結果",
+      "公式記録の",
+      "確定待ち",
+      "2026.11.06 19:51 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1913b0272098f45815bd/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261106.html",
+        "usage": "本文の根拠。試合日2026-11-06、19:51 JST時点で公式記録未確定。当日TOP3も全試合の公式記録確定待ち。ライブ記事・外部資料の成績は採用していない。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1913b0272098f45815bd/source.txt",
+        "usage": "HTMLと内容照合。今季平均EFFと当日の実績が別集計であり、出場確定ではない留保を確認。画像には個人成績や選手名を入れていない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "目視確認済み。黒×ライム、太い日本語見出し、手描きインク・ブラシの絵柄のみ参照。選手・名前・成績は引き継がない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "山根 響",
+        "selection": "ランダム",
+        "selection_reason": "本文では複数選手が表内で同等に扱われ、特定の主役を絞れないため、本文に名前がある18選手から1人を選択。",
+        "selection_method": "Python random.Random('1913b0272098f45815bd').choice(candidates)。候補は本文の掲載順。",
+        "candidates": [
+          "鈴木 達也",
+          "オリバー・シュウ",
+          "チュディアー・バイル",
+          "ラポラス・アイヴァナーカス",
+          "アイザック・バッツ",
+          "中谷 衿夢",
+          "西田 公陽",
+          "森山 修斗",
+          "ユージーン・フェルプス",
+          "ゲイブ・クィラン",
+          "新本 風河",
+          "原田 大和",
+          "ジョーダン・ジャイルズ",
+          "サム・ティミンズ",
+          "山根 響",
+          "佐脇 考哉",
+          "落合 知也",
+          "ケーレン ジョエル・アレン"
+        ],
+        "official_profile": "https://basketball.shinagawa-city.com/team/players/detail/id=60025?PlayerID=43471",
+        "official_roster": "https://basketball.shinagawa-city.com/team/players/",
+        "official_league_profile": "https://www.bleague.jp/roster_detail/?PlayerID=43471",
+        "official_profile_image": "https://bleague.bl.kuroco-img.app/v=2026110620/files/user/roster/748/2026-27/43471_01.jpg",
+        "supplemental_official_source": "https://www.shinagawa-city.com/basketball/10762",
+        "supplemental_official_image": "https://www.shinagawa-city.com/basketball/wp-content/uploads/sites/2/2026/07/山根響.jpg",
+        "visually_checked": true,
+        "observed_features": "黒い中分けのストレートヘア、耳付近までの丸いシルエット、額が見える分け目、縦長で滑らかな卵形の輪郭、小さな丸い顎、細めの眉と目、細くまっすぐな鼻、小さな口、ひげなし。",
+        "treatment": "公式写真は容姿参照だけに使用。写真の貼付・写真風表現なし。無地のユニフォームを着た踏み込みとボール保持のイラスト。実際の試合場面の再現ではなくイメージ。選手名・成績・出場・活躍を画像の文字で示していない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION:\nUse case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail for バスケまとめ, landscape 16:9, target 1536×864 or larger, opaque PNG.\n\nEditorial basis: ONLY the supplied fixed source.html/source.txt for 2026-11-06. It is a results article with ALL official results still unconfirmed at 19:51 JST. Do not imply any winner, score, individual performance, appearance in that game, ranking, or a completed match. The figure is an illustrative image, not a reconstruction of an actual event.\n\nArt direction: match the approved black-and-lime ink illustration aesthetic already viewed: near-black #151A18, acid lime #CCF43B, warm ivory typography, coarse handmade ink hatching, broad dry-brush strokes, sparse energetic flecks. Strong editorial hierarchy, few elements, readable Japanese. Do not copy the reference thumbnail's athlete, player name, statistics or composition.\n\nMain subject: exactly ONE real player, Hibiki Yamane / 山根響 of Shinagawa, randomly selected from names in the fixed article. He is an adult Japanese male basketball guard. His identity and appearance were visually checked in the official 2026-27 profile at https://basketball.shinagawa-city.com/team/players/detail/id=60025?PlayerID=43471 and its official portrait https://bleague.bl.kuroco-img.app/v=2026110620/files/user/roster/748/2026-27/43471_01.jpg.\nPreserve the observed distinctive likeness: smooth clean-shaven long oval face narrowing gently to a small rounded chin; medium-length straight dark black hair with a clear center part, rounded curtain-like sides reaching the top of the ears and separated strands exposing the forehead; fine straight eyebrows, narrow almond dark eyes, straight slim nose, small relaxed lips; lean athletic shoulders and arms, ordinary realistic guard proportions. NOT a generic fictional player, not a beard, not a buzz cut, not curly hair. Draw entirely as hand-inked sports illustration, never photographic.\n\nComposition: athlete in LEFT 43% of canvas, face clearly visible in a subtle three-quarter angle, torso leaning forward, one bent knee and the other leg extending back in a driving step. Both hands naturally gather ONE orange basketball at his outer left hip while moving, fingers anatomically coherent, ball visibly held. Plain ivory basketball jersey and shorts with minimal black folds and lime edging, absolutely no team name, number, crest, sponsor, brand or league logo. Keep face, hands, ball, and feet comfortably inside the frame. No other people, no crowd faces, no actual game setting. A single diagonal lime brush sweep adds movement behind him.\n\nRIGHT 52%: bold, clean, very large Japanese typography, consistent alignment and ample margins. Top small brand and date, central headline, then a prominent lime status line. Avoid text overlapping the athlete. Bottom footer remains unobscured. Use these exact text strings, and no other words, letters or numbers:\n「バスケまとめ」\n「11/06 試合結果」\n「公式記録の」\n「確定待ち」\n「2026.11.06 19:51 JST時点」\n「イラスト（AI生成）」\n「イメージ」\n\nTypography hierarchy: 「公式記録の」 and 「確定待ち」 form the biggest and clearest two-line message, with 「確定待ち」 in lime. 「11/06 試合結果」 is large but secondary. Date-time is smaller and fully legible. Both 「イラスト（AI生成）」 and 「イメージ」 must be clearly visible together in the footer with safe padding.\nNo individual player name or performance text anywhere. Do not write 成績をもとにしたイメージ since this player was randomly chosen. No fabricated actual-game claims, no watermarks, no pasted official photographs. Render as polished hand-painted editorial artwork.\n\nONE ALLOWED REVISION:\nEdit the first image, the generated Japanese basketball thumbnail. The second image is an OFFICIAL IDENTITY REFERENCE ONLY, the portrait of real player Hibiki Yamane (山根 響). Do not paste or reproduce the photograph, its jersey, sponsor text, team logo, number, or background. It is used only to make the illustration unmistakably closer to this actual person.\n\nKeep the entire right-side layout, all exact Japanese text, all dates and numerals, palette (#151A18 black and #CCF43B lime), orange ball, hand-drawn ink and brush style, and the same subject/action. ONE athlete only, no additional people. Preserve the accurate text exactly:\nバスケまとめ\n11/06 試合結果\n公式記録の\n確定待ち\n2026.11.06 19:51 JST時点\nイラスト（AI生成）\nイメージ\n\nMake only these corrections on the LEFT athlete:\n1. Redraw his face and hair to closely match the official portrait's identity while maintaining fully hand-illustrated ink rendering. Use the portrait's long smooth oval face, soft cheeks, small rounded chin, slim straight nose, small lips, fine flatter eyebrows, and relatively narrow, less exaggerated almond eyes. Remove the generic anime-model sharp jaw and dramatic eyes. He is clean-shaven. Hair should match the portrait: medium-length straight black center-parted curtain hair, rounded sides at ear level, clean exposed forehead and simple natural strands. Less wavy and windswept than the current illustration. Retain three-quarter view and focused expression naturally derived from this face.\n2. Slightly reduce and reposition the whole athlete within the left panel, creating clear safe margin above the hair and below BOTH shoes. Fit the complete dynamic stepping pose inside the frame with no clipped limbs. Keep face large enough to recognize. Do not shrink the typography.\n3. Hands remain anatomically natural, two hands with five fingers each gripping the one basketball, with sensible partial occlusion. Keep the uniform plain ivory with simple lime and black edging and NO markings.\n\nEverything must remain a sports editorial illustration, not photographic. No player name on image, no statistics, no score. This is explicitly an imagined generic play, not a factual game moment. Deliver one corrected opaque PNG, same 16:9 canvas and at least 1536px wide.",
+    "generator": {
+      "tool": "image_gen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "revisions": 1,
+      "final_file": "generated.png",
+      "initial_candidate": "/Users/genjo/.codex/generated_images/01a1b08a-7258-73c0-919b-5e878ee6e03d/exec-481d5156-2db1-463e-9322-cb591eae9a98.png",
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1b08a-7258-73c0-919b-5e878ee6e03d/exec-48c86c68-6436-49c7-b711-353177038f91.png",
+      "revision_reason": "初稿の足先の見切れと、公式プロフィールへの容姿の近さを改善。",
+      "visual_review": {
+        "text_and_numbers": "最終画像を目視し、指定した7本の文字列・日付・時刻を確認。誤字、選手名、個人成績、確定スコアなし。",
+        "source_qualifiers": "『公式記録の 確定待ち』『2026.11.06 19:51 JST時点』を判読できる大きさで確認。勝敗や当日の出場・実績を断定していない。",
+        "likeness_or_no_named_person": "実在選手1人。公式プロフィール写真と最終イラストを比較し、髪型・輪郭・目鼻・ひげなしの特徴を確認。顔は手描きのイラストとして表現。",
+        "layout": "16:9に近い横長。本文、顔、両手、ボール、両足が枠内に収まり、重要要素の見切れ・重なりなし。両手はボールを保持し、不自然な余分の指・肢なし。チーム・リーグ・スポンサーのロゴなし。",
+        "ai_label": "画像下部の『イラスト（AI生成）』『イメージ』を目視確認。"
+      },
+      "ready_executed": false,
+      "published_or_sent": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-06T11:11:55.385153+00:00",
+  "publication_approved": false
+}
