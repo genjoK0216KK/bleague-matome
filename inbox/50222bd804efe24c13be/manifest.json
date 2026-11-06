@@ -1,0 +1,107 @@
+{
+  "id": "50222bd804efe24c13be",
+  "article_path": "article-games-20261107.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261107.html",
+  "source_commit": "",
+  "source_blob_sha": "2ba07c83724cae2f7e943fd7861106081a6c5bfc",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "d259aa7c5bde68e1cae3c325ec5c85072ab91f417c2d3a6c799dce5007cdf2cf",
+  "last_observed_blob_sha": "2ba07c83724cae2f7e943fd7861106081a6c5bfc",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/50222bd804efe24c13be/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/50222bd804efe24c13be/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-06T16:42:56.042975+00:00",
+  "creation_event_id": "1829d35d0a26541777ff",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/50222bd804efe24c13be/thumbnail.png",
+  "image_sha256": "ed52d95b5e1d4a2ef9a997853f6f025daccf8c297f93f8e1386a8628e19b248c",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "2ba07c83724cae2f7e943fd7861106081a6c5bfc",
+    "text_lines": [
+      "バスケまとめ",
+      "11/07",
+      "試合予定",
+      "01:41 JST時点・全試合 試合前",
+      "当日TOP3は公式記録確定後",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/50222bd804efe24c13be/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261107.html",
+        "use": "本文の唯一の根拠（source.txtと併用）。2026-11-07の試合予定、01:41 JST時点で全試合が試合前、当日TOP3は全試合の公式記録確定後に掲載。見出しのベスト5は本文で裏付けられないため採用しない。HTMLのblob SHAを標準ライブラリで算出し指定値との一致を確認。"
+      },
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/50222bd804efe24c13be/source.txt",
+        "use": "固定HTMLと同じ内容を照合。資料取得は2026-11-07 01:41〜01:42 JST。結果・順位・出場確定・選手成績を画像に追加しない。"
+      },
+      {
+        "type": "workflow_rules",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "use": "画像生成・検品ルール。人物未特定時のボール等への置換は今回の本人指示によって上書き。ready・公開・送信は対象外。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで目視参照。黒×ライム、太い日本語見出し、インクとブラシの絵柄だけを参照し、人物・日付・数値・成績は持ち越さない。"
+      },
+      {
+        "type": "unavailable_optional_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "use": "指定場所にファイルが存在しなかったため使用しない。黒×ライムの承認済み画像は閲覧できた。"
+      },
+      {
+        "type": "workflow_context_only",
+        "url": "https://app.notion.com/p/3fea07aafd1281bba76cd2e781ec5953",
+        "use": "案件の絵柄・人物描写の合意をread-onlyで確認。記事本文の根拠にはしない。外部への更新・送信は実施しない。"
+      },
+      {
+        "type": "official_player_roster_only",
+        "url": "https://tachikawa-dice.tokyo/team/players/",
+        "use": "本文に名前が登場しないため、本文登場チームの現役選手から選ぶ際の登録名簿確認。記事内容の根拠にはしない。"
+      },
+      {
+        "type": "official_player_appearance_only",
+        "url": "https://tachikawa-dice.tokyo/team/players/detail/id=61175?PlayerID=51000660",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026102619/files/user/roster/2727/2026-27/51000660_01.jpg",
+        "use": "立川ダイス公式プロフィールと公式肖像を確認。写真は容姿の参照だけで、完成画像へ貼り付けずイラスト化。外部の成績・出場情報を記事表現へ流用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ハリー・フローリング",
+        "name_en": "Harry Froling",
+        "team": "立川ダイス",
+        "selection": "ランダム",
+        "selection_reason": "固定原稿に個人名がなく、複数チームの試合予定を同列に掲載しているため。",
+        "selection_method": "再現可能な疑似乱数。本文の出現順で重複を除いた36チームからPython random.Random('50222bd804efe24c13be').choiceで立川を選出。公式選手一覧の背番号順13名からrandom.Random('50222bd804efe24c13be:player').choiceでハリー・フローリングを選出。",
+        "official_profile": "https://tachikawa-dice.tokyo/team/players/detail/id=61175?PlayerID=51000660",
+        "official_roster": "https://tachikawa-dice.tokyo/team/players/",
+        "official_portrait": "https://bleague.bl.kuroco-img.app/v=2026102619/files/user/roster/2727/2026-27/51000660_01.jpg",
+        "portrait_viewed": true,
+        "appearance_observed": "短い淡茶〜金髪、短く刈った側頭部、横へ流したトップ、明るい目、直線的な鼻、縦長の四角寄りの輪郭、短い淡茶のひげと口ひげ、長身で肩幅のある体格。",
+        "portrayal": "1人が両手でボールを保持してターンするプレーのイメージ。特定試合の再現ではない。名前・背番号・成績・出場・活躍の文言なし。無地のユニフォーム。",
+        "revision": "初回の髪とひげが公式肖像より長かったため、公式肖像を参照して1回だけ修正。修正版を再目視し、短髪、短いひげ、明るい目、鼻と輪郭を確認。",
+        "visual_qa": "修正版の文字6行・日付・時刻を原稿と照合。試合前と公式記録確定後の留保、AI生成とイメージの表記を目視確認。顔・両手・指・ボールが枠内に収まり、文字の重なりや見切れなし。ロゴ・スポンサー文字・写真の貼り付けなし。太もも以下は意図したトリミング。",
+        "final_png_dimensions": [
+          1672,
+          941
+        ]
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story / editorial basketball thumbnail.\nCreate exactly ONE finished Japanese sports-news thumbnail, landscape approximately 16:9, target 1536×864 pixels or larger. This is a new original illustration for バスケまとめ, not an actual game photograph or reconstruction.\n\nVisual style: approved house style visible earlier in this conversation: near-black #151A18 background, vivid lime #CCF43B dry-brush sweeps, ivory type, bold hand-inked editorial sports drawing with expressive black crosshatching and brush texture, few elements and strong mobile legibility. Do not copy the reference thumbnail's player, score, name or date. Change its composition: illustrated player on the LEFT 43%, clean text block on RIGHT 53%. Keep generous safe margins, including a clear footer.\n\nSubject: exactly one REAL basketball player, Harry Froling (ハリー・フローリング), randomly selected from Tachikawa Dice's official current roster. His official portrait was visually inspected: fair skin, short sandy-blond/light-brown hair swept slightly sideways and upward, close-cropped sides, broad rather rectangular face with square jaw, straight medium nose, light blue-grey eyes, fairly straight eyebrows, short sandy-brown beard and moustache around the jaw/chin, tall broad-shouldered sturdy muscular center build (211 cm, 113 kg). Render these identifiable facial traits faithfully as an ink illustration, not a photograph. Do not substitute a generic invented athlete. He is not the article's featured star and no claim is made that he plays this day's game.\nPose: energetic low-post pivot, torso twisting three-quarter toward the viewer, looking past the viewer to the right, knees bent. He holds ONE orange basketball firmly in BOTH hands around waist height, ready to turn. Three-quarter body composition, keep his face, elbows, ball and all visible fingers fully inside canvas. Make hand-to-ball contact and fingers anatomically convincing. Jersey plain ivory with black side panels, no number, no text, no team/league/sponsor logos, no brands. Background only restrained lime diagonal motion strokes and a subtle suggestion of court floor; no other players, crowd, hoop or photographic elements. Ball is a small prop held by the player.\n\nArticle evidence and semantic constraints: the only article-content sources are the supplied frozen source.html and source.txt, blob 2ba07c83724cae2f7e943fd7861106081a6c5bfc. They show November 7, 2026 schedules, all games pregame as of 01:41 JST; daily TOP3 will be published only after all official records are final. Do not state results, rankings already selected, points, confirmed appearances, predictions, victories or player achievements. Do not use the old article-title wording about a best five. External player references are for likeness and current roster membership only.\nText: render ONLY these EXACT six Japanese text lines, with no invented additional words:\n1. \"バスケまとめ\" — compact ivory brand text at top of the right text area.\n2. \"11/07\" — large lime date underneath.\n3. \"試合予定\" — the dominant huge heavy ivory Japanese headline, underneath the date.\n4. \"01:41 JST時点・全試合 試合前\" — clear smaller ivory supporting line.\n5. \"当日TOP3は公式記録確定後\" — clear smaller supporting line below.\n6. \"イラスト（AI生成）｜イメージ\" — clearly legible ivory footer, safely inset, on clean dark strip.\n\nDo not write Harry Froling's name, any other player's name, team names, scores, jersey digits, stat claims or the word official as a visual brand. Use natural Japanese typography; ensure 時点, 全試合, 試合前, 公式記録確定後 and イラスト（AI生成） are fully correct. Separate the illustration from text with negative space; no overlapping letters, clipping or overly busy ornament. The picture must unmistakably look like a hand-drawn illustration.\n\nSINGLE ALLOWED REVISION\nEdit the FIRST image (the illustrated Japanese basketball thumbnail). SECOND image is the officially published portrait of the SAME intended real athlete Harry Froling, used ONLY as face/hair/build reference; do not paste any photograph into the result.\n\nMake one targeted likeness refinement to the illustrated player. The first image overstates the length and fullness of his beard and makes the hair too long/wavy. Match the actual man in the second image much more closely: short neatly side-swept sandy light-brown hair with close sides, compact short top without curls or a tall quiff; very short light-brown beard/stubble close to the skin along the jaw and chin, modest short moustache, no pointed or thick beard; light eyebrows, light blue-grey eyes, a straight nose, a somewhat long rectangular face with the actual portrait's cheek/jaw proportions, thin natural lips. Use his actual face geometry, not a generic handsome action athlete. Preserve a strong broad center's build. Keep the face clearly visible in three-quarter view, focused mouth closed or just slightly parted. Keep the player's hand-drawn ink/crosshatching treatment and NOT photorealistic. No official photo fragments, team/league logos, sponsor wording, jersey numbers or player names.\n\nEverything else must stay unchanged: landscape 16:9, near-black #151A18 and lime #CCF43B palette, one player on the left pivoting while holding one basketball in both hands, clean ivory jersey, all the Japanese lettering and hierarchy, date, annotations and footer. Slightly inset his whole silhouette ONLY if needed to keep every hand/finger and hair tip safely inside the frame; make sure neither hand has extra fingers. No new content. Do NOT change the article text or introduce any claim of participation/performance.\nPreserve these exact visible lines:\nバスケまとめ\n11/07\n試合予定\n01:41 JST時点・全試合 試合前\n当日TOP3は公式記録確定後\nイラスト（AI生成）｜イメージ\nOutput exactly one refined finished PNG at the existing size or larger.",
+    "generator": "image_gen (built-in). Exactly 1 initial generation and 1 permitted likeness revision. Final selected output: exec-c39ebbc9-362e-4aba-b001-f9caef2b4f14.png. No image API, CLI generation, additional paid route, or local pixel edits.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-06T16:48:08.256394+00:00",
+  "publication_approved": false
+}
