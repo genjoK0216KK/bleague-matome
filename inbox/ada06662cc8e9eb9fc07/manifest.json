@@ -1,0 +1,143 @@
+{
+  "id": "ada06662cc8e9eb9fc07",
+  "article_path": "article-games-20261108.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261108.html",
+  "source_commit": "",
+  "source_blob_sha": "d048f5a56789ad466736c9b574451e3d39788f14",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "2156019f09b8cf8b8e0df11518e9dec3a8497634e3659fb5224d20a3230b27c8",
+  "last_observed_blob_sha": "d048f5a56789ad466736c9b574451e3d39788f14",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ada06662cc8e9eb9fc07/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ada06662cc8e9eb9fc07/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-07T15:37:25.778932+00:00",
+  "creation_event_id": "c7551875be584fe4c1e5",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/ada06662cc8e9eb9fc07/thumbnail.png",
+  "image_sha256": "140b261eee91f3f445609ddfa61eeb9d9098bc2c1e972a5386acc2053b1745ec",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "d048f5a56789ad466736c9b574451e3d39788f14",
+    "text_lines": [
+      "バスケまとめ",
+      "11/08",
+      "試合予定",
+      "当日成績は確定待ち",
+      "11/08 00:36 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ada06662cc8e9eb9fc07/source.html",
+        "role": "固定原稿・本文の根拠",
+        "article_url": "https://basuke-matome.jp/article-games-20261108.html",
+        "verified_blob_sha": "d048f5a56789ad466736c9b574451e3d39788f14",
+        "support": "試合日 2026.11.08。各試合の状態は 2026-11-08 00:36 JST時点。全掲載試合は試合前。当日のEFF・ポジション別TOP3は全試合の公式記録確定待ち。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ada06662cc8e9eb9fc07/source.txt",
+        "role": "固定原稿・本文照合",
+        "support": "本文に選手名の記載なし。本文掲載チームの八王子をランダム選択。ランキング・出場・成績の確定や特定選手の活躍は表現しない。資料取得は2026-11-08 00:36〜00:37 JST。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイルのみ。view_imageで確認済み。過去記事の人物・文字・成績は流用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "宮本龍世",
+        "romanized_name": "Ryusei Miyamoto",
+        "team": "東京八王子ビートレインズ",
+        "selection": "ランダム",
+        "selection_reason": "固定本文は試合予定と公式記録確定待ちで、選手名の記載も個人の主役もないため、本人指定の優先順に従い本文掲載チームの現役選手から抽選。",
+        "selection_method": "Python random.Random(int('ada06662cc8e9eb9fc07',16))。本文登場順32チームからchoiceで八王子。続けて公式ロスターの背番号順13名からchoiceで宮本龍世。",
+        "team_pool": [
+          "秋田",
+          "信州",
+          "三河",
+          "滋賀",
+          "A東京",
+          "三遠",
+          "佐賀",
+          "千葉J",
+          "鹿児島",
+          "熊本",
+          "立川",
+          "香川",
+          "八王子",
+          "埼玉",
+          "福井",
+          "岡山",
+          "静岡",
+          "岩手",
+          "愛媛",
+          "福岡",
+          "青森",
+          "山形",
+          "東京Z",
+          "福島",
+          "横浜EX",
+          "越谷",
+          "岐阜",
+          "金沢",
+          "FE名古屋",
+          "東京U",
+          "山口",
+          "湘南"
+        ],
+        "player_pool": [
+          "リース・ヴァーグ",
+          "髙岡圭汰朗",
+          "ジャグシャーンビル・ジャワール",
+          "平凌輝",
+          "宮本龍世",
+          "山本楓己",
+          "松村竜吾",
+          "石橋永遠",
+          "ネイサン・ラシェフスキー",
+          "工藤貴哉",
+          "クベマ スティーブ",
+          "神里和",
+          "大金広弥"
+        ],
+        "official_sources": [
+          {
+            "url": "https://www.bleague.jp/club_detail/?TeamID=749",
+            "role": "現役登録と候補一覧のみ"
+          },
+          {
+            "url": "https://www.bleague.jp/roster_detail/?PlayerID=34615",
+            "role": "本人の同一性・所属のみ"
+          },
+          {
+            "url": "https://trains.co.jp/news/detail/id=19019",
+            "role": "クラブ公式2026-27ロスター・宮本龍世の公式プロフィール写真"
+          },
+          {
+            "url": "https://trains.bl.kuroco-img.app/files/user/018_%E5%AE%AE%E6%9C%AC%20%E9%BE%8D%E4%B8%96_2_%E6%AD%A3%E9%9D%A2_%E3%83%90%E3%82%B9%E3%83%88%E3%82%A2%E3%83%83%E3%83%97.jpeg2627.png?v=1787793299",
+            "role": "容姿参照。ダウンロードしてview_imageで目視確認。完成画像に写真の貼り付けなし。"
+          }
+        ],
+        "visual_features_checked": "黒い厚めの前髪、ひげのない顔、目鼻、唇、卵形で下顎がやや細い輪郭を参照。完成画像でも本人をもとにしたインク画として照合。",
+        "depiction": "1名の低いドライブ姿を描いたイメージ。特定の実際の試合・出場・成績・順位を示さない。画像に選手名や背番号を記載しない。公式写真・チームロゴ・リーグロゴ・スポンサー文字の使用なし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story. Create exactly one finished Japanese basketball article thumbnail, landscape aspect ratio approximately 16:9, ideally 1600 x 900 or larger, PNG.\n\nEditorial source is a fixed manuscript dated 2026-11-08. All listed games are PRE-GAME as of 11/08 00:36 JST; same-day stats are awaiting official confirmation. There is NO named featured player and no confirmed ranking or performance. The thumbnail must say only the exact copy below. Do not imply the illustrated player appeared, scored, was selected in a best five, or won. This is a generic illustrative basketball action, NOT a recreation of any actual game.\n\nArt direction: use the approved black-and-lime ink illustration reference seen in this conversation (black #151A18, vivid lime #CCF43B, warm ivory Japanese heavy lettering, hand-cut bold brush marks and scratchy ink hatching). Do not copy its player, names, 38 points, scores, or date. Keep elements few, strong graphic hierarchy and generous space. Avoid photography, photorealism, realistic photographic compositing, shiny 3D, glossy anime.\n\nSubject: ONE REAL player, Ryusei Miyamoto (宮本龍世), chosen randomly from Tokyo Hachioji Bee Trains' current official roster. His official club portrait has just been viewed in this conversation: a young Japanese man with thick straight black hair, a rounded natural forward fringe that slightly sweeps sideways over the forehead, dark almond-shaped eyes, natural straight eyebrows, oval face with fairly narrow lower jaw, straight moderately broad nose, full lips, small natural cheek moles, completely clean shaven. Match this specific real face in ink illustration, not a generic invented athlete. Compact athletic guard build. Use the official photo solely as an identity reference, never paste or reproduce the photo.\nDraw him occupying the LEFT 45 percent of the canvas, three-quarter frontal face clearly visible, leaning into a dynamic low crossover drive. Torso tilts diagonally, knees bent, one hand naturally above / contacting a single orange basketball at hip-to-knee level, the other arm bent for balance. Show coherent anatomy, exactly two arms and two hands, natural five-finger hand structure where visible. Ball is a prop belonging to the player. Use thigh-up action framing with head, both hands and ball entirely inside canvas and away from type. Blank ivory-and-black basketball jersey with simple lime piping, no numbers, names, crests, team or league logos, sponsors, or manufacturer marks. NO other people or silhouetted invented defenders. Small abstract brush swooshes imply motion without an identifiable venue, hoop, opponent, score clock, or actual match.\n\nLayout: player LEFT; large clean typography RIGHT about 52 percent; left and right content do not overlap. Black field, one lime rising brush slash BEHIND the player, restrained flecks. Keep all letters and face well inside 5 percent edge safe margins. Lower annotation strip remains clean and legible.\n\nExact visible text, all correctly spelled and fully readable:\nSmall brand at upper right: 「バスケまとめ」\nHuge lime date on the right: 「11/08」\nHuge warm ivory headline below date on the right, kept as one line: 「試合予定」\nMedium-small clear supporting line under headline: 「当日成績は確定待ち」\nSmaller timing qualifier directly below that: 「11/08 00:36 JST時点」\nBottom left or bottom center on dark background, clearly legible: 「イラスト（AI生成）」 and 「イメージ」\nRender ONLY these seven strings, without Japanese quotation marks. Do not put the player's name, team name, a statistical ranking, TOP3, BEST5, score, point total, or any additional claims on the artwork.\nTypography: very bold Japanese gothic with controlled ink texture on large headline, crisp smaller lines. This must be a polished publishable editorial thumbnail, with accurate Japanese text, faithful recognizable drawn likeness, and strong movement.",
+    "generator": "OpenAI内蔵 image_gen / image_gen__imagegen。初回生成1枚、修正0回。API・CLI画像生成・追加課金なし。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-07T15:40:39.571968+00:00",
+  "publication_approved": false
+}
