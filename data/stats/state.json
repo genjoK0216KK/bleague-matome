@@ -1,5 +1,10 @@
 {
- "pending": {},
+ "pending": {
+  "506556": "2026-11-08",
+  "506557": "2026-11-08",
+  "506558": "2026-11-08",
+  "506559": "2026-11-08"
+ },
  "published": [
   "2026-10-12",
   "2026-10-17",
@@ -16,16 +21,6 @@
   "2026-11-07"
  ],
  "days": {
-  "2026-10-31": {
-   "state": "ready",
-   "games_total": 10,
-   "games_ready": 10,
-   "players": 209,
-   "holds": [],
-   "excluded": [],
-   "content_as_of": "2026-11-01 19:26 JST",
-   "source": "data/match_articles/article-games-20261031.json"
-  },
   "2026-11-01": {
    "state": "ready",
    "games_total": 13,
@@ -95,6 +90,49 @@
    "excluded": [],
    "content_as_of": "2026-11-07 20:55 JST",
    "source": "data/match_articles/article-games-20261107.json"
+  },
+  "2026-11-08": {
+   "state": "held",
+   "games_total": 4,
+   "games_ready": 0,
+   "players": null,
+   "holds": [
+    {
+     "key": "506556",
+     "home": "秋田",
+     "away": "信州",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506557",
+     "home": "A東京",
+     "away": "三遠",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506558",
+     "home": "三河",
+     "away": "滋賀",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506559",
+     "home": "佐賀",
+     "away": "千葉J",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    }
+   ],
+   "excluded": [],
+   "content_as_of": "2026-11-08 00:36 JST",
+   "source": "data/match_articles/article-games-20261108.json"
   }
  },
  "definition": {
