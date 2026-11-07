@@ -392,6 +392,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "宇都宮が琉球に79-76、第2延長で競り勝つ"
   },
+  "article-daily-20261108.html": {
+   "article_path": "article-daily-20261108.html",
+   "editorial_fingerprint": "a1b506eba29744422cc8ae8d113a777ffb86d0a36bff01386bbd59bfb3e48d65",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261108-429ceb61dda6.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261108-429ceb61dda6-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "4189dc16f9911ba2f676",
+   "image_sha256": "429ceb61dda6f1e2f103a2469e27885256f1c065b9fbd8a71586caa49587827e",
+   "imported_at": "2026-11-07T23:26:59.158945+00:00",
+   "prepared_at": "2026-11-07T23:26:34.548857+00:00",
+   "source_blob_sha": "32c24f2566d38b170476b58305519d90be5f3cfd",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "a1b506eba29744422cc8ae8d113a777ffb86d0a36bff01386bbd59bfb3e48d65",
+   "style": "ink-lime-portrait-v5",
+   "title": "名古屋Dが開幕11連勝、Bリーグ記録を更新"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -1292,13 +1320,6 @@
  "log": [
   {
    "article": "article-daily-20261031.html",
-   "at": "2026-11-03T04:47:37.423432+00:00",
-   "by": "5e231e28b370cb26f1f6",
-   "event": "superseded",
-   "id": "03f1109abc0d7ee744f9"
-  },
-  {
-   "article": "article-daily-20261031.html",
    "at": "2026-11-03T04:47:37.423437+00:00",
    "by": "5e231e28b370cb26f1f6",
    "event": "superseded",
@@ -1849,6 +1870,13 @@
    "event": "imported",
    "id": "0289cbfa82d3e10329fb",
    "image": "93a756809e8b"
+  },
+  {
+   "article": "article-daily-20261108.html",
+   "at": "2026-11-07T23:26:59.158978+00:00",
+   "event": "imported",
+   "id": "4189dc16f9911ba2f676",
+   "image": "429ceb61dda6"
   }
  ],
  "seen": {
@@ -1873,6 +1901,7 @@
   "39075cc4edcf56d9d90d": "superseded:a9d34f9ead8bbf40b841",
   "3955308615847dff3136": "superseded:9f2558d6277a776ef982",
   "3d20be125ac18075c9b0": "superseded:9f2558d6277a776ef982",
+  "4189dc16f9911ba2f676": "imported",
   "4367b17c7960b99cb3ea": "superseded:ca69b5d16263483eb1ed",
   "44da7637029692ee5a53": "superseded:a718e72ebd289b318965",
   "45bb49c6e6574fb7d88a": "superseded:5e231e28b370cb26f1f6",
