@@ -366,31 +366,31 @@
   },
   "article-daily-20261107.html": {
    "article_path": "article-daily-20261107.html",
-   "editorial_fingerprint": "ce1a16d902ecd4934548fa16b7312d43b934b249b8142d8e56b5c4a71ae47905",
+   "editorial_fingerprint": "d1f72d0b041eb69173ac040c62ae8aa7efb5e48d1d6f7959b1ccfdc17db82f7e",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261107-45f152b4df0b.jpg",
+     "path": "thumbs/auto/article-daily-20261107-6fb613a597df.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261107-45f152b4df0b-og.jpg",
+     "path": "thumbs/auto/article-daily-20261107-6fb613a597df-og.jpg",
      "width": 1200
     }
    },
-   "id": "ff3cec0b158ec40a732c",
-   "image_sha256": "45f152b4df0bcc90050526d2e67bbb014bb49d9bd524afb6befeb6013cf0113f",
-   "imported_at": "2026-11-06T23:26:42.319728+00:00",
-   "prepared_at": "2026-11-06T23:26:06.169765+00:00",
-   "source_blob_sha": "1c78ae33081c5d680785a1933babfcb6c1fba058",
+   "id": "2d209f7594021a551b90",
+   "image_sha256": "6fb613a597df50b6de694b4626a281172fb693962671343b0af5280c3b7afb6c",
+   "imported_at": "2026-11-07T03:27:36.314040+00:00",
+   "prepared_at": "2026-11-07T03:26:55.397314+00:00",
+   "source_blob_sha": "990822d198590b0d76b1731487240b1dc1e5116d",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "ce1a16d902ecd4934548fa16b7312d43b934b249b8142d8e56b5c4a71ae47905",
+   "stable_fingerprint": "d1f72d0b041eb69173ac040c62ae8aa7efb5e48d1d6f7959b1ccfdc17db82f7e",
    "style": "ink-lime-portrait-v5",
-   "title": "仙台がA東京に96-69で勝利、東地区首位に浮上"
+   "title": "宇都宮と琉球、今日16時に対戦 直近2年のファイナリスト対決"
   },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
@@ -1207,20 +1207,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261101.html",
-   "at": "2026-11-01T10:44:47.621161+00:00",
-   "by": "899945a3915a435651cc",
-   "event": "superseded",
-   "id": "49bbacec4ae3cfcad2fa"
-  },
-  {
-   "article": "article-games-20261101.html",
-   "at": "2026-11-01T10:44:47.748848+00:00",
-   "event": "imported",
-   "id": "899945a3915a435651cc",
-   "image": "5527a3270512"
-  },
-  {
    "article": "article-results-one-next-20261101.html",
    "at": "2026-11-01T10:44:47.749061+00:00",
    "by": "f662c904491c9e820ed0",
@@ -1765,6 +1751,20 @@
    "event": "imported",
    "id": "ff3cec0b158ec40a732c",
    "image": "45f152b4df0b"
+  },
+  {
+   "article": "article-daily-20261107.html",
+   "at": "2026-11-07T03:27:36.160493+00:00",
+   "by": "2d209f7594021a551b90",
+   "event": "superseded",
+   "id": "ff3cec0b158ec40a732c"
+  },
+  {
+   "article": "article-daily-20261107.html",
+   "at": "2026-11-07T03:27:36.314064+00:00",
+   "event": "imported",
+   "id": "2d209f7594021a551b90",
+   "image": "6fb613a597df"
   }
  ],
  "seen": {
@@ -1780,6 +1780,7 @@
   "227771a8a08cdddea2d2": "imported",
   "2912f2bf307b5ed2a60d": "superseded:b54717dd6365eef30b2d",
   "292138556e17df566d67": "superseded:0a5c2c0f2505974f6de8",
+  "2d209f7594021a551b90": "imported",
   "2d836f0394de01c7d009": "superseded:7da4157f57a12da3f879",
   "2fad4903e119f5b6b0ea": "imported",
   "3370472f9c78336a4974": "imported",
@@ -1867,7 +1868,7 @@
   "f662c904491c9e820ed0": "imported",
   "faacf40f2eedbd5f216f": "imported",
   "fcf33c7c4f183753d4ec": "imported",
-  "ff3cec0b158ec40a732c": "imported"
+  "ff3cec0b158ec40a732c": "superseded:2d209f7594021a551b90"
  },
  "version": 1
 }
