@@ -1,0 +1,115 @@
+{
+  "id": "4f8263992a0a733cc2e3",
+  "article_path": "article-games-20261107.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261107.html",
+  "source_commit": "",
+  "source_blob_sha": "7bfbc2559a0125cf297959ef04303348c396da73",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "d5e293fcedceaa559290c47ad84a85964e0a3dc750c7b6c834b1197e3df068f9",
+  "last_observed_blob_sha": "7bfbc2559a0125cf297959ef04303348c396da73",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4f8263992a0a733cc2e3/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4f8263992a0a733cc2e3/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-07T10:16:37.411713+00:00",
+  "creation_event_id": "fd319e2d4ff922626221",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/4f8263992a0a733cc2e3/thumbnail.png",
+  "image_sha256": "a551d1416b45a0d9ca576ffd66321484072aa3b0c5b7814c9ef12aace5522591",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "7bfbc2559a0125cf297959ef04303348c396da73",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.07",
+      "試合結果",
+      "当日のEFF",
+      "B.PREMIER・B.ONE",
+      "EFF順位は確定待ち",
+      "19:05〜19:06 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4f8263992a0a733cc2e3/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261107.html",
+        "use": "本文根拠。ライブ記事・関連記事の内容は使用していない。",
+        "blob_sha": "7bfbc2559a0125cf297959ef04303348c396da73"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4f8263992a0a733cc2e3/source.txt",
+        "use": "本文根拠。11/07試合結果・当日のEFF、B.PREMIERとB.ONEの全試合公式記録確定待ち、資料取得19:05〜19:06 JST。特定選手を主役とする文章ではないため個人成績を見出し化していない。"
+      },
+      {
+        "type": "production_rules",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "use": "画像生成・検品ルール。人物選出と注記は本依頼の優先指示を適用。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "実画像をview_imageで確認。黒×ライム、太い日本語見出し、手描きインク・ブラシのみ参照。元の人物名・成績は流用なし。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "榎田 拓真",
+        "selection": "ランダム",
+        "selection_reason": "一覧記事で唯一の主役を特定できないため、本文に名前が掲載された12名の重複を除いた候補から選出。",
+        "selection_method": "Python random.Random('4f8263992a0a733cc2e3').choice(candidates)",
+        "candidates": [
+          "伊藤 良太",
+          "重冨 周希",
+          "井手 優希",
+          "榎田 拓真",
+          "神田 壮一郎",
+          "イブラヒム・ディアビ",
+          "ケレンベアガー マシュウ翔",
+          "ベルナルド・ダ・シルバ",
+          "チャナティップ・ジャクラワン",
+          "ジャック・アンドリュー",
+          "ハイデン・コヴァル",
+          "マイク・エドワーズ"
+        ],
+        "reference_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000177",
+        "club_reference_url": "https://patsfive.com/team/players/detail/id=60709?PlayerID=51000177",
+        "official_profile_image_url": "https://www.bleague.jp/files/user/roster/2487/2026-27/51000177_03.png",
+        "official_profile_image_viewed": true,
+        "observed_features": "短い直毛の黒髪、短く刈った側頭部と短い前髪、幅のある卵形の輪郭、頬の丸み、細めの目、比較的まっすぐな眉、丸みのある鼻先、ひげなし、がっしりした肩と腕。",
+        "depiction": "ドリブルで踏み込むプレー姿の手描きイラスト。特定試合の実際のプレー再現ではない。選手名・所属名・背番号・個人成績・出場や活躍の説明は画像に入れていない。公式写真は容姿参照のみで貼付なし。ロゴ・スポンサー文字なし。最終画像を公式写真と比較し特徴を目視確認。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT\nUse case: illustration-story. Create ONE finished Japanese basketball news thumbnail, wide 16:9 landscape, 1600x900 or larger.\nIt is for the unofficial Japanese site バスケまとめ, covering 2026-11-07 game results and daily EFF. This is a conceptual illustration, NOT a reconstruction of any actual match or scoring play.\n\nArt direction: the approved black-and-lime editorial ink style. Very dark charcoal-green #151A18 background, vivid lime #CCF43B wide dry-brush slashes, off-white oversized bold Japanese typography, rough hand-ink drawing, energetic sparse composition. No photography or photorealism, no 3D. Only one human.\n\nReal player subject: TAKUMA ENOKIDA / 榎田拓真, the actual basketball player. His official B.LEAGUE 2026-27 profile photo was inspected for likeness. Preserve these observed traits: Japanese adult man, short straight dense black hair with closely cropped sides and short irregular fringe on forehead, broad oval face with slightly squared jaw and full cheeks, straight medium eyebrows, narrow almond eyes, medium straight nose with rounded tip, clean-shaven with no moustache or beard, naturally broad mouth, sturdy athletic shoulders and arms. Do not substitute a generic anime face or the curly-haired player from the approved style example. Render his distinctive face in recognizable expressive hand-drawn ink, not a pasted photograph. Focused sports expression.\nScene: right 44% of canvas, large three-quarter view of Enokida leaning forward into a dynamic low dribble, one clearly drawn hand controlling the orange basketball near his bent knee, opposite arm bent naturally for balance. Show his face clearly at roughly eye-level, not hidden. Athletic plain off-white sleeveless basketball uniform, charcoal shading and restrained orange accent, absolutely no numbers, letters, logos, sponsors or emblems on uniform. Ball is a prop in his dribble. Anatomically plausible arms and hands. Keep face and the complete ball and fingers within the canvas. Intentional lower-thigh crop is okay. Lime diagonal brush energy behind the figure; no other players, no crowd, no scoreboard, no official court markings, no identifiable arena.\n\nLeft 56% is a calm text area. All text fully inside safe margins, strong readability at small size, no overlap with face or hands. Place exact Japanese text below, no other words or numerals:\nSmall upper left: \"バスケまとめ\"\nBelow, medium: \"2026.11.07\"\nMain headline very large off-white: \"試合結果\"\nSecond headline large lime: \"当日のEFF\"\nBelow the headline a compact two-line qualifier in readable off-white or dark-on-lime:\n\"B.PREMIER・B.ONE\"\n\"EFF順位は確定待ち\"\nSmall readable timestamp below: \"19:05〜19:06 JST時点\"\nBottom-left footer, clear and fully legible: \"イラスト（AI生成）\"\nNext to footer: \"イメージ\"\n\nEditorial accuracy: there are completed games AND some unconfirmed official records in the frozen article. B.PREMIER and B.ONE daily EFF standings await final official records. Do not imply all games or all rankings are final. The random player is used only as an illustration; do not show his name, his team name, his score, appearances, achievements, ranking, jersey number, or any claim about his play. The only displayed numbers are the date and source time stated above.\nDo not carry over any names, statistics, scores or dates from the style example. No team or league logo. No watermarks. Make one polished final image.\n\nONE CORRECTION PROMPT\nEdit the first image, which is the thumbnail target. The second image is the official profile photo of TAKUMA ENOKIDA / 榎田拓真, for face likeness only; never paste or reproduce the photo.\nOne final correction: keep the target's entire left text layout, EXACT Japanese words/numbers, colors, dark background, lime brush energy and hand-drawn editorial ink aesthetic unchanged. Fix the framing of the right-hand player: reduce and reposition the entire illustrated player and his ball together so the ENTIRE basketball, all fingers, both hands, both elbows and ALL hair are inside the canvas with at least 35 pixels of dark background or brush margin at the top, right and bottom. Legs may be intentionally cropped below the thighs. Preserve the same dynamic forward-driving low dribble pose and player scale as much as feasible. Do not add people, logos, numbers, names or new text.\nBring his face slightly closer to the official second reference: short straight black hair with cropped sides and a short fringe, broad oval clean-shaven face, softer less arched eyebrows, narrow eyes, rounded nose tip and fuller cheeks. Preserve the illustrated active focused expression, not the photo's static smile. Do not make him generic or anime; use recognizable ink portrait features. The plain off-white uniform must remain without logos, sponsor text or jersey numbers.\nText must remain exactly:\nバスケまとめ\n2026.11.07\n試合結果\n当日のEFF\nB.PREMIER・B.ONE\nEFF順位は確定待ち\n19:05〜19:06 JST時点\nイラスト（AI生成）\nイメージ\nKeep wide 16:9 landscape at least 1600 pixels wide. No other change.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 2,
+      "corrections": 1,
+      "final_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4f8263992a0a733cc2e3/generated.png",
+      "width": 1672,
+      "height": 941,
+      "png_sha256": "a551d1416b45a0d9ca576ffd66321484072aa3b0c5b7814c9ef12aace5522591",
+      "output_source": "/Users/genjo/.codex/generated_images/01a1b582-9a80-78d0-9956-6cc747ca60b1/exec-e45f8cfc-76f4-4118-93fe-f1629f7e4742.png",
+      "correction_reason": "初稿でボール下端・髪の先が見切れたため、人物とボールの配置を引き、公式写真参照で顔の特徴を調整。文字と配色は保持。",
+      "qa_observations": {
+        "text_and_numbers": "実画像の全9文字列と日付・時刻を確認。個人成績や架空の数値・名前の追加なし。",
+        "source_qualifiers": "B.PREMIER・B.ONEのEFF順位は確定待ちと明記。19:05〜19:06 JST時点を保持し全試合確定と断定しない。",
+        "likeness_or_no_named_person": "ランダムに選出した実在の榎田拓真選手の公式容姿を参照し、短髪・輪郭・目鼻・ひげなしを最終画像で照合。選手名は表示なし。",
+        "layout": "見出し・注記は画面内で読める。人物と文字の重なりなし。顔・髪・ボール・両手が見切れず、手指の形を目視確認。下腿は意図したトリミング。約16:9。",
+        "ai_label": "最終画像左下の『イラスト（AI生成）』『イメージ』を目視確認。"
+      },
+      "delivery_scope": "作業フォルダへのPNGとbrief.json保存のみ。ready・git操作・公開・外部送信は未実施。Notionは参照のみ。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-07T10:20:54.492876+00:00",
+  "publication_approved": false
+}

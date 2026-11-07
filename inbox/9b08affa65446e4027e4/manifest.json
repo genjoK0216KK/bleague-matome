@@ -1,0 +1,93 @@
+{
+  "id": "9b08affa65446e4027e4",
+  "article_path": "article-results-one-next-20261107.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261107.html",
+  "source_commit": "",
+  "source_blob_sha": "c25fa59d2368eb5531487d81458daef6dc7afa3e",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "d5e293fcedceaa559290c47ad84a85964e0a3dc750c7b6c834b1197e3df068f9",
+  "last_observed_blob_sha": "c25fa59d2368eb5531487d81458daef6dc7afa3e",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9b08affa65446e4027e4/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9b08affa65446e4027e4/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-07T10:16:37.649867+00:00",
+  "creation_event_id": "e0a61d560738956d0d90",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/9b08affa65446e4027e4/thumbnail.png",
+  "image_sha256": "c1a7af5a0cb7d5cab6b835ad5b437f4c6e6c080b1c6acaf0bb4656a2f7de2df5",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "c25fa59d2368eb5531487d81458daef6dc7afa3e",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.07",
+      "試合結果",
+      "当日のEFF",
+      "19:05時点｜一部公式記録未確定",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9b08affa65446e4027e4/source.html",
+        "role": "固定本文の唯一の根拠（source.txtと併用）",
+        "source_blob_sha": "c25fa59d2368eb5531487d81458daef6dc7afa3e",
+        "notes": "記事見出し・試合日・19:05 JST時点の留保。B.PREMIER/B.ONEは全試合の公式記録確定待ち、B.NEXTの各ポジションEFF TOP3は掲載済み。画像では全結果確定を示唆しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9b08affa65446e4027e4/source.txt",
+        "role": "固定本文の文章版。上記HTMLと内容を照合。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイル参照。view_imageで確認。選手・文字・成績は流用しない。"
+      },
+      {
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000154",
+        "role": "選んだ実在選手の公式容姿参照のみ。本文情報・成績の根拠には使用しない。"
+      },
+      {
+        "url": "https://www.bleague.jp/files/user/roster/2487/2026-27/51000154_03.png",
+        "role": "公式プロフィールページが指定する写真。view_imageで容姿を確認。完成画像への写真貼付なし。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "井手 優希",
+        "selection": "ランダム",
+        "selection_method": "固定HTMLの順位表に登場する重複を除いた選手12人からPython secrets.choiceで1人抽選。",
+        "selection_reason": "複数試合・複数ポジションの比較記事で、単独の主役選手が絞れないため。",
+        "candidate_names": [
+          "伊藤 良太",
+          "重冨 周希",
+          "井手 優希",
+          "榎田 拓真",
+          "神田 壮一郎",
+          "イブラヒム・ディアビ",
+          "ケレンベアガー マシュウ翔",
+          "ベルナルド・ダ・シルバ",
+          "チャナティップ・ジャクラワン",
+          "ジャック・アンドリュー",
+          "ハイデン・コヴァル",
+          "マイク・エドワーズ"
+        ],
+        "source": "B.LEAGUE公式プロフィール",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000154",
+        "image_url": "https://www.bleague.jp/files/user/roster/2487/2026-27/51000154_03.png",
+        "observed_features": "黒髪で両脇が短く、上部を立ち上げて後ろへ流した髪。額が出ており、直線的な眉、細めの目、頬骨が見える頬、丸みのある顎先、ひげなし。小柄で肩腕がしっかりした体格。",
+        "depiction": "本人の特徴を参照した手描きイラストによるドリブルのイメージ。実際の試合場面の再現ではない。画像には選手名・背番号・個人成績・出場や活躍を示す文章を入れない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset type: One Japanese basketball editorial thumbnail, landscape 16:9, target 1920x1080 PNG.\nCreate exactly ONE finished image for バスケまとめ.\n\nVisual direction: approved hand-painted ink-and-brush sports editorial style; charcoal black #151A18 background, electric lime #CCF43B dry brush sweep, ivory bold Japanese typography. Sparse, strong visual hierarchy, gritty expressive brush marks, no photorealism.\n\nSubject: ONE REAL basketball player, Yuki Ide (井手優希) of Yamaguchi, chosen randomly from names in the fixed article; never a fictional player. Appearance was checked in his official B.LEAGUE portrait https://www.bleague.jp/files/user/roster/2487/2026-27/51000154_03.png. Translate his recognizable features into an ink illustration: compact strong Japanese guard, short black hair with closely cut sides and a lifted tousled top brushed back, visible forehead, dark fairly straight eyebrows, narrow almond-shaped eyes, prominent cheekbones with rounded cheeks, gently tapered oval jaw and small rounded chin, clean-shaven, natural straight nose and broad mouth. Keep his face clearly readable and anatomically credible, with ivory and gray ink shading, and a focused but natural expression. Do not paste any photograph.\nAction/composition: place the player in the LEFT 43% of the image, energetic low driving dribble, torso leaning forward diagonally, face in three-quarter view and unobscured, one natural hand controlling a single orange basketball beside the hip/thigh, other arm bent naturally. Frame head through knees if possible, no important hand or ball cropping. Plain ivory/charcoal basketball uniform with small lime edge accents; NO logos, NO team names, NO sponsors, NO jersey number, NO shoe branding. Only one player, no background people. A wide rough lime brush arc behind the player conveys movement. This is a conceptual basketball illustration, NOT a reconstruction of any actual game or decisive play.\nLayout: keep RIGHT 55% as clean mostly black negative space for huge crisp Japanese headline; avoid overlap of face/hands/ball with type. Maintain 5% outer safe margins. Large type, uncomplicated composition, legible at thumbnail size.\nExact visible text only, spell perfectly:\nTop right, small ivory: \"バスケまとめ\"\nBelow it, compact date: \"2026.11.07\"\nMain headline, extremely large bold ivory: \"試合結果\"\nSecond headline, very large bold lime: \"当日のEFF\"\nBelow the headline, clearly legible ivory single line or balanced two-line note: \"19:05時点｜一部公式記録未確定\"\nBottom footer, ivory, legible: \"イラスト（AI生成）\"\nNext to footer: \"イメージ\"\n\nEditorial constraints: The fixed article covers multiple game results and daily EFF; some official records are not yet final as of 19:05 JST. Do not imply all results or rankings are final. Do NOT print the illustrated player's name, stats, appearance claims, ranking, or achievements; random selection is not an editorial claim about his performance. Do not copy any player name, score, date, text, or person from the approved style example. No other text. No team or league logo. Avoid photographic textures, excessive decorations, distorted hands, extra fingers, extra limbs, incomplete letters.\n\n--- Single permitted revision ---\nEdit the supplied thumbnail, making ONLY a margin/layout correction. Keep 16:9 landscape resolution at least 1600 pixels wide. This is the single permitted revision.\nPreserve ALL text EXACTLY and keep existing text positions, typography, colors, brush style, and face identity. The exact text is バスケまとめ / 2026.11.07 / 試合結果 / 当日のEFF / 19:05時点｜一部公式記録未確定 / イラスト（AI生成） / イメージ. Do not change these.\nChange ONLY the illustrated player: uniformly reduce his drawn artwork by about 10-12% and position it so there is clearly visible black/lime background margin of at least 45 pixels between the LEFT edge and the outermost finger, and at least 40 pixels above the highest hair. Keep the orange basketball completely visible and the hands naturally drawn with five fingers; no fingertips may touch or cross the image boundary. Keep his face and hands unobscured and leave separation from the text. Preserve the recognizable likeness of real Yuki Ide, his short black lifted hair, clean-shaven face, uniform without logo or number, and his dynamic dribbling pose. Lower legs may continue below the frame naturally, but all hand/ball/head contours must sit fully inside the frame. Do not add anything and do not change wording.",
+    "generator": "内蔵 image_gen.imagegen。初稿1回、余白調整の編集1回。API・CLI不使用。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-07T10:24:19.496327+00:00",
+  "publication_approved": false
+}
