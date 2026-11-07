@@ -1,0 +1,110 @@
+{
+  "id": "2d209f7594021a551b90",
+  "article_path": "article-daily-20261107.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261107.html",
+  "source_commit": "",
+  "source_blob_sha": "990822d198590b0d76b1731487240b1dc1e5116d",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "d1f72d0b041eb69173ac040c62ae8aa7efb5e48d1d6f7959b1ccfdc17db82f7e",
+  "last_observed_blob_sha": "990822d198590b0d76b1731487240b1dc1e5116d",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2d209f7594021a551b90/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2d209f7594021a551b90/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-07T03:23:45.468367+00:00",
+  "creation_event_id": "dc673e4d77be783f3529",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/2d209f7594021a551b90/thumbnail.png",
+  "image_sha256": "6fb613a597df50b6de694b4626a281172fb693962671343b0af5280c3b7afb6c",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "990822d198590b0d76b1731487240b1dc1e5116d",
+    "text_lines": [
+      "試合前展望 / 独自分析",
+      "宇都宮",
+      "× 琉球",
+      "11/7 16:00",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2d209f7594021a551b90/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261107.html",
+        "evidence": "宇都宮ブレックスと琉球ゴールデンキングスが11月7日16時に対戦。試合前展望 / 独自分析。"
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2d209f7594021a551b90/source.txt",
+        "evidence": "同じ固定版の文章。画像に勝敗・成績・出場確定・過去シーズンの戦績を追加していない。"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "visually_reviewed": true,
+        "evidence": "黒×ライム、太い日本語、手描きインク・ブラシ、少数の要素。作例の氏名・成績・日付は使用しない。"
+      },
+      {
+        "role": "current_roster_for_random_selection_only",
+        "url": "https://www.utsunomiyabrex.com/team/players/",
+        "evidence": "公式選手一覧の15人から1人を抽選。記事内容の根拠には不使用。"
+      },
+      {
+        "role": "current_roster_for_random_selection_only",
+        "url": "https://goldenkings.jp/team/players/",
+        "evidence": "公式選手一覧の14人から1人を抽選。記事内容の根拠には不使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "遠藤 祐亮",
+        "team": "宇都宮ブレックス",
+        "selection": "ランダム",
+        "selection_reason": "固定原稿に個人名がなく両チームの対戦が主題のため、本文に出てくるチームの現役選手から抽選。",
+        "selection_method": "Python random.Random('2d209f7594021a551b90')。公式一覧の掲載順15人からchoice、その後琉球14人からchoice。",
+        "official_profile": "https://www.utsunomiyabrex.com/player_lp/yusuke_endo/",
+        "official_image": "https://utsunomiyabrex.bl.kuroco-img.app/v=1789348378/files/user/lp/players/image/yusuke_endo/kv_sp.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2d209f7594021a551b90/refs/endo-official.jpg",
+        "reference_visually_reviewed": true,
+        "appearance_observed": "短く立った金髪の毛先と黒い根元、刈り上げ、輪郭、目鼻、口ひげと短い顎・頬のひげを確認。生成画でも対応する特徴を目視確認。",
+        "depiction": "紺色の無地ユニフォームでボールを保持するドライブのイメージ。名前・背番号・成績・出場や活躍の主張は画像に入れていない。"
+      },
+      {
+        "name": "川真田 紘也",
+        "team": "琉球ゴールデンキングス",
+        "selection": "ランダム",
+        "selection_reason": "固定原稿に個人名がなく両チームの対戦が主題のため、本文に出てくるチームの現役選手から抽選。",
+        "selection_method": "同じrandom.Randomインスタンスで、宇都宮の抽選に続き公式一覧の掲載順14人からchoice。",
+        "official_profile": "https://goldenkings.jp/team/players/detail/id=25882?PlayerID=5100000015",
+        "official_image": "https://bleague.bl.kuroco-img.app/v=2026110412/files/user/roster/701/2026-27/5100000015_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2d209f7594021a551b90/refs/kawamata-official.jpg",
+        "reference_visually_reviewed": true,
+        "appearance_observed": "長めに流した金髪のトップと黒い根元、短い側頭部、太い眉、縦長の輪郭、鼻筋、小さい口ひげと顎の薄いひげ、がっしりした体格を確認。生成画でも対応する特徴を目視確認。",
+        "depiction": "アイボリー色の無地ユニフォームで手を上げるディフェンスのイメージ。名前・背番号・成績・出場や活躍の主張は画像に入れていない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 1536x864 pixels or larger, PNG. This is a pregame preview illustration, NOT a recreation of a real match or any documented play.\n\nArt direction: follow the approved black-and-lime sports editorial style viewed in this conversation: near-black #151A18 ground, electric lime #CCF43B diagonal dry-brush marks, warm ivory typography, coarse black ink outlines, hand-drawn pen hatching, expressive brush shadow, limited colors. Clearly an illustration, never photographic, never 3D. Few elements, strong hierarchy, powerful mature editorial drawing.\n\nTwo real people ONLY: Yusuke Endo (遠藤祐亮), Utsunomiya, and Koya Kawamata (川真田紘也), Ryukyu. They were randomly chosen from their official current rosters; their names, individual statistics, participation or performance claims must NOT appear anywhere in the image. No invented players.\nUse these carefully observed official appearance details for likeness:\n- Endo, official profile https://www.utsunomiyabrex.com/player_lp/yusuke_endo/ : Japanese adult male, compact strong athletic frame; very short textured spiky hair with bleached light blond tips and dark roots, tightly faded sides, slightly oval squared jaw, defined cheekbones, dark brows, almond eyes, defined straight nose, full lips, neat black moustache connected to a short close-cropped jaw-and-chin beard, small soul patch. Draw his actual recognizable facial structure, not a generic manga face. Plain dark navy sleeveless basketball kit with thin warm yellow edging; NO lettering, NO logos, NO sponsor marks, NO jersey numerals.\n- Kawamata, official profile https://goldenkings.jp/team/players/detail/id=25882?PlayerID=5100000015 : Japanese adult male, visibly taller and broader than Endo, sturdy powerful center build; thick medium-short wavy blond hair swept across the top with dark roots and shaved short dark sides; strong broad neck, long oval/squared face, straight thick brows, narrow dark eyes, straight nose, small neat moustache with light beard stubble and defined broad chin. Plain ivory basketball kit with dark navy collar and edging, NO lettering, NO logos, NO sponsor marks, NO jersey numerals.\nThese profiles and their photos are appearance references only. Do not paste, trace, collage, or reproduce official photos or their backgrounds.\n\nComposition: text fills the left approximately 46%; energetic two-player basketball matchup fills the right approximately 54%. Draw Endo in the right foreground driving diagonally toward the viewer and the left, holding/protecting one orange basketball low beside his hip, knees bent and torso leaning. Draw taller Kawamata opposite and just behind him on the far right, in a credible low defensive stance, one open hand raised and the other arm out, eyes on the ball. Both faces clearly visible in three-quarter view with their distinct hairstyles and facial hair, separated silhouettes, plausible limb joints and five-finger hands. Ball fully inside frame. Frame players from head to upper thighs, deliberately cropping below the thighs if needed, never cutting their faces or hands. No crowd, no additional people, no realistic arena, no scoreboard, no hoop necessary. Keep all elements calm and sparse outside the action. One sweeping lime brush stroke behind the pair creates motion without obscuring faces.\n\nText, verbatim Japanese and numerals ONLY:\nSmall upper-left kicker: \"試合前展望 / 独自分析\"\nHuge left headline line 1: \"宇都宮\"\nHuge left headline line 2: \"× 琉球\"\nBelow headline, clear bold lime/ivory time: \"11/7 16:00\"\nBottom left, legible footer: \"イラスト（AI生成）\"\nNext to footer with spacing: \"イメージ\"\nUse thick highly legible Japanese gothic lettering; huge headline with subtle ink texture. No other text at all. Do not carry over Culver, Faison, scores, dates, names, team marks, or typography content from any style reference.\nSafe margins at least 5% on every edge; generous clear space behind all text, readable at thumbnail size; footer must remain visible and unobstructed. Text and numbers are supported ONLY by the provided fixed article saying Utsunomiya vs Ryukyu on November 7 at 16:00, pregame preview and independent analysis. Do not add results, points, victory claims, participation predictions, or historical championships.",
+    "generator": {
+      "name": "image_gen",
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "revision_count": 0,
+      "original_output": "/Users/genjo/.codex/generated_images/01a1b408-9c48-7511-a96d-a4f516447228/exec-bca24fec-94df-45b6-b4ed-f8aeec050c18.png",
+      "format": "PNG",
+      "qa_method": "生成PNGをview_imageで実際に閲覧。文字・数値、原稿の留保、公式写真と照合した顔の特徴、手指、人物とボールの収まり、AI表記を目視検品。公式写真の貼り付け・ロゴ・スポンサー文字なし。特定の実戦場面の再現ではない。",
+      "width": 1672,
+      "height": 941,
+      "png_sha256": "6fb613a597df50b6de694b4626a281172fb693962671343b0af5280c3b7afb6c"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-07T03:26:55.397314+00:00",
+  "publication_approved": false
+}
