@@ -730,7 +730,7 @@ def write_news_pages(news, updated):
     return write_list_pages(
         "news", news, lambda part: render_feed(part, grouped=True),
         "新着ニュース一覧",
-        "B.LEAGUE公式・バスケ専門メディアの最新ニュースを自動でまとめた一覧。1日4回更新。",
+        "B.LEAGUE公式・クラブ公式・バスケ専門メディアの最新ニュースを自動でまとめた一覧。1日4回更新。",
         "新着ニュース一覧",
         "",
         updated, per=10)

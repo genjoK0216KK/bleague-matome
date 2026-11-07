@@ -8,6 +8,7 @@
   2. B.LEAGUE公式サイト 順位表 (HTML)
   3. バスケット・カウント RSS
   4. まとめブログの RSS（MATOME_FEEDS。国内の話題＋日本人選手・超有名選手の海外の話題のみ）
+  5. B.PREMIER 各クラブ公式サイトの RSS（CLUB_FEEDS。契約・けが・記録など選手とチームの動きだけ）
 
 出力:
   data/news.json      … 見出し・URL・日付・出典（本文は保存しない）
@@ -20,6 +21,7 @@
   - 取得に失敗しても既存データを壊さない（前回分を維持する）。
 """
 
+import html
 import json
 import os
 import re
@@ -100,12 +102,15 @@ def _run_left():
     return RUN_BUDGET - (_clock() - _run_started)
 
 
-def get(url, request=None):
-    """GET。一時障害だけ最大3回。1URL 60秒・実行全体 RUN_BUDGET 秒を超えない。"""
+def get(url, request=None, run_left=None, pause=None):
+    """GET。一時障害だけ最大3回。1URL 60秒・実行全体 RUN_BUDGET 秒を超えない。
+    run_left・pause を渡すと、別枠の時間予算・礼儀の待ちで動く（クラブ公式サイト用）。"""
     request = request or requests.get
+    run_left = run_left or _run_left
+    pause = SLEEP if pause is None else pause
     started, attempt = _clock(), 0
     while True:
-        left = min(URL_MAX_ELAPSED - (_clock() - started), _run_left())
+        left = min(URL_MAX_ELAPSED - (_clock() - started), run_left())
         if left < MIN_ATTEMPT:
             raise FetchFailure(url, "budget", kind="BudgetExhausted", attempts=attempt)
         attempt += 1
@@ -118,7 +123,7 @@ def get(url, request=None):
             r.encoding = r.apparent_encoding or r.encoding
             r.fetch_attempts = attempt          # 実際の試行回数（回復した場合も記録に残す）
             # 礼儀の待ちも、URLごとの残り時間と実行全体の残り時間を超えない
-            _sleep(min(SLEEP, max(0.0, _run_left()), max(0.0, URL_MAX_ELAPSED - (_clock() - started))))
+            _sleep(min(pause, max(0.0, run_left()), max(0.0, URL_MAX_ELAPSED - (_clock() - started))))
             return r
         except requests.HTTPError as e:
             kind, retry, category = type(e).__name__, status in RETRY_STATUS, "http"
@@ -129,7 +134,7 @@ def get(url, request=None):
         wait = RETRY_WAITS[attempt - 1] if attempt <= len(RETRY_WAITS) else None
         elapsed = _clock() - started
         if (not retry or wait is None or elapsed + wait + MIN_ATTEMPT > URL_MAX_ELAPSED
-                or _run_left() < wait + MIN_ATTEMPT):
+                or run_left() < wait + MIN_ATTEMPT):
             raise FetchFailure(url, category, status, kind, attempt)
         log(f"  一時的な失敗（{kind}{' HTTP ' + str(status) if status else ''}）。{wait}秒後に再試行")
         _sleep(wait)
@@ -148,7 +153,7 @@ def clean(text):
     """全角スペースや連続空白、HTMLの名残を整理する。"""
     if not text:
         return ""
-    text = unicodedata.normalize("NFKC", text)
+    text = unicodedata.normalize("NFKC", html.unescape(text))
     text = re.sub(r"<br\s*/?>", " ", text, flags=re.I)
     text = re.sub(r"<[^>]+>", "", text)
     text = text.replace("　", " ")
@@ -444,7 +449,7 @@ def _child_text(entry, *names):
 _robots_cache = {}
 
 
-def robots_allows(url):
+def robots_allows(url, run_left=None):
     """robots.txt で取得が禁止されていないか確かめる（読めないときは許可とみなす＝従来どおり）。
     実行全体の残り時間が無いときは確認自体をせず None を返す（取得もしない）。
     robots.txt の取得は1回だけで再試行しない。"""
@@ -453,7 +458,7 @@ def robots_allows(url):
     parts = urlsplit(url)
     base = f"{parts.scheme}://{parts.netloc}"
     if base not in _robots_cache:
-        left = _run_left()
+        left = (run_left or _run_left)()
         if left < MIN_ATTEMPT:
             return None   # 予算切れ：robots.txt も読みに行かない（呼び出し側は取得しない）
         rp = robotparser.RobotFileParser()
@@ -466,14 +471,16 @@ def robots_allows(url):
     return _robots_cache[base].can_fetch(UA, url)
 
 
-def fetch_feed_items(name, url, keep):
-    """RSS 1.0（RDF）/ RSS 2.0 / Atom のどれでも見出し・リンク・日付を取り出す。"""
+def fetch_feed_items(name, url, keep, run_left=None, pause=None, source=None):
+    """RSS 1.0（RDF）/ RSS 2.0 / Atom のどれでも見出し・リンク・日付を取り出す。
+    source を渡すと、記録の名前（name）とは別に、表示する出典名として使う。"""
     items = []
-    if _run_left() < MIN_ATTEMPT:
+    run_left = run_left or _run_left
+    if run_left() < MIN_ATTEMPT:
         log(f"!! {name}: 取得時間の上限に達したため取得しません")
         record(name, url, "budget", kind="BudgetExhausted")
         return items
-    allowed = robots_allows(url)
+    allowed = robots_allows(url, run_left)
     if allowed is None:
         log(f"!! {name}: 取得時間の上限に達したため robots.txt を確認できず、取得しません")
         record(name, url, "budget", kind="BudgetExhausted", note="robots.txt 未確認")
@@ -484,7 +491,7 @@ def fetch_feed_items(name, url, keep):
         return items
     try:
         page = None
-        page = get(url)
+        page = get(url, run_left=run_left, pause=pause)
         root = ElementTree.fromstring(page.content)
     except FetchFailure as e:
         log(f"!! {name} の取得に失敗: {e}")
@@ -512,7 +519,7 @@ def fetch_feed_items(name, url, keep):
         items.append({
             "title": title,
             "url": link,
-            "source": name,
+            "source": source or name,
             "date": _parse_rfc822(raw_date) or parse_date(raw_date)
                     or datetime.now(JST).strftime("%Y-%m-%d"),
         })
@@ -527,6 +534,96 @@ def fetch_matome():
     items = []
     for name, url in MATOME_FEEDS:
         items += fetch_feed_items(name, url, matome_relevant)
+    return items
+
+
+# ------------------------------------------------- source: クラブ公式サイト
+
+# B.PREMIER 2026-27 全26クラブ。どのクラブも公式サイトに同じ形の更新情報（/RSS.rdf、Atom）がある。
+# 2026-11-07 に全クラブの robots.txt で取得が許可されていることを確認した。
+# 名前は scripts/team_colors.json・順位表の正式名称と同じにする。
+CLUB_FEEDS = [
+    ("レバンガ北海道", "https://www.levanga.com/RSS.rdf"),
+    ("仙台89ERS", "https://www.89ers.jp/RSS.rdf"),
+    ("秋田ノーザンハピネッツ", "https://northern-happinets.com/RSS.rdf"),
+    ("茨城ロボッツ", "https://www.ibarakirobots.win/RSS.rdf"),
+    ("宇都宮ブレックス", "https://www.utsunomiyabrex.com/RSS.rdf"),
+    ("群馬クレインサンダーズ", "https://g-crane-thunders.jp/RSS.rdf"),
+    ("アルティーリ千葉", "https://altiri.jp/RSS.rdf"),
+    ("千葉ジェッツ", "https://chibajets.jp/RSS.rdf"),
+    ("アルバルク東京", "https://www.alvark-tokyo.jp/RSS.rdf"),
+    ("東京サンロッカーズ", "https://www.sunrockers.jp/RSS.rdf"),
+    ("川崎ブレイブサンダース", "https://kawasaki-bravethunders.com/RSS.rdf"),
+    ("横浜ビー・コルセアーズ", "https://b-corsairs.com/RSS.rdf"),
+    ("富山グラウジーズ", "https://grouses.jp/RSS.rdf"),
+    ("信州ブレイブウォリアーズ", "https://www.b-warriors.net/RSS.rdf"),
+    ("三遠ネオフェニックス", "https://www.neophoenix.jp/RSS.rdf"),
+    ("シーホース三河", "https://go-seahorses.jp/RSS.rdf"),
+    ("名古屋ダイヤモンドドルフィンズ", "https://www.nagoya-dolphins.jp/RSS.rdf"),
+    ("滋賀レイクス", "https://shigalakes.com/RSS.rdf"),
+    ("京都ハンナリーズ", "https://hannaryz.jp/RSS.rdf"),
+    ("大阪エヴェッサ", "https://www.evessa.com/RSS.rdf"),
+    ("神戸ストークス", "https://www.storks.jp/RSS.rdf"),
+    ("島根スサノオマジック", "https://www.susanoo-m.com/RSS.rdf"),
+    ("広島ドラゴンフライズ", "https://hiroshimadragonflies.com/RSS.rdf"),
+    ("佐賀バルーナーズ", "https://ballooners.jp/RSS.rdf"),
+    ("長崎ヴェルカ", "https://www.velca.jp/RSS.rdf"),
+    ("琉球ゴールデンキングス", "https://goldenkings.jp/RSS.rdf"),
+]
+CLUB_SOURCE_SUFFIX = "公式"   # 表示する出典名は「千葉ジェッツ公式」
+CLUB_BUDGET = 120             # クラブ公式サイトの取得に使う時間の上限（ニュースの RUN_BUDGET とは別枠）
+CLUB_PAUSE = 0.5              # クラブごとに別のサイトなので、礼儀の待ちは短め
+CLUB_MAX_AGE_DAYS = 14        # これより古いお知らせは載せない（初回にまとめて流れ込まないように）
+
+# クラブのお知らせは1クラブ週10〜25件と多く、大半はチケット・グッズ・イベント。
+# 選手とチームの動き（契約・けが・記録・受賞・試合日時の変更など）だけを載せる。
+# 試合結果・試合レポートは当サイトの試合結果ページと、天皇杯など全クラブ共通の発表は
+# B.LEAGUE公式のお知らせと重なるので載せない。
+CLUB_KEEP_RE = re.compile(
+    r"契約|加入|退団|移籍|獲得|満了|締結|選手登録|抹消|インジュアリーリスト|負傷|けが|ケガ|怪我|手術|"
+    r"離脱|復帰|引退|就任|退任|解任|キャプテン|ヘッドコーチ|アシスタントコーチ|背番号|トレード|"
+    r"達成|通算|受賞|選出|MVP|日本代表|代表活動|代表候補|オールスター|ライセンス|"
+    r"中止|延期|開始時間.{0,4}変更|処分|制裁|お詫び",
+    re.I,
+)
+CLUB_DROP_RE = re.compile(
+    r"チケット|TICKET|グッズ|販売|商品|求人|募集|アルバイト|パートナー|協賛|スポンサー|スクール|"
+    r"クリニック|ファンクラブ|FANCLUB|6TH MAN|会員|イベント|グルメ|ふるさと納税|ゲスト|来場|観戦|"
+    r"プレゼント|キャンペーン|ポイント|参加レポート|まつり|祭|フェスティバル|アカデミー|"
+    r"U-?1\d|ユース|チア|トライアウト|マッチデー|企画席|シート|ギフト|総選挙|投票|実施のお知らせ|"
+    r"presented by|サプライヤー|提携|"
+    r"_\d{4,}|未定$",   # 試合ごとの自動ページ（例「天皇杯_270106 vs 未定」）
+    re.I,
+)
+
+
+def club_relevant(title):
+    """クラブ公式のお知らせを載せるかどうか（選手とチームの動きだけ）。"""
+    return bool(CLUB_KEEP_RE.search(title)) and not CLUB_DROP_RE.search(title)
+
+
+def fetch_club_news(today=None, feeds=None):
+    """全クラブ公式サイトの更新情報から、選手とチームの動きの見出し・URL・日付だけを集める。
+    ニュース・まとめ・順位表とは別の時間予算（CLUB_BUDGET）で動き、上限に達したら残りは次回に回す。
+    日付が未来（サイト上で固定表示しているページ）と、CLUB_MAX_AGE_DAYS より古いものは載せない。"""
+    today = today or datetime.now(JST).strftime("%Y-%m-%d")
+    oldest = (datetime.strptime(today, "%Y-%m-%d") - timedelta(days=CLUB_MAX_AGE_DAYS)).strftime("%Y-%m-%d")
+    started = _clock()
+
+    def left():
+        return CLUB_BUDGET - (_clock() - started)
+
+    items, seen = [], set()
+    for club, url in feeds or CLUB_FEEDS:
+        source = club + CLUB_SOURCE_SUFFIX
+        for it in fetch_feed_items(source, url, club_relevant, run_left=left, pause=CLUB_PAUSE, source=source):
+            key = (club, it["title"])
+            if not (oldest <= it["date"] <= today) or key in seen:
+                continue
+            seen.add(key)
+            it["club"] = club
+            items.append(it)
+    log(f"クラブ公式: {len(items)}件")
     return items
 
 
@@ -671,6 +768,15 @@ def main():
         save_json(os.path.join(DATA_DIR, "standings.json"), standings)
     else:
         log("順位表は取得できなかったため、既存データを維持します")
+
+    # クラブ公式サイトのお知らせ（別枠の時間予算。ニュース・まとめ・順位表の取得のあとに行う）
+    club_in = fetch_club_news()
+    if club_in:
+        merged, club_added = merge_news(load_json(news_path, []), club_in)
+        save_json(news_path, merged)
+        added += club_added
+    else:
+        log("クラブ公式のお知らせは新しく載せるものが無いため、既存データを維持します")
 
     # 貢献度ランキング（stats）はここでは作らない。保存済みの確定結果から
     # update_match_features.py / update_results.py の後で集計する（ニュース取得の成否と無関係）。

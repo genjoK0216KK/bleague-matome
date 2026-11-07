@@ -20,6 +20,7 @@ from . import browse_ui, day_articles, next_preview, official_data, preview_data
 
 OWN_LIMIT = 6        # 独自記事の件数
 OFFICIAL_LIMIT = 5   # 公式発信の件数
+CLUB_LIMIT = 5       # クラブ公式の件数
 MEDIA_LIMIT = 3      # 外部メディアの件数
 MATOME_LIMIT = 3     # 他社まとめの件数
 OFFICIAL_SOURCES = ("B.LEAGUE公式",)
@@ -142,12 +143,14 @@ def _update_row(item, kind):
     src = escape(item.get('source', ''))
     return ('<li><a href="' + escape(item['url']) + '" target="_blank" rel="noopener nofollow">'
             + escape(item.get('title', '')) + '</a>'
-            '<span class="upd-meta">' + kind + '・' + src + '・' + meta + '</span></li>')
+            # クラブ公式は出典名（「千葉ジェッツ公式」）だけで種類が分かるので、種類は重ねて書かない
+            '<span class="upd-meta">' + ('' if item.get('club') else kind + '・') + src + '・' + meta + '</span></li>')
 
 
 def updates_feed(news, matome, x_list_url=''):
     official = [n for n in news if n.get('source') in OFFICIAL_SOURCES][:OFFICIAL_LIMIT]
-    media = [n for n in news if n.get('source') not in OFFICIAL_SOURCES][:MEDIA_LIMIT]
+    club = [n for n in news if n.get('club')][:CLUB_LIMIT]
+    media = [n for n in news if n.get('source') not in OFFICIAL_SOURCES and not n.get('club')][:MEDIA_LIMIT]
     others = list(matome)[:MATOME_LIMIT]
     body = ('<section class="home-updates" id="updates"><div class="sec-h"><h2>公式・外部の更新</h2></div>'
             '<p class="section-note">外部サイトへのリンクです。当サイトの記事ではありません。</p>')
@@ -159,6 +162,7 @@ def updates_feed(news, matome, x_list_url=''):
                  '<a class="day-detail" href="x.html">もっと見る ›</a></div>')
     groups = (
         ('公式発信', 'B.LEAGUE公式サイトのお知らせ', official, 'news.html'),
+        ('クラブ公式', 'クラブ公式サイトのお知らせ（契約・けが・記録など）', club, 'news.html'),
         ('外部メディア', 'バスケ専門メディアの新着', media, 'news.html'),
         ('他社まとめ', '他サイトのまとめ記事', others, 'matome.html'),
     )
