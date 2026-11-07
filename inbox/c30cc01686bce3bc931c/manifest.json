@@ -1,0 +1,90 @@
+{
+  "id": "c30cc01686bce3bc931c",
+  "article_path": "article-stats-20261107.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261107.html",
+  "source_commit": "",
+  "source_blob_sha": "c42901176b7f1d3a9854979365b242194026fb1f",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "4b1348312731cc46c3658d2e4de88af7c13fd193555e6919a216fcd4be23156c",
+  "last_observed_blob_sha": "c42901176b7f1d3a9854979365b242194026fb1f",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c30cc01686bce3bc931c/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c30cc01686bce3bc931c/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-07T12:01:35.072455+00:00",
+  "creation_event_id": "f3bb243befd96ba7c1b9",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/c30cc01686bce3bc931c/thumbnail.png",
+  "image_sha256": "9dd0b791df243e718f92a1ba9969b12dfb82bdc49fa0b33378f7215d6f68b516",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "c42901176b7f1d3a9854979365b242194026fb1f",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.07",
+      "貢献度1位",
+      "アイマク",
+      "EFF 41",
+      "17得点・23リバウンド",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_fixed_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c30cc01686bce3bc931c/source.html",
+        "article_url": "https://basuke-matome.jp/article-stats-20261107.html",
+        "usage": "記事内容の根拠。h1・lead・TOP3・TOP10の先頭行で日付、主役、当日の貢献度1位、EFF 41、17得点、23リバウンドを照合。外部資料の成績は使用しない。"
+      },
+      {
+        "type": "article_fixed_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c30cc01686bce3bc931c/source.txt",
+        "usage": "記事内容の根拠。固定HTMLと上記数値・人名の一致を確認。国籍別ランキング未掲載の留保に従い、国籍による表現は入れない。"
+      },
+      {
+        "type": "official_appearance_only",
+        "url": "https://www.storks.jp/team/players/detail/id=22002?PlayerID=51000635",
+        "image_url": "https://storks.bl.kuroco-img.app/v=1788784824/files/user/%2300_%E3%83%95%E3%82%A1%E3%83%BC%E3%83%80%E3%82%A6%E3%82%B9.jpg",
+        "usage": "神戸ストークス公式プロフィールの本人写真をダウンロードしview_imageで目視。容姿だけを参照し、写真・ロゴ・スポンサー文字を成果画像に貼り付けていない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "view_imageで確認。黒×ライム、太字日本語、インク・ブラシの絵柄だけを参照。見出し・選手・日付・数値は持ち越さない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ファーダウス・アイマク",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿のタイトル・リード・貢献度TOP3で最も大きく扱われる当日貢献度1位の選手。",
+        "source": "神戸ストークス公式プロフィール",
+        "url": "https://www.storks.jp/team/players/detail/id=22002?PlayerID=51000635",
+        "image_url": "https://storks.bl.kuroco-img.app/v=1788784824/files/user/%2300_%E3%83%95%E3%82%A1%E3%83%BC%E3%83%80%E3%82%A6%E3%82%B9.jpg",
+        "observed_features": "黒髪を上・後方へ流したボリュームのあるトップ、短い側頭部と長さのある襟足、太い眉、長めの輪郭、鼻筋、独立した口ひげとあごひげ、頬は比較的すっきり。公式写真と生成画像を目視で比較。",
+        "depiction": "本人1人が両手でボールを確保する動きのある手描きイラスト。特定の実試合場面の再現ではなく、成績をもとにしたイメージ。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story / Japanese editorial basketball thumbnail.\nCreate exactly ONE finished PNG, wide landscape 16:9, target 1536x864 or larger, opaque background. This is a new thumbnail for バスケまとめ dated 2026.11.07.\nUse the approved black-and-lime ink illustration aesthetic visible in the conversation: near-black #151A18 background, electric lime #CCF43B dry-brush diagonal strokes, off-white heavy bold Japanese typography, sparse elements, energetic editorial screenprint. Do NOT copy the previous sample's player, name, numbers, date, score or composition.\nSUBJECT: exactly one real professional basketball player, Fardaws Aimaq (ファーダウス・アイマク), the article's central subject. Draw a recognizable HAND-DRAWN INK ILLUSTRATION based on the official portrait just inspected, not a photo and not a cutout. Observed appearance: tall broad athletic frame; light olive skin translated into warm off-white ink shadows; thick black hair swept upward and backward with substantial volume on top, short tapered sides and a little length at the nape; strong dark eyebrows; brown deep-set eyes; prominent fairly straight nose; thick black moustache separate from the prominent pointed chin goatee, relatively clean cheeks and jaw sides; long oval angular face. Preserve these identifying traits, do not substitute a generic curly-haired player or a full beard.\nACTION/COMPOSITION: Player dominates the LEFT 43% of canvas, captured in a dynamic twisting upward rebound catch, both hands securing a single orange basketball slightly above and to the left of his head. Head in three-quarter view remains clear, face not obscured by forearms. Muscular shoulders and a tilted torso imply motion; crop only the lower torso at bottom intentionally. Keep entire basketball, both hands, fingertips, elbows and head inside the canvas with generous margin. Anatomically plausible five-finger hands touching ball, exactly two arms. Plain sleeveless dark teal-black basketball uniform, subtle teal piping only, absolutely no team/league/sponsor logos, no brand text, no jersey lettering or numbers. No other players, no spectator figures. No hoop required. Abstract lime brush sweep evokes motion, never an actual identifiable match moment.\nTYPE/COMPOSITION: Text takes the RIGHT 54%, ample clean dark negative space, strong right-side aligned visual block and no overlap with player or ball. Small site/date line at upper-right. Huge bold Japanese headline and extremely large brush numeral 41, with EFF immediately beside 41 so it is unambiguously contribution metric, never points. Name medium-large. Supporting stats smaller. Do not add decorative data or unrelated words. All text has comfortable safe margins of at least 5% from outer edges.\nEXACT VISIBLE TEXT, correctly spell all Japanese:\n\"バスケまとめ\"\n\"2026.11.07\"\n\"貢献度1位\"\n\"アイマク\"\n\"EFF 41\"\n\"17得点・23リバウンド\"\nBottom in legible off-white type on a dark clear strip:\n\"イラスト（AI生成）\"\n\"成績をもとにしたイメージ\"\nThese statistics are ONLY from the supplied frozen article: 2026-11-07, Aimaq is first in EFF with 41, 17 points, 23 rebounds. Do not show a season ranking, MVP, national-origin ranking, game score, game-winning play or any unsupported claim.\nSTYLE FINISH: powerful hand-drawn brushwork and ink hatching, readable face with clear lines, graphic tonal blocks, restrained orange only for the ball. No photorealism, no 3D render, no pasted official photo, no league/team logos. The pose is an illustrative interpretation of statistics, not a recreation of a documented real play. Make a polished, immediately readable sports editorial thumbnail with ONE image only.\n\nSOLE REVISION\nEdit this generated basketball thumbnail only to fix edge clipping and margins. Preserve the existing Japanese text EXACTLY, the real player Fardaws Aimaq's recognizable face, hair and moustache/goatee, the action pose, both hands holding the one basketball, the black/lime ink style, colors and overall left-player/right-type arrangement. Keep all text and numbers: バスケまとめ / 2026.11.07 / 貢献度1位 / アイマク / EFF 41 / 17得点・23リバウンド / イラスト（AI生成） / 成績をもとにしたイメージ.\nThe current image clips the player's far-left forearm/elbow and has the ball almost touching the top edge and the rightmost text very close to the edge. Fix this by zooming OUT the entire composition about 12%, and completing the missing left arm/elbow naturally. Keep the final canvas wide 16:9, at least 1536 pixels wide. Create a consistent margin of dark #151A18 background around the outer edges, extending the lime brush texture unobtrusively. Both elbows, both hands, all fingers, entire ball, hair, and every character must be fully inside the frame, no less than 4-5% of canvas width/height from their relevant edge. Lower torso can still extend to and be intentionally cropped at the bottom. Do not shrink face/text unnecessarily beyond this margin fix. Keep athlete anatomy correct and exactly two arms. Do not add any text, logos, sponsors, numbers, people or objects. Do not turn it into a photo. This is the sole final correction.",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "revision_calls": 1,
+      "final_source_path": "/Users/genjo/.codex/generated_images/01a1b5e8-9167-74c3-8f79-08f5abeaf073/exec-0e8f1ee3-58b8-4ee2-8453-739038c61e44.png",
+      "output_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c30cc01686bce3bc931c/generated.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "9dd0b791df243e718f92a1ba9969b12dfb82bdc49fa0b33378f7215d6f68b516",
+      "qa_method": "内蔵ツールの生成画像表示と保存後のview_imageで目視。初回は左腕の見切れと余白不足を不合格とし1回修正。最終版の文字・数値・日付・留保・髪型/輪郭/ひげ/目鼻・2本の腕・指/手とボールの接触・各部の収まり・AI表記を実確認。下半身の省略は意図した上半身構図。公式写真・チーム/リーグロゴ・スポンサー表記なし。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-07T12:11:19.903752+00:00",
+  "publication_approved": false
+}

@@ -1,0 +1,79 @@
+{
+  "id": "9bdde677628afe3c1636",
+  "article_path": "article-results-one-next-20261107.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261107.html",
+  "source_commit": "",
+  "source_blob_sha": "bf917989601e20685d877acebc2cba781ca4cb15",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "2ea76e77eda7d265a81e24aef7e1744cf873db32d70f51f66c07f58191dbb067",
+  "last_observed_blob_sha": "bf917989601e20685d877acebc2cba781ca4cb15",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9bdde677628afe3c1636/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9bdde677628afe3c1636/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-07T12:01:34.838990+00:00",
+  "creation_event_id": "a4afe655af0ba95389ab",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/9bdde677628afe3c1636/thumbnail.png",
+  "image_sha256": "8d0c29573903e157316170e9d49fa83e7a92f24fd9038fe47e781c56f93a6bec",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "bf917989601e20685d877acebc2cba781ca4cb15",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.07",
+      "試合結果",
+      "当日EFF",
+      "ポジション別TOP3",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9bdde677628afe3c1636/source.html",
+        "role": "本文の根拠（固定HTML）",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261107.html",
+        "blob_sha": "bf917989601e20685d877acebc2cba781ca4cb15"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9bdde677628afe3c1636/source.txt",
+        "role": "本文の根拠（固定文章）",
+        "used_content": "2026年11月7日の試合結果と当日のEFF・ポジション別TOP3",
+        "qualifiers_preserved": "当日の公式EFF、リーグ別・登録ポジション別の集計。今季平均や予想とは区別。兼任・同率順位の留保を損なう個人成績、順位、スコアは画像に記載しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイル参照のみ。選手名・日付・成績は引き継がない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "小西 聖也",
+        "selection": "ランダム",
+        "selection_method": "固定HTMLの当日EFF表から重複を除いた36選手をsecrets.choiceで1人抽選",
+        "selection_pool_count": 36,
+        "article_mentions": "固定本文のB.ONE・PG/SG当日EFF表",
+        "official_profile_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000117",
+        "official_profile_image_url": "https://www.bleague.jp/files/user/roster/744/2026-27/51000117_03.png",
+        "official_club_url": "https://broncos20.jp/news/detail/id=60113",
+        "official_club_image_url": "https://broncos20.bl.kuroco-img.app/v=1785222270/files/user/202607281604_1.png",
+        "local_reference_files": [
+          "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9bdde677628afe3c1636/reference-konishi-profile.png",
+          "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9bdde677628afe3c1636/reference-konishi-official.png"
+        ],
+        "appearance_checked": "公式写真を目視。短く厚みのある黒髪、中央付近の分け目と緩い毛流れ、縦長の卵形の輪郭、ひげなし、目鼻・眉・耳の特徴を確認。生成後のイラストと照合。",
+        "usage": "顔と体格の参照のみ。写真は合成しない。名前・個人成績・出場・活躍の記述は画像に入れない。無地のユニフォーム、ロゴなし。実際の試合場面を再現しないドリブルのイメージ。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate ONE finished Japanese basketball news thumbnail as a PNG, landscape 1536 x 864 (16:9).\n\nEditorial content is based ONLY on the supplied fixed article dated 2026-11-07: it covers game results and the day's official EFF top three by league and registered position. It is not a season-average ranking or a prediction. Do not invent scores, results, player statistics, or claims about the depicted player's performance.\n\nArt direction: match the approved バスケまとめ black-and-lime v3 aesthetic: nearly black #151A18 ground, electric lime #CCF43B dry-brush strokes, creamy white heavyweight Japanese typography, bold hand-drawn ink contours, expressive brush hatching and restrained paper texture. Strong clear shapes and very few elements. Clearly an illustration, never photorealistic, never a photo collage.\n\nPerson: depict exactly ONE real basketball player, Seiya Konishi / 小西聖也, as a recognizable ink illustration. He was randomly chosen from the 36 unique players in the fixed article's daily EFF tables, not selected as the article's star. Official appearance references were visually checked at https://www.bleague.jp/roster_detail/?PlayerID=51000117 and its portrait https://www.bleague.jp/files/user/roster/744/2026-27/51000117_03.png, plus the official club portrait at https://broncos20.jp/news/detail/id=60113.\nObserved features to preserve: young adult Japanese man, athletic lean guard build; short, thick dark hair with a loose near-center part and slightly wavy lifted strands, short clean sides; clean-shaven; elongated oval face, smooth cheeks and a moderately tapered rounded chin; prominent ears; dark straight brows; alert almond-shaped dark eyes, medium straight nose with a gently rounded tip, medium lips. Keep his face readable in a three-quarter view, with his real youthful face proportions, not a generic muscular invented athlete.\n\nComposition: player on the LEFT half in a dynamic low, forward drive, torso leaning diagonally toward center, knees bent, one hand clearly contacting the top/side of a single orange basketball during a controlled dribble, opposite arm naturally extended for balance. Show head, both shoulders, hands, and enough legs to make the action clear. Ball and both hands fully inside the canvas; natural fingers and joints, exactly two arms. A sharp lime brush arc suggests momentum behind him. No second person, no crowd, no court furniture. His uniform is plain unbranded charcoal with cream highlights: no logo, no sponsor, no name, no number, no recognizable team mark. Draw the entire scene from scratch in ink; do not embed official photos. This is a conceptual basketball movement illustration, not a reconstruction of an actual game.\n\nRIGHT half: generous clean dark negative space for three stacked typographic lines. Japanese text must be reproduced EXACTLY, bold, large, highly legible on a mobile thumbnail. Keep every glyph inside generous safe margins and separate text clearly from the body, ball and brush art.\nTop small brand text: 「バスケまとめ」\nTop small date: 「2026.11.07」\nMain headline, large white: 「試合結果」\nSecond line, large lime: 「当日EFF」\nThird line, moderately large white: 「ポジション別TOP3」\nBottom footer in clear cream type, legible and uncropped: 「イラスト（AI生成）」 and 「イメージ」.\n\nRender only those exact six text entries plus the date. Do not render the person's name, team, jersey number, performance, participation claims or scores. Do not use the wording 成績をもとにしたイメージ. No team logos, league logos, watermarks, English slogans, extra badges or decorative random text. Keep restrained editorial energy and a premium clean hierarchy.",
+    "generator": "built-in image_gen.imagegen; 1 generation; 0 revisions; PNG 1672x941; no API/CLI generation",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-07T12:07:59.796976+00:00",
+  "publication_approved": false
+}

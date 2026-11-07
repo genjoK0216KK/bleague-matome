@@ -1,0 +1,81 @@
+{
+  "id": "75a5c2e5b4ddddc773c3",
+  "article_path": "article-games-20261107.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261107.html",
+  "source_commit": "",
+  "source_blob_sha": "ecaad611a64111c4ce3567911f26ec9c8baa4849",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "2ea76e77eda7d265a81e24aef7e1744cf873db32d70f51f66c07f58191dbb067",
+  "last_observed_blob_sha": "ecaad611a64111c4ce3567911f26ec9c8baa4849",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/75a5c2e5b4ddddc773c3/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/75a5c2e5b4ddddc773c3/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-07T12:01:34.450480+00:00",
+  "creation_event_id": "9e90d6dcbd852ea33948",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/75a5c2e5b4ddddc773c3/thumbnail.png",
+  "image_sha256": "9155600fce6b3c7f4b3365a7e2dae24f8b3c5f85250ebb3d6e82bd7f2909ddac",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "ecaad611a64111c4ce3567911f26ec9c8baa4849",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.07",
+      "試合結果",
+      "当日のEFF",
+      "リーグ別・ポジション別TOP3",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/75a5c2e5b4ddddc773c3/source.html",
+        "role": "本文根拠（固定版HTML）",
+        "article_url": "https://basuke-matome.jp/article-games-20261107.html",
+        "verified_blob_sha": "ecaad611a64111c4ce3567911f26ec9c8baa4849",
+        "used_for": "11/07の試合結果、当日の公式EFFによるリーグ別・ポジション別TOP3。今季平均・予想ではない。個人名・個人成績・試合スコアは画像に掲載しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/75a5c2e5b4ddddc773c3/source.txt",
+        "role": "本文根拠（固定版文章）",
+        "used_for": "日付・見出し・選出区分・本文掲載選手36名を確認。公式登録ポジションを当日の起用位置と断定せず、実際の試合場面も再現しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "制作・検品手順のみ"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済み絵柄のみ。view_imageで確認。選手・氏名・成績・日付は継承しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ハイデン・コヴァル",
+        "latin_name": "Hayden Koval",
+        "selection": "ランダム",
+        "selection_reason": "本文は複数リーグ・ポジションの比較記事で、特定の主役選手に絞れないため。",
+        "selection_method": "source.txtの順位表から、掲載順の選手・所属欄を重複排除した36名を母集団とした。Python random.Random('75a5c2e5b4ddddc773c3').choice(pool)による再現可能なランダム抽選。",
+        "source_url": "https://www.bleague.jp/roster_detail/?PlayerID=43437",
+        "source_title": "B.LEAGUE公式 ハイデン・コヴァル選手プロフィール",
+        "official_photo_url": "https://www.bleague.jp/files/user/roster/2728/2026-27/43437_03.png",
+        "reference_local_path": "/tmp/basuke-75a5c2e5b4ddddc773c3/hayden-koval-official.png",
+        "role": "容姿のみを参照。記事本文の内容・数値の根拠には使わない。",
+        "appearance_checked": "公式写真をview_imageで実見。短い明るい茶髪と横へ流れる前髪、細長い顔、目鼻、耳、ひげのない顎、長い首と長身の体格を確認し、生成後も照合した。",
+        "depiction": "本人の特徴を手描きインク調で描いた1人のプレー姿。両手でボールを確保する動きのイメージ。実際の試合場面・得点・出場・活躍を示すものではない。",
+        "restrictions_checked": "画像に選手名、チーム名、背番号、個人成績を載せず、公式写真の貼付、チーム・リーグ・スポンサーロゴも使用していない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story / Japanese editorial sports thumbnail.\nEdit the first reference thumbnail into ONE new finished 16:9 thumbnail, 1600x900 pixels or larger. Preserve its approved bold hand-ink and dry-brush illustration language, black #151A18, electric lime #CCF43B, warm ivory and orange basketball. Completely replace its player, text, date, statistics and composition with this specification. Do not carry over any player, name, number, score, or date from reference 1.\nReference 1 is STYLE ONLY: B-culver-black-lime-v3.png.\nReference 2 is FACE AND BUILD ONLY: the official portrait of real basketball player Hayden Koval (ハイデン・コヴァル). Do NOT paste the photograph or recreate its sponsor lettering, logo, number, or photographic texture. Draw a new clearly hand-illustrated depiction of this exact real player, not an invented person. He has short light-brown hair with side-swept textured fringe and closely trimmed sides, fair skin, a long narrow clean-shaven face, prominent ears, straight long nose, light eyes, defined cheekbones and angular jaw, long neck and very tall lean athletic proportions. Keep these specific features recognizable in cream-and-black expressive ink with controlled shading, not photorealism.\nComposition: left 55 percent is spacious typography. Right 45 percent is one dynamic three-quarter-view illustration of Koval leaping and twisting while securing an orange basketball with BOTH hands high near his right shoulder in an imagined rebound movement. Show the full basketball, both hands with clear plausible finger anatomy, head and torso with a bent knee visible; no other player, no shadow person. His face remains unobscured and clearly readable. Simple unbranded dark jersey with ivory/lime edge accents, absolutely no chest logo, no sponsor, no name, no jersey number. Use one broad diagonal lime brush swash behind the athlete, subtle court hints only, plenty of dark negative space, minimal details. It is an imagined basketball action, not a reconstruction of any recorded moment or a claim of performance.\nExact visible text only, with this hierarchy:\nSmall top-left brand: 「バスケまとめ」\nSmall top-left date under brand: 「2026.11.07」\nVery large bold ivory Japanese headline on left: 「試合結果」\nVery large bold lime second headline on left: 「当日のEFF」\nReadable supporting line below, in ivory: 「リーグ別・ポジション別TOP3」\nReadable bottom-left disclosure: 「イラスト（AI生成）」\nNext to that bottom disclosure: 「イメージ」\nRender all these text strings correctly, without the surrounding quotation marks. Keep both headline lines visually independent from the player, with wide margins and no overlap. TOP3 describes the article's league and position categories, not this depicted player. No player name, no team name, no individual statistic, no game score, no claims about selection, success or participation. The fixed manuscript is a report dated 2026.11.07 about game results and same-day official EFF, divided by league and position, not season-average or forecast rankings. Do not add any further words or invented facts. No league logos, team logos, sponsor marks, watermarks, official-photo collage, photorealism, or real game reconstruction. Maintain comfortable safe margins of at least 55px; no cut-off text, face, fingers or ball. Produce exactly ONE final PNG thumbnail.",
+    "generator": "内蔵 image_gen（image_gen__imagegen）。初回生成1回、修正0回。PNG 1672x941。SHA-256: 9155600fce6b3c7f4b3365a7e2dae24f8b3c5f85250ebb3d6e82bd7f2909ddac",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-07T12:04:35.058105+00:00",
+  "publication_approved": false
+}
