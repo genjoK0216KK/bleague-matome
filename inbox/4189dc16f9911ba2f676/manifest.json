@@ -1,0 +1,88 @@
+{
+  "id": "4189dc16f9911ba2f676",
+  "article_path": "article-daily-20261108.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261108.html",
+  "source_commit": "",
+  "source_blob_sha": "32c24f2566d38b170476b58305519d90be5f3cfd",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "a1b506eba29744422cc8ae8d113a777ffb86d0a36bff01386bbd59bfb3e48d65",
+  "last_observed_blob_sha": "32c24f2566d38b170476b58305519d90be5f3cfd",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4189dc16f9911ba2f676/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4189dc16f9911ba2f676/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-07T23:22:39.336186+00:00",
+  "creation_event_id": "3041ddcb01ad2b33c749",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/4189dc16f9911ba2f676/thumbnail.png",
+  "image_sha256": "429ceb61dda6f1e2f103a2469e27885256f1c065b9fbd8a71586caa49587827e",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "32c24f2566d38b170476b58305519d90be5f3cfd",
+    "text_lines": [
+      "名古屋D",
+      "開幕",
+      "11連勝",
+      "名古屋D 93–80 富山",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4189dc16f9911ba2f676/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261108.html",
+        "use": "本文・見出し・スコアの根拠。ローカル固定HTMLのGit blob形式SHA-1を標準ライブラリで算出して指定値との一致を確認。gitコマンド未使用。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4189dc16f9911ba2f676/source.txt",
+        "use": "名古屋Dの開幕11連勝、名古屋D 93対80 富山を確認。本文の次節は予定・連勝継続は未確認のため、次節や将来の勝利は画像に記載しない。"
+      },
+      {
+        "type": "official_player_appearance_only",
+        "url": "https://nagoya-dolphins.jp/team/players/detail/id=14611?PlayerID=14301",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026110808/files/user/roster/729/2026-27/14301_01.jpg",
+        "use": "容姿と実在選手の同定だけに使用。外部ページの成績を画像の根拠には使用しない。公式写真は目視参照のみで完成画像に貼り付けていない。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認。黒×ライム、太い日本語、インク・ブラシ表現の参照。氏名・成績・スコア・日付は転用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "齋藤拓実",
+        "name_in_source": "斎藤拓実",
+        "selection": "ランダム",
+        "selection_reason": "記事の主役は名古屋Dのチーム連勝記録で、ヘンリーと斎藤拓実はそれぞれ1文の扱い。本文に名前が出ている2選手 ['ヘンリー','斎藤拓実'] からPython secrets.choiceで1回抽選し、斎藤拓実を選択。",
+        "reference_source": "名古屋ダイヤモンドドルフィンズ公式選手プロフィール",
+        "reference_url": "https://nagoya-dolphins.jp/team/players/detail/id=14611?PlayerID=14301",
+        "reference_image_url": "https://bleague.bl.kuroco-img.app/v=2026110808/files/user/roster/729/2026-27/14301_01.jpg",
+        "visually_checked_reference": true,
+        "observed_features": "黒いストレートの丸い短髪、眉にかかる前髪、細めの目、なだらかに細くなる輪郭、ひげなし、細身のガード体型を公式写真と完成画像で目視確認。",
+        "depiction": "ドリブル姿のイラスト。特定の試合場面の再現ではなくイメージ。無地の赤いユニフォーム、ロゴ・スポンサー・背番号なし。画像中に選手名・個人成績・出場や活躍の説明なし。"
+      }
+    ],
+    "prompt": "[初稿・実使用プロンプト]\nUse case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail, wide 16:9 canvas, ideally 1792x1008 pixels (width at least 1000). This is a new original graphic for バスケまとめ.\n\nSOURCE-LIMITED TEXT: The article's team subject is Nagoya Diamond Dolphins, who beat Toyama 93–80 and reached eleven consecutive wins from the season opener. No other sporting claims. The player is a randomly selected illustrative representative, NOT the asserted hero of that match. Do not imply recreation of a real game moment.\n\nMAIN SUBJECT: Depict the real basketball player TAKUMI SAITO (齋藤拓実, called 斎藤拓実 in the article), and nobody else. His appearance was just visually checked in his official Nagoya Diamond Dolphins roster portrait https://nagoya-dolphins.jp/team/players/detail/id=14611?PlayerID=14301 and https://bleague.bl.kuroco-img.app/v=2026110808/files/user/roster/729/2026-27/14301_01.jpg . Reflect that specific observed likeness, not a generic fictional basketball player: Japanese man aged about 31, youthful clean-shaven oval face, narrow gently tapered jaw and rounded chin, straight small-medium nose, slightly hooded narrow almond dark eyes, straight subdued eyebrows, closed thin upper lip and slightly fuller lower lip, light warm skin. Straight shiny black rounded mop-top haircut with thick fringe almost to the eyebrows, a very small off-center split in the fringe, short neat sides at the ears. Slim compact athletic point-guard build with toned arms, not a towering bulky center. Front-three-quarter face remains large, clear and well illuminated in the illustration, with no beard, moustache, afro, curls, long hair or exaggerated facial features. No player name anywhere on the image.\n\nACTION/COMPOSITION: Create an energetic low forward dribble stance on the LEFT 46% of the composition, torso leaning forward, knees flexed, one hand naturally over and touching the basketball in the lower left foreground, the other arm bent naturally for balance. Ball stays fully inside the canvas and is clearly his prop. Show head, both arms, both hands and body through knees, with a deliberate lower crop below knees if necessary. Anatomically clear two arms and two hands only. No invisible limbs, fused fingers, extra fingers, or oversized hands. Face stays around upper left third, leaving a generous safe margin. The player wears a completely PLAIN RED sleeveless basketball jersey with black edge trim and matching red shorts: no team logo, league logo, sponsor text, crest, letters or uniform numbers at all. This is an imagined motion illustration, never a photo or a traced/pasted official portrait.\n\nDESIGN: Match the already approved black/lime brush-ink sports style: near-black green #151A18 background, explosive diagonal lime #CCF43B dry-brush streaks behind the athlete, ivory and black hand-drawn ink/crosshatch strokes on the figure, small orange basketball accent and restrained jersey red. Clearly hand-painted editorial sports illustration with rough screenprint texture and dramatic but readable linework. Large simple composition, few elements. Change the pose and placement from a standard right-side jump-shot layout. NO photorealism, photographic collage, 3D rendering, arena photograph, crowd or additional players.\n\nTYPOGRAPHY: RIGHT 51% is clean and readable. Use strong bold Japanese Gothic, crisp strokes, high contrast, well-spaced text. The only visible text must be these exact lines:\n「名古屋D」\n「開幕」\n「11連勝」\n「名古屋D 93–80 富山」\n「イラスト（AI生成）」\n「イメージ」\nDo NOT print the Japanese quote brackets. \"名古屋D\" is upper-right ivory. \"開幕\" below it, medium-large ivory. \"11連勝\" is the dominant very large lime headline: make 11 exceptionally big but keep 連勝 boldly legible, on the same line if it fits. A simple restrained lime brush underline. \"名古屋D 93–80 富山\" is a clearly team-associated smaller ivory result line beneath the main headline. No player statistic or individual achievement, no player name, no date, no other numbers or words. Place the two required labels together at the bottom on clear dark negative space, fully legible and uncut: イラスト（AI生成）   イメージ. At least 4% outer safe margins for text and all critical face/hands/ball details. No typographic overlap with the athlete. Output exactly one high-quality final thumbnail.\n\n[修正1回・実使用プロンプト]\nEdit this single existing 16:9 basketball thumbnail with ONE targeted layout repair: eliminate accidental clipping and increase outer safe margins. Keep the exact same real player identity (Takumi Saito / 齋藤拓実), face, straight black fringe, dribble action, plain red uniform, hand anatomy, black #151A18 and lime #CCF43B palette, hand-drawn ink/crosshatching style, all six text lines and their hierarchy. No new subjects or text.\n\nReduce and reposition the existing player/ball illustration to approximately 82% of its current size within the LEFT 46% of the canvas. Keep his face large enough to recognize. The ENTIRE top of the black hair must be comfortably inside the picture with at least 40 pixels dark/lime background above it. The ENTIRE orange basketball must be visible as a complete round circle with at least 40 pixels clearance from BOTH the left edge AND the bottom edge. Show both hands and all fingers clearly, retain exactly two arms and two hands. Extend the dark lime-brush background naturally around the scaled illustration. The knees may end in an intentional crop at the bottom, but no cropping whatsoever of ball, hands, head, or hair. Do NOT add a frame or blank border.\n\nSlightly shrink and inset the RIGHT typography as necessary so every line has at least 50 pixels clear of the right and top canvas boundaries, and keep labels safely above the bottom. Preserve these exact visible lines, do not add others:\n名古屋D\n開幕\n11連勝\n名古屋D 93–80 富山\nイラスト（AI生成）\nイメージ\n\nMaintain a single cohesive professionally composed illustration with the same energetic impact. No player name, uniform number, sponsor mark, team logo, league logo, photo, invented game moment, or other text. This is a representative player illustration labeled イメージ. Preserve wide approximately 16:9 canvas, at least 1000 pixels wide. Output exactly one repaired image.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "revisions": 1,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1b852-3c11-7a52-b5fc-45ebd6ccbffd/exec-57f76f04-7871-4d89-998c-18d8b4272f77.png",
+      "qa_method": "生成画像を実際に表示して目視検品。初稿の頭頂部とボールの見切れを1回修正し、修正版の全文字・11連勝・93–80・人物の特徴・2本の腕と両手・顔とボールの収まり・余白・ロゴ不使用・AI注記を確認。",
+      "publication": "未実施",
+      "ready_command": "未実行"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-07T23:26:34.548857+00:00",
+  "publication_approved": false
+}
