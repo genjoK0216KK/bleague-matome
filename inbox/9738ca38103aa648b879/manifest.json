@@ -1,0 +1,101 @@
+{
+  "id": "9738ca38103aa648b879",
+  "article_path": "article-daily-20261107.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261107.html",
+  "source_commit": "",
+  "source_blob_sha": "865f7631f569154efb398e7368319bd932a406cd",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "be48e80373d84f9c26fcfa0137cbdb3bbe3e85e4f54fbfcb943fa4dcb668da96",
+  "last_observed_blob_sha": "865f7631f569154efb398e7368319bd932a406cd",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9738ca38103aa648b879/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9738ca38103aa648b879/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-07T10:28:09.225680+00:00",
+  "creation_event_id": "09f08dc15ea321095f8b",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/9738ca38103aa648b879/thumbnail.png",
+  "image_sha256": "be241cc36317982ce8b63b917f4c53e887be6195d4edc3ca196751f96cb6e5d0",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "865f7631f569154efb398e7368319bd932a406cd",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.07",
+      "第2延長の",
+      "激闘",
+      "宇都宮が競り勝つ",
+      "宇都宮 79–76 琉球",
+      "イラスト（AI生成）　イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9738ca38103aa648b879/source.html",
+        "role": "固定版本文。試合内容・日付・スコア・見出しの唯一の根拠（source.txtと併用）",
+        "article_url": "https://basuke-matome.jp/article-daily-20261107.html",
+        "source_blob_sha": "865f7631f569154efb398e7368319bd932a406cd",
+        "verified_content": "2026.11.07。19時の更新で試合終了、宇都宮79対76琉球、第2延長の末の勝利を明記。選手名・個人成績・具体的なプレー場面の記載なし。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9738ca38103aa648b879/source.txt",
+        "role": "固定版本文。HTML本文の読み合わせに使用。関連記事・外部記事は本文根拠に使用していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "目視した承認済みスタイル参照のみ。選手・日付・成績は流用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "アイザック・フォトゥ",
+        "team": "宇都宮ブレックス",
+        "selection": "ランダム",
+        "selection_reason": "固定本文に選手名がないため、本文に登場する宇都宮の公式選手一覧15人からPython secrets.choiceで1人抽出。",
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9738ca38103aa648b879/references/selection.json",
+        "roster_url": "https://www.utsunomiyabrex.com/team/players/",
+        "official_profile": "https://www.utsunomiyabrex.com/player_lp/isaac_fotu/",
+        "official_image": "https://utsunomiyabrex.bl.kuroco-img.app/v=1789348956/files/user/lp/players/image/isaac_fotu/kv_pc.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9738ca38103aa648b879/references/isaac_fotu_official.jpg",
+        "appearance_checked": "公式写真をview_imageで目視。首元までの量感ある茶黒の巻き毛、縦長の輪郭、眉・目・鼻、口ひげと短いあごひげを参照。生成画の特徴を公式資料と目視比較。",
+        "usage": "容姿参照のみ。公式写真の貼付けなし。氏名・背番号・個人成績・出場や活躍を示す文字なし。実際の試合場面の再現ではない。"
+      },
+      {
+        "name": "松脇圭志",
+        "team": "琉球ゴールデンキングス",
+        "selection": "ランダム",
+        "selection_reason": "固定本文に選手名がないため、本文に登場する琉球の公式選手一覧14人からPython secrets.choiceで1人抽出。",
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9738ca38103aa648b879/references/selection.json",
+        "roster_url": "https://goldenkings.jp/team/players/",
+        "official_profile": "https://goldenkings.jp/team/players/detail/id=17367?PlayerID=30434",
+        "official_image": "https://bleague.bl.kuroco-img.app/v=2026110507/files/user/roster/701/2026-27/30434_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9738ca38103aa648b879/references/matsuwaki_official.jpg",
+        "appearance_checked": "公式写真をview_imageで目視。黒く短い波打つ髪と前髪、幅のある輪郭、目鼻、小さなあごひげ、がっしりした体格を参照。生成画の特徴を公式資料と目視比較。",
+        "usage": "容姿参照のみ。公式写真の貼付けなし。氏名・背番号・個人成績・出場や活躍を示す文字なし。実際の試合場面の再現ではない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT (verbatim)\nUse case: illustration-story / editorial sports thumbnail.\nCreate exactly ONE finished Japanese basketball-news thumbnail, landscape 1920×1080 pixels, exact 16:9, opaque PNG. This is new artwork. The approved style already shown is the black-and-lime ink illustration: nearly black #151A18 background, acidic lime #CCF43B broad dry-brush strokes, warm white heavy Japanese headline, graphic ink hatching, spare composition. Do not copy any player, name, score, date, or text from the approved sample.\n\nARTICLE FACTS, and only these facts may appear: fixed article dated 2026.11.07 says Utsunomiya beat Ryukyu 79–76 after a second overtime. No individual player appears in the article. The two real players below were randomly selected from those teams solely as illustration subjects. This is an imagined basketball matchup, NOT a reconstruction of that game or a decisive play. Do not suggest either player's appearance, score, or contribution in that game.\n\nSUBJECTS: exactly TWO identifiable real players rendered entirely as strong hand-drawn editorial ink illustrations, not photographs and not generic invented athletes.\n1. Isaac Fotu (アイザック・フォトゥ), Utsunomiya. Appearance was visually checked in his official club portrait https://utsunomiyabrex.bl.kuroco-img.app/v=1789348956/files/user/lp/players/image/isaac_fotu/kv_pc.jpg . Strong tall broad-shouldered 203cm power-forward build; light-medium brown skin; very distinctive voluminous dark-brown tight curls, parted loosely near the center, hanging to neck/near shoulders; long oval face, prominent straight nose, deep-set eyes and strong eyebrows; thin moustache plus short goatee and short jaw stubble. Face fully legible with warm ivory highlights and expressive ink lines. Plain dark navy uniform with restrained gold-yellow trim, black short compression undershirt. NO logos, sponsor text, names, or jersey numbers.\n2. Yoshiyuki Matsuwaki (松脇圭志), Ryukyu. Appearance was visually checked in his official club portrait https://bleague.bl.kuroco-img.app/v=2026110507/files/user/roster/701/2026-27/30434_01.jpg . Stocky athletic 185cm build, Japanese face with broad rounded jaw and cheeks, small eyes, thick short black wavy-curly hair with messy rounded fringe across forehead; small narrow pointed chin goatee, upper lip essentially clean. Smaller than Fotu. Plain ivory/light-gold sleeveless uniform with dark navy trim. NO logos, sponsor text, names, or jersey numbers.\n\nCOMPOSITION: right 54% of canvas is a dynamic low-post one-on-one illustration. Fotu stands in a strong bent-knee pivot stance holding ONE orange basketball naturally with BOTH hands around chest/shoulder height, twisting toward the basket direction. Matsuwaki defends him from the right foreground with one open hand raised, the other extended naturally lower. Both faces visible in 3/4 view, determined natural expressions. Include both players from head through mid-thigh, with intentional lower torso ending behind the separate score strip. Hair, basketball and hands remain fully inside frame. Distinct anatomically correct arms/hands, five natural fingers per visible hand, no fused limbs. Do not put a hand across either face. Energetic diagonal lime brush accent behind them, little visual clutter, no audience, no photorealistic arena, no third person.\nLeft 43% is spacious bold Japanese typography. Top 10% has small brand/date. Bottom 22% is a full-width clean black score and disclaimer strip visually separated from the illustration. Maintain 4% safe margins.\n\nEXACT TEXT, render these strings only:\nTop left small: 「バスケまとめ」\nTop left beneath brand small: 「2026.11.07」\nLeft headline, extremely bold warm-white Japanese gothic, two lines:\n「第2延長の」\n「激闘」\nUnder headline, lime text medium-large: 「宇都宮が競り勝つ」\nBottom score strip, huge highly readable type on ONE line, team labels in white and numbers lime:\n「宇都宮 79–76 琉球」\nBottom footer in clear readable warm-white type, with generous bottom margin:\n「イラスト（AI生成）　イメージ」\n\nDo not put Isaac Fotu's or Yoshiyuki Matsuwaki's name anywhere in the output. No individual statistics. Score 79–76 is TEAM SCORE only and labels must clearly associate 79 with 宇都宮 and 76 with 琉球. Do not add badges or extra numbers, team/league/sponsor logos, watermarks, photographic inserts, or reference-image text. All visual artwork must be hand-drawn illustration; preserve recognizable facial features without turning photorealistic.\n\nSINGLE CORRECTION PROMPT (verbatim)\nEdit this existing thumbnail with ONE targeted layout correction only: preserve all exact Japanese typography, numbers, date, text placement, palette, ink illustration style, player identities and likeness, ball, and the score/footer strip. Keep the same aspect ratio and at least 1600 pixels wide.\n\nThe two illustrated players on the right are too close to the top and right edges. Scale the ENTIRE two-player illustration (all hair, all arms, all fingers, ball, bodies together as one coherent group) down by approximately 12% around its bottom-center anchor immediately above the score strip, so the topmost raised fingertip and Fotu's hair have at least 40 pixels of clear black/lime background above them, and Matsuwaki's rightmost elbow has at least 35 pixels of background before the right edge. Keep the players large and dynamically posed. No hand, finger, hair or elbow may touch or be clipped by the canvas edge. Lower thighs may continue naturally behind the horizontal score strip. Do not change any facial features, hairstyle, hands or their anatomy. Do not change or regenerate the text. Preserve exactly the displayed text:\nバスケまとめ\n2026.11.07\n第2延長の\n激闘\n宇都宮が競り勝つ\n宇都宮 79–76 琉球\nイラスト（AI生成）　イメージ\nNo new text, logos, names, numbers, people or photographic content.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "corrections": 1,
+      "initial_output": "/Users/genjo/.codex/generated_images/01a1b58d-27fe-7932-af4f-f21637cbfe5f/exec-2aa338b6-f91c-4349-9e4f-bb1f347f10ee.png",
+      "final_output": "/Users/genjo/.codex/generated_images/01a1b58d-27fe-7932-af4f-f21637cbfe5f/exec-4ada454e-db50-4485-8a2e-936f17c406a4.png",
+      "saved_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9738ca38103aa648b879/generated.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "be241cc36317982ce8b63b917f4c53e887be6195d4edc3ca196751f96cb6e5d0",
+      "inspection": "初稿は文字・スコア・人物・注記を確認。上端の指先と髪の余白が狭いため人物群の縮小だけを1回修正。修正版と保存後PNGをview_imageで目視。全ての文字・数値は固定本文と一致。氏名・個人成績なし。イメージ表記あり。人物2人、ボール1個、手指と腕のつながりを確認し、髪・指先・ボールは見切れなし。下半身はスコア帯への意図したトリミング。チーム・リーグ・スポンサーのロゴなし。写真風ではない。保存後のバイト一致とSHA-256を照合。",
+      "ready_executed": false,
+      "published": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-07T10:32:20.552648+00:00",
+  "publication_approved": false
+}
