@@ -1,0 +1,79 @@
+{
+  "id": "574068c2a0f59824e769",
+  "article_path": "article-daily-20261108.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261108.html",
+  "source_commit": "",
+  "source_blob_sha": "545fe2052e656a8ca2493f96ad71bfb8cdbee66d",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "efb690c6ce47ee13ab483776568e07fd5d0e78f683475927270fab3e7fb35ff6",
+  "last_observed_blob_sha": "545fe2052e656a8ca2493f96ad71bfb8cdbee66d",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/574068c2a0f59824e769/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/574068c2a0f59824e769/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-08T03:24:54.660863+00:00",
+  "creation_event_id": "e8829256899ad91b1d1e",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/574068c2a0f59824e769/thumbnail.png",
+  "image_sha256": "b16734e51d55bd1c4bb07ea94316385095ef01291df0f84e478e396ce2ad9b85",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "545fe2052e656a8ca2493f96ad71bfb8cdbee66d",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.08",
+      "名古屋D",
+      "開幕11連勝",
+      "B.PREMIER 開幕連勝記録更新",
+      "名古屋D 93–80 富山",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "source.html",
+        "role": "記事本文の固定版。本文と画像内見出し・チーム記録・スコアの根拠。",
+        "article_url": "https://basuke-matome.jp/article-daily-20261108.html",
+        "support": [
+          "名古屋Dが11月7日に富山へ93対80で勝利",
+          "開幕11連勝",
+          "B.PREMIER開幕からの連勝記録更新",
+          "記事日付2026.11.08"
+        ],
+        "qualifiers": "次節は予定であり、連勝の継続は未確認。画像は次節の結果を記載せず、描いた場面はイメージと明記。"
+      },
+      {
+        "path": "source.txt",
+        "role": "固定本文の文章版をHTMLと照合。記事内容の根拠はこの2ファイルのみ。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "アーロン・ヘンリー",
+        "selection": "ランダム",
+        "selection_reason": "チームの開幕連勝記録が記事の主役で、特定選手を主役に絞らず、本文で名前が挙がるヘンリー・斎藤拓実の2名を候補にPython secrets.choiceで選択。",
+        "candidate_pool": [
+          "ヘンリー",
+          "斎藤拓実"
+        ],
+        "official_profile": "https://nagoya-dolphins.jp/team/players/detail/id=19862?PlayerID=51000268",
+        "reference_image": "https://bleague.bl.kuroco-img.app/v=2026110812/files/user/roster/729/2026-27/51000268_01.jpg",
+        "local_reference": "reference/aaron-henry-official-2026-27.jpg",
+        "additional_official_source": "https://nagoya-dolphins.jp/news/detail/id=23701",
+        "appearance_observed": "現行2026-27公式プロフィールを目視。短い密な黒い巻き毛、広い額、太い眉、目鼻と厚い唇、顎に沿った濃いフルビアード、がっしりした肩と右腕のタトゥー。先に見た2025-26写真は髪が長いため最終容姿の基準にしない。",
+        "use": "公式写真は容姿の参照のみ。完成画像は手描き調イラスト。選手名・背番号・個人成績・出場や活躍の文言なし。赤い無地のユニフォームでロゴ・スポンサー文字なし。ボールを両手で持つ一般的なドライブのイメージで実際の試合場面の再現ではない。",
+        "visual_qa": "修正版を実見し、髪型・輪郭・ひげ・目鼻の特徴、両手の形、指とボール・頭頂の見切れ解消、ロゴ不使用を確認。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION:\nUse case: illustration-story.\nCreate ONE finished Japanese basketball news thumbnail, landscape 16:9, ideally 1536x864 or larger. This is a brand-new editorial ink illustration, not a photograph.\nSTYLE REFERENCE: use the approved black-and-lime thumbnail previously shown in this conversation ONLY for visual language: near-black #151A18 background, electric lime #CCF43B, warm white, bold Japanese lettering, rough hand-painted ink brush strokes, minimal elements, energetic sports printmaking. Do not carry over its player, old name, date, score, statistics, or shooting pose.\nREAL PERSON: the only person must be Aaron Henry (アーロン・ヘンリー), a real Nagoya Diamond Dolphins player, drawn from the MOST RECENT official 2026-27 portrait shown immediately before this request (red jersey #50 in the reference). Use that portrait ONLY to study his identity: short compact dense black curls, slightly high square forehead, strong brows, focused deep-set eyes, broad nose, full lips, full thick black beard along jaw and chin, brown skin, muscular broad shoulders, right-arm tattoos. The older portrait had taller hair: do not use the older hairstyle. Render him entirely in expressive black-and-white ink linework with restrained red jersey accent, not photorealistic. Do NOT paste or trace any photographic pixels. His jersey in this illustration must be plain with no team crest, no league logo, no sponsors, no letters, no player name, no jersey number.\nCOMPOSITION: vary from the reference. Put the athlete on the LEFT 42% of the canvas, dynamically leaning forward in a low attacking drive, three-quarter view facing diagonally right, gripping one orange basketball with both hands near the left waist/chest during a generic gather step. One bent knee visible, clearly athletic body motion; head, hair, both hands, all fingers and the basketball must fit inside the canvas. Use natural hand anatomy and ball grip, no overlapping extra digits. Crop only the lower thighs at the bottom if needed. A single sweeping lime brush arc behind him suggests motion. No other people, no crowd, no opponent, no arena signage, no trophy, no scoreboard, no goal rim. This is only an illustrative basketball action, not a reconstruction of any actual game event, scoring play, fourth-quarter moment, or decisive basket.\nTYPE LAYOUT: clear right-side typography spanning about 53% of canvas with comfortable margins. Small header at upper right; large team name below; the main headline dominates the middle with huge lime brush numerals 11 and bold warm-white Japanese characters. A short record line and a smaller score line below. Keep the athlete and text separate, no obscured letters, no extra text. At least 5% safe margin on all text; label at bottom must be clearly readable. Keep the essential content in the central vertical 84% to tolerate small crops.\nVISIBLE TEXT EXACTLY (each line must be spelled correctly, with no additions):\n「バスケまとめ」\n「2026.11.08」\n「名古屋D」\n「開幕11連勝」\n「B.PREMIER 開幕連勝記録更新」\n「名古屋D 93–80 富山」\n「イラスト（AI生成）」\n「イメージ」\nThe last two phrases are a readable white footer label. The date is the article date. The headline and score describe the TEAM only. The player was randomly chosen from the article's named players; DO NOT print his name, individual statistics, appearance claims, or performance claims. The title's 11 means consecutive team wins, not individual points.\nCONTENT SOURCE: only the fixed user-provided article states Nagoya D defeated Toyama 93-80 on November 7, reached 11 consecutive wins from the season opener, and updated the opening winning-streak record. Do not add predictions, a 12th win, title victory or any claim about the next scheduled game. Do not incorporate other news or statistics.\nDeliver one polished final raster image, crisp legible Japanese, strong mobile readability, no mockup frame, no watermark other than the required AI label.\n\nONE ALLOWED CORRECTION:\nEdit the first attached thumbnail image once, making ONLY a framing and spacing correction while preserving all its content and the black #151A18/lime #CCF43B/red ink-illustration visual style. Deliver one final landscape PNG, exact 16:9, preferably 1536x864 or higher.\nThe initial image has the athlete's right hand clipped at the left border, hair too close to the top border, and rightmost headline almost touching the right border. Fix all three with a real safe inset.\nRecompose everything slightly smaller within the same canvas: keep the player on the left, make his figure about 88% of its previous size and shift it RIGHT enough that the entire basketball, every finger of BOTH hands, both elbows, and head are fully visible with at least 40 pixels of empty background around them. Leave at least 45 pixels above the top of his hair. Lower thighs may still be intentionally cropped at the bottom. Keep his low forward drive and two-handed ball-gather pose. Make hands anatomically sound, five fingers per hand, with the ball fully round and clearly held. Do not add people.\nMove and slightly reduce the right-side text block so every line has at least 60 pixels margin at the right edge and 35 pixels at the top/bottom. Keep very bold clear typography and adequate gutter between player and title. Preserve all content and hierarchy. No stretching or squeezing of letters.\nPerson identity is Aaron Henry; the second image is his current OFFICIAL 2026-27 portrait for identity study ONLY, never photographic collage. Retain his compact short black curls, full black beard along jaw and chin, broad nose, full lips, dark eyes, muscular build and right-arm tattoos. Plain red basketball kit, no numbers, no logos or lettering. Entirely hand-drawn editorial ink rendering, not photorealism.\nKeep the following visible words and digits EXACTLY, add no others:\nバスケまとめ\n2026.11.08\n名古屋D\n開幕11連勝\nB.PREMIER 開幕連勝記録更新\n名古屋D 93–80 富山\nイラスト（AI生成）\nイメージ\nThis is a generic basketball action illustration, not an actual scoring moment. The player is randomly chosen, so never print his name, personal performance, or personal statistics. Keep the AI footer readable. Do not change any score or claim. Only improve framing, spacing, and clean anatomy where the left edge previously clipped the hand.",
+    "generator": "Built-in image_gen / image_gen__imagegen. 1 initial generation + 1 framing correction; final corrected PNG selected. No external API or CLI generation. Approved black/lime style reference visually inspected: B-culver-black-lime-v3.png.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-08T03:29:05.554717+00:00",
+  "publication_approved": false
+}
