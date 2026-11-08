@@ -1,0 +1,144 @@
+{
+  "id": "de6284c9fc31a323c810",
+  "article_path": "article-games-20261109.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261109.html",
+  "source_commit": "",
+  "source_blob_sha": "dc7c3e4c1b71b5b0350154f0b503668808ea4def",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "fadeb24ef253c7f15b504c817862a6cba9b8bf7ef195f072b48a4ec7503d3dd9",
+  "last_observed_blob_sha": "dc7c3e4c1b71b5b0350154f0b503668808ea4def",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/de6284c9fc31a323c810/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/de6284c9fc31a323c810/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-08T15:54:56.636702+00:00",
+  "creation_event_id": "b7c4f85f2551cf5fbc2a",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/de6284c9fc31a323c810/thumbnail.png",
+  "image_sha256": "772309b0b69bc706a303ba0ce4cac781331d16526cdca608594fa1ffc6820098",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "dc7c3e4c1b71b5b0350154f0b503668808ea4def",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.09",
+      "試合予定",
+      "B.PREMIER 全6試合",
+      "当日TOP3は公式記録確定後",
+      "11/09 00:54 JST時点",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "type": "frozen_manuscript",
+        "path": "source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261109.html",
+        "role": "本文の根拠。HTMLのblob SHAをPython hashlibで照合済み。外部の試合情報で本文を補完していない。",
+        "facts": "2026-11-09のB.PREMIERの対戦6件。全て00:54 JST時点で試合前。当日TOP3は全試合の公式記録確定後に掲載。",
+        "qualifiers": "見出しのベスト5に対して本文に選手名・個人成績の掲載がないため、画像は本文の試合予定と記録確定待ちに限定。描画選手の当日出場・成績は主張しない。"
+      },
+      {
+        "type": "frozen_manuscript",
+        "path": "source.txt",
+        "role": "本文の文章をHTMLと照合。"
+      },
+      {
+        "type": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルールを適用。人物選択は今回の本人指示を優先。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで確認した黒・ライム、太い和文、手描きインクの絵柄のみ参照。選手・文字・成績は継承しない。"
+      },
+      {
+        "type": "style_availability",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "role": "指定先に存在しなかったため不使用。存在する承認済み黒・ライム案を採用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "赤間 賢人",
+        "romanized_name": "Kento Akama",
+        "team": "茨城ロボッツ",
+        "selection": "ランダム",
+        "selection_reason": "固定本文に選手名がなく12チームの試合予定を同列で扱うため、本文登場チーム、次いで公式選手一覧から抽選。",
+        "selection_method": {
+          "seed": "de6284c9fc31a323c810",
+          "method": "Python random.Random(job_id)。本文の登場順12チームから茨城を選び、同じ乱数列でクラブ公式選手一覧の15名から赤間賢人を選択。抽選後、B.LEAGUE公式の2026-27現役選手一覧で在籍を再確認。",
+          "team_pool": [
+            "茨城",
+            "琉球",
+            "群馬",
+            "名古屋D",
+            "川崎",
+            "A千葉",
+            "島根",
+            "富山",
+            "長崎",
+            "仙台",
+            "京都",
+            "北海道"
+          ]
+        },
+        "sources": [
+          {
+            "url": "https://www.ibarakirobots.win/team/players/d",
+            "role": "抽選候補の公式選手一覧"
+          },
+          {
+            "url": "https://www.bleague.jp/club_detail/?TeamID=712&tab=2",
+            "role": "2026-27の現役所属を確認。成績は画像本文の根拠に使用していない。"
+          },
+          {
+            "url": "https://www.ibarakirobots.win/team/players/detail/id=22251?PlayerID=51000583",
+            "role": "本人名と公式プロフィール写真の出典"
+          },
+          {
+            "url": "https://ibarakirobots.bl.kuroco-img.app/v=1790071775/files/user/images/player/2026-27/player12.jpg",
+            "local_path": "references/akama-official.jpg",
+            "role": "view_imageで容姿を実確認。肖像の参照のみ。写真の貼付け・ロゴの転用なし。"
+          }
+        ],
+        "observed_features": "濃い茶色の丸いマッシュ状の髪と厚い前髪、細い目、まっすぐな眉、丸みのある鼻先、厚めの唇、ひげのないなだらかな輪郭。修正版の髪型・目鼻・口・輪郭を公式肖像と比較。",
+        "depiction": "1人で前傾姿勢のドリブルをする手描きイラスト。架空選手ではなく本人の容姿を参照したイメージ。実試合の再現ではない。無地ユニフォーム。名前・背番号・個人成績・出場確約なし。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape 16:9, preferably 1600x900 or larger. All text must be accurate Japanese. This is a fresh original illustration, not a photo composite.\nApproved style reference already viewed: B-culver-black-lime-v3.png. Match its charcoal black #151A18, electric lime #CCF43B, warm off-white, thick Japanese headline lettering, rough hand-ink and dry-brush textures, few bold elements, striking editorial sports poster feel. Do NOT reuse the reference's player, date, name, score, or other article-specific content.\nSubject identity: ONE real adult current basketball player, Kento Akama / 赤間賢人 of Ibaraki Robots. His official 2026-27 portrait has been viewed: medium-short dark brown hair with rounded voluminous bowl silhouette and dense gently side-swept fringe, compact oval face and softly rounded jaw/chin, straight fairly dark eyebrows, narrow almond eyes, straight nose with rounded tip, full lips, clean-shaven youthful 21-year-old Japanese man, lean athletic shoulders. Closely preserve these observed facial features, not a generic invented athlete. Use the viewed official portrait ONLY to guide identity, never paste or reproduce the official photograph, its pose, logos or jersey print.\nDraw Akama in expressive monochrome ink with subtle warm skin and hair tones, in an energetic low forward-driving dribble pose, slight three-quarter face visible looking forward, body angled diagonally. One hand naturally controls an orange basketball at hip height, the other arm balances the motion. Two coherent arms, natural wrists, five anatomically plausible fingers on each hand; don't obscure the face. Plain sleeveless unbranded jersey and shorts, no lettering, no numbers, no team logo, no league logo, no sponsors. Waist-to-mid-thigh editorial framing is fine, but keep head, hands, ball and important action wholly inside the canvas with padding. This is an imagined basketball motion, NOT a depiction of an actual game moment and NOT a claim of his appearance or performance on this date. No opponents, crowd, scoreboard or fabricated results.\nComposition: athlete on the LEFT 45 percent, strong diagonal lime brush movement behind him; big clear type on the RIGHT 55 percent. Spacious and crisp text area, no overlap between face/arms and words. Leave about 5 percent margin all around; bottom qualifiers get their own calm dark area. Avoid small illegible microtype. Make the main headline dominate the right half, with short clear hierarchy, while keeping the face large enough to recognize.\nExact visible text, and no other text:\nsmall top-right masthead: 「バスケまとめ」\ndate, medium bold: 「2026.11.09」\nvery large bold headline: 「試合予定」\nlime subheadline: 「B.PREMIER 全6試合」\nreadable qualifier: 「当日TOP3は公式記録確定後」\nsmall but clearly readable timestamp: 「11/09 00:54 JST時点」\nbottom footer, clearly readable: 「イラスト（AI生成）｜イメージ」\nDo not print the player's name. Do not print personal statistics, BEST 5, player rankings, guaranteed participation, a victory, an outcome or exact game scene. Text is grounded solely in the frozen manuscript: six B.PREMIER games on 2026-11-09, all pregame as of 00:54 JST, with daily TOP3 awaiting all official records. Do not add information beyond this. No photorealism, no official photo pixels, no logos, no badges, no watermarks.",
+      "correction": "Edit the FIRST input image, the finished Japanese basketball thumbnail. This is the one allowed correction, so carefully fix the composition while preserving all its accurate content. Input 1 is the edit target; input 2 is the official portrait of the subject Kento Akama, used ONLY as identity reference, never as a photo insert; input 3 is the approved black/lime ink illustration style reference, used ONLY for illustration style.\nKeep the output 1672x941 or a similar 16:9 landscape at least 1000px wide.\nRequired correction: shrink and reposition the athlete in the LEFT 43% so his entire rounded hair silhouette has at least 45px dark margin above, the complete orange basketball has at least 45px margin at the left edge, and ALL fingertips of his basketball hand are fully on-canvas. His other hand must also be completely visible. His lower thighs may be editorially cropped by the bottom edge, but no head, hand, finger or ball may be clipped. Use a low athletic dribble with a clearly visible three-quarter face, two coherent arms, natural fingers and wrists. Give each hand exactly five anatomically plausible fingers. Slightly reduce and inset the text block as needed so every character and lime banner sits at least 35px away from the right edge. No overlap with the athlete.\nIdentity refinement: closely use the SECOND reference's face and hair. Kento Akama has a smooth rounded dark-brown bowl-cut silhouette with dense straight gently swept fringe, NOT messy windswept waves, a compact oval face, narrow almond-shaped eyes, straight brows, a rounded nose tip, full lips, soft rounded jaw/chin and no facial hair. Keep him recognizable and youthful, an adult age 21. The hair should fall in a rounded smooth shape across the forehead, not expose a middle part. Repaint in clearly hand-drawn ink with bold brush marks like the approved THIRD reference, not photorealism. The uniform is plain and completely unbranded, no numbers, no logos, no sponsors. Do not copy any photo pixels.\nPreserve charcoal #151A18 and lime #CCF43B, cream type, orange basketball and hand-ink dry-brush character. Preserve the LEFT athlete / RIGHT text layout and the exact visible Japanese text already in the first image:\nバスケまとめ\n2026.11.09\n試合予定\nB.PREMIER 全6試合\n当日TOP3は公式記録確定後\n11/09 00:54 JST時点\nイラスト（AI生成）｜イメージ\nNo player name, no stats, no additional text, no scoreboard, no new person. This remains an imagined basketball dribbling illustration, never an assertion of actual game participation or events. No logos, no official photographs, no photorealistic rendering. Output ONE corrected finished thumbnail.",
+      "correction_inputs": [
+        "/Users/genjo/.codex/generated_images/01a1bbde-b398-7b63-a9d9-296a8c4ef6c6/exec-023b4e17-597e-428a-824a-5d0dd0b7e8bf.png",
+        "references/akama-official.jpg",
+        "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png"
+      ]
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built_in",
+      "generation_count": 2,
+      "correction_count": 1,
+      "final_original_path": "/Users/genjo/.codex/generated_images/01a1bbde-b398-7b63-a9d9-296a8c4ef6c6/exec-2ff653af-5cae-4c05-bb35-bbd5d3562ab5.png",
+      "output_path": "generated.png",
+      "width": 1672,
+      "height": 941,
+      "qa_evidence": {
+        "text_and_numbers": "実画像で全7行を読み、2026.11.09、全6試合、TOP3、11/09 00:54 JST時点の正記を確認。",
+        "source_qualifiers": "当日TOP3は公式記録確定後と時点表示を確認。成績・出場・勝敗を示す記載なし。",
+        "likeness_or_no_named_person": "公式肖像と照合し、赤間賢人の丸い茶髪・前髪・細い目・鼻先・唇・ひげなしを確認。人物名は画像上に表示なし。",
+        "layout": "初稿は頭頂部とボール側の手が見切れたため不採用。修正後は頭・両手と各5指・ボールが枠内。文字と顔の重なり、文字欠落、ロゴなし。下端の腿は意図したフレーミング。",
+        "ai_label": "最終画像下部のイラスト（AI生成）｜イメージを読める大きさで確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-08T15:59:35.732898+00:00",
+  "publication_approved": false
+}
