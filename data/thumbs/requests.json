@@ -405,13 +405,13 @@
   "article-games-20261108.html": {
    "article_path": "article-games-20261108.html",
    "article_url": "https://basuke-matome.jp/article-games-20261108.html",
-   "editorial_fingerprint": "f2d9c8deb9d026d6c78cf88d27ce6d1754930556e3406611582c3650dc357d7c",
-   "event_id": "449f92f1d8c33b2a7673",
-   "recorded_at": "2026-11-08T10:19:59.911624+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "0252ffd922c6fd01608714c6cda09016c6e0049a",
-   "stable_fingerprint": "f2d9c8deb9d026d6c78cf88d27ce6d1754930556e3406611582c3650dc357d7c",
+   "editorial_fingerprint": "8e226892bddbd53c00553a802f8da44b40552b74692dc89b6dc509cba175e4f5",
+   "event_id": "f0a7d76feebdbb5de350",
+   "recorded_at": "2026-11-08T12:12:00.220613+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "b2bf0a4c44e90a1e301552d81418630e52430c4e",
+   "stable_fingerprint": "8e226892bddbd53c00553a802f8da44b40552b74692dc89b6dc509cba175e4f5",
    "status": "requested",
    "target_date": "20261108",
    "title": "11/08 試合結果・当日のEFF"
@@ -559,13 +559,13 @@
   "article-results-one-next-20261108.html": {
    "article_path": "article-results-one-next-20261108.html",
    "article_url": "https://basuke-matome.jp/article-results-one-next-20261108.html",
-   "editorial_fingerprint": "f2d9c8deb9d026d6c78cf88d27ce6d1754930556e3406611582c3650dc357d7c",
-   "event_id": "8f5c682cf0c5a527fe24",
-   "recorded_at": "2026-11-08T10:19:59.911624+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "d4850aa1c6ff7c901f1d46023cb89df536defaae",
-   "stable_fingerprint": "f2d9c8deb9d026d6c78cf88d27ce6d1754930556e3406611582c3650dc357d7c",
+   "editorial_fingerprint": "8e226892bddbd53c00553a802f8da44b40552b74692dc89b6dc509cba175e4f5",
+   "event_id": "649cd3644f2c6c3896f4",
+   "recorded_at": "2026-11-08T12:12:00.220613+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "ddb2543fa7a0292ff7f7e26a231e5279de992232",
+   "stable_fingerprint": "8e226892bddbd53c00553a802f8da44b40552b74692dc89b6dc509cba175e4f5",
    "status": "requested",
    "target_date": "20261108",
    "title": "11/08 試合結果・当日のEFF"
@@ -643,6 +643,18 @@
    "status": "requested",
    "target_date": "20261107",
    "title": "11月7日の貢献度ランキング 1位はファーダウス・アイマク（神戸）の41"
+  },
+  "article-stats-20261108.html": {
+   "article_path": "article-stats-20261108.html",
+   "article_url": "https://basuke-matome.jp/article-stats-20261108.html",
+   "editorial_fingerprint": "606335b0ced62078141144e2e03e48988d37452515330afbc759719864f6d78c",
+   "event_id": "0fbeeac18c49862a87d5",
+   "recorded_at": "2026-11-08T12:12:00.220613+00:00",
+   "source_blob_sha": "fc388304b66dc0ce7896fcadf76889482ba4c972",
+   "stable_fingerprint": "606335b0ced62078141144e2e03e48988d37452515330afbc759719864f6d78c",
+   "status": "requested",
+   "target_date": "20261108",
+   "title": "11月8日の貢献度ランキング 1位はナシール・リトル（佐賀）の51"
   }
  },
  "version": 1
