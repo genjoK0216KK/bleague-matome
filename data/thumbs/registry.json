@@ -448,6 +448,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "名古屋Dが開幕11連勝、9日は失点最少の群馬と対戦"
   },
+  "article-daily-20261109.html": {
+   "article_path": "article-daily-20261109.html",
+   "editorial_fingerprint": "e1e6ea1292c887f7d5445e1d79e7227811b0e2b3a8171cc97c8659bdda85dfbb",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261109-8ebf04e6c186.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261109-8ebf04e6c186-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "bd3d709f0889950146e7",
+   "image_sha256": "8ebf04e6c1861f596429912b500eb169c6ee4aaab1c276ed379ebca9f8b51ffb",
+   "imported_at": "2026-11-08T23:23:03.793343+00:00",
+   "prepared_at": "2026-11-08T23:22:37.108158+00:00",
+   "source_blob_sha": "a0e6cd18273b12fc2b95516c32fc157289aed6c2",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "e1e6ea1292c887f7d5445e1d79e7227811b0e2b3a8171cc97c8659bdda85dfbb",
+   "style": "ink-lime-portrait-v5",
+   "title": "宇都宮ブレックス、ケルと市岡が脳振盪で復帰未定"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -1431,13 +1459,6 @@
  },
  "log": [
   {
-   "article": "article-results-one-next-20261105.html",
-   "at": "2026-11-04T20:01:09.911991+00:00",
-   "event": "imported",
-   "id": "4367b17c7960b99cb3ea",
-   "image": "761c15e017b7"
-  },
-  {
    "article": "article-daily-20261105.html",
    "at": "2026-11-04T23:21:42.521672+00:00",
    "event": "imported",
@@ -1989,6 +2010,13 @@
    "event": "imported",
    "id": "7fe3ccf98d343d8516b5",
    "image": "84f6cb16c6c1"
+  },
+  {
+   "article": "article-daily-20261109.html",
+   "at": "2026-11-08T23:23:03.793368+00:00",
+   "event": "imported",
+   "id": "bd3d709f0889950146e7",
+   "image": "8ebf04e6c186"
   }
  ],
  "seen": {
@@ -2081,6 +2109,7 @@
   "b6b7904538b5644b6eb3": "superseded:cba03e879d01718161f9",
   "b86acc20b06b8f02084d": "superseded:13dc704824ed84d25fee",
   "b8f222115a0883a9f7f2": "superseded:227771a8a08cdddea2d2",
+  "bd3d709f0889950146e7": "imported",
   "c1aaf417a1880194d3ac": "imported",
   "c30cc01686bce3bc931c": "imported",
   "c39e144583cffda92155": "superseded:a718e72ebd289b318965",
