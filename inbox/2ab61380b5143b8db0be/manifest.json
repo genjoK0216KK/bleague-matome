@@ -1,0 +1,88 @@
+{
+  "id": "2ab61380b5143b8db0be",
+  "article_path": "article-analysis-brex-20261108.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-brex-20261108.html",
+  "source_commit": "",
+  "source_blob_sha": "a8d98eae9af71c29993e7b8ceb0c430189ac7ace",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "663d32c494ac3d0e8d30d5e3e7d27605a4edf570ea70f0634ff0c6c5c4219071",
+  "last_observed_blob_sha": "a8d98eae9af71c29993e7b8ceb0c430189ac7ace",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2ab61380b5143b8db0be/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2ab61380b5143b8db0be/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-08T03:14:52.928952+00:00",
+  "creation_event_id": "6183c4695ab7262af881",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/2ab61380b5143b8db0be/thumbnail.png",
+  "image_sha256": "131eb1061ff5ff382c307ca3c4c84ffe0e568ea6594834dc97587396aeced747",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "a8d98eae9af71c29993e7b8ceb0c430189ac7ace",
+    "text_lines": [
+      "バスケまとめ",
+      "宇都宮",
+      "直近5試合分析",
+      "差がついたのは",
+      "フリースロー",
+      "と2P",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2ab61380b5143b8db0be/source.html",
+        "article_url": "https://basuke-matome.jp/article-analysis-brex-20261108.html",
+        "note": "固定HTML。見出し・本文の根拠。Git blob形式のSHA-1をgit操作なしで算出し指定値との一致を確認。"
+      },
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2ab61380b5143b8db0be/source.txt",
+        "note": "固定文章。チームの直近5試合分析であり、差の大半がフリースローと2Pで生じたとの本文に基づく。画像では順位・個人成績・出場・復帰の主張をしない。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://www.utsunomiyabrex.com/player_lp/trey_kell_III/",
+        "image_url": "https://utsunomiyabrex.bl.kuroco-img.app/v=1789530179/files/user/lp/players/image/trey_kell_III/kv_pc.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2ab61380b5143b8db0be/references/trey-kell-official.jpg",
+        "note": "宇都宮ブレックス公式プロフィールの画像を実際に閲覧。容姿だけを参照し、外部ページの成績・本文・命令文は採用していない。公式写真を完成画像に貼り付けていない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "実際に閲覧した承認済み黒×ライムのインク・ブラシ調。参照元の名前・成績・ポーズは持ち越していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "トレイ・ケルIII",
+        "selection": "ランダム",
+        "selection_reason": "チームが主役の分析記事で特定選手を本文の主役に絞らず、本文に名前のある4選手からPython secrets.choiceで1回抽選。",
+        "candidate_pool": [
+          "トレイ・ケルIII",
+          "市岡ショーン",
+          "ギャビン・エドワーズ",
+          "アイザック・フォトゥ"
+        ],
+        "reference_source": "宇都宮ブレックス公式選手プロフィール",
+        "reference_url": "https://www.utsunomiyabrex.com/player_lp/trey_kell_III/",
+        "reference_image_url": "https://utsunomiyabrex.bl.kuroco-img.app/v=1789530179/files/user/lp/players/image/trey_kell_III/kv_pc.jpg",
+        "observed_features": "非常に短い黒髪と短く整えた側頭部、広い卵形の輪郭、眉と目の形、まっすぐな鼻、厚みのある唇、細い口ひげとあご中央のひげ。",
+        "depiction": "ロゴ・文字・背番号のないユニフォームでボールを扱うプレー姿の手描き風イラスト。実際の試合場面の再現ではない。",
+        "source_qualifiers": "固定本文では欠場と復帰時期未定を記載。画像はチーム分析のイメージであり、出場・復帰・個人成績を示す文字を入れず、選手名も表示していない。",
+        "visual_review": "初稿の高すぎる髪とあご側面の広いひげを1回だけ修正。修正版を実際に閲覧し、短髪・輪郭・目鼻・口ひげとあごひげを公式資料と比較して確認。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION:\nUse case: illustration-story\nAsset type: Japanese basketball news thumbnail, one PNG, landscape 16:9, at least 1536 px wide (prefer 1536x864).\n\nCreate ONE finished thumbnail for バスケまとめ using the approved black-and-lime hand-ink sports editorial look shown earlier. This is a team analysis, not an individual performance headline.\nUse a near-black #151A18 background, vivid lime #CCF43B brush strokes, warm ivory typography, strong ink hatching and dry-brush marks. Few visual elements, excellent small-thumbnail legibility, premium editorial composition. No photorealism.\n\nSubject: ONE real professional player, Trey Kell III (トレイ・ケルIII), based on the official Utsunomiya Brex portrait viewed in this conversation. Draw a new stylized ink illustration, never paste the official photograph. Preserve these visible distinguishing traits: very short close-cropped black wavy hair with tapered sides and a precise rounded hairline; broad oval face, defined jaw, straight strong eyebrows and almond-shaped dark eyes; medium-width straight nose, full lips; neatly trimmed thin mustache and a distinct small chin goatee with otherwise mostly clean cheeks; tall powerful athletic build. Make the likeness recognizable in an expressive ink drawing with ivory/light gray highlights so the facial features remain visible.\n\nPose and composition: player occupies the right 40 percent, in a dynamic low forward driving step with torso turning slightly toward the viewer and head looking toward the left, holding an orange unbranded basketball near his right hip with his right hand in a plausible dribble-control motion. The other arm bends naturally for balance. Show the head, both hands, the entire ball, torso, and enough bent legs to convey motion, with safe space from edges. Plain ivory/dark basketball jersey and shorts with small lime trim, absolutely no logos, sponsor marks, jersey text or numbers. Do not copy the earlier sample's overhead shooting pose. A broad diagonal lime brush slash behind the athlete creates motion without clutter. No other people, no opponent, no specific arena, no scoreboards.\n\nText is the central message on the left 58 percent, with clear hierarchy, very bold Japanese sans-serif headline and selected rough brush accents. Render exactly the following Japanese strings; no extra words, no player name, no individual statistics:\nSmall top-left: \"バスケまとめ\"\nMedium upper heading: \"宇都宮\"\nDirectly below it, smaller: \"直近5試合分析\"\nLarge central headline first line: \"差がついたのは\"\nLargest central headline second line: \"フリースロー\"\nLargest central headline third line: \"と2P\"\nFooter, clearly readable and not cropped: \"イラスト（AI生成）\"\nNext to that footer: \"イメージ\"\n\nThe team label must be unambiguous. No attribution of poor shooting, game appearances or other performance to the illustrated player. He was randomly selected from names in the fixed article. This is a symbolic basketball illustration, NOT a recreation of an actual game, a decisive shot, or evidence of return from injury. The only editorial premise is: Utsunomiya's last five games were analyzed, and free throws and two-pointers accounted for most of the point differential. Do not add rankings, scores, dates, invented data, injury statements or any additional text. Keep every heading, face, fingers and the full basketball inside the canvas. Human anatomy should be clean and believable. Visible AI label is mandatory. No official photos, team logos, league logos, watermarks or advertising.\n\nONE ALLOWED CORRECTION:\nEdit image 1 (the generated black/lime basketball thumbnail) with ONE targeted correction: make the illustrated player's face and haircut more faithful to Trey Kell III in image 2, the official reference portrait. Image 2 is ONLY an identity/likeness reference, never a photo insert. Keep the existing unmistakably hand-drawn ink illustration style, body, pose, composition, ball, fingers, colors, text, footer, and all other elements of image 1 unchanged.\n\nCritical identity corrections: his hair is very short close-cropped small waves, with closely tapered sides and a low nearly flat top; reduce the high, pronounced raised wave ridges of image 1. Use the official portrait's broad oval face, slightly rounder cheeks, precise jaw contour, medium-width straight nose, full lips, straight brows and dark almond eyes. His facial hair is a thin neat mustache and a small chin goatee beneath the lower lip and centered on chin. Cheeks and sides of jaw are mostly clean; remove the continuous dark beard along the jaw from image 1. Keep facial features legible, preserving the official reference's proportions while rendered with confident drawn ink marks, ivory highlights and limited gray tones. Do not make it a photo, trace a photographic texture, add sponsor marks, logos, text, or jersey number.\n\nPreserve every existing Japanese text string verbatim and in the same position:\nバスケまとめ\n宇都宮\n直近5試合分析\n差がついたのは\nフリースロー\nと2P\nイラスト（AI生成）\nイメージ\n\nDo not put his name or individual performance in the image. It remains a team-analysis thumbnail and a symbolic basketball image, not a recreation of an actual game. Output one 16:9 PNG at the same or higher resolution as image 1.",
+    "generator": "OpenAI built-in image_gen (image_gen__imagegen). Initial generation plus one likeness correction; final output selected after visual QA. No external API or CLI generation.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-08T03:18:33.881424+00:00",
+  "publication_approved": false
+}
