@@ -1,0 +1,72 @@
+{
+  "id": "138edbf6e5eed71be84f",
+  "article_path": "article-games-20261108.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261108.html",
+  "source_commit": "",
+  "source_blob_sha": "b2bf0a4c44e90a1e301552d81418630e52430c4e",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "8e226892bddbd53c00553a802f8da44b40552b74692dc89b6dc509cba175e4f5",
+  "last_observed_blob_sha": "b2bf0a4c44e90a1e301552d81418630e52430c4e",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/138edbf6e5eed71be84f/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/138edbf6e5eed71be84f/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-08T12:12:06.629584+00:00",
+  "creation_event_id": "f0a7d76feebdbb5de350",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/138edbf6e5eed71be84f/thumbnail.png",
+  "image_sha256": "ac5ad7d7b0269a81bc056d1cf4d5a370d473c697c1c7daf036fee9e54d679171",
+  "width": 1659,
+  "height": 948,
+  "brief": {
+    "source_blob_sha": "b2bf0a4c44e90a1e301552d81418630e52430c4e",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.08",
+      "試合結果",
+      "当日EFF",
+      "リーグ別・ポジション別TOP3",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/138edbf6e5eed71be84f/source.html",
+        "role": "固定版HTML。記事本文・見出し・試合日・集計区分の根拠。関連リンク先は本文根拠に使用しない。",
+        "article_url": "https://basuke-matome.jp/article-games-20261108.html",
+        "source_blob_sha": "b2bf0a4c44e90a1e301552d81418630e52430c4e",
+        "qualifiers": "全試合の公式記録確定後、出場時間がある選手の当日公式EFFをリーグ別・登録ポジション別に集計。同率は同順位で最大3人。今季平均・予想・当日の起用位置の断定ではない。画像は記事全体の見出しのみで個人成績を掲載しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/138edbf6e5eed71be84f/source.txt",
+        "role": "固定版文章。HTMLとの記事タイトル・日付・TOP3区分・掲載選手名の照合。",
+        "retrieval_as_stated_in_article": "2026-11-08 21:11 JST"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "山本 翔太",
+        "selection": "ランダム",
+        "selection_method": "本文の全ポジション別TOP3に掲載された選手を重複除外した37人からPython secrets.choiceで1人を抽出。特定選手を最も大きく扱う記事ではないため。抽出記録はselection.json。",
+        "source_in_fixed_article": "B.ONE SG TOP3の選手名",
+        "official_profile_url": "https://www.volters.jp/team/players/detail/id=14571?PlayerID=51000156&Year=2025",
+        "official_photo_page": "https://www.volters.jp/news/detail/id=19794",
+        "official_photo_url": "https://volters.bl.kuroco-img.app/v=1780553965/files/user/202606041519_1.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/138edbf6e5eed71be84f/person-reference-official.jpg",
+        "reference_usage": "熊本ヴォルターズ公式の2026-27契約継続記事に掲載されたプロフィール写真をview_imageで確認。容姿の参照のみ。写真・ロゴ・スポンサー文字を成果画像へ転載していない。プロフィールページの画像は取得不可だったため、取得・目視確認できた公式契約記事の写真を採用。",
+        "observed_appearance": "毛量の多い短い黒髪、ゆるいウェーブと額にかかる前髪、短いサイド、丸みのある卵形の輪郭、緩く弧を描く眉、アーモンド形の目、丸みのある鼻先、輪郭の明確な唇、ひげなし。",
+        "depiction": "ドリブルで切り込むプレー姿のインク画。実際の試合場面の再現ではない。名前・個人成績・出場や活躍を示す文言・背番号は画像に入れていない。注記はイラスト（AI生成）とイメージ。",
+        "visual_qa": "公式参照写真と生成PNGを実際に閲覧し、髪型・顔の輪郭・目鼻・ひげなしの特徴を照合。左右の手、ボールとの接触、腕の本数、文字と顔の非重複を確認。"
+      }
+    ],
+    "prompt": "Use case: illustration-story / editorial sports thumbnail.\nEdit and comprehensively recompose the supplied approved black/lime thumbnail template into ONE new 16:9 thumbnail for バスケまとめ, requested canvas 1792x1024 or another near-16:9 landscape canvas with width above 1000 pixels.\n\nINPUT ROLES:\nImage 1 (B-culver-black-lime-v3.png): layout/visual-style edit target ONLY. Retain its sophisticated hand-drawn ink and dry-brush aesthetic, near-black #151A18, lime #CCF43B, ivory, strong legible bold Japanese typography and few elements. REPLACE all its old text, date, player, pose and statistics. Do not copy Culver's face.\nImage 2 (person-reference-official.jpg): supporting likeness reference ONLY for the real Japanese professional basketball player Shota Yamamoto / 山本翔太. DO NOT paste, collage or reproduce the photograph or any official uniform branding. Use only his visible face/hair/body features to create a hand-drawn illustration: dense slightly tousled short black wavy hair with textured bangs descending onto forehead; tapered short sides; oval face with softly rounded jaw and substantial cheeks, dark gently arched eyebrows, dark almond-shaped eyes, medium straight nose with rounded tip, defined closed lips, clean-shaven, no beard or moustache. Athletic lean-muscular adult build. Keep recognizably consistent with the reference, not a generic invented athlete.\n\nNEW COMPOSITION:\nBold, restrained, high-impact sports editorial graphic, approximately 60% left typography and 40% right illustration. On the right draw Yamamoto from head to around knees in an energetic low driving dribble, body leaning diagonally forward toward center, knees bent, head lifted looking ahead. His entire face, head, both hands and orange basketball remain fully inside the frame. Dribbling hand contacts top/side of the ball; the other forearm naturally protects space. Plausible basketball body mechanics, five anatomically coherent digits per hand, no extra limbs. Use a plain ivory/charcoal basketball vest and shorts with NO writing, numbers, brands, team or league emblems. Strong black ink hatching with off-white shaded face and body, obviously drawn rather than photorealistic. A few broad slashing lime brush strokes behind the player suggest momentum; quiet black ground behind text. Keep typography separate from the face, hands and ball. This is an imagined sporting pose and NOT a depiction of a documented November 8 game moment. No opponent, no crowd, no scoreboard, no actual arena.\n\nEXACT TEXT, and no other lettering:\nTop left small: 「バスケまとめ」\nUnder it small: 「2026.11.08」\nLeft center extra bold largest ivory line: 「試合結果」\nLeft center extra bold largest lime line: 「当日EFF」\nBelow those, a clearly legible moderate white line: 「リーグ別・ポジション別TOP3」\nBottom left readable off-white caption: 「イラスト（AI生成）」\nBeside that caption: 「イメージ」\nUse exact Japanese glyphs. The brackets 「」 are delimiters and must not appear. The image contains no player name, personal statistic, claims of performance or participation, team name or logo. TOP3 refers to the article's league-by-league and position-by-position daily EFF roundup, not to the pictured player. Do not add ranks, scores, points, wins or additional numbers. No subtitle implying actual game reconstruction or season averages. Avoid cropping text. Keep all text and critical subject details at least 4% from every edge.\n\nEDITORIAL GROUNDING:\nThe fixed article is titled 11/08 試合結果・当日のEFF, game date 2026.11.08, with daily official EFF top-three tables separated by league and registered position. The player was randomly selected from names in the article; do not single him out in text.\nOutput a finished crisp readable PNG, one image only.",
+    "generator": "image_gen built-in / image_gen__imagegen; 1 generation; 0 corrections; template and official photo used as references; no API/CLI generation",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-08T12:15:07.256177+00:00",
+  "publication_approved": false
+}

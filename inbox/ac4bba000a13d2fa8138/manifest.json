@@ -1,0 +1,83 @@
+{
+  "id": "ac4bba000a13d2fa8138",
+  "article_path": "article-stats-20261108.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261108.html",
+  "source_commit": "",
+  "source_blob_sha": "fc388304b66dc0ce7896fcadf76889482ba4c972",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "606335b0ced62078141144e2e03e48988d37452515330afbc759719864f6d78c",
+  "last_observed_blob_sha": "fc388304b66dc0ce7896fcadf76889482ba4c972",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ac4bba000a13d2fa8138/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ac4bba000a13d2fa8138/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-08T12:12:07.147034+00:00",
+  "creation_event_id": "0fbeeac18c49862a87d5",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/ac4bba000a13d2fa8138/thumbnail.png",
+  "image_sha256": "6967a28fde6d03db660d6d33eb9ba4ef1fe5f113038af9dba622131ef58836b3",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "fc388304b66dc0ce7896fcadf76889482ba4c972",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.08",
+      "貢献度1位",
+      "ナシール・リトル",
+      "佐賀",
+      "EFF 51",
+      "43得点・7リバウンド・7アシスト",
+      "11月8日 Bプレミア4試合",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ac4bba000a13d2fa8138/source.html",
+        "article_url": "https://basuke-matome.jp/article-stats-20261108.html",
+        "use": "本文・見出し・日付・ランキング対象範囲・数値の根拠。Git blob形式のSHA-1をgitコマンドなしで計算し指定値と一致を確認。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ac4bba000a13d2fa8138/source.txt",
+        "use": "HTMLと照合。11月8日のBプレミア4試合、貢献度1位ナシール・リトル（佐賀）、EFF51、43得点・7リバウンド・7アシスト。国籍別ランキング未掲載の留保に反する表現なし。試合勝利・MVP・実際の特定プレーを示す表現なし。"
+      },
+      {
+        "type": "official_appearance_reference",
+        "url": "https://ballooners.jp/team/players/detail/id=52152?PlayerID=51000517",
+        "image_url": "https://ballooners.bl.kuroco-img.app/v=1788967093/files/user/cheer/%E3%81%AA%E3%83%BC%E3%81%9A.jpg",
+        "use": "容姿の確認だけに使用。本文・成績の根拠には使用せず、公式写真の画素やロゴは完成画像へ貼り付けない。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認。黒×ライム、太い日本語、手描きインク・ブラシ、約16:9を参照。選手名・成績は流用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ナシール・リトル",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿のタイトル・導入・TOP3で貢献度1位として最も大きく扱われている選手。",
+        "reference_source": "佐賀バルーナーズ公式 選手プロフィール",
+        "reference_url": "https://ballooners.jp/team/players/detail/id=52152?PlayerID=51000517",
+        "reference_image_url": "https://ballooners.bl.kuroco-img.app/v=1788967093/files/user/cheer/%E3%81%AA%E3%83%BC%E3%81%9A.jpg",
+        "viewed_reference": true,
+        "appearance_checked": "短い密な巻き毛と刈り込んだ側面、縦長の輪郭、眉・目・幅のある鼻・厚い唇、薄い口ひげと短いあごひげ、筋肉質の肩と腕を公式写真と目視比較。初稿の高すぎる髪を1回の修正で公式写真へ寄せた。",
+        "scene": "ボールを運ぶ姿の創作イラスト。実際の11月8日の試合場面を再現したものではない。",
+        "final_visual_qa": "顔・頭髪・両手・ボールが見え、両手の指と腕の接続に明らかな破綻なし。頭頂と右端の肘に余白あり。下端の太ももは意図した構図上のクロップ。文字・AI注記の見切れなし。チーム・リーグ・スポンサーのロゴなし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION:\nUse case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail for バスケまとめ, landscape 16:9, 1536x864 or larger, PNG, opaque background.\n\nSubject: one REAL basketball player, Nassir Little (ナシール・リトル), as a clearly hand-drawn athletic action illustration, not an invented player. His current official Saga Ballooners profile has been visually inspected: dark brown skin; short dense black tightly curled hair with tapered sides, slightly taller flat-rounded top; broad forehead; gently arched eyebrows; slightly hooded almond eyes; straight broad nose; full lips; strong tapered oval jaw; fine moustache and short pointed chin goatee with light stubble along jaw; muscular shoulders and arms with tattoo patterns. Keep his face recognizable with these features, eyes and face unobstructed. Draw one anatomically plausible player with exactly two arms and normal hands.\nScene: dynamic forward-driving dribble, three-quarter view, bent knees, torso leaning into motion, right hand controlling an orange basketball at hip height, free left arm naturally balancing. Show his face large enough to recognize. Crop approximately mid-thigh; keep both hands and the ball entirely visible. This is a generic imagined basketball motion, not a reconstruction of any actual November 8 play. No opponent or spectators needed.\nUniform: plain cyan/turquoise sleeveless jersey and shorts with dark edging, no numbers, no words, no team/league/sponsor/manufacturer logos.\n\nStyle: approved sports ink-and-brush poster treatment; charcoal black #151A18 background, vivid lime #CCF43B rough brush sweeps, warm off-white lettering, punchy black ink outlines and hand-brushed shading. Facial features should be convincing portrait illustration with simplified ink texture, NOT photo, NOT photorealistic, NOT anime, NOT pasted photography. Sparse elements, powerful readable Japanese typography. A few lime diagonal motion strokes behind the figure. Orange ball as player's prop only.\nLayout: composition different from a static shooting pose: player on right 43% in an energetic drive, text on left 57%. Large headline, dominant EFF number. Comfortable 60 px safe margin, no clipping or overlap of text and face/hands/ball. Bottom note in a clearly readable off-white footer area on charcoal, with generous bottom margin. High contrast, readable at thumbnail size.\n\nText (verbatim, no extra text):\ntop small: \"バスケまとめ\"\ndate, medium: \"2026.11.08\"\nheadline, bold large: \"貢献度1位\"\nplayer line, bold: \"ナシール・リトル\"\nteam tag, small: \"佐賀\"\nmain numeric line, extremely large lime numerals and white EFF label: \"EFF 51\"\nsecondary line, medium: \"43得点・7リバウンド・7アシスト\"\nscope note, small but readable: \"11月8日 Bプレミア4試合\"\nbottom note, readable: \"イラスト（AI生成）\"\nbottom companion note, readable: \"成績をもとにしたイメージ\"\n\nFactual constraints: These labels come only from the supplied fixed article: November 8 2026, 4 B.PREMIER games, Nassir Little of Saga ranked 1st in contribution EFF 51, 43 points, 7 rebounds, 7 assists. Do not imply victory, league season championship, MVP award or decisive game-winning play. Do not add other dates, numbers, nationality labels or facts. No logos, no official photos, no watermarks. Render every Japanese string accurately. Only one output image.\n\nCORRECTION 1 (final):\nUse case: identity-preserve / illustration-story.\nEdit the FIRST image, the completed black-and-lime Japanese basketball thumbnail. SECOND image is an official profile photo of the SAME real athlete Nassir Little, for facial likeness reference ONLY. Do not paste any portion of the photograph. Output one PNG at the same 1672x941 landscape aspect ratio, keeping the approved rough ink-and-brush illustration style.\n\nMake only these subject refinements:\n1. Correct the player's illustrated face and hair to resemble the second reference more faithfully: short dense small tightly curled hair with low tapered sides and a modest low rounded-flat top, NOT tall chunky twist spikes; longer tapered oval face, reference brow and slightly hooded eyes (avoid exaggerated wide anime eyes), broad straight nose, full lips, fine moustache and the small short pointed goatee. Preserve the athlete's dark brown skin and muscular build. Keep him clearly recognizable as the man in the reference while fully hand-drawn. No photorealism.\n2. Reduce and reposition the illustrated player just enough to leave visible charcoal margin above his complete hairstyle and at the right of his elbow. His head, two normal arms, two anatomically plausible hands and basketball must be entirely inside the canvas. Thigh crop at the bottom remains intentional. Preserve the energetic three-quarter forward drive/dribble pose and plain cyan uniform with NO logos, text or numbers.\n\nKeep all existing typography, Japanese text, statistics, color palette, background brushwork and hierarchy unchanged. Preserve the exact strings:\nバスケまとめ\n2026.11.08\n貢献度1位\nナシール・リトル\n佐賀\nEFF 51\n43得点・7リバウンド・7アシスト\n11月8日 Bプレミア4試合\nイラスト（AI生成）\n成績をもとにしたイメージ\n\nDo not copy the official photo's uniform logos or sponsors. No new text, no added players, no actual game reconstruction. One corrected image only.",
+    "generator": "内蔵 image_gen.imagegen。初稿1回、修正1回。最終PNGを無加工でコピー。API・CLI画像生成・新規課金なし。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-08T12:24:03.199504+00:00",
+  "publication_approved": false
+}

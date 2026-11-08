@@ -1,0 +1,89 @@
+{
+  "id": "8926ed6e2f6c758b34aa",
+  "article_path": "article-results-one-next-20261108.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261108.html",
+  "source_commit": "",
+  "source_blob_sha": "ddb2543fa7a0292ff7f7e26a231e5279de992232",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "8e226892bddbd53c00553a802f8da44b40552b74692dc89b6dc509cba175e4f5",
+  "last_observed_blob_sha": "ddb2543fa7a0292ff7f7e26a231e5279de992232",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8926ed6e2f6c758b34aa/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8926ed6e2f6c758b34aa/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-08T12:12:06.902636+00:00",
+  "creation_event_id": "649cd3644f2c6c3896f4",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/8926ed6e2f6c758b34aa/thumbnail.png",
+  "image_sha256": "81aecd3917984ca9a3abee716a923a2400cdbab319ef4e4cc0fc128ba05c86db",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "ddb2543fa7a0292ff7f7e26a231e5279de992232",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.08",
+      "試合結果",
+      "当日のEFF",
+      "リーグ別・ポジション別TOP3",
+      "イラスト（AI生成）  ｜  イメージ"
+    ],
+    "sources": [
+      {
+        "type": "frozen_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8926ed6e2f6c758b34aa/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261108.html",
+        "use": "本文内容の根拠。タイトル、日付、リーグ別・ポジション別の当日公式EFF TOP3。Git blob SHAを生成前と保存時に照合済み。gitコマンドは未使用。"
+      },
+      {
+        "type": "frozen_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8926ed6e2f6c758b34aa/source.txt",
+        "use": "本文内容の根拠。予想や今季平均とは別集計。兼任ポジションは各部門の対象。同率は同順位で最大3人。ポジションは資料取得時点の公式登録で当日の起用位置を断定しない。公式配信EFFを優先。画像はランキングの総合1位や選手個人の活躍を示さない。"
+      },
+      {
+        "type": "official_appearance_reference",
+        "url": "https://wolga.jp/team/players/detail/id=60182?PlayerID=51000712",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026110820/files/user/roster/2728/2026-27/51000712_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8926ed6e2f6c758b34aa/references/ibrahim-diaby-official.jpg",
+        "use": "描画する実在選手の容姿確認のみ。本文・個人成績の根拠には未使用。写真は完成画像に貼り付けていない。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認した承認済み黒×ライム、太字日本語、手描きインク・ブラシのスタイル。名前や成績は持ち越さない。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "use": "手順書記載ディレクトリのA画像は存在せず、案件Notionに記載された元保存先で同名の承認済み画像を発見しview_imageで確認。白地案は今回不採用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "イブラヒム・ディアビ",
+        "selection": "ランダム",
+        "reason": "複数リーグ・ポジション別TOP3を同じ形式で扱う記事で、本文の主役を1人に絞れないため。",
+        "selection_method": "secrets.randbelow; unique names in frozen article TOP3 tables; no redraw",
+        "candidate_count": 37,
+        "selected_index_zero_based": 29,
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8926ed6e2f6c758b34aa/selection.json",
+        "official_profile_url": "https://wolga.jp/team/players/detail/id=60182?PlayerID=51000712",
+        "official_roster_url": "https://www.bleague.jp/en/roster_detail/?PlayerID=51000712",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026110820/files/user/roster/2728/2026-27/51000712_01.jpg",
+        "appearance_observed": "短く密なカールと短いサイド、茶色のハイライト、幅のある卵形から角張った輪郭、太い眉、アーモンド形の目、幅のある鼻、厚みのある唇、ごく薄い口ひげ・あごの短いひげ、広い肩、右腕の白いスリーブ。公式写真を実際に目視確認したうえでイラストに反映。",
+        "depiction": "本人をモデルとする低いドライブ姿のイメージ。特定の実際の試合場面の再現ではない。人物1人。ロゴ・スポンサー・背番号を省いた無地ユニフォーム。",
+        "text_policy": "ランダム選出のため画像内に名前・個人成績・出場や活躍の記述なし。「イラスト（AI生成）」「イメージ」を表示。",
+        "visual_qa": "生成結果を公式資料と比較し、髪型、輪郭、目鼻、口元、ひげがイラストとして反映されていることを確認。初稿では頭頂とボールに見切れがあったため1回修正。修正版は頭頂・ボール・両手に余白があり、手指の本数・形に明らかな破綻がないこと、文字と人物の非干渉、日付・見出し・留保・AI注記を目視確認。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story.\nCreate ONE finished Japanese basketball news thumbnail as a landscape PNG, 1536 x 864 pixels (16:9), at least 1000 pixels wide.\n\nDesign and style:\nApproved editorial style: deep charcoal-black #151A18 background, vivid lime #CCF43B paint strokes, warm off-white bold Japanese type. Hand-drawn ink illustration, expressive dry brush marks, simplified screenprint shading and visible hatching. Few elements, strong readable hierarchy. No photorealism and no photographic collage. Keep all text and the entire basketball at least 6% inside canvas edges.\n\nPerson, mandatory real-person likeness:\nThe ONLY person is real professional basketball player Ibrahim Diaby / イブラヒム・ディアビ of Shonan, selected randomly from the article's named players. Draw THIS real player, not an invented athlete. Appearance was checked in his official club profile portrait (B.LEAGUE player ID 51000712). Likeness description from that portrait: young adult male with medium-deep warm brown skin, short tightly curled textured hair with small chunky twists on top, subtle warm brown tips, short faded sides, a fairly broad oval rectangular face, strong angular jaw tapering slightly to chin, thick almost straight eyebrows, slightly hooded almond eyes, broad straight nose with rounded tip, full closed lips, very faint narrow moustache and close stubble along the chin and jaw (not a heavy beard). Athletic broad shoulders and strong long arms. Hair volume compact, not long hair or dreadlocks; face should remain clearly readable with ink highlights, not swallowed in black.\nUse a completely plain dark basketball singlet with off-white edging, and a white compression sleeve on his right forearm/elbow as seen in the official portrait. NO logos, sponsor lettering, team name, player name, or jersey number anywhere. The official photo is an appearance reference only: do not paste or reproduce it as a photograph.\n\nComposition:\nPlayer dominates the LEFT 45% of the canvas, seen from head to around knees, in an energetic low driving stance moving diagonally toward the right. Three-quarter face visible, focused gaze to the right; torso leaning forward. His sleeved right arm reaches down to guide an orange basketball near lower-left/center, with naturally curved hand touching the top of the ball. Left arm bent naturally for balance. Exactly two arms and hands; anatomically plausible hands. The ball is a prop belonging to this player and remains wholly visible. One sweeping lime brush arc behind him communicates momentum, with minimal ink specks. No other people. No hoop or opponent needed. This is a conceptual basketball movement image, not a recreation of any specific match or actual play.\n\nTypography on RIGHT 53%, all text exact Japanese:\nSmall masthead upper right: \"バスケまとめ\"\nDate beneath masthead, medium: \"2026.11.08\"\nLarge heavy headline: \"試合結果\"\nLarge lime subheadline: \"当日のEFF\"\nBelow, smaller but readable off-white: \"リーグ別・ポジション別TOP3\"\nA clean footer near bottom, legible off-white on charcoal: \"イラスト（AI生成）  ｜  イメージ\"\n\nText content constraints:\nOnly the above six text lines. The editorial content is based solely on the fixed article titled 11/08 試合結果・当日のEFF, which summarizes multiple leagues and position-specific TOP3 using official EFF for that day. Do not add any player name, team name, score, personal statistics, claim of performance or appearance, season-average claim, dramatic result, 'MVP', rank badge, or winning-play claim. TOP3 refers to the article's league-by-position listings, never to the depicted player's individual achievement. The depicted real player's name is not to be rendered in the image.\nNo league logo, team logo, sponsor logo, watermark, pseudo-writing, extra labels, copied reference scores, or photographic content.\nProduce a polished single thumbnail with the real player's recognizable ink likeness, dynamic action, spacious typography and clear AI disclosure.\n\nONE ALLOWED CORRECTION\nEdit this generated basketball thumbnail only to correct its layout and cropping. Keep the same one real player, Ibrahim Diaby, recognizable facial features, short textured hair, right-arm white sleeve, dribbling pose, hand anatomy, plain uniform, all text, ink brush style, charcoal/lime/off-white palette, and overall left-player/right-headline arrangement.\n\nZoom out the WHOLE design approximately 12–15%, recompose on the same 16:9 1536x864 canvas, and fill the added border space naturally with the existing charcoal background. IMPORTANT: reveal the ENTIRE top of his hair and the ENTIRE orange basketball with at least 50 pixels of visible charcoal/brush space above the hair and below the ball. All of the player's hands and elbows must be fully in-frame. It is fine for legs below knees to exit the bottom. The rightmost Japanese text and masthead must have at least 60 pixels of right margin. Keep a clear bottom safe margin below the AI disclosure. Do not solve this by simply clipping or moving the player: SCALE DOWN the composition and naturally complete the missing hair tips and bottom basketball contour. Preserve the visible real player's face shape, eyes, nose, lips and light stubble. No photo textures.\n\nAll six text lines must remain verbatim, legible, with no additions:\nバスケまとめ\n2026.11.08\n試合結果\n当日のEFF\nリーグ別・ポジション別TOP3\nイラスト（AI生成）  ｜  イメージ\n\nNo player name, jersey number, score, statistics, logos, sponsor lettering, extra people, or added facts. This is a conceptual illustration and must retain both the AI label and イメージ.\nOnly one corrected final image.\n",
+    "generator": "OpenAI built-in image_gen.imagegen; 1 initial generation + 1 correction; no API/CLI generation; final PNG 1672x941; final asset exec-8f0f3b21-ded1-4f75-8b01-484f5d588d70.png; saved without pixel postprocessing",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-08T12:20:26.130348+00:00",
+  "publication_approved": false
+}
