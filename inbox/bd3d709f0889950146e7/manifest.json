@@ -1,0 +1,100 @@
+{
+  "id": "bd3d709f0889950146e7",
+  "article_path": "article-daily-20261109.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261109.html",
+  "source_commit": "",
+  "source_blob_sha": "a0e6cd18273b12fc2b95516c32fc157289aed6c2",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "e1e6ea1292c887f7d5445e1d79e7227811b0e2b3a8171cc97c8659bdda85dfbb",
+  "last_observed_blob_sha": "a0e6cd18273b12fc2b95516c32fc157289aed6c2",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/bd3d709f0889950146e7/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/bd3d709f0889950146e7/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-08T23:18:55.678737+00:00",
+  "creation_event_id": "2ba63ceac8a52ebfccea",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/bd3d709f0889950146e7/thumbnail.png",
+  "image_sha256": "8ebf04e6c1861f596429912b500eb169c6ee4aaab1c276ed379ebca9f8b51ffb",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "a0e6cd18273b12fc2b95516c32fc157289aed6c2",
+    "text_lines": [
+      "バスケまとめ｜2026.11.09",
+      "宇都宮ブレックス",
+      "ケルと市岡",
+      "脳振盪で",
+      "復帰未定",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_fixed_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/bd3d709f0889950146e7/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261109.html",
+        "scope": "本文根拠。タイトル・リード・負傷発表節：2人とも脳振盪、復帰時期は未定。11月9日は記事日付。"
+      },
+      {
+        "type": "article_fixed_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/bd3d709f0889950146e7/source.txt",
+        "scope": "HTMLと照合。市岡の11月7日出場は未確認、4人欠場は条件付き分析のため画像の断定材料に使わない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "scope": "view_imageで目視。配色・画風のみ参照。人物名・成績は転用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "トレイ・ケル III",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿のタイトル・リードで負傷発表対象として大きく扱う2名のうち1名。2名をともに描写。",
+        "source": "https://www.utsunomiyabrex.com/player_lp/trey_kell_III_base/?PlayerID=51000524",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026110908/files/user/roster/703/2026-27/51000524_01.jpg",
+        "reference_viewed": true,
+        "features": "短い黒髪と整った生え際、角張った輪郭、薄い口ひげと小さな顎ひげ、広い肩。",
+        "use": "容姿参照のみ。公式写真を完成画像へ貼り付けない。"
+      },
+      {
+        "name": "市岡ショーン",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿のタイトル・リードで負傷発表対象として大きく扱う2名のうち1名。2名をともに描写。",
+        "source": "https://www.utsunomiyabrex.com/player_lp/sean_ichioka/",
+        "image_url": "https://utsunomiyabrex.bl.kuroco-img.app/v=1789348778/files/user/lp/players/image/sean_ichioka/kv_pc.jpg",
+        "reference_viewed": true,
+        "features": "非常に短い茶黒色の髪、縦長で角のある輪郭、つながった口ひげと顎・頬の短いひげ、まっすぐな鼻。",
+        "use": "容姿参照のみ。公式写真を完成画像へ貼り付けない。"
+      }
+    ],
+    "prompt": {
+      "initial": "Create exactly one finished Japanese basketball editorial thumbnail, landscape 16:9, 1536x864 or larger, PNG. Use case: illustration-story. It is a new image for バスケまとめ.\n\nSTYLE: Approved graphic language: near-black #151A18 background, vivid lime #CCF43B brush strokes, ivory headline lettering, bold Japanese sans-serif, hand-drawn black ink and coarse dry-brush hatching. Few elements, confident strong visual hierarchy, print editorial illustration, absolutely not photorealistic. Players must have distinctive recognizable drawn faces, not silhouettes.\n\nARTICLE FACTS (only these should inform text): Utsunomiya Brex announced injuries of Trey Kell III and Sean Ichioka on November 7. Both were diagnosed with concussion; their return timing is undetermined. Article date November 9, 2026. No score, statistics, predicted absences or injury-list counts should appear. These illustrations are generic imagined basketball action portraits, not documentation of any actual game, injury, comeback or decisive shot. Do not illustrate an injury, collision or treatment.\n\nSUBJECTS: Exactly two real adult players, TREY KELL III and SEAN ICHIOKA. They are the two main subjects of the article. Use the following facial features observed directly from official Utsunomiya Brex profile photographs:\n1) Trey Kell III: medium warm tan complexion, short close-cropped black hair with subtle waves and a crisp squared hairline, closely faded sides, dark eyebrows, dark deep-set eyes, broad angular face and strong jaw, straight medium-broad nose, neat thin moustache and small concentrated goatee on chin, cheeks mostly clean-shaven. Muscular broad shoulders. Official profile: https://www.utsunomiyabrex.com/player_lp/trey_kell_III_base/?PlayerID=51000524 .\n2) Sean Ichioka: lighter warm complexion, very short dark-brown buzz cut, slightly receding hairline, long oval-angular face, straight narrow nose, prominent ears, dark eyes, full short brown beard connected with moustache, fuller beard around jaw and chin. Tall athletic build. Official profile: https://www.utsunomiyabrex.com/player_lp/sean_ichioka/ .\nMake the two faces clearly different and true to these features. Draw from scratch in expressive ink and ivory shading with visible eyes, nose, mouth, jaw; do not paste or reproduce photographs.\n\nCOMPOSITION: Left 53 percent is a clean dark text column. Right 47 percent is a dynamic two-player editorial collage: Kell in the lower foreground in a low running dribble posture, turned three-quarter toward the viewer, one hand controlling a small orange basketball close to his hip, opposite bent arm balancing. Behind him and higher to the far right, Ichioka with raised arms poised to receive a rebound, looking upward, no ball required. They are separate action portraits, not opponents competing with each other and not a literal shared game scene. Both heads and all visible hands fully inside frame with breathing room. Crop lower bodies deliberately around thighs, not faces or hands. Their hands and arms must be anatomically plausible, no extra fingers or limbs. Use plain unbranded dark navy sleeveless basketball uniforms with restrained golden-yellow piping; Kell may wear a plain black short sleeve undershirt. NO jersey words, numbers, crests, manufacturer symbols, team logos, league logos, sponsor marks. No other people. Controlled diagonal lime brush marks behind the figures, restrained and serious news tone.\n\nTYPOGRAPHY: Render exactly the following six text lines with perfect Japanese orthography and no other text:\nSmall top-left: 「バスケまとめ｜2026.11.09」\nMedium bold under masthead: 「宇都宮ブレックス」\nLarge bold headline: 「ケルと市岡」\nVery large ivory headline: 「脳振盪で」\nLargest lime headline: 「復帰未定」\nReadable bottom-left caption: 「イラスト（AI生成）｜イメージ」\nJapanese quotation brackets here are delimiters and must not be rendered. Preserve precisely the complex kanji 脳振盪 and 復帰未定. Main headline occupies left middle, clean aligned lines, no text over faces. Small bottom caption on clean black at least 28px at 1536 width. Keep all text in a 4% safe margin. Avoid additional English titles, fabricated facts, decorative numbers, scoreboards, medical icons, flags, logos and watermarks. The result must be one polished complete thumbnail.",
+      "revision": "Edit this existing Japanese basketball thumbnail once to correct framing only. Preserve the existing accurate Japanese text verbatim, exact typography, line breaks, near-black/lime/ivory color scheme, ink illustration style, the two real players Trey Kell III in front and Sean Ichioka behind, their facial features, unbranded navy/gold clothing, and their action poses. The text must remain:\nバスケまとめ｜2026.11.09\n宇都宮ブレックス\nケルと市岡\n脳振盪で\n復帰未定\nイラスト（AI生成）｜イメージ\n\nCORRECTION: The original orange basketball is cut off by the bottom edge, and Ichioka's raised fingers are too near the top and right borders. Scale the entire two-player illustration group down by about 15% and position it within the right half with at least 48px of clear margin around ALL raised fingers and around the entire basketball at this resolution. Basketball must be completely visible, including its lower curve. Ichioka's visible hands must both be inside the canvas, no cut fingertips or elbows at the side. Keep the players large and visually compelling; leg cropping below thighs is fine. Ensure the hands/ball do not overlap ANY headline glyph, including the final 定. Do not alter the headline wording or add any new elements, names, scores, jersey lettering, numbers, team/league/sponsor logos or photos. Anatomically plausible hands and fingers. Remain a stylized editorial illustration, not photorealism. Keep approximately 16:9 landscape and at least 1536px wide. One complete revised PNG."
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 2,
+      "corrections": 1,
+      "status": "passed",
+      "initial_output_path": "/Users/genjo/.codex/generated_images/01a1bd75-2e45-7e40-8248-01f7bb7fabf7/exec-2d9f54fb-35c8-4190-9950-d86b4dce1520.png",
+      "selected_output_path": "/Users/genjo/.codex/generated_images/01a1bd75-2e45-7e40-8248-01f7bb7fabf7/exec-2fe20282-dbf5-4df0-835b-6b3b256e800b.png",
+      "qa_method": "初稿と修正後の実画像を目視。修正後は本文・公式容姿資料と対照し、5項目を確認。",
+      "qa_notes": {
+        "text_and_numbers": "6行の文字・記事日付2026.11.09を固定本文と照合。選手名・脳振盪・復帰未定は正しく、得点・スコア等の追加なし。",
+        "source_qualifiers": "復帰未定を大きく表示。市岡の出場や条件付き4人欠場を断定せず、イメージ注記を表示。実際の試合場面・負傷場面・復帰場面として描かない。",
+        "likeness_or_no_named_person": "2名とも公式写真を参照。ケルの短い黒髪・輪郭・口ひげと顎ひげ、市岡の短髪・縦長の輪郭・つながった短いひげを描き分け。架空人物なし。非写真調、公式写真貼付なし、ロゴ・スポンサー文字なし。",
+        "layout": "1回の修正後、ボール全体・2人の頭部・全ての可視手指が枠内に収まり、見出しとの重なりなし。手と腕は目視で大きな破綻なし。太ももで意図的に人物をトリミング。",
+        "ai_label": "下部にイラスト（AI生成）｜イメージを目視確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-08T23:22:37.108158+00:00",
+  "publication_approved": false
+}
