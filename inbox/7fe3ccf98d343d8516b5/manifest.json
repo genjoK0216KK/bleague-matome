@@ -1,0 +1,94 @@
+{
+  "id": "7fe3ccf98d343d8516b5",
+  "article_path": "article-results-one-next-20261109.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261109.html",
+  "source_commit": "",
+  "source_blob_sha": "57c4b005ae379c183e85735bd422fe9f49b6449b",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "742a834b8efbb633bf584620805da167c911627ce89fee2a5510f9c13fb32333",
+  "last_observed_blob_sha": "57c4b005ae379c183e85735bd422fe9f49b6449b",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7fe3ccf98d343d8516b5/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7fe3ccf98d343d8516b5/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-08T18:06:35.781720+00:00",
+  "creation_event_id": "c7c9832869a9f44183f3",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/7fe3ccf98d343d8516b5/thumbnail.png",
+  "image_sha256": "84f6cb16c6c14660af00b9fb02c7b68e951ec586d465a91c7479a96c4ae0c85f",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "57c4b005ae379c183e85735bd422fe9f49b6449b",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.09",
+      "B.PREMIER｜試合前",
+      "今季平均EFF",
+      "ベスト5",
+      "対象試合の登録選手から",
+      "出場確定ではありません",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7fe3ccf98d343d8516b5/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261109.html",
+        "use": "本文の根拠。2026-11-09のB.PREMIER対象試合の登録選手を今季平均EFFで選出した試合前ベスト5。出場確定を示さない。試合結果・当日TOP3は公式記録確定待ち。HTML blob SHAを保存前に再照合済み。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7fe3ccf98d343d8516b5/source.txt",
+        "use": "本文の根拠。HTML本文と日付・選手・選出範囲・留保を照合。本文の根拠はこのTXTと固定HTMLのみ。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認。黒×ライム、太い和文、インク・ブラシの画風のみ参照。元画像の選手・名前・得点・日付を転用しない。"
+      },
+      {
+        "type": "official_likeness_reference",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=33085",
+        "image_url": "https://www.bleague.jp/files/user/roster/2486/2026-27/33085_03.png",
+        "use": "D.J・ニュービルの容姿のみ参照。公式写真を取得してview_imageで目視確認。記事本文・数値の根拠には使用しない。完成画像へ写真やロゴは貼り込まない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "D.J・ニュービル",
+        "selection": "ランダム",
+        "selection_reason": "本文はベスト5とサブ5の複数選手を並列に扱い、単独の主役を絞れないため、本文に名前がある10選手から1名を抽選。",
+        "selection_method": "Python random.Random('7fe3ccf98d343d8516b5').choice(candidate_names) による再現可能なランダム選択。",
+        "candidate_names": [
+          "D.J・ニュービル",
+          "ジャレット・カルバー",
+          "ヴィック・ロー",
+          "ニック・ケイ",
+          "チャールズ・ジャクソン",
+          "齋藤 拓実",
+          "ブライアン・アンゴラ",
+          "アンジェロ・カロイアロ",
+          "ケリー・ブラックシアー・ジュニア",
+          "スコット・エサトン"
+        ],
+        "reference_source": "B.LEAGUE公式選手プロフィール",
+        "reference_url": "https://www.bleague.jp/roster_detail/?PlayerID=33085",
+        "reference_image_url": "https://www.bleague.jp/files/user/roster/2486/2026-27/33085_03.png",
+        "observed_features": "短く刈った黒髪、生え際の形、丸みのある輪郭と顎、口ひげにつながる濃いあごひげ、目鼻、厚みのある体格、両腕のタトゥーを公式写真で確認し、手描きの線・陰影へ反映。",
+        "depiction": "単独の低いドライブ・ドリブル姿。実際の試合場面の再現ではなくイメージ。無地のユニフォーム。選手名・個人成績・出場・活躍の記述なし。",
+        "visual_review": "生成画像を実際に表示し、短髪・ひげ・輪郭・目鼻の特徴、二本の腕、自然な手指、ボールの収まり、文字と人物の非干渉を確認。"
+      }
+    ],
+    "prompt": "Use case: illustration-story / editorial sports thumbnail. Rework the first reference artwork into ONE finished new Japanese basketball thumbnail for a different article. Output a single PNG, landscape 16:9, ideally 1600x900, never a collage.\nReference 1 is ONLY the approved visual style: charcoal-black #151A18, electric lime #CCF43B, off-white, bold Japanese typography and dynamic hand-painted ink/brush sports illustration. DO NOT carry over its player, date, scores, player name, or other text.\nReference 2 is ONLY the verified official likeness reference for real basketball player D.J. Newbill (D.J・ニュービル). Draw this real person as an unmistakable hand-drawn illustration, NOT a fictional athlete. His closely cropped black hair, receding temple corners, broad oval face, full close-cut dark beard connected to mustache, strong jaw, wide nose, deep-set eyes, solid muscular build, and densely tattooed upper arms must be recognizable. Render the face in expressive visible ink contours and off-white/lighter grey hatching, not buried in shadow. Do not paste, trace, or imitate the photographic finish of the official photograph. No photographic elements.\nComposition change from reference 1: place the athlete on the LEFT 43% of the canvas and text on the RIGHT 54%. Athletic low driving dribble toward the center, three-quarter face clearly visible and focused, torso twisting and leaning forward, one hand controlling an orange basketball below waist height and the other bent naturally for balance. Head, hands and ball fully within frame; crop only at mid-thigh if needed. One person only. Plain dark sleeveless uniform with off-white edge accents, absolutely no logos, lettering, numbers, sponsors, club marks or league logos on clothing, shoes or ball. Keep identifiable beard, hair and facial proportions. Black/white/lime scratchy ink and brush illustration with orange ball, restrained lime sweeping arcs behind the athlete to convey movement. No rim or opponent needed. Abstract background without a real arena, scoreboard, crowd, clock or game evidence. This is a symbolic basketball illustration, not a reconstruction of an actual game.\nOn the RIGHT, set the following exact Japanese text in a clean, exceptionally legible bold gothic sports editorial hierarchy with generous safe margins. The main headline is visually dominant; avoid a bulky box or tiny illegible letters:\nSmall top branding: 「バスケまとめ」\nDate below it: 「2026.11.09」\nSmall pregame tag: 「B.PREMIER｜試合前」\nMedium headline line in off-white: 「今季平均EFF」\nVery large main headline in lime: 「ベスト5」\nSupporting line, clearly legible: 「対象試合の登録選手から」\nImportant caveat, clearly legible: 「出場確定ではありません」\nBottom safe-area footer in off-white: 「イラスト（AI生成）」 and 「イメージ」\nAll text must be exactly these strings. No player name, player statistics, jersey number, performance claims, appearances, game score, starting-five guarantee, or additional text. Date and best-five numeral only as listed.\nThe article is a PRE-GAME editorial selection from players registered for the day's scheduled B.PREMIER games based on season-average EFF. Selection does not confirm participation. The pictured player was randomly selected from the article's named players, so no textual claim of his performance or participation. Do not write '成績をもとにしたイメージ'; use only the exact footer above.\nMaintain an elegant limited-element black/lime ink poster style closely related to reference 1, with a new driving pose and reversed layout. Ensure correct human anatomy, exactly two arms and two visible hands with natural fingers, no extra limbs, readable face, unclipped ball, no text collisions, crisp Japanese characters, and minimum 5% outer safe margin.",
+    "generator": "OpenAI built-in image_gen; 生成1回、修正0回。PNG 1672x941（約16:9）。生成画像を目視検品後に無加工コピー。PNGの署名・寸法・全チャンクCRC・コピー前後一致を検証。SHA256: 84f6cb16c6c14660af00b9fb02c7b68e951ec586d465a91c7479a96c4ae0c85f",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-08T18:09:39.005823+00:00",
+  "publication_approved": false
+}
