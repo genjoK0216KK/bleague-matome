@@ -422,29 +422,29 @@
   },
   "article-daily-20261108.html": {
    "article_path": "article-daily-20261108.html",
-   "editorial_fingerprint": "a1b506eba29744422cc8ae8d113a777ffb86d0a36bff01386bbd59bfb3e48d65",
+   "editorial_fingerprint": "efb690c6ce47ee13ab483776568e07fd5d0e78f683475927270fab3e7fb35ff6",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261108-429ceb61dda6.jpg",
+     "path": "thumbs/auto/article-daily-20261108-b16734e51d55.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261108-429ceb61dda6-og.jpg",
+     "path": "thumbs/auto/article-daily-20261108-b16734e51d55-og.jpg",
      "width": 1200
     }
    },
-   "id": "4189dc16f9911ba2f676",
-   "image_sha256": "429ceb61dda6f1e2f103a2469e27885256f1c065b9fbd8a71586caa49587827e",
-   "imported_at": "2026-11-07T23:26:59.158945+00:00",
-   "prepared_at": "2026-11-07T23:26:34.548857+00:00",
-   "source_blob_sha": "32c24f2566d38b170476b58305519d90be5f3cfd",
+   "id": "574068c2a0f59824e769",
+   "image_sha256": "b16734e51d55bd1c4bb07ea94316385095ef01291df0f84e478e396ce2ad9b85",
+   "imported_at": "2026-11-08T03:29:33.581439+00:00",
+   "prepared_at": "2026-11-08T03:29:05.554717+00:00",
+   "source_blob_sha": "545fe2052e656a8ca2493f96ad71bfb8cdbee66d",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "a1b506eba29744422cc8ae8d113a777ffb86d0a36bff01386bbd59bfb3e48d65",
+   "stable_fingerprint": "efb690c6ce47ee13ab483776568e07fd5d0e78f683475927270fab3e7fb35ff6",
    "style": "ink-lime-portrait-v5",
    "title": "名古屋Dが開幕11連勝、Bリーグ記録を更新"
   },
@@ -1347,20 +1347,6 @@
  },
  "log": [
   {
-   "article": "article-daily-20261031.html",
-   "at": "2026-11-03T04:47:37.549838+00:00",
-   "event": "imported",
-   "id": "5e231e28b370cb26f1f6",
-   "image": "e9999e7a8d87"
-  },
-  {
-   "article": "article-daily-20261101.html",
-   "at": "2026-11-03T04:47:37.549865+00:00",
-   "by": "a9d34f9ead8bbf40b841",
-   "event": "superseded",
-   "id": "6b5193f033d3228b846d"
-  },
-  {
    "article": "article-daily-20261101.html",
    "at": "2026-11-03T04:47:37.549869+00:00",
    "by": "a9d34f9ead8bbf40b841",
@@ -1905,6 +1891,20 @@
    "event": "imported",
    "id": "2ab61380b5143b8db0be",
    "image": "131eb1061ff5"
+  },
+  {
+   "article": "article-daily-20261108.html",
+   "at": "2026-11-08T03:29:33.434100+00:00",
+   "by": "574068c2a0f59824e769",
+   "event": "superseded",
+   "id": "4189dc16f9911ba2f676"
+  },
+  {
+   "article": "article-daily-20261108.html",
+   "at": "2026-11-08T03:29:33.581461+00:00",
+   "event": "imported",
+   "id": "574068c2a0f59824e769",
+   "image": "b16734e51d55"
   }
  ],
  "seen": {
@@ -1930,7 +1930,7 @@
   "39075cc4edcf56d9d90d": "superseded:a9d34f9ead8bbf40b841",
   "3955308615847dff3136": "superseded:9f2558d6277a776ef982",
   "3d20be125ac18075c9b0": "superseded:9f2558d6277a776ef982",
-  "4189dc16f9911ba2f676": "imported",
+  "4189dc16f9911ba2f676": "superseded:574068c2a0f59824e769",
   "4367b17c7960b99cb3ea": "superseded:ca69b5d16263483eb1ed",
   "44da7637029692ee5a53": "superseded:a718e72ebd289b318965",
   "45bb49c6e6574fb7d88a": "superseded:5e231e28b370cb26f1f6",
@@ -1940,6 +1940,7 @@
   "4f8263992a0a733cc2e3": "superseded:75a5c2e5b4ddddc773c3",
   "50222bd804efe24c13be": "superseded:75a5c2e5b4ddddc773c3",
   "5371bea30124ef22fa57": "imported",
+  "574068c2a0f59824e769": "imported",
   "5a86fec3857da89d996f": "superseded:5b9d534e1962778a709e",
   "5b9d534e1962778a709e": "imported",
   "5e231e28b370cb26f1f6": "imported",
