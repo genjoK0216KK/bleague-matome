@@ -1,0 +1,97 @@
+{
+  "id": "75e3bc615bf24e4df460",
+  "article_path": "article-results-one-next-20261108.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261108.html",
+  "source_commit": "",
+  "source_blob_sha": "d4850aa1c6ff7c901f1d46023cb89df536defaae",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "f2d9c8deb9d026d6c78cf88d27ce6d1754930556e3406611582c3650dc357d7c",
+  "last_observed_blob_sha": "d4850aa1c6ff7c901f1d46023cb89df536defaae",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/75e3bc615bf24e4df460/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/75e3bc615bf24e4df460/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-08T10:20:06.386780+00:00",
+  "creation_event_id": "8f5c682cf0c5a527fe24",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/75e3bc615bf24e4df460/thumbnail.png",
+  "image_sha256": "f9c3177c9025725fa0574ffded345f3571624f54bcc6395cddeff83287154359",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "d4850aa1c6ff7c901f1d46023cb89df536defaae",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.08",
+      "試合結果",
+      "当日のEFF",
+      "B.ONE・B.NEXT｜ポジション別TOP3",
+      "19:08時点｜一部公式記録未確定",
+      "イラスト（AI生成）　イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/75e3bc615bf24e4df460/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261108.html",
+        "blob_sha_verified": true
+      },
+      {
+        "type": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/75e3bc615bf24e4df460/source.txt"
+      },
+      {
+        "type": "appearance_only",
+        "title": "B.LEAGUE公式 マイク・エドワーズ選手プロフィール",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000649",
+        "image_url": "https://www.bleague.jp/files/user/roster/2487/2026-27/51000649_03.png",
+        "visually_inspected": true
+      },
+      {
+        "type": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "visually_inspected": true
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "マイク・エドワーズ",
+        "selection": "ランダム",
+        "reason": "記事は複数試合・ポジション別TOP3を同列に掲載し、単一の主役を絞れない。本文順位表の登場選手26人から選択。",
+        "method": "Python random.Random('75e3bc615bf24e4df460').choice(本文HTML順位表の登場順・重複除去済み26選手)",
+        "official_profile": "https://www.bleague.jp/roster_detail/?PlayerID=51000649",
+        "official_photo": "https://www.bleague.jp/files/user/roster/2487/2026-27/51000649_03.png",
+        "reference_observations": "短い黒いツイスト状の編み髪が耳の横に垂れる。広い額、面長寄りの輪郭、濃い眉、幅のある鼻、口ひげにつながる濃いあごひげ。肩幅のある体格。公式写真をview_imageで確認。",
+        "representation": "ロゴ・氏名・背番号のないユニフォームでプレー姿をイラスト化。実際の試合場面の再現ではない。氏名・個人成績・出場・活躍を画像文字に記載しない。"
+      }
+    ],
+    "prompt": "Use case: ads-marketing\nCreate exactly one finished Japanese basketball editorial thumbnail, landscape 16:9, 1536x864 or larger. This is a brand-new illustration, not an edit.\nVisual style: approved バスケまとめ style seen earlier: nearly black #151A18 background, electric lime #CCF43B brush strokes, warm ivory text, bold hand-inked linework, expressive dry-brush hatching, limited elements, dramatic sports poster. Clearly drawn illustration, never photorealistic.\nReference roles: the earlier black/lime Culver thumbnail is STYLE ONLY: do not copy its person, pose, date, names or statistics. The official Mike Edwards portrait just viewed is LIKENESS REFERENCE ONLY: do not paste any photograph or reproduce any logos.\nSubject: ONE real professional player, Mike Edwards (マイク・エドワーズ), based on official B.LEAGUE portrait https://www.bleague.jp/files/user/roster/2487/2026-27/51000649_03.png and profile https://www.bleague.jp/roster_detail/?PlayerID=51000649 . Preserve his distinctive shoulder-broad athletic frame, warm medium-light brown skin translated into warm ivory/charcoal ink tones, short black twisted braids hanging beside the ears, square front hairline, broad oval face, thick connected full dark beard and mustache, expressive eyebrows, broad nose, and recognizable facial proportions. No generic invented player. Plain dark sleeveless basketball kit with ivory trim; no logos, no sponsor text, no team words, no jersey number. Left arm may have a plain dark sleeve consistent with the reference.\nComposition: NEW pose and layout, not the reference shooter's layout. Player occupies the LEFT 43%, face clearly visible in a three-quarter forward view, athletic low pivot with bent knees and torso leaning dynamically toward center, firmly holding an orange basketball in both hands near his waist in preparation for a pass. Frame from head through upper thighs, keep the complete head, both arms, both anatomically correct hands and complete ball visible, generous margins. Five natural fingers per hand, no extra limbs. A sweeping lime brush curve behind him suggests movement. The RIGHT 54% is calm negative space for enormous readable typography. No other players, no crowd, no scoreboard, no photographs. This is an editorial imagined pose, not a recreation of an actual game moment.\nText, render exactly, no additional words or numbers:\nSmall brand at top right: \"バスケまとめ\"\nDate just beneath brand: \"2026.11.08\"\nMain headline, very large ivory: \"試合結果\"\nSecond headline, very large lime: \"当日のEFF\"\nSupporting line below headline, clear ivory: \"B.ONE・B.NEXT｜ポジション別TOP3\"\nSmaller but fully readable status line: \"19:08時点｜一部公式記録未確定\"\nBottom footer on a calm dark strip, legible ivory: \"イラスト（AI生成）　イメージ\"\nUse heavy Japanese Gothic type, carefully correct characters; choose sizing that fits every text line with at least 5% safe margin and no cropping. Do not overlap text with player, ball or hands. Visual hierarchy: headlines dominate, player face and motion second, scope and status clear but subordinate.\nEditorial basis ONLY supplied fixed article: November 8 game results and daily official EFF position top-three for B.ONE and B.NEXT; some B.PREMIER game records are pending at 19:08 JST. Do not add scores or individual numbers. The selected player is RANDOM from the article's named players: do not include his name, performance, ranking, appearance claims, or imply he is the day's MVP. Do not write 成績をもとにしたイメージ. Use only the exact AI footer above. No team logos, league logos, watermarks, official photo pixels, UI elements, or extra lettering.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "revision_calls": 0,
+      "article_qualifiers": "試合結果は2026-11-08 19:08 JST時点。A東京対三遠・佐賀対千葉Jの公式記録未確定。B.PREMIERのEFFは確定待ち。画像は一部未確定と記し、TOP3の対象をB.ONE・B.NEXTに限定。外部の成績は採用しない。",
+      "qa_observations": {
+        "text_and_numbers": "生成PNGをview_imageで確認。2026.11.08、試合結果、当日のEFF、B.ONE・B.NEXT、ポジション別TOP3、19:08の文字を照合。個人名・成績数値はなし。",
+        "source_qualifiers": "一部公式記録未確定を画像に表示。EFF TOP3の対象はB.ONE・B.NEXTと明記され、B.PREMIERの確定待ちを覆す表現はない。",
+        "likeness_or_no_named_person": "公式ポートレートと生成画像を目視比較。耳横へ垂れる黒い編み髪、広い額、濃い口ひげとあごひげ、鼻と輪郭、肩幅をイラストで反映。人物はマイク・エドワーズ1人。公式写真の貼付け、チーム・リーグ・スポンサーのロゴなし。",
+        "layout": "1672×941の横長画像を目視確認。左の動きのある人物と右の見出しが分離し、全文、顔、両手、ボールが見える。両手の指と握りを確認。下部は太ももまでの意図したトリミング。",
+        "ai_label": "下部の「イラスト（AI生成）」「イメージ」を目視確認。実際の試合場面の再現を示す表現なし。"
+      },
+      "output": {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/75e3bc615bf24e4df460/generated.png",
+        "width": 1672,
+        "height": 941
+      },
+      "original_path": "/Users/genjo/.codex/generated_images/01a1bab1-f7e0-7ea1-a437-2ecdf639065e/exec-bec16c18-18ec-4262-a2da-72f8bc7d4b24.png"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-08T10:29:17.956887+00:00",
+  "publication_approved": false
+}

@@ -1,0 +1,94 @@
+{
+  "id": "2e911924d887d6fdf34a",
+  "article_path": "article-daily-20261108.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261108.html",
+  "source_commit": "",
+  "source_blob_sha": "4d998c56fe8f9f581ff02879d9a5c780324ab369",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "fe6401081f67bea419790afb720da9c47f8054ba16718936f095deaa263ad99a",
+  "last_observed_blob_sha": "4d998c56fe8f9f581ff02879d9a5c780324ab369",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2e911924d887d6fdf34a/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2e911924d887d6fdf34a/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-08T10:20:05.775787+00:00",
+  "creation_event_id": "8f75e31acdd2ab91e3da",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/2e911924d887d6fdf34a/thumbnail.png",
+  "image_sha256": "dd8ff60614ca7e0a30ae6ed4920f06e7bf84a23e046ef167f896fb1aefe48be9",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "4d998c56fe8f9f581ff02879d9a5c780324ab369",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.08",
+      "名古屋D",
+      "開幕11連勝",
+      "次戦 11/9 群馬",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2e911924d887d6fdf34a/source.html",
+        "role": "固定版原稿。本文事実の根拠。HTMLのblob SHAをローカル計算して指定値と一致確認。",
+        "supports": [
+          "記事日2026.11.08",
+          "名古屋Dが開幕11連勝",
+          "次戦は11月9日の群馬戦"
+        ]
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2e911924d887d6fdf34a/source.txt",
+        "role": "固定版原稿の本文確認。本文事実はこのTXTと固定HTMLだけを使用。",
+        "supports": [
+          "11月7日富山戦後の開幕11連勝",
+          "次戦11月9日の群馬戦はまだ結果未確定",
+          "斎藤拓実選手の14得点10アシストと監督の評価"
+        ]
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "目視確認した承認済みスタイル参照。配色・太字・インクとブラシの表現だけを参照。別記事の名前・成績は使用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "齋藤拓実",
+        "name_in_frozen_article": "斎藤拓実",
+        "selection": "本文の主役",
+        "selection_reason": "記事全体の主題は名古屋Dの連勝。個人では得点・アシストに加えラナヘッドコーチによる評価も記載され、最も詳しく扱われているため主役に選定。",
+        "reference_source": "名古屋ダイヤモンドドルフィンズ公式選手プロフィール",
+        "reference_url": "https://nagoya-dolphins.jp/team/players/detail/id=14611",
+        "official_photo_url": "https://bleague.bl.kuroco-img.app/v=2026102608/files/user/roster/729/2026-27/14301_01.jpg",
+        "reference_viewed": true,
+        "observed_appearance": "丸みのある黒い直毛、眉付近までの束感のある前髪、短いサイド、細長い卵形の輪郭、すっきりした顎、ひげなし、細めの目、まっすぐな鼻筋、細身の体格。",
+        "depiction": "低い姿勢でボールを操るプレー姿をインク画で描写。公式写真は容姿確認だけに使い、貼付・複製していない。実際の特定プレーの再現ではない。顔の特徴・両手と指の形・見切れを完成PNGで目視確認。選手名・個人成績は画像内に記載しない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 1600x900 or 1536x864 PNG, minimum width 1000px.\nArticle facts and permitted headline content: the supplied frozen article says Nagoya Diamond Dolphins beat Toyama 93–80 on November 7, 2026, reaching 11 consecutive wins from the season opener; next game is November 9 against Gunma. Do not add facts or consult other article versions.\nDesign: approved bold black-and-lime sports ink style. Near-black #151A18 background, acid-lime #CCF43B expressive brush streaks, ivory white oversized Japanese typography, hand-drawn ink hatching, dry brush edges, sparse energetic composition. The large headline occupies the left 57%; an athletic action illustration occupies the right 43%. Large lime 11 is the numerical focal point, with 開幕 and 連勝 legible beside it. Plenty of negative space behind text; keep all text comfortably within 60px safe margins. No gradients, no photography, no 3D, no glossy effects.\nPerson: depict the real named player TAKUMI SAITO / 齋藤拓実 only, a lean Japanese male point guard. This is the article's most individually developed player: it reports his points and assists and the head coach's praise. Appearance was visually checked from his current official Nagoya Diamond Dolphins roster portrait at https://nagoya-dolphins.jp/team/players/detail/id=14611 and its official photo https://bleague.bl.kuroco-img.app/v=2026102608/files/user/roster/729/2026-27/14301_01.jpg . Likeness details: straight black hair forming a soft rounded bowl shape, tapered sides, long lightly separated fringe almost to eyebrows; clean-shaven face, long slim oval face narrowing to a small rounded chin, straight modest nose, narrow almond-shaped dark eyes, fairly straight brows, thin relaxed lips, visible ears; compact lean muscular shoulders. Preserve those distinct features in drawn ink rather than generic anime facial features. Use black, ivory and subtle gray hatching for the person, with a simple light-colored sleeveless basketball uniform. Jersey entirely blank: no logos, team mark, sponsors, names or numbers. No official photo collage, no recreation of the portrait pose.\nAction and framing: dynamic three-quarter low drive with a basketball controlled by one hand, torso leaning forward, free arm bent naturally for balance, head looking upcourt to the left; face prominent and recognizable. Show the whole head, shoulders, elbows and both hands without clipping; legs may end at a deliberate lower-thigh crop. Correct human anatomy, five fingers per hand where visible, believable wrist and ball contact. Ball is a small orange prop held/controlled by the real player, not the main subject. Background only abstract diagonal lime speed brushes; no additional people, mascot, arena specifics or scoreboard. This is a conceptual illustration, not any particular documented play, not a decisive shot or actual game recreation.\nExact visible Japanese text only, no other text:\nTop left small: 「バスケまとめ」 and 「2026.11.08」\nMain headline: 「名古屋D」\nMain headline below, very large: 「開幕11連勝」\nSupporting line below main: 「次戦 11/9 群馬」\nBottom left readable footer: 「イラスト（AI生成）」\nImmediately beneath or beside footer: 「成績をもとにしたイメージ」\nMake the kanji and digits accurate. Do not include the player's name or any personal statistics. Do not introduce an overall league record claim. Keep 11/9 explicitly prefixed 次戦 to avoid suggesting that match has happened. No team or league logo, watermarks, badges, sponsor lettering, English slogans or extra numbers. Output only one finished thumbnail.",
+    "generator": {
+      "name": "image_gen",
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "revision_calls": 0,
+      "external_api_or_cli_used": false,
+      "format": "PNG",
+      "original_output": "/Users/genjo/.codex/generated_images/01a1baac-2607-7652-8a69-bca1921250d2/exec-e96f764b-16e1-4c83-a578-5085a291943d.png",
+      "post_processing": "none; byte-identical copy only",
+      "review": "完成画像を実際に表示して5項目を検品。文字・数字は固定原稿と整合。次戦の未来扱いとイメージ注記あり。本人の容姿特徴を反映したイラストで、ロゴ・スポンサー文字・公式写真は含まない。主要文字、顔、両手が見切れず判読可能。",
+      "width": 1672,
+      "height": 941,
+      "sha256": "dd8ff60614ca7e0a30ae6ed4920f06e7bf84a23e046ef167f896fb1aefe48be9"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-08T10:23:00.173185+00:00",
+  "publication_approved": false
+}

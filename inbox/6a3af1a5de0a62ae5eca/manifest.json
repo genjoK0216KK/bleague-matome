@@ -1,0 +1,108 @@
+{
+  "id": "6a3af1a5de0a62ae5eca",
+  "article_path": "article-games-20261108.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261108.html",
+  "source_commit": "",
+  "source_blob_sha": "0252ffd922c6fd01608714c6cda09016c6e0049a",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "f2d9c8deb9d026d6c78cf88d27ce6d1754930556e3406611582c3650dc357d7c",
+  "last_observed_blob_sha": "0252ffd922c6fd01608714c6cda09016c6e0049a",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6a3af1a5de0a62ae5eca/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6a3af1a5de0a62ae5eca/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-08T10:20:06.066839+00:00",
+  "creation_event_id": "449f92f1d8c33b2a7673",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/6a3af1a5de0a62ae5eca/thumbnail.png",
+  "image_sha256": "439dd776dff9d92e69037a1829f6fd20a5fc8d1b043ef3b86988db964ec19b2d",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "0252ffd922c6fd01608714c6cda09016c6e0049a",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.08",
+      "試合結果",
+      "当日のEFF",
+      "一部、公式記録確定待ち",
+      "11/08 19:08〜19:09時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6a3af1a5de0a62ae5eca/source.html",
+        "role": "固定版本文の根拠",
+        "verified_git_blob_sha": "0252ffd922c6fd01608714c6cda09016c6e0049a",
+        "facts_used": [
+          "記事見出し：11/08 試合結果・当日のEFF",
+          "試合日：2026.11.08",
+          "一部B.PREMIER試合は開始・公式記録未確定、B.PREMIER当日EFFは全試合の公式記録確定待ち",
+          "資料取得：2026-11-08 19:08〜19:09 JST"
+        ],
+        "qualifier_handling": "全試合確定と誤認させないよう『一部、公式記録確定待ち』と取得時点を画像に明記。個人成績・勝敗・順位の数値は画像に掲載しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6a3af1a5de0a62ae5eca/source.txt",
+        "role": "固定版本文の文章照合",
+        "facts_used": [
+          "試合結果と当日のEFFをまとめる記事で特定選手の単独主役なし",
+          "本文EFF表にトレイ・ボイドの掲載あり"
+        ],
+        "article_url": "https://basuke-matome.jp/article-games-20261108.html",
+        "live_article_used": false
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "トレイ・ボイド（Tray Boyd III）",
+        "selection": "ランダム",
+        "selection_reason": "複数リーグ・複数試合・ポジション別の選手を同列に扱う記事。本文EFF表の重複を除いた26選手からrandom.SystemRandom().choiceで1人を抽選。",
+        "candidate_count": 26,
+        "reference_sources": [
+          {
+            "title": "横浜エクセレンス公式 選手プロフィール",
+            "url": "https://yokohama-ex.jp/team/players/detail/id=21601?PlayerID=43445",
+            "image_url": "https://bleague.bl.kuroco-img.app/v=2026110819/files/user/roster/714/2026-27/43445_01.jpg",
+            "use": "容姿のみ。公式プロフィール写真をダウンロードしview_imageで実見。本文内容・成績の根拠には使用しない。"
+          },
+          {
+            "title": "横浜エクセレンス公式 2026-27契約継続発表",
+            "url": "https://yokohama-ex.jp/news/detail/id=25452",
+            "image_url": "https://yokohama-ex.bl.kuroco-img.app/files/user/2026TB_SIGNEDTH01.jpg?v=1779718099",
+            "use": "公式プレー写真で体格を補助確認。髪型・顔は現在のプロフィール写真を優先。"
+          }
+        ],
+        "observed_appearance": "首付近までの細い黒い編み髪・ツイスト、幅広の黒ヘッドバンド、口ひげにつながる濃いひげ、太い眉、やや細い目、幅のある鼻と唇、細身で長い手足。",
+        "depiction": "左手でボールを扱い、低い姿勢で切り込むプレーのイラスト。実際の試合場面の再現ではなくイメージ。",
+        "restrictions_checked": "画像に選手名・チーム名・個人成績・出場や活躍を示す記述なし。公式写真の貼付けなし。チームロゴ・リーグロゴ・スポンサー文字・背番号なし。",
+        "visual_qa": "公式プロフィール写真と生成画像を実見比較し、編み髪、黒ヘッドバンド、輪郭、ひげ、目鼻の特徴を確認。両手とボールを確認し、手指の大きな破綻・余分な手足・主要部の見切れなし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset type: one Japanese basketball editorial website thumbnail, landscape approximately 16:9, target 1536 x 864 pixels or larger. Create exactly one finished raster image.\n\nDesign direction: Match the approved black-and-lime ink illustration reference visible in the conversation (B-culver-black-lime-v3.png) in visual style ONLY. Deep charcoal #151A18, vivid lime #CCF43B, warm ivory typography, selective orange basketball. Energetic hand-inked contours, dry brush marks and restrained scratch texture; clearly a drawn editorial illustration, never photorealistic. Fresh composition with a low driving posture rather than the reference's raised shooting pose. Strong readable typography and few elements.\n\nSubject: exactly ONE REAL athlete, Tray Boyd III (トレイ・ボイド), chosen randomly from the fixed article's player list. His current official Yokohama Excellence profile photo has just been viewed. Depict the likeness from that current portrait: medium-brown skin, black thin medium-length twists/braids ending around the neck with a few framing the cheeks, broad plain black fabric headband across the forehead, thick full dark beard with connected moustache, strong wide eyebrows, slightly hooded dark eyes, broad nose, full lips and an oval face with a square lower beard outline. Lean athletic long-limbed 193cm build, not a bulky center. Face large enough to recognize and not obscured by the ball. Natural arm tattoo texture as abstract ink only, no readable tattoo lettering.\nHe wears a plain black/dark-green basketball jersey and shorts over a fitted black short-sleeve undershirt; remove ALL logos, lettering, sponsor marks, numbers, jewelry, emblems. His left hand controls an orange basketball during a powerful low forward drive, torso leaning and knees bent, other arm naturally balancing. Show credible anatomy, each visible hand with natural five-finger anatomy, no duplicate limbs. Keep the ball, both hands, head and hairstyle fully inside frame. A dynamic three-quarter view, framed from head to just below the knees, in the RIGHT 43% of the image, leaving left text unobstructed. This is a conceptual basketball-action illustration, NOT a depiction or reconstruction of an actual play, game event, basket, or performance.\n\nLayout: left 55% is clean typography with generous margins. Right athlete and one broad sweeping lime ink stroke create movement, with only subtle court lines. No crowd, no additional people, no scoreboard, no team or league logo. Use about 5% edge-safe margins. Preserve a clean dark footer for readable qualifier labels. Main Japanese headline exceptionally large bold condensed gothic, slightly hand-inked edges but exact legibility.\n\nRender only the following exact text, carefully proofread. No athlete name, team name, player statistics, scores, awards, performance claims or extra text.\nTop-left small branding: \"バスケまとめ\"\nDate under brand, medium size: \"2026.11.08\"\nMain headline left, very large ivory: \"試合結果\"\nSecond main headline left, large lime: \"当日のEFF\"\nBelow headline, readable ivory qualifier: \"一部、公式記録確定待ち\"\nNext line smaller but legible: \"11/08 19:08〜19:09時点\"\nBottom-left footer, clear high-contrast Japanese: \"イラスト（AI生成）\"\nNext to footer with spacing: \"イメージ\"\n\nEditorial grounding: ONLY fixed source.html/source.txt for article content. This is the November 8 results and daily EFF round-up; some B.PREMIER official records remain unconfirmed at the manuscript snapshot. The athlete was RANDOMLY selected for illustration, so the headline is about the whole article and must not imply his individual performance. Do not include any individual numerical statistic. Official images are appearance references only and must not be pasted, collaged, traced as photographs, or reproduced as a promotional card. Do not carry over the reference image's Culver name, 38 points, date or score. Output one polished illustration thumbnail.",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "correction_count": 0,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "sha256": "439dd776dff9d92e69037a1829f6fd20a5fc8d1b043ef3b86988db964ec19b2d",
+      "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "style_reference_viewed": true,
+      "qa_method": "生成結果を実画像で目視確認し、保存元PNGをview_imageで再確認。文字・数値・本文留保・容姿・レイアウト・AI表記を確認。",
+      "output_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6a3af1a5de0a62ae5eca/generated.png",
+      "publication_performed": false,
+      "ready_command_executed": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-08T10:26:27.582613+00:00",
+  "publication_approved": false
+}
