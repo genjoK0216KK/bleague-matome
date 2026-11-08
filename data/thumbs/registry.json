@@ -1,5 +1,33 @@
 {
  "entries": {
+  "article-analysis-brex-20261108.html": {
+   "article_path": "article-analysis-brex-20261108.html",
+   "editorial_fingerprint": "663d32c494ac3d0e8d30d5e3e7d27605a4edf570ea70f0634ff0c6c5c4219071",
+   "files": {
+    "eyecatch": {
+     "height": 721,
+     "path": "thumbs/auto/article-analysis-brex-20261108-131eb1061ff5.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-brex-20261108-131eb1061ff5-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "2ab61380b5143b8db0be",
+   "image_sha256": "131eb1061ff5ff382c307ca3c4c84ffe0e568ea6594834dc97587396aeced747",
+   "imported_at": "2026-11-08T03:24:48.729266+00:00",
+   "prepared_at": "2026-11-08T03:18:33.881424+00:00",
+   "source_blob_sha": "a8d98eae9af71c29993e7b8ceb0c430189ac7ace",
+   "source_size": [
+    1671,
+    941
+   ],
+   "stable_fingerprint": "663d32c494ac3d0e8d30d5e3e7d27605a4edf570ea70f0634ff0c6c5c4219071",
+   "style": "ink-lime-portrait-v5",
+   "title": "宇都宮ブレックスの直近5試合をスタッツで分析 差がついたのはフリースローと2P"
+  },
   "article-daily-20261025.html": {
    "article_path": "article-daily-20261025.html",
    "editorial_fingerprint": "d9b807a86f51d965cd9418f1b87d825b486b3bf971b49abc769e304f816697ab",
@@ -1320,13 +1348,6 @@
  "log": [
   {
    "article": "article-daily-20261031.html",
-   "at": "2026-11-03T04:47:37.423437+00:00",
-   "by": "5e231e28b370cb26f1f6",
-   "event": "superseded",
-   "id": "45bb49c6e6574fb7d88a"
-  },
-  {
-   "article": "article-daily-20261031.html",
    "at": "2026-11-03T04:47:37.549838+00:00",
    "event": "imported",
    "id": "5e231e28b370cb26f1f6",
@@ -1877,6 +1898,13 @@
    "event": "imported",
    "id": "4189dc16f9911ba2f676",
    "image": "429ceb61dda6"
+  },
+  {
+   "article": "article-analysis-brex-20261108.html",
+   "at": "2026-11-08T03:24:48.729297+00:00",
+   "event": "imported",
+   "id": "2ab61380b5143b8db0be",
+   "image": "131eb1061ff5"
   }
  ],
  "seen": {
@@ -1893,6 +1921,7 @@
   "227771a8a08cdddea2d2": "imported",
   "2912f2bf307b5ed2a60d": "superseded:b54717dd6365eef30b2d",
   "292138556e17df566d67": "superseded:0a5c2c0f2505974f6de8",
+  "2ab61380b5143b8db0be": "imported",
   "2d209f7594021a551b90": "superseded:9738ca38103aa648b879",
   "2d836f0394de01c7d009": "superseded:7da4157f57a12da3f879",
   "2fad4903e119f5b6b0ea": "imported",
