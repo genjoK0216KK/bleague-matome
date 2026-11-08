@@ -1,5 +1,12 @@
 {
- "pending": {},
+ "pending": {
+  "506560": "2026-11-09",
+  "506561": "2026-11-09",
+  "506562": "2026-11-09",
+  "506563": "2026-11-09",
+  "506564": "2026-11-09",
+  "506565": "2026-11-09"
+ },
  "published": [
   "2026-10-12",
   "2026-10-17",
@@ -17,16 +24,6 @@
   "2026-11-08"
  ],
  "days": {
-  "2026-11-01": {
-   "state": "ready",
-   "games_total": 13,
-   "games_ready": 13,
-   "players": 267,
-   "holds": [],
-   "excluded": [],
-   "content_as_of": "2026-11-02 20:02 JST",
-   "source": "data/match_articles/article-games-20261101.json"
-  },
   "2026-11-02": {
    "state": "no_games",
    "games_total": 0,
@@ -96,6 +93,65 @@
    "excluded": [],
    "content_as_of": "2026-11-08 21:11 JST",
    "source": "data/match_articles/article-games-20261108.json"
+  },
+  "2026-11-09": {
+   "state": "held",
+   "games_total": 6,
+   "games_ready": 0,
+   "players": null,
+   "holds": [
+    {
+     "key": "506560",
+     "home": "茨城",
+     "away": "琉球",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506561",
+     "home": "群馬",
+     "away": "名古屋D",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506562",
+     "home": "川崎",
+     "away": "A千葉",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506563",
+     "home": "京都",
+     "away": "北海道",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506564",
+     "home": "島根",
+     "away": "富山",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506565",
+     "home": "長崎",
+     "away": "仙台",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    }
+   ],
+   "excluded": [],
+   "content_as_of": "2026-11-09 00:54 JST",
+   "source": "data/match_articles/article-games-20261109.json"
   }
  },
  "definition": {
