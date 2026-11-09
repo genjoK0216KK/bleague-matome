@@ -1,0 +1,101 @@
+{
+  "id": "95e267d849a9238c3703",
+  "article_path": "article-results-one-next-20261109.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261109.html",
+  "source_commit": "",
+  "source_blob_sha": "e7fdbb3ef9440694d505e29b178bafd862c896b3",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "6b7bc7976b8feb43660a29a0a82be468fbaf1a095157e9eaa3510fec1b1040a8",
+  "last_observed_blob_sha": "e7fdbb3ef9440694d505e29b178bafd862c896b3",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/95e267d849a9238c3703/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/95e267d849a9238c3703/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-09T10:18:34.630456+00:00",
+  "creation_event_id": "f2a2a6346bb256bd1959",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/95e267d849a9238c3703/thumbnail.png",
+  "image_sha256": "f0fa4afe5c8d72e30d9f80e46ebbe0425b790d6eb1855c5ddd36e9c77a1e1e04",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "e7fdbb3ef9440694d505e29b178bafd862c896b3",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.09",
+      "試合結果",
+      "公式記録の",
+      "確定待ち",
+      "19:08 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/95e267d849a9238c3703/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261109.html",
+        "note": "固定HTML。本文の根拠。2026-11-09 19:08 JST時点で全試合の公式記録確定待ち。記事URL自体への追加取得なし。保存直前にblob SHA再照合済み。"
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/95e267d849a9238c3703/source.txt",
+        "note": "固定文章。HTMLと照合。本文の全10選手は同列の比較表のため、特定の成績主役は選ばず本文掲載選手からランダム選出。"
+      },
+      {
+        "role": "appearance_only",
+        "url": "https://www.ibarakirobots.win/news/20260619_01_team/",
+        "image_url": "https://ibarakirobots.bl.kuroco-img.app/v=1781602700/files/user/images/news/2025-26/25003/law_profile.jpg?1=",
+        "note": "茨城ロボッツ公式掲載のヴィック・ローの肖像をダウンロードしview_imageで実見。顔・髪型・ひげ・体格の参照専用。本文の成績根拠には使用せず、写真・ユニフォームロゴ・スポンサー文字を成果物へ転載していない。"
+      },
+      {
+        "role": "player_identity_only",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000166",
+        "note": "B.LEAGUE公式の人物同一性確認。画像の成績・出場・活躍の根拠に使用していない。"
+      },
+      {
+        "role": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "view_imageで実見。黒×ライム、太い和文、インク・ブラシの承認済みスタイルのみ参照し、人物・文字・成績は引き継がない。A-faison-ivory-v3.pngは指定の同フォルダに見つからず、B案を参照。"
+      },
+      {
+        "role": "workflow",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "note": "画像生成・検品ルールを確認。最新依頼の実在選手必須、ランダム人物への成績・名前不掲載、ready実行禁止を優先。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ヴィック・ロー",
+        "english_name": "Vic Law",
+        "selection": "ランダム",
+        "selection_method": "固定原稿のベスト5・サブ5に登場する10選手から、作業ID 95e267d849a9238c3703 をseedとするPython random.Random(...).choiceで1名選出。本文の主役とは扱わない。",
+        "candidate_pool": [
+          "D.J・ニュービル",
+          "ジャレット・カルバー",
+          "ヴィック・ロー",
+          "ニック・ケイ",
+          "チャールズ・ジャクソン",
+          "齋藤 拓実",
+          "ブライアン・アンゴラ",
+          "アンジェロ・カロイアロ",
+          "ケリー・ブラックシアー・ジュニア",
+          "スコット・エサトン"
+        ],
+        "reference_page": "https://www.ibarakirobots.win/news/20260619_01_team/",
+        "reference_image": "https://ibarakirobots.bl.kuroco-img.app/v=1781602700/files/user/images/news/2025-26/25003/law_profile.jpg?1=",
+        "observed_features": "短いツイストの髪、黒いヘッドバンド、卵型から角張った顎へ続く輪郭、弓形の眉、大きな目、幅のある鼻、口ひげとつながる短いひげ、長い手足。修正版と公式肖像を目視比較。",
+        "depiction": "前傾でボールを運ぶ1人のプレー姿。試合の再現ではないイメージ。画像内に選手名、背番号、成績、出場、活躍の記述なし。ロゴなし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION (actual prompt):\nUse case: illustration-story.\nCreate ONE finished Japanese editorial basketball thumbnail, landscape approximately 16:9, target 1600x900 or larger, opaque PNG. This is a new artwork for バスケまとめ.\n\nEditorial meaning from the supplied fixed article only: 2026-11-09 game results page, with all official game records still awaiting final confirmation as of 19:08 JST. Do not invent any results or scores, and do not imply the pictured player played or excelled today.\n\nVisual style: approved black #151A18 and acid lime #CCF43B basketball editorial style, bold Japanese typography, hand-drawn expressive ink and rough dry-brush illustration, subtle paper grain, few strong elements, off-white highlights and one orange basketball. Clearly an illustration with visible ink hatching, never a photograph or realistic photo rendering. Spacious but powerful, highly readable thumbnail.\n\nSubject: exactly ONE REAL basketball player, Vic Law (ヴィック・ロー), randomly selected from the players named in the supplied article. Depict his recognizable appearance observed in the official Ibaraki Robots portrait at https://www.ibarakirobots.win/news/20260619_01_team/ (portrait https://ibarakirobots.bl.kuroco-img.app/v=1781602700/files/user/images/news/2025-26/25003/law_profile.jpg?1=).\nAppearance observed: tall long-limbed lean athletic Black man; short dark chunky twisted braids sitting above a plain black headband; medium-length oval face with squared jaw, arched brows, large almond-shaped eyes, straight broad nose, short neat full beard connected to a mustache, clear lips. Preserve these facial features in expressive black-and-ivory drawn linework with natural skin-tone accents. Facial details remain visible. Plain black headband with NO logo. Plain off-white and charcoal sleeveless basketball uniform, no name, no jersey number, no club emblem, no sponsors, no brand marks. His left arm has dark abstract tattoo-like ink pattern, while right arm is largely bare. Do not paste the official portrait, do not copy its uniform or pose.\n\nComposition: player dominates the LEFT 42% of the canvas in a three-quarter forward driving stance, torso leaning forward, knees bent, energetic ball-handling action; one orange basketball under his anatomically correct right hand at hip height. Other arm naturally balances his motion. Head, both hands, and the entire basketball inside the frame. Face is large enough to recognize. Use a diagonal lime brush stroke behind the player to emphasize movement. Do not put other players, crowds, scoreboards, logos or detailed stadium elements into the scene. This is a general imagined basketball movement, not a reconstruction of a real game or decisive play.\nRIGHT 56% is a clean typography zone with no overlap from hands or ball. Generous safe margins. Footer unobstructed.\n\nRender only these exact Japanese text strings, with accurate kanji and punctuation:\nSmall upper right brand: 「バスケまとめ」\nSmall date below brand: 「2026.11.09」\nVery large off-white main heading: 「試合結果」\nProminent off-white subheading: 「公式記録の」\nVery large lime status line: 「確定待ち」\nClear smaller timestamp below status: 「19:08 JST時点」\nLegible off-white footer on black: 「イラスト（AI生成）」 and 「イメージ」\n\nNo other text. In particular, do NOT write the player's name, performance, participation, statistics, points, ranking, team names, winners, or any numbers other than the exact date and timestamp above. Do not inherit text, numbers or people from any other thumbnail. The qualifier 公式記録の確定待ち must be especially clear, not tiny. All lettering, hands, face and ball must be unclipped.\n\nONE CORRECTIVE EDIT (actual prompt):\nEdit the FIRST image only: the generated black-and-lime Japanese basketball thumbnail. The SECOND image is the official portrait of the real player Vic Law, supplied ONLY as a facial/hairstyle likeness reference, never as a photo to paste. Create one revised final PNG, retaining exactly the same landscape aspect ratio and all typography, colors, editorial meaning, uniform and composition style.\n\nSingle correction pass to the player illustration:\n1. Shrink and reposition the complete illustrated player with ball within the LEFT panel just enough to give at least 40 pixels of safe space above the highest hair and to the left of every finger, hand, elbow and ball. Both hands and the whole basketball must be visibly complete. Do not touch the text zone. The lower body may naturally continue below the bottom, but head, arms, hands and ball must not be clipped.\n2. Correct his hairstyle and face using the SECOND reference. He has SHORT tightly grouped twisted braids close to the crown above a plain black headband; do not give him long loose dangling dreadlocks. Match the portrait's oval-to-square face, arched brows, large almond eyes, relatively straight broad nose, full lips and neat short connected beard/mustache. Keep the same forward-driving basketball pose and concentrated expression. Draw him with the SAME expressive ink and brush illustration style as the first image. Preserve his recognizable real-person likeness without making the artwork photographic.\n3. Hands must have natural basketball finger anatomy with no duplicated fingers.\n4. Plain black headband and plain off-white/charcoal uniform with NO logos, NO brand marks, NO numbers or player name. Do not copy the portrait's sponsors, lettering, emblems or jersey. Keep only one player and one orange ball.\n\nPreserve all text EXACTLY as in the first image, without adding anything:\nバスケまとめ\n2026.11.09\n試合結果\n公式記録の\n確定待ち\n19:08 JST時点\nイラスト（AI生成）\nイメージ\n\nKeep the visible qualifier 公式記録の確定待ち and the timestamp and AI label. This is an illustration of an imagined basketball movement, not an actual game scene, score or performance claim. Maintain large bold Japanese headlines and black #151A18 / lime #CCF43B color palette.",
+    "generator": "Built-in image_gen.imagegen / image_gen__imagegen. 1 initial generation + 1 corrective edit. Final output visually inspected; no API/CLI, no additional paid service. Final source: /Users/genjo/.codex/generated_images/01a1bfd9-023b-7f62-9b9c-9cffe39eebc9/exec-3c4b0ef2-0524-428a-bdea-f056e3229c87.png",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-09T10:31:06.287686+00:00",
+  "publication_approved": false
+}

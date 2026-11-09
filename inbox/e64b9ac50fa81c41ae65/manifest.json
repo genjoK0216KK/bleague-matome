@@ -1,0 +1,95 @@
+{
+  "id": "e64b9ac50fa81c41ae65",
+  "article_path": "article-daily-20261109.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261109.html",
+  "source_commit": "",
+  "source_blob_sha": "a96c5f64afd4d2e54c93c2544d832ecc58a28056",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "ed2599345db000662a585cb4a670779062d397803b03f07ec2edd08fc463f9d1",
+  "last_observed_blob_sha": "a96c5f64afd4d2e54c93c2544d832ecc58a28056",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e64b9ac50fa81c41ae65/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e64b9ac50fa81c41ae65/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-09T10:18:34.090648+00:00",
+  "creation_event_id": "de3f08d847e26429b5fb",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/e64b9ac50fa81c41ae65/thumbnail.png",
+  "image_sha256": "a1f4e73d407e3ec0a6425c06f2910b02b118c8e747a0ab9c460262d24037871e",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "a96c5f64afd4d2e54c93c2544d832ecc58a28056",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.09",
+      "宇都宮ブレックス",
+      "ケルと市岡",
+      "脳振盪で",
+      "復帰未定",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e64b9ac50fa81c41ae65/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261109.html",
+        "use": "本文内容の唯一の根拠（固定TXTと併用）。見出し・リード・『2人とも脳振盪と診断』節から、選手名・負傷名・復帰未定を採用。11月9日の記事日付を表示。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e64b9ac50fa81c41ae65/source.txt",
+        "use": "本文内容の唯一の根拠（固定HTMLと併用）。復帰日、次戦出場、4人欠場を確定させない。市岡の琉球戦出場未確認を踏まえ、特定試合・スコア・成績を描かない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認した配色、太い日本語、インク・ブラシ表現のみ参照。選手・成績・日付は引き継がない。"
+      },
+      {
+        "type": "official_appearance_only",
+        "url": "https://www.utsunomiyabrex.com/player_lp/trey_kell_III_base/?PlayerID=51000524",
+        "use": "トレイ・ケルIIIの容姿・背番号3のみ。記事の事実根拠には使用しない。"
+      },
+      {
+        "type": "official_appearance_only",
+        "url": "https://www.utsunomiyabrex.com/player_lp/sean_ichioka/",
+        "use": "市岡ショーンの容姿・背番号32のみ。記事の事実根拠には使用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "トレイ・ケル III",
+        "selection": "本文の主役",
+        "selection_reason": "固定版の見出し・リード・負傷節で扱われる2選手の1人。ランダム選択ではない。",
+        "source": "宇都宮ブレックス公式プロフィール",
+        "url": "https://www.utsunomiyabrex.com/player_lp/trey_kell_III_base/?PlayerID=51000524",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026110908/files/user/roster/703/2026-27/51000524_01.jpg",
+        "reference_viewed": true,
+        "appearance": "短い黒髪とウェーブ、刈り上げた側頭部、やや四角い輪郭、太い眉、口ひげと顎先の短いひげ、頬はひげが少ない。生成イラストと目視比較。",
+        "depiction": "前景の背番号3。ドリブル姿のイメージ。特定の実際の試合や復帰後のプレーを再現しない。"
+      },
+      {
+        "name": "市岡 ショーン",
+        "selection": "本文の主役",
+        "selection_reason": "固定版の見出し・リード・負傷節で扱われる2選手の1人。ランダム選択ではない。",
+        "source": "宇都宮ブレックス公式プロフィール",
+        "url": "https://www.utsunomiyabrex.com/player_lp/sean_ichioka/",
+        "image_url": "https://utsunomiyabrex.bl.kuroco-img.app/v=1789348778/files/user/lp/players/image/sean_ichioka/kv_pc.jpg",
+        "reference_viewed": true,
+        "appearance": "非常に短い茶黒髪、やや後退した生え際、縦長の輪郭、目立つ耳、口ひげから顎までつながる短い全体ひげ。生成イラストと目視比較。",
+        "depiction": "後景の背番号32。オフボールの動きのイメージ。ケルと対戦している構図ではなく、2人の独立したプレー姿を組み合わせたイラスト。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT (verbatim)\nUse case: illustration-story\nAsset type: one finished Japanese basketball news article thumbnail, wide landscape 16:9, preferably 1600x900 or 1536x864, minimum width 1000 pixels, opaque PNG.\nCreate exactly ONE complete image. Editorial hand-painted ink-and-dry-brush sports illustration in the approved black-and-lime visual style: deep near-black #151A18 background, acid lime #CCF43B brush strokes, warm ivory lettering, monochrome hand-drawn athletes, orange basketball accents. Strong expressive ink contour lines, cross-hatching, rough screenprint grain, simplified shadows. It must look unmistakably illustrated, never photographic, never a pasted photo.\nArticle content is only this verified fixed manuscript: Utsunomiya Brex announced concussions for Trey Kell III and Sean Ichioka; both return dates remain undecided. Do not add any score, performance claim, game participation, recovery prediction, or injury-list claim.\nTypography: left approximately 52% of canvas is a very clear four-level text block with generous margin and no overlap. Small top publication label and date, medium club name, large player surnames and injury phrase, largest lime return-status headline. Use bold excellent Japanese Gothic typography, accurate legible Japanese kanji, not handwritten body text.\nRender these exact Japanese text lines and no other prose:\n\"バスケまとめ\"\n\"2026.11.09\"\n\"宇都宮ブレックス\"\n\"ケルと市岡\"\n\"脳振盪で\"\n\"復帰未定\"\nFooter across bottom in highly readable warm ivory text, safely inset:\n\"イラスト（AI生成）\"\n\"イメージ\"\nMain illustrated subjects on the right: TWO real basketball players, Trey Kell III and Sean Ichioka, as an editorial montage of independent generic basketball action poses, not opponents and not a reconstruction of any actual match. Both are the named protagonists of the article. No extra people.\nTrey Kell III foreground: athletic muscular guard, officially verified appearance from Utsunomiya Brex profile: very short black wave-textured hair with neatly faded sides, low squared hairline, broad slightly rectangular oval face, straight strong eyebrows, dark almond eyes, relatively broad straight nose, medium-full lips, thin moustache and a small distinct trimmed chin goatee, cheeks clean-shaven, short dark sideburns. Focused composed expression. Illustrate a low forward-driving dribble, body at a three-quarter angle, face clearly visible. A single orange basketball under his right palm at waist height, hand anatomically correct.\nSean Ichioka behind and higher on the right: officially verified appearance from Utsunomiya Brex profile: very short dark brown buzz cut, slightly receding temples, oblong face, clearly prominent ears, straight nose, defined brows, full closely trimmed brown beard connected to moustache, narrower jaw tapering to beard-covered chin. His face must look clearly different from Kell. Strong taller forward build. In a dynamic off-ball cutting stance with bent knees, one hand open to receive a pass, not looking injured and not celebrating. No second basketball. This is separate generic action montage, not a specific passing event.\nUniforms simplified deep navy/black and ivory with restrained yellow piping, plain numbers 3 (Kell) and 32 (Ichioka) permitted for identity; absolutely no club crest, no league logo, no manufacturer logo, no sponsor names or sponsor shapes. Do not recreate any official photo composition or background; all figures newly drawn in ink. Faces must preserve the described identifying features and remain readable in black-and-white.\nKeep both heads, hands, fingertips and the basketball fully inside frame. Lower legs may intentionally fade into the ink brush montage above the footer. Clearly separated arms and hands, no extra limbs or fused fingers. Use one or two diagonal lime brush gestures behind the athletes without obscuring faces. Few elements; no hoop, arena signage, crowd, badges, extra statistics or medical imagery.\nThe text \"復帰未定\" must be the strongest headline. This is injury news with a respectful, restrained tone, while athletic poses illustrate the players in general. The labels \"イラスト（AI生成）\" and \"イメージ\" must remain clearly readable. Check exact text spelling before finishing.\n\nONE ALLOWED REVISION PROMPT (verbatim)\nEdit the supplied finished thumbnail ONLY to fix the athlete montage framing. Preserve ALL existing Japanese text exactly, unchanged in wording, spelling, typography, size, placement and color: バスケまとめ / 2026.11.09 / 宇都宮ブレックス / ケルと市岡 / 脳振盪で / 復帰未定 / イラスト（AI生成） / イメージ. Preserve the black #151A18 and lime #CCF43B ink illustration style, the exact TWO real players' illustrated facial identities (foreground Trey Kell III number 3, behind Sean Ichioka number 32), jersey colors, numbers, and poses. Do not add a person, photo, logo, score, or extra text.\nRequired correction: reduce the whole right-hand two-athlete montage about 15% and reposition it inward so BOTH heads, ALL four hands, EVERY fingertip, and the complete orange basketball are fully visible inside the canvas with comfortable margins. Sean's upper head needs at least 30 px of top margin and his extended hand needs at least 40 px of right margin. Trey's lowered left hand and all fingertips must end at least 35 px above the bottom edge. The basketball must be fully inside. Keep natural correct anatomy with five fingers per hand. You may fade the lower thighs into brush texture above the footer; do not crop or fade hands. Maintain their forward-driving and off-ball cutting action poses. Their bodies should have clear separate limbs.\nKeep the exact existing 16:9 landscape canvas and all headline text. No photograph textures. Both faces stay legible and retain the existing distinct hair/beard shapes. This is a generic action montage, not an actual match event. The footer labels must remain clearly readable and unobstructed. Output one finished PNG.",
+    "generator": "Built-in image_gen.imagegen only; initial generation + 1 framing revision. No API/CLI generation or pixel postprocessing. Final PNG: 1672x941. Final source: /Users/genjo/.codex/generated_images/01a1bfd1-1b93-7722-9e1f-f8affcb6f8ee/exec-0f3f2989-8506-48dd-91f1-2f07e8706956.png",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-09T10:22:41.433019+00:00",
+  "publication_approved": false
+}

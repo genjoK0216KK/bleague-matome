@@ -1,0 +1,92 @@
+{
+  "id": "8aaaea72a1d9afdb5b71",
+  "article_path": "article-games-20261109.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261109.html",
+  "source_commit": "",
+  "source_blob_sha": "6688a397a5fb671f0e06ce64980fa6a43c51bb14",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "6b7bc7976b8feb43660a29a0a82be468fbaf1a095157e9eaa3510fec1b1040a8",
+  "last_observed_blob_sha": "6688a397a5fb671f0e06ce64980fa6a43c51bb14",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8aaaea72a1d9afdb5b71/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8aaaea72a1d9afdb5b71/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-09T10:18:34.388455+00:00",
+  "creation_event_id": "8d1111585774bf54a602",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/8aaaea72a1d9afdb5b71/thumbnail.png",
+  "image_sha256": "33071e0e3ffbccb10725ed74a799b23497ead87a002718ac9b473d45b111c5b0",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "6688a397a5fb671f0e06ce64980fa6a43c51bb14",
+    "text_lines": [
+      "バスケまとめ",
+      "11/09 試合結果",
+      "公式記録の",
+      "確定待ち",
+      "2026.11.09 19:08 JST 時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8aaaea72a1d9afdb5b71/source.html",
+        "role": "固定版の本文根拠。タイトル、対象日、19:08 JST時点で全試合の公式記録確定待ちという留保。gitコマンドを使わずblob SHAを計算し依頼値と一致確認。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8aaaea72a1d9afdb5b71/source.txt",
+        "role": "固定版の文章根拠。複数選手が今季平均表で並列に記載され、特定の本文主役は絞れない。本文に記載された10選手をランダム選択の母集団とした。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済み画風のみを参照。view_imageで確認。選手名・数値・場面は引き継がない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "D.J・ニュービル",
+        "selection": "ランダム",
+        "selection_method": "本文に名前が出ている10選手からPython random.SystemRandom().choiceで1人を選択。選出結果はD.J・ニュービル。",
+        "selection_pool": [
+          "D.J・ニュービル",
+          "ジャレット・カルバー",
+          "ヴィック・ロー",
+          "ニック・ケイ",
+          "チャールズ・ジャクソン",
+          "齋藤 拓実",
+          "ブライアン・アンゴラ",
+          "アンジェロ・カロイアロ",
+          "ケリー・ブラックシアー・ジュニア",
+          "スコット・エサトン"
+        ],
+        "source": "アルティーリ千葉 公式選手プロフィール",
+        "url": "https://altiri.jp/club/roster-coaches/2_dj-newbill",
+        "image_url": "https://altiri.bl.kuroco-img.app/v=1788860835/files/user/images/player/26-27/2_dj-newbill.jpg",
+        "image_inspected": true,
+        "reference_use": "容姿参照のみ。公式写真をサムネに貼り付けず、内蔵画像生成で新規のインク画にした。",
+        "observed_features": "短く刈った黒髪、広い額、太めの眉、やや奥まった目、幅のある鼻、厚めの唇、口ひげとつながる密なひげ、がっしりした肩、腕のタトゥー。",
+        "depiction": "左側に低い姿勢のドリブルをする1人。実際の試合場面の再現ではない。名前・背番号・所属・成績・出場や活躍の断定は画像に入れない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate exactly ONE finished Japanese basketball-news thumbnail, a wide 16:9 raster illustration, ideally 1600x900 or larger, with all lettering composed in the image. This is a NEW illustration for バスケまとめ.\n\nEditorial source: the fixed article is dated 2026-11-09 and explicitly says all official game records are still awaiting confirmation at 19:08 JST. Do not imply final results or any player's confirmed participation/performance. Do not add scores, rankings, EFF, player names, team names, jersey numbers, or victory claims.\n\nSubject: exactly one REAL basketball player, D.J. Newbill, randomly selected from the ten players named equally in the source. His official Altiri Chiba profile portrait was visually examined in the conversation: https://altiri.jp/club/roster-coaches/2_dj-newbill and https://altiri.bl.kuroco-img.app/v=1788860835/files/user/images/player/26-27/2_dj-newbill.jpg . Use this only to guide likeness, never paste or reproduce the photograph. Preserve his recognisable traits: closely cropped black buzz-cut hair with slightly receding temples, broad forehead, prominent brow, slightly hooded almond-shaped eyes, broad nose and rounded nostrils, full lips, dense neatly shaped full black beard connected to moustache and sideburns, broad jaw, muscular shoulders and sturdy athletic guard build. His upper arms have dark tattoo linework. This is D.J. Newbill, not a generic or fictional player. Do not draw the slim, high curly-haired player from the style example.\n\nScene: a dynamic low dribble in three-quarter view, knees bent and torso leaning into the drive, face large and clearly visible. Player occupies the LEFT 45 percent, head in upper-left-middle, orange basketball low at left-center held under his natural dribbling right hand. The other hand balances naturally, with anatomically correct wrists and five fingers. Frame from head to mid-thigh; no cropped head, hands or ball. No opponent, no other people. Plain black sleeveless basketball kit with ivory highlights, no letters, numbers, badges, brands or logos anywhere. A loose abstract court brush arc is optional. This is an imagined basketball pose, not a reconstruction of any real game or decisive shot.\n\nArt direction: match the approved black-and-lime thumbnail visible in the conversation, B-culver-black-lime-v3.png, in texture and visual language ONLY. Dark charcoal green-black #151A18 background, sharp acid-lime #CCF43B dry-brush strokes sweeping diagonally behind the player, ivory ink highlights, hand-drawn black-and-white ink illustration with bold brush contours and engraved hatching, orange ball as the only additional color. Energetic editorial sports poster, clearly hand-illustrated and NOT photorealistic. Sparse elements, intentional negative space, exceptionally strong Japanese typography, no complicated interface or tables. Do not carry any name, number or score from the style reference.\n\nComposition: player on left, clean headline area on right 55 percent. A small brand line at upper right, then date/headline, then the crucial qualifier prominently on two lines. The two qualifier lines must be very readable at thumbnail size, with 確定待ち the largest lime text. Avoid brush marks behind lettering. Maintain 5 percent safe margins around all text; no clipping or overlaps. Place the timestamp clearly below the headline block. Put AI disclosure along bottom on a clean dark strip.\n\nRender ONLY the following exact Japanese text, each item once and with no added words:\nバスケまとめ\n11/09 試合結果\n公式記録の\n確定待ち\n2026.11.09 19:08 JST 時点\nイラスト（AI生成）\nイメージ\n\nThe qualifier 公式記録の 確定待ち must be visually as prominent as the date/title, not a tiny disclaimer. The bottom labels イラスト（AI生成） and イメージ must be legible. No official photographs, team logos, league logos, sponsor text, watermarks, decorative pseudo-lettering, or invented statistics. Final output: one clean finished PNG thumbnail.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "内蔵画像生成",
+      "generation_calls": 1,
+      "correction_calls": 0,
+      "api_or_paid_cli_used": false,
+      "output_format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "visual_review": "表示された完成画像を目視確認。全テキストと日付・時刻が固定原稿に一致し、公式記録確定待ちを大きく表示。公式写真と短髪・ひげ・輪郭・目鼻の特徴を照合。左右の手とボール、文字の見切れ、人物と文字の重なりを確認。チーム・リーグ・スポンサーのロゴなし。AI生成とイメージの注記あり。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-09T10:27:12.177928+00:00",
+  "publication_approved": false
+}
