@@ -1,5 +1,9 @@
 {
- "pending": {},
+ "pending": {
+  "506566": "2026-11-10",
+  "506567": "2026-11-10",
+  "506568": "2026-11-10"
+ },
  "published": [
   "2026-10-12",
   "2026-10-17",
@@ -18,16 +22,6 @@
   "2026-11-09"
  ],
  "days": {
-  "2026-11-02": {
-   "state": "no_games",
-   "games_total": 0,
-   "games_ready": 0,
-   "players": null,
-   "holds": [],
-   "excluded": [],
-   "content_as_of": "2026-11-03 19:50 JST",
-   "source": "data/match_articles/article-games-20261102.json"
-  },
   "2026-11-03": {
    "state": "no_games",
    "games_total": 0,
@@ -97,6 +91,41 @@
    "excluded": [],
    "content_as_of": "2026-11-09 23:20 JST",
    "source": "data/match_articles/article-games-20261109.json"
+  },
+  "2026-11-10": {
+   "state": "held",
+   "games_total": 3,
+   "games_ready": 0,
+   "players": null,
+   "holds": [
+    {
+     "key": "506566",
+     "home": "千葉J",
+     "away": "大阪",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506567",
+     "home": "三河",
+     "away": "信州",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506568",
+     "home": "神戸",
+     "away": "東京SR",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    }
+   ],
+   "excluded": [],
+   "content_as_of": "2026-11-10 04:43 JST",
+   "source": "data/match_articles/article-games-20261110.json"
   }
  },
  "definition": {
