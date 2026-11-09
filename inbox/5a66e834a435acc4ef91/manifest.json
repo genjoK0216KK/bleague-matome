@@ -1,0 +1,84 @@
+{
+  "id": "5a66e834a435acc4ef91",
+  "article_path": "article-daily-20261110.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261110.html",
+  "source_commit": "",
+  "source_blob_sha": "e96682b60190ca40534575672256e573ccca50af",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "24ad9cc76dae25b4936a256f39a39162e933339340ac6c23a2d1504be57a321f",
+  "last_observed_blob_sha": "e96682b60190ca40534575672256e573ccca50af",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5a66e834a435acc4ef91/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5a66e834a435acc4ef91/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-09T23:14:50.849388+00:00",
+  "creation_event_id": "f05d89633686b17dfa9a",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/5a66e834a435acc4ef91/thumbnail.png",
+  "image_sha256": "66e266d2fd2a8c454512b4e0074950a258e3153e2d8b86ec0459ceeeebcc5e20",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "e96682b60190ca40534575672256e573ccca50af",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.10",
+      "千葉J vs 大阪",
+      "焦点は",
+      "インサイド",
+      "コステロがエントリー可能に",
+      "試合前展望／起用は未定",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5a66e834a435acc4ef91/source.html",
+        "role": "本文の根拠（固定HTML）",
+        "article_url": "https://basuke-matome.jp/article-daily-20261110.html",
+        "evidence": [
+          "11月10日の千葉ジェッツ対大阪エヴェッサの試合前展望。",
+          "マット・コステロは11月10日の大阪戦からエントリー可能。",
+          "焦点はインサイドの攻防。出場時間は未定で、実際の起用は試合まで分からない。"
+        ]
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5a66e834a435acc4ef91/source.txt",
+        "role": "本文の根拠（固定テキスト）",
+        "qualifiers_preserved": "試合前展望／起用は未定。特定の試合場面の再現ではなくイメージとして描写。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "マット・コステロ",
+        "selection": "本文の主役",
+        "selection_reason": "記事タイトル・復帰関連の節・予測の節で大きく扱われ、インサイドの攻防の焦点となる選手として選定。ランダム選出ではない。",
+        "source": "千葉ジェッツ公式 選手プロフィール",
+        "url": "https://chibajets.jp/team/players/detail/id=26996?PlayerID=51000642",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026110818/files/user/roster/704/2026-27/51000642_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5a66e834a435acc4ef91/references/matt-costello-official.jpg",
+        "reference_viewed": true,
+        "observed_features": "短い茶髪、広い額、青灰色の目、まっすぐな鼻、顎の輪郭、赤茶色の口ひげと顎ひげ、広い肩を参照。生成後も特徴を照合。",
+        "use": "容姿確認のみ。公式写真の貼り込みなし。人物1人をインク調のプレー姿として新規生成。ユニフォームは無地でロゴ・スポンサー文字・背番号なし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate exactly one finished Japanese basketball editorial thumbnail, landscape 16:9, ideally 1600×900, PNG, opaque background.\nSubject: the real basketball player Matt Costello (マット・コステロ), and no other people. Base his identity on the official portrait just viewed in this conversation: short cropped medium-brown slightly wavy hair with a subtly receding hairline, fair skin, blue-gray eyes, broad tall forehead, straight narrow nose, defined cheekbones, full neatly trimmed reddish-brown beard and connected mustache, solid square jaw, very tall muscular build and broad shoulders. Keep him recognizably Costello in expressive hand-drawn ink. The official portrait is a likeness reference only: never paste the photograph or copy its logos.\nStyle reference: the viewed approved B-culver-black-lime-v3.png, use its charcoal #151A18 and vivid lime #CCF43B palette, heavy Japanese headlines, energetic ink-and-dry-brush illustration, ivory highlights and orange basketball. Retain bold graphic economy and hand-drawn texture. Do not reuse that reference's player, words, numbers, date, jersey, or shooting composition. Do not use the ivory background of the second style reference.\nComposition: place the ONE illustrated player in the left 43% of the canvas, shown dynamically from head through upper thighs, torso rotating slightly toward the right while making a powerful step into a post move, knees bent, orange basketball gripped in both hands at waist-to-chest height. Show his face in a clear three-quarter view. Both forearms, both hands and entire basketball must be visible, anatomically plausible and contained in the frame; leave breathing room above his head. Plain sleeveless ivory basketball jersey with simple dark trim, no words, no numbers, no badges, no sponsor graphics. Dramatic lime diagonal brushstrokes behind his figure; keep the right 54% clean for type. The image is an imagined basketball movement, not an actual game moment, not a depiction of a confirmed appearance, score or result. No hoop needed.\nTypography: clean legible very bold Japanese sans-serif with restrained dry-brush texture, precise characters, generous line spacing. Use only the following exact text, no other text.\nAt the top, modest small masthead and date: \"バスケまとめ\" and \"2026.11.10\".\nOn the right above the main headline, medium white: \"千葉J vs 大阪\".\nOn the right, main headline on TWO lines, first ivory, second huge lime:\n\"焦点は\"\n\"インサイド\"\nBelow the main headline, readable white: \"コステロがエントリー可能に\".\nBelow that, a clear lime rectangular label with dark text: \"試合前展望／起用は未定\".\nAlong the bottom in a dark clear footer, fully readable small ivory exact label: \"イラスト（AI生成）｜イメージ\".\nKeep all text within 5% safe margins with no overlaps with player. Make the qualifier and AI label conspicuous and readable. No statistics, no win-loss score, no unconfirmed claim of playing or success. No logos, no photographic rendering, no photo collage, no crowd or fictional opponent, no extra limbs or fingers. Deliver a single polished integrated illustration and typography image.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "revision_count": 0,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "approved_style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "visual_qa": "生成された実画像を目視確認。文字・日付・留保は固定原稿と一致。顔の特徴、両手、ボール、見切れ、ロゴ不在、AI表記を確認。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-09T23:17:35.823368+00:00",
+  "publication_approved": false
+}
