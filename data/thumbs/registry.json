@@ -450,29 +450,29 @@
   },
   "article-daily-20261109.html": {
    "article_path": "article-daily-20261109.html",
-   "editorial_fingerprint": "e1e6ea1292c887f7d5445e1d79e7227811b0e2b3a8171cc97c8659bdda85dfbb",
+   "editorial_fingerprint": "2a4aabb461ef244e6a66ae7c5ebbc773f9930e9285a7fafdec25eb15d2c1db31",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261109-8ebf04e6c186.jpg",
+     "path": "thumbs/auto/article-daily-20261109-1722fff34caa.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261109-8ebf04e6c186-og.jpg",
+     "path": "thumbs/auto/article-daily-20261109-1722fff34caa-og.jpg",
      "width": 1200
     }
    },
-   "id": "bd3d709f0889950146e7",
-   "image_sha256": "8ebf04e6c1861f596429912b500eb169c6ee4aaab1c276ed379ebca9f8b51ffb",
-   "imported_at": "2026-11-08T23:23:03.793343+00:00",
-   "prepared_at": "2026-11-08T23:22:37.108158+00:00",
-   "source_blob_sha": "a0e6cd18273b12fc2b95516c32fc157289aed6c2",
+   "id": "31a9c1e5a34b25318ae8",
+   "image_sha256": "1722fff34caa81fa7414fd16ac093138ada026fdd13253556b4d2c2368d6d532",
+   "imported_at": "2026-11-09T03:27:02.744731+00:00",
+   "prepared_at": "2026-11-09T03:20:56.389416+00:00",
+   "source_blob_sha": "7eb3213196c138a414a4ef3281d4d601ec4e775e",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "e1e6ea1292c887f7d5445e1d79e7227811b0e2b3a8171cc97c8659bdda85dfbb",
+   "stable_fingerprint": "2a4aabb461ef244e6a66ae7c5ebbc773f9930e9285a7fafdec25eb15d2c1db31",
    "style": "ink-lime-portrait-v5",
    "title": "宇都宮ブレックス、ケルと市岡が脳振盪で復帰未定"
   },
@@ -1460,20 +1460,6 @@
  "log": [
   {
    "article": "article-daily-20261105.html",
-   "at": "2026-11-04T23:21:42.521672+00:00",
-   "event": "imported",
-   "id": "6670e21fc5cefcf17877",
-   "image": "25fc1067356a"
-  },
-  {
-   "article": "article-daily-20261105.html",
-   "at": "2026-11-05T10:26:33.457602+00:00",
-   "by": "2fad4903e119f5b6b0ea",
-   "event": "superseded",
-   "id": "6670e21fc5cefcf17877"
-  },
-  {
-   "article": "article-daily-20261105.html",
    "at": "2026-11-05T10:26:33.636323+00:00",
    "event": "imported",
    "id": "2fad4903e119f5b6b0ea",
@@ -2017,6 +2003,20 @@
    "event": "imported",
    "id": "bd3d709f0889950146e7",
    "image": "8ebf04e6c186"
+  },
+  {
+   "article": "article-daily-20261109.html",
+   "at": "2026-11-09T03:27:02.571015+00:00",
+   "by": "31a9c1e5a34b25318ae8",
+   "event": "superseded",
+   "id": "bd3d709f0889950146e7"
+  },
+  {
+   "article": "article-daily-20261109.html",
+   "at": "2026-11-09T03:27:02.744753+00:00",
+   "event": "imported",
+   "id": "31a9c1e5a34b25318ae8",
+   "image": "1722fff34caa"
   }
  ],
  "seen": {
@@ -2039,6 +2039,7 @@
   "2d836f0394de01c7d009": "superseded:7da4157f57a12da3f879",
   "2e911924d887d6fdf34a": "imported",
   "2fad4903e119f5b6b0ea": "imported",
+  "31a9c1e5a34b25318ae8": "imported",
   "3370472f9c78336a4974": "imported",
   "347558cc6a9b226d7c1c": "superseded:f60ec06f0d2f4ee967a2",
   "39075cc4edcf56d9d90d": "superseded:a9d34f9ead8bbf40b841",
@@ -2109,7 +2110,7 @@
   "b6b7904538b5644b6eb3": "superseded:cba03e879d01718161f9",
   "b86acc20b06b8f02084d": "superseded:13dc704824ed84d25fee",
   "b8f222115a0883a9f7f2": "superseded:227771a8a08cdddea2d2",
-  "bd3d709f0889950146e7": "imported",
+  "bd3d709f0889950146e7": "superseded:31a9c1e5a34b25318ae8",
   "c1aaf417a1880194d3ac": "imported",
   "c30cc01686bce3bc931c": "imported",
   "c39e144583cffda92155": "superseded:a718e72ebd289b318965",
