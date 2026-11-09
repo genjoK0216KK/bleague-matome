@@ -1,0 +1,97 @@
+{
+  "id": "31a9c1e5a34b25318ae8",
+  "article_path": "article-daily-20261109.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261109.html",
+  "source_commit": "",
+  "source_blob_sha": "7eb3213196c138a414a4ef3281d4d601ec4e775e",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "2a4aabb461ef244e6a66ae7c5ebbc773f9930e9285a7fafdec25eb15d2c1db31",
+  "last_observed_blob_sha": "7eb3213196c138a414a4ef3281d4d601ec4e775e",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/31a9c1e5a34b25318ae8/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/31a9c1e5a34b25318ae8/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-09T03:16:54.104589+00:00",
+  "creation_event_id": "bdb0b5fae54156e9ad98",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/31a9c1e5a34b25318ae8/thumbnail.png",
+  "image_sha256": "1722fff34caa81fa7414fd16ac093138ada026fdd13253556b4d2c2368d6d532",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "7eb3213196c138a414a4ef3281d4d601ec4e775e",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.09",
+      "宇都宮ブレックス",
+      "ケル・市岡",
+      "復帰未定",
+      "2人とも脳振盪",
+      "イラスト（AI生成）",
+      "プレー姿のイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/31a9c1e5a34b25318ae8/source.html",
+        "role": "本文の根拠（指定された固定HTML）",
+        "article_url": "https://basuke-matome.jp/article-daily-20261109.html",
+        "verified_blob_sha": "7eb3213196c138a414a4ef3281d4d601ec4e775e",
+        "used_facts": [
+          "記事日付2026.11.09",
+          "宇都宮ブレックスのケル選手と市岡選手",
+          "2人とも脳振盪と診断",
+          "2人とも復帰時期は未定"
+        ]
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/31a9c1e5a34b25318ae8/source.txt",
+        "role": "本文の根拠（指定された固定文章）",
+        "qualifiers_preserved": "復帰未定を見出しに明記。未確認の市岡選手の琉球戦出場、次戦の出場可否、条件付きの最大4人離脱、予測や独自分析を確定事項として画像に記載していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "トレイ・ケル III",
+        "selection": "本文の主役",
+        "reason": "タイトル・リード・負傷発表の主役の1人。本文で欠場についても扱われている。ランダム選定ではない。",
+        "official_profile_url": "https://www.utsunomiyabrex.com/player_lp/trey_kell_III/",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026110912/files/user/roster/703/2026-27/51000524_01.jpg",
+        "image_source_page": "https://www.utsunomiyabrex.com/team/players/",
+        "appearance_checked": true,
+        "observed_features": "短い黒髪のウェーブとフェード、角のある生え際、幅のある眉・鼻、薄い口ひげと顎先の短いひげ、肩幅のある体格。公式写真を目視し、右下のドリブル姿のインク画に反映。",
+        "use": "容姿参照のみ。公式写真の貼付なし。実際の試合場面の再現ではない。"
+      },
+      {
+        "name": "市岡 ショーン",
+        "selection": "本文の主役",
+        "reason": "タイトル・リード・負傷発表の主役の1人。ケル選手とともに復帰未定という主題に対応。ランダム選定ではない。",
+        "official_profile_url": "https://www.utsunomiyabrex.com/player_lp/sean_ichioka/",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026110912/files/user/roster/703/2026-27/8597_01.jpg",
+        "image_source_page": "https://www.utsunomiyabrex.com/team/players/",
+        "appearance_checked": true,
+        "observed_features": "短い茶黒色の髪、額の両端がやや後退した生え際、縦長の輪郭、比較的細い鼻、口元から顎・頬へつながるひげ。公式写真を目視し、右上のボールを構える姿のインク画に反映。",
+        "use": "容姿参照のみ。公式写真の貼付なし。実際の試合場面の再現ではない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION:\nCreate exactly ONE finished Japanese basketball news thumbnail, a new illustration, landscape 16:9 at 1536x864 or larger, PNG. Use case: illustration-story / editorial sports thumbnail.\n\nAPPROVED ART DIRECTION: deep black-green #151A18 background, acid lime #CCF43B, ivory-white typography, expressive hand-drawn black-and-white ink illustration, bold dry-brush strokes, a few orange basketball accents. A mature editorial poster, visibly drawn with brush hatching, never photographic or 3D. Follow the visual language of the already inspected reference /Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png (style only; do NOT reuse its person, name, stats or date). Keep few elements and excellent mobile readability.\n\nCONTENT comes only from the supplied fixed article: Utsunomiya announced injuries to Trey Kell III and Sean Ichioka; both diagnosed with concussion, return timing undecided. This is NOT a recovery announcement, a match report, or a claim that either will play. Avoid any game scores, statistics, prognosis, match date, celebratory trophies, injury collision scene, medical diagrams or imagery.\n\nSUBJECTS: exactly TWO real players, Trey Kell III and Sean Ichioka, both the joint central subjects of this article. Their official headshots have been visually checked. Likeness references only (never paste or reproduce the official photos):\nTrey Kell III: /tmp/basuke-31a9c1e5-reference/trey-kell-official.jpg; official https://www.utsunomiyabrex.com/player_lp/trey_kell_III/\nSean Ichioka: /tmp/basuke-31a9c1e5-reference/sean-ichioka-official.jpg; official https://www.utsunomiyabrex.com/player_lp/sean_ichioka/\nTrey: muscular broad-shouldered build, short close-cropped black textured waves with clean faded sides and squared hairline, medium-brown skin interpreted through ink hatching, broad straight brows, focused almond-shaped dark eyes, fairly broad nose, small thin mustache and distinct short chin goatee, no full beard.\nSean: tall lean athletic build, light skin interpreted through ivory ink, close-cut short dark-brown buzz hair with slightly receding corners, longer oval face, narrower nose, brown eyes, a connected trimmed full brown beard from sideburns through jaw and chin, mustache. Preserve the strong visible distinction between the two faces.\n\nCOMPOSITION: generous left 53 percent for stacked type. Right 47 percent features a dynamic two-player editorial collage. Trey in the lower-right foreground, three-quarter face clearly visible, leaning into a controlled low dribble with an orange ball and anatomically clear hand. Sean above and behind in a separate brush vignette, three-quarter face clearly visible, holding an orange ball with two hands at shoulder height while twisting for a rebound outlet. These are independent imagined basketball gestures, not a shared real game or collision. Clearly separate their arms, hands and balls; do not entangle limbs. Both in plain dark sleeveless basketball jerseys with thin ivory trim, no numbers, no team or league logos, no sponsor marks or lettering. Crop their lower bodies deliberately if needed, but no cut-off heads, hands, fingers or balls. At least 5 percent safe margin for all text. Lime brush swash connects the composition behind figures, without obscuring faces or typography.\n\nEXACT VISIBLE JAPANESE TEXT ONLY:\nsmall masthead top left: 「バスケまとめ」\nsmall date alongside: 「2026.11.09」\nmedium white team line: 「宇都宮ブレックス」\nlarge bold white headline line: 「ケル・市岡」\nlargest bold lime headline line: 「復帰未定」\nsmaller white supporting line: 「2人とも脳振盪」\nbottom-left readable ivory disclosure: 「イラスト（AI生成）」\nnext to disclosure: 「プレー姿のイメージ」\n\nRender the Japanese characters exactly, with particular care for 脳振盪, 復帰未定 and 市岡. No extra text. Main headline must have clear hierarchy and no overlap with illustration. Keep injury coverage sober and respectful while maintaining strong basketball motion. No implication of present fitness, a return date, actual attendance, or a recreated decisive play.\n\nSINGLE CORRECTION:\nEdit this existing thumbnail only to fix the framing of the right-side illustration. This is the single permitted correction.\n\nKeep the same canvas aspect ratio and resolution (1672×941, approximately 16:9), the same black #151A18 and lime #CCF43B design, and ALL Japanese text and date exactly as they currently appear. Preserve both real players' recognizable faces, hairstyles and facial hair (Trey Kell III below, Sean Ichioka above), their poses, jersey simplicity and the editorial ink brush style.\n\nThe specific correction: scale down and reposition the ENTIRE TWO-PLAYER ILLUSTRATION as a group so ALL heads, hands and BOTH basketballs are fully visible with generous space. The current lower orange ball is clipped at the bottom and the upper player's hair touches the top. Make the artwork approximately 14% smaller and center it inside the right-side art area, with the top of Sean's hair at least 45 pixels below the top edge and the bottom of Trey's complete orange ball at least 45 pixels above the bottom edge. Keep fingers fully visible, anatomically natural and separated. The lower torso may be deliberately cropped at the right edge, but no head, hand, finger or ball may be cropped. Maintain space between text and art.\n\nPreserve all copy exactly:\nバスケまとめ\n2026.11.09\n宇都宮ブレックス\nケル・市岡\n復帰未定\n2人とも脳振盪\nイラスト（AI生成）\nプレー姿のイメージ\n\nDo not add or remove people, labels, symbols, numbers, logos or sponsors. Do not change the text layout. Output ONE final PNG.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "corrections": 1,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "final_generated_file": "/Users/genjo/.codex/generated_images/01a1be4f-0d80-71c1-bb2a-7a6fbf10e741/exec-a62d2f36-07f7-4458-86a6-ad163c216ecc.png",
+      "inspection": "生成結果を目視検品。初稿の下端でボールが切れたため1回だけ修正。最終画像では両選手の頭・手指・ボールが収まり、文字と重ならない。実在2選手を区別する髪・ひげ・輪郭を公式資料と照合。写真風・チームロゴ・リーグロゴ・スポンサー文字なし。最終画像の全8文字行を固定原稿と照合し、イラスト（AI生成）とプレー姿のイメージを確認。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-09T03:20:56.389416+00:00",
+  "publication_approved": false
+}
