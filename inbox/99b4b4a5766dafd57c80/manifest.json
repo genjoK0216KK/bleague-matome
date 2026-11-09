@@ -1,0 +1,120 @@
+{
+  "id": "99b4b4a5766dafd57c80",
+  "article_path": "article-results-one-next-20261110.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261110.html",
+  "source_commit": "",
+  "source_blob_sha": "33eb07e3abf13d7b41b070ee5525f4b901e89e4b",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "e92b4d60e0b1c0b32964279f7f1a43eaae1f1658eea44bed035d4b392118e051",
+  "last_observed_blob_sha": "33eb07e3abf13d7b41b070ee5525f4b901e89e4b",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/99b4b4a5766dafd57c80/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/99b4b4a5766dafd57c80/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-09T22:32:27.645100+00:00",
+  "creation_event_id": "695e00003b9e7f7fb545",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/99b4b4a5766dafd57c80/thumbnail.png",
+  "image_sha256": "96c02952bfe65b3af16ea446a3e68dceb351748b9c38f515351dc283dc966046",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "33eb07e3abf13d7b41b070ee5525f4b901e89e4b",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.10 B.PREMIER",
+      "登録選手の",
+      "ベスト5",
+      "対象試合の登録選手から",
+      "今季平均EFFで選出",
+      "試合前｜出場確定ではありません",
+      "イラスト（AI生成）・イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_body_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/99b4b4a5766dafd57c80/source.html",
+        "source_blob_sha": "33eb07e3abf13d7b41b070ee5525f4b901e89e4b",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261110.html"
+      },
+      {
+        "role": "article_body_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/99b4b4a5766dafd57c80/source.txt",
+        "facts_used": [
+          "対象日2026-11-10",
+          "B.PREMIERの対象試合の現在登録選手から今季平均EFFで選出",
+          "出場確定を示す選出ではない",
+          "試合前の情報であり当日TOP3は公式記録確定待ち"
+        ],
+        "qualifier_decision": "当日の結果・活躍・個人成績・出場確定を画像で表現しない"
+      },
+      {
+        "role": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "override": "人物を特定できない場合も実在選手をランダム選出する本人最新指示を優先"
+      },
+      {
+        "role": "style_reference_viewed",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "used": "黒とライム、太い日本語見出し、インクとブラシのイラスト表現。旧選手名・日付・数値は不使用"
+      },
+      {
+        "role": "appearance_reference_only",
+        "url": "https://www.sunrockers.jp/lp/josh-hawkinson/",
+        "used": "本人の容姿のみ。本文・成績の根拠には使用していない"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジョシュ・ホーキンソン",
+        "selection": "ランダム",
+        "selection_reason": "本文では複数選手を同じ表形式で扱っており単独主役を絞れないため、本文に名前のある10選手からランダムに1名選出",
+        "random_draw": {
+          "method": "secrets.choice applied once to all 10 players named in the fixed article",
+          "candidates": [
+            "富樫 勇樹",
+            "キーボン・ハリス",
+            "ラウリー・アルキンズ",
+            "ヨーリ・チャイルズ",
+            "ジョシュ・ホーキンソン",
+            "ジャン・ローレンス・ハーパージュニア",
+            "ジェイムズ・パルマージュニア",
+            "西田 優大",
+            "ダバンテ・ガードナー",
+            "ファーダウス・アイマク"
+          ],
+          "selected": "ジョシュ・ホーキンソン"
+        },
+        "official_source": "https://www.sunrockers.jp/lp/josh-hawkinson/",
+        "official_images_viewed": [
+          "https://sunrockers.bl.kuroco-img.app/v=1789703093/files/user/26-27_SEASON/lp/players/img/josh_profile_img01.png",
+          "https://sunrockers.bl.kuroco-img.app/v=1789703093/files/user/26-27_SEASON/lp/players/img/josh_player_img01.png"
+        ],
+        "observed_appearance": "短く刈った側頭部と後ろへ流した茶色のトップ、長めの輪郭と角張った顎、通った鼻筋、薄い唇、明るい目、軽い無精ひげ、長身で肩幅のある体型。生成画の顔・髪型・体格と照合した。",
+        "depiction": "ボールを両手で保持して体をひねるプレーのイメージ。実際の試合場面の再現ではない。",
+        "image_text_restrictions_verified": "選手名、個人成績、出場・活躍の主張なし。衣服とボールにチーム・リーグ・スポンサーのロゴなし。公式写真の貼り付けなし。"
+      }
+    ],
+    "prompt": "Use case: ads-marketing / editorial sports illustration.\nCreate exactly ONE finished Japanese basketball article thumbnail, landscape 16:9, 1600 x 900 pixels or larger. A premium hand-drawn ink and dry-brush sports poster, unmistakably an illustration, never photorealistic.\n\nStyle reference already inspected: approved B-culver-black-lime-v3.png. Match its charcoal black #151A18 background, electric lime #CCF43B brush streaks, ivory heavy Japanese headline, expressive black-and-white ink hatching, restrained orange basketball. Do NOT copy its old player, name, date, score, or statistics.\n\nLayout: left 57 percent clean typography, right 43 percent one large real basketball player in a dynamic three-quarter pose. Strong diagonal brush energy behind the athlete; few elements; generous safe margins. Editorial, muscular, energetic. No inset photos, no extra people, no logo, no sponsor marks.\n\nReal person: Josh Hawkinson (ジョシュ・ホーキンソン), selected at random from the ten players in the supplied article, NOT a fictional generic player. His official Tokyo Sunrockers 2026-27 profile and portrait were visually checked. Preserve these observed features in illustrative linework: very tall broad-shouldered athletic build, fair skin, short dark-brown hair with closely cropped sides and longer top swept back with a side part, high forehead, slightly long oval-square face, strong angular jaw and chin, straight prominent nose, thin lips, light blue-gray eyes under dark eyebrows, visible ears, nearly clean-shaven with only very light stubble. Do not give him a full beard, curly hair, or a different face. Face should be clearly visible in three-quarter view, focused eyes looking toward the imagined passing direction.\nAction: an imagined powerful rebound-to-outlet pivot, torso twisting, holding ONE basketball firmly with both hands around upper-chest height, elbows naturally bent, shoulders active. Frame from above his head to upper thighs. Both hands, their fingers, the ball and face remain completely within the image and do not overlap the text. Anatomically coherent two arms, two natural hands. This is an illustrative pose, NOT a recreation of an actual game moment. Plain unbranded ivory basketball jersey with black shadows and subtle lime trim; plain shorts, dark right-elbow sleeve. No player name, number, team lettering or logos on clothing. Do not paste or reproduce the official photos.\n\nExact visible typography only, all in Japanese gothic heavy display type where appropriate, sharp and perfectly legible:\nSmall top-left masthead: \"バスケまとめ\"\nSmall date / competition line: \"2026.11.10  B.PREMIER\"\nLarge ivory headline: \"登録選手の\"\nLargest lime headline immediately below: \"ベスト5\"\nSmaller ivory explanatory lines: \"対象試合の登録選手から\"\n\"今季平均EFFで選出\"\nClear high-contrast qualification strip below: \"試合前｜出場確定ではありません\"\nSmall but readable footer: \"イラスト（AI生成）・イメージ\"\n\nText meaning must remain precise: these are pre-game selections among the registered players of that day's scheduled matchups based on season-average EFF, not a league-wide overall ranking, not confirmed appearances, not game results. No player name, personal statistics, points, records, victory claims or appearance claims anywhere. Do not add any other words or numerals. The random featured player's illustration merely provides the basketball visual; the headline describes the article's selection method. Maintain the explicit AI label and image disclaimer. Keep every glyph and all key anatomy inside generous 5 percent safe margins.",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "correction_count": 0,
+      "output_format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "original_output": "/Users/genjo/.codex/generated_images/01a1c270-ff76-7f83-923d-fb0a5df5f0c8/exec-6a29add1-2bf5-45e3-972f-cc05bb978ba5.png",
+      "output_sha256": "96c02952bfe65b3af16ea446a3e68dceb351748b9c38f515351dc283dc966046",
+      "inspection": "内蔵生成結果の表示とview_imageで実画像を確認。日本語・数値・留保・顔の特徴・左右の手・ボール・見切れ・AI注記を目視検品。PNGヘッダーとsipsで寸法を確認。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-09T22:35:13.262479+00:00",
+  "publication_approved": false
+}
