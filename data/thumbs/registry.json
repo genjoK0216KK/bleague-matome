@@ -1316,6 +1316,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "11/09 試合結果・当日のEFF"
   },
+  "article-results-one-next-20261110.html": {
+   "article_path": "article-results-one-next-20261110.html",
+   "editorial_fingerprint": "e92b4d60e0b1c0b32964279f7f1a43eaae1f1658eea44bed035d4b392118e051",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-results-one-next-20261110-96c02952bfe6.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-results-one-next-20261110-96c02952bfe6-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "99b4b4a5766dafd57c80",
+   "image_sha256": "96c02952bfe65b3af16ea446a3e68dceb351748b9c38f515351dc283dc966046",
+   "imported_at": "2026-11-09T22:35:48.848521+00:00",
+   "prepared_at": "2026-11-09T22:35:13.262479+00:00",
+   "source_blob_sha": "33eb07e3abf13d7b41b070ee5525f4b901e89e4b",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "e92b4d60e0b1c0b32964279f7f1a43eaae1f1658eea44bed035d4b392118e051",
+   "style": "ink-lime-portrait-v5",
+   "title": "11/10 出場予定選手（登録選手）のベスト5"
+  },
   "article-stats-20261026.html": {
    "article_path": "article-stats-20261026.html",
    "editorial_fingerprint": "fa8bf9395b06c6d599e33f04949ace3dd509a5381fb0af173f99fa72386c4be5",
@@ -1542,13 +1570,6 @@
   }
  },
  "log": [
-  {
-   "article": "article-daily-20261106.html",
-   "at": "2026-11-06T03:19:31.265941+00:00",
-   "event": "imported",
-   "id": "e51cb8d8899804e71a3c",
-   "image": "9441381c0adf"
-  },
   {
    "article": "article-games-20261106.html",
    "at": "2026-11-06T11:12:22.602889+00:00",
@@ -2101,6 +2122,13 @@
    "event": "imported",
    "id": "570a778c73159b26d00d",
    "image": "f18e148b4217"
+  },
+  {
+   "article": "article-results-one-next-20261110.html",
+   "at": "2026-11-09T22:35:48.848546+00:00",
+   "event": "imported",
+   "id": "99b4b4a5766dafd57c80",
+   "image": "96c02952bfe6"
   }
  ],
  "seen": {
@@ -2176,6 +2204,7 @@
   "95e267d849a9238c3703": "superseded:46adebe03cc636f48def",
   "9738ca38103aa648b879": "imported",
   "98e19c39f90c0bb08e5b": "superseded:5371bea30124ef22fa57",
+  "99b4b4a5766dafd57c80": "imported",
   "9b08affa65446e4027e4": "superseded:9bdde677628afe3c1636",
   "9bbc15165c559181134d": "superseded:619af1e58cddd34c14bc",
   "9bdde677628afe3c1636": "imported",
