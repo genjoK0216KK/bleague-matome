@@ -504,6 +504,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "宇都宮ブレックス、ケルと市岡が脳振盪で復帰未定"
   },
+  "article-daily-20261110.html": {
+   "article_path": "article-daily-20261110.html",
+   "editorial_fingerprint": "24ad9cc76dae25b4936a256f39a39162e933339340ac6c23a2d1504be57a321f",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261110-66e266d2fd2a.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261110-66e266d2fd2a-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "5a66e834a435acc4ef91",
+   "image_sha256": "66e266d2fd2a8c454512b4e0074950a258e3153e2d8b86ec0459ceeeebcc5e20",
+   "imported_at": "2026-11-09T23:18:10.033358+00:00",
+   "prepared_at": "2026-11-09T23:17:35.823368+00:00",
+   "source_blob_sha": "e96682b60190ca40534575672256e573ccca50af",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "24ad9cc76dae25b4936a256f39a39162e933339340ac6c23a2d1504be57a321f",
+   "style": "ink-lime-portrait-v5",
+   "title": "千葉ジェッツ対大阪の試合前予測、ウィリアムズ離脱でもコステロが復帰"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -1572,13 +1600,6 @@
  "log": [
   {
    "article": "article-games-20261106.html",
-   "at": "2026-11-06T11:12:22.602889+00:00",
-   "by": "731d042f2d67fce3b63f",
-   "event": "superseded",
-   "id": "a6af1d6804c82023ebf1"
-  },
-  {
-   "article": "article-games-20261106.html",
    "at": "2026-11-06T11:12:22.748363+00:00",
    "event": "imported",
    "id": "731d042f2d67fce3b63f",
@@ -2129,6 +2150,13 @@
    "event": "imported",
    "id": "99b4b4a5766dafd57c80",
    "image": "96c02952bfe6"
+  },
+  {
+   "article": "article-daily-20261110.html",
+   "at": "2026-11-09T23:18:10.033388+00:00",
+   "event": "imported",
+   "id": "5a66e834a435acc4ef91",
+   "image": "66e266d2fd2a"
   }
  ],
  "seen": {
@@ -2173,6 +2201,7 @@
   "5371bea30124ef22fa57": "imported",
   "570a778c73159b26d00d": "imported",
   "574068c2a0f59824e769": "superseded:2e911924d887d6fdf34a",
+  "5a66e834a435acc4ef91": "imported",
   "5a86fec3857da89d996f": "superseded:5b9d534e1962778a709e",
   "5b9d534e1962778a709e": "imported",
   "5e231e28b370cb26f1f6": "imported",
