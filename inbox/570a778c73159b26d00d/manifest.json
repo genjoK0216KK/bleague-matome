@@ -1,0 +1,104 @@
+{
+  "id": "570a778c73159b26d00d",
+  "article_path": "article-games-20261110.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261110.html",
+  "source_commit": "",
+  "source_blob_sha": "21720384cdda5422fda22c42c5ef24953e5cb2dd",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "f9883d235bd33ba95e842f567825893839fbc7f63f7f7ae026d7021851cbb59a",
+  "last_observed_blob_sha": "21720384cdda5422fda22c42c5ef24953e5cb2dd",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/570a778c73159b26d00d/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/570a778c73159b26d00d/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-09T19:43:34.077028+00:00",
+  "creation_event_id": "857d8facb6f0c1f1b190",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/570a778c73159b26d00d/thumbnail.png",
+  "image_sha256": "f18e148b421755e5e5c0cb052391abb8d0eee70d94c0d92e41fc214701ed7924",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "21720384cdda5422fda22c42c5ef24953e5cb2dd",
+    "text_lines": [
+      "バスケまとめ",
+      "11/10",
+      "試合予定",
+      "B.PREMIER 全3試合",
+      "19:05 開始予定",
+      "試合前・公式記録確定待ち",
+      "11/10 04:43 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/570a778c73159b26d00d/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261110.html",
+        "note": "本文の根拠は依頼された固定HTMLのみ。HTMLのblob SHAをgitコマンドなしで計算して指定値との一致を確認。3試合すべて19:05予定・試合前、全試合の公式記録確定待ち。"
+      },
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/570a778c73159b26d00d/source.txt",
+        "note": "固定HTMLと合わせて本文の根拠として読了。記事タイトルのベスト5について本文に選出結果がないため画像に掲載しない。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://chibajets.jp/team/players/",
+        "note": "記事登場チームの千葉Jの現役選手候補の確認のみ。記事内容・成績の根拠には使用していない。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://chibajets.jp/team/players/detail/id=23241?PlayerID=51000467",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026111001/files/user/roster/704/2026-27/51000467_01.jpg",
+        "note": "瀬川琉久選手の公式プロフィール写真をview_imageで目視。容姿の参照だけに用い、写真の貼り付けはしていない。"
+      },
+      {
+        "type": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "view_imageで確認した承認済みの黒×ライム・手描きインク表現を参照。参照画像の選手名・成績・日付は転用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "瀬川琉久",
+        "team": "千葉ジェッツ",
+        "selection": "ランダム",
+        "selection_reason": "固定原稿には個人名がなく主役を絞れないため、本文に登場する千葉Jの現役選手から選出。",
+        "selection_method": "千葉J公式選手一覧の掲載順16人を候補に、Python random.Random('570a778c73159b26d00d').choice(pool)で1人選出。",
+        "candidate_pool": [
+          "渡邊雄太",
+          "富樫勇樹",
+          "田代直希",
+          "瀬川琉久",
+          "菅野ブルース",
+          "ブランドン・ランドルフ",
+          "金近廉",
+          "深水虎太郎",
+          "佐藤巧",
+          "ネイト・ウィリアムズ",
+          "ウィリアムス ニカ",
+          "マット・コステロ",
+          "荒尾岳",
+          "菅原佳依",
+          "原修太",
+          "ルーク・メイ"
+        ],
+        "official_profile": "https://chibajets.jp/team/players/detail/id=23241?PlayerID=51000467",
+        "official_photo": "https://bleague.bl.kuroco-img.app/v=2026111001/files/user/roster/704/2026-27/51000467_01.jpg",
+        "appearance_checked": "中央で分けた黒髪と丸みのある長めの前髪、ひげのない若い顔、卵形の輪郭と丸い顎、眉・目・鼻・唇を公式写真と生成画像で照合。",
+        "depiction": "1人のドリブル姿を手描きインク調で描写。実際の試合場面の再現ではない。選手名・背番号・成績・出場・活躍は画像内に記載せず、イメージと明記。ロゴとスポンサー文字はなし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story. Create ONE finished Japanese basketball editorial thumbnail, 2048×1152 pixels, landscape 16:9.\nTransform the approved black-and-lime thumbnail reference into a completely new article thumbnail, keeping its hand-drawn ink/brush art direction, bold clean Japanese typography, dark #151A18 and vivid lime #CCF43B with warm ivory accents. Do NOT retain any name, score, date or player from that style reference.\nREFERENCE ROLES: first reference is style only (B-culver-black-lime-v3.png); second is appearance only, official portrait of REAL basketball player Riku Segawa / 瀬川琉久 (segawa-official.jpg). Redraw him entirely as an ink illustration, NEVER paste the photograph or make a photographic rendering. He is the only person.\nSUBJECT: Preserve Segawa's recognisable youthful clean-shaven face, straight thick dark hair with center part and curved curtain fringe, gentle oval jaw with rounded chin, straight dark eyebrows, almond-shaped dark eyes, straight nose, small closed lips, and athletic build. Put him on the LEFT 45% of the canvas in a dynamic low driving/dribbling basketball pose with a forward diagonal lean, knees bent, face visible in a near-frontal three-quarter view looking ahead. One orange basketball just under his controlling right hand, fully inside the canvas. Natural arms, wrists, and fingers, no duplicated fingers. Draw upper body and bent thighs with deliberate crop below mid-thigh if necessary, but do not crop head, arms, hands, ball or any text. Simplified plain ivory/dark basketball kit with small red trim, no team mark, no sponsor, no jersey number or name. Actual game actions are NOT being recreated: this is an imaginary illustrative pose of a real athlete selected randomly.\nCOMPOSITION: energetic left-side athlete, lime diagonal brush slashes behind him; clean large text block on RIGHT about 52% width. No additional people. Few elements, no stadium or photoreal court; no official logo or insignia anywhere. Typography should remain readable on a phone; generous safe margins, text must not overlap face, ball or hands. Japanese type is heavy, crisp and correctly rendered, main headline in large ivory/lime.\nText exactly, with hierarchy:\nsmall masthead at upper right: 「バスケまとめ」\nlargest two headline lines: 「11/10」 and 「試合予定」\nmedium line: 「B.PREMIER 全3試合」\nmedium line: 「19:05 開始予定」\nclearly readable qualifier: 「試合前・公式記録確定待ち」\nsmaller as-of note: 「11/10 04:43 JST時点」\nbottom caption, readable with high contrast: 「イラスト（AI生成）」 and 「イメージ」\nRender only these literal strings, without Japanese quotation marks. No other words or numbers.\nFACTUAL BOUNDARIES: The frozen article contains three B.PREMIER fixtures on November 10, 2026, each scheduled 19:05 and all marked pre-game as of 04:43 JST. Official results and TOP3 are pending. Do not claim a result, score, player selection/ranking, appearance, points, or performance. Do not write the player's name. Do not write the old title's 'ベスト5'. The references are solely for style and physical likeness. The whole final image must clearly look illustrated, with fine expressive facial ink details and rough brush texture while keeping text clean.",
+    "generator": "内蔵 image_gen（image_gen__imagegen）。生成1回、修正0回。出力PNG 1672×941px、約16:9。API/CLIによる生成なし。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-09T19:46:25.317568+00:00",
+  "publication_approved": false
+}
