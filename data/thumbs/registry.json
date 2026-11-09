@@ -28,6 +28,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "宇都宮ブレックスの直近5試合をスタッツで分析 差がついたのはフリースローと2P"
   },
+  "article-analysis-nagoya-20261109.html": {
+   "article_path": "article-analysis-nagoya-20261109.html",
+   "editorial_fingerprint": "7269b66ff74eea639157d7adb0052ab856da95940ed7a52aa690ce10e2ed0471",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-analysis-nagoya-20261109-6f68579e42fe.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-nagoya-20261109-6f68579e42fe-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "35ede906c0ae4c4fcfd9",
+   "image_sha256": "6f68579e42feab623144f7c0f26e386b57cff276284ae185676787924f1528bf",
+   "imported_at": "2026-11-09T03:31:29.539212+00:00",
+   "prepared_at": "2026-11-09T03:30:55.685105+00:00",
+   "source_blob_sha": "a87b6ccb7e4384abc8e9e03d5cda90d083b3a9b7",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "7269b66ff74eea639157d7adb0052ab856da95940ed7a52aa690ce10e2ed0471",
+   "style": "ink-lime-portrait-v5",
+   "title": "名古屋ダイヤモンドドルフィンズ 直近5試合は全勝 失点の少なさがリーグ1位"
+  },
   "article-daily-20261025.html": {
    "article_path": "article-daily-20261025.html",
    "editorial_fingerprint": "d9b807a86f51d965cd9418f1b87d825b486b3bf971b49abc769e304f816697ab",
@@ -1459,13 +1487,6 @@
  },
  "log": [
   {
-   "article": "article-daily-20261105.html",
-   "at": "2026-11-05T10:26:33.636323+00:00",
-   "event": "imported",
-   "id": "2fad4903e119f5b6b0ea",
-   "image": "521157d802f7"
-  },
-  {
    "article": "article-games-20261105.html",
    "at": "2026-11-05T11:10:37.277694+00:00",
    "by": "afc600cca296739a9413",
@@ -2017,6 +2038,13 @@
    "event": "imported",
    "id": "31a9c1e5a34b25318ae8",
    "image": "1722fff34caa"
+  },
+  {
+   "article": "article-analysis-nagoya-20261109.html",
+   "at": "2026-11-09T03:31:29.539248+00:00",
+   "event": "imported",
+   "id": "35ede906c0ae4c4fcfd9",
+   "image": "6f68579e42fe"
   }
  ],
  "seen": {
@@ -2042,6 +2070,7 @@
   "31a9c1e5a34b25318ae8": "imported",
   "3370472f9c78336a4974": "imported",
   "347558cc6a9b226d7c1c": "superseded:f60ec06f0d2f4ee967a2",
+  "35ede906c0ae4c4fcfd9": "imported",
   "39075cc4edcf56d9d90d": "superseded:a9d34f9ead8bbf40b841",
   "3955308615847dff3136": "superseded:9f2558d6277a776ef982",
   "3d20be125ac18075c9b0": "superseded:9f2558d6277a776ef982",
