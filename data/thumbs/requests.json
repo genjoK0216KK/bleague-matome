@@ -444,16 +444,16 @@
   "article-games-20261109.html": {
    "article_path": "article-games-20261109.html",
    "article_url": "https://basuke-matome.jp/article-games-20261109.html",
-   "editorial_fingerprint": "6b7bc7976b8feb43660a29a0a82be468fbaf1a095157e9eaa3510fec1b1040a8",
-   "event_id": "8d1111585774bf54a602",
-   "recorded_at": "2026-11-09T10:18:27.335447+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "6688a397a5fb671f0e06ce64980fa6a43c51bb14",
-   "stable_fingerprint": "6b7bc7976b8feb43660a29a0a82be468fbaf1a095157e9eaa3510fec1b1040a8",
+   "editorial_fingerprint": "8b254656b898ae0aecba1a067fb03df2862b3022e61411a87ba0ba4d8471a188",
+   "event_id": "4e2d40d8246530c3981f",
+   "recorded_at": "2026-11-09T14:20:33.974534+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "133eab83a47741971a64f522aa2180cb6f073250",
+   "stable_fingerprint": "8b254656b898ae0aecba1a067fb03df2862b3022e61411a87ba0ba4d8471a188",
    "status": "requested",
    "target_date": "20261109",
-   "title": "11/09 試合結果（公式記録の確定待ち）"
+   "title": "11/09 試合結果・当日のEFF"
   },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
@@ -612,16 +612,16 @@
   "article-results-one-next-20261109.html": {
    "article_path": "article-results-one-next-20261109.html",
    "article_url": "https://basuke-matome.jp/article-results-one-next-20261109.html",
-   "editorial_fingerprint": "6b7bc7976b8feb43660a29a0a82be468fbaf1a095157e9eaa3510fec1b1040a8",
-   "event_id": "f2a2a6346bb256bd1959",
-   "recorded_at": "2026-11-09T10:18:27.335447+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "e7fdbb3ef9440694d505e29b178bafd862c896b3",
-   "stable_fingerprint": "6b7bc7976b8feb43660a29a0a82be468fbaf1a095157e9eaa3510fec1b1040a8",
+   "editorial_fingerprint": "8b254656b898ae0aecba1a067fb03df2862b3022e61411a87ba0ba4d8471a188",
+   "event_id": "f1c7d923f5a5cb5f7f27",
+   "recorded_at": "2026-11-09T14:20:33.974534+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "a8c464134d887c9c51f599d8fac718091477fbd3",
+   "stable_fingerprint": "8b254656b898ae0aecba1a067fb03df2862b3022e61411a87ba0ba4d8471a188",
    "status": "requested",
    "target_date": "20261109",
-   "title": "11/09 試合結果（公式記録の確定待ち）"
+   "title": "11/09 試合結果・当日のEFF"
   },
   "article-stats-20261026.html": {
    "article_path": "article-stats-20261026.html",
@@ -708,6 +708,18 @@
    "status": "requested",
    "target_date": "20261108",
    "title": "11月8日の貢献度ランキング 1位はナシール・リトル（佐賀）の51"
+  },
+  "article-stats-20261109.html": {
+   "article_path": "article-stats-20261109.html",
+   "article_url": "https://basuke-matome.jp/article-stats-20261109.html",
+   "editorial_fingerprint": "9a714ff9abbb6adb5823416e74bcdd515c57987adfa486a6a5ac914cfcd96f8a",
+   "event_id": "ef8332034d23bfad2ddc",
+   "recorded_at": "2026-11-09T14:20:33.974534+00:00",
+   "source_blob_sha": "79a23b4a3e1cc4759a1bdcb661fda4e2441fb994",
+   "stable_fingerprint": "9a714ff9abbb6adb5823416e74bcdd515c57987adfa486a6a5ac914cfcd96f8a",
+   "status": "requested",
+   "target_date": "20261109",
+   "title": "11月9日の貢献度ランキング 1位は岡田 侑大（島根）の36"
   }
  },
  "version": 1
