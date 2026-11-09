@@ -7,13 +7,12 @@
       "game_id": "506560",
       "season": "2026-27",
       "competition": "BP",
-      "starts_at": "2026-11-09T19:05:00+09:00",
+      "starts_at": "2026-11-09T10:05:00+00:00",
       "ended": false,
       "fixed": false,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506560",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
-      "status": "scheduled",
-      "players": [],
+      "status": "unconfirmed",
       "home": "茨城",
       "home_full": "茨城ロボッツ",
       "home_id": "712",
@@ -21,7 +20,9 @@
       "away": "琉球",
       "away_full": "琉球ゴールデンキングス",
       "away_id": "701",
-      "away_score": null
+      "away_score": null,
+      "players": [],
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506560/1.json"
     },
     {
       "game_id": "506561",
