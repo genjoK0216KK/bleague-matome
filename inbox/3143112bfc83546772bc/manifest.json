@@ -1,0 +1,90 @@
+{
+  "id": "3143112bfc83546772bc",
+  "article_path": "article-stats-20261109.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261109.html",
+  "source_commit": "",
+  "source_blob_sha": "79a23b4a3e1cc4759a1bdcb661fda4e2441fb994",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "9a714ff9abbb6adb5823416e74bcdd515c57987adfa486a6a5ac914cfcd96f8a",
+  "last_observed_blob_sha": "79a23b4a3e1cc4759a1bdcb661fda4e2441fb994",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3143112bfc83546772bc/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3143112bfc83546772bc/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-09T14:20:43.024332+00:00",
+  "creation_event_id": "ef8332034d23bfad2ddc",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/3143112bfc83546772bc/thumbnail.png",
+  "image_sha256": "11dc78e8a1bacb31cebde42d30a3ea59bed90cf9786bfbe7b1e96327c1ca9500",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "79a23b4a3e1cc4759a1bdcb661fda4e2441fb994",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.09",
+      "岡田 侑大",
+      "貢献度1位",
+      "EFF 36",
+      "島根｜30得点・9アシスト",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3143112bfc83546772bc/source.html",
+        "role": "本文の根拠（固定HTML）。title、lead、貢献度TOP3・TOP10を照合。11月9日6試合を対象とする当日ランキングで岡田侑大がEFF36の1位。島根、30得点、9アシスト。blob SHA一致を保存時にも確認。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3143112bfc83546772bc/source.txt",
+        "role": "本文の根拠（固定文章）。HTMLと主要記載が一致。国籍別ランキング未掲載の留保を確認し、画像には国籍区分やシーズン全体1位を加えていない。"
+      },
+      {
+        "url": "https://basuke-matome.jp/article-stats-20261109.html",
+        "role": "対象記事識別URLのみ。公開本文は取得せず、上記固定版2ファイルのみを内容の根拠とした。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "制作・検品ルール。本文の根拠には不使用。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで確認した承認済み作風の参照。黒×ライム、太い見出し、手描きインク・ブラシ。参照の選手名や成績は流用していない。白地A参照は指定パスに存在せず不使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "岡田 侑大",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿のタイトル・導入・ランキング1位で最も大きく扱われる選手。",
+        "reference_source": "島根スサノオマジック公式 2026-27 SEASON 岡田侑大プロフィール",
+        "url": "https://www.susanoo-m.com/lp_page/roster202627_77",
+        "image_url": "https://www.susanoo-m.com/files/user/lp09/images/202627lineup/77vG2CQh/main_okada.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3143112bfc83546772bc/references/okada-official-profile.jpg",
+        "reference_inspected": true,
+        "observed_features": "黒い直毛・丸みのある前髪、黒いヘッドバンド、濃い眉、切れ長の目、まっすぐな鼻、ひげのない若い顔立ち、細身の長い手足。公式資料は容姿参照のみ。写真・ロゴ・スポンサー文字は成果画像へ貼付していない。",
+        "depiction": "右側にドライブしながらボールを操るプレー姿のインクイラスト。特定の実試合・決定的場面の再現とはしていない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: editorial illustration / Japanese sports thumbnail.\nCreate ONE finished PNG thumbnail, landscape about 16:9, target 1792 x 1008 px (minimum width 1000 px), for バスケまとめ.\n\nDesign: the approved black-and-lime hand-inked sports editorial style. Matte near-black #151A18 background, electric lime #CCF43B expressive dry-brush sweeps, warm ivory lettering, a small orange basketball accent. Rough handmade ink and brush illustration with visible hatching. Few elements, powerful typography, no photorealism, no logos.\n\nArticle facts (the ONLY editorial content source is the supplied fixed manuscript): 2026-11-09 daily contribution ranking, 6 games. 岡田 侑大 of 島根 is number 1 with EFF 36, 30 points and 9 assists. Use ONLY the exact text below, no invented claims or extra scores.\n\nSubject: exactly ONE real player, Yuta Okada / 岡田侑大, selected because he is the explicit main subject in the manuscript. His official 2026-27 Shimane roster portrait was visually inspected: youthful Japanese man, lean long-limbed athletic build; black straight thick hair with a rounded fringe just above eyebrows and short sides, hair partly held by a black headband; clean-shaven, softly angular oval face, tapered jaw and rounded chin, straight thick eyebrows, dark almond-shaped eyes, straight fairly narrow nose, compact medium-full lips. Preserve those specific features; do not create a generic fictional athlete. Use a focused expression. Render as a clearly hand-drawn ink illustration, monochrome ivory-and-charcoal skin shading with subtle blue details on a plain basketball uniform, all team/sponsor/league logos and words removed; no jersey lettering or number needed.\nPose: dynamic driving dribble, torso leaning forward diagonally and looking toward the left, right hand controlling a single orange basketball near hip/knee height, left arm naturally bent for balance. Waist-to-above-knees three-quarter view on the RIGHT 44% of canvas. Face, both hands, and the full ball comfortably in frame. Anatomically coherent wrists and five fingers per hand. This is an illustrative play concept, NOT a reconstruction of any actual match moment. No opponent, no victory celebration, no scoreboard.\n\nLayout: strong readable type on LEFT 54%, athlete on right. Keep all text clear of face, hands and ball; at least 60px safe margins. Small brand and date at top left, name as main bold ivory headline, ranking line in bold ivory, EFF 36 as huge lime focal number, secondary stat line underneath. Lime slanted brush trail behind the athlete. Avoid the reference's upright shooting pose; use low forward movement.\nExact text, in this order:\n\"バスケまとめ\"\n\"2026.11.09\"\n\"岡田 侑大\"\n\"貢献度1位\"\n\"EFF 36\"\n\"島根｜30得点・9アシスト\"\nBottom in a fully legible small ivory line, with generous bottom margin:\n\"イラスト（AI生成）\"\n\"成績をもとにしたイメージ\"\n\nAll Japanese characters must be correct and crisp. Use sturdy heavy Japanese sans typography with hand-ink texture only around edges. EFF is not points; keep the EFF label attached to 36. Daily scope is fixed by the clearly visible date. Do not add season-best, MVP, official award, nationality category, or decisive-shot claims. No pasted official photos, no photo textures, no league/team/sponsor marks, no watermark except the requested AI label.\n\nSINGLE CORRECTION PASS\nEdit the first image, the finished Japanese basketball thumbnail. This is the ONLY permitted correction pass.\nImage 1 is the existing design to preserve. Image 2 is an OFFICIAL likeness reference for Yuta Okada ONLY. Do not paste its photo, logos, sponsors, numbers, or words into the artwork.\n\nFix the top clipping: the entire top of the player's hair must be visible with 45-60 px of near-black background above it, inside the canvas. Reduce and reposition the right-hand player illustration slightly to fit, while preserving the dynamic driving/dribbling pose. Keep face, both natural hands and full orange ball inside the frame with safe margins. Lower body may end at the bottom at mid-thigh, as already composed.\nRefine the black hair to match the official likeness more closely: straight dense rounded hair and short fringe around a black headband, not excessively spiked; youthful clean-shaven softly angular oval face with straight thick eyebrows and dark almond eyes. Preserve recognizability as the actual player Yuta Okada. Keep the hand-drawn ink hatching aesthetic, not photography.\nPreserve the approved near-black #151A18, lime #CCF43B and ivory scheme, plain blue uniform without marks, orange ball, brush strokes, layout and all Japanese text EXACTLY as currently written. Maintain readability and separation from player. Do not add anything.\nExact existing text:\nバスケまとめ\n2026.11.09\n岡田 侑大\n貢献度1位\nEFF 36\n島根｜30得点・9アシスト\nイラスト（AI生成）\n成績をもとにしたイメージ\n\nProduce one corrected landscape PNG, same approximately 16:9 aspect ratio, at least 1000 pixels wide. No team/league/sponsor logos, no official-photo collage. This is an illustrative play concept, not a specific actual match moment.",
+    "generator": {
+      "tool": "image_gen",
+      "mode": "内蔵画像生成",
+      "generation_calls": 2,
+      "correction_count": 1,
+      "selected_output": "exec-a339a339-66df-4b92-8e18-39719c54cf97.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "sha256": "11dc78e8a1bacb31cebde42d30a3ea59bed90cf9786bfbe7b1e96327c1ca9500",
+      "visual_inspection": "初稿の頭頂部見切れを修正1回で解消。最終画像を実際に表示して文字・数値・当日範囲・容姿・手・顔とボールの見切れ・注記・ロゴ不在を確認。下半身は意図した太腿での構図。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-09T14:36:25.689765+00:00",
+  "publication_approved": false
+}

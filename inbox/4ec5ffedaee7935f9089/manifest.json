@@ -1,0 +1,108 @@
+{
+  "id": "4ec5ffedaee7935f9089",
+  "article_path": "article-games-20261109.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261109.html",
+  "source_commit": "",
+  "source_blob_sha": "133eab83a47741971a64f522aa2180cb6f073250",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "8b254656b898ae0aecba1a067fb03df2862b3022e61411a87ba0ba4d8471a188",
+  "last_observed_blob_sha": "133eab83a47741971a64f522aa2180cb6f073250",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4ec5ffedaee7935f9089/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4ec5ffedaee7935f9089/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-09T14:20:42.371698+00:00",
+  "creation_event_id": "4e2d40d8246530c3981f",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/4ec5ffedaee7935f9089/thumbnail.png",
+  "image_sha256": "7d4a219b293e3317c1ad4e8865ec6339b84f91949e9769d6479c4885e854cd42",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "133eab83a47741971a64f522aa2180cb6f073250",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.09",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "B.PREMIER",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4ec5ffedaee7935f9089/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261109.html",
+        "use": "本文の根拠。タイトル・試合日・B.PREMIERの試合結果と当日のEFFポジション別TOP3。blob SHAを指定値と照合済み。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4ec5ffedaee7935f9089/source.txt",
+        "use": "本文の根拠。個人を主役にした記事ではなく、複数試合と10選手の比較であることを確認。"
+      },
+      {
+        "type": "qualifiers",
+        "use": "当日公式EFFのポジション別TOP3であり、今季平均・総合順位・予想ではない。兼任・同率・資料取得時点の公式登録という留保を確認。画像は個人成績や起用位置を断定せず、当日のEFF・ポジション別TOP3と表記。",
+        "article_data_retrieved_at": "2026-11-09 23:20 JST",
+        "position_data_retrieved_at": "2026-11-08 19:13 JST"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認した黒×ライム、太い日本語、インク・ブラシのスタイルのみ。氏名・成績・日付は転用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "キーファー・ラベナ",
+        "selection": "ランダム",
+        "selection_method": "本文で並列比較される選手10人を重複除去し、Python secrets.choiceで等確率に1人選定。抽選結果はselection.json。",
+        "candidate_pool": [
+          "岡田 侑大",
+          "D.J・ニュービル",
+          "キーファー・ラベナ",
+          "ジャレット・カルバー",
+          "セルジオ・エル ダーウィッチ",
+          "アンジェロ・カロイアロ",
+          "スタンリー・ジョンソン",
+          "ダラル・ウィリス ジュニア",
+          "マークイーズ・ボールデン",
+          "チャールズ・ジャクソン"
+        ],
+        "official_profile": "https://goldenkings.jp/team/players/detail/id=26064?PlayerID=5100000062",
+        "official_league_profile": "https://www.bleague.jp/roster_detail/?PlayerID=5100000062",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026110923/files/user/roster/701/2026-27/5100000062_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4ec5ffedaee7935f9089/references/kiefer-ravena-official.jpg",
+        "reference_inspected": true,
+        "visible_features": "短い黒髪と横に流した前髪、短いサイド、太く直線的な眉、目鼻、やや角のある輪郭、薄い口ひげと顎ひげ、引き締まった体格。公式写真を目視して照合。",
+        "usage": "容姿のみ参照。写真は完成画像に貼り付けず、ロゴ・スポンサー・背番号を省いたプレー姿のインク画。本人名・個人成績・出場・活躍を画像文字に書かない。実際の試合場面の再現ではない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story / Japanese editorial basketball thumbnail.\nCreate ONE finished landscape PNG thumbnail, 16:9, ideally 1536 x 864 or larger, for バスケまとめ. This is a new graphic. Hand-drawn ink-and-dry-brush illustration, NOT photography.\n\nVisual style: very dark charcoal-green #151A18 background; electric lime #CCF43B painterly diagonal accents; ivory Japanese headlines; minimal elements, bold editorial hierarchy, sharp readable Japanese. Match the ink/brush aesthetic of the approved black/lime thumbnail visible in the conversation, but do NOT copy its player, names, date, statistics, or right-side shooting composition.\n\nSubject: exactly one REAL basketball player, Kiefer Ravena (キーファー・ラベナ), illustrated from the official profile visually inspected in this conversation. His appearance: Filipino adult man, warm tan skin, short straight black hair swept across his forehead to his right with shorter sides, broad angular oval face and defined jaw, straight thick eyebrows, dark almond eyes, straight medium-width nose, medium lips, a faint narrow moustache and short light chin/jaw stubble, no full beard. Athletic compact muscular guard build. Preserve these recognizable features in expressive ink drawing; do not invent a different player. Plain ivory basketball jersey with a dark navy crew-neck short-sleeved undershirt, plain dark shorts. NO jersey numbers, names, letters, sponsor markings, team emblems, league emblems, or clothing brand logos. Do not paste or reproduce any official photograph.\n\nComposition: PLAYER ON LEFT occupying roughly 45 percent, text on RIGHT 53 percent. He is leaning forward in an energetic low dribble/crossover motion, face visible in a frontal three-quarter view looking toward the open space to the right; waist and bent upper legs visible. One natural hand contacts the top/outer side of one orange basketball low in front of his body, the other arm reaches out naturally for balance. The orange ball is only a prop held/controlled by the player, not the main subject. Both arms, natural hands and the entire ball must be inside the frame; no extra limbs or extra fingers. Upper-thigh framing is intentional, no detached limbs. Keep his head well inside the frame. Lime angled brush strokes behind him imply movement; no opposing player, no identifiable arena, no hoop or score display. This is an imaginary illustrative pose, NOT a recreation of an actual game moment.\n\nRight-hand typography with clear spacing:\nsmall header at top: 「バスケまとめ」\ndate nearby: 「2026.11.09」\nlargest ivory headline: 「試合結果」\nbold secondary lime headline: 「当日のEFF」\nbelow it, smaller but still bold: 「ポジション別TOP3」\nsmall category line: 「B.PREMIER」\nAcross bottom in a clean dark strip, readable ivory caption exactly: 「イラスト（AI生成）｜イメージ」\n\nJapanese typography must be exact and clean; render only these seven text strings, without corner quotes. No other text or numbers. Do not add player name, player stats, winner, performance claim, ranking for the depicted player, season averages, game scores, or promotional slogans. TOP3 is explicitly position-based, not overall player ranking. Nothing should imply that the pictured pose is a real event. The player was randomly chosen as an illustration for an article comparing several players.\n\nUse generous 5 percent edge safety for all text and the ball. Keep text away from the player, lime strokes away from text counters. Crisp ink texture, bold flat shapes, expressive realistic facial structure without photographic rendering. Strong mobile-thumbnail legibility. Opaque background.\n\nONE CORRECTION\nEdit the provided thumbnail once. Preserve ALL existing Japanese/English text, date, spelling, typography, black #151A18 / lime #CCF43B / ivory colors, text hierarchy and right-side layout exactly. Preserve Kiefer Ravena's identity and the same dynamic dribbling pose, plain uniform without markings, and hand anatomy. Correct ONLY the framing of the illustrated player: scale the ENTIRE player and basketball together down to approximately 83 percent of their current size and reposition within the left 45 percent so there is at least 35 px of clear background above his hair and to the left of his elbow, and the whole basketball (including its bottom) is visible with at least 30 px of dark background above the bottom caption band. The leftmost elbow must not touch the canvas edge. Both hands must remain fully visible. Keep the lower thigh crop intentional. No player name, jersey number, score, logo, sponsor, or any additional text. Subtle thin moustache and light short chin stubble, not a dense full beard, as the official Kiefer Ravena portrait in the second reference image. Second input is for facial likeness only; do not copy the photo or its uniform logos. Keep the finished image an ink-and-brush illustration, not photorealistic. Maintain the exact seven text strings: バスケまとめ / 2026.11.09 / 試合結果 / 当日のEFF / ポジション別TOP3 / B.PREMIER / イラスト（AI生成）｜イメージ. Keep 16:9 landscape dimensions at least 1000px wide. No other alterations.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "correction_calls": 1,
+      "api_or_cli_used": false,
+      "first_candidate": "/Users/genjo/.codex/generated_images/01a1c0ae-cb65-7681-a106-d2791625d2ab/exec-a44ca17f-a566-48f5-a581-73fcbad45b6d.png",
+      "accepted_candidate": "/Users/genjo/.codex/generated_images/01a1c0ae-cb65-7681-a106-d2791625d2ab/exec-5d2627cb-23e8-40ae-ba47-96987e629840.png",
+      "correction_reason": "初稿のボール下端が注記帯にかかり、頭・肘の余白も不足したため、人物とボールを縮小・再配置。",
+      "visual_qa_evidence": {
+        "text_and_numbers": "完成画像を目視し、日付2026.11.09、試合結果、当日のEFF、ポジション別TOP3、B.PREMIERを固定原稿と照合。不要な氏名・個人成績・背番号なし。",
+        "source_qualifiers": "当日・ポジション別という集計範囲を画像上で確認。選手の活躍や実際の場面と断定する表現がなく、イメージ表記あり。",
+        "likeness_or_no_named_person": "描写人物は実在のキーファー・ラベナ。公式写真と黒髪・眉・目鼻・輪郭・短いひげを照合。実名文字なし。",
+        "layout": "修正版の頭・肘・両手・ボール全体が画面内。ボールと注記帯の間に余白あり。腕と指に明白な破綻なし。下肢は意図した膝付近のトリミング。文字と顔の重なりなし。",
+        "ai_label": "下部帯にイラスト（AI生成）とイメージを目視確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-09T14:24:50.206540+00:00",
+  "publication_approved": false
+}

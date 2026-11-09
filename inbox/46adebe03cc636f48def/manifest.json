@@ -1,0 +1,108 @@
+{
+  "id": "46adebe03cc636f48def",
+  "article_path": "article-results-one-next-20261109.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261109.html",
+  "source_commit": "",
+  "source_blob_sha": "a8c464134d887c9c51f599d8fac718091477fbd3",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "8b254656b898ae0aecba1a067fb03df2862b3022e61411a87ba0ba4d8471a188",
+  "last_observed_blob_sha": "a8c464134d887c9c51f599d8fac718091477fbd3",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/46adebe03cc636f48def/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/46adebe03cc636f48def/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-09T14:20:42.657417+00:00",
+  "creation_event_id": "f1c7d923f5a5cb5f7f27",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/46adebe03cc636f48def/thumbnail.png",
+  "image_sha256": "0d0fa5160f9cd2abcd1f7cd9d353f5d964c6e2c129bfca90229088864a38ebfa",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "a8c464134d887c9c51f599d8fac718091477fbd3",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.09",
+      "B.PREMIER",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "B.ONE・B.NEXTは試合なし",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/46adebe03cc636f48def/source.html",
+        "role": "本文根拠・固定HTML。日付、リーグ、試合結果、当日のポジション別EFF TOP3、B.ONE/B.NEXT試合なしを確認。記事URLは https://basuke-matome.jp/article-results-one-next-20261109.html 。外部の試合内容や成績は根拠に使用しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/46adebe03cc636f48def/source.txt",
+        "role": "本文根拠・固定文章。今季平均ではなく当日の公式EFF、登録ポジション別の集計。個人の起用位置を断定しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品手順。人物選択と注記は今回の本人指示を優先。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで確認した承認済みスタイル参照。旧日付、選手名、得点、スコアは転用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジャレット・カルバー",
+        "selection": "ランダム",
+        "method": "本文に名前のある10選手の重複を除きsecrets.choiceでランダム選出",
+        "candidates": [
+          "岡田 侑大",
+          "D.J・ニュービル",
+          "キーファー・ラベナ",
+          "ジャレット・カルバー",
+          "セルジオ・エル ダーウィッチ",
+          "アンジェロ・カロイアロ",
+          "スタンリー・ジョンソン",
+          "ダラル・ウィリス ジュニア",
+          "マークイーズ・ボールデン",
+          "チャールズ・ジャクソン"
+        ],
+        "reason": "複数の試合結果とポジション別ランキングを並列に扱う記事で、一人の主役に絞られていないため。",
+        "official_page": "https://www.89ers.jp/news/detail/id=21295",
+        "official_profile": "https://www.bleague.jp/roster_detail/?PlayerID=51000531",
+        "official_image": "https://89ers.bl.kuroco-img.app/v=1782627278/files/user/89_2026-27_8Jarrett%20Culver.jpg",
+        "reference_viewed": true,
+        "observed_features": "高く密な黒い巻き毛と短い側頭部、面長の輪郭、細くなる顎、アーチ状の眉、アーモンド形の目、薄い口ひげと顎先のひげを公式写真と照合。",
+        "depiction": "低い姿勢のドリブルをする1人のインクイラスト。実際の試合の再現ではない。名前・背番号・個人成績・個人の出場や活躍の文言なし。公式写真の貼り付け、ロゴ、スポンサー文字なし。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: illustration-story.\nCreate ONE finished Japanese basketball news thumbnail, landscape 16:9, target 1920×1080 pixels, opaque PNG.\nIt is a brand-new illustration, not an edit or photo collage.\n\nArt direction: follow the approved black-and-lime illustrated thumbnail viewed in this conversation: near-black #151A18, electric lime #CCF43B, warm ivory typography, energetic hand-drawn ink and dry-brush textures, bold Japanese headline, very few elements. Do not copy the old headline, date, scores, or shooting pose.\n\nSubject: exactly ONE real basketball player, Jarrett Culver / ジャレット・カルバー, randomly selected from the article's named players. Draw him recognizably from the official Sendai portrait viewed above, as an INK ILLUSTRATION, never as a photograph. Observable features: high dense black textured coils with a slightly irregular spiky silhouette, shorter tapered sides; long oval face, defined cheekbones, tapering jaw; large dark almond-shaped eyes and clear arched eyebrows, moderately broad nose, full lips; thin moustache and sparse short jaw beard with a more distinct small goatee on his chin. Tall lean athletic physique, long arms. Depict a dynamic low crossover dribble, three-quarter front view, torso leaning diagonally, one knee bent, face clearly visible and looking toward open space. Draw anatomically coherent hands and fingers. One orange basketball under his dribbling hand as a prop. Plain unbranded ivory/dark basketball uniform: no name, no number, no team or league logos, no sponsors or decorative glyphs. This is a hypothetical basketball illustration and must not resemble evidence of any actual 11/09 play.\n\nComposition: player on the LEFT 42% of the image from head to knees, face prominent, ball completely inside frame. Sweeping lime brush stroke behind the player. On the RIGHT 54% put exceptionally readable, bold, clean Japanese typography; avoid overlap between hands/ball and text. Large headline occupies the upper/middle right, secondary EFF headline directly below it. Keep generous safe margins of at least 4% on all sides. Empty dark background around the text, limited texture there. Small footer on a clear dark strip.\n\nRender ONLY the following exact text (line breaks may follow the hierarchy described). No additional names, stats, scores, captions, English slogans, or signatures:\nTop small brand: \"バスケまとめ\"\nDate and league, small: \"2026.11.09\" and \"B.PREMIER\"\nMain giant ivory headline: \"試合結果\"\nSecondary large lime headline: \"当日のEFF\"\nSupporting bold ivory line: \"ポジション別TOP3\"\nSmall factual qualifier: \"B.ONE・B.NEXTは試合なし\"\nBottom label, legible ivory: \"イラスト（AI生成）\" and \"イメージ\"\n\nContent constraints: This article is a multi-player overview of the day's results and official EFF rankings by position in B.PREMIER. TOP3 is BY POSITION, NOT an overall top three and NOT season-average rankings. The randomly selected player must not be presented as today's top player. No personal name, points, attendance claim, performance claim, or ranking attached to him. Do not reuse “38”, “仙台80-71神戸”, or any old reference text.\nFinish: a strong sports editorial illustration with faithful facial characteristics, no photorealism, no photo texture, no pasted official photograph. All lettering exact and legible, unclipped face/ball/hands, readable at thumbnail size.",
+      "revision": "Edit the first attached image, the generated basketball thumbnail. The second attached image is the official Jarrett Culver portrait used only as a facial/hair reference, never to paste as a photograph. This is the single permitted correction.\nPreserve ALL Japanese text, date, typography, colors, right-hand layout, footer labels, black-and-lime ink/brush style, basketball pose, and the single real player identity Jarrett Culver.\nChange ONLY the player illustration and his ball on the LEFT:\n1. Scale the entire player-and-ball illustration down to about 87 percent of its current size and reposition it slightly to the right and downward. Ensure the complete hair silhouette has at least 40 pixels clear margin above, the basketball and all fingertips have at least 35 pixels clear margin from the left edge, and both hands are fully visible with at least 30 pixels below them. Cropping the thighs at the bottom is acceptable; clipping hair, hands, elbows or ball is NOT. Keep all player art left of the right text block, no text overlap.\n2. Make the hair match the official portrait more faithfully: compact, dense, tightly coiled natural black hair with tapered sides and irregular small curl tips, not long separated dreadlocks. Preserve the portrait's long oval face, tapering jaw, arched eyebrows, dark almond eyes, full lips, thin moustache and small chin goatee. Keep a focused playing expression and the same ink-illustration rendering.\nNo other visual or textual changes. In particular preserve exactly: バスケまとめ / 2026.11.09 / B.PREMIER / 試合結果 / 当日のEFF / ポジション別TOP3 / B.ONE・B.NEXTは試合なし / イラスト（AI生成） / イメージ.\nDo not add a player name, numbers, logos, sponsors, photorealism or new people. Opaque PNG, same approximately 16:9 dimensions and at least 1000 pixels wide."
+    },
+    "generator": {
+      "name": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "correction_count": 1,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1c0b2-9120-7dd1-87cc-a0db12913405/exec-be99cb35-fb84-44e0-a995-1b3eef6c4e7f.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "image_sha256": "0d0fa5160f9cd2abcd1f7cd9d353f5d964c6e2c129bfca90229088864a38ebfa",
+      "qa_observations": {
+        "text_and_numbers": "修正版を実際に表示して、9要素の文字・2026.11.09・TOP3を一字ずつ照合。個人名・得点・スコアの混入なし。",
+        "source_qualifiers": "当日のEFF、ポジション別TOP3、対象B.PREMIER、B.ONE・B.NEXT試合なしを固定原稿と照合。予想や今季平均と誤認させる記述なし。",
+        "likeness_or_no_named_person": "公式写真の髪型・輪郭・眉目・口ひげ・顎ひげに照らし、実在のカルバー選手としての特徴を確認。ランダム選出のため名前と個人成績は載せていない。",
+        "layout": "初稿は頭髪とボールの端が窮屈だったため1回修正。修正版で髪・ボール・両手と指の収まり、5本指、文字との非重複、見出しと注記の可読性を目視確認。下腿は描写範囲外。",
+        "ai_label": "イラスト（AI生成）とイメージが画像下部に読める大きさで存在することを目視確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-09T14:29:09.143178+00:00",
+  "publication_approved": false
+}
