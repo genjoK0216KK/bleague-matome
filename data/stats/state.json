@@ -91,7 +91,7 @@
    "players": 85,
    "holds": [],
    "excluded": [],
-   "content_as_of": "2026-11-09 19:08 JST",
+   "content_as_of": "2026-11-09 20:30 JST",
    "source": "data/match_articles/article-games-20261108.json"
   },
   "2026-11-09": {
@@ -112,7 +112,7 @@
      "key": "506561",
      "home": "群馬",
      "away": "名古屋D",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -120,7 +120,7 @@
      "key": "506562",
      "home": "川崎",
      "away": "A千葉",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -128,7 +128,7 @@
      "key": "506563",
      "home": "京都",
      "away": "北海道",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -136,7 +136,7 @@
      "key": "506564",
      "home": "島根",
      "away": "富山",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -144,13 +144,13 @@
      "key": "506565",
      "home": "長崎",
      "away": "仙台",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     }
    ],
    "excluded": [],
-   "content_as_of": "2026-11-09 19:08 JST",
+   "content_as_of": "2026-11-09 20:30 JST",
    "source": "data/match_articles/article-games-20261109.json"
   }
  },
