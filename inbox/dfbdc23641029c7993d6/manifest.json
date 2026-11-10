@@ -1,0 +1,93 @@
+{
+  "id": "dfbdc23641029c7993d6",
+  "article_path": "article-analysis-osaka-20261110.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-osaka-20261110.html",
+  "source_commit": "",
+  "source_blob_sha": "8a8c40f8eddfe4c43cb327763acb70768419c285",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "365ab233545a8df7d4b4e3f64d4e87c9a217e6be2ed4d5fb333e0314a57e8955",
+  "last_observed_blob_sha": "8a8c40f8eddfe4c43cb327763acb70768419c285",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/dfbdc23641029c7993d6/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/dfbdc23641029c7993d6/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-10T03:20:45.862033+00:00",
+  "creation_event_id": "317d91b16c9c460ffc00",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/dfbdc23641029c7993d6/thumbnail.png",
+  "image_sha256": "620d912ab02dd66687977144fc9c313febb114d4a06dd844eaaa74ad993681c2",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "8a8c40f8eddfe4c43cb327763acb70768419c285",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.10",
+      "大阪エヴェッサ",
+      "直近5試合",
+      "0勝5敗",
+      "10/23〜11/7",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_body_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/dfbdc23641029c7993d6/source.html",
+        "article_url": "https://basuke-matome.jp/article-analysis-osaka-20261110.html",
+        "verified_blob_sha": "8a8c40f8eddfe4c43cb327763acb70768419c285"
+      },
+      {
+        "role": "article_body_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/dfbdc23641029c7993d6/source.txt",
+        "support": "大阪の直近5試合は0勝5敗。対象期間10月23日〜11月7日。記事日付2026年11月10日。"
+      },
+      {
+        "role": "appearance_only_not_article_facts",
+        "url": "https://www.evessa.com/news/detail/id=24800",
+        "image_url": "https://evessa.bl.kuroco-img.app/v=1790143400/files/user/news/2026-27/senzai_dodd.png"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "目視確認済み。黒とライム、太い日本語、インクとブラシの絵柄のみ参照。旧記事の選手・数値は不使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ダモンテ・ドッド",
+        "selection": "ランダム",
+        "reason": "記事の主役はチーム。固定本文に登場する8選手を候補にランダム選択。",
+        "selection_record": {
+          "method": "random.SystemRandom().choice; team-analysis article; first-tier pool of all eight players named in fixed manuscript",
+          "candidates": [
+            "木下誠",
+            "ソン ギョチャン",
+            "ジェイムズ・パルマージュニア",
+            "セバスチャン・サイズ",
+            "ダモンテ・ドッド",
+            "ワース・スミス",
+            "チュクゥディエベレ・マドゥアバム",
+            "竹内譲次"
+          ],
+          "selected": "ダモンテ・ドッド"
+        },
+        "official_source": "大阪エヴェッサ公式の契約締結発表内プロフィール写真",
+        "url": "https://www.evessa.com/news/detail/id=24800",
+        "image_url": "https://evessa.bl.kuroco-img.app/v=1790143400/files/user/news/2026-27/senzai_dodd.png",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/dfbdc23641029c7993d6/reference/damonte-dodd-official.png",
+        "visually_checked_features": "高めの額、短く整えた側頭部と横に広がる自然な黒髪、幅のある楕円の輪郭、濃いフルビアードと口ひげ、幅のある鼻、厚めの唇、目鼻、体格を公式写真と照合。初稿の過大な髪と頭頂部の見切れを1回修正して再検品。",
+        "context_qualifier": "固定本文は対象5試合の不出場と10月30日の契約解除を記載。画像は無地ユニフォームによる一般的なプレーのイメージ。対象試合の再現や出場・活躍の主張はしない。選手名・背番号・個人成績は画像に入れていない。公式写真の貼付、チーム・リーグ・スポンサーのロゴはなし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 1792x1024 or preferably 1920x1080 pixels (width over 1000). The source article is a team analysis about Osaka Evessa's last five games. All visible sporting text is TEAM-level, never the illustrated player's own record.\n\nArt direction: approved バスケまとめ editorial style: deep charcoal #151A18 background, vivid lime #CCF43B dry-brush strokes, warm off-white typography, black/ivory hand-drawn ink and brush illustration with visible hatching. Minimal elements, powerful legible bold Japanese headlines, no photorealism. Refer to the black/lime style image seen in context for its aesthetic ONLY, do not reproduce its player, 38 score, date, or content.\n\nMain visual subject: the real basketball player DAMONTE DODD (ダモンテ・ドッド), selected randomly from named players in the fixed article, drawn as an unmistakable hand-rendered illustration. Match the officially viewed Osaka Evessa portrait's appearance: broad athletic muscular build, medium-dark brown skin translated to warm gray ink tones, broad oval face, high forehead, dense natural black afro rising and spreading to both sides with shorter tapered temples, thick complete black beard outlining cheeks and chin, connected mustache, broad nose with round tip, full lips, dark almond eyes. Distinctive face must be visible, three-quarter view with a focused neutral athletic expression, not an invented generic athlete. Head not looking away. No thin face, no short buzz cut, no pale face.\nPose: dynamic pivot with bent knees and torso twisting toward the viewer; both hands securely gripping an orange basketball at upper waist/chest level, protecting it while preparing a move. Show head through upper thighs, strong diagonal movement, face and both hands fully inside frame. Position the player in the right 43% of frame. Anatomically credible arms, two hands, five natural fingers each including sensible hidden fingers; ball entirely inside canvas. No opponent needed. Plain unbranded dark basketball jersey and shorts with narrow ivory piping, NO jersey number, NO name, NO lettering, NO logos, NO sponsor graphics. An original generic basketball action illustration, NOT a recreation of an actual game, NOT evidence of his playing in these five games. The article says he did NOT play in the five games; do not depict a real match, named opponent, scoreboard, or victory celebration.\n\nTypography and exact visible text: Place the following wording only, with generous safe margins at least 60 pixels on every side. All exact Japanese text must be clean and readable.\nSmall top left: \"バスケまとめ\"\nSmall near it: \"2026.11.10\"\nLarge left upper headline: \"大阪エヴェッサ\"\nMedium scope line immediately above record: \"直近5試合\"\nLargest left-center display: \"0勝5敗\" (lime 0 and 5, off-white 勝 and 敗; balanced as one clear record)\nSmall clear period below: \"10/23〜11/7\"\nAt bottom left, readable in off-white, not touching border: \"イラスト（AI生成）\"\nAlongside this label: \"イメージ\"\n\nKeep all these text elements away from the face, hands, and ball. No player's name anywhere on the image. No player individual statistics, claim of participation or achievement, no unrelated claims, no copied official photograph. No team or league logo, no watermark, no decorative text. Athletic image is a generic illustrative image only. Overall polished editorial composition with expressive lime diagonal/curved brushwork behind player and ample quiet black around the large headline.\n\n\nONE ALLOWED CORRECTION\nEdit the first image (the generated black/lime Japanese basketball thumbnail) once to correct ONLY the illustrated real player Damonte Dodd's likeness and head framing. The second image is his official Osaka Evessa profile portrait, used for facial appearance reference only. DO NOT paste or reproduce that photograph; DO NOT transfer its logos, jersey number, sponsors, uniform lettering, or photo style.\nKeep the entire thumbnail's text verbatim, typography, 0勝5敗, 直近5試合, 10/23〜11/7, date, bottom AI and イメージ labels, colors, background, ball, hands, torso pivot pose, jersey and shorts exactly as in image 1.\nFix the head: the first illustration's afro is much too large and cut off by the top edge. Reduce its hair silhouette volume by about 40 percent to match the tighter natural afro in official portrait 2, keep shorter tapered temples and high visible forehead, leave AT LEAST 35 pixels of visible black background above the complete hair. Retain broad oval face, thick but neatly shaped full beard and connected mustache. Match portrait 2's softer broad cheeks, eyes, broad nose and full lips, removing exaggerated forehead furrows and excessive aging. Keep a focused athletic neutral expression. Preserve the same strong ink/brush illustration rendering with hatching and hand-drawn contours, never photorealistic.\nBoth hands, basketball and face remain fully inside frame; no new text, logos or additional people. Landscape dimensions and all other components unchanged.\n",
+    "generator": "OpenAI built-in image_gen.imagegen; 1 initial generation and 1 correction; no API/CLI fallback; final PNG 1672x941",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-10T03:27:01.886904+00:00",
+  "publication_approved": false
+}
