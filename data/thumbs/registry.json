@@ -56,6 +56,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "名古屋ダイヤモンドドルフィンズ 直近5試合は全勝 失点の少なさがリーグ1位"
   },
+  "article-analysis-osaka-20261110.html": {
+   "article_path": "article-analysis-osaka-20261110.html",
+   "editorial_fingerprint": "365ab233545a8df7d4b4e3f64d4e87c9a217e6be2ed4d5fb333e0314a57e8955",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-analysis-osaka-20261110-620d912ab02d.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-osaka-20261110-620d912ab02d-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "dfbdc23641029c7993d6",
+   "image_sha256": "620d912ab02dd66687977144fc9c313febb114d4a06dd844eaaa74ad993681c2",
+   "imported_at": "2026-11-10T03:27:35.499771+00:00",
+   "prepared_at": "2026-11-10T03:27:01.886904+00:00",
+   "source_blob_sha": "8a8c40f8eddfe4c43cb327763acb70768419c285",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "365ab233545a8df7d4b4e3f64d4e87c9a217e6be2ed4d5fb333e0314a57e8955",
+   "style": "ink-lime-portrait-v5",
+   "title": "大阪エヴェッサの直近5試合は0勝5敗 攻撃の効率は26チーム最下位"
+  },
   "article-daily-20261025.html": {
    "article_path": "article-daily-20261025.html",
    "editorial_fingerprint": "d9b807a86f51d965cd9418f1b87d825b486b3bf971b49abc769e304f816697ab",
@@ -1599,13 +1627,6 @@
  },
  "log": [
   {
-   "article": "article-results-one-next-20261106.html",
-   "at": "2026-11-06T11:12:22.865391+00:00",
-   "event": "imported",
-   "id": "1913b0272098f45815bd",
-   "image": "59eed658b704"
-  },
-  {
    "article": "article-games-20261106.html",
    "at": "2026-11-06T13:29:04.817813+00:00",
    "by": "aaf2e90765c55026bfd5",
@@ -2157,6 +2178,13 @@
    "event": "imported",
    "id": "fe1f2384a1e2d550107e",
    "image": "686867d6184c"
+  },
+  {
+   "article": "article-analysis-osaka-20261110.html",
+   "at": "2026-11-10T03:27:35.499793+00:00",
+   "event": "imported",
+   "id": "dfbdc23641029c7993d6",
+   "image": "620d912ab02d"
   }
  ],
  "seen": {
@@ -2278,6 +2306,7 @@
   "db1b08157b4974a77014": "superseded:a384f66c5c633ed9bdb1",
   "de438e71b32369b2ee65": "superseded:3370472f9c78336a4974",
   "de6284c9fc31a323c810": "superseded:4ec5ffedaee7935f9089",
+  "dfbdc23641029c7993d6": "imported",
   "e270709fb1aa70f03eaf": "superseded:5b9d534e1962778a709e",
   "e51cb8d8899804e71a3c": "imported",
   "e64b9ac50fa81c41ae65": "imported",
