@@ -506,29 +506,29 @@
   },
   "article-daily-20261110.html": {
    "article_path": "article-daily-20261110.html",
-   "editorial_fingerprint": "24ad9cc76dae25b4936a256f39a39162e933339340ac6c23a2d1504be57a321f",
+   "editorial_fingerprint": "398b935e2fb11b5dd7cc921b18a2bd29b964b4a169bf9416801541359dacb5eb",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261110-66e266d2fd2a.jpg",
+     "path": "thumbs/auto/article-daily-20261110-686867d6184c.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261110-66e266d2fd2a-og.jpg",
+     "path": "thumbs/auto/article-daily-20261110-686867d6184c-og.jpg",
      "width": 1200
     }
    },
-   "id": "5a66e834a435acc4ef91",
-   "image_sha256": "66e266d2fd2a8c454512b4e0074950a258e3153e2d8b86ec0459ceeeebcc5e20",
-   "imported_at": "2026-11-09T23:18:10.033358+00:00",
-   "prepared_at": "2026-11-09T23:17:35.823368+00:00",
-   "source_blob_sha": "e96682b60190ca40534575672256e573ccca50af",
+   "id": "fe1f2384a1e2d550107e",
+   "image_sha256": "686867d6184c00921f086786bd3e1da68333b66751acbe9b15b46abb0b7896ea",
+   "imported_at": "2026-11-10T03:20:38.243095+00:00",
+   "prepared_at": "2026-11-10T03:16:25.718563+00:00",
+   "source_blob_sha": "441a201768509533779ebf7257ba7d72fc7ddad2",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "24ad9cc76dae25b4936a256f39a39162e933339340ac6c23a2d1504be57a321f",
+   "stable_fingerprint": "398b935e2fb11b5dd7cc921b18a2bd29b964b4a169bf9416801541359dacb5eb",
    "style": "ink-lime-portrait-v5",
    "title": "千葉ジェッツ対大阪の試合前予測、ウィリアムズ離脱でもコステロが復帰"
   },
@@ -1599,20 +1599,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261106.html",
-   "at": "2026-11-06T11:12:22.748363+00:00",
-   "event": "imported",
-   "id": "731d042f2d67fce3b63f",
-   "image": "e2df036ad601"
-  },
-  {
-   "article": "article-results-one-next-20261106.html",
-   "at": "2026-11-06T11:12:22.748606+00:00",
-   "by": "1913b0272098f45815bd",
-   "event": "superseded",
-   "id": "cfa0f4e414a3d04bd5f5"
-  },
-  {
    "article": "article-results-one-next-20261106.html",
    "at": "2026-11-06T11:12:22.865391+00:00",
    "event": "imported",
@@ -2157,6 +2143,20 @@
    "event": "imported",
    "id": "5a66e834a435acc4ef91",
    "image": "66e266d2fd2a"
+  },
+  {
+   "article": "article-daily-20261110.html",
+   "at": "2026-11-10T03:20:38.067152+00:00",
+   "by": "fe1f2384a1e2d550107e",
+   "event": "superseded",
+   "id": "5a66e834a435acc4ef91"
+  },
+  {
+   "article": "article-daily-20261110.html",
+   "at": "2026-11-10T03:20:38.243115+00:00",
+   "event": "imported",
+   "id": "fe1f2384a1e2d550107e",
+   "image": "686867d6184c"
   }
  ],
  "seen": {
@@ -2201,7 +2201,7 @@
   "5371bea30124ef22fa57": "imported",
   "570a778c73159b26d00d": "imported",
   "574068c2a0f59824e769": "superseded:2e911924d887d6fdf34a",
-  "5a66e834a435acc4ef91": "imported",
+  "5a66e834a435acc4ef91": "superseded:fe1f2384a1e2d550107e",
   "5a86fec3857da89d996f": "superseded:5b9d534e1962778a709e",
   "5b9d534e1962778a709e": "imported",
   "5e231e28b370cb26f1f6": "imported",
@@ -2291,6 +2291,7 @@
   "f662c904491c9e820ed0": "imported",
   "faacf40f2eedbd5f216f": "imported",
   "fcf33c7c4f183753d4ec": "imported",
+  "fe1f2384a1e2d550107e": "imported",
   "ff3cec0b158ec40a732c": "superseded:9738ca38103aa648b879"
  },
  "version": 1
