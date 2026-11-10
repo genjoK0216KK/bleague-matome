@@ -1,0 +1,107 @@
+{
+  "id": "fe1f2384a1e2d550107e",
+  "article_path": "article-daily-20261110.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261110.html",
+  "source_commit": "",
+  "source_blob_sha": "441a201768509533779ebf7257ba7d72fc7ddad2",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "398b935e2fb11b5dd7cc921b18a2bd29b964b4a169bf9416801541359dacb5eb",
+  "last_observed_blob_sha": "441a201768509533779ebf7257ba7d72fc7ddad2",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe1f2384a1e2d550107e/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe1f2384a1e2d550107e/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-10T03:13:20.474422+00:00",
+  "creation_event_id": "f8a2bdc2027a5a83013e",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/fe1f2384a1e2d550107e/thumbnail.png",
+  "image_sha256": "686867d6184c00921f086786bd3e1da68333b66751acbe9b15b46abb0b7896ea",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "441a201768509533779ebf7257ba7d72fc7ddad2",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.10 試合前予測",
+      "千葉J vs 大阪",
+      "インサイドの",
+      "攻防",
+      "コステロ エントリー可能に",
+      "起用・出場時間は未定",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe1f2384a1e2d550107e/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261110.html",
+        "verified_blob_sha": "441a201768509533779ebf7257ba7d72fc7ddad2",
+        "evidence": [
+          "11月10日19時05分から、千葉ジェッツと大阪エヴェッサが対戦します。",
+          "マット・コステロ選手は、同じ日にインジュアリーリストから抹消されました。11月10日の大阪戦から、試合にエントリーできます。",
+          "【予測】千葉Jが優位、焦点はインサイドの攻防",
+          "コステロ選手が戻れば、インサイドの人数は補えます。出場時間は未定で、実際の起用は試合まで分かりません。"
+        ]
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe1f2384a1e2d550107e/source.txt",
+        "note": "HTMLと照合。記事の主張・日付・留保は固定HTML/TXTのみを根拠にした。公開記事の再取得で置換していない。"
+      },
+      {
+        "role": "style_reference_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "viewed": true,
+        "note": "黒×ライム、太い日本語見出し、インク・ブラシの承認済みスタイル。参照画像の選手名・成績は持ち越していない。"
+      },
+      {
+        "role": "procedure_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "note": "本人の今回指定を優先。ready・外部送信・公開は作業対象外。"
+      },
+      {
+        "role": "likeness_only",
+        "url": "https://chibajets.jp/team/players/detail/id=26996?PlayerID=51000642",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026111006/files/user/roster/704/2026-27/51000642_01.jpg",
+        "viewed": true,
+        "note": "千葉ジェッツ公式プロフィール写真を容姿確認のみに使用。写真自体はサムネへ貼り付けていない。"
+      },
+      {
+        "role": "likeness_only",
+        "url": "https://chibajets.jp/news/detail/id=26959",
+        "image_url": "https://chibajets.bl.kuroco-img.app/v=1783825999/files/user/team/2025%E2%80%9026/Matt%20Costello.jpg",
+        "viewed": true,
+        "note": "公式契約発表内の顔写真で目鼻・ひげ・輪郭を補助確認。記事本文の根拠には使用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "マット・コステロ",
+        "romanized_name": "Matt Costello",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿の表題に登場し、IL抹消・エントリー可能化とインサイドの人数、実際の起用未定が主要な論点のため。ランダム選出ではない。",
+        "official_profile": "https://chibajets.jp/team/players/detail/id=26996?PlayerID=51000642",
+        "official_portrait": "https://bleague.bl.kuroco-img.app/v=2026111006/files/user/roster/704/2026-27/51000642_01.jpg",
+        "reference_viewed": true,
+        "features_observed": [
+          "短い茶色の髪、側頭部が短く上部に少しうねり",
+          "青灰色の目、まっすぐな鼻、角張った輪郭",
+          "口ひげとつながった茶色の整ったあごひげ",
+          "広い肩と大柄な体格"
+        ],
+        "depiction": "両手でボールを確保して振り向くプレー姿のイラスト。実際の試合場面や出場実績の再現ではない。無地の赤いユニフォーム、ロゴ・スポンサー文字・背番号なし。"
+      }
+    ],
+    "prompt": "Create ONE finished Japanese basketball editorial thumbnail, landscape approximately 16:9, ideally 1792x1024 or 1920x1080, at least 1000 pixels wide. This is a new original drawn illustration for バスケまとめ, a pregame preview dated 2026-11-10. Return only one composed image.\n\nART DIRECTION: approved editorial style: almost-black charcoal #151A18 background, bold vivid lime #CCF43B sweeping dry-brush ink strokes and sparse ink spatter, warm white enormous heavy Japanese sans-serif headlines. Hand-painted black-and-white ink/crosshatching athlete with controlled red accents on a plain jersey and orange basketball. A strong graphic poster with few elements, readable thumbnail hierarchy, no photorealism, no photographic texture or collage. Typography is clean, heavyweight and carefully typeset; illustration uses expressive brush linework. Left approximately 57 percent is text, right approximately 43 percent is the player. Keep text away from face/hands/ball. 5% safe margins.\n\nSUBJECT: exactly one real athlete, Matt Costello / マット・コステロ, the article's central returning player. Appearance has been visually checked against the Chiba Jets official roster portrait at https://chibajets.jp/team/players/detail/id=26996?PlayerID=51000642 and its portrait https://bleague.bl.kuroco-img.app/v=2026111006/files/user/roster/704/2026-27/51000642_01.jpg . Draw his recognizable features: very tall, strong broad-shouldered adult man, light skin, short medium-brown hair close-cropped at sides and slightly wavy on top with a slightly high squared hairline, blue-gray eyes, straight prominent nose, broad angular face, full neatly trimmed brown beard and connected mustache. Keep the eye/nose/beard shapes legible in the ink illustration and do not darken away the face. No headband. Plain red basketball sleeveless jersey with white trim, no number or lettering, no logos or sponsor marks. Strong but believable basketball build. Do not depict any other players, anonymous silhouettes, or invented people.\n\nACTION / COMPOSITION: dynamic three-quarter view of Costello securing an orange basketball firmly with both hands around upper chest/shoulder level after a rebound, torso twisting slightly while looking upcourt toward the left. Bent knees/athletic pivot stance implied; crop naturally at thighs near the lower edge. Face, hair, forearms, elbows and entire basketball fully within canvas. Both hands anatomically convincing, fingers naturally wrapping around opposite sides of the ball, no duplicated limbs or floating ball. His expression is focused. Use diagonally rising lime brush strokes behind his figure for energy. This is an imaginative general basketball play illustration, never a reconstruction of this game's actual event and never proof that he played.\n\nEXACT TEXT, in Japanese. Spell all text correctly; do not add any text other than the following:\nSmall top-left brand: 「バスケまとめ」\nCompact top-left date/kicker: 「2026.11.10　試合前予測」\nLarge white matchup: 「千葉J vs 大阪」\nLargest lime headline on two balanced lines: 「インサイドの」 / 「攻防」\nBelow headline, medium white: 「コステロ エントリー可能に」\nDirectly below that, clearly readable smaller white qualifier: 「起用・出場時間は未定」\nBottom-left clear disclosure: 「イラスト（AI生成）」 and 「イメージ」\n\nThe text refers solely to the supplied frozen article: Chiba Jets versus Osaka Evessa pregame preview; Costello can be entered from November 10, but his actual use and minutes are not known. Do not imply a played game, definite appearance, final score, victory, comeback performance, or decisive shot. No scores, statistics, injury claims, or player achievements. Do not use any names or numbers from earlier style-reference examples. Do not include official team/league logos, sponsor text, official photos, watermarks or ornamental fake writing. The result must unmistakably be an illustration. Ensure the two disclosure labels remain visible.",
+    "generator": "image_gen (built-in image_gen.imagegen; 1 generation, 0 revisions; no API/CLI fallback)",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-10T03:16:25.718563+00:00",
+  "publication_approved": false
+}
