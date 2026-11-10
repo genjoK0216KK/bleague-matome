@@ -483,16 +483,16 @@
   "article-games-20261110.html": {
    "article_path": "article-games-20261110.html",
    "article_url": "https://basuke-matome.jp/article-games-20261110.html",
-   "editorial_fingerprint": "c7f1a1cb2b82fc0a902870e4964f7cafcbe51ce0764a2489cfaf2afd1eccff0c",
-   "event_id": "668b28497bf602d0b949",
-   "recorded_at": "2026-11-10T11:17:52.459249+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "f9b4343e05b1884a92085798727f440146ed0b95",
-   "stable_fingerprint": "c7f1a1cb2b82fc0a902870e4964f7cafcbe51ce0764a2489cfaf2afd1eccff0c",
+   "editorial_fingerprint": "452fce95658e7ec629b1f8b57fb51478d61342d87c6613a11f72bc0765e43220",
+   "event_id": "2e4114e4385022f4f2df",
+   "recorded_at": "2026-11-10T13:46:52.023960+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "1d1b06f84d94aa20543a5d816c77267686447a28",
+   "stable_fingerprint": "452fce95658e7ec629b1f8b57fb51478d61342d87c6613a11f72bc0765e43220",
    "status": "requested",
    "target_date": "20261110",
-   "title": "11/10 試合結果（公式記録の確定待ち）"
+   "title": "11/10 試合結果・当日のEFF"
   },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
@@ -665,16 +665,16 @@
   "article-results-one-next-20261110.html": {
    "article_path": "article-results-one-next-20261110.html",
    "article_url": "https://basuke-matome.jp/article-results-one-next-20261110.html",
-   "editorial_fingerprint": "c7f1a1cb2b82fc0a902870e4964f7cafcbe51ce0764a2489cfaf2afd1eccff0c",
-   "event_id": "b0f1ba3961724fb44503",
-   "recorded_at": "2026-11-10T11:17:52.459249+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "cfff12cb94239ae0e6ed53a192411b06dcca7831",
-   "stable_fingerprint": "c7f1a1cb2b82fc0a902870e4964f7cafcbe51ce0764a2489cfaf2afd1eccff0c",
+   "editorial_fingerprint": "452fce95658e7ec629b1f8b57fb51478d61342d87c6613a11f72bc0765e43220",
+   "event_id": "e39682a636eb61ecf85c",
+   "recorded_at": "2026-11-10T13:46:52.023960+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "d21c19359ac8500cc717a8aa5f9bed5f7fcc40bc",
+   "stable_fingerprint": "452fce95658e7ec629b1f8b57fb51478d61342d87c6613a11f72bc0765e43220",
    "status": "requested",
    "target_date": "20261110",
-   "title": "11/10 試合結果（公式記録の確定待ち）"
+   "title": "11/10 試合結果・当日のEFF"
   },
   "article-stats-20261026.html": {
    "article_path": "article-stats-20261026.html",
@@ -773,6 +773,18 @@
    "status": "requested",
    "target_date": "20261109",
    "title": "11月9日の貢献度ランキング 1位は岡田 侑大（島根）の36"
+  },
+  "article-stats-20261110.html": {
+   "article_path": "article-stats-20261110.html",
+   "article_url": "https://basuke-matome.jp/article-stats-20261110.html",
+   "editorial_fingerprint": "dd456a4955d86cb15bb02e293ee3c2199dacb2fbf341f847a8696d843a8ca9e3",
+   "event_id": "8b100f269aac20ffb3a6",
+   "recorded_at": "2026-11-10T13:46:52.023960+00:00",
+   "source_blob_sha": "0f52cc0382e0b97bfe76c8559f69954f2d9a7099",
+   "stable_fingerprint": "dd456a4955d86cb15bb02e293ee3c2199dacb2fbf341f847a8696d843a8ca9e3",
+   "status": "requested",
+   "target_date": "20261110",
+   "title": "11月10日の貢献度ランキング 1位はラウリー・アルキンズ（東京SR）の44"
   }
  },
  "version": 1
