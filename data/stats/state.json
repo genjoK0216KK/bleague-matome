@@ -1,5 +1,12 @@
 {
- "pending": {},
+ "pending": {
+  "506569": "2026-11-11",
+  "506570": "2026-11-11",
+  "506571": "2026-11-11",
+  "506572": "2026-11-11",
+  "506573": "2026-11-11",
+  "506574": "2026-11-11"
+ },
  "published": [
   "2026-10-12",
   "2026-10-17",
@@ -19,16 +26,6 @@
   "2026-11-10"
  ],
  "days": {
-  "2026-11-03": {
-   "state": "no_games",
-   "games_total": 0,
-   "games_ready": 0,
-   "players": null,
-   "holds": [],
-   "excluded": [],
-   "content_as_of": "2026-11-04 19:54 JST",
-   "source": "data/match_articles/article-games-20261103.json"
-  },
   "2026-11-04": {
    "state": "no_games",
    "games_total": 0,
@@ -98,6 +95,65 @@
    "excluded": [],
    "content_as_of": "2026-11-10 22:46 JST",
    "source": "data/match_articles/article-games-20261110.json"
+  },
+  "2026-11-11": {
+   "state": "held",
+   "games_total": 6,
+   "games_ready": 0,
+   "players": null,
+   "holds": [
+    {
+     "key": "506569",
+     "home": "北海道",
+     "away": "三遠",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506570",
+     "home": "秋田",
+     "away": "茨城",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506571",
+     "home": "宇都宮",
+     "away": "京都",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506572",
+     "home": "A東京",
+     "away": "長崎",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506573",
+     "home": "川崎",
+     "away": "島根",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506574",
+     "home": "広島",
+     "away": "仙台",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    }
+   ],
+   "excluded": [],
+   "content_as_of": "2026-11-11 01:57 JST",
+   "source": "data/match_articles/article-games-20261111.json"
   }
  },
  "definition": {
