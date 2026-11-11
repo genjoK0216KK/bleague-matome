@@ -1,0 +1,96 @@
+{
+  "id": "78ca7844d444d221d45a",
+  "article_path": "article-stats-20261111.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261111.html",
+  "source_commit": "",
+  "source_blob_sha": "4c599d15720489f9df6782845a2334aeec9e7e95",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "29c5759ddce8fd7553614fb27ae41a824899037d51345d714aca37ec7ea259b0",
+  "last_observed_blob_sha": "4c599d15720489f9df6782845a2334aeec9e7e95",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/78ca7844d444d221d45a/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/78ca7844d444d221d45a/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-11T13:06:25.995640+00:00",
+  "creation_event_id": "784725a0966a564f6a52",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/78ca7844d444d221d45a/thumbnail.png",
+  "image_sha256": "5114704c7ee6a24fe966d2015f9780e59d14afcf89aa14da7d2f0c8b550e909f",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "4c599d15720489f9df6782845a2334aeec9e7e95",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.11｜全6試合",
+      "貢献度 1位",
+      "カルバー",
+      "EFF 42",
+      "仙台｜32得点・11REB・8AST",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/78ca7844d444d221d45a/source.html",
+        "article_url": "https://basuke-matome.jp/article-stats-20261111.html",
+        "use": "本文の根拠。タイトル・導入・TOP3・TOP10表：11月11日の6試合、貢献度1位は仙台のジャレット・カルバー、EFF 42、32得点・11リバウンド・8アシスト。Git blob形式のSHA-1をPython標準ライブラリで照合済み。gitコマンド未使用。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/78ca7844d444d221d45a/source.txt",
+        "use": "固定HTMLと本文の要点・数値を照合。本文の根拠はこのTXTと固定HTMLのみ。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://www.89ers.jp/news/detail/id=21295",
+        "image_url": "https://89ers.bl.kuroco-img.app/v=1782627278/files/user/89_2026-27_8Jarrett%20Culver.jpg",
+        "use": "仙台89ERS公式プロフィール写真をダウンロードしてview_imageで目視。容姿のみ参照。公式写真を完成画像へ貼り付けていない。成績の根拠として不使用。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認した承認済みの黒×ライム、太い日本語文字、インク・ブラシ表現。参考画像の旧日付・38得点・試合スコアは引き継いでいない。"
+      },
+      {
+        "type": "approved_style_alternative",
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "use": "手順書記載のautomationフォルダには白地案が存在しなかったため、案件の既存保存先にある同名v3をview_imageで確認。今回の配色は黒×ライムを採用。"
+      },
+      {
+        "type": "visual_qa_evidence",
+        "use": "生成されたPNGを画像生成ツールの表示とview_imageで目視確認。日付2026.11.11、全6試合、貢献度1位、カルバー、EFF42、仙台32得点11REB8ASTが固定原稿と一致。42は得点ではなくEFFとして明示。本文の国籍別ランキング未掲載と矛盾する分類なし。実試合の特定場面・決勝シュートという表示なし。黒×ライムのイラストで公式写真・ロゴ・スポンサー文字なし。顔、両手、ボール、主見出し、フッターに不適切な見切れなし。AI生成と成績をもとにしたイメージの表記を確認。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジャレット・カルバー",
+        "selection": "本文の主役",
+        "reason": "固定原稿のタイトル・導入で最大に扱われ、11月11日の貢献度1位として紹介されているため。ランダム選出ではない。",
+        "source": "仙台89ERS公式『ジャレット・カルバー選手 2026-27シーズン契約合意のお知らせ』内のプロフィール写真",
+        "url": "https://www.89ers.jp/news/detail/id=21295",
+        "image_url": "https://89ers.bl.kuroco-img.app/v=1782627278/files/user/89_2026-27_8Jarrett%20Culver.jpg",
+        "observed_features": "黒い密なカーリーヘア、短い側頭部、縦長で頬骨のある輪郭、先細りの顎、アーモンド形の目、薄い口ひげと短い顎ひげ、細身の長い手足。生成イラストでも髪型・輪郭・目鼻・ひげを目視照合。",
+        "scene": "ボールを両手で構えてパスへ移るプレー姿。成績をもとにしたイメージであり、実際の特定場面の再現とは扱わない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate exactly ONE finished Japanese basketball article thumbnail, a wide PNG with 16:9 aspect ratio, preferably 2048 x 1152, minimum width 1000 px.\n\nPrimary request: A bold editorial sports thumbnail for バスケまとめ, about Jarrett Culver being the November 11, 2026 daily contribution (EFF) leader among that day's six games. All article facts are fixed: Culver (仙台), EFF 42, 32 points, 11 rebounds, 8 assists. The player is the article's main subject, not a random pick.\n\nStyle: clear hand-drawn ink-and-dry-brush illustration, charcoal-black background #151A18, electric lime #CCF43B brush strokes, warm off-white typography. Strong confident Japanese sans-serif headings, sparse elements, rough screenprint and energetic ink hatch textures, not photorealistic. Use the approved black/lime sports-poster style described here, but create a new composition. No photographic textures or pasted photos.\n\nSubject: ONE real recognizable Jarrett Culver, based on his current official Sendai 89ERS headshot: medium-dark brown skin; lean tall athletic frame; fairly tall dense black tightly curled natural hair, irregular textured top and shorter tapered sides; long oval angular face with prominent cheekbones and tapering jaw; almond-shaped dark eyes, slightly arched eyebrows, broad straight nose with rounded tip, medium-full lips; fine short mustache and small close-trimmed goatee under the lower lip and on chin, only sparse beard along the cheeks. Keep these distinctive facial proportions, do not substitute a generic basketball face. Express focused concentration.\n\nPose/composition: Put the player on the LEFT 43 percent, shown from head to upper thighs, torso twisted toward the right as he steps into a two-handed basketball pass. Both hands naturally cradle ONE orange basketball at lower chest height, with anatomical fingers and plausible joints, ball entirely inside the frame. Face in a three-quarter view large enough to recognize, eyes looking right. Plain sleeveless off-white and charcoal basketball kit, NO logos, sponsors, wordmarks, jersey name or jersey number. Use a sweeping lime brush arc behind the athlete. This is a conceptual action illustration based on recorded stats, not a recreation of any verified game moment. No other people, no hoop, no crowded arena.\n\nTypography/framing: Reserve RIGHT 54 percent for clear uncluttered type. All copy must remain within safe margins of at least 65 px. Make the main '42' very large lime brush numerals and the exact 'EFF' label clearly adjacent so it CANNOT be read as points. Make カルバー large off-white, and 貢献度 1位 a strong white heading above it. The only points figure is 32 in the smaller stats line. Avoid overlap between hands, face, ball and lettering. Bottom full-width footer labels on solid dark ground, small but clearly readable.\n\nExact text, no additions:\nTop-left small brand: 「バスケまとめ」\nTop-right small date/scope: 「2026.11.11｜全6試合」\nHeading: 「貢献度 1位」\nPlayer heading: 「カルバー」\nMain metric: 「EFF 42」\nSupporting line: 「仙台｜32得点・11REB・8AST」\nBottom footer, two clear labels: 「イラスト（AI生成）」 and 「成績をもとにしたイメージ」\n\nDo NOT use the old reference's date, 38 points, 80-71 score, or any other obsolete numbers. No league logo, no team logo, no sponsor writing, no watermark, no real photograph. No claim of MVP, season ranking, nationality ranking, a winning shot, or an exact historic play. Generate one polished final image only.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "revision_count": 0,
+      "selected_output": "generated.png",
+      "api_or_cli_fallback": false,
+      "qa_method": "実画像の目視確認"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-11T19:42:20.418892+00:00",
+  "publication_approved": false
+}
