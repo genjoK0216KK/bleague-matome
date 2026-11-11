@@ -1,0 +1,121 @@
+{
+  "id": "e69360a387e1306be411",
+  "article_path": "article-results-one-next-20261112.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261112.html",
+  "source_commit": "",
+  "source_blob_sha": "ba0b009ea9ae493d8520712d2fd50bf4e8be6e5c",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "bb475fc53a7317ad0014ddb8b1159ce0ecec28ac7aefa16cfea5db32a55340e8",
+  "last_observed_blob_sha": "ba0b009ea9ae493d8520712d2fd50bf4e8be6e5c",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e69360a387e1306be411/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e69360a387e1306be411/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-11T19:46:50.305893+00:00",
+  "creation_event_id": "2760bd79b2624880abb0",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/e69360a387e1306be411/thumbnail.png",
+  "image_sha256": "3df14f296126c4a75724e591822a14d5be4140744b508d7b24608d016b1bc99a",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "ba0b009ea9ae493d8520712d2fd50bf4e8be6e5c",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.12｜B.PREMIER",
+      "登録選手の",
+      "ベスト5",
+      "本日の対戦クラブから",
+      "今季平均EFFで独自選出",
+      "出場確定ではありません",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e69360a387e1306be411/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261112.html",
+        "usage": "本文内容の根拠。保存前にblob SHAを再照合し指定値との一致を確認。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e69360a387e1306be411/source.txt",
+        "usage": "見出し・対象日・選出範囲・今季平均EFF・出場非確定の注記のみの根拠。外部資料の成績や試合情報は画像の本文根拠にしていない。"
+      },
+      {
+        "type": "official_appearance_only",
+        "url": "https://chibajets.jp/team/players/detail/id=26997?PlayerID=51000643",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026111012/files/user/roster/704/2026-27/51000643_01.jpg",
+        "usage": "公式プロフィール写真を取得してview_imageで実見。人物の容姿のみ参照。写真自体、ロゴ、スポンサー文字はサムネに使用していない。"
+      },
+      {
+        "type": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "view_imageで実見。黒×ライム、インクとブラシ、太い文字の絵柄を参照。人物・名前・成績は引き継がない。"
+      },
+      {
+        "type": "production_rules",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "usage": "画像生成・検品ルール。人物選出とreadyを実行しない点は今回の本人指示を優先。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ブランドン・ランドルフ",
+        "selection": "ランダム",
+        "selection_reason": "固定原稿は複数選手のベスト5・サブ5を同じ形式で比較し、特定の主役選手に絞れないため、本文に名前がある10人を母集団に選んだ。",
+        "random_method": "Python random.Random(int('e69360a387e1306be411', 16)).choice(article_named_players_in_source_order)",
+        "candidate_names": [
+          "D.J・ニュービル",
+          "ブライアン・アンゴラ",
+          "デイビッド・ヌワバ",
+          "ヴォーディミル・ゲルン",
+          "ザック・オーガスト",
+          "富樫 勇樹",
+          "ブランドン・ランドルフ",
+          "ラウリー・アルキンズ",
+          "ジョシュ・ホーキンソン",
+          "マイク・コッツァー"
+        ],
+        "official_profile_url": "https://chibajets.jp/team/players/detail/id=26997?PlayerID=51000643",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026111012/files/user/roster/704/2026-27/51000643_01.jpg",
+        "observed_features": "後方へ編み込んだコーンロウと分け目、細長い輪郭、眉と目鼻、厚めの唇、薄い口ひげと顎ひげ、長い腕、本人の左腕のタトゥーを確認。イラストではこれらの特徴を描写。",
+        "depiction": "実在選手1人のドライブ姿のイメージ。実際の特定試合・プレーの再現ではない。選手名・個人成績・出場や活躍の主張・背番号を画像に入れていない。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: illustration-story.\nCreate exactly ONE finished Japanese editorial basketball thumbnail, landscape approximately 16:9, ideally 1536x864 or larger than 1000 pixels wide. This is a brand-new artwork for バスケまとめ.\n\nApproved visual direction: the black-and-lime brush-and-ink sports thumbnail visible earlier in this conversation (B-culver-black-lime-v3.png) is STYLE REFERENCE ONLY. Use charcoal black #151A18 background, electric lime #CCF43B dry brush strokes, warm ivory Japanese lettering, expressive hand-drawn ink hatching. Do not copy its player, its text, scores or names. Produce an unmistakable illustration, never photorealism.\n\nREAL PERSON SUBJECT: Brandon Randolph / ブランドン・ランドルフ, the actual Chiba Jets player. The official portrait viewed immediately above from https://chibajets.jp/team/players/detail/id=26997?PlayerID=51000643 and its linked official portrait https://bleague.bl.kuroco-img.app/v=2026111012/files/user/roster/704/2026-27/51000643_01.jpg is APPEARANCE REFERENCE ONLY. Render his specific likeness with close scalp cornrows pulled backward, visible neat rows and central part, tapered sides, long oval face, medium-brown skin interpreted with ivory/gray ink highlights, defined cheekbones, straight eyebrows, almond eyes, broad straight nose, full lips, thin moustache and a distinct short pointed chin goatee. Tall lean athletic frame and long arms. Tattoos on his anatomical left arm represented by subtle ink texture. Do not invent a generic player and do not use the style reference's player. Do NOT paste or trace a photographic cutout.\n\nComposition: put this single player prominently on the LEFT 43 percent, in an energetic low driving dribble, knees bent, torso leaning forward, face shown clearly in three-quarter view looking toward the right, one hand naturally controlling an orange basketball near his outer hip and the other bent naturally for balance. Mid-thigh crop is intentional; head, elbows, wrists, all fingers, and the entire ball must remain safely inside the canvas. Leave the RIGHT 53 percent for a clean typographic column. Use a few broad diagonal lime brush accents behind the player to express motion. No opposing player, no crowd, no scoreboard, no arena, no additional decorative props. His jersey is plain ivory with dark ink folds, no marks, no number, no team/sponsor names. Balance warm orange basketball against black/lime/ivory. Facial features must stay readable rather than filled with black.\n\nExact visible text, all Japanese spelled precisely and no additional text:\nTop of right column, small brand line: 「バスケまとめ」\nNext line, medium: 「2026.11.12｜B.PREMIER」\nMain heading, very large bold Japanese with strong hierarchy: 「登録選手の」\nMain heading below, largest lettering in lime: 「ベスト5」\nSupporting text on right, clearly legible: 「本日の対戦クラブから」\nSupporting text below: 「今季平均EFFで独自選出」\nSupporting text in a clear ivory-outlined or lime rule separated block: 「出場確定ではありません」\nFooter along bottom with generous padding, high contrast and clearly legible: 「イラスト（AI生成）｜イメージ」\n\nMeaning and constraints: the article is a PRE-GAME selection of registered players based on season-average EFF, limited to today's participating clubs. It is NOT results from the November 12 games and NOT confirmation of appearances. The illustrated real player was RANDOMLY chosen among names in the fixed article only as an example image, not singled out as today's top performer; do not print his name, stats, team name, jersey number, or any claim about his appearance or performance. This scene is a conceptual illustration, not recreation of an actual game or specific scoring play. No game scores or invented numbers. No team logo, league logo, sponsor mark, watermark, or official photo. The league name is plain typography only. Maintain a generous 4 percent safe margin for all text; do not overlap face or hands with words. Anatomically coherent hands with five fingers, normal arms and joints, no doubled limbs. Render the exact AI label and image disclaimer. Make it polished, confident, sparse, and easy to read at thumbnail size.",
+      "revision": "Edit the attached generated basketball thumbnail with ONE targeted layout correction only. Preserve the exact Japanese text, spelling, date, every line, colors, ink illustration style, the same real Brandon Randolph likeness (cornrows, long face, thin moustache, pointed goatee), pose, plain unbranded jersey, and all factual qualifiers.\nThe dribbling hand is too close to/cropped by the LEFT image boundary and the head is too close to the TOP. Make the entire foreground player and basketball approximately 10 percent smaller and translate slightly to the right and down within the left illustration area, so the FULL hand including all five fingertips, the FULL basketball, elbows, and ALL hair have a clear dark margin of at least 45 pixels inside the canvas. Keep a natural mid-thigh crop at bottom if needed. Ensure both hands are anatomically correct with five fingers each, no extra limbs. Preserve the face with the same likeness.\nAlso slightly reduce the headline size if necessary so every text character ends at least 45 pixels inside the right edge. Keep this same wide landscape approximately 16:9 composition and at least 1600 pixels wide. Do not add border or distort the aspect ratio. Extend only charcoal/brush background into the freed margins; no new objects, no new text.\nExact text must remain: バスケまとめ / 2026.11.12｜B.PREMIER / 登録選手の / ベスト5 / 本日の対戦クラブから / 今季平均EFFで独自選出 / 出場確定ではありません / イラスト（AI生成）｜イメージ.\nNo names, performance statistics, logos, jersey numbers, or official photographs."
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "initial_generation_count": 1,
+      "revision_count": 1,
+      "final_output_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e69360a387e1306be411/generated.png",
+      "original_generated_output": "/Users/genjo/.codex/generated_images/01a1cc29-749e-7073-83d6-06719170606a/exec-137eb7da-6612-4735-8358-4ce13ffa3770.png",
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "sha256": "3df14f296126c4a75724e591822a14d5be4140744b508d7b24608d016b1bc99a",
+      "qa_notes": {
+        "text_and_numbers": "修正版の画像を実見し、全8行、2026.11.12、B.PREMIER、ベスト5、EFFの綴りを照合。個人名・個人成績・試合スコアなし。",
+        "source_qualifiers": "『本日の対戦クラブから』『今季平均EFFで独自選出』『出場確定ではありません』を実見。固定本文の範囲と留保に一致。",
+        "likeness_or_no_named_person": "実在のブランドン・ランドルフを公式写真と見比べ、コーンロウ・輪郭・目鼻・口ひげ・顎ひげを確認。架空人物ではない。名前非表示。",
+        "layout": "初稿は左端の手の余白不足で不採用。修正1回後は両手の指、頭部、ボール全体、全テキストが枠内に収まり、手指と関節、文字との重なり、余白を目視確認。脚の下端は意図したトリミング。ロゴ・スポンサー文字・写真調なし。",
+        "ai_label": "『イラスト（AI生成）｜イメージ』が修正版に明瞭に表示されていることを実見。"
+      },
+      "delivery_state": "generated_and_qa_passed_local_only",
+      "ready_executed": false,
+      "published": false,
+      "external_send_performed": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-11T19:54:28.188072+00:00",
+  "publication_approved": false
+}
