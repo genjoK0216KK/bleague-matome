@@ -616,6 +616,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "長崎ヴェルカ対A東京の試合前予測、3連敗の長崎はリバウンド差10本が壁"
   },
+  "article-daily-20261112.html": {
+   "article_path": "article-daily-20261112.html",
+   "editorial_fingerprint": "375358cfe27e91a8cc0e23f105a22cef65b852d2e622ac670af19f445a11deba",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261112-4efdedc93844.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261112-4efdedc93844-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "c3151cd8b45c0d6d80ab",
+   "image_sha256": "4efdedc9384442b5551c5a923b6d3149314bb4359965ff98b8b10ff8b1c10d69",
+   "imported_at": "2026-11-11T23:20:38.570334+00:00",
+   "prepared_at": "2026-11-11T23:20:02.723659+00:00",
+   "source_blob_sha": "4a71dfb41a597d60695710f2836d11befd9e5a88",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "375358cfe27e91a8cc0e23f105a22cef65b852d2e622ac670af19f445a11deba",
+   "style": "ink-lime-portrait-v5",
+   "title": "琉球ゴールデンキングス対東京SRの試合前予測、3連敗のキングスは攻撃力をどう止めるか"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -1824,13 +1852,6 @@
  "log": [
   {
    "article": "article-games-20261104.html",
-   "at": "2026-11-06T20:47:48.298767+00:00",
-   "by": "ee9fc0eaf9e0a69a8c68",
-   "event": "superseded",
-   "id": "d5c983c0cf4a52db9a3a"
-  },
-  {
-   "article": "article-games-20261104.html",
    "at": "2026-11-06T20:47:48.476109+00:00",
    "event": "imported",
    "id": "ee9fc0eaf9e0a69a8c68",
@@ -2381,6 +2402,13 @@
    "event": "imported",
    "id": "e69360a387e1306be411",
    "image": "3df14f296126"
+  },
+  {
+   "article": "article-daily-20261112.html",
+   "at": "2026-11-11T23:20:38.570359+00:00",
+   "event": "imported",
+   "id": "c3151cd8b45c0d6d80ab",
+   "image": "4efdedc93844"
   }
  ],
  "seen": {
@@ -2492,6 +2520,7 @@
   "bd3d709f0889950146e7": "superseded:e64b9ac50fa81c41ae65",
   "c1aaf417a1880194d3ac": "imported",
   "c30cc01686bce3bc931c": "imported",
+  "c3151cd8b45c0d6d80ab": "imported",
   "c39e144583cffda92155": "superseded:a718e72ebd289b318965",
   "c3dac2b9caaaf4c62772": "imported",
   "c422e01f21c312cd1a36": "imported",
