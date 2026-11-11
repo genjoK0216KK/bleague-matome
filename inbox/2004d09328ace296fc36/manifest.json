@@ -1,0 +1,95 @@
+{
+  "id": "2004d09328ace296fc36",
+  "article_path": "article-results-one-next-20261111.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261111.html",
+  "source_commit": "",
+  "source_blob_sha": "b4495467f99ae0e2196527d82adc60943ec6937c",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "220ffe3bc3dc9b69211ab8c039ecd80d745903e4983be3a0fa13bca1f929f03e",
+  "last_observed_blob_sha": "b4495467f99ae0e2196527d82adc60943ec6937c",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2004d09328ace296fc36/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2004d09328ace296fc36/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-11T13:06:25.722244+00:00",
+  "creation_event_id": "a4c6d6f0a5f482770b12",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/2004d09328ace296fc36/thumbnail.png",
+  "image_sha256": "00179bf27a49512623a0d874f9f8d276fa708c343a16ada0f44a6252881f8b85",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "b4495467f99ae0e2196527d82adc60943ec6937c",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.11",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "B.PREMIER",
+      "B.ONE・B.NEXTは試合なし",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2004d09328ace296fc36/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261111.html",
+        "usage": "本文内容の根拠。2026.11.11の試合結果、当日のEFF・ポジション別TOP3、B.PREMIER、B.ONE・B.NEXTはこの日試合なし。HTMLのblob SHAを計算し指定値との一致を確認。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2004d09328ace296fc36/source.txt",
+        "usage": "上記見出し・日付・リーグ範囲・注記の照合。本文の根拠はこの2ファイルのみ。",
+        "qualifiers": "当日TOP3は出場時間がある選手の公式EFFによるリーグ別・ポジション別集計。今季平均や予想ではない。兼任ポジションは各部門対象、同率は同順位で最大3人。ポジションは登録資料取得時点で当日の起用位置ではない。本文資料取得2026-11-11 21:56〜21:57 JST、ポジション資料取得2026-11-10 19:08 JST。個人名・個人成績・出場・活躍・実際の場面の再現を画像内で主張しない。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "view_imageで目視。黒#151A18×ライム#CCF43B、太い日本語文字、インク・ブラシの画風のみ参照。旧選手名・成績・日付は不使用。"
+      },
+      {
+        "type": "official_appearance_reference",
+        "url": "https://www.neophoenix.jp/team/players/detail/id=25287?PlayerID=51000655",
+        "image_url": "https://neophoenix.bl.kuroco-img.app/v=1789109510/files/user/2026-27/player/phx2627_HP_profile_player_2.jpg",
+        "usage": "三遠ネオフェニックス公式プロフィール写真をダウンロードしてview_imageで実見。容姿参照専用。外部の試合成績を本文の根拠にしていない。写真自体やロゴを完成画像へ貼り付けていない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジェイク・ヴァン・タバーゲン",
+        "romanized_name": "Jake Van Tubbergen",
+        "selection": "ランダム",
+        "selection_method": "本文は複数試合と5ポジションの比較表で特定の主役が絞れないため、固定HTMLに記載された選手名を重複除去した11名からPython secrets.choiceで1名選出。",
+        "candidate_names": [
+          "マーク・スミス",
+          "岡田 侑大",
+          "湧川 颯斗",
+          "ジャレット・カルバー",
+          "富永 啓生",
+          "ジェイク・ヴァン・タバーゲン",
+          "ドウェイン・エバンス",
+          "ニック・ケイ",
+          "フィン・ディレイニー",
+          "チャールズ・ジャクソン",
+          "ジョン・ハーラー"
+        ],
+        "source": "三遠ネオフェニックス公式選手プロフィール",
+        "url": "https://www.neophoenix.jp/team/players/detail/id=25287?PlayerID=51000655",
+        "image_url": "https://neophoenix.bl.kuroco-img.app/v=1789109510/files/user/2026-27/player/phx2627_HP_profile_player_2.jpg",
+        "visual_features_checked": "短い茶褐色の髪、斜めに流れる前髪、角張ったやや縦長の輪郭、まっすぐな鼻、深い目元、口ひげ・短い顎ひげ、少し張った耳。最終生成画像の髪・輪郭・鼻・目元・ひげを公式写真と対照して確認。",
+        "depiction": "1人がボールを両手で保持して前へ踏み込むイメージイラスト。特定の実際のプレーを再現していない。氏名・背番号・個人成績・出場・活躍は画像に記載なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape approximately 16:9, 1600x900 or larger than 1000 px wide. It is for バスケまとめ, article dated 2026.11.11. This is new artwork, not a photograph.\n\nApproved art direction: near-black #151A18 background, vivid acid-lime #CCF43B accents, warm white giant bold Japanese typography, rough hand-painted ink/brush sports illustration, a few expressive diagonal brush strokes, strong contrast, restrained elements. Follow the black/lime approved sample seen in this conversation in visual quality, but make a new composition and copy NONE of its old names, scores, dates, or shooting pose.\n\nSubject: exactly ONE real player, Jake Van Tubbergen (ジェイク・ヴァン・タバーゲン), selected randomly from the article's named players. Draw him recognizably in energetic basketball play, not a made-up athlete. Appearance was checked in his official San-en profile photo: light skin, tall lean athletic build; short tousled dark brown hair with irregular forward/side-swept fringe, short sides; angular elongated face and firm jaw, pronounced straight nose, focused deep-set eyes under fairly straight brows, light moustache and short chin goatee, very short jaw stubble, visible slightly prominent ears. Reproduce these observed identity features in a hand-drawn ink illustration. Skin and uniform rendered mostly warm-white and black with subtle muted warm skin tones; no photorealism, no photographic texture, no pasted photo. Sleeveless plain dark basketball jersey with a little light piping, absolutely no team logos, league logos, sponsors, player name, or jersey number.\n\nComposition: place player on the LEFT roughly 44% of image, torso leaning forward in a powerful drive while gathering an orange basketball with both hands near the hip, shown in 3/4 front view with face clearly visible looking toward the open space. Waist/thigh-up crop is fine, but the entire head, both arms, both hands and the basketball must be visible, anatomically coherent and contained inside the canvas. Both hands must have natural fingers and grip. Convey forward movement through the body's diagonal posture and brush strokes, not through extra limbs or duplicate balls. Do not draw another person, hoop, opponent, crowd, or detailed arena. This is an imagined generic basketball action illustration, NOT a recreation of an actual game moment, shot, score or highlight.\n\nOn the RIGHT roughly 52%, a beautifully balanced text block with generous safe margin and big crisp lettering. Required visible text only, verbatim:\nTop small masthead: 「バスケまとめ」\nDate: 「2026.11.11」\nLargest headline on two separate lines: 「試合結果」 and 「当日のEFF」\nProminent lime subheading: 「ポジション別TOP3」\nSmall league line: 「B.PREMIER」\nSmaller secondary line: 「B.ONE・B.NEXTは試合なし」\nReadable bottom labels on a clean dark strip: 「イラスト（AI生成）」 and 「イメージ」\n\nThe date is the ARTICLE DATE, not an appearance label for the randomly selected subject. Keep copy as article-wide reporting. Do NOT add the player's name, individual stats, points, rebounds, assists, rank, MVP, victory language, or any assertion about his performance/appearance. TOP3 means article-wide position-based official daily EFF ranking; do not visually crown the depicted player as #1. Never import the sample's 38 points, Culver, Sendai/Kobe or 10/19. No extra text. Preserve all Japanese spelling and exact numbers, especially 2026.11.11 and TOP3. All text and the AI label must remain legible at thumbnail scale.\n\nSINGLE ALLOWED CORRECTION\nEdit the FIRST image, the existing finished black/lime Japanese basketball thumbnail. The SECOND image is the official portrait of the SAME real player Jake Van Tubbergen and is provided ONLY as an appearance reference. It is not an insert: do not paste any photograph, logo, uniform branding, flames or red lighting into the design.\n\nMake ONE targeted correction to the illustrated player on the LEFT: his hair/head currently touches and is cropped by the upper edge. Slightly reduce and reposition the whole player-and-ball illustration within its current left portion so the ENTIRE top of his hair has a clear 35 to 50 px dark margin above it, while both hands, both arms and the basketball remain entirely inside the canvas. His waist may be cropped at bottom, but no head, fingers or ball may be clipped. Maintain the dynamic low forward driving/gathering pose, anatomically natural arms and fingers, and recognizable identity. Use the second image to refine likeness in the same hand-drawn ink/brush style: substantially shorter dark brown hair, a low tousled side/forward fringe rather than a tall voluminous quiff; the angular elongated face, deep-set focused eyes, straight prominent nose, slightly prominent ears, small moustache and close short chin goatee seen in the official portrait. Render an illustrated face, not a photographic one. No new person, no extra limbs, no jersey number, no player name, no logos.\n\nPreserve the first image's canvas size, palette, entire RIGHT text block, exact spelling and line placement, headline, date, all labels, brush-work art direction and orange ball. Preserve every visible text verbatim:\nバスケまとめ\n2026.11.11\n試合結果\n当日のEFF\nポジション別TOP3\nB.PREMIER\nB.ONE・B.NEXTは試合なし\nイラスト（AI生成）\nイメージ\n\nDo not add any statistic, personal achievement, name or new words. This is generic imagined play, not an actual scene from a match. Final output is ONE fully finished landscape PNG thumbnail.",
+    "generator": "内蔵 image_gen.imagegen。新規生成1回＋修正1回、最終候補のみ採用。初稿の頭頂部の見切れを修正し、容姿を公式写真で再参照。修正入力は初稿PNGと公式プロフィール写真（容姿参照専用）。API/CLI生成・新課金なし。最終画像を実見し文字・日付・本文範囲・顔・手・ボール・見切れ・AI表記を確認。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-11T19:39:36.209160+00:00",
+  "publication_approved": false
+}

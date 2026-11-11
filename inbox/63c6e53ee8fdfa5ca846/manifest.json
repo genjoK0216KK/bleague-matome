@@ -1,0 +1,117 @@
+{
+  "id": "63c6e53ee8fdfa5ca846",
+  "article_path": "article-daily-20261111.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261111.html",
+  "source_commit": "",
+  "source_blob_sha": "efe684bc715333970f02dc12b6af98b0d6a963a5",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "7426e9de343c6c48a596fa455503774314b252981b17fb1ee4f640d622195c0e",
+  "last_observed_blob_sha": "efe684bc715333970f02dc12b6af98b0d6a963a5",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/63c6e53ee8fdfa5ca846/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/63c6e53ee8fdfa5ca846/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-11T10:36:04.521943+00:00",
+  "creation_event_id": "2356c3fe15787f4aea42",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/63c6e53ee8fdfa5ca846/thumbnail.png",
+  "image_sha256": "43ca63d15b002be7c6f5b68d67c0d5cb66c7b4c9e2b53f042ef3151588b35e5c",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "efe684bc715333970f02dc12b6af98b0d6a963a5",
+    "text_lines": [
+      "2026.11.11｜試合前展望",
+      "長崎 vs A東京",
+      "リバウンド",
+      "約10本差",
+      "1試合平均・チーム比較",
+      "イラスト（AI生成）｜イメージ",
+      "出場を示すものではありません"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/63c6e53ee8fdfa5ca846/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261111.html",
+        "use": "本文内容・日付・チーム・数値・留保の根拠。ライブ記事や外部ページの数値は不使用。",
+        "evidence": [
+          "2026.11.11 試合前展望 / 独自予測",
+          "1試合平均のリバウンド：A東京43.2本、長崎33.4本。差は約10本。",
+          "ミッチェル選手が今日の試合に出るかどうかは未確認。"
+        ],
+        "verified_blob_sha": "efe684bc715333970f02dc12b6af98b0d6a963a5"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/63c6e53ee8fdfa5ca846/source.txt",
+        "use": "固定HTMLと照合し、チームの1試合平均の比較であること、約という留保、試合前であることを確認。"
+      },
+      {
+        "type": "official_likeness_reference_only",
+        "title": "長崎ヴェルカ公式 アキル・ミッチェル選手プロフィール",
+        "url": "https://www.velca.jp/team/players/detail/id=47736?PlayerID=51000395",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026111204/files/user/roster/2488/2026-27/51000395_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/63c6e53ee8fdfa5ca846/references/akil-mitchell-official.jpg",
+        "use": "容姿の目視参照だけ。公式写真を画像へ貼り付けていない。個人成績は本文・サムネの根拠にしていない。"
+      },
+      {
+        "type": "approved_style_reference_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認。黒#151A18・ライム#CCF43B、太い日本語、手描きインクとブラシのスタイルを参照。人物名・数値・日付は流用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "アキル・ミッチェル",
+        "selection": "ランダム",
+        "selection_reason": "記事の主題は両チームの成績・平均リバウンド比較で、単独の選手が主役ではない。本文に名前がある2選手を最優先候補として抽選。",
+        "candidate_pool": [
+          "アキル・ミッチェル",
+          "ラクラン・オルブリッチ"
+        ],
+        "selection_method": "Python secrets.choiceで上記2名から1名を抽選。結果：アキル・ミッチェル。",
+        "reference_source": "長崎ヴェルカ公式選手プロフィール",
+        "reference_url": "https://www.velca.jp/team/players/detail/id=47736?PlayerID=51000395",
+        "reference_image_url": "https://bleague.bl.kuroco-img.app/v=2026111204/files/user/roster/2488/2026-27/51000395_01.jpg",
+        "visually_confirmed_features": [
+          "黒い頭部カバー（髪を覆う）",
+          "縦長の輪郭、耳、目鼻と口元",
+          "口ひげと顎を覆う短い黒ひげ",
+          "肩幅のある体格",
+          "左腕のタトゥー、右前腕の黒いスリーブ"
+        ],
+        "depiction": "両手でボールをつかむ動きのあるイラスト。実際の試合場面の再現ではない。",
+        "image_text_constraints": "選手名・個人成績・当該試合の出場や活躍は表記しない。チームの平均比較と明記。イラスト（AI生成）、イメージ、出場を示すものではありませんを表示。",
+        "visual_qa": "生成画像と公式写真を目視比較し、頭部カバー・輪郭・ひげ・目鼻の特徴を確認。写真風ではなく手描きイラスト。チーム・リーグ・スポンサーのロゴなし。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: illustration-story\nAsset type: Japanese basketball editorial website thumbnail, a single finished PNG.\nCreate ONE new landscape illustration, exactly 16:9 composition, target 1920x1080, high resolution. It must be a beautifully art-directed sports editorial graphic with bold legible Japanese typography, using the approved black-and-lime reference image shown earlier as STYLE ONLY. Do not carry over its player, name, score, date, pose, or text.\n\nVisual style: deep near-black #151A18 background, acid lime #CCF43B brush swashes, off-white bold Japanese type. Hand-drawn ink and dry-brush sports illustration, controlled paper grain, confident hatching, limited colors and few elements. Flat editorial drawing, clearly not a photograph, no photorealism.\n\nSubject identity: draw the real basketball player AKIL MITCHELL only, randomly selected from the two named players in the source article. Use the official Nagasaki Velca portrait shown earlier strictly as a visual likeness reference, never paste it. Match his dark close-fitting black head wrap/skullcap covering hair, elongated oval face, distinct ears, medium-full lips, shaped full short black beard and connected mustache, eyebrows, eyes, and broad athletic shoulders. Reference source: https://www.velca.jp/team/players/detail/id=47736?PlayerID=51000395 and its official portrait https://bleague.bl.kuroco-img.app/v=2026111204/files/user/roster/2488/2026-27/51000395_01.jpg . His left arm has tattoos; his right forearm has a black compression sleeve in the reference. Preserve recognizable facial structure with expressive ink contours and readable face tones. No fictional player, no extra people.\n\nPose/composition: typography on the left about 58%, one dynamic half-body to mid-thigh figure on the right about 42%, with a slightly twisted torso and bent elbows as he strongly gathers an orange basketball overhead after a rebound. Both hands visibly gripping the ball naturally. His face is shown three-quarter/front and unobscured. Keep the ball, both hands, elbows and head fully inside the frame with generous clearance. The ball is a held prop; the person is the visual protagonist. Use a diagonal lime brushstroke behind the figure to suggest upward movement, not a literal arena or actual match. Plain navy-and-off-white basketball uniform, without ANY lettering, numbers, brands, sponsor marks, team logos or league logos. No hoop or scoreboard needed. No photographic texture.\n\nAll on-image text MUST be exactly these seven lines, no other text:\n1. \"2026.11.11｜試合前展望\"\n2. \"長崎 vs A東京\"\n3. \"リバウンド\"\n4. \"約10本差\"\n5. \"1試合平均・チーム比較\"\n6. \"イラスト（AI生成）｜イメージ\"\n7. \"出場を示すものではありません\"\n\nTypography and layout: line 1 small-but-readable at upper left; line 2 medium-large beneath it; line 3 large off-white Japanese heavy gothic; line 4 the largest, lime, with extremely bold 10 and readable 約 and 本差. Line 5 directly beneath the headline in a readable off-white size, not hidden at the bottom: the number is a comparison of TEAM per-game averages, not this player's individual rebounds. Lines 6 and 7 are a clearly legible two-line footer on clean near-black space, safely inset from all edges, with no overlap from the illustration. Keep all Japanese glyphs exact, crisp, high contrast and fully inside 6% safe margins. Black background can run to edges. Avoid overfilled tiny text or unnecessary badges.\n\nArticle-grounding: the ONLY source for article meaning is the fixed source.html/source.txt supplied in this conversation: this is a pregame outlook for Nagasaki versus Alvark Tokyo on 2026-11-11, and team average rebounds 43.2 vs 33.4 differ by ABOUT 10. This is not a completed-game score, not an exact ten-rebound result, and not an individual statistic. Akil Mitchell's participation is explicitly unconfirmed. Therefore this is only a generic imagined basketball action illustration, never a recreation of a real play, never a claim that he appeared or performed well in this match. Do not print his name or individual stats. Keep both the AI label and the image/participation disclaimer exactly as provided.",
+      "correction": "Edit this generated basketball thumbnail with ONE targeted layout correction only. Preserve the full existing Japanese text exactly, its hierarchy and placement, all colors, the black/lime ink-brush style, the recognizable Akil Mitchell likeness, his black head wrap, beard, plain navy uniform, natural two hands, and the exact illustration/participation disclaimers.\nThe basketball is clipped at the TOP edge. Scale the ENTIRE PERSON PLUS BALL GROUP to approximately 88% of its current size and move it slightly downward while keeping it in the right-hand area. Keep the pose intact. Leave at least 60 pixels of clean background above the complete orange basketball and at least 45 pixels between the entire ball/hands/elbows and every other canvas edge at this approximately 1672x941 resolution. The WHOLE basketball silhouette including its outer black contour MUST be visible, never tangent to or cropped by the top. Rebuild only the brush-stroke background revealed by scaling. Keep the person's head and facial features large enough to recognize. Torso can exit at the bottom naturally, but head, arms, hands, and ball must remain fully framed. Preserve 16:9 landscape format, width over 1000 pixels.\nPreserve EXACTLY these seven lines and add nothing:\n2026.11.11｜試合前展望\n長崎 vs A東京\nリバウンド\n約10本差\n1試合平均・チーム比較\nイラスト（AI生成）｜イメージ\n出場を示すものではありません\nNo player name, logos, sponsor marks, uniform numbers, or additional people. This is a generic imagined action, not an actual game appearance.",
+      "correction_reason": "初回画像のボール上端に見切れがあったため、人物とボールを縮小し下へ移動する1回の構図修正を実施。最終画像ではボール全体・両手・頭部・肘が画面内に収まり、文字と注記に重ならないことを目視確認。",
+      "correction_count": 1
+    },
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "内蔵画像生成のみ",
+      "generation_calls": 2,
+      "initial_generation_count": 1,
+      "correction_count": 1,
+      "selected_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/63c6e53ee8fdfa5ca846/generated.png",
+      "width": 1671,
+      "height": 941,
+      "format": "PNG",
+      "sha256": "43ca63d15b002be7c6f5b68d67c0d5cb66c7b4c9e2b53f042ef3151588b35e5c",
+      "inspection": "最終出力を実際に目視。文字・数値・約/試合前/チーム平均の留保、人物の容姿、手の形、見切れ、AI表示を確認。PNG構造・CRC・画像データ解凍・寸法・原稿blob SHAを検証。",
+      "final_status": "検品合格・指定PNGとbrief.jsonをローカル保存。ready、git、公開、外部送信は未実施。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-11T19:32:13.452397+00:00",
+  "publication_approved": false
+}

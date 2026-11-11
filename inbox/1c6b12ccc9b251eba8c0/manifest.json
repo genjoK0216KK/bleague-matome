@@ -1,0 +1,93 @@
+{
+  "id": "1c6b12ccc9b251eba8c0",
+  "article_path": "article-games-20261111.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261111.html",
+  "source_commit": "",
+  "source_blob_sha": "144a09e37b76d1501785a05e2e68558aa25d018f",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "220ffe3bc3dc9b69211ab8c039ecd80d745903e4983be3a0fa13bca1f929f03e",
+  "last_observed_blob_sha": "144a09e37b76d1501785a05e2e68558aa25d018f",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1c6b12ccc9b251eba8c0/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1c6b12ccc9b251eba8c0/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-11T13:06:25.435567+00:00",
+  "creation_event_id": "39f98cb10686de0bb227",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/1c6b12ccc9b251eba8c0/thumbnail.png",
+  "image_sha256": "00b4a7fd2c9eadf560683b7804c6aac4e749f2e68b2f076129215466e6b8deae",
+  "width": 1659,
+  "height": 948,
+  "brief": {
+    "source_blob_sha": "144a09e37b76d1501785a05e2e68558aa25d018f",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.11",
+      "B.PREMIER",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1c6b12ccc9b251eba8c0/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261111.html",
+        "note": "固定HTML。本文の根拠。blob SHAを生成前と保存時に照合。"
+      },
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1c6b12ccc9b251eba8c0/source.txt",
+        "note": "固定文章。11/11試合結果と当日のB.PREMIER公式EFFポジション別TOP3。今季平均・予想ではない。公式登録ポジションで当日の起用位置を断定しない。同率同順位で最大3人。画像に個人成績・順位・試合スコアは掲載しない。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://hannaryz.jp/team/players/detail/id=19803?PlayerID=26922&Year=2026",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026103109/files/user/roster/699/2026-27/26922_01.jpg",
+        "note": "京都ハンナリーズ公式プロフィール。選手本人の容姿だけを参照。公式写真を完成画像へ貼り付けていない。"
+      },
+      {
+        "type": "style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "view_imageで確認した承認済み黒×ライム・インク／ブラシの絵柄。旧画像の選手・成績・日時は流用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "チャールズ・ジャクソン",
+        "selection": "ランダム",
+        "selection_reason": "記事は複数試合とポジション別ランキングを等しい形式で扱い、単独の主役を特定できないため。",
+        "selection_method": "source.html内の<strong>選手名</strong><small>から登場順に重複除去した11名を候補とし、Python random.Random('1c6b12ccc9b251eba8c0').choice(candidates)で選定。",
+        "candidates": [
+          "マーク・スミス",
+          "岡田 侑大",
+          "湧川 颯斗",
+          "ジャレット・カルバー",
+          "富永 啓生",
+          "ジェイク・ヴァン・タバーゲン",
+          "ドウェイン・エバンス",
+          "ニック・ケイ",
+          "フィン・ディレイニー",
+          "チャールズ・ジャクソン",
+          "ジョン・ハーラー"
+        ],
+        "reference_source": "京都ハンナリーズ公式プロフィール",
+        "reference_url": "https://hannaryz.jp/team/players/detail/id=19803?PlayerID=26922&Year=2026",
+        "reference_image_url": "https://bleague.bl.kuroco-img.app/v=2026103109/files/user/roster/699/2026-27/26922_01.jpg",
+        "appearance_verified": "公式写真をview_imageで目視。短く密な巻き毛、やや縦長の輪郭、太い眉、幅のある鼻、厚い唇、顎から頬のひげと口ひげ、広い肩を参照。初稿の髪の高さと顔立ちを公式写真参照で1回修正し、最終画像で確認。",
+        "depiction": "ボールを両手で保護しながら身体をひねるプレー姿のイメージ。特定の実際の試合場面の再現ではない。完成画像に選手名・個人成績・出場や活躍の主張なし。チーム／リーグロゴ、スポンサー文字、公式写真の貼付なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail as an opaque PNG, 1792 x 1024 pixels (approximately 16:9), landscape, minimum width 1000 pixels.\n\nEditorial content is ONLY this fixed article summary: 2026-11-11 game results and that day's B.PREMIER official game EFF rankings by position, top 3 per position. This is daily game data, not season averages or a prediction. Do not invent scores or claims.\n\nArt direction: approved Japanese sports ink poster style, near-black #151A18 background, sharp lime #CCF43B brush strokes, warm ivory type and monochrome ink illustration, energetic hand-drawn crosshatching, torn dry-brush edges, very few elements, high contrast, strong mobile readability. Not a photograph, not photorealistic, no photo collage.\n\nSubject: the real basketball player Charles Jackson (チャールズ・ジャクソン), selected randomly from the article's players, shown as an unmistakably hand-drawn athletic action illustration. His appearance was checked against the current official Kyoto Hannaryz profile portrait: short dense tightly curled black hair with a slightly squared top and closely tapered sides, dark skin translated into rich black-and-ivory ink values, strong thick brows, almond-shaped eyes, a broad straight nose, full lips, a substantial neatly shaped black beard covering chin and jaw and connected moustache, a long slightly rectangular face, wide muscular shoulders and powerful tall center build. Subtle simplified ink tattoo shading on his LEFT upper arm. Preserve these distinctive facial features; do not substitute a clean-shaven or long-haired generic athlete.\n\nComposition: place Jackson prominently on the LEFT half, visible from head to mid-thigh with face large enough to recognize. Dynamic three-quarter view, torso turning toward the right, both hands naturally gripping ONE orange basketball near his upper waist/chest as he pivots to protect it after a rebound. Anatomically plausible arms and fingers; both hands clearly distinct. A logo-free unbranded dark jersey with simple ivory edging, no team name, no sponsor words, no player name, no jersey number. A broad sweeping lime brush arc behind the figure gives rotational energy. Keep head, ball and hands fully in frame. No other people, no crowd faces, no hoop or scoreboard, no logos. This is a generic imagined basketball action, NOT a recreation of an actual play on 11/11.\n\nTypography on the RIGHT half with generous separation from the player and face: huge heavy Japanese sans serif headlines, crisp and highly legible, preserve exact glyphs. The main result headline is ivory; the EFF headline is lime; the smaller qualifier is ivory and must be easy to read.\nRender ONLY the following exact text, no additional labels or numerical claims:\nSmall brand at the upper right: \"バスケまとめ\"\nDate below brand: \"2026.11.11\"\nSmall league label: \"B.PREMIER\"\nMain headline: \"試合結果\"\nSecondary large headline: \"当日のEFF\"\nClear qualifier under that: \"ポジション別TOP3\"\nFooter on a clean dark band, clearly readable, with sufficient edge padding: \"イラスト（AI生成）\" followed by \"イメージ\"\n\nDo not display Charles Jackson's name, individual stats, appearance status, personal rank, performance claim or team score. No previous reference-image text or stats (no 38, no Culver). Avoid clutter, decorative nonsense text, extra fingers, fused hands, cropped headlines. All essential content should have at least 5% outer padding. Output one complete polished thumbnail only.\n\nONE ALLOWED CORRECTION\nEdit Image 1, the finished black and lime Japanese basketball thumbnail. Image 2 is an OFFICIAL APPEARANCE REFERENCE ONLY of the real player Charles Jackson; do not paste any photographic pixels or logos from it.\n\nMake one targeted identity correction to the illustrated player's head in Image 1: match Charles Jackson's facial features and hair in Image 2 more faithfully. In particular reduce the exaggerated tall coarse curls to his short dense tightly curled black haircut with a restrained slightly squared top and tapered sides, match his longer slightly rectangular face, broad straight nose, strong brows and full lips, and match the neatly shaped beard length and cheek/jaw outline in the reference. Keep the natural three-quarter action angle and focused expression of Image 1. Translate these real features entirely into the existing hand-drawn black/ivory crosshatched sports illustration style. Leave a clear margin between the top of his hair and the canvas edge.\n\nKeep ALL typography exactly unchanged and legible: \"バスケまとめ\", \"2026.11.11\", \"B.PREMIER\", \"試合結果\", \"当日のEFF\", \"ポジション別TOP3\", \"イラスト（AI生成）\", \"イメージ\".\nKeep the exact landscape dimensions, black #151A18 and lime #CCF43B palette, brush background, generic pivoting basketball action pose, hands gripping one orange ball, logo-free jersey, and overall layout. No player name, no player statistics, no team logos or sponsor text, no additional people. The image is an imagined illustration, not a real game photograph or a recreation of any specific play. Deliver exactly one corrected opaque PNG.\n\nCorrection inputs: Image 1 = initial generated PNG; Image 2 = official Charles Jackson profile photo, appearance reference only.",
+    "generator": "内蔵 image_gen.imagegen。初回生成1回＋容姿修正1回。API・CLI・新課金への切替なし。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-11T19:36:08.550267+00:00",
+  "publication_approved": false
+}
