@@ -1,0 +1,102 @@
+{
+  "id": "c3dac2b9caaaf4c62772",
+  "article_path": "article-daily-20261110.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261110.html",
+  "source_commit": "",
+  "source_blob_sha": "0bc64100dba59c1ffb53a54c2d98ea8cc4bd3de5",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "5e122e7f1be7ab097388150405193a56d2737211121ffac31bc3a5e0eb158fae",
+  "last_observed_blob_sha": "0bc64100dba59c1ffb53a54c2d98ea8cc4bd3de5",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c3dac2b9caaaf4c62772/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c3dac2b9caaaf4c62772/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-10T10:15:03.609514+00:00",
+  "creation_event_id": "68afdbcd2a80d9c069b8",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/c3dac2b9caaaf4c62772/thumbnail.png",
+  "image_sha256": "ef7fe1e48263d57491280d325133388d0bb02f54cf83c68dc793a87811342783",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "0bc64100dba59c1ffb53a54c2d98ea8cc4bd3de5",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.10",
+      "千葉J vs 大阪",
+      "インサイドの",
+      "攻防に注目",
+      "試合前展望・独自予測",
+      "コステロの起用・出場時間は未定",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_body",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c3dac2b9caaaf4c62772/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261110.html",
+        "role": "固定本文の根拠。HTMLのblob SHAは指定値と一致。公開ページ本文は参照せず。",
+        "support": [
+          "2026.11.10／試合前展望・独自予測",
+          "11月10日19時05分から、千葉ジェッツと大阪エヴェッサが対戦",
+          "【予測】千葉Jが優位、焦点はインサイドの攻防",
+          "コステロ選手が戻れば、インサイドの人数は補えます。出場時間は未定で、実際の起用は試合まで分かりません。"
+        ]
+      },
+      {
+        "type": "article_body",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c3dac2b9caaaf4c62772/source.txt",
+        "role": "同じ固定版の本文を通読し、見出しと留保を照合。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://chibajets.jp/news/detail/id=26959",
+        "image_url": "https://chibajets.bl.kuroco-img.app/v=1783825999/files/user/team/2025%E2%80%9026/Matt%20Costello.jpg",
+        "role": "千葉ジェッツ公式の契約発表に掲載された本人の顔写真を取得して目視。容姿のみ参照し、外部ページの本文を記事内容の根拠に使用していない。公式写真自体を完成画像へ転載していない。"
+      },
+      {
+        "type": "style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで確認した承認済みの黒×ライム、手描きインク、太い見出しの作例。人物・名前・成績は引き継がない。"
+      },
+      {
+        "type": "production_rules",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール。人物選定は今回の本人指示を優先。白地作例A-faison-ivory-v3.pngは指定ディレクトリに存在せず、黒×ライム作例を使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "マット・コステロ",
+        "selection": "本文の主役",
+        "selection_reason": "記事タイトルで復帰が扱われ、終盤の予測でもインサイドの人数・試合勘・起用が焦点。離脱選手のプレーを今回の試合のように見せず、コステロ1人のポストプレーのイメージとして構成。",
+        "source": "千葉ジェッツ公式・2026-27シーズン マット・コステロ 選手契約締結（新規）のお知らせ",
+        "url": "https://chibajets.jp/news/detail/id=26959",
+        "image_url": "https://chibajets.bl.kuroco-img.app/v=1783825999/files/user/team/2025%E2%80%9026/Matt%20Costello.jpg",
+        "reference_viewed": true,
+        "observed_features": "短いダークブラウンの横流れの髪、短く刈った側頭部、広い額、長方形に近い輪郭、大きめの耳、青灰色の目、赤茶寄りの口ひげと濃いブラウンの厚いフルビアード。修正で髪の高さを抑え、眉と目鼻・輪郭を公式写真へ寄せた。",
+        "scene": "ボールを両手で保持して身体をひねるポストプレーのイラスト。実際の大阪戦の場面を再現したものではない。",
+        "qualifiers": "試合前展望・独自予測／コステロの起用・出場時間は未定／イメージ"
+      }
+    ],
+    "prompt": "【初回生成】\n日本語のバスケットボール記事サムネイルを1枚だけ作成。横長16:9、1920×1080を希望、少なくとも横1000px以上、仕上がりは約16:9のPNG。画面を分割した別案や複数画像は不要。\n\n承認済みの黒×ライムのスポーツ報道イラストに合わせる。背景 #151A18、鮮烈なライム #CCF43B、文字は温かい白。太い日本語ゴシックの見出し、手描きの黒インク、荒いブラシ、緻密すぎないハッチング、少ない要素、高いコントラスト。写真風、写真的肌、3D、アニメの架空キャラクターは禁止。\n\n内容の唯一の根拠は2026.11.10の固定原稿。千葉ジェッツ対大阪エヴェッサの試合前展望。マット・コステロはILから抹消されてエントリー可能だが、出場時間・実際の起用は未定。本文はインサイドの攻防を焦点としている。勝敗や活躍が確定した画像にはしない。\n\n描く人物は実在するマット・コステロ1人だけ。本文の主役の1人として選出。公式の千葉ジェッツ契約発表掲載の顔写真を目視して確認した容姿：非常に大柄で肩幅のある体、淡い肌色、短いダークブラウンの髪、左右側頭部を短く刈り、上は短い横流れ、広めの額、長方形に近いしっかりした輪郭、やや大きい耳、青灰色の目、直線的で厚めの眉、長くまっすぐな鼻、口元から顎を覆う濃いブラウンの整った厚いフルビアード（口ひげは赤茶寄り、顎は暗い茶）、下唇は控えめ。公式写真を貼り込まず、これらの顔の特徴をはっきり反映した手描きイラストとして描き起こす。若い髭のない顔や別人にしない。\n\n右側約48%に人物を大きく配置し、顔と胴体を見やすく。コステロが腰を落として身体をひねり、胸の右横でオレンジ色のバスケットボールを両手で保持してポストプレーから次の動作へ入る、動きのあるイメージ。顔は3/4正面で見える。両手は自然な五指、球を掴む位置と手首が解剖学的に自然。両肘とボールと頭部は全て画面内。胸から腿上まで描く。袖なしの無地の深い赤色ジャージに白い細い縁取り。ユニフォームにチーム名、背番号、スポンサー文字、ロゴは一切入れない。背景は斜めのライムのブラシで動勢、不要な選手・観客・コートの細部は描かない。特定の実試合の場面の再現ではなく、試合前の想像イラスト。\n\n左半分に読みやすい文字エリア。画像に入れる文字は次の9行だけを正確に。順序と階層を守り、文章を増やさない：\n上部小さめ「バスケまとめ」\nその下の日付「2026.11.10」\n中段上の白い太字「千葉J vs 大阪」\nメインのライム色の極太見出し2行「インサイドの」「攻防に注目」\n下の白い中サイズ文字「試合前展望・独自予測」\nさらに下の読みやすい小さい文字「コステロの起用・出場時間は未定」\n最下部フッターに「イラスト（AI生成）」\nその右に「イメージ」\n\n「試合前展望・独自予測」と「コステロの起用・出場時間は未定」は装飾に埋もれず明瞭に。文字と人物は重ねない。画面の端から最低5%の安全余白を取り、AI生成表記も確実に読めるサイズ。チームロゴ、リーグロゴ、公式写真そのもの、透かし、スコア、得点、復帰戦で活躍したという表現は入れない。参照スタイルのカルバー、38得点、仙台、神戸などの固有名詞・数字は一切引き継がない。完成画像1枚。\n\n【1回だけの修正】\n最初の画像は修正対象の完成サムネイル。2枚目は実在の選手マット・コステロの千葉ジェッツ公式資料の顔写真で、容姿の参照専用です。\n修正は最初の画像の選手の顔と髪だけ。顔の同一人物らしさを2枚目のマット・コステロへ寄せる。髪は参照写真のように上のボリュームを小さくした短い横流れ、両側を短く刈り、額を広く見せる。目元は参照写真の青灰色の目と自然な眉、鼻と口元の比率、少し大きい耳、長方形に近い広めの輪郭、茶色から赤茶色の口ひげと濃いブラウンのフルビアードを正確に観察して描く。表情は集中した自然な表情。今の強く吊り上がった眉と長く立ち上がった髪を修正する。\n写真を貼り込まず、サムネイルの手描きインク・ハッチングのイラスト調に統一する。元の顔の位置・大きさ・3/4の向きは維持。\n顔・髪以外の構図、両腕、両手、ボール、赤い無地の衣装、全ての日本語文字と日付、各文字の位置と大きさ、背景、黒×ライム配色、アスペクト比は厳密に維持する。ロゴや背番号やスポンサー表記を一切追加しない。内容も一切追加しない。\n以下の文字はそのまま残す：\nバスケまとめ\n2026.11.10\n千葉J vs 大阪\nインサイドの\n攻防に注目\n試合前展望・独自予測\nコステロの起用・出場時間は未定\nイラスト（AI生成）\nイメージ\n完成サムネイル1枚のみ、横長約16:9、1000px以上のPNG。",
+    "generator": {
+      "tool": "image_gen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "corrections": 1,
+      "final_output": "generated.png",
+      "original_final_path": "/Users/genjo/.codex/generated_images/01a1cbfd-c933-7990-9181-8a007ec0a976/exec-78ef3754-ab74-4821-8b26-bebbf7016e4a.png",
+      "api_or_cli_used": false,
+      "qa_notes": "最終生成画像を表示して目視。全9行・日付・対戦名は指定どおり。結果・スコアや出場確定を記載していない。公式写真と短髪・広い額・目鼻・ひげの特徴を照合。顔・ボール・両肘が見切れず、両手の指と球の保持に明らかな破綻なし。文字と人物の重なりなし。AI生成・イメージ表記を確認。チーム／リーグロゴとスポンサー文字なし。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-11T19:07:21.257218+00:00",
+  "publication_approved": false
+}

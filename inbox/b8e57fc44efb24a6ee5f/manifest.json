@@ -1,0 +1,121 @@
+{
+  "id": "b8e57fc44efb24a6ee5f",
+  "article_path": "article-analysis-hokkaido-20261111.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-hokkaido-20261111.html",
+  "source_commit": "",
+  "source_blob_sha": "6efb7198db7c905d5295bca9d70fb58b1a47b47d",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "2848a700954624bab3d930958d00b02038fec132983beef6b54d5e9724abb2a6",
+  "last_observed_blob_sha": "6efb7198db7c905d5295bca9d70fb58b1a47b47d",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b8e57fc44efb24a6ee5f/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b8e57fc44efb24a6ee5f/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-11T03:37:24.597232+00:00",
+  "creation_event_id": "84fb41f9af3f901fa4a8",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/b8e57fc44efb24a6ee5f/thumbnail.png",
+  "image_sha256": "9ba4400a97a093356ab8b621b59da268872b4737fb46e1e84310bc77c74932a5",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "6efb7198db7c905d5295bca9d70fb58b1a47b47d",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.11",
+      "北海道",
+      "直近5試合",
+      "4勝1敗",
+      "速攻とペイントで稼ぐ",
+      "対象：10/24〜11/9",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b8e57fc44efb24a6ee5f/source.html",
+        "article_url": "https://basuke-matome.jp/article-analysis-hokkaido-20261111.html",
+        "role": "本文内容の根拠。固定HTMLのblob SHAをPythonで照合済み。外部の現行記事は本文根拠に使用していない。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b8e57fc44efb24a6ee5f/source.txt",
+        "role": "本文内容の根拠",
+        "facts_used": [
+          "レバンガ北海道の直近5試合は4勝1敗",
+          "対象は2026年10月24日の広島戦から11月9日の京都戦まで",
+          "ペイント内と速攻が得点の稼ぎ場所",
+          "記事日付は2026.11.11"
+        ],
+        "qualifiers_preserved": [
+          "4勝1敗はシーズン全体ではなく対象の直近5試合の成績",
+          "画像内に対象期間10/24〜11/9を併記",
+          "特定の試合場面の再現ではなく成績をもとにしたイメージ",
+          "26チーム比較の順位・相手強度や日程を調整していない比較数値は画像に掲載しない"
+        ]
+      },
+      {
+        "type": "official_player_profile",
+        "url": "https://www.levanga.com/team/players/detail/id=19131?PlayerID=19755",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026111200/files/user/roster/702/2026-27/19755_01.jpg",
+        "role": "富永啓生選手の容姿と背番号30のみ参照。外部ページの成績を画像の根拠に使用していない。公式写真の貼り込み・ロゴの転用なし。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで確認した黒×ライム、太い日本語文字、インク・ブラシの画風。選手名・成績・日付の流用なし。"
+      },
+      {
+        "type": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "role": "制作・検品ルール。人物の選び方とready禁止は今回の本人指定を優先。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "富永啓生",
+        "selection": "本文の主役",
+        "selection_reason": "チーム分析記事の中で、個人名を冠した見出しと2段落で最も詳しく扱われている選手。ジョン・ハーラー、マークイーズ・ボールデンより扱いが大きいため選択。",
+        "reference_source": "レバンガ北海道公式プロフィール",
+        "reference_url": "https://www.levanga.com/team/players/detail/id=19131?PlayerID=19755",
+        "reference_image_url": "https://bleague.bl.kuroco-img.app/v=2026111200/files/user/roster/702/2026-27/19755_01.jpg",
+        "reference_viewed": true,
+        "appearance_observed": "黒髪で少し横に分けた前髪、短いサイド、丸みのある輪郭と頬、細めの目、ひげのない顔を公式写真で確認。生成したイラストでもこれらの特徴を目視照合。",
+        "depiction": "ボールを左手で運ぶドライブ姿のイラスト1人。緑色の無地ユニフォームと背番号30。特定試合の再現ではない。",
+        "photo_used_in_final": false,
+        "team_or_league_logos_used": false
+      }
+    ],
+    "prompt": "Use case: illustration-story / editorial sports thumbnail.\nCreate ONE finished Japanese basketball news thumbnail, landscape 16:9, ideally 1536×864 pixels (width at least 1000 px), opaque PNG.\nThis is a brand-new illustrated graphic, not an edit or a collage.\n\nAPPROVED STYLE: Match the black-and-lime editorial ink illustration reference previously inspected (B-culver-black-lime-v3.png): deep near-black #151A18 backdrop, vivid lime #CCF43B, warm off-white typography, bold Japanese headline, hand-drawn ink contours, dry brush strokes and sparse ink splatter. Few elements, powerful readable composition. Do not transfer the reference's player, name, numbers, score or date. It is a style reference only. No photography, no photorealism.\n\nREAL SUBJECT: Exactly one recognizable real basketball player, Keisei Tominaga (富永啓生), based on the official Levanga Hokkaido profile photograph just inspected, https://www.levanga.com/team/players/detail/id=19131?PlayerID=19755 (official portrait https://bleague.bl.kuroco-img.app/v=2026111200/files/user/roster/702/2026-27/19755_01.jpg). Use the photograph solely for appearance; redraw entirely as ink illustration. He is a young adult Japanese man with a rounded oval face, full cheeks, a rounded not pointed jaw, clean-shaven face, dark narrow almond-shaped eyes, straight dark brows, modest straight nose, small closed mouth; straight black short-to-medium hair with an off-center part, softly swept upward at the crown and loose parted fringe on either side of the forehead; short sides. Maintain these specific features rather than drawing a generic athlete, a heavily bearded person, or an angular model face. Broad athletic shoulders.\nDraw him in an energetic three-quarter basketball drive on the RIGHT side, head to upper shins, knees bent, torso leaning diagonally forward, eyes alert and looking upcourt. His LEFT hand controls an orange basketball beside his left hip as he advances, his right forearm bent naturally for balance. Face unobscured and large enough to recognize. Natural anatomy: two arms, two hands, five fingers per visible hand, no duplicated joints; the entire basketball and both hands visible inside the canvas. Wear a simplified lime-green basketball jersey and shorts, dark trim, just the small jersey number 30 if visible, absolutely no team crest, league logo, sponsors, brand marks or lettering. Body shading in off-white, gray, black with subtle warm skin notes, visibly drawn with ink. This is an illustrative movement, not a recreation of any actual game, scoring action or photograph. No opponents, no crowd faces, no scoreboard.\n\nCOMPOSITION: The left 55 percent carries the clear headline and record. Player occupies right 45 percent, with one diagonal lime brush swoosh behind him suggesting forward movement. Left background stays calm and near-black for typography; generous 55px outer safe margins. Do not crop any headline or essential hand/ball/face. Compact but deliberate hierarchy. Main numerals very large in lime, Japanese labels off-white; keep 4勝1敗 together as a cohesive team record, never as a player stat. The label 直近5試合 must be immediately above the record and clearly readable. Keep footer text unobstructed. No excessive decoration.\n\nEXACT TEXT, and no additional editorial text:\nTop small masthead: 「バスケまとめ」\nTop small article date: 「2026.11.11」\nLarge team heading: 「北海道」\nMedium scope label: 「直近5試合」\nLargest line: 「4勝1敗」\nLower supporting headline: 「速攻とペイントで稼ぐ」\nSmall scope line: 「対象：10/24〜11/9」\nFooter, small but clearly readable: 「イラスト（AI生成）」\nFooter next to it: 「成績をもとにしたイメージ」\n\nThese claims come exclusively from the supplied fixed article: Hokkaido won 4 and lost 1 in five games from October 24 through November 9, 2026; the article analyzes fast-break and paint scoring. Do not incorporate any data from the external profile, do not imply season-wide 4–1, do not add a win over San-en, do not add a player scoring statistic, do not assert a specific real play. Do not print the player's name (the picture is supporting a team analysis). Render Japanese lettering exactly and crisply. Output exactly one complete finished thumbnail.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "image_count": 1,
+      "generation_calls": 1,
+      "revision_count": 0,
+      "generated_file": "/Users/genjo/.codex/generated_images/01a1cc0a-e3fc-7353-89a1-d55cdd70cfc8/exec-fb7c37d2-d268-4d12-9f87-beeaf6abb776.png",
+      "saved_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b8e57fc44efb24a6ee5f/generated.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "postprocessing": "なし。生成PNGをそのままコピー。",
+      "qa_method": "生成画像の表示と保存元PNGをview_imageで実見。本文・公式容姿写真・承認済み画風と照合。",
+      "qa_observations": {
+        "text_and_numbers": "北海道、直近5試合、4勝1敗、速攻とペイントで稼ぐ、日付・期間・背番号を実画像で確認。",
+        "source_qualifiers": "直近5試合と対象期間を明示し、特定試合の再現とは記していない。成績をもとにしたイメージを確認。",
+        "likeness_or_no_named_person": "富永啓生の髪型・輪郭・頬・目鼻・ひげのない顔を公式写真と照合。架空選手なし。",
+        "layout": "太い見出しと人物が分離し、文字・顔・両手・ボールの欠けなし。両腕と指の形を確認。脚は意図的なフレーミング。",
+        "ai_label": "イラスト（AI生成）と成績をもとにしたイメージを下部に判読できる形で確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-11T19:20:10.998698+00:00",
+  "publication_approved": false
+}

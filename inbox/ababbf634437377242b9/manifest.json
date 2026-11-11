@@ -1,0 +1,91 @@
+{
+  "id": "ababbf634437377242b9",
+  "article_path": "article-stats-20261110.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261110.html",
+  "source_commit": "",
+  "source_blob_sha": "0f52cc0382e0b97bfe76c8559f69954f2d9a7099",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "dd456a4955d86cb15bb02e293ee3c2199dacb2fbf341f847a8696d843a8ca9e3",
+  "last_observed_blob_sha": "0f52cc0382e0b97bfe76c8559f69954f2d9a7099",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ababbf634437377242b9/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ababbf634437377242b9/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-10T14:15:40.032095+00:00",
+  "creation_event_id": "8b100f269aac20ffb3a6",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/ababbf634437377242b9/thumbnail.png",
+  "image_sha256": "0b28f5e87f35bbcad1078d84e2e008e9f18943e14cbf1b021497d90e033391e3",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "0f52cc0382e0b97bfe76c8559f69954f2d9a7099",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.10｜Bプレミア・当日3試合",
+      "貢献度1位",
+      "アルキンズ",
+      "東京SR",
+      "EFF 44",
+      "28得点・9REB・5AST",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ababbf634437377242b9/source.html",
+        "article_url": "https://basuke-matome.jp/article-stats-20261110.html",
+        "used": "見出し、導入、貢献度ランキング1位。当日のBプレミア3試合が対象。記事内容の根拠はこの固定HTMLと固定TXTのみ。"
+      },
+      {
+        "role": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ababbf634437377242b9/source.txt",
+        "used": "11月10日・ラウリー・アルキンズ（東京SR）・EFF44・28得点・9REB・5ASTを照合。"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "used": "view_imageで確認。黒×ライム、太い日本語見出し、インク・ブラシ、非写実イラストの作風のみ。別記事の人物・数値は流用しない。"
+      },
+      {
+        "role": "appearance_only",
+        "title": "東京サンロッカーズ公式 ラウリー・アルキンズ プロフィール",
+        "url": "https://www.sunrockers.jp/team/players/detail/id=22981?PlayerID=51000515",
+        "image_url": "https://sunrockers.bl.kuroco-img.app/v=1790213801/files/user/26-27_SEASON/player/%230_Rawle%20Alkins.jpg",
+        "used": "公式顔写真をダウンロードしてview_imageで実見。容姿の参照のみ。写真・ロゴ・スポンサー文字を成果物に貼り付けない。外部の成績は画像の根拠にしていない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ラウリー・アルキンズ",
+        "english_name": "Rawle Alkins",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿の見出し・導入で最も大きく扱われ、当日の貢献度ランキング1位と明記されているため。ランダム選択ではない。",
+        "reference_source": "東京サンロッカーズ公式プロフィール",
+        "reference_url": "https://www.sunrockers.jp/team/players/detail/id=22981?PlayerID=51000515",
+        "reference_image_url": "https://sunrockers.bl.kuroco-img.app/v=1790213801/files/user/26-27_SEASON/player/%230_Rawle%20Alkins.jpg",
+        "observed_appearance": "短い密な黒いカールと側頭部の刈り上げ、幅のある卵型の輪郭と顎、太めの眉、切れ長の目、幅のある鼻、厚めの唇、整った口ひげと短い顎ひげ、がっしりした首と肩。",
+        "depiction": "1人で低くドリブルする一般的なプレーのイラスト。特定の試合場面の再現ではない。無地の紫ユニフォーム。写真風ではない。",
+        "verification": "初稿を目視確認後、公式写真と比べて髪が長く頬ひげが濃かったため1回だけ修正。修正版の短髪・刈り上げ・整ったひげ・輪郭・目鼻を公式写真と比較確認。両手の指、ボール、文字の収まり、ロゴなしを目視確認。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT:\n用途：スポーツ記事「バスケまとめ」のサムネイルを1枚だけ作る。横長16:9、1600×900相当、長辺1000px以上のPNG。完成画像そのものを作成する。\n\n承認済みの作風：黒 #151A18 と鮮やかなライム #CCF43B、アイボリーの力強い日本語極太ゴシック。手描きのインク・ドライブラシ、ざらついた紙の質感、勢いのあるストローク、少ない要素。写真風、3D、漫画の吹き出しにはしない。\n\n主役は実在のプロバスケットボール選手「ラウリー・アルキンズ（Rawle Alkins）」1人。架空の選手ではない。東京サンロッカーズ公式プロフィール写真 https://www.sunrockers.jp/team/players/detail/id=22981?PlayerID=51000515 を実際に確認した容姿：肌は濃い褐色、がっしりした首と肩・筋肉質な体格、短い黒い密なカールのクロップヘアと刈り上げ、輪郭は幅のある卵型で強い顎、額は広め、太めの眉、切れ長の目、幅のある鼻、厚めの唇、口ひげと顎にまとまった短い黒ひげ、頬のひげは短く整っている。顔の特徴が読めるアイボリーと黒のインク線にし、顔を黒く潰さない。誇張しすぎない似顔絵イラスト。公式写真は貼り込まない。\n\n構図：右側45%にアルキンズが腰を落とし前へ力強く踏み込み、片手でオレンジのボールを低くドリブルしながら視線を前へ向けるプレー姿。斜めの肩と動きのある腕で躍動感。頭、両手、ボールが全部画面内に入り、手指とボールの接触が自然。ポートレートの直立姿でも両手を上げるシュート姿でもない。膝上までの構図でよい。無地の落ち着いた紫のユニフォームを少し見せ、主にアイボリーと黒の線画。ユニフォームは完全な無地で番号、ロゴ、マーク、スポンサー文字なし。背景は黒地に右側だけライムの太い斜めブラシ。架空の相手選手や観客は描かない。\n\n左側55%に次の日本語と数字だけを正確にレイアウト。すべて余白内に収め、文字は重ねない。中央の「44」を最大のライム色ブラシ数字にし、左横または上に「EFF」を明瞭に添える。得点44と誤読させない。文字の読みやすさが優先。サイズの序列をつけ、数字以外の装飾やグラフは不要。\n表示文字（この表記を守る）：\n「バスケまとめ」\n「2026.11.10｜Bプレミア・当日3試合」\n「貢献度1位」\n「アルキンズ」\n「東京SR」\n「EFF 44」\n「28得点・9REB・5AST」\n下端に、縮小しても読める注記を2つ：\n「イラスト（AI生成）」\n「成績をもとにしたイメージ」\n\n内容は指定された固定原稿の見出し・導入・ランキング1位の値のみ。2026年11月10日のBプレミア当日3試合で貢献度EFFが1位44、28得点9リバウンド5アシスト。シーズン通算1位や得点1位の断定にしない。これは成績をもとにした一般的なプレーのイメージであり、当日の実際の瞬間、決勝点、特定のシュート成功を再現する描写ではない。実在の試合写真風、チームロゴ、リーグロゴ、公式写真の切り抜き、透かし、余分な英単語や背番号は絶対に入れない。安全余白は四辺5%。\n\nONE CORRECTION PROMPT:\nEdit image 1 (the thumbnail) only. Image 2 is the official portrait of the real athlete Rawle Alkins, used ONLY as a facial-likeness reference; do not paste or composite any photographic pixels, logos, or sponsor marks.\n\nRetain the approved ink-and-brush illustration style, black/lime/ivory palette with plain purple uniform, ALL existing Japanese typography, numbers, labels, and their precise spelling. Keep the same driving/dribbling pose, ball, hand positions and composition. Keep canvas 16:9 at the original resolution. This is a modest likeness correction, not a redesign.\n\nCorrect ONLY the player's head and facial likeness to match the portrait:\n- His hair is a very short, close-cropped layer of tight black curls, with a neat low fade on the sides. Remove the tall bulky curled mound in image 1; reduce the top hair height by roughly 60%. Preserve a broad forehead and the subtle shape of the portrait's hairline.\n- His cheek beard is very short and tidy, almost shaved; eliminate the heavy shaggy/full cheek beard. Retain the neat black moustache and a compact short goatee/chin beard connected near the mouth. Match the photograph's well-groomed facial hair silhouette.\n- Follow the official reference's broad oval face with a strong jaw, thick eyebrows, almond-shaped eyes, broad nose and full lips. His expression remains focused on playing, rather than the smiling pose of the reference.\nRender those precise characteristics as drawn, clean, recognizable ink linework, maintaining clear face midtones and shadows. No photographic texture, no photorealism.\nAll exact text must stay unchanged: バスケまとめ / 2026.11.10｜Bプレミア・当日3試合 / 貢献度1位 / アルキンズ / 東京SR / EFF 44 / 28得点・9REB・5AST / イラスト（AI生成） / 成績をもとにしたイメージ.\nNo extra text, no logos, no extra people. Deliver ONE corrected PNG.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "image_calls": 2,
+      "corrections": 1,
+      "selected_image": "exec-d2c2ba4f-27a4-443e-8760-ce0d30a21fc9.png",
+      "final_file": "generated.png",
+      "api_or_cli_used": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-11T19:17:07.872913+00:00",
+  "publication_approved": false
+}
