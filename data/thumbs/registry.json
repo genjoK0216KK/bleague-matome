@@ -588,6 +588,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "千葉ジェッツ対大阪の試合前予測、ウィリアムズ離脱でもコステロが復帰"
   },
+  "article-daily-20261111.html": {
+   "article_path": "article-daily-20261111.html",
+   "editorial_fingerprint": "7426e9de343c6c48a596fa455503774314b252981b17fb1ee4f640d622195c0e",
+   "files": {
+    "eyecatch": {
+     "height": 721,
+     "path": "thumbs/auto/article-daily-20261111-43ca63d15b00.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261111-43ca63d15b00-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "63c6e53ee8fdfa5ca846",
+   "image_sha256": "43ca63d15b002be7c6f5b68d67c0d5cb66c7b4c9e2b53f042ef3151588b35e5c",
+   "imported_at": "2026-11-11T19:46:22.423261+00:00",
+   "prepared_at": "2026-11-11T19:32:13.452397+00:00",
+   "source_blob_sha": "efe684bc715333970f02dc12b6af98b0d6a963a5",
+   "source_size": [
+    1671,
+    941
+   ],
+   "stable_fingerprint": "7426e9de343c6c48a596fa455503774314b252981b17fb1ee4f640d622195c0e",
+   "style": "ink-lime-portrait-v5",
+   "title": "長崎ヴェルカ対A東京の試合前予測、3連敗の長崎はリバウンド差10本が壁"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -1064,6 +1092,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "11/10 出場予定選手（登録選手）のベスト5"
   },
+  "article-games-20261111.html": {
+   "article_path": "article-games-20261111.html",
+   "editorial_fingerprint": "220ffe3bc3dc9b69211ab8c039ecd80d745903e4983be3a0fa13bca1f929f03e",
+   "files": {
+    "eyecatch": {
+     "height": 731,
+     "path": "thumbs/auto/article-games-20261111-00b4a7fd2c9e.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-games-20261111-00b4a7fd2c9e-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "1c6b12ccc9b251eba8c0",
+   "image_sha256": "00b4a7fd2c9eadf560683b7804c6aac4e749f2e68b2f076129215466e6b8deae",
+   "imported_at": "2026-11-11T19:46:22.547583+00:00",
+   "prepared_at": "2026-11-11T19:36:08.550267+00:00",
+   "source_blob_sha": "144a09e37b76d1501785a05e2e68558aa25d018f",
+   "source_size": [
+    1659,
+    948
+   ],
+   "stable_fingerprint": "220ffe3bc3dc9b69211ab8c039ecd80d745903e4983be3a0fa13bca1f929f03e",
+   "style": "ink-lime-portrait-v5",
+   "title": "11/11 試合結果・当日のEFF"
+  },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
    "editorial_fingerprint": "e19b14f8f8d94cccdae186da2df34e0edfdbee28d446a577722d48f470c2eea5",
@@ -1428,6 +1484,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "11/10 出場予定選手（登録選手）のベスト5"
   },
+  "article-results-one-next-20261111.html": {
+   "article_path": "article-results-one-next-20261111.html",
+   "editorial_fingerprint": "220ffe3bc3dc9b69211ab8c039ecd80d745903e4983be3a0fa13bca1f929f03e",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-results-one-next-20261111-00179bf27a49.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-results-one-next-20261111-00179bf27a49-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "2004d09328ace296fc36",
+   "image_sha256": "00179bf27a49512623a0d874f9f8d276fa708c343a16ada0f44a6252881f8b85",
+   "imported_at": "2026-11-11T19:46:22.670472+00:00",
+   "prepared_at": "2026-11-11T19:39:36.209160+00:00",
+   "source_blob_sha": "b4495467f99ae0e2196527d82adc60943ec6937c",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "220ffe3bc3dc9b69211ab8c039ecd80d745903e4983be3a0fa13bca1f929f03e",
+   "style": "ink-lime-portrait-v5",
+   "title": "11/11 試合結果・当日のEFF"
+  },
   "article-stats-20261026.html": {
    "article_path": "article-stats-20261026.html",
    "editorial_fingerprint": "fa8bf9395b06c6d599e33f04949ace3dd509a5381fb0af173f99fa72386c4be5",
@@ -1682,27 +1766,6 @@
   }
  },
  "log": [
-  {
-   "article": "article-results-one-next-20261106.html",
-   "at": "2026-11-06T13:29:05.133389+00:00",
-   "event": "imported",
-   "id": "7229b09a7f88459f4780",
-   "image": "03f5316e33e1"
-  },
-  {
-   "article": "article-stats-20261106.html",
-   "at": "2026-11-06T13:29:05.271594+00:00",
-   "event": "imported",
-   "id": "063daeab6587291acbe0",
-   "image": "7c4053cf7eb9"
-  },
-  {
-   "article": "article-games-20261107.html",
-   "at": "2026-11-06T16:48:32.359966+00:00",
-   "event": "imported",
-   "id": "50222bd804efe24c13be",
-   "image": "ed52d95b5e1d"
-  },
   {
    "article": "article-results-one-next-20261107.html",
    "at": "2026-11-06T19:40:20.958802+00:00",
@@ -2241,6 +2304,27 @@
    "event": "imported",
    "id": "ababbf634437377242b9",
    "image": "0b28f5e87f35"
+  },
+  {
+   "article": "article-daily-20261111.html",
+   "at": "2026-11-11T19:46:22.423285+00:00",
+   "event": "imported",
+   "id": "63c6e53ee8fdfa5ca846",
+   "image": "43ca63d15b00"
+  },
+  {
+   "article": "article-games-20261111.html",
+   "at": "2026-11-11T19:46:22.547606+00:00",
+   "event": "imported",
+   "id": "1c6b12ccc9b251eba8c0",
+   "image": "00b4a7fd2c9e"
+  },
+  {
+   "article": "article-results-one-next-20261111.html",
+   "at": "2026-11-11T19:46:22.670494+00:00",
+   "event": "imported",
+   "id": "2004d09328ace296fc36",
+   "image": "00179bf27a49"
   }
  ],
  "seen": {
@@ -2254,6 +2338,8 @@
   "13dc704824ed84d25fee": "imported",
   "1913b0272098f45815bd": "superseded:7229b09a7f88459f4780",
   "1c38428eb633005c7c3f": "superseded:cba03e879d01718161f9",
+  "1c6b12ccc9b251eba8c0": "imported",
+  "2004d09328ace296fc36": "imported",
   "221f82c44ae5094ac68b": "superseded:c422e01f21c312cd1a36",
   "227771a8a08cdddea2d2": "imported",
   "2912f2bf307b5ed2a60d": "superseded:b54717dd6365eef30b2d",
@@ -2291,6 +2377,7 @@
   "5e231e28b370cb26f1f6": "imported",
   "602157ba437d2c7416b9": "imported",
   "619af1e58cddd34c14bc": "imported",
+  "63c6e53ee8fdfa5ca846": "imported",
   "64677ebbbdc4b4827d54": "superseded:13dc704824ed84d25fee",
   "6670e21fc5cefcf17877": "superseded:2fad4903e119f5b6b0ea",
   "68dfe1f0dced4d4c7777": "imported",
