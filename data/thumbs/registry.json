@@ -1763,16 +1763,37 @@
    "stable_fingerprint": "dd456a4955d86cb15bb02e293ee3c2199dacb2fbf341f847a8696d843a8ca9e3",
    "style": "ink-lime-portrait-v5",
    "title": "11月10日の貢献度ランキング 1位はラウリー・アルキンズ（東京SR）の44"
+  },
+  "article-stats-20261111.html": {
+   "article_path": "article-stats-20261111.html",
+   "editorial_fingerprint": "29c5759ddce8fd7553614fb27ae41a824899037d51345d714aca37ec7ea259b0",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-stats-20261111-5114704c7ee6.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-stats-20261111-5114704c7ee6-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "78ca7844d444d221d45a",
+   "image_sha256": "5114704c7ee6a24fe966d2015f9780e59d14afcf89aa14da7d2f0c8b550e909f",
+   "imported_at": "2026-11-11T19:47:12.535925+00:00",
+   "prepared_at": "2026-11-11T19:42:20.418892+00:00",
+   "source_blob_sha": "4c599d15720489f9df6782845a2334aeec9e7e95",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "29c5759ddce8fd7553614fb27ae41a824899037d51345d714aca37ec7ea259b0",
+   "style": "ink-lime-portrait-v5",
+   "title": "11月11日の貢献度ランキング 1位はジャレット・カルバー（仙台）の42"
   }
  },
  "log": [
-  {
-   "article": "article-results-one-next-20261107.html",
-   "at": "2026-11-06T19:40:20.958802+00:00",
-   "event": "imported",
-   "id": "b45b5e2e79d347a929b3",
-   "image": "974abca59410"
-  },
   {
    "article": "article-games-20261104.html",
    "at": "2026-11-06T20:47:48.298742+00:00",
@@ -2325,6 +2346,13 @@
    "event": "imported",
    "id": "2004d09328ace296fc36",
    "image": "00179bf27a49"
+  },
+  {
+   "article": "article-stats-20261111.html",
+   "at": "2026-11-11T19:47:12.535950+00:00",
+   "event": "imported",
+   "id": "78ca7844d444d221d45a",
+   "image": "5114704c7ee6"
   }
  ],
  "seen": {
@@ -2390,6 +2418,7 @@
   "7323c5f3c2556686df0c": "superseded:f4370ce664d0aaa5d148",
   "75a5c2e5b4ddddc773c3": "imported",
   "75e3bc615bf24e4df460": "superseded:8926ed6e2f6c758b34aa",
+  "78ca7844d444d221d45a": "imported",
   "7ad8c412ccd18f5f073f": "superseded:e51cb8d8899804e71a3c",
   "7b37144d46a646e84340": "imported",
   "7d40ba767806af33dbf4": "superseded:ca69b5d16263483eb1ed",
