@@ -1,0 +1,76 @@
+{
+  "id": "c3151cd8b45c0d6d80ab",
+  "article_path": "article-daily-20261112.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261112.html",
+  "source_commit": "",
+  "source_blob_sha": "4a71dfb41a597d60695710f2836d11befd9e5a88",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "375358cfe27e91a8cc0e23f105a22cef65b852d2e622ac670af19f445a11deba",
+  "last_observed_blob_sha": "4a71dfb41a597d60695710f2836d11befd9e5a88",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c3151cd8b45c0d6d80ab/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c3151cd8b45c0d6d80ab/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-11T23:15:27.932004+00:00",
+  "creation_event_id": "9278506a40835e05cc85",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/c3151cd8b45c0d6d80ab/thumbnail.png",
+  "image_sha256": "4efdedc9384442b5551c5a923b6d3149314bb4359965ff98b8b10ff8b1c10d69",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "4a71dfb41a597d60695710f2836d11befd9e5a88",
+    "text_lines": [
+      "11.12｜試合前予測",
+      "琉球 vs 東京SR",
+      "連敗脱出の鍵は",
+      "守備と",
+      "リバウンド",
+      "当日の出場状況は未確認",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c3151cd8b45c0d6d80ab/source.html",
+        "role": "固定版本文。記事の対戦、日付、3連敗、予測、守備・リバウンドの分析、出場状況未確認だけを見出しの根拠とした。関連記事・広告・外部ページは本文の根拠にしていない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c3151cd8b45c0d6d80ab/source.txt",
+        "role": "固定版文章の全文を照合。『琉球が勝つには、守備の強度を上げること』『リバウンドで相手に2度目の機会を与えない形が理想』『両チームの当日の出場状況が未確認』を確認。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "グラント・ジェレット / Grant Jerrett",
+        "selection": "ランダム",
+        "selection_reason": "チーム同士の試合前展望で主役選手を特定できないため、本人指定の優先順位に従い本文に名前が出る選手から選択。該当候補がジェレット1人のみのため、その1人を採用。",
+        "official_profile_url": "https://goldenkings.jp/team/players/detail/id=26065?PlayerID=18430",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026111208/files/user/roster/701/2026-27/18430_01.jpg",
+        "reference_usage": "公式プロフィール写真をダウンロードしview_imageで目視確認。容姿の参照のみ。元写真の貼付・使用なし。",
+        "observed_features": "短い黒い巻き髪、側頭部の短い刈り込み、太い眉、アーモンド形の目、縦長の輪郭、口ひげと顎下までの濃く長い黒ひげ。生成画像でもこれらを確認。",
+        "source_caveat": "本文ではIL登録中。画像は抽象的なプレーのイメージであり、当日の出場、復帰、活躍、実際の試合場面を表さない。画像内には氏名・背番号・個人成績を入れていない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT:\nUse case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail as a PNG, landscape 16:9, 1600x900 or higher. This is a BRAND NEW image, not a photograph or a copied existing composition.\nApproved visual direction: dark near-black #151A18 background, vivid lime #CCF43B accents, ivory typography, hand-drawn black-and-ivory ink illustration with energetic dry-brush strokes and a few splatters. Strong, professional Japanese sports editorial graphic with few elements and crisp oversized text.\nContent is a November 12 preview of 琉球 vs 東京SR. The headline is analysis about Ryukyu escaping a losing streak through defense and rebounding, not a result or a promise. Do NOT add scores, personal statistics, a final result, or any claim about a particular player's appearance in the game.\n\nSubject: ONE recognizable real professional player, Grant Jerrett (グラント・ジェレット), selected from the names in the article as a random illustrative subject, NOT claimed as an expected participant or article star. I inspected his official current Ryukyu profile portrait: short tight dark curls on top, closely tapered sides, thick dark eyebrows, large brown almond-shaped eyes, narrow straight nose with rounded tip, medium olive/tan complexion, long angular oval face, very full dense black beard extending below the chin with a slightly squared lower edge, connected mustache, tall broad-shouldered athletic body. Use these specific features and preserve a clearly visible face with legible eyes and nose. NOT a clean-shaven generic fictional player. The original photo must NOT be pasted into the image. Draw him entirely as a stylized ink/brush illustration.\nHe wears a plain ivory sleeveless basketball uniform, no team badge, no sponsor, no writing, no numbers and no official patterned kit. No logo anywhere.\nPose and composition: put him on the LEFT 42% of the canvas, in a dynamic three-quarter rebound-securing pose, torso twisted toward the viewer and knees flexed, holding ONE orange basketball firmly with TWO anatomically plausible hands near upper chest/shoulder height, elbows bent. His face must stay unobscured. Fingers naturally wrap the sides of the ball. Crop deliberately at mid-thigh, not through the head, arms, hands or ball. Add a broad sweeping lime brushstroke behind his motion, separated from the text. No opponent, no fictional extra player, no crowd, no official arena, no scoreboard. This is an abstract action illustration, NOT recreation of an actual play or this matchup.\n\nLayout: top header across right half; headline on RIGHT 55%; small notes at bottom in a clear dark quiet strip. All text comfortably inset 60px or more from edges. No overlaps between face, ball, arms and text. Headline is heavy bold Japanese sans-serif, large and readable at thumbnail size; lime key words and ivory supporting words. Use ONLY the following text, spelled exactly:\nTop small date/context: 「11.12｜試合前予測」\nBelow it matchup: 「琉球 vs 東京SR」\nMain heading, medium-large: 「連敗脱出の鍵は」\nMain heading, largest lime, two lines:\n「守備と」\n「リバウンド」\nBottom small but legible qualifier: 「当日の出場状況は未確認」\nBottom credit on a separate clear line: 「イラスト（AI生成）｜イメージ」\n\nDo not write the player's name, number, personal stats, return, participation or achievement. No claim of a real moment. Keep the two bottom notes fully visible and accurate. No watermarks, league/team logos, sponsor text, photorealistic textures, or extra text. Professional restrained brush artwork, strong visual hierarchy, ample breathing room around the exact Japanese type.\n\nSINGLE CORRECTION PROMPT:\nEdit the supplied thumbnail with exactly ONE localized layout correction: keep the canvas 1672x941 landscape, and preserve ALL existing Japanese text, typography, position, palette, ink/brush style and right-side layout completely unchanged. Scale the LEFT player illustration and the basketball together down to about 90% of their current size, anchored toward lower left, so that the entire top of his curly hair is clearly visible with at least 45 pixels of dark background above it, and his far-left elbow and both hands have at least 35 pixels of clearance from the left border. The intentional lower thigh crop may remain. Keep his exact recognizable Grant Jerrett face, dense black beard, tight curls, plain unbranded ivory uniform, dynamic rebound-holding pose and both anatomically plausible five-fingered hands around the single orange ball. Do not alter the lettering or add anything. This is an illustration only, not an actual game scene or a claim of participation. Preserve exactly: 「11.12｜試合前予測」「琉球 vs 東京SR」「連敗脱出の鍵は」「守備と」「リバウンド」「当日の出場状況は未確認」「イラスト（AI生成）｜イメージ」. No names, numbers, logos, sponsor text, photos or new words.",
+    "generator": {
+      "tool": "image_gen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "corrections": 1,
+      "final_dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "qa_observations": "最終生成画像を目視検品。全7行の日本語・日付に誤りなし。予測・出場未確認・イメージの留保あり。本人の髪型・眉・輪郭・濃いひげを確認。頭頂、両腕・両手、ボール、文字の見切れなし。両手の指とボールの接触は自然。太腿の意図的なトリミングのみ。ロゴ・スポンサー文字・公式写真なし。AI生成表記が明瞭。初稿の頭頂余白を1回だけ修正。",
+      "publication": "Not performed; thumbnail_queue.py ready not run; no git operations or external delivery."
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-11T23:20:02.723659+00:00",
+  "publication_approved": false
+}
