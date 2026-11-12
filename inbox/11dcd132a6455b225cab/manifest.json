@@ -1,0 +1,83 @@
+{
+  "id": "11dcd132a6455b225cab",
+  "article_path": "article-results-one-next-20261110.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261110.html",
+  "source_commit": "",
+  "source_blob_sha": "43e96d7077e347bf6071f1fbb9a8e7c75950149e",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "1e34dcb36762078e20d07683adb7c6646d0c2ea49fe07e8eb5135ebb864fef27",
+  "last_observed_blob_sha": "43e96d7077e347bf6071f1fbb9a8e7c75950149e",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/11dcd132a6455b225cab/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/11dcd132a6455b225cab/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-12T02:03:15.476425+00:00",
+  "creation_event_id": "e39682a636eb61ecf85c",
+  "requeued_from": "8c7a1e15005b36dfd211",
+  "requeue_reason": "木村さん 11/12「A」：blocked を今の版で作り直し",
+  "checked_at": "2026-11-12T02:25:43.600743+00:00",
+  "unblocked_at": "2026-11-12T02:27:59.612758+00:00",
+  "unblock_reason": "Codex 0.167.2＋code-mode-host 入れ替え後に再試行（木村さん 11/12「A」）",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/11dcd132a6455b225cab/thumbnail.png",
+  "image_sha256": "c888c7b5d5dd30b5efbde4b090e48cd36b53574de4c11a6dcdf0c71277800d12",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "43e96d7077e347bf6071f1fbb9a8e7c75950149e",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.10",
+      "B.PREMIER",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "B.ONE・B.NEXTは試合なし",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/11dcd132a6455b225cab/source.html",
+        "role": "記事内容の根拠。タイトル、試合日、B.PREMIERの試合結果、当日のEFF・ポジション別TOP3、B.ONE・B.NEXTは試合なし。blob SHAを標準ライブラリで計算し指定値と一致確認。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/11dcd132a6455b225cab/source.txt",
+        "role": "固定HTMLと併せて本文・留保を確認。TOP3は当日の公式配信EFFによるリーグ別・登録ポジション別集計。今季平均・予想・当日の起用位置の断定ではない。画像には個人成績や順位を記載しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで確認した承認済みスタイルのみの参照。別記事の選手名・成績は転用していない。"
+      },
+      {
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=9055",
+        "role": "人物の容姿参照の出所。記事本文や当日の成績の根拠には使用しない。"
+      },
+      {
+        "url": "https://www.bleague.jp/files/user/roster/704/2026-27/9055_03.png",
+        "role": "公式プロフィール写真をローカル一時保存してview_imageで確認。写真を完成画像に貼り付けず、容姿の確認のみ。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "富樫 勇樹",
+        "selection": "ランダム",
+        "selection_reason": "記事は複数試合の結果と5ポジションの順位表を同じ形式で扱い、単独の主役を特定できないため、本文の順位表に名前が出る12選手から抽選。",
+        "selection_method": "固定HTMLの <td><strong> 内の選手名を登場順に重複排除し、Python random.Random('11dcd132a6455b225cab').choice(names) で選出。",
+        "reference_source": "B.LEAGUE公式プロフィール",
+        "reference_url": "https://www.bleague.jp/roster_detail/?PlayerID=9055",
+        "official_portrait_url": "https://www.bleague.jp/files/user/roster/704/2026-27/9055_03.png",
+        "observed_features": "中央分けで耳の上へ流れる暗色のウェーブ髪、額の露出、頬骨のある卵形の輪郭、細めの目、薄い口ひげと小さな顎ひげを公式写真で確認し、生成画像のイラストと比較した。",
+        "depiction": "ドリブル姿のイメージ。特定の実際の試合場面の再現ではない。選手名・個人成績・出場・活躍の文字は入れていない。チーム・リーグ・スポンサーのロゴとユニフォーム文字はなし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate ONE finished Japanese basketball news thumbnail, landscape 16:9, 1536x864 or larger. This is a fresh composition, not a photo.\nVisual style: approved editorial basketball ink illustration; nearly-black #151A18 background, acid lime #CCF43B dry-brush strokes, warm off-white bold typography, dramatic expressive hand-drawn black ink hatching. Restrained palette with orange only for the basketball. Strong contrast, simple composition, no photorealism.\nSubject: draw exactly ONE real player, Yuki Togashi (富樫勇樹), in a dynamic low dribble stance, three-quarter body leaning forward on the RIGHT 43 percent of the canvas, head turned slightly toward left, one hand controlling the ball low beside his hip, opposite arm bent naturally. His face must be recognizable rather than a generic player.\nOfficial appearance reference inspected at https://www.bleague.jp/files/user/roster/704/2026-27/9055_03.png, linked through official profile https://www.bleague.jp/roster_detail/?PlayerID=9055 . Recreate the observed face in drawn ink only: compact athletic Japanese adult man; short-to-medium dark hair parted at the center with gently wavy curtain strands swept outward above and around the ears; forehead visible, softly angular oval face, prominent cheekbones, slightly narrow almond eyes, straight medium nose, light sparse moustache and a distinct short small chin goatee, not a full beard. Keep face lit with off-white planes and legible features. Plain off-white basketball vest and shorts with dark trim. Absolutely no uniform words, numbers, badges, team/league logos, sponsor marks or copied photo pixels.\nComposition: large clean Japanese type on LEFT 56 percent, player on right with lime brush speed diagonals behind him. The hands and complete orange ball stay inside the frame; anatomically coherent arms and fingers. Head, hands and ball must not overlap any text. Maintain generous safe padding about 5 percent at all edges. Deliberate crop at lower thighs is acceptable; no cropping of face, ball, hands or lettering.\nText: render ONLY the following exact strings, correct Japanese, no invented copy.\nTop left small publication header: 「バスケまとめ」\nBelow it medium date: 「2026.11.10」\nSmall category kicker: 「B.PREMIER」\nHuge bold white main heading: 「試合結果」\nSecond large heading: 「当日のEFF」\nProminent lime brush strip with bold dark lettering: 「ポジション別TOP3」\nSmaller clear qualifier below headings: 「B.ONE・B.NEXTは試合なし」\nBottom left readable off-white disclosure with ample bottom margin: 「イラスト（AI生成）｜イメージ」\nAll type must remain easy to read at thumbnail scale; Japanese gothic heavy sans, brush texture confined mostly to backgrounds rather than letter interiors.\nEditorial meaning: this thumbnail summarizes the fixed article's 2026-11-10 completed game results and official EFF rankings by position, not season averages or predictions. Togashi was RANDOMLY selected from the players named in the article as an illustration subject only. Do not print his name, his individual statistics, attendance, rank or any claim of his performance. TOP3 describes the article's position-based rankings collectively. The dribbling pose is a conceptual illustration, NOT a recreation of a particular game moment. No scores, opponent, hoop, arena, crowd, trophy, additional players or unrelated numbers.\nDeliver one polished raster PNG with an opaque dark background.",
+    "generator": "内蔵 image_gen.imagegen。新規生成1回、修正0回。API・CLI生成への切り替えなし。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-12T02:34:44.807605+00:00",
+  "publication_approved": false
+}

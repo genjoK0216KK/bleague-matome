@@ -1,0 +1,101 @@
+{
+  "id": "e581198d6acbcde5fe72",
+  "article_path": "article-games-20261110.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261110.html",
+  "source_commit": "",
+  "source_blob_sha": "e1b1ebfb618100f2e19761c43e41e403d85d0d37",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "70b38b7a8ff7365e693cc29003d50d9a3cf176c487aef1a9a7c7635b43dfe786",
+  "last_observed_blob_sha": "e1b1ebfb618100f2e19761c43e41e403d85d0d37",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e581198d6acbcde5fe72/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e581198d6acbcde5fe72/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-12T02:03:13.430669+00:00",
+  "creation_event_id": "2e4114e4385022f4f2df",
+  "requeued_from": "b3c5c478cfd218d5cba8",
+  "requeue_reason": "木村さん 11/12「A」：blocked を今の版で作り直し",
+  "checked_at": "2026-11-12T02:23:33.859905+00:00",
+  "unblocked_at": "2026-11-12T02:27:58.762176+00:00",
+  "unblock_reason": "Codex 0.167.2＋code-mode-host 入れ替え後に再試行（木村さん 11/12「A」）",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/e581198d6acbcde5fe72/thumbnail.png",
+  "image_sha256": "07b9ffb69ef22a929c7242545744aef8641990765b44bd7555cf137e621605b5",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "e1b1ebfb618100f2e19761c43e41e403d85d0d37",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.10",
+      "試合結果",
+      "当日のEFF",
+      "B.PREMIER｜ポジション別TOP3",
+      "イラスト（AI生成）／イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_body",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e581198d6acbcde5fe72/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261110.html",
+        "note": "本文根拠。固定HTMLのblob SHAをgitを使わず算出し、指定値との一致を確認。"
+      },
+      {
+        "type": "article_body",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e581198d6acbcde5fe72/source.txt",
+        "note": "本文根拠。11/10試合結果・当日の公式EFF・リーグ別ポジション別TOP3。今季平均や予想とは別。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "view_imageで目視。黒×ライム、太字、手描きインクの承認済みスタイルのみ参照。氏名・成績・日付は転用しない。白地参照A-faison-ivory-v3.pngは指定フォルダに存在せず未使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ヨーリ・チャイルズ",
+        "name_en": "Yoeli Childs",
+        "selection": "ランダム",
+        "selection_method": "本文のポジション別ランキングに掲載された重複を除く12選手からPython secrets.choiceで1人を無作為選択。特定選手を主役にした本文ではないため。",
+        "candidate_names": [
+          "久保田 義章",
+          "瀬川 琉久",
+          "富樫 勇樹",
+          "ブランドン・ランドルフ",
+          "キーボン・ハリス",
+          "西田 優大",
+          "ラウリー・アルキンズ",
+          "ルーク・メイ",
+          "ヴォーディミル・ゲルン",
+          "ヨーリ・チャイルズ",
+          "ブライソン・ウィリアムズ",
+          "ファーダウス・アイマク"
+        ],
+        "official_profile_url": "https://www.storks.jp/team/players/detail/id=18907?PlayerID=51000317",
+        "official_image_url": "https://storks.bl.kuroco-img.app/v=1788785463/files/user/%2323_%E3%83%A8%E3%83%BC%E3%83%AA%E3%83%81%E3%83%A3%E3%82%A4%E3%83%AB%E3%82%BA.jpg",
+        "reference_viewed": true,
+        "reference_observations": "公式プロフィールの肖像をview_imageで確認。短い黒い巻き毛とサイドのフェード、幅のある輪郭、あご全体に沿う濃いひげと口ひげ、目鼻、太い首と肩をイラストの形状へ反映。",
+        "use_limit": "容姿の参照のみ。公式写真の貼り付けなし、ロゴ・スポンサー・氏名・背番号なし。本文以外の成績情報は使用していない。",
+        "scene": "両手でボールを確保する動作のイメージ。11/10の特定の実際のプレーを再現したものではない。",
+        "text_restriction": "ランダム選出選手の名前・成績・出場・活躍を画像の文字で記述していない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset type: One Japanese basketball news thumbnail, landscape PNG, 1536 x 864 (16:9), minimum width 1000 pixels.\nPrimary request: Create exactly ONE finished editorial thumbnail for バスケまとめ. Match the viewed approved black-and-lime ink illustration style: near-black #151A18, vivid lime #CCF43B, warm ivory type, bold Japanese typography, energetic dry brush and ink hatching, few elements, clear hierarchy.\n\nSubject and identity: Depict ONLY the real professional basketball player Yoeli Childs (ヨーリ・チャイルズ), whose official Kobe Storks portrait was just inspected in the conversation. Use his actual likeness, never an invented generic player. Facial reference: dense short black curls with closely faded sides, broad oval face and wide strong jaw, full neatly shaped dark beard following the jaw and chin, connected moustache with a small patch under the lower lip, dark almond-shaped eyes, gently arched brows, broad nose with rounded tip, full lips, sturdy neck and muscular broad shoulders. Preserve these distinguishing features. Skin rendered in warm gray/ivory and black brush tones, unmistakably hand-drawn. No photographic texture, no pasted portrait.\nScene: A dynamic imagined basketball movement, not a reconstruction of any actual match. Three-quarter view of Childs on the RIGHT, torso turning left while securing a rebound with BOTH HANDS around ONE orange basketball at upper-chest/shoulder height to his right. Face clearly visible, focused eyes looking toward the ball. Ball and both hands fully inside frame; anatomically natural hands, five digits per hand, two arms only. Show upper thighs to head; natural deliberate crop at thighs. Plain ivory basketball jersey and shorts with dark brush shadows, absolutely no logos, sponsor marks, team name, player name, jersey number or lettering on clothing. No other people.\n\nLayout: LEFT about 58 percent is reserved for typography with generous clear separation from the player. Header small at upper left; two huge headline lines below, the first ivory and the second lime. One compact scope line below headlines. On the right, a diagonal lime brush slash behind the player conveys movement, without clutter or realistic arena. All text and the entire ball stay comfortably within 5 percent safe margins. Footer on a quiet dark area, clearly readable.\n\nExact text, all and only these seven strings:\n「バスケまとめ」\n「2026.11.10」\n「試合結果」\n「当日のEFF」\n「B.PREMIER｜ポジション別TOP3」\n「イラスト（AI生成）」\n「イメージ」\n\nContent constraints: The article is the November 10 game-results and that day's official EFF rankings, by position. The illustrated player was randomly selected from the article's player list; do NOT label him as the star, top performer or any specific rank. Do not show his name, numbers, score, statistics or claims about his participation or achievement. Do not introduce season averages or future predictions. The illustration is only an image of basketball play. Keep the exact date, league scope, daily-EFF wording and position-based TOP3 wording. Do not carry over Culver, Faison, 38 points or any score from the approved style sample. No team/league logos, no official photo pixels, no watermarks besides the required AI label. Create one image only.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generations": 1,
+      "revisions": 0,
+      "original_output": "/Users/genjo/.codex/generated_images/01a1cd95-5d57-7d03-91ee-f06b9d77e1b6/exec-9e8abea1-fc4b-4bc1-9a03-7fbadd12ab48.png",
+      "qa_method": "生成された画像を実際に表示して目視確認。文字・日付・当日のEFFとポジション別の範囲、公式肖像に基づく容姿、両手と腕、意図しない見切れの有無、AI生成・イメージ表記を確認し合格。",
+      "output_filename": "generated.png"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-12T02:31:10.688026+00:00",
+  "publication_approved": false
+}
