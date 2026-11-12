@@ -1,0 +1,86 @@
+{
+  "id": "0dccc38884fa1a8278db",
+  "article_path": "article-results-one-next-20261112.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261112.html",
+  "source_commit": "",
+  "source_blob_sha": "c208f23edaa1e6c3a98374930064c7183e6befd5",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "73169f226ca281092ad029f5a706f756430a3c90792ae95414c7d011ba1b0b97",
+  "last_observed_blob_sha": "c208f23edaa1e6c3a98374930064c7183e6befd5",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/0dccc38884fa1a8278db/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/0dccc38884fa1a8278db/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-12T10:14:13.753098+00:00",
+  "creation_event_id": "c3cc496ef98bc64e9dd3",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/0dccc38884fa1a8278db/thumbnail.png",
+  "image_sha256": "5d29987a4f3bf10794033f80a37bdedf60a69c3f2f54e238ec411a37d6d0a53b",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "c208f23edaa1e6c3a98374930064c7183e6befd5",
+    "text_lines": [
+      "11/12 試合結果",
+      "公式記録の",
+      "確定待ち",
+      "2026.11.12 19:07 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "source.html",
+        "role": "固定本文・唯一の記事内容根拠（source.txtと併用）",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261112.html"
+      },
+      {
+        "path": "source.txt",
+        "role": "固定本文・唯一の記事内容根拠（source.htmlと併用）",
+        "qualifier": "2026-11-12 19:07 JST時点、全試合の公式記録確定待ち。平均EFFは当日実績ではなく、出場確定を示さない。画像は記録確定待ちのみを扱い、平均や出場には言及しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで実見した承認済みスタイル参照のみ。人物・日付・成績は引き継がない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ブランドン・ランドルフ",
+        "selection": "ランダム",
+        "selection_method": "固定本文の掲載順10選手を候補とし、作業ID 0dccc38884fa1a8278db をシードに Python random.Random.choice で選出。本文の主役とは扱わない。",
+        "official_profile_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000643",
+        "official_image_url": "https://www.bleague.jp/files/user/roster/704/2026-27/51000643_03.png",
+        "reference_inspected": true,
+        "appearance": "後方へ編み込んだ細いコーンロウ、短い側頭部、縦長の輪郭、頬骨、細い口ひげ、顎先の濃いひげ、細身の長い手足、左肩のタトゥーを公式画像で確認。",
+        "usage": "容姿の参照のみ。公式写真を貼り付けない。実際の試合場面の再現ではなく汎用のプレーイメージ。画像に氏名・成績・出場・活躍は記載しない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate ONE finished Japanese editorial basketball thumbnail, landscape 16:9, 2048x1152 pixels preferred. It must be an expressive hand-drawn ink-and-brush illustration, emphatically NOT a photograph or photorealistic render.\n\nUse the approved black/lime thumbnail previously inspected in this conversation only as a STYLE reference: near-black #151A18, electric lime #CCF43B, warm ivory lettering, vigorous dry-brush textures and energetic ink hatching, few elements, extremely bold Japanese typography. Do not carry over that sample's player, name, date, score, composition, or performance claims.\n\nSUBJECT: One real basketball player, Brandon Randolph (ブランドン・ランドルフ), based on the B.LEAGUE official portrait inspected in this conversation (https://www.bleague.jp/files/user/roster/704/2026-27/51000643_03.png). His distinctive features must be recognizable: neat tight black cornrow braids swept back with visible scalp partings and short closely clipped sides; elongated oval face with high cheekbones and tapered jaw; arched dark eyebrows and almond-shaped eyes; broad smiling mouth in the reference but use a focused, calm playing expression here; thin mustache, fine short jawline beard and a darker pointed chin goatee; warm medium-brown skin, long lean athletic frame. Keep the face readable in the ink illustration, not silhouetted. Left shoulder/upper arm has dark tattoo shading, but no lettering in tattoos. A plain ivory sleeveless jersey with dark edges and plain dark basketball shorts; NO team branding, NO jersey number, NO sponsors, NO logo, NO player name.\n\nCOMPOSITION: Player dominates the LEFT 43% of the image, in a low forward-driving three-quarter stance, torso twisting slightly toward the viewer, one hand controlling an orange basketball near waist/hip level and the other arm bent naturally for balance. Face, both hands, ball and upper legs entirely visible and anatomically plausible. Keep fingers distinct, arms connected correctly. This is an imagined generic dribbling action, NOT a depiction of any documented game moment. No other players, no scoreboard, no audience, no photomontage. Abstract lime brush sweeps behind him convey movement. RIGHT 55% is a clean bold typography block with ample separation from the figure and strong thumbnail readability.\n\nTEXT: Render ONLY the following exact Japanese strings, with no additional visible text:\nTop-right, medium bold ivory: \"11/12 試合結果\"\nMiddle-right, very large ivory: \"公式記録の\"\nImmediately below, the largest lime type: \"確定待ち\"\nBelow headline, small but clearly readable ivory: \"2026.11.12 19:07 JST時点\"\nBottom-right, legible ivory labels on a quiet black strip: \"イラスト（AI生成）\" and \"イメージ\"\n\nEditorial meaning: the fixed source article states all official game records are awaiting confirmation as of 2026-11-12 19:07 JST. Do not imply final results or participation. Randolph was randomly selected from ten names in the article only to provide a real-person illustration. Never show his name, points, statistics, award, participation or performance claims. Do not use \"成績をもとにしたイメージ\"; the label must be simply \"イメージ\". Do not add EFF, scores, other dates or names.\nMaintain a 5% safe margin for every text element. Avoid cropped ball/hands/head, extra limbs, malformed fingers, logos and photographic textures. Finish as one polished thumbnail.",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "revision_count": 0,
+      "saved_image": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/0dccc38884fa1a8278db/generated.png",
+      "original_image": "/Users/genjo/.codex/generated_images/01a1cf4b-fd0f-71c3-b78b-6d029cf6a6cc/exec-b2bdb1b4-0152-4eb5-8d7a-ea6e334f69e9.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "5d29987a4f3bf10794033f80a37bdedf60a69c3f2f54e238ec411a37d6d0a53b",
+      "visual_inspection": {
+        "text_and_numbers": "生成画像を実見。11/12 試合結果、公式記録の、確定待ち、2026.11.12 19:07 JST時点が正しい。選手名・成績・得点・出場の断定なし。",
+        "source_qualifiers": "固定本文にある全試合の公式記録確定待ちを最大の見出しで表示。日時を併記。イメージの表記があり、実際の試合場面とは扱わない。",
+        "likeness_or_no_named_person": "公式写真と生成画像を実見し、ランドルフ選手のコーンロウ、輪郭、眉と目、口元、口ひげ・顎ひげを確認。名前は表示していない。",
+        "layout": "1672×941の約16:9。文字、頭、両手とボールの表示を確認。両手の指、腕の接続は自然。太腿と左端の肘の一部は構図上のトリミング。ロゴやスポンサーなし。",
+        "ai_label": "イラスト（AI生成）とイメージの両表記を画像上で確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-12T10:30:26.474760+00:00",
+  "publication_approved": false
+}

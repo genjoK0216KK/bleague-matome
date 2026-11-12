@@ -1,0 +1,109 @@
+{
+  "id": "93a6897700e932a6af5a",
+  "article_path": "article-analysis-saga-20261112.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-saga-20261112.html",
+  "source_commit": "",
+  "source_blob_sha": "038a7389397b72628ee4858ba9a997b10ceeb50e",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "f18230795834dbfc31ce851b0bb9156abd24414e78880bc9aa861b51e5fff863",
+  "last_observed_blob_sha": "038a7389397b72628ee4858ba9a997b10ceeb50e",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/93a6897700e932a6af5a/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/93a6897700e932a6af5a/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-12T10:14:12.895311+00:00",
+  "creation_event_id": "e0304daca936ca33e5f5",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/93a6897700e932a6af5a/thumbnail.png",
+  "image_sha256": "6d4c5c3ce89c23c94e5efceae6f63558fb61bb5439183710e446382d43899db0",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "038a7389397b72628ee4858ba9a997b10ceeb50e",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.12",
+      "佐賀バルーナーズ",
+      "直近5試合",
+      "0勝5敗",
+      "前半の失点が課題",
+      "対象：10/21〜11/8",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "frozen_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/93a6897700e932a6af5a/source.html",
+        "article_url": "https://basuke-matome.jp/article-analysis-saga-20261112.html",
+        "use": "本文情報の根拠。タイトル・記事日付・対象10/21〜11/8の直近5試合0勝5敗・前半の失点について照合。blob SHAはgitを使わずローカルバイトから算出し一致確認。"
+      },
+      {
+        "type": "frozen_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/93a6897700e932a6af5a/source.txt",
+        "use": "本文情報の根拠。直近5試合の戦績・期間・前半の課題・描写する選手の選定を照合。"
+      },
+      {
+        "type": "official_appearance_reference",
+        "url": "https://ballooners.jp/team/players/detail/id=52152?PlayerID=51000517",
+        "image_url": "https://ballooners.bl.kuroco-img.app/v=1788967093/files/user/cheer/%E3%81%AA%E3%83%BC%E3%81%9A.jpg",
+        "local_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/93a6897700e932a6af5a/person-reference-official.jpg",
+        "use": "容姿のみ。写真を目視参照。外部ページの成績を本文根拠に使用せず、公式写真・ロゴを完成画像へ貼り付けていない。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認。黒#151A18、ライム#CCF43B、太い和文、インク・ブラシ表現の参照のみ。選手名・成績は引き継いでいない。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "use": "手順書指定フォルダにA案が無いため、Notion正本記載の元制作フォルダにある同名v3をview_imageで確認。今回は黒×ライム案を採用。"
+      },
+      {
+        "type": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "use": "画像生成・検品ルールを参照。最新のユーザー指示を優先。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ナシール・リトル",
+        "selection": "本文の主役",
+        "selection_reason": "本文『リトル選手が得点の中心』の独立節で最も詳しく個人成績が扱われている選手。ランダム選定ではない。",
+        "source": "佐賀バルーナーズ公式選手プロフィール",
+        "url": "https://ballooners.jp/team/players/detail/id=52152?PlayerID=51000517",
+        "image_url": "https://ballooners.bl.kuroco-img.app/v=1788967093/files/user/cheer/%E3%81%AA%E3%83%BC%E3%81%9A.jpg",
+        "observed_features": "短い黒のアフロと短い側頭部、縦長の輪郭、頬骨、幅のある鼻、厚い唇、薄い口ひげと顎先の短いひげ、筋肉質の肩・腕。公式写真と生成イラストを目視照合。",
+        "depiction": "青い無地のユニフォームでボールを両手に集めて切り込むイラスト。特定試合の場面再現ではない。人物は1人。選手名・個人成績は画像に記載せず、チームの戦績と集計期間を表示。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 1600x900 or larger PNG. This is for the nonofficial site バスケまとめ and the article analyzing Saga Ballooners' last five games, dated 2026.11.12.\n\nART DIRECTION: Approved editorial style: near-black #151A18 background, vivid lime #CCF43B, warm white bold heavy Japanese typography, hand-drawn black ink and dry-brush strokes, limited elements, strong news thumbnail hierarchy. A large diagonal lime brush behind the athlete, subtle restrained ink splatter. Crisp typesetting is essential. Do not reproduce the names, dates or scores from previous reference thumbnails.\n\nSUBJECT: Exactly ONE recognizable real basketball player, Nassir Little (ナシール・リトル), whose appearance was checked against his Saga Ballooners official profile photo. The visible official reference shows short dense black afro hair with tapered sides (NOT braids or dreadlocks), a somewhat long oval/angular face, high cheekbones, straight broad nose, full lips, a light narrow mustache, short pointed chin goatee and short jaw stubble, dark brown skin, muscular shoulders and tattooed arms. Draw this specific person faithfully in clearly hand-painted editorial ink illustration, not a generic fictional player, not a photograph or photorealistic render. No other people.\nPOSE: An energetic three-quarter driving/gather step, leaning forward, both hands gathering an orange basketball near his right hip, face unobstructed and recognizable, determined focused expression, torso twisted in motion. Anatomically plausible shoulders, elbows, wrists, hands, fingers. All of the ball and both hands within frame. Include enough thighs/knees to communicate the driving motion. Plain cyan blue sleeveless uniform with minimal off-white edging. No letters, numbers, logos, emblems, sponsors or badges on uniform or ball. The illustration is conceptual basketball motion, not a recreation of any actual game, clutch shot, injury or loss.\n\nCOMPOSITION: Text occupies the left 58 percent; athlete occupies the right 42 percent, large, no overlap with headline. At least 60px breathing room around text, face, hands and basketball. The player silhouette may end naturally near lower edge at thigh, with no awkward joint clipping. A few strong lime brush strokes convey energy. Do not add a court diagram, scoreboards, opponent, photo inset, chart or extra decorative facts.\n\nEXACT TEXT, each string once, no other text:\nTop left small site name: 「バスケまとめ」\nTop right small date: 「2026.11.12」\nLeft upper medium-large team name: 「佐賀バルーナーズ」\nBelow it a clearly visible qualifier: 「直近5試合」\nMain focal headline in very large bold lime: 「0勝5敗」\nBelow main headline, bold warm-white: 「前半の失点が課題」\nBelow subtitle, small but legible: 「対象：10/21〜11/8」\nBottom left readable footer: 「イラスト（AI生成）」\nOn the same footer baseline, separated with whitespace: 「成績をもとにしたイメージ」\n\nCONTENT GUARDRAILS: 0勝5敗 is for the team over the specific last five games only, not the season record or the player's record. These five games run from October 21 to November 8 according to the supplied frozen article. Do not add player name, personal stats, league ranks, injury statements, opponent-strength claims or unprovided numbers. The subtitle is a qualitative summary of the article's stated first-half defensive issue. Clearly preserve both footer labels. No league/team/sponsor logos and no pasted official photographs.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "image_count": 1,
+      "revision_count": 0,
+      "output_format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "generated_source_path": "/Users/genjo/.codex/generated_images/01a1cf40-34be-7603-8b39-8587a00ed7e7/exec-f58b80a0-ef5f-4d10-b1df-950df30fc74e.png",
+      "output_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/93a6897700e932a6af5a/generated.png",
+      "sha256": "6d4c5c3ce89c23c94e5efceae6f63558fb61bb5439183710e446382d43899db0",
+      "qa_observations": {
+        "text_and_numbers": "完成画像を実見。表示した全9文字列・日付・0勝5敗・対象期間を固定原稿と照合。文字欠け・誤字なし。",
+        "source_qualifiers": "『直近5試合』『対象：10/21〜11/8』が読め、シーズン通算と混同させない。未調整の順位比較・欠場理由・負傷情報は画像に追加していない。",
+        "likeness_or_no_named_person": "公式写真と照合し、リトル選手の髪型・輪郭・目鼻・口元・ひげを確認。顔を判別できるイラスト調。架空選手や他の人物なし。",
+        "layout": "1672×941の約16:9。主見出し・注記・顔・ボール・両手は画面内。手指と腕のつながりに明らかな破綻なし。文字と人物が重ならず、ロゴ・スポンサー文字なし。",
+        "ai_label": "『イラスト（AI生成）』『成績をもとにしたイメージ』を完成画像下部で目視確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-12T10:17:58.301192+00:00",
+  "publication_approved": false
+}

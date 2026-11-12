@@ -1,0 +1,121 @@
+{
+  "id": "d9bde7fe63871fad57c4",
+  "article_path": "article-games-20261112.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261112.html",
+  "source_commit": "",
+  "source_blob_sha": "b7ffdd837bebc37ddd1da9fddd8cb7623f1d135a",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "73169f226ca281092ad029f5a706f756430a3c90792ae95414c7d011ba1b0b97",
+  "last_observed_blob_sha": "b7ffdd837bebc37ddd1da9fddd8cb7623f1d135a",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d9bde7fe63871fad57c4/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d9bde7fe63871fad57c4/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-12T10:14:13.459062+00:00",
+  "creation_event_id": "0a36ee71c77f78a3f7bf",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/d9bde7fe63871fad57c4/thumbnail.png",
+  "image_sha256": "0471333464a6399efe592d6662a9f0dbf0dd2d9aaf28ff3fb37ede5b46ab94ec",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "b7ffdd837bebc37ddd1da9fddd8cb7623f1d135a",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.12",
+      "試合結果",
+      "公式記録の",
+      "確定待ち",
+      "11/12 19:07 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_fixed_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d9bde7fe63871fad57c4/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261112.html",
+        "use": "本文根拠。2026-11-12 19:07 JST時点の全試合の公式記録確定待ち。SHAをローカルで照合。ライブ記事は本文根拠に使用していない。"
+      },
+      {
+        "type": "article_fixed_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d9bde7fe63871fad57c4/source.txt",
+        "use": "見出し・対象日・公式記録の確定待ち・資料時点と選手候補を照合。今季平均は当日実績と別集計で、出場確定を示さない。画像に成績・出場・活躍・スコアを掲載していない。"
+      },
+      {
+        "type": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "use": "画像生成・検品ルール。人物選定・注記・ready不実行は今回の最新本人指示を優先。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認。黒×ライム、手描きインク、太い日本語文字の参照。旧選手・数値・日付は転用していない。"
+      },
+      {
+        "type": "approved_style_secondary",
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "use": "手順書指定ディレクトリには白地作例が無かったため、既存の同名承認済みv3をview_imageで確認。生成入力には黒×ライム案のみ使用。"
+      },
+      {
+        "type": "official_appearance_reference",
+        "url": "https://www.evessa.com/lp/PlayerID_51000294/",
+        "use": "大阪エヴェッサ公式の選手プロフィール。容姿確認専用。本文内容や試合結果の根拠には使用していない。"
+      },
+      {
+        "type": "official_profile_photo",
+        "url": "https://evessa.bl.kuroco-img.app/v=1790194142/files/user/_/lp/2026-27/player/52/img/fv-center.png",
+        "use": "公式全身写真を取得しview_imageで実見。容姿参照のみ。写真貼付・ロゴ転用なし。"
+      },
+      {
+        "type": "official_face_photo",
+        "url": "https://evessa.bl.kuroco-img.app/v=1790194143/files/user/_/lp/2026-27/player/52/img/quiz-face.png",
+        "use": "公式顔写真を取得しview_imageで実見。髪型・輪郭・ひげ・目鼻を照合。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ヴォーディミル・ゲルン",
+        "romanized_name": "Volodymyr Gerun",
+        "selection": "ランダム",
+        "selection_reason": "記事が当日の複数試合と10選手を扱い、単独の主役に絞れないため、本文に名前が出ている10選手からPython secrets.choiceで1人を選出。",
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d9bde7fe63871fad57c4/selection.json",
+        "source": "大阪エヴェッサ公式プロフィール",
+        "source_url": "https://www.evessa.com/lp/PlayerID_51000294/",
+        "photo_urls": [
+          "https://evessa.bl.kuroco-img.app/v=1790194142/files/user/_/lp/2026-27/player/52/img/fv-center.png",
+          "https://evessa.bl.kuroco-img.app/v=1790194143/files/user/_/lp/2026-27/player/52/img/quiz-face.png"
+        ],
+        "observed_features": "明るい茶色の横に流した前髪と襟足、長めの卵型の輪郭、明確な鼻筋、明るい目、眉、下唇下のごく小さいひげ、全体的にはひげの少ない顔、長身で肩幅のある体格。",
+        "depiction": "両手でボールを保持し、腰を落として体をひねるプレーのイメージ。実際の試合場面の再現ではない。画像内に選手名・所属・背番号・成績・出場・活躍の記述なし。",
+        "visual_qa": "公式写真と生成PNGを目視比較し、髪型・輪郭・鼻・眉・ひげの特徴を確認。写真風ではなくインクイラスト。チーム・リーグ・スポンサーのロゴなし。"
+      }
+    ],
+    "prompt": "Use case: style-transfer.\nEdit the FIRST reference thumbnail into one finished Japanese basketball editorial thumbnail for a different article. Keep its approved bold hand-drawn ink and brush visual language, but replace all text and completely replace the athlete. The second and third reference images are OFFICIAL APPEARANCE REFERENCES ONLY for real player Volodymyr Gerun (ヴォーディミル・ゲルン). Do not paste photographic pixels or copy their poses, uniforms, logos, sponsorships or text.\n\nOutput: one opaque PNG, landscape 16:9, ideally 1792x1024 or 1920x1080, at least 1000 pixels wide. This is a single final thumbnail, no variations, no mockup, no frame.\n\nBackground and style: deep charcoal black #151A18, electric lime #CCF43B, warm ivory typography and skin highlights; expressive high-contrast editorial ink illustration with visible dry-brush strokes, hand-drawn contours and restrained paper grain. A few diagonal lime brush sweeps, minimal elements. Clearly illustrated, never photorealistic.\n\nNew composition: reverse the original arrangement. On the LEFT 44 percent show ONE real player, Volodymyr Gerun, in a dynamic low driving/pivoting basketball pose, torso twisting toward the right, one knee bent, both hands naturally controlling an orange basketball near the lower-left hip. Frame from above his hair to mid-thigh with deliberate bottom crop only. Keep entire head, ball and hands inside the image with generous edge clearance. Face clearly visible in three-quarter view facing toward the right, focused expression. Broad tall athletic build, fair skin, tousled light brown/dark blond medium-short hair with side-swept fringe and slightly longer nape, long oval face, angular cheek/jaw shape, pronounced straight nose, light eyes, natural strong eyebrows; mostly clean-shaven with only a tiny light soul patch below lower lip, NO full beard. Faithfully retain these distinctive features from official references. Plain dark basketball jersey with small ivory edge trim and no letters, no numerals, no logos, no patterned side panel, no sponsors. Anatomically coherent arms, two hands, five natural fingers per hand with realistic occlusion. Face should be large enough to recognize, not a generic invented athlete.\n\nOn the RIGHT 56 percent place bold highly legible Japanese typography on clean dark negative space, aligned left. Site name modest at top, date below, main headline very large ivory, qualifier in two prominent lime lines below it. Reserve a clear bottom strip for the timestamp and AI disclosure. Make the qualifier immediately readable, at least as emphatic as the headline. Render ONLY this exact text, once each, with no omissions, altered characters, or extra text:\n\"バスケまとめ\"\n\"2026.11.12\"\n\"試合結果\"\n\"公式記録の\"\n\"確定待ち\"\n\"11/12 19:07 JST時点\"\n\"イラスト（AI生成）\"\n\"イメージ\"\n\nFact constraints: The fixed article is a November 12 results page whose official game records were still unconfirmed at 19:07 JST. This athlete was randomly selected from the players named in the article, NOT its featured performer. The illustration is an imagined basketball motion, not a reconstructed moment from that game. Do not show his name, team name, jersey number, performance statistics, rankings, scores, victory claims, appearance claims, trophy, opponent or actual venue. No team or league logos, no photo collage. Never carry over Culver, 38 points, old date or scores from the first reference. The only numbers in the image are the exact date and timestamp above. Keep all text inside wide safe margins and away from the player's face and hands. The AI disclosure must be clearly readable and unobstructed.",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "内蔵画像生成",
+      "reference_images": [
+        "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "/tmp/basuke-d9bde7fe63871fad57c4/gerun-profile.png",
+        "/tmp/basuke-d9bde7fe63871fad57c4/gerun-face.png"
+      ],
+      "generation_calls": 1,
+      "correction_calls": 0,
+      "output_width": 1672,
+      "output_height": 941,
+      "format": "PNG",
+      "transparent_background": false,
+      "qa_method": "生成結果表示と、保存元PNGをview_imageで開きMIMEをimage/pngとして表示した画像を実見。文字と日時、固定原稿の留保、人物特徴、手の形、見切れ、AI注記を確認。PNG IHDRで寸法を確認。",
+      "publication": "未実施",
+      "ready": "未実行"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-12T10:27:05.961400+00:00",
+  "publication_approved": false
+}

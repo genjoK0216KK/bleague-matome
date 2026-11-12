@@ -1,0 +1,111 @@
+{
+  "id": "556a6a0e14555b13288a",
+  "article_path": "article-daily-20261112.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261112.html",
+  "source_commit": "",
+  "source_blob_sha": "185672d3cdd5dfa1e005a8381c76af047e5a48f1",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "c005cff3d466ebec02ca4f17b546d416b6d16771f8b37f819776dd6e795ca042",
+  "last_observed_blob_sha": "185672d3cdd5dfa1e005a8381c76af047e5a48f1",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/556a6a0e14555b13288a/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/556a6a0e14555b13288a/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-12T10:14:13.190350+00:00",
+  "creation_event_id": "a86f6b24759a9326fb04",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/556a6a0e14555b13288a/thumbnail.png",
+  "image_sha256": "c74c25303bd1bb5762f4cc2f6dc9413614490ed0370f80168b0cdd1446f6890f",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "185672d3cdd5dfa1e005a8381c76af047e5a48f1",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.12｜試合前展望",
+      "琉球 vs 東京SR",
+      "連敗を",
+      "止められるか",
+      "当日の出場状況は未確認",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "role": "本文の唯一の根拠（固定版HTML）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/556a6a0e14555b13288a/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261112.html",
+        "source_blob_sha": "185672d3cdd5dfa1e005a8381c76af047e5a48f1"
+      },
+      {
+        "role": "本文の唯一の根拠（固定版文章）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/556a6a0e14555b13288a/source.txt",
+        "evidence": [
+          "琉球ゴールデンキングス対東京SRの試合前予測、3連敗のキングスは攻撃力をどう止めるか",
+          "2026.11.12 試合前展望 / 独自予測",
+          "琉球は直近3試合で負けています。",
+          "両チームの当日の出場状況が未確認である点です。"
+        ]
+      },
+      {
+        "role": "画像生成・検品ルール。記事内容の根拠には不使用",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt"
+      },
+      {
+        "role": "承認済み絵柄。view_imageで実見。氏名・成績は引き継がず",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジャック・クーリー",
+        "team_in_manuscript": "琉球ゴールデンキングス",
+        "selection": "ランダム",
+        "selection_reason": "チーム対戦の展望記事のため、本文に登場する選手から両チーム各1人。負傷・IL記載のジェレット、松脇とコーチをプレー役候補から除き、琉球側候補はクーリー1人。出場確定の意味ではない。",
+        "selection_pool": [
+          "ジャック・クーリー"
+        ],
+        "random_method": "Python random.Random(\"556a6a0e14555b13288a\").choice：琉球側、次に東京SR側を選択",
+        "official_profile": "https://www.bleague.jp/roster_detail/?PlayerID=26914",
+        "official_image": "https://www.bleague.jp/files/user/roster/701/2026-27/26914_03.png",
+        "appearance_checked": "公式プロフィール画像をview_imageで実見。短いダークブラウンの横分け髪、幅のある輪郭、まっすぐな鼻、短いひげ、大きな肩と体格を参照。最終画像で頭部余白、髪型、輪郭、短いひげを目視確認。",
+        "use": "容姿参照のみ。写真貼付なし。実際の試合場面ではない守備姿のイメージ。画像内に氏名・背番号・個人成績なし。"
+      },
+      {
+        "name": "ベンドラメ礼生",
+        "team_in_manuscript": "東京サンロッカーズ",
+        "selection": "ランダム",
+        "selection_reason": "本文に登場する東京SRの選手2人からランダム選出。出場確定や当日の活躍を示さない。",
+        "selection_pool": [
+          "ベンドラメ礼生",
+          "ジョシュ・ホーキンソン"
+        ],
+        "random_method": "Python random.Random(\"556a6a0e14555b13288a\").choice：琉球側、次に東京SR側を選択",
+        "official_profile": "https://www.sunrockers.jp/lp/leo-vendrame/",
+        "official_image": "https://sunrockers.bl.kuroco-img.app/v=1789693726/files/user/26-27_SEASON/lp/players/img/vendrame_profile_img01.png",
+        "appearance_checked": "クラブ公式プロフィール画像をview_imageで実見。非常に短い黒髪、濃い眉、縦長の輪郭と顎、鼻と唇、クーリーより小柄なガードの体格を参照。最終画像でも特徴を目視確認。",
+        "use": "容姿参照のみ。写真貼付なし。実際の試合場面ではないドライブ姿のイメージ。画像内に氏名・背番号・個人成績・連続出場記録なし。"
+      }
+    ],
+    "prompt": "[初回生成の実使用プロンプト]\nUse case: illustration-story / editorial sports thumbnail.\nCreate exactly ONE finished landscape PNG image, 1600 x 900 pixels, approximately 16:9, for the Japanese basketball news site バスケまとめ. This is a new illustration.\n\nStyle: faithfully carry forward the approved black-and-lime thumbnail language already inspected: very dark green-black #151A18 background, electric lime #CCF43B dry-brush slashes, warm ivory typography, hand-drawn black ink contours and expressive brush shading. Strong Japanese heavy gothic headline typography with subtle ink texture. Clearly an illustration, not a photograph, not a photorealistic render. Minimal elements, punchy and readable at small size. Do NOT copy the old reference's player, numbers, scores, name or date.\n\nEditorial content: a pregame preview of Ryukyu versus Tokyo SR on 2026-11-12. The headline asks whether Ryukyu can end its losing streak. No outcome is known in the supplied manuscript; participation of the players on that day is unconfirmed.\n\nComposition: Typography occupies the left 47%, an energetic basketball one-on-one illustration occupies the right 53%, with comfortable separation and all essential text, faces, fingers and the ball inside a 5% safe margin. Show TWO real athletes, not generic fictional players: Jack Cooley of Ryukyu defending in a lowered wide stance, and Leo Vendrame of Tokyo driving with a single orange basketball controlled under his near hand at hip height. Bodies angle into each other across a diagonal, faces visible in three-quarter views rather than hidden in profile. Clearly different heights and builds: Cooley is the much taller, broader center; Vendrame is the shorter athletic guard. Mid-thigh to head framing, anatomically plausible arms and fingers, natural movement. Cooley slightly behind and higher, Vendrame lower in foreground. This is a conceptual matchup image, never an alleged recreation of the actual game. No scoreboard, winner, score, dunk result, arena photo, crowd or hoop needed.\n\nLikeness ONLY based on the official profile images that were visually inspected in this conversation:\n- Jack Cooley: https://www.bleague.jp/files/user/roster/701/2026-27/26914_03.png . Light skin, big broad strong shoulders and neck, broad somewhat rectangular face with rounded jaw, short dark brown hair side-parted and swept back with slight wave, ears visible, straight pronounced nose, medium thin lips, light short brown stubble around chin/jaw and upper lip, NOT a long/full bushy beard. Render his actual recognizable facial structure in ink. Plain ivory basketball uniform with navy edging, no team crest, no sponsor, no number, no name. Do not invent the special-game uniform mentioned in the article.\n- Leo Vendrame: https://sunrockers.bl.kuroco-img.app/v=1789693726/files/user/26-27_SEASON/lp/players/img/vendrame_profile_img01.png . Light-to-medium tan skin, very short close-cropped dark hair with subtle fade, no long hair, no headband, thick straight dark eyebrows, brown deep-set eyes, prominent straight nose, defined long oval face with angular jaw and visible ears, full shaped lips, very faint moustache and chin stubble; no heavy beard. Muscular compact guard build. Plain deep purple basketball uniform with thin yellow trim, no team crest, no sponsor, no number, no name.\nOfficial photographs are appearance references ONLY. Redraw both athletes fully as hand-inked illustrations; do not paste any photo pixels. Do not depict any other people.\n\nExact visible text, all in Japanese and spelled verbatim. No additional text or numerals:\nTop left small brand: 「バスケまとめ」\nBelow it, modest white line: 「2026.11.12｜試合前展望」\nLeft main matchup, bold white, can occupy two balanced lines: 「琉球 vs 東京SR」\nLeft huge lime question, two lines: 「連敗を」 and 「止められるか」\nLower left, clearly readable white qualifier: 「当日の出場状況は未確認」\nBottom in a clean dark footer strip, readable white label: 「イラスト（AI生成）｜イメージ」\nThe bracket marks 「」 are delimiters only and must not be printed. Keep all text horizontal. The qualifier and AI label must not be hidden by brush marks or people.\n\nConstraints: no player names anywhere in the visible image; no player statistics or attendance claims; no league/team logos or wordmarks; no sponsors; no official photographs; no photorealism; no fabricated person; no extra fingers or extra balls. Keep this as an editorial imagined matchup with the explicit image/AI label.\n\n[1回のみの修正の実使用プロンプト]\nEdit image 1, the generated black-and-lime basketball thumbnail. Images 2 and 3 are official appearance references ONLY: image 2 is Jack Cooley and image 3 is Leo Vendrame. Do not paste photo pixels; retain the hand-drawn ink-and-brush editorial illustration style.\n\nMake one targeted finishing revision:\n1. Reduce the two-player illustration as a group by roughly 10% and slightly reposition it so that Cooley's entire head and hair are comfortably inside the canvas, with at least 45px clear background above his hair at this approximately 1672x941 size. All visible hands and the ball remain inside the frame. Keep the lower bodies naturally cropped at the bottom. Keep the text unobstructed and avoid moving any text.\n2. Refine Jack Cooley's face and hair to match reference image 2 more closely. His dark brown hair is SHORT and side-parted with a modest swept-back wave, not a tall voluminous quiff. His face is broad and slightly rounded at the jaw, his nose straight and prominent, and he has light close brown stubble rather than a dense beard. Keep his strong big frame, basketball defending stance and focused expression. Refine Vendrame's facial likeness from image 3 while preserving the existing close-cropped hair and driving pose.\n\nKeep all other design elements and exact text unchanged, especially every character in:\nバスケまとめ\n2026.11.12｜試合前展望\n琉球 vs 東京SR\n連敗を\n止められるか\n当日の出場状況は未確認\nイラスト（AI生成）｜イメージ\n\nRetain the same landscape approximately 16:9 size over 1000 pixels, dark #151A18 and lime #CCF43B palette, warm ivory heading, clean note/footer, abstract brush background, one orange ball, ivory/navy uniform for Cooley and purple/yellow for Vendrame. Keep all team/league logos, jersey numbers, names and sponsor lettering absent. Exactly two real players and no extra people. This is a conceptual matchup illustration, not an actual game recreation.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "内蔵画像生成",
+      "initial_generation_count": 1,
+      "revision_count": 1,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "format": "PNG",
+      "image_sha256": "c74c25303bd1bb5762f4cc2f6dc9413614490ed0370f80168b0cdd1446f6890f",
+      "inspection": "最終修正版を実画像で目視確認。文字・数字、試合前／出場未確認の留保、両選手の参照写真との顔の特徴、手指、頭部とボールの収まり、AI注記を確認。外部API・課金CLI・git・公開・外部送信・ready実行なし。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-12T10:23:36.309165+00:00",
+  "publication_approved": false
+}
