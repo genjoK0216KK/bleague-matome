@@ -1,0 +1,98 @@
+{
+  "id": "daa7c44bd52d9008de5a",
+  "article_path": "article-daily-20261113.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261113.html",
+  "source_commit": "",
+  "source_blob_sha": "96a8c4ab8c85bfe7379bdcf0eb1aa6823104074c",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "ffda30a4f72a179041be004a9ceacbda147a2755400492d4a57c3651ac07b2f2",
+  "last_observed_blob_sha": "96a8c4ab8c85bfe7379bdcf0eb1aa6823104074c",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/daa7c44bd52d9008de5a/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/daa7c44bd52d9008de5a/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-12T23:16:08.754021+00:00",
+  "creation_event_id": "23212c96fd410eb11bde",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/daa7c44bd52d9008de5a/thumbnail.png",
+  "image_sha256": "8774f8908a5282de12f7ac3fb4e726500c8108de9113566aecca003ec8ecb13e",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "96a8c4ab8c85bfe7379bdcf0eb1aa6823104074c",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.13　試合前展望",
+      "京都 5連敗",
+      "VS",
+      "茨城 3連勝",
+      "両チームの当日の出場状況は未確認",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/daa7c44bd52d9008de5a/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261113.html",
+        "usage": "固定原稿。見出し・2026.11.13・京都5連敗・茨城3連勝・試合前展望・両チームの当日の出場状況未確認の根拠。関連記事は不使用。blob SHAを生成前と保存時に照合。"
+      },
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/daa7c44bd52d9008de5a/source.txt",
+        "usage": "固定文章原稿。記事内容の根拠はこのTXTと固定HTMLの2点のみ。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "目視確認済み。黒・ライム・太い日本語見出し・インクとブラシの画風だけ参照。選手名・成績・日付・構図は転用していない。"
+      },
+      {
+        "type": "appearance_reference_only",
+        "url": "https://hannaryz.jp/team/players/detail/id=20794?PlayerID=8727",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026110917/files/user/roster/699/2026-27/8727_01.jpg",
+        "usage": "京都ハンナリーズ公式プロフィール写真をダウンロードして目視確認。川嶋勇人の容姿のみ参照。写真そのもの・ロゴ・スポンサー・プロフィール内成績は画像に使用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "川嶋勇人",
+        "selection": "ランダム",
+        "selection_reason": "記事の主役は両チームの直近成績の比較で、特定選手を一人の主役に絞れないため。",
+        "candidate_pool": [
+          "岸本隆一",
+          "川嶋勇人"
+        ],
+        "selection_method": "本文に名前のある選手を優先し、Python secrets.choiceで抽選。",
+        "reference_source": "京都ハンナリーズ公式選手プロフィール",
+        "reference_url": "https://hannaryz.jp/team/players/detail/id=20794?PlayerID=8727",
+        "reference_image_url": "https://bleague.bl.kuroco-img.app/v=2026110917/files/user/roster/699/2026-27/8727_01.jpg",
+        "observed_features": "暗めの茶色の直毛、額にかかる厚めの前髪、短いサイド、ひげのない楕円形の顔と広めの顎、まっすぐな眉、切れ長の目、丸みのある鼻先。完成イラストで顔・髪型・目鼻・口元を見比べた。",
+        "depiction": "前傾したドリブルのイラスト。特定の実際の試合場面の再現ではなく、出場の事実も示さない。ロゴ・スポンサー・背番号のないユニフォーム。",
+        "text_restrictions": "選手名・個人成績・出場・活躍の記述なし。注記は「イラスト（AI生成）」「イメージ」。京都5連敗・茨城3連勝はチーム成績として表示。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT\nUse case: illustration-story.\nAsset: ONE finished Japanese editorial basketball thumbnail, landscape 16:9, ideally 1792x1024 or 1920x1080; minimum width 1000 pixels. Single complete image, no contact sheet.\n\nCreate an original hand-drawn ink and dry-brush basketball illustration with dramatic typography. Match the visual system of the approved black/lime thumbnail viewed in this conversation: near-black #151A18 background, electric lime #CCF43B gestural diagonal brush strokes, warm off-white bold Japanese type, restrained orange basketball, tactile ink hatching, high contrast, few elements. Do NOT copy the reference's person, name, scores, or date.\n\nSubject: exactly ONE REAL basketball player, Hayato Kawashima (川嶋勇人), selected at random from the two players named in the supplied article. His official Kyoto Hannaryz roster portrait was visually inspected: https://hannaryz.jp/team/players/detail/id=20794?PlayerID=8727 ; photo https://bleague.bl.kuroco-img.app/v=2026110917/files/user/roster/699/2026-27/8727_01.jpg . Use this portrait ONLY to inform facial likeness, never paste or reproduce the official photo. Preserve these observable facial features in ink illustration: adult Japanese male; straight dark-brown hair with a thick, slightly uneven fringe swept across the forehead and short sides, not spiky or curly; clean-shaven oval face with a broad jaw and firm rounded chin; straight medium-thick brows; almond-shaped dark eyes; straight nose with rounded tip; medium lips; athletic sturdy shoulders and neck. A recognizable illustrated interpretation of Kawashima, not a generic invented athlete and not photorealistic.\n\nComposition: large type occupying roughly the left 55%, player occupying right 45%, diagonally lunging forward with bent knees in a dynamic low dribble, torso turned three-quarter toward the viewer so the face is clearly visible. Exactly two anatomically coherent arms, natural hands and fingers. One orange basketball under his dribbling hand, wholly inside the frame. Plain off-white sleeveless basketball kit with black and lime accents, absolutely NO logos, lettering, team crest, sponsor, jersey name or number. Crop intentionally at mid-thigh if needed. This is an imagined generic action pose, not a recreation of the upcoming game or any actual historical play. No opponent, hoop, crowd, arena signage or scoreboard is needed. Keep brush strokes behind the player and never over the text.\n\nTypography: large heavy highly readable Japanese Gothic headline, numerals brush-styled if desired. Clear comparison of TEAM recent streaks, not this game's score and not the player's stats.\nRender ONLY the following exact text strings, with no invented additions:\nSmall upper left masthead: 「バスケまとめ」\nSmall date / category line: 「2026.11.13　試合前展望」\nLarge first headline line: 「京都 5連敗」\nSmall separator: 「VS」\nLarge second headline line: 「茨城 3連勝」\nBelow headline in clearly legible small type: 「両チームの当日の出場状況は未確認」\nBottom footer in readable off-white type: 「イラスト（AI生成）｜イメージ」\n\nMake the 5 and 3 lime; team names and Japanese streak labels off-white. Ensure both team labels remain unambiguously paired with their correct streak. Balanced energetic cover, crisp readable Japanese characters, at least 4% safe margins. Footer and caveat should remain unobscured and sufficiently large. NO player name anywhere in image; NO claims of this player's participation, performance or results. No prediction presented as an outcome, no victory celebration. Article basis is ONLY fixed source.html and source.txt: Kyoto is on a five-game losing streak, Ibaraki a three-game winning streak, article is a pregame preview, both teams' same-day participation is unconfirmed. No data from official profile beyond appearance is to be placed in the image.\nAvoid: photographs, photorealism, pasted photos, team/league/manufacturer logos, sponsors, watermarks, extra text, extra limbs, deformed hands, clipped ball, type intersecting the face.\n\nONE PERMITTED CORRECTION PROMPT\nEdit the provided basketball thumbnail. This is the sole correction pass. Preserve the exact 16:9 layout, ALL existing Japanese text and numbers, black #151A18 / lime #CCF43B / ivory palette, ink brush style, face and likeness of real player Hayato Kawashima, unbranded white kit and one orange ball.\n\nChange ONLY the composition of the player's free arm and hand at the lower right: the fingertips currently touch or cross the bottom edge. Raise and draw this free hand slightly inward so the ENTIRE hand, all five anatomically correct fingers and their fingertips are clearly visible, with at least 50 pixels of uninterrupted background below the lowest fingertip. The full ball and dribbling hand must also remain uncut. Preserve the dynamic forward-lunge dribble pose. Keep his face and hair fully inside the frame. Do not change any text or add anything. Keep the illustrated real-player identity, no photo appearance, logos or jersey text. Do not crop the image.\n\nExact existing text to retain:\nバスケまとめ\n2026.11.13　試合前展望\n京都 5連敗\nVS\n茨城 3連勝\n両チームの当日の出場状況は未確認\nイラスト（AI生成）｜イメージ",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 2,
+      "correction_count": 1,
+      "correction_reason": "初稿で右下のフリーハンドの指先が下端に近かったため、手全体を上・内側へ移動する修正を1回実施。",
+      "final_output_source": "/Users/genjo/.codex/generated_images/01a1d20c-1222-78e3-a1ac-c6d04711fae3/exec-7a5cccec-3d72-4240-b5c1-acf104987f3b.png",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "output_sha256": "8774f8908a5282de12f7ac3fb4e726500c8108de9113566aecca003ec8ecb13e",
+      "qa_method": "修正版の実画像を目視。文字と数字・試合前と出場未確認の留保・公式容姿との比較・両手とボールと顔の収まり・AI注記を確認。採用画像のみ指定のgenerated.pngへコピー。",
+      "api_or_cli_generation": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-12T23:20:03.627172+00:00",
+  "publication_approved": false
+}
