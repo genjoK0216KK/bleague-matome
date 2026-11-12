@@ -1,0 +1,98 @@
+{
+  "id": "ad6bf00b0853f0333020",
+  "article_path": "article-games-20261112.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261112.html",
+  "source_commit": "",
+  "source_blob_sha": "f8f93dc07c518220dc60b8143545a49b67733819",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "2abf2597e20ae2236f307003d2e4d61c6ecce7fa2f59d86cee29079b451a8872",
+  "last_observed_blob_sha": "f8f93dc07c518220dc60b8143545a49b67733819",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ad6bf00b0853f0333020/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ad6bf00b0853f0333020/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-12T13:59:32.169161+00:00",
+  "creation_event_id": "fd37e49c296b1b34b492",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/ad6bf00b0853f0333020/thumbnail.png",
+  "image_sha256": "c23cfda7ad33b7ecd57db237120bfc99af36411bde45f2eae4e7204cb9cd4485",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "f8f93dc07c518220dc60b8143545a49b67733819",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.12",
+      "B.PREMIER",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ad6bf00b0853f0333020/source.html",
+        "role": "記事内容の根拠（固定HTML）。blob SHAを計算して指定値との一致を確認。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ad6bf00b0853f0333020/source.txt",
+        "role": "記事内容の根拠（固定文章）。2026年11月12日の試合結果、B.PREMIERの当日公式EFF・ポジション別TOP3。B.ONE・B.NEXTはこの日試合なし。",
+        "qualifiers": "今季平均や予想とは別集計。兼任登録は各部門対象、同率は同順位、最大3人。ポジションは登録上のもの。ランダム選出した人物の名前・成績・出場・活躍は画像に記載していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "制作・検品手順。本文根拠には使用しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "目視した承認済みスタイル参照。色・太い文字・インクとブラシの画風だけを参照し、名前・成績・日付は流用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "デレク・パードン",
+        "selection": "ランダム",
+        "selection_method": "複数選手を同じ形式で比較する記事のため、source.txtに登場する重複を除く11選手からPython標準ライブラリsecrets.choiceで1名を無作為選出。",
+        "candidate_names": [
+          "坂本 聖芽",
+          "キーファー・ラベナ",
+          "大浦 颯太",
+          "ブライアン・アンゴラ",
+          "ブランドン・ランドルフ",
+          "ルーク・メイ",
+          "ラウリー・アルキンズ",
+          "ザック・オーガスト",
+          "デレク・パードン",
+          "マイク・コッツァー",
+          "ジャック・クーリー"
+        ],
+        "references": [
+          {
+            "title": "B.LEAGUE公式 選手プロフィール",
+            "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000321",
+            "image_url": "https://www.bleague.jp/files/user/roster/2486/2026-27/51000321_03.png",
+            "visual_inspection": true
+          },
+          {
+            "title": "アルティーリ千葉公式 2026-27契約継続のお知らせ",
+            "url": "https://altiri.jp/news/2026-27/players/dererk-pardon",
+            "image_url": "https://altiri.bl.kuroco-img.app/v=1781230111/files/user/images/news/7_dererk_pardon_news_2627.png",
+            "visual_inspection": true
+          }
+        ],
+        "observed_features": "剃った頭、丸みのある頭頂、縦長の輪郭、顎下まで伸びる濃いひげと短い口ひげ、丸みのある幅広の鼻、厚い唇、目と眉、目立つ耳、筋肉質な肩腕とタトゥーを公式画像で確認し、イラストの特徴と照合。",
+        "use_limit": "公式画像は容姿参照のみ。画像に写真を貼り付けず、チーム・リーグ・スポンサーのロゴ、文字、背番号を描いていない。人物がボールを両手で持ちターンする想像上のプレー姿。特定試合の場面再現を主張しない。ランダム選出のため選手名と個人成績を画像に記載していない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 1536x864 or larger. Opaque PNG.\nThis is a NEW artwork. The black/lime approved thumbnail shown earlier is a STYLE REFERENCE ONLY; never copy its player, pose, names, dates, scores or stats. The two official Dererk Pardon portraits shown earlier are LIKENESS REFERENCES ONLY; never paste any photo, logo or lettering from them into the artwork.\n\nVisual style: premium bold Japanese sports editorial graphic, charcoal black #151A18, electric lime #CCF43B, warm ivory, a single orange basketball; rough hand-drawn ink hatching, dry brush textures, limited screen-print palette. Clearly illustrated, never photographic or photorealistic. Few large elements. Strong readable typographic hierarchy.\nLayout: place one dynamic three-quarter upper-body/upper-thigh player illustration on the RIGHT 43 percent; text fills the LEFT 55 percent with comfortable margins. A sweeping lime brush shape curves behind the figure. All face, scalp, fingers and ball must remain completely inside the frame. Keep at least 50px safe padding for every text line. No hoop, opponent, audience, arena signage or scoreboard.\n\nPerson: the real basketball player DERERK PARDON (デレク・パードン), recognizable from the official portraits in this conversation. Adult Black male, tall and very muscular, shaved bald scalp with a high rounded crown, long oval face, closely trimmed sideburns blending into a dense full dark beard extending below the chin, short thin moustache, broad rounded nose, full lips, dark gently arched eyebrows, large alert dark eyes, prominent ears, dark brown skin. Muscular tattooed shoulders and arms; simplify the tattoos into expressive ink shapes without readable tattoo text. Depict his actual facial features in hand-drawn ink, with lively three-quarter view and a focused expression.\nAction: dynamic basketball pivot, torso turning toward the left, the orange basketball held firmly with BOTH hands around chest/waist height, elbows naturally bent, shoulders twisting and jersey folds showing movement. Clear anatomically correct two arms and two hands, one thumb and four fingers on each visible hand, no fused or extra fingers, no duplicate ball. This is a generic imagined playing pose, NOT a recreation of a specific match action.\nOutfit: plain sleeveless dark charcoal jersey with ivory edge piping and plain dark shorts, no team crest, no league logo, no sponsor, no wordmark, no number, no player name.\n\nTEXT (exactly these strings, carefully rendered in correct Japanese, no additional text):\nSmall top-left: 「バスケまとめ」\nDate beneath brand: 「2026.11.12」\nSmall simple text label: 「B.PREMIER」\nLargest ivory bold headline: 「試合結果」\nNext large lime bold line: 「当日のEFF」\nStrong ivory/lime secondary line: 「ポジション別TOP3」\nBottom-left clear readable disclosure: 「イラスト（AI生成）」\nNext to disclosure: 「イメージ」\n\nFactual scope: the article is a same-day game-results and official EFF top-three-by-position roundup. Pardon was selected randomly among named article players because the article has multiple equally weighted comparisons. Do NOT add his name, individual stats, rank, participation, praise, success claims, score, or winning shot. TOP3 describes the article section, not this illustrated player's ranking. Keep position-specific scope on the same visually grouped block as TOP3. No season-average or predictive language. No official photos or logo anywhere. The disclosure イラスト（AI生成） and イメージ must be fully visible and readable, at least 25px high in a 1536px wide output.\nGenerate the complete final composition and all typography in one image.",
+    "generator": "OpenAI 内蔵 image_gen.imagegen。初回生成1回、修正0回。PNG 1672x941px。API・CLI生成・新規課金なし。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-12T14:03:13.522852+00:00",
+  "publication_approved": false
+}

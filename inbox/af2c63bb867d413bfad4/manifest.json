@@ -1,0 +1,93 @@
+{
+  "id": "af2c63bb867d413bfad4",
+  "article_path": "article-results-one-next-20261112.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261112.html",
+  "source_commit": "",
+  "source_blob_sha": "ba34d0e3ad17e9e7f0662a6645ea634fd0350fd3",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "2abf2597e20ae2236f307003d2e4d61c6ecce7fa2f59d86cee29079b451a8872",
+  "last_observed_blob_sha": "ba34d0e3ad17e9e7f0662a6645ea634fd0350fd3",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/af2c63bb867d413bfad4/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/af2c63bb867d413bfad4/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-12T13:59:32.494778+00:00",
+  "creation_event_id": "85ea5bf438f2bb8a8b7a",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/af2c63bb867d413bfad4/thumbnail.png",
+  "image_sha256": "20a58fb9fa3d3a0f58d491f0a78e3a3b8c5d847f0e0179d192053445d011b690",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "ba34d0e3ad17e9e7f0662a6645ea634fd0350fd3",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.12",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "B.PREMIER",
+      "B.ONE・B.NEXTは試合なし",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/af2c63bb867d413bfad4/source.html",
+        "role": "本文の唯一の根拠（固定HTML）",
+        "article_url_identifier_only": "https://basuke-matome.jp/article-results-one-next-20261112.html"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/af2c63bb867d413bfad4/source.txt",
+        "role": "本文の唯一の根拠（固定文章）"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで確認した承認済み画風のみ。人物・文字・数字は転用しない"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ザック・オーガスト",
+        "selection": "ランダム",
+        "selection_reason": "試合結果と複数ポジションの順位を並列に扱う記事で単独の主役に絞れないため、固定HTMLに氏名が登場する選手を重複排除した11人からsecrets.choiceで1人選出。",
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/af2c63bb867d413bfad4/selection.json",
+        "official_profile": "https://shigalakes.com/team/players/detail/id=21342?PlayerID=51000312&Year=2016",
+        "official_league_profile": "https://www.bleague.jp/roster_detail/?PlayerID=51000312",
+        "official_portrait": "https://bleague.bl.kuroco-img.app/v=2026110102/files/user/roster/698/2026-27/51000312_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/af2c63bb867d413bfad4/references/zach-auguste-official.jpg",
+        "appearance_verified": "公式プロフィール写真をview_imageで確認。後ろへ編み込んだコーンロウ、短い側頭部、長めの輪郭、眉・目鼻、口ひげと顎沿いのひげ、長い首、筋肉質の体格、両腕のタトゥー、左前腕の黒いスリーブを参照。",
+        "use_limit": "容姿のみ参照。公式写真の貼付なし。イラストの動作は実際の試合の再現ではない。画像内に選手名・個人成績・出場や活躍の主張なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nCreate exactly ONE finished Japanese basketball editorial thumbnail, wide 16:9, 1536x864 or larger PNG. This is a brand-new illustration, not a photograph or a photo collage.\n\nDesign: follow the approved black-and-lime hand-painted sports editorial style already inspected in this conversation: deep near-black #151A18 background, electric lime #CCF43B dry-brush diagonal strokes, bold off-white Japanese typography, strong black-and-white ink hatching, restrained paper grain and splatter, very few elements. The previously shown Culver artwork is STYLE ONLY: do not copy its person, name, date, score or numbers. Make this composition fresh.\n\nSubject: exactly one REAL basketball player, Zach Auguste (ザック・オーガスト), drawn as an expressive ink illustration. His official Shiga Lakes profile portrait has been visually inspected: long oval face, medium brown skin interpreted with grayscale ink, black close-to-scalp cornrow braids swept straight back with closely cropped sides, strong forehead, arched dark brows, almond-shaped eyes, medium broad nose, defined full lips, short connected moustache and boxed beard extending along the jaw and under the chin, long athletic neck, tall muscular build, intricate dark tattoos across both shoulders and arms, black sleeve on his left forearm. Preserve these specific identity features and facial proportions; do not draw a generic fictional athlete or copy Culver's curly hair. Use the actual official portrait as identity guidance only; do not reproduce or paste any photo pixels. Uniform is plain unbranded ivory and black with small lime trim; no team/league logo, no sponsor, no player name, no uniform number.\n\nAction and layout: left 55 percent is clear structured typography. Right 45 percent features Auguste in a dynamic airborne two-handed rebound-catching pose, torso twisting toward the viewer, head and face clearly readable in three-quarter view, both arms lifted diagonally, both hands gripping one complete orange basketball at the upper right, one bent knee suggesting upward motion. Keep the ball, fingers, hands, head and all important contours comfortably inside the frame. Plausible human anatomy and two hands with anatomically correct fingers, no extra limbs. Frame at roughly upper thighs, allowing the jersey lower edge to run into a brush stroke rather than awkwardly cut a joint. Lime brush arc behind the player conveys rising motion. This is a generic conceptual basketball scene, NOT a reconstruction of any actual match or decisive play. No other people, no arena advertising, no scoreboard, no trophies.\n\nExact visible text only, carefully legible Japanese:\nSmall upper-left masthead: 「バスケまとめ」\nDate immediately below in compact type: 「2026.11.12」\nLarge dominant headline: 「試合結果」\nSecond prominent line in off-white: 「当日のEFF」\nLime highlighted line: 「ポジション別TOP3」\nSmall supporting line: 「B.PREMIER」\nSmall but readable contextual line above the footer: 「B.ONE・B.NEXTは試合なし」\nBottom footer, with adequate contrast and at least 40px outer safe margin: 「イラスト（AI生成）」 followed by 「イメージ」\n\nThe factual content of these lines is supported ONLY by the supplied fixed source.html and source.txt for November 12, 2026. TOP3 is today's official EFF by position, not season averages and not an overall top three. Do not display any player name, personal statistics, achievement, appearance claim, score or additional numbers. The chosen player was selected randomly from the article's named players and serves solely as an image motif. Keep the artwork unmistakably illustrated, not photorealistic. Prioritize exact typography, strong visual hierarchy, recognizable identity, and unclipped hands/ball.\n\nONE PERMITTED REVISION\nEdit the supplied generated basketball thumbnail with ONE targeted layout correction. Preserve the entire left-side Japanese typography exactly, the black #151A18 and lime #CCF43B ink-and-brush style, Zach Auguste's recognizable face with swept-back cornrow braids and connected short beard, the same pose, the anatomy, the unbranded uniform, and the orange ball. Do not introduce any words, numbers, players, logos or photographs. The basketball and hands are currently too close to the top and right canvas edge. Scale the entire player WITH the ball down by about 8 percent in the right-hand area, then place them so the complete basketball, ALL fingers, both hands and the entire head have a clear margin of at least 50 pixels from the top and right edges on this approximately 1672x941 canvas. Keep the composition energetic and the bent knee. Keep text unobstructed and unchanged:\nバスケまとめ\n2026.11.12\n試合結果\n当日のEFF\nポジション別TOP3\nB.PREMIER\nB.ONE・B.NEXTは試合なし\nイラスト（AI生成）　イメージ\nThis is a conceptual illustration of the real Zach Auguste, randomly selected from the article's named players, not an actual game reenactment. No name, no personal statistics. Output exactly one corrected finished PNG in the same 16:9 format, at least 1500 pixels wide.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built_in",
+      "initial_generations": 1,
+      "revisions": 1,
+      "final_generated_file": "/Users/genjo/.codex/generated_images/01a1d011-db69-7cc2-babb-d2b6961d701f/exec-df4b7528-1359-4b34-abb9-e1c21d98f4be.png",
+      "output_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/af2c63bb867d413bfad4/generated.png",
+      "used_api_or_cli": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    },
+    "qa_notes": {
+      "inspection_method": "内蔵画像生成が表示した初稿と修正版を実際に目視検品。修正版を最終採用。",
+      "text_and_numbers": "最終画像の全9テキスト行を確認。日付2026.11.12、試合結果、当日のEFF、ポジション別TOP3、対象B.PREMIERを固定HTML/TXTと照合。選手名・得点・個人EFF・勝敗の数字は掲載なし。",
+      "source_qualifiers": "当日・ポジション別の範囲を明記。固定原稿のB.ONE・B.NEXT試合なしを保持。今季平均・予想・総合TOP3とは記述していない。個人成績非掲載のため、公式EFFと内訳算式の差を新たに断定しない。",
+      "likeness_or_no_named_person": "描かれているのは実在選手ザック・オーガスト1人。公式写真で確認した編み込み、輪郭、目鼻、ひげ、体格をイラストで反映。ランダム選出なので名前や活躍を画像で記述せず、「イメージ」と表示。",
+      "layout": "初稿ではボールが上端に近かったため1回修正。修正版はボール全体、頭、両手・指が枠内に収まり、上端・右端に余白。文字と人物の重なりなし。手腕は自然な接続で、余分な肢なし。黒×ライムのインク・ブラシ画。ロゴ・スポンサー・写真なし。",
+      "ai_label": "最終画像の左下「イラスト（AI生成）」「イメージ」を視認。"
+    }
+  },
+  "prepared_at": "2026-11-12T14:08:01.951612+00:00",
+  "publication_approved": false
+}

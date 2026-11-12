@@ -1,0 +1,74 @@
+{
+  "id": "fe1ea3cd5a175ef3ddfa",
+  "article_path": "article-stats-20261112.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261112.html",
+  "source_commit": "",
+  "source_blob_sha": "e31adda1200c5a5c6f526622c9276e78714a7882",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "5768e56a3e850faa512c70faa09a06e0b2d4396294522deb9cf3c0faf3bff6f3",
+  "last_observed_blob_sha": "e31adda1200c5a5c6f526622c9276e78714a7882",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe1ea3cd5a175ef3ddfa/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe1ea3cd5a175ef3ddfa/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-12T13:59:32.784328+00:00",
+  "creation_event_id": "b4fc2cbacd27afcdd7c6",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/fe1ea3cd5a175ef3ddfa/thumbnail.png",
+  "image_sha256": "5d81db08bad13f7111246e2be9e689e7a3110cf68a8075b3eba25d85d681b53e",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "e31adda1200c5a5c6f526622c9276e78714a7882",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.12｜4試合集計",
+      "貢献度1位",
+      "ブライアン・アンゴラ（富山）",
+      "EFF 48",
+      "36得点・9リバウンド・4アシスト",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe1ea3cd5a175ef3ddfa/source.html",
+        "article_url": "https://basuke-matome.jp/article-stats-20261112.html",
+        "usage": "本文根拠。2026年11月12日の4試合を対象とする貢献度ランキング。ブライアン・アンゴラ（富山）は1位、EFF 48、36得点、9リバウンド、4アシスト。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe1ea3cd5a175ef3ddfa/source.txt",
+        "usage": "固定HTMLと表示文字・数値・集計範囲を照合。本文の根拠はこのTXTと固定HTMLのみ。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "view_imageで確認した承認済み黒×ライム、太い日本語文字、インク・ブラシ調。元画像の選手名・数値は転用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ブライアン・アンゴラ",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿の見出し、リード、TOP3の1位、部門別得点1位で最も大きく扱われている。",
+        "official_profile_url": "https://grouses.jp/team/players/detail/id=24443?PlayerID=51000682",
+        "official_league_profile_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000682",
+        "official_portrait_url": "https://bleague.bl.kuroco-img.app/v=2026111223/files/user/roster/696/2026-27/51000682_01.jpg",
+        "reference_checked": "公式クラブページ掲載の本人プロフィール写真をダウンロードし、view_imageで容姿を目視確認。本文の数字には外部資料を使用していない。",
+        "observed_features": "後ろへ編み込んだコーンロウと耳後ろの細い編み髪、短い側頭部、高い額、縦長の輪郭、口ひげと顎を覆う整ったひげ、鼻・目元、左上腕のタトゥー。これらを白黒インクのプレーイラストへ反映。",
+        "depiction": "ドライブを表すオリジナルのイメージ。特定の実際の試合場面の再現ではない。公式写真の貼付・チームロゴ・リーグロゴ・スポンサー文字なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT\nUse case: illustration-story\nCreate exactly ONE final Japanese basketball editorial thumbnail, landscape 16:9, 1536x864 or larger, PNG, opaque. This is a new original hand-drawn ink illustration, not a photograph. Article: November 12, 2026 contribution/EFF ranking across that day's four B.PREMIER games. The supplied fixed article's protagonist is Braian Angola (ブライアン・アンゴラ) of Toyama, ranked first with EFF 48, 36 points, 9 rebounds, 4 assists. Do not add any other claims or statistics.\n\nApproved visual system inspected: charcoal black #151A18 background, electric lime #CCF43B bold expressive dry-brush sweeps, creamy white text, textured black-and-white ink sports illustration, limited elements, very bold readable Japanese type. Make an energetic editorial poster with generous readable text on the LEFT 58%, player on the RIGHT 42%. Use strong scale contrast, extremely large lime 48, bold cream Japanese heading; no excessive tiny writing or decorative charts.\n\nReal subject, identity observed directly from his official Toyama profile portrait (https://grouses.jp/team/players/detail/id=24443?PlayerID=51000682 and official portrait https://bleague.bl.kuroco-img.app/v=2026111223/files/user/roster/696/2026-27/51000682_01.jpg): Braian Angola, adult male basketball athlete, lean strong build, medium-dark brown skin rendered in ink, high forehead, dark neat cornrows braided back from forehead with several thin braids falling behind ears toward neck, close faded sides; oval elongated face, dark almond-shaped eyes, broad gently rounded nose, full lips; connected mustache and substantial neatly trimmed full black beard around chin/jaw; subtle small stud earrings; tattoo linework on his left upper arm. Faithfully use these observed characteristics, not an invented generic player, not the short curly hair from the style example. Draw him in expressive white/black ink strokes with recognizable face in three-quarter view.\nPose: dynamic low forward drive, torso leaning toward center, knees flexed, one hand above an orange basketball at waist/hip level in a controlled dribble, other arm bent naturally protecting space. Face and hairstyle fully visible. Crop intentionally at mid-thigh, but keep head, braids, ball and both hands safely inside frame. Natural five-finger hands, coherent wrists and elbows, exactly two arms. Plain sleeveless cream/charcoal jersey with dark trim, no jersey text, numbers, team marks, sponsor branding, or league logo. Original illustrative pose only, NOT a reconstruction of a specific real play. No other person.\n\nExact text to render, and no additional text:\nTop left small: \"バスケまとめ\"\nBelow that medium: \"2026.11.12｜4試合集計\"\nMain heading large: \"貢献度1位\"\nPlayer name medium, exactly: \"ブライアン・アンゴラ（富山）\"\nCentral numeric feature: \"EFF 48\" (48 enormous, EFF clearly legible and attached to it; do not imply 48 points)\nBelow numeric feature: \"36得点・9リバウンド・4アシスト\"\nBottom small but clearly legible: \"イラスト（AI生成）\"\nBeside the bottom label: \"成績をもとにしたイメージ\"\n\nKeep all text and ball within a 4% safe margin. Text should not overlap face, hands or ball. The date and four-game scope are essential, as are the AI label and illustrative-image note. No nationalities, national flags, season-best claim, MVP award, real-game reconstruction claim, logos, photo collage, watermarks or unrelated scores. Deliver polished single finished artwork with crisp exact Japanese typesetting.\n\nONE ALLOWED REVISION PROMPT\nEdit this thumbnail once, preserving its exact artwork style, colors, player identity, pose, face, hands, ball and ALL existing Japanese text and numbers unchanged. Target only the player's framing: the braids at the crown are too close to the top edge and the outer bent elbow is cut at the right edge. Scale the entire illustrated player and the basketball together down to about 88% of their current size and move them slightly inward and downward, within the existing right-side visual area. Ensure a visible charcoal-background clearance of at least 35 pixels above the full head/hairstyle and at least 25 pixels between the bent elbow and the right edge. Both hands and the full basketball must remain visible and anatomically unchanged. The torso/lower legs may intentionally continue beyond the bottom edge as a mid-thigh composition. Preserve the entire left-side typographic composition and every character verbatim, especially \"2026.11.12｜4試合集計\", \"貢献度1位\", \"ブライアン・アンゴラ（富山）\", \"EFF 48\", \"36得点・9リバウンド・4アシスト\", \"イラスト（AI生成）\", \"成績をもとにしたイメージ\", and \"バスケまとめ\". Repaint only background gaps with the same charcoal and lime ink-brush design. No new elements, no logos, no extra text. Keep landscape approximately 16:9 PNG at the same resolution or larger.",
+    "generator": "Built-in image_gen (image_gen__imagegen). 1 initial generation + 1 framing correction. No external image API or CLI. Final PNG 1672x941.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-12T14:11:55.556628+00:00",
+  "publication_approved": false
+}
