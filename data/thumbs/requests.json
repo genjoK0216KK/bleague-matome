@@ -561,16 +561,16 @@
   "article-games-20261112.html": {
    "article_path": "article-games-20261112.html",
    "article_url": "https://basuke-matome.jp/article-games-20261112.html",
-   "editorial_fingerprint": "73169f226ca281092ad029f5a706f756430a3c90792ae95414c7d011ba1b0b97",
-   "event_id": "0a36ee71c77f78a3f7bf",
-   "recorded_at": "2026-11-12T10:14:06.772594+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "b7ffdd837bebc37ddd1da9fddd8cb7623f1d135a",
-   "stable_fingerprint": "73169f226ca281092ad029f5a706f756430a3c90792ae95414c7d011ba1b0b97",
+   "editorial_fingerprint": "2abf2597e20ae2236f307003d2e4d61c6ecce7fa2f59d86cee29079b451a8872",
+   "event_id": "fd37e49c296b1b34b492",
+   "recorded_at": "2026-11-12T13:59:18.213131+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "f8f93dc07c518220dc60b8143545a49b67733819",
+   "stable_fingerprint": "2abf2597e20ae2236f307003d2e4d61c6ecce7fa2f59d86cee29079b451a8872",
    "status": "requested",
    "target_date": "20261112",
-   "title": "11/12 試合結果（公式記録の確定待ち）"
+   "title": "11/12 試合結果・当日のEFF"
   },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
@@ -771,16 +771,16 @@
   "article-results-one-next-20261112.html": {
    "article_path": "article-results-one-next-20261112.html",
    "article_url": "https://basuke-matome.jp/article-results-one-next-20261112.html",
-   "editorial_fingerprint": "73169f226ca281092ad029f5a706f756430a3c90792ae95414c7d011ba1b0b97",
-   "event_id": "c3cc496ef98bc64e9dd3",
-   "recorded_at": "2026-11-12T10:14:06.772594+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "c208f23edaa1e6c3a98374930064c7183e6befd5",
-   "stable_fingerprint": "73169f226ca281092ad029f5a706f756430a3c90792ae95414c7d011ba1b0b97",
+   "editorial_fingerprint": "2abf2597e20ae2236f307003d2e4d61c6ecce7fa2f59d86cee29079b451a8872",
+   "event_id": "85ea5bf438f2bb8a8b7a",
+   "recorded_at": "2026-11-12T13:59:18.213131+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "ba34d0e3ad17e9e7f0662a6645ea634fd0350fd3",
+   "stable_fingerprint": "2abf2597e20ae2236f307003d2e4d61c6ecce7fa2f59d86cee29079b451a8872",
    "status": "requested",
    "target_date": "20261112",
-   "title": "11/12 試合結果（公式記録の確定待ち）"
+   "title": "11/12 試合結果・当日のEFF"
   },
   "article-stats-20261026.html": {
    "article_path": "article-stats-20261026.html",
@@ -903,6 +903,18 @@
    "status": "requested",
    "target_date": "20261111",
    "title": "11月11日の貢献度ランキング 1位はジャレット・カルバー（仙台）の42"
+  },
+  "article-stats-20261112.html": {
+   "article_path": "article-stats-20261112.html",
+   "article_url": "https://basuke-matome.jp/article-stats-20261112.html",
+   "editorial_fingerprint": "5768e56a3e850faa512c70faa09a06e0b2d4396294522deb9cf3c0faf3bff6f3",
+   "event_id": "b4fc2cbacd27afcdd7c6",
+   "recorded_at": "2026-11-12T13:59:18.213131+00:00",
+   "source_blob_sha": "e31adda1200c5a5c6f526622c9276e78714a7882",
+   "stable_fingerprint": "5768e56a3e850faa512c70faa09a06e0b2d4396294522deb9cf3c0faf3bff6f3",
+   "status": "requested",
+   "target_date": "20261112",
+   "title": "11月12日の貢献度ランキング 1位はブライアン・アンゴラ（富山）の48"
   }
  },
  "version": 1
