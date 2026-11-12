@@ -1,0 +1,104 @@
+{
+  "id": "e3396bc0c843b1d2b411",
+  "article_path": "article-results-one-next-20261113.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261113.html",
+  "source_commit": "",
+  "source_blob_sha": "2404d3064e07b81845e1218dc2326b1b8f4dc749",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "c270ec57843dd73964e6549e2ed719560ac4759de3cbac1aa33a025246645b09",
+  "last_observed_blob_sha": "2404d3064e07b81845e1218dc2326b1b8f4dc749",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e3396bc0c843b1d2b411/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e3396bc0c843b1d2b411/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-12T20:05:45.931373+00:00",
+  "creation_event_id": "d5fb8c79f6f2a0134d2e",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/e3396bc0c843b1d2b411/thumbnail.png",
+  "image_sha256": "ab84cc7d96d70cb7c34d0dcbff50d16e675f78441ce57559721b92b77553749e",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "2404d3064e07b81845e1218dc2326b1b8f4dc749",
+    "text_lines": [
+      "バスケまとめ",
+      "11/13 試合前",
+      "登録選手の",
+      "ベスト5",
+      "リーグ別・今季平均EFFで選出",
+      "出場確定ではありません",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e3396bc0c843b1d2b411/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261113.html",
+        "verified_blob_sha": "2404d3064e07b81845e1218dc2326b1b8f4dc749",
+        "notes": "固定HTMLのみを記事内容の根拠とした。対象日2026-11-13、試合前、登録選手、リーグ別の今季平均EFFによる選出。出場確定を示さず当日結果とは別集計。"
+      },
+      {
+        "type": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e3396bc0c843b1d2b411/source.txt",
+        "notes": "固定文章を全文確認し、見出し・留保をHTMLと照合。"
+      },
+      {
+        "type": "operating_rules",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "notes": "画像生成・検品ルールを確認。主役の選び方は今回のユーザー指示を優先。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "visually_reviewed": true,
+        "notes": "配色・太い日本語見出し・インクとブラシの画風のみ参照。選手名・日付・成績は転用していない。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://www.volters.jp/team/players/detail/id=13836",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026111009/files/user/roster/724/2026-27/32989_01.jpg",
+        "local_reference": "references/lj-peak-official.jpg",
+        "visually_reviewed": true,
+        "notes": "熊本ヴォルターズ公式プロフィール。容姿参照専用。公式写真の貼付け・写真素材としての組込みなし。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "LJ・ピーク",
+        "selection": "ランダム",
+        "selection_pool": "固定HTMLのベスト5・サブ5に名前が載る20人",
+        "selection_method": "Python random.Random('e3396bc0c843b1d2b411').choice(players_in_article_order)",
+        "reason": "複数選手の並列比較で単独の主役を絞れないため、本文に名前が出る選手を優先して抽選。",
+        "official_profile": "https://www.volters.jp/team/players/detail/id=13836",
+        "official_photo": "https://bleague.bl.kuroco-img.app/v=2026111009/files/user/roster/724/2026-27/32989_01.jpg",
+        "appearance_observed": "短く刈った黒髪、縦長の輪郭、頬骨、幅のある鼻、厚めの唇、薄い口ひげ、あご先の短いひげ、筋肉質な肩腕、右腕のタトゥーを確認。",
+        "image_treatment": "ドリブル姿の手描きインクイラスト。実際の試合場面の再現ではない。画像内に選手名・背番号・個人成績・出場や活躍の断定なし。ロゴ・スポンサー文字なし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset type: one Japanese basketball article thumbnail, landscape 16:9, 2048 x 1152 pixels, opaque PNG.\nCreate ONE new finished thumbnail in the approved black-and-lime editorial ink style shown earlier. Do not reproduce the prior thumbnail's athlete, date, score or wording.\n\nArticle content is fixed: 2026-11-13 pregame article selects a best five separately by league from registered players using current season average EFF. This is not a game-result ranking, not confirmed participation. Do not add any other factual claim.\n\nMain subject: exactly one REAL basketball player, L.J. Peak (LJ・ピーク). He was randomly selected from the players named in the article, not singled out as its star. Use the official roster portrait inspected earlier ONLY as a likeness guide, never paste the photo. His likeness: very short close-cropped black hair with natural slightly rounded hairline, dark skin translated into grayscale ink, elongated oval face, strong cheekbones, fairly broad nose, full lips, tiny fine moustache and a distinct short pointed goatee below the chin, focused dark eyes, muscular broad shoulders and arms. Preserve these specific facial features, do not draw an invented generic athlete. Fine dark tattoo-like linework on his right upper arm consistent with the reference. Render him fully as hand-drawn brush-and-ink illustration, not photorealism.\n\nComposition: left 57 percent is big clean Japanese typography; right 43 percent shows Peak in a dynamic low driving dribble, leaning forward with bent knees, face visible in a three-quarter front view, one hand naturally controlling the orange basketball at hip level and the other bent naturally for balance. Capture his head, both hands and ball fully within frame; upper legs may meet the lower illustration region but do not cut through a hand or face. One believable basketball, no extra arms, no extra fingers. Wear a plain light ivory basketball uniform with dark edging, NO number, NO letters, NO team logo, NO sponsor logo, NO league logo. This is an imagined basketball action for editorial illustration, not a recreation of any real game or specific play.\n\nColor and style: near-black #151A18, electric lime #CCF43B, warm ivory text, grayscale hand-inked player; orange ball is the only other strong accent. Thick sketch contours, expressive dry-brush crosshatching, modest ink flecks, a broad diagonal lime brush swipe behind the player. Minimal, bold, polished, easy to read on a phone. Flat poster art, not a photo, not a 3D rendering.\n\nRender ONLY the following Japanese text, exactly, with clear readable glyphs:\nTop-left small masthead: 「バスケまとめ」\nDate label beneath masthead: 「11/13 試合前」\nMain headline first line in large ivory bold type: 「登録選手の」\nMain headline second line in enormous lime bold brush type: 「ベスト5」\nSupporting line in white bold type: 「リーグ別・今季平均EFFで選出」\nVisible qualifier below supporting line: 「出場確定ではありません」\nBottom-left attribution, legible and wholly inside safe margins: 「イラスト（AI生成）｜イメージ」\n\nTypography hierarchy should make ベスト5 dominate. Keep at least 55 pixels clear safe margin on all edges. Separate footnote from player and graphics for legibility. No player name, no individual performance, no player number, no claimed result, no score, no extra text, no logos.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generations": 1,
+      "corrections": 0,
+      "output_format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "original_output": "/Users/genjo/.codex/generated_images/01a1d15d-c5c5-7751-aa57-41c00fb97829/exec-b334e0bc-1deb-47b5-b5f7-fe11fef3dab7.png",
+      "qa_observations": {
+        "text_and_numbers": "生成画像を目視し、指定7行の文字と11/13・ベスト5を確認。個人成績の転記なし。",
+        "source_qualifiers": "試合前・登録選手・リーグ別・今季平均EFF・出場確定ではない旨が読め、当日実績との混同がない。",
+        "likeness_or_no_named_person": "公式写真と生成画像を比較し、選択した実在選手の短髪、輪郭、目鼻、口元とあごひげを確認。匿名の架空人物へ置き換えていない。",
+        "layout": "黒×ライムの約16:9。見出し、注意書き、両手、顔、ボールに不自然な見切れなし。両腕と指の形に明瞭な破綻なし。衣装にロゴ・文字なし。",
+        "ai_label": "画像左下の「イラスト（AI生成）｜イメージ」が完全に表示され読める。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-12T20:08:21.016974+00:00",
+  "publication_approved": false
+}
