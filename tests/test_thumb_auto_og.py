@@ -126,6 +126,17 @@ class ArticleWrittenImage(Base):
         r = ta.apply_all(self.root)
         self.assertEqual((r['applied'], self.page()), ([], built))
 
+    def test_stale_page_with_default_card_is_not_rewritten_every_build(self):
+        """自動サムネを外した記事（既定のカードが build の並びで入っている）を、毎回の build で書き換えない。"""
+        ta.apply_all(self.root)
+        (self.root / self.PATH).write_text(self.page().replace('<h1>10/25 見出し</h1>', '<h1>10/25 試合結果</h1>'))
+        ta.apply_all(self.root)
+        built = page_assets.ensure(self.page(), 'G-TEST')               # build の後処理（GA→既定カード→Clarity の順）
+        (self.root / self.PATH).write_text(built)
+        self.assertEqual(ta.restore_html(built), built)
+        self.assertEqual(ta.apply_all(self.root)['applied'], [])
+        self.assertEqual(self.page(), built)
+
     def test_unrelated_meta_is_kept(self):
         ta.apply_all(self.root)
         page = self.page()
@@ -192,6 +203,41 @@ class ArticleWrittenImage(Base):
                                                  'twitter:card': ['summary_large_image']})
         self.assertEqual(page_assets.ensure_default_og(restored), restored)          # build の後処理でも変わらない
         self.assertEqual(ta.restore_html(restored), restored)                         # 何度通しても同じ
+
+    # ---- 3回目のQA（11/12 ChatGPT「直してから」v2）の3件
+
+    def test_restore_does_not_add_default_next_to_spaced_intended_image(self):
+        """restore の後の補充が property = "og:image"（空白あり）を見分け、既定画像を足さない（og:image は1本）。"""
+        keep = '<meta property = "og:image" content = "https://basuke-matome.jp/thumbs/special-20261025.jpg">\n'
+        self.write_head(keep)
+        ta.apply_all(self.root)
+        restored = ta.restore_html(self.page())
+        built = page_assets.ensure_default_og(restored)
+        self.assertEqual(image_metas(built)['og:image'], ['https://basuke-matome.jp/thumbs/special-20261025.jpg'])
+        self.assertNotIn('og-default.png', built)
+        self.assertIn(keep, built)
+
+    def test_lookalike_attribute_does_not_stop_the_default_card(self):
+        """data-property="og:image" だけが残っても、本物の og:image とは見ない。restore 直後から既定のカード1組。"""
+        look = '<meta name="description" data-property="og:image" content="説明">\n'
+        self.write_head(look)
+        ta.apply_all(self.root)
+        restored = ta.restore_html(self.page())
+        self.assertIn(look, restored)
+        self.assertEqual(image_metas(restored), {'og:image': [page_assets.DEFAULT_OG_IMAGE],
+                                                 'twitter:image': [page_assets.DEFAULT_OG_IMAGE],
+                                                 'twitter:card': ['summary_large_image']})
+
+    def test_greater_than_inside_an_earlier_attribute(self):
+        """消す対象の meta の前の属性に「>」があっても、タグを途中で切らずに旧SVGを外す。"""
+        odd = ('<meta data-note="a > b" property="og:image" content="https://basuke-matome.jp/thumb-daily-20261025.svg">\n'
+               "<meta data-note='x>y' name=\"twitter:image\" content=\"/thumb-daily-20261025.svg\">\n")
+        self.write_head(odd)
+        ta.apply_all(self.root)
+        self.assert_one_auto_set(self.page())
+        self.assertNotIn('data-note', self.page())
+        restored = ta.restore_html(self.page())
+        self.assertEqual(image_metas(restored)['og:image'], [page_assets.DEFAULT_OG_IMAGE])
 
     def test_restore_keeps_intended_other_image(self):
         keep = '<meta property="og:image" content="https://basuke-matome.jp/thumbs/special-20261025.jpg">\n'

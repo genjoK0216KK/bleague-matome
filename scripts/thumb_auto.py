@@ -321,6 +321,7 @@ def import_inbox(root, inbox):
 # ------------------------------------------------------------------ 適用（build.py から毎回）
 
 IMG = re.compile(r'<img\b[^>]*\bclass="eyecatch"[^>]*>')
+# 自動サムネの meta の形（試験で使う）。記事の読み取り・外す処理は page_assets.head_metas（HTMLParser）で行う。
 META_AUTO = re.compile(r'[ \t]*<meta\b[^>]*\bdata-auto-thumb="[^"]*"[^>]*>\n?')
 # 記事ジョブが自分で書いたサムネ下地（thumb-*.svg）の画像の指定だけを外す（11/12 MINI8-OG-TAGS-QA）。
 # 日次まとめは記事ジョブが thumb-daily-*.svg を og:image・twitter:image に書く。自動サムネを入れた時に
@@ -334,26 +335,6 @@ META_AUTO = re.compile(r'[ \t]*<meta\b[^>]*\bdata-auto-thumb="[^"]*"[^>]*>\n?')
 # 自動サムネを入れる時だけは、自動の1組と同じ値の twitter:card（summary_large_image）も重複として外す。
 SVG_IMAGE_KEYS = ('og:image', 'og:image:url', 'og:image:secure_url', 'twitter:image', 'twitter:image:src')
 ARTICLE_SVG = re.compile(r'^(?:https?://basuke-matome\.jp/|/)?thumb-[A-Za-z0-9_-]+\.svg(?:[?#]\S*)?$', re.I)
-META_TAG = re.compile(r'[ \t]*<meta\b[^>]*>\n?', re.I)
-HEAD = re.compile(r'<head\b[^>]*>[\s\S]*?</head\s*>', re.I)
-_META_ATTR = re.compile(r'''([^\s"'>/=]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+)))?''')
-
-
-def _meta_attrs(tag):
-    """meta タグの属性を {小文字の属性名: 値} にする（同じ属性が2回あれば最初の値）。"""
-    inner = re.sub(r'^\s*<meta\b', '', tag.strip(), flags=re.I)
-    inner = inner[:-1] if inner.endswith('>') else inner
-    attrs = {}
-    for m in _META_ATTR.finditer(inner.rstrip('/')):
-        name = m.group(1).lower()
-        if name not in attrs:
-            value = next((g for g in m.groups()[1:] if g is not None), '')
-            attrs[name] = unescape(value).strip()
-    return attrs
-
-
-def _meta_keys(attrs):
-    return {attrs.get('property', '').lower(), attrs.get('name', '').lower()} - {''}
 
 
 def _owned_by_others(attrs):
@@ -361,22 +342,17 @@ def _owned_by_others(attrs):
 
 
 def _is_article_svg_image(attrs):
-    return (not _owned_by_others(attrs) and bool(_meta_keys(attrs) & set(SVG_IMAGE_KEYS))
+    return (not _owned_by_others(attrs) and bool(page_assets.meta_keys(attrs) & set(SVG_IMAGE_KEYS))
             and bool(ARTICLE_SVG.match(attrs.get('content', ''))))
 
 
 def _is_duplicate_card(attrs):
-    return (not _owned_by_others(attrs) and _meta_keys(attrs) == {'twitter:card'}
+    return (not _owned_by_others(attrs) and page_assets.meta_keys(attrs) == {'twitter:card'}
             and attrs.get('content', '').lower() == 'summary_large_image')
 
 
-def _drop_head_metas(html, drop):
-    """head の中の meta のうち drop(属性) が真のものだけを外す。head の外は触らない。"""
-    head = HEAD.search(html)
-    if not head:
-        return html
-    part = META_TAG.sub(lambda m: '' if drop(_meta_attrs(m.group(0))) else m.group(0), head.group(0))
-    return html[:head.start()] + part + html[head.end():]
+def _is_auto(attrs):
+    return 'data-auto-thumb' in attrs
 
 
 def _drop_for_auto(attrs):
@@ -420,10 +396,10 @@ def apply_html(html, entry):
         ('property', 'og:image', url), ('property', 'og:image:width', str(og['width'])),
         ('property', 'og:image:height', str(og['height'])), ('property', 'og:image:alt', alt),
         ('name', 'twitter:card', 'summary_large_image'), ('name', 'twitter:image', url))]
-    cleaned = _drop_head_metas(html, _drop_for_auto)   # 記事ジョブの SVG の指定を外す（画像の指定を自動の1組にする）
-    if [m.group(0).strip() for m in META_AUTO.finditer(cleaned)] == wanted:
+    cleaned = page_assets.remove_head_metas(html, _drop_for_auto)   # 記事ジョブの SVG の指定を外す（画像の指定を自動の1組にする）
+    if [m.raw.strip() for m in page_assets.head_metas(cleaned) if _is_auto(m.attrs)] == wanted:
         return cleaned                 # 既に同じ内容（build が並べ替えた位置も含めてそのまま＝再実行で変化なし）
-    html = META_AUTO.sub('', cleaned)
+    html = page_assets.remove_head_metas(cleaned, _is_auto)
     metas = ''.join(w + '\n' for w in wanted)
     anchor = re.search(r'<meta\b[^>]*property="og:url"[^>]*>\n?', html) or re.search(r'<meta\b[^>]*og:url[^>]*>\n?', html)
     if anchor:
@@ -445,11 +421,13 @@ def restore_html(html):
             end = img.end() + (1 if html[img.end():img.end() + 1] == '\n' else 0)
             start = img.start() - (1 if html[img.start() - 1:img.start()] == '\n' else 0)
             html = html[:start] + html[end:]
-    # 記事ジョブの SVG の指定も外し（SVG は SNS のカード画像に使えない）、その場で既定のカード画像
-    # （page_assets.ensure_default_og。og:image が残っていれば何もしない）を付ける。外した直後に画像の指定が
-    # 0件になる間を作らない。build の後処理でも同じ関数が通るので、結果は変わらない。
-    html = _drop_head_metas(META_AUTO.sub('', html), _is_article_svg_image)
-    return page_assets.ensure_default_og(html)
+    # 記事ジョブの SVG の指定も外す（SVG は SNS のカード画像に使えない）。外した結果 og:image が1つも
+    # 残らない時だけ、その場で既定のカード画像（page_assets.ensure_default_og）を付けて、画像の指定が0件の間を
+    # 作らない。既定のカードや意図した画像が残っている時は触らない（build ごとの付け直し＝差分を出さない）。
+    html = page_assets.remove_head_metas(html, lambda attrs: _is_auto(attrs) or _is_article_svg_image(attrs))
+    if not page_assets.has_meta(html, 'property', 'og:image'):
+        html = page_assets.ensure_default_og(html)
+    return html
 
 
 def apply_all(root, force=False):
