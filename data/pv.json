@@ -1,15 +1,15 @@
 {
  "status": "success",
- "updated": "2026-11-12T09:50:04.778680+09:00",
+ "updated": "2026-11-13T08:42:27.551501+09:00",
  "timezone": "Asia/Tokyo",
  "period": {
-  "start": "2026-11-05",
-  "end": "2026-11-11"
+  "start": "2026-11-06",
+  "end": "2026-11-12"
  },
- "total_through": "2026-11-11",
+ "total_through": "2026-11-12",
  "total": {
-  "/": 314,
-  "/next-games.html": 98,
+  "/": 320,
+  "/next-games.html": 100,
   "/index.html": 85,
   "/cat-kekka.html": 56,
   "/cat-data.html": 55,
@@ -255,34 +255,36 @@
   "/article-daily-20261107.html": 1,
   "/article-daily-20261108.html": 1,
   "/article-daily-20261110.html": 1,
+  "/article-daily-20261112.html": 1,
   "/article-games-20261104.html": 1,
   "/article-games-20261106.html": 1,
   "/article-games-20261107.html": 1,
   "/article-games-20261109.html": 1,
   "/article-games-20261110.html": 1,
   "/article-stats-20261101.html": 1,
-  "/article-stats-20261110.html": 1
+  "/article-stats-20261110.html": 1,
+  "/article-stats-20261111.html": 1
  },
  "week": {
-  "/": 40,
-  "/next-games.html": 7,
-  "/article-daily-20261104.html": 5,
+  "/": 36,
+  "/next-games.html": 8,
   "/articles.html": 4,
-  "/article-daily-20261105.html": 3,
-  "/article-games-20261105.html": 3,
   "/article-stats-20261106.html": 3,
   "/article-stats-20261108.html": 3,
   "/article-analysis-nagoya-20261109.html": 2,
-  "/article-daily-20261014.html": 2,
+  "/article-daily-20261104.html": 2,
   "/article-daily-20261111.html": 2,
+  "/article-games-20261105.html": 2,
   "/article-stats-20261107.html": 2,
   "/article-stats-20261109.html": 2,
-  "/cat-data.html": 2,
   "/index.html": 2,
+  "/article-daily-20261014.html": 1,
+  "/article-daily-20261105.html": 1,
   "/article-daily-20261106.html": 1,
   "/article-daily-20261107.html": 1,
   "/article-daily-20261108.html": 1,
   "/article-daily-20261110.html": 1,
+  "/article-daily-20261112.html": 1,
   "/article-games-20261104.html": 1,
   "/article-games-20261106.html": 1,
   "/article-games-20261107.html": 1,
@@ -290,9 +292,8 @@
   "/article-games-20261110.html": 1,
   "/article-stats-20261031.html": 1,
   "/article-stats-20261110.html": 1,
+  "/article-stats-20261111.html": 1,
   "/articles-2.html": 1,
-  "/cat-sokuho.html": 1,
-  "/injury.html": 1,
-  "/matome.html": 1
+  "/injury.html": 1
  }
 }
