@@ -57,6 +57,7 @@ class _HeadMetaParser(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.state = "before"          # before → head → after
         self.found = []
+        self.head_end = None           # 本物の </head> の位置（行, 列）
 
     def handle_starttag(self, tag, attrs):
         if self.state == "before" and tag == "head":
@@ -72,14 +73,29 @@ class _HeadMetaParser(HTMLParser):
     def handle_endtag(self, tag):
         if self.state == "head" and tag == "head":
             self.state = "after"
+            self.head_end = self.getpos()
+
+
+def _parse_head(text):
+    parser = _HeadMetaParser()
+    parser.feed(text)
+    parser.close()
+    return parser, [0] + [m.end() for m in re.finditer("\n", text)]
+
+
+def head_end(text):
+    """本物の </head> の始まりの位置（script の中の文字列などは数えない）。無ければ -1。"""
+    parser, lines = _parse_head(text)
+    if parser.head_end is None:
+        return -1
+    line, col = parser.head_end
+    pos = lines[line - 1] + col
+    return pos if text[pos:pos + 6].lower() == "</head" else -1
 
 
 def head_metas(text):
     """head の中の meta を、元の文字列での位置・元のタグ文字列・属性 {小文字の名前: 値} の順で返す。"""
-    parser = _HeadMetaParser()
-    parser.feed(text)
-    parser.close()
-    lines = [0] + [m.end() for m in re.finditer("\n", text)]
+    parser, lines = _parse_head(text)
     out = []
     for (line, col), raw, attrs in parser.found:
         start = lines[line - 1] + col
@@ -125,13 +141,14 @@ def ensure_default_og(text):
     """自分の画像を持たないページに、サイト共通のカード画像を付ける（X などで共有した時に出る画像）。
     自動サムネの og:image があるページには付けない。何度呼んでも同じ結果になる。"""
     text = remove_head_metas(text, lambda attrs: "data-default-og" in attrs)
-    if "</head>" not in text or _has_meta(text, "property", "og:image"):
+    end = head_end(text)
+    if end < 0 or has_meta(text, "property", "og:image"):
         return text
     tags = [("property", "og:image", DEFAULT_OG_IMAGE), ("property", "og:image:width", "1200"),
             ("property", "og:image:height", "630"), ("name", "twitter:card", "summary_large_image"),
             ("name", "twitter:image", DEFAULT_OG_IMAGE)]
-    metas = "".join(f'<meta {k}="{v}" content="{c}" data-default-og>\n' for k, v, c in tags if not _has_meta(text, k, v))
-    return text.replace("</head>", metas + "</head>", 1)
+    metas = "".join(f'<meta {k}="{v}" content="{c}" data-default-og>\n' for k, v, c in tags if not has_meta(text, k, v))
+    return text[:end] + metas + text[end:]
 
 
 def ensure(text, ga_id):

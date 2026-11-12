@@ -61,6 +61,12 @@ class DefaultShareCard(unittest.TestCase):
         out = page_assets.remove_head_metas(page, lambda a: a.get('name') == 'a')
         self.assertEqual(out, '<html><head>\n<meta name="b" content="2">\n</head><body><p>x</p></body></html>')
 
+    def test_fake_head_end_in_script_is_not_used(self):
+        page = '<html><head><script>var s = "</head>";</script>\n</head><body></body></html>'
+        out = page_assets.ensure_default_og(page)
+        self.assertIn('var s = "</head>";</script>\n<meta property="og:image"', out)
+        self.assertEqual(page_assets.head_end(out), out.index('</head><body>'))
+
 
 if __name__ == '__main__':
     unittest.main()

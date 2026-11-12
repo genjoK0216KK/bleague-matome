@@ -239,6 +239,40 @@ class ArticleWrittenImage(Base):
         restored = ta.restore_html(self.page())
         self.assertEqual(image_metas(restored)['og:image'], [page_assets.DEFAULT_OG_IMAGE])
 
+    # ---- 4回目のQA（11/12 ChatGPT「直してから」v3）の2件：入れる位置も HTMLParser で決める
+
+    def test_og_url_with_greater_than_in_value(self):
+        """og:url の値に「>」があっても、タグの途中に入れない（例外・巻き戻しで止まらない）。"""
+        url = '<meta property="og:url" content="https://basuke-matome.jp/a.html?x=1>2">'
+        (self.root / self.PATH).write_text(self.html.replace('<meta property="og:type" content="article">\n',
+                                                             '<meta property="og:type" content="article">\n' + url + '\n', 1))
+        r = ta.apply_all(self.root)
+        self.assertEqual(r['applied'], [self.PATH])
+        page = self.page()
+        self.assertIn(url + '\n<meta property="og:image" content="' + self.og + '"', page)
+        self.assert_one_auto_set(page)
+
+    def test_fake_og_url_in_script_is_not_the_insertion_point(self):
+        """script の中の偽の og:url を入れ先にしない。本物の og:image が head に1組入る。"""
+        fake = '<script>var t = \'<meta property="og:url" content="x">\';</script>\n'
+        (self.root / self.PATH).write_text(self.html.replace('</head>', fake + '</head>', 1))
+        r = ta.apply_all(self.root)
+        self.assertEqual(r['applied'], [self.PATH])
+        page = self.page()
+        self.assert_one_auto_set(page)
+        self.assertIn(fake + '<meta property="og:image"', page)            # 本物の </head> の前に入る
+        self.assertIn("var t = '<meta property=\"og:url\" content=\"x\">';", page)   # script の中身はそのまま
+
+    def test_fake_og_url_in_script_before_the_real_one(self):
+        fake = '<script>var t = \'<meta property="og:url" content="x">\';</script>\n'
+        url = '<meta property="og:url" content="https://basuke-matome.jp/article-daily-20261025.html">\n'
+        (self.root / self.PATH).write_text(self.html.replace('<meta property="og:type" content="article">\n',
+                                                             fake + '<meta property="og:type" content="article">\n' + url, 1))
+        ta.apply_all(self.root)
+        page = self.page()
+        self.assertIn(url + '<meta property="og:image"', page)
+        self.assert_one_auto_set(page)
+
     def test_restore_keeps_intended_other_image(self):
         keep = '<meta property="og:image" content="https://basuke-matome.jp/thumbs/special-20261025.jpg">\n'
         self.write_head(keep)

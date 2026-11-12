@@ -401,11 +401,20 @@ def apply_html(html, entry):
         return cleaned                 # 既に同じ内容（build が並べ替えた位置も含めてそのまま＝再実行で変化なし）
     html = page_assets.remove_head_metas(cleaned, _is_auto)
     metas = ''.join(w + '\n' for w in wanted)
-    anchor = re.search(r'<meta\b[^>]*property="og:url"[^>]*>\n?', html) or re.search(r'<meta\b[^>]*og:url[^>]*>\n?', html)
+    # 入れる位置も page_assets.head_metas（HTMLParser）で決める：本物の og:url の meta の直後、無ければ本物の </head> の前。
+    # 値の中の「>」や、script の中の偽の og:url・</head> を入れ先にしない。
+    heads = page_assets.head_metas(html)
+    anchor = (next((m for m in heads if m.attrs.get('property', '').lower() == 'og:url'), None)
+              or next((m for m in heads if 'og:url' in page_assets.meta_keys(m.attrs)), None))
     if anchor:
-        end = anchor.end() if anchor.group(0).endswith('\n') else anchor.end()
-        return html[:end] + ('' if anchor.group(0).endswith('\n') else '\n') + metas + html[end:]
-    return html.replace('</head>', metas + '</head>', 1)
+        end = anchor.end
+        if html[end:end + 1] == '\n':
+            return html[:end + 1] + metas + html[end + 1:]
+        return html[:end] + '\n' + metas + html[end:]
+    end = page_assets.head_end(html)
+    if end < 0:
+        return html
+    return html[:end] + metas + html[end:]
 
 
 def restore_html(html):
