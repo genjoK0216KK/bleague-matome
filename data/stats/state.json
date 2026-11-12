@@ -1,5 +1,12 @@
 {
- "pending": {},
+ "pending": {
+  "506579": "2026-11-13",
+  "506580": "2026-11-13",
+  "506581": "2026-11-13",
+  "506582": "2026-11-13",
+  "506583": "2026-11-13",
+  "506584": "2026-11-13"
+ },
  "published": [
   "2026-10-12",
   "2026-10-17",
@@ -21,16 +28,6 @@
   "2026-11-12"
  ],
  "days": {
-  "2026-11-05": {
-   "state": "no_games",
-   "games_total": 0,
-   "games_ready": 0,
-   "players": null,
-   "holds": [],
-   "excluded": [],
-   "content_as_of": "2026-11-06 19:51 JST",
-   "source": "data/match_articles/article-games-20261105.json"
-  },
   "2026-11-06": {
    "state": "ready",
    "games_total": 6,
@@ -100,6 +97,65 @@
    "excluded": [],
    "content_as_of": "2026-11-12 22:58 JST",
    "source": "data/match_articles/article-games-20261112.json"
+  },
+  "2026-11-13": {
+   "state": "held",
+   "games_total": 6,
+   "games_ready": 0,
+   "players": null,
+   "holds": [
+    {
+     "key": "506579",
+     "home": "北海道",
+     "away": "神戸",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506580",
+     "home": "秋田",
+     "away": "名古屋D",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506581",
+     "home": "川崎",
+     "away": "佐賀",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506582",
+     "home": "信州",
+     "away": "群馬",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506583",
+     "home": "京都",
+     "away": "茨城",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506584",
+     "home": "島根",
+     "away": "仙台",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    }
+   ],
+   "excluded": [],
+   "content_as_of": "2026-11-13 02:30 JST",
+   "source": "data/match_articles/article-games-20261113.json"
   }
  },
  "definition": {
