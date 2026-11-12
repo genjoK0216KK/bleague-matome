@@ -672,6 +672,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "琉球ゴールデンキングス対東京SRの試合前予測、3連敗のキングスは攻撃力をどう止めるか"
   },
+  "article-daily-20261113.html": {
+   "article_path": "article-daily-20261113.html",
+   "editorial_fingerprint": "ffda30a4f72a179041be004a9ceacbda147a2755400492d4a57c3651ac07b2f2",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261113-8774f8908a52.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261113-8774f8908a52-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "daa7c44bd52d9008de5a",
+   "image_sha256": "8774f8908a5282de12f7ac3fb4e726500c8108de9113566aecca003ec8ecb13e",
+   "imported_at": "2026-11-12T23:20:36.227878+00:00",
+   "prepared_at": "2026-11-12T23:20:03.627172+00:00",
+   "source_blob_sha": "96a8c4ab8c85bfe7379bdcf0eb1aa6823104074c",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "ffda30a4f72a179041be004a9ceacbda147a2755400492d4a57c3651ac07b2f2",
+   "style": "ink-lime-portrait-v5",
+   "title": "京都ハンナリーズ対茨城ロボッツの試合前予測、5連敗の京都と3連勝の茨城"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -1991,13 +2019,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261107.html",
-   "at": "2026-11-07T12:11:47.763407+00:00",
-   "event": "imported",
-   "id": "75a5c2e5b4ddddc773c3",
-   "image": "9155600fce6b"
-  },
-  {
    "article": "article-results-one-next-20261107.html",
    "at": "2026-11-07T12:11:47.763802+00:00",
    "by": "9bdde677628afe3c1636",
@@ -2549,6 +2570,13 @@
    "event": "imported",
    "id": "e3396bc0c843b1d2b411",
    "image": "ab84cc7d96d7"
+  },
+  {
+   "article": "article-daily-20261113.html",
+   "at": "2026-11-12T23:20:36.227902+00:00",
+   "event": "imported",
+   "id": "daa7c44bd52d9008de5a",
+   "image": "8774f8908a52"
   }
  ],
  "seen": {
@@ -2682,6 +2710,7 @@
   "d751b892af758cf975ea": "superseded:faacf40f2eedbd5f216f",
   "d87a8ec3bf24b1b0559b": "superseded:81cdf284d66df1d61f20",
   "d9bde7fe63871fad57c4": "superseded:ad6bf00b0853f0333020",
+  "daa7c44bd52d9008de5a": "imported",
   "db1b08157b4974a77014": "superseded:a384f66c5c633ed9bdb1",
   "de438e71b32369b2ee65": "superseded:3370472f9c78336a4974",
   "de6284c9fc31a323c810": "superseded:4ec5ffedaee7935f9089",
