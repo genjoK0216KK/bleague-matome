@@ -317,6 +317,13 @@ def import_inbox(root, inbox):
 
 IMG = re.compile(r'<img\b[^>]*\bclass="eyecatch"[^>]*>')
 META_AUTO = re.compile(r'[ \t]*<meta\b[^>]*\bdata-auto-thumb="[^"]*"[^>]*>\n?')
+# 記事が自分で書いた画像の指定（og:image・og:image:*・twitter:image・twitter:card のうち、data-auto-thumb も
+# data-default-og も無いもの。data-default-og は page_assets が付け外しするのでここでは触らない）。
+# 日次まとめは記事ジョブが thumb-daily-*.svg を og:image に書くため、自動サムネを入れた時に消さないと
+# og:image・twitter:image が2本ずつになる（11/12 MINI8-OG-TAGS-QA）。消した後に自動サムネが外れても、
+# build の page_assets.ensure_default_og が既定のカード画像を付けるので、画像の指定が無いページにはならない。
+META_PLAIN_IMAGE = re.compile(
+    r'[ \t]*<meta\b(?![^>]*\bdata-(?:auto-thumb=|default-og\b))[^>]*\b(?:property|name)=["\'](?:og:image(?::[a-z_]+)?|twitter:image(?::alt)?|twitter:card)["\'][^>]*>\n?')
 
 
 def _attr(tag, name):
@@ -356,9 +363,9 @@ def apply_html(html, entry):
         ('property', 'og:image', url), ('property', 'og:image:width', str(og['width'])),
         ('property', 'og:image:height', str(og['height'])), ('property', 'og:image:alt', alt),
         ('name', 'twitter:card', 'summary_large_image'), ('name', 'twitter:image', url))]
-    if [m.group(0).strip() for m in META_AUTO.finditer(html)] == wanted:
+    if [m.group(0).strip() for m in META_AUTO.finditer(html)] == wanted and not META_PLAIN_IMAGE.search(html):
         return html                    # 既に同じ内容（build が並べ替えた位置も含めてそのまま＝再実行で変化なし）
-    html = META_AUTO.sub('', html)
+    html = META_PLAIN_IMAGE.sub('', META_AUTO.sub('', html))   # 画像の指定は自動サムネの1組だけにする
     metas = ''.join(w + '\n' for w in wanted)
     anchor = re.search(r'<meta\b[^>]*property="og:url"[^>]*>\n?', html) or re.search(r'<meta\b[^>]*og:url[^>]*>\n?', html)
     if anchor:
@@ -380,7 +387,9 @@ def restore_html(html):
             end = img.end() + (1 if html[img.end():img.end() + 1] == '\n' else 0)
             start = img.start() - (1 if html[img.start() - 1:img.start()] == '\n' else 0)
             html = html[:start] + html[end:]
-    return META_AUTO.sub('', html)
+    # 記事が自分で書いた画像の指定も外す（SVG は SNS のカード画像に使えない）。build の
+    # page_assets.ensure_default_og が既定のカード画像（og-default.png）を1組だけ付ける。
+    return META_PLAIN_IMAGE.sub('', META_AUTO.sub('', html))
 
 
 def apply_all(root, force=False):
