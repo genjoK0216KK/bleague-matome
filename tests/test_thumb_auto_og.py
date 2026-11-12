@@ -8,6 +8,7 @@ import shutil
 import subprocess
 import tempfile
 import unittest
+from html.parser import HTMLParser
 from pathlib import Path
 
 from scripts import page_assets, thumb_auto as ta
@@ -24,9 +25,33 @@ def with_plain(html):
                         '<meta property="og:type" content="article">\n' + PLAIN, 1)
 
 
+class _HeadMetas(HTMLParser):
+    """試験側の独立した読み取り（標準の HTMLParser。属性名は小文字、空白・引用符の違いは吸収される）。"""
+    def __init__(self):
+        super().__init__()
+        self.in_head, self.metas = False, []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == 'head':
+            self.in_head = True
+        elif tag == 'meta' and self.in_head:
+            self.metas.append({k: (v or '') for k, v in attrs})
+
+    handle_startendtag = handle_starttag
+
+    def handle_endtag(self, tag):
+        if tag == 'head':
+            self.in_head = False
+
+
 def image_metas(page):
-    return {k: re.findall(r'<meta\b[^>]*\b(?:property|name)="' + re.escape(k) + r'"[^>]*\bcontent="([^"]*)"', page)
-            for k in ('og:image', 'twitter:image', 'twitter:card')}
+    parser = _HeadMetas()
+    parser.feed(page)
+    out = {k: [] for k in ('og:image', 'twitter:image', 'twitter:card')}
+    for m in parser.metas:
+        for key in {m.get('property', '').lower(), m.get('name', '').lower()} & set(out):
+            out[key].append(m.get('content', ''))
+    return out
 
 
 class ArticleWrittenImage(Base):
@@ -106,6 +131,76 @@ class ArticleWrittenImage(Base):
         page = self.page()
         for keep in ('property="og:type" content="article"', '<meta charset="UTF-8">'):
             self.assertIn(keep, page)
+
+    # ---- 2回目のQA（11/12 ChatGPT「直してから」）の指摘①〜④
+
+    def write_head(self, extra):
+        page = self.html.replace('</head>', extra + '</head>', 1)
+        (self.root / self.PATH).write_text(page)
+        return page
+
+    def test_intended_other_images_are_kept(self):
+        """①：SVG 以外の画像の指定（記事が意図して書いた別の画像）は消さない。"""
+        keep = ('<meta name="twitter:image" content="https://basuke-matome.jp/thumbs/special-20261025.jpg">\n'
+                '<meta property="og:image" content="https://basuke-matome.jp/og-default.png">\n'
+                '<meta property="og:image" content="https://example.com/thumb-daily-20261025.svg">\n'
+                '<meta name="twitter:card" content="summary">\n')
+        self.write_head(keep)
+        ta.apply_all(self.root)
+        page = self.page()
+        for line in keep.splitlines():
+            self.assertIn(line, page)
+        self.assertNotIn('content="https://basuke-matome.jp/thumb-daily-20261025.svg"', page)   # SVG だけ消える
+
+    def test_lookalike_attributes_are_not_touched(self):
+        """①④：property・name 以外の属性（data-property 等）や、値に og:image を含むだけの meta は消さない。"""
+        keep = ('<meta name="description" data-property="og:image" content="https://basuke-matome.jp/thumb-daily-20261025.svg">\n'
+                '<meta itemprop="image" content="https://basuke-matome.jp/thumb-daily-20261025.svg">\n'
+                '<meta property="og:image:alt" content="thumb-daily-20261025.svg">\n'
+                '<meta name="xtwitter:image" content="https://basuke-matome.jp/thumb-daily-20261025.svg">\n')
+        self.write_head(keep)
+        ta.apply_all(self.root)
+        page = self.page()
+        for line in keep.splitlines():
+            self.assertIn(line, page)
+
+    def test_spacing_case_and_quotes_are_recognized(self):
+        """③④：属性の前後の空白・大文字小文字・引用符の違いがあっても、記事ジョブの SVG は1つも残らない。"""
+        odd = ('<META Property = "og:image" CONTENT = "https://basuke-matome.jp/thumb-daily-20261025.svg" >\n'
+               "<meta name='Twitter:Image' content='/thumb-daily-20261025.svg'/>\n"
+               '<meta property=og:image content=thumb-daily-20261025.svg>\n'
+               '<meta name="twitter:card"   content="SUMMARY_LARGE_IMAGE">\n')
+        self.write_head(odd)
+        ta.apply_all(self.root)
+        self.assert_one_auto_set(self.page())
+        self.assertEqual(ta.apply_all(self.root)['applied'], [])          # 再実行で変化なし
+
+    def test_meta_outside_head_is_not_touched(self):
+        body = '<meta property="og:image" content="https://basuke-matome.jp/thumb-daily-20261025.svg">'
+        page = self.html.replace('<p class="lead">', body + '<p class="lead">', 1)
+        (self.root / self.PATH).write_text(page)
+        ta.apply_all(self.root)
+        self.assertIn(body + '<p class="lead">', self.page())
+
+    def test_restore_alone_leaves_exactly_the_default_card(self):
+        """②④：restore_html だけを通しても、画像の指定が0件の状態を作らない（既定のカード1組）。"""
+        ta.apply_all(self.root)
+        restored = ta.restore_html(self.page())
+        self.assertNotIn('data-auto-thumb', restored)
+        self.assertEqual(image_metas(restored), {'og:image': [page_assets.DEFAULT_OG_IMAGE],
+                                                 'twitter:image': [page_assets.DEFAULT_OG_IMAGE],
+                                                 'twitter:card': ['summary_large_image']})
+        self.assertEqual(page_assets.ensure_default_og(restored), restored)          # build の後処理でも変わらない
+        self.assertEqual(ta.restore_html(restored), restored)                         # 何度通しても同じ
+
+    def test_restore_keeps_intended_other_image(self):
+        keep = '<meta property="og:image" content="https://basuke-matome.jp/thumbs/special-20261025.jpg">\n'
+        self.write_head(keep)
+        ta.apply_all(self.root)
+        restored = ta.restore_html(self.page())
+        self.assertIn(keep, restored)
+        self.assertNotIn('og-default.png', restored)        # 画像の指定が残っているので既定のカードは足さない
+        self.assertNotIn('thumb-daily-20261025.svg"', re.sub(r'<img[^>]*>', '', restored))
 
 
 class RealDailyArticles(unittest.TestCase):
