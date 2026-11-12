@@ -1,0 +1,94 @@
+{
+  "id": "eec687d5a6f5449757d4",
+  "article_path": "article-games-20261113.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261113.html",
+  "source_commit": "",
+  "source_blob_sha": "7ef88b21fbc3ed27a7a9df99df78b35cae3b525f",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "b51049dd8b0e117ed5376741c42331b66b26b9639c813b4b54054ffe6ae83a42",
+  "last_observed_blob_sha": "7ef88b21fbc3ed27a7a9df99df78b35cae3b525f",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/eec687d5a6f5449757d4/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/eec687d5a6f5449757d4/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-12T17:31:04.498511+00:00",
+  "creation_event_id": "a6626e4538dfdd7ebe12",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/eec687d5a6f5449757d4/thumbnail.png",
+  "image_sha256": "0618c49b42517e0bb145984802cd032e5a5a2024e6eb2760f2bc28a5ff80513a",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "7ef88b21fbc3ed27a7a9df99df78b35cae3b525f",
+    "text_lines": [
+      "バスケまとめ",
+      "11/13",
+      "試合予定",
+      "B.PREMIER / B.ONE",
+      "全試合の公式記録確定待ち",
+      "2026.11.13 02:30 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/eec687d5a6f5449757d4/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261113.html",
+        "usage": "本文内容の根拠。11/13の試合予定、B.PREMIERとB.ONE、2026-11-13 02:30 JST時点の全試合公式記録確定待ち。選手名や確定成績の記載なし。HTMLのblob SHAをPython標準ライブラリで照合。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/eec687d5a6f5449757d4/source.txt",
+        "usage": "本文内容の根拠。固定HTMLとの内容整合を確認。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "view_imageで目視。黒#151A18・ライム#CCF43B、太い日本語見出し、手描きインク・ブラシを参照。元の選手名・数値・日付は転用せず。"
+      },
+      {
+        "type": "procedure",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "usage": "画像生成・検品ルール。人物選択と注記は今回の本人指示を優先。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "長谷川暢",
+        "team": "茨城ロボッツ",
+        "selection": "ランダム",
+        "selection_reason": "固定原稿に選手名がないため、本人指定の優先順2（本文に出てくるチームの現役選手）から選択。",
+        "selection_method": "Python random.Random('eec687d5a6f5449757d4').choiceで本文登場14チームから茨城を抽選。2026-27公式ロスター発表の掲載順15名からrandom.Random('eec687d5a6f5449757d4:player').choiceで長谷川暢を抽選し、現在の公式選手一覧とプロフィールにも掲載されていることを確認。",
+        "official_roster_announcement": "https://www.ibarakirobots.win/news/20260701_02_team/",
+        "official_current_roster": "https://www.ibarakirobots.win/team/players/",
+        "official_profile": "https://www.ibarakirobots.win/team/players/detail/id=20792?PlayerID=15829",
+        "official_photo": "https://ibarakirobots.bl.kuroco-img.app/v=1790071776/files/user/images/player/2026-27/player3.jpg",
+        "reference_inspection": "公式プロフィール写真を取得してview_imageで目視。中央付近で分けて額を見せる黒髪、左右へ流れる毛束、卵型で顎にやや角のある輪郭、まっすぐな眉、目鼻、薄い口ひげ・顎の陰影を確認。",
+        "usage": "公式写真は容姿参照のみ。画像への貼付なし。手描きイラストとしてドライブするイメージを描写。実際の試合場面・当日の出場・成績を示すものではない。",
+        "rendered_text_constraints": "選手名・個人成績・出場・活躍・背番号の文字なし。チーム・リーグ・スポンサーのロゴなし。注記は『イラスト（AI生成）』『イメージ』。"
+      }
+    ],
+    "prompt": "Create exactly one finished Japanese basketball editorial thumbnail, wide landscape 16:9, 1536x864 or larger. Use case: illustration-story. It must be a raster PNG.\n\nArt direction: match the approved black and lime basketball thumbnail visible in this conversation only in its graphic language: near-black #151A18 background, acid lime #CCF43B dry-brush strokes, ivory Japanese typography, hand-drawn ink hatching, dynamic painterly editorial illustration, clear readable face, few elements. Do not transfer any text, date, player, score or statistics from that style sample.\n\nSubject: one REAL professional basketball player, Noboru Hasegawa (長谷川暢), Ibaraki Robots. He is randomly selected as an illustrative subject, NOT the subject of a performance claim. Official appearance reference inspected: https://www.ibarakirobots.win/team/players/detail/id=20792?PlayerID=15829 and official portrait https://ibarakirobots.bl.kuroco-img.app/v=1790071776/files/user/images/player/2026-27/player3.jpg . Refer to the visible official portrait for identity only, never paste the photograph. Keep recognizable features: black medium-short hair parted near the middle, two rounded swept curtains exposing his forehead, tapered sides, oval face with slightly squared jaw, straight dark eyebrows, almond-shaped dark eyes, straight medium nose and thin closed lips; nearly clean-shaven with only faint chin stubble. Compact athletic guard build. Do not invent a different player. Render his face and body as clear hand-drawn ink illustration, never photorealistic.\n\nComposition: player occupies the RIGHT 45%, three-quarter front view, driving forward in a low athletic stance, chest leaning into motion, focused expression, one arm bent to guide an orange basketball low near his hip while the other arm naturally protects space. Ball is a prop handled by this player. Keep face, both hands and complete ball comfortably inside frame, anatomically coherent arms and five fingers on each visible hand, no duplicated limbs. Plain dark/ivory basketball uniform with minimal blue and orange trim, NO numbers, names, team crests, sponsor text, league symbols or sportswear logos. Do not reproduce any jersey graphics from the reference. Dry-brush diagonal lime motion marks behind the player; no opponent, crowd, scoreboard, hoop or extra small illustrations. This is a generic imagined basketball movement, not a depiction of any actual game moment.\n\nText hierarchy: Left 55% provides generous uncluttered text area with strong margin, text never touches player.\nTop left modest brand text, exactly: \"バスケまとめ\"\nUnder brand large lime date, exactly: \"11/13\"\nMain dominant headline beneath date in very heavy ivory Japanese sans serif, exactly: \"試合予定\"\nUnder headline one readable line, exactly: \"B.PREMIER / B.ONE\"\nLower left a compact readable qualifier block, exact two lines:\n\"全試合の公式記録確定待ち\"\n\"2026.11.13 02:30 JST時点\"\nAt bottom left with safe margin, exact readable note: \"イラスト（AI生成）\"\nAt bottom right with safe margin, exact note: \"イメージ\"\nDo not add any other text. Ensure all Japanese glyphs, punctuation, numerals and Latin letters are perfectly legible and accurate. Footer text should be smaller than headline but visibly readable.\n\nContent basis: fixed source article only says games are scheduled and all official game records are awaiting confirmation at 2026-11-13 02:30 JST. No confirmed player appearances, statistics, rankings, MVP, best-five, score, win/loss or successful scoring action may be claimed. Do not put the selected player's name anywhere in image. No official photographs, no logos, no watermarks beyond the specified AI disclosure. Deliver a polished, bold, visually striking thumbnail with one distinct illustration and simple typographic hierarchy.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "内蔵画像生成",
+      "generation_calls": 1,
+      "revision_calls": 0,
+      "source_output": "/Users/genjo/.codex/generated_images/01a1d0d0-2628-7e41-8934-3a4bb03eeea1/exec-c5e65303-5b7b-42f1-95c2-e2dda66eb504.png",
+      "output_format": "PNG",
+      "output_width": 1672,
+      "output_height": 941,
+      "output_sha256": "0618c49b42517e0bb145984802cd032e5a5a2024e6eb2760f2bc28a5ff80513a",
+      "inspection": "内蔵画像生成の完成画像を実際に表示して目視検品。文字と日時、留保、本人の髪・輪郭・目鼻、指と腕、文字・顔・ボールの収まり、非写真調、ロゴなし、AI表記を確認。修正不要。画像の寸法・PNG形式・SHA256はPython標準ライブラリで確認。",
+      "handoff": "指定作業フォルダのgenerated.pngとbrief.jsonのみ保存。ready・git操作・公開・外部送信は実施していない。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-12T17:34:32.261418+00:00",
+  "publication_approved": false
+}
