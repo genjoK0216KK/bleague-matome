@@ -1,6 +1,8 @@
 """Shared head assets for full builds and standalone stats saves."""
 import html
 import re
+from collections import namedtuple
+from html.parser import HTMLParser
 
 
 def ga_snippet(ga_id):
@@ -43,24 +45,110 @@ def ensure_clarity(text, cid=CLARITY_ID):
 
 
 DEFAULT_OG_IMAGE = "https://basuke-matome.jp/og-default.png"
-DEFAULT_OG = re.compile(r'[ \t]*<meta\b[^>]*\bdata-default-og\b[^>]*>\n?')
+# ---- head の meta の読み取り（11/12 MINI8-OG-TAGS-QA）。
+# 正規表現では、属性の値の中の「>」・属性名の取り違え（data-property を property と見る等）・「=」前後の空白で
+# 読み違えるため、標準の HTMLParser で読む。属性名は小文字・値は文字参照を戻して前後の空白を除く。
+# script・style の中身と、head の外（body 以降）は見ない。thumb_auto も同じ関数を使う。
+HeadMeta = namedtuple("HeadMeta", "start end raw attrs")
 
 
-def _has_meta(text, attr, value):
-    return re.search(r'<meta\b[^>]*\b' + attr + r'=["\']' + re.escape(value) + r'["\']', text) is not None
+class _HeadMetaParser(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.state = "before"          # before → head → after
+        self.found = []
+        self.head_end = None           # 本物の </head> の位置（行, 列）
+
+    def handle_starttag(self, tag, attrs):
+        if self.state == "before" and tag == "head":
+            self.state = "head"
+        elif self.state == "head" and tag == "body":
+            self.state = "after"
+        elif self.state == "head" and tag == "meta":
+            self.found.append((self.getpos(), self.get_starttag_text(), attrs))
+
+    def handle_startendtag(self, tag, attrs):
+        self.handle_starttag(tag, attrs)
+
+    def handle_endtag(self, tag):
+        if self.state == "head" and tag == "head":
+            self.state = "after"
+            self.head_end = self.getpos()
+
+
+def _parse_head(text):
+    parser = _HeadMetaParser()
+    parser.feed(text)
+    parser.close()
+    return parser, [0] + [m.end() for m in re.finditer("\n", text)]
+
+
+def head_end(text):
+    """本物の </head> の始まりの位置（script の中の文字列などは数えない）。無ければ -1。"""
+    parser, lines = _parse_head(text)
+    if parser.head_end is None:
+        return -1
+    line, col = parser.head_end
+    pos = lines[line - 1] + col
+    return pos if text[pos:pos + 6].lower() == "</head" else -1
+
+
+def head_metas(text):
+    """head の中の meta を、元の文字列での位置・元のタグ文字列・属性 {小文字の名前: 値} の順で返す。"""
+    parser, lines = _parse_head(text)
+    out = []
+    for (line, col), raw, attrs in parser.found:
+        start = lines[line - 1] + col
+        if text[start:start + len(raw)] != raw:          # 念のため：位置がずれたら同じ行から探し直す
+            start = text.find(raw, lines[line - 1])
+            if start < 0:
+                raise ValueError("meta の位置を特定できません: " + raw[:80])
+        values = {}
+        for name, value in attrs:
+            values.setdefault(name, (value or "").strip())
+        out.append(HeadMeta(start, start + len(raw), raw, values))
+    return out
+
+
+def meta_keys(attrs):
+    """property 属性と name 属性の値（小文字）。data-property などの別の属性は含めない。"""
+    return {attrs.get("property", "").lower(), attrs.get("name", "").lower()} - {""}
+
+
+def remove_head_metas(text, drop):
+    """head の中の meta のうち drop(属性) が真のものを、行の前の空白・後ろの改行ごと外す。ほかは1文字も変えない。"""
+    for m in reversed(head_metas(text)):
+        if drop(m.attrs):
+            start, end = m.start, m.end
+            while start > 0 and text[start - 1] in " \t":
+                start -= 1
+            if text[end:end + 1] == "\n":
+                end += 1
+            text = text[:start] + text[end:]
+    return text
+
+
+def has_meta(text, attr, value):
+    """head の中に attr 属性（完全一致）の値が value（大文字小文字は問わない）の meta があるか。"""
+    value = value.lower()
+    return any(m.attrs.get(attr, "").lower() == value for m in head_metas(text))
+
+
+_has_meta = has_meta
 
 
 def ensure_default_og(text):
     """自分の画像を持たないページに、サイト共通のカード画像を付ける（X などで共有した時に出る画像）。
     自動サムネの og:image があるページには付けない。何度呼んでも同じ結果になる。"""
-    text = DEFAULT_OG.sub("", text)
-    if "</head>" not in text or _has_meta(text, "property", "og:image"):
+    text = remove_head_metas(text, lambda attrs: "data-default-og" in attrs)
+    end = head_end(text)
+    if end < 0 or has_meta(text, "property", "og:image"):
         return text
     tags = [("property", "og:image", DEFAULT_OG_IMAGE), ("property", "og:image:width", "1200"),
             ("property", "og:image:height", "630"), ("name", "twitter:card", "summary_large_image"),
             ("name", "twitter:image", DEFAULT_OG_IMAGE)]
-    metas = "".join(f'<meta {k}="{v}" content="{c}" data-default-og>\n' for k, v, c in tags if not _has_meta(text, k, v))
-    return text.replace("</head>", metas + "</head>", 1)
+    metas = "".join(f'<meta {k}="{v}" content="{c}" data-default-og>\n' for k, v, c in tags if not has_meta(text, k, v))
+    return text[:end] + metas + text[end:]
 
 
 def ensure(text, ga_id):
