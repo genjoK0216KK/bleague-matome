@@ -1,0 +1,121 @@
+{
+  "id": "d2b98de7905eaa94bd7d",
+  "article_path": "article-results-one-next-20261113.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261113.html",
+  "source_commit": "",
+  "source_blob_sha": "fe7caa3f4b2467aaac36afaf022c3973bb19f4ce",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "51e5eda88e54892604b8302a15b97689451a132c751897d4d23c272f8ee1ad2f",
+  "last_observed_blob_sha": "fe7caa3f4b2467aaac36afaf022c3973bb19f4ce",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d2b98de7905eaa94bd7d/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d2b98de7905eaa94bd7d/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-13T11:09:05.397012+00:00",
+  "creation_event_id": "57c410fe490958ca65b2",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/d2b98de7905eaa94bd7d/thumbnail.png",
+  "image_sha256": "f91ae7e325c4c77395df5e0c3547ab45cc53155751fcf6556a5b080b39248270",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "fe7caa3f4b2467aaac36afaf022c3973bb19f4ce",
+    "text_lines": [
+      "バスケまとめ",
+      "11/13",
+      "試合結果",
+      "当日EFFは",
+      "公式記録確定待ち",
+      "2026.11.13｜19:57〜19:58 JST取得",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261113.html",
+        "blob_sha_verified": true
+      },
+      {
+        "type": "article_content",
+        "path": "source.txt",
+        "facts": [
+          "試合日2026.11.13",
+          "公式試合状態19:57 JST時点",
+          "資料取得19:57〜19:58 JST",
+          "B.PREMIERとB.ONEの当日EFFは全試合の公式記録確定待ち"
+        ]
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "visually_reviewed": true
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://g-crane-thunders.jp/team/players/"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://g-crane-thunders.jp/roster/players/detail/kenny-asano"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "淺野ケニー",
+        "team": "群馬クレインサンダーズ",
+        "selection": "ランダム",
+        "selection_reason": "本文には選手名がなく主役を特定できないため、本文登場チームの群馬公式現役選手12名からsecrets.randbelow(12)で抽選。結果index=8。",
+        "pool": [
+          "藤井祐眞",
+          "コー・フリッピン",
+          "トレイ・ジョーンズ",
+          "中村拓人",
+          "ケリー・ブラックシアー・ジュニア",
+          "辻直人",
+          "スタンリー・ジョンソン",
+          "エージェー・エドゥ",
+          "淺野ケニー",
+          "鶴巻啓太",
+          "細川一輝",
+          "谷口大智"
+        ],
+        "official_profile": "https://g-crane-thunders.jp/roster/players/detail/kenny-asano",
+        "official_image": "https://g-crane-thunders.bl.kuroco-img.app/v=1789375660/files/user/images/roster/players/detail_2027/kenny-asano/fv.jpg",
+        "visually_reviewed": true,
+        "observed_features": "金色の短い巻き髪、短く暗い側頭部、太い眉、深い目元、広い鼻、厚い唇、角のある輪郭、長いひげなし。長身でがっしりした体格。",
+        "usage": "容姿の参照だけ。写真の貼付なし。氏名・個人成績・出場・活躍を画像に書かず、イメージと明記。"
+      }
+    ],
+    "prompt": "Use case: illustration-story / editorial basketball thumbnail.\nCreate exactly ONE new landscape PNG, 1792x1024 or wider 16:9 canvas (prefer 1792x1008), at least 1000px wide. It is a Japanese basketball news thumbnail for バスケまとめ.\nUse the approved black and lime illustration visible earlier as STYLE REFERENCE ONLY: near-black #151A18 background, vivid lime #CCF43B, ivory lettering, expressive hand-ink and dry brush hatching, coarse screenprint texture, decisive bold typography, very few elements. Do not reuse its player, name, date, scores, pose, or old wording.\n\nSubject: one REAL basketball player, Kenny Asano / 淺野ケニー of Gunma. Use the official portrait just viewed ONLY as likeness reference, not as a photo insert. His official current appearance: tall athletic young adult, short tightly curled hair with bleached golden-blond top and dark cropped sides, dark warm brown skin, thick dark eyebrows and deep-set dark almond eyes, broad nose, full lips, strong angular jaw and defined cheekbones, almost clean-shaven with faint stubble; no long beard. Face must be individually recognizable in expressive drawn ink, not generic. He wears a plain sleeveless black basketball jersey and shorts with minimal cream/lime edging, no numbers, letters, names, sponsors or logos.\nPose: dynamic low forward drive, three-quarter front view, torso leaning forward, bent knees and athletic weight shift, head looking toward open court, one hand naturally guiding an orange basketball at hip/upper-thigh height while the other arm balances. Keep face, ball, hands, and all fingers in canvas with clear anatomy; a deliberate crop below knees is acceptable. This is a generic imagined basketball play, not a recreation of a real game or evidence he played on this date.\n\nComposition: headline occupying about left 55%, player dominating right 45%, face around upper-right central area, ball at lower-right, diagonal lime brush marks behind the player. Cream and grey illustrative highlights keep facial features readable. Hand-ink artwork, not photographic and not a 3D render. Maintain 5% safe margins around ALL text, face, hands, and ball. Main title and status must not overlap the player. Do not create a score table or player award.\nText EXACTLY as follows, with no other text:\nsmall top-left: \"バスケまとめ\"\nvery large lime brush numerals: \"11/13\"\nvery large bold ivory Japanese headline below it: \"試合結果\"\nclear readable medium subhead on two lines:\n\"当日EFFは\"\n\"公式記録確定待ち\"\nsmall but readable source-time line: \"2026.11.13｜19:57〜19:58 JST取得\"\nfooter label, fully readable: \"イラスト（AI生成）｜イメージ\"\nMake the qualifier 公式記録確定待ち legible, not a tiny footnote.\n\nContent constraints: the frozen source article says the 11/13 results are partially confirmed and daily EFF rankings await final official records for all games. Do not imply all games finished; do not invent EFF rankings or individual stats. No player's name anywhere, no claimed appearance, no achievement claim, no score, no league/team logo, no sponsor, no brand mark on ball/clothing/shoes, no pasted official photography. The printed footer states illustration and imagined scene. Produce a polished high-impact thumbnail matching the approved hand-drawn black/lime visual system.\n\n--- Sole revision prompt ---\nEdit this generated thumbnail only. Preserve ALL Japanese and numeric text EXACTLY, including \"バスケまとめ\", \"11/13\", \"試合結果\", \"当日EFFは\", \"公式記録確定待ち\", \"2026.11.13｜19:57〜19:58 JST取得\", \"イラスト（AI生成）｜イメージ\". Preserve the left typography, black #151A18 and lime #CCF43B palette, canvas size/aspect ratio, brush/ink style, Kenny Asano's identity with short golden tight curls and dark sides, facial proportions, plain unbranded uniform, dynamic low-drive pose and orange basketball. Targeted correction ONLY: the player's hair currently touches the top edge and fingers nearly touch/cross the right edge. Scale down the entire player+ball illustration together by approximately 14 percent around its center and reposition a little down and slightly left within the right-hand area, without covering text, so there is a clear at least 55-pixel black/brush background gap above ALL hair and to the right of ALL fingers and the basketball. Make the FULL ball and both hands, each with anatomically correct five fingers, fully visible. Keep face recognizable, with only faint stubble and no prominent goatee. No added text, names, numbers, scores, logos, badges, sponsors or photography. Repaint the vacated space with the same background brushwork. This is the sole revision; deliver one complete polished PNG.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "attempts": 2,
+      "revisions": 1,
+      "status": "passed",
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1d49c-00e8-7ba0-b3db-dab46055a673/exec-78813956-94d2-4259-9acd-e0c70b93eb5f.png",
+      "initial_output": "/Users/genjo/.codex/generated_images/01a1d49c-00e8-7ba0-b3db-dab46055a673/exec-d8fcbfe7-0552-47cb-b2f0-90536b0fac4b.png",
+      "correction": "人物全体を縮小し、上端の髪と右端の手指・ボールに余白を確保した。",
+      "qa_observations": {
+        "text_and_numbers": "完成画像を目視。11/13、試合結果、当日EFFは、公式記録確定待ち、2026.11.13、19:57〜19:58 JST取得を固定原稿と照合。氏名・個人成績・背番号・スコアなし。",
+        "source_qualifiers": "公式記録確定待ちが大きく読める。取得時刻とイメージを明記し、全試合終了・順位確定・当該選手出場や実際の場面とは主張していない。",
+        "likeness_or_no_named_person": "公式写真の金色の短い巻き髪、暗い側頭部、太い眉、深い目元、広い鼻、厚い唇、角のある輪郭をイラストと比較。写真風ではなく、選手名は画像に入れていない。ロゴとスポンサー文字なし。",
+        "layout": "修正版を実見。髪の上・右手とボールの右に余白あり。両手は各5指で自然な形。球体全体が画面内、文字との重なりなし。脚の下端は意図したトリミング。",
+        "ai_label": "完成画像下部の「イラスト（AI生成）｜イメージ」を目視確認。"
+      },
+      "saved_dimensions": [
+        1672,
+        941
+      ],
+      "saved_sha256": "f91ae7e325c4c77395df5e0c3547ab45cc53155751fcf6556a5b080b39248270"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-13T11:17:20.296035+00:00",
+  "publication_approved": false
+}

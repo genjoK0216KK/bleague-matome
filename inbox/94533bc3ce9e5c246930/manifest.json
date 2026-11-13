@@ -1,0 +1,110 @@
+{
+  "id": "94533bc3ce9e5c246930",
+  "article_path": "article-games-20261113.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261113.html",
+  "source_commit": "",
+  "source_blob_sha": "7343a4e8ed10b27dcf5c85f95a81f3543cd1185d",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "51e5eda88e54892604b8302a15b97689451a132c751897d4d23c272f8ee1ad2f",
+  "last_observed_blob_sha": "7343a4e8ed10b27dcf5c85f95a81f3543cd1185d",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/94533bc3ce9e5c246930/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/94533bc3ce9e5c246930/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-13T11:09:05.160254+00:00",
+  "creation_event_id": "60bc15f0b2d1a8b12945",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/94533bc3ce9e5c246930/thumbnail.png",
+  "image_sha256": "cdce6acf97921fdd2655845164b266c6d8925d45c10504df75c0c6a8077ccd14",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "7343a4e8ed10b27dcf5c85f95a81f3543cd1185d",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.13",
+      "試合結果",
+      "当日のEFF",
+      "全試合の公式記録確定待ち",
+      "19:57 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/94533bc3ce9e5c246930/source.html",
+        "role": "記事内容の根拠。Git blob形式のSHA-1をgitコマンドなしで計算し指定SHAと一致確認。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/94533bc3ce9e5c246930/source.txt",
+        "role": "記事内容の根拠。選手名なし。当日のEFFは全試合の公式記録確定待ち。試合状態は19:57 JST時点。"
+      },
+      {
+        "type": "official_roster",
+        "url": "https://g-crane-thunders.jp/team/players/",
+        "role": "本文に出る群馬の現役選手からランダムに選ぶため。記事の結果・成績の根拠には使わない。"
+      },
+      {
+        "type": "official_player_profile",
+        "url": "https://g-crane-thunders.jp/roster/players/detail/keita-tsurumaki",
+        "role": "選手の所属と容姿のみ確認。公式写真そのものは成果物に使用しない。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで目視確認した承認済み黒×ライム・インク画のスタイル参照。選手名・数値は転用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "鶴巻啓太",
+        "team": "群馬クレインサンダーズ",
+        "selection": "ランダム",
+        "selection_reason": "本文に選手名がないため、本文に登場する群馬の公式現役ロスター12人からPython random.SystemRandom().choiceで1人を抽選。",
+        "selection_pool": [
+          "藤井祐眞",
+          "コー・フリッピン",
+          "トレイ・ジョーンズ",
+          "中村拓人",
+          "ケリー・ブラックシアー・ジュニア",
+          "辻直人",
+          "スタンリー・ジョンソン",
+          "エージェー・エドゥ",
+          "淺野ケニー",
+          "鶴巻啓太",
+          "細川一輝",
+          "谷口大智"
+        ],
+        "source": "https://g-crane-thunders.jp/roster/players/detail/keita-tsurumaki",
+        "photo_url": "https://g-crane-thunders.bl.kuroco-img.app/v=1789375666/files/user/images/roster/players/detail_2027/keita-tsurumaki/fv.jpg",
+        "photo_viewed": true,
+        "observed_appearance": "黒い波打つ短髪と前髪、幅のある卵形の輪郭と顎、細めの目、直線的な鼻、厚めの唇、薄い口ひげと短い顎ひげ、頬の小さなほくろ。",
+        "depiction": "プレーのイメージ。実際の試合場面の再現ではない。画像に氏名・個人成績・出場や活躍の主張を入れない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate ONE finished Japanese basketball news thumbnail as a wide landscape PNG, approximately 16:9, ideally 1600x900 or larger. This is a new editorial illustration for the nonofficial site バスケまとめ. Use the approved visual language observed in B-culver-black-lime-v3: near-black #151A18, electric lime #CCF43B, ivory white, hand-drawn ink strokes, rough brush accents, very bold Japanese type, few clear elements. Do not copy that reference's player, name, score, date or shooting composition.\n\nSubject: depict ONLY the real basketball player KEITA TSURUMAKI (鶴巻啓太), selected at random from Gunma's official current roster. Use the official profile visually reviewed at https://g-crane-thunders.jp/roster/players/detail/keita-tsurumaki and its portrait https://g-crane-thunders.bl.kuroco-img.app/v=1789375666/files/user/images/roster/players/detail_2027/keita-tsurumaki/fv.jpg solely as identity reference. His observed features: Japanese man around age 30, strong athletic shoulders, fairly broad oval face and full jaw, thick tousled black hair with wavy fringe across the forehead, short sides around visible ears, dark narrow almond eyes, straight broad nose, full slightly parted lips, fine short moustache and small short goatee under the lower lip and chin; a few small dark beauty marks on the visible right cheek. Keep those recognizable facial features, clearly lit and readable as black-and-ivory ink drawing. Never substitute a generic invented player. Do not paste or reproduce a photograph.\n\nComposition: player on LEFT 40-45 percent, moving in a low athletic forward step while rotating his torso to make a two-handed pass toward the right; both hands holding a single orange basketball at lower chest height, plausible fingers and joints, face visible in three-quarter view. Frame from head to upper thighs, intentional torso/leg crop only, all of the head, arms, hands and ball fully inside canvas. A diagonal lime dry-brush sweep behind him conveys movement. Plain dark sleeveless basketball uniform with ivory trim; NO logos, NO sponsor lettering, NO team name, NO jersey numbers. No additional figures, no court labels, no scoreboard, no arena branding. This is an imagined general basketball motion, not a reconstruction of an actual game or of an event that happened on this date.\n\nTypography occupies the RIGHT 55-60 percent, clear and comfortably inside 55px safe margins. Render ONLY the following exact Japanese text, high contrast and cleanly readable:\nSmall masthead: 「バスケまとめ」\nDate in lime: 「2026.11.13」\nLargest, extremely bold headline: 「試合結果」\nMedium subheading: 「当日のEFF」\nDirectly below that subheading, an ivory outlined or solid restrained panel with the complete qualification: 「全試合の公式記録確定待ち」\nSmall but legible time label: 「19:57 JST時点」\nAt bottom on a quiet uninterrupted dark strip, at least 24px-equivalent high: 「イラスト（AI生成）」 followed by 「イメージ」\n\nKeep 「当日のEFF」 and 「全試合の公式記録確定待ち」 visually grouped so the pending qualifier clearly refers to EFF. The article is a snapshot with one final result and other results still unconfirmed; do not imply all games are finished. Do not include any scores, player names, player stats, rankings, TOP3, MVP, claims of performance, appearance or participation. The chosen player is an illustrative random selection only. Do not add the old wording 成績をもとにしたイメージ; use just イメージ. Distinctly drawn editorial ink art, not photorealistic, not a photograph, no 3D rendering. Beautiful intentional spacious typography, natural hands, bold expressive brush texture with minimal clutter. Output one image only.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "attempts": 1,
+      "corrections": 0,
+      "status": "passed",
+      "output": "generated.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "sha256": "cdce6acf97921fdd2655845164b266c6d8925d45c10504df75c0c6a8077ccd14",
+      "original_output": "/Users/genjo/.codex/generated_images/01a1d498-ca72-74f1-a0a8-01d0aac135a7/exec-e3a663de-4fd5-4c44-96cb-aefcf676c068.png",
+      "inspection": "内蔵ツールの生成画像とview_imageで実画像を目視確認。文字8項目と日付・時刻の一致、EFFの全試合確定待ちの留保、公式写真に対応する黒い波状の前髪・輪郭・目鼻・口ひげと顎ひげ・頬のほくろ、パス動作の両手と指・ボールの形と収まり、見出しの非見切れ、AI生成とイメージの明記を確認。個人名・成績・出場主張・ロゴ・公式写真の貼付なし。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-13T11:12:35.937015+00:00",
+  "publication_approved": false
+}
