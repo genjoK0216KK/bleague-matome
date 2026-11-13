@@ -674,29 +674,29 @@
   },
   "article-daily-20261113.html": {
    "article_path": "article-daily-20261113.html",
-   "editorial_fingerprint": "ffda30a4f72a179041be004a9ceacbda147a2755400492d4a57c3651ac07b2f2",
+   "editorial_fingerprint": "e53a05dcd2bbc29d8043f5cc0204c17f68f9a94c1c87d6940359580b7435c9f6",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261113-8774f8908a52.jpg",
+     "path": "thumbs/auto/article-daily-20261113-241f81564884.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261113-8774f8908a52-og.jpg",
+     "path": "thumbs/auto/article-daily-20261113-241f81564884-og.jpg",
      "width": 1200
     }
    },
-   "id": "daa7c44bd52d9008de5a",
-   "image_sha256": "8774f8908a5282de12f7ac3fb4e726500c8108de9113566aecca003ec8ecb13e",
-   "imported_at": "2026-11-12T23:20:36.227878+00:00",
-   "prepared_at": "2026-11-12T23:20:03.627172+00:00",
-   "source_blob_sha": "96a8c4ab8c85bfe7379bdcf0eb1aa6823104074c",
+   "id": "db75a6a12bbf73eb8c56",
+   "image_sha256": "241f8156488400094450938517a9dbbd4b15053efbb654da46724d83e96ee486",
+   "imported_at": "2026-11-13T03:22:10.866236+00:00",
+   "prepared_at": "2026-11-13T03:18:31.928665+00:00",
+   "source_blob_sha": "794ae6e61ab29c503344417df91e4be14d043ca9",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "ffda30a4f72a179041be004a9ceacbda147a2755400492d4a57c3651ac07b2f2",
+   "stable_fingerprint": "e53a05dcd2bbc29d8043f5cc0204c17f68f9a94c1c87d6940359580b7435c9f6",
    "style": "ink-lime-portrait-v5",
    "title": "京都ハンナリーズ対茨城ロボッツの試合前予測、5連敗の京都と3連勝の茨城"
   },
@@ -2020,20 +2020,6 @@
  "log": [
   {
    "article": "article-results-one-next-20261107.html",
-   "at": "2026-11-07T12:11:47.763802+00:00",
-   "by": "9bdde677628afe3c1636",
-   "event": "superseded",
-   "id": "b45b5e2e79d347a929b3"
-  },
-  {
-   "article": "article-results-one-next-20261107.html",
-   "at": "2026-11-07T12:11:47.763811+00:00",
-   "by": "9bdde677628afe3c1636",
-   "event": "superseded",
-   "id": "9b08affa65446e4027e4"
-  },
-  {
-   "article": "article-results-one-next-20261107.html",
    "at": "2026-11-07T12:11:47.907641+00:00",
    "event": "imported",
    "id": "9bdde677628afe3c1636",
@@ -2577,6 +2563,20 @@
    "event": "imported",
    "id": "daa7c44bd52d9008de5a",
    "image": "8774f8908a52"
+  },
+  {
+   "article": "article-daily-20261113.html",
+   "at": "2026-11-13T03:22:10.698843+00:00",
+   "by": "db75a6a12bbf73eb8c56",
+   "event": "superseded",
+   "id": "daa7c44bd52d9008de5a"
+  },
+  {
+   "article": "article-daily-20261113.html",
+   "at": "2026-11-13T03:22:10.866270+00:00",
+   "event": "imported",
+   "id": "db75a6a12bbf73eb8c56",
+   "image": "241f81564884"
   }
  ],
  "seen": {
@@ -2710,8 +2710,9 @@
   "d751b892af758cf975ea": "superseded:faacf40f2eedbd5f216f",
   "d87a8ec3bf24b1b0559b": "superseded:81cdf284d66df1d61f20",
   "d9bde7fe63871fad57c4": "superseded:ad6bf00b0853f0333020",
-  "daa7c44bd52d9008de5a": "imported",
+  "daa7c44bd52d9008de5a": "superseded:db75a6a12bbf73eb8c56",
   "db1b08157b4974a77014": "superseded:a384f66c5c633ed9bdb1",
+  "db75a6a12bbf73eb8c56": "imported",
   "de438e71b32369b2ee65": "superseded:3370472f9c78336a4974",
   "de6284c9fc31a323c810": "superseded:4ec5ffedaee7935f9089",
   "dfbdc23641029c7993d6": "imported",
