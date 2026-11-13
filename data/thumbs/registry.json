@@ -1288,6 +1288,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "11/13 試合結果・当日のEFF"
   },
+  "article-games-20261114.html": {
+   "article_path": "article-games-20261114.html",
+   "editorial_fingerprint": "84c6c0e7ccce619a6f08a3b07f2f4af80079aff22f98e7c92f5cab9682122f36",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-games-20261114-14716f9c620a.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-games-20261114-14716f9c620a-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "df384c13fa1695e31707",
+   "image_sha256": "14716f9c620a15f8efe49265c9d30a9668fdbf04d6892610a762b26665368437",
+   "imported_at": "2026-11-13T17:12:07.664296+00:00",
+   "prepared_at": "2026-11-13T17:11:31.861222+00:00",
+   "source_blob_sha": "cec6a3e0434efb05d7e2913fc57a4b0e57de888c",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "84c6c0e7ccce619a6f08a3b07f2f4af80079aff22f98e7c92f5cab9682122f36",
+   "style": "ink-lime-portrait-v5",
+   "title": "11/14 出場予定選手（登録選手）のベスト5"
+  },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
    "editorial_fingerprint": "e19b14f8f8d94cccdae186da2df34e0edfdbee28d446a577722d48f470c2eea5",
@@ -2075,13 +2103,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261108.html",
-   "at": "2026-11-08T10:31:51.948495+00:00",
-   "event": "imported",
-   "id": "6a3af1a5de0a62ae5eca",
-   "image": "439dd776dff9"
-  },
-  {
    "article": "article-results-one-next-20261108.html",
    "at": "2026-11-08T10:31:51.948926+00:00",
    "by": "75e3bc615bf24e4df460",
@@ -2633,6 +2654,13 @@
    "event": "imported",
    "id": "28368e86a62b9df9dfd9",
    "image": "00e3d0bcaff2"
+  },
+  {
+   "article": "article-games-20261114.html",
+   "at": "2026-11-13T17:12:07.664336+00:00",
+   "event": "imported",
+   "id": "df384c13fa1695e31707",
+   "image": "14716f9c620a"
   }
  ],
  "seen": {
@@ -2776,6 +2804,7 @@
   "db75a6a12bbf73eb8c56": "imported",
   "de438e71b32369b2ee65": "superseded:3370472f9c78336a4974",
   "de6284c9fc31a323c810": "superseded:4ec5ffedaee7935f9089",
+  "df384c13fa1695e31707": "imported",
   "dfbdc23641029c7993d6": "imported",
   "e03043ccc84437ba6da0": "imported",
   "e270709fb1aa70f03eaf": "superseded:5b9d534e1962778a709e",
