@@ -600,13 +600,13 @@
   "article-games-20261113.html": {
    "article_path": "article-games-20261113.html",
    "article_url": "https://basuke-matome.jp/article-games-20261113.html",
-   "editorial_fingerprint": "51e5eda88e54892604b8302a15b97689451a132c751897d4d23c272f8ee1ad2f",
-   "event_id": "60bc15f0b2d1a8b12945",
-   "recorded_at": "2026-11-13T11:08:58.414024+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "7343a4e8ed10b27dcf5c85f95a81f3543cd1185d",
-   "stable_fingerprint": "51e5eda88e54892604b8302a15b97689451a132c751897d4d23c272f8ee1ad2f",
+   "editorial_fingerprint": "93d9f5112e838004e7eff472d420cc0d5cf7bb1676e7214250c99b5c222c7232",
+   "event_id": "5a2b854982b34e1254b0",
+   "recorded_at": "2026-11-13T13:30:42.384076+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "0a04b7980ee89359355a95b5d6de07bf87ce176f",
+   "stable_fingerprint": "93d9f5112e838004e7eff472d420cc0d5cf7bb1676e7214250c99b5c222c7232",
    "status": "requested",
    "target_date": "20261113",
    "title": "11/13 試合結果・当日のEFF"
@@ -824,13 +824,13 @@
   "article-results-one-next-20261113.html": {
    "article_path": "article-results-one-next-20261113.html",
    "article_url": "https://basuke-matome.jp/article-results-one-next-20261113.html",
-   "editorial_fingerprint": "51e5eda88e54892604b8302a15b97689451a132c751897d4d23c272f8ee1ad2f",
-   "event_id": "57c410fe490958ca65b2",
-   "recorded_at": "2026-11-13T11:08:58.414024+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "fe7caa3f4b2467aaac36afaf022c3973bb19f4ce",
-   "stable_fingerprint": "51e5eda88e54892604b8302a15b97689451a132c751897d4d23c272f8ee1ad2f",
+   "editorial_fingerprint": "93d9f5112e838004e7eff472d420cc0d5cf7bb1676e7214250c99b5c222c7232",
+   "event_id": "08b7f2bebfa6bb549ecd",
+   "recorded_at": "2026-11-13T13:30:42.384076+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "b33c16001f34abee8d7722ab148c92f5f1885f30",
+   "stable_fingerprint": "93d9f5112e838004e7eff472d420cc0d5cf7bb1676e7214250c99b5c222c7232",
    "status": "requested",
    "target_date": "20261113",
    "title": "11/13 試合結果・当日のEFF"
@@ -968,6 +968,18 @@
    "status": "requested",
    "target_date": "20261112",
    "title": "11月12日の貢献度ランキング 1位はブライアン・アンゴラ（富山）の48"
+  },
+  "article-stats-20261113.html": {
+   "article_path": "article-stats-20261113.html",
+   "article_url": "https://basuke-matome.jp/article-stats-20261113.html",
+   "editorial_fingerprint": "ffd78ef24a7b17f8cf7620941ae5583107a7c9d1da0b6de1047537f1f70e9ce3",
+   "event_id": "cf349472bd46f58693ea",
+   "recorded_at": "2026-11-13T13:30:42.384076+00:00",
+   "source_blob_sha": "b6403bb488ac387c57390136d2b9c2ef2751f1da",
+   "stable_fingerprint": "ffd78ef24a7b17f8cf7620941ae5583107a7c9d1da0b6de1047537f1f70e9ce3",
+   "status": "requested",
+   "target_date": "20261113",
+   "title": "11月13日の貢献度ランキング 1位はケリー・ブラックシアー・ジュニア（群馬）の46"
   }
  },
  "version": 1
