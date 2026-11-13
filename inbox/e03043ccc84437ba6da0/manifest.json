@@ -1,0 +1,110 @@
+{
+  "id": "e03043ccc84437ba6da0",
+  "article_path": "article-games-20261113.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261113.html",
+  "source_commit": "",
+  "source_blob_sha": "0a04b7980ee89359355a95b5d6de07bf87ce176f",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "93d9f5112e838004e7eff472d420cc0d5cf7bb1676e7214250c99b5c222c7232",
+  "last_observed_blob_sha": "0a04b7980ee89359355a95b5d6de07bf87ce176f",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e03043ccc84437ba6da0/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e03043ccc84437ba6da0/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-13T13:30:47.304662+00:00",
+  "creation_event_id": "5a2b854982b34e1254b0",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/e03043ccc84437ba6da0/thumbnail.png",
+  "image_sha256": "7977cba41ae6075769af309bf3b28ce8f4098f01048cf08f4d444f093b5e11b2",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "0a04b7980ee89359355a95b5d6de07bf87ce176f",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.13",
+      "試合結果",
+      "当日のEFF",
+      "リーグ別・ポジション別TOP3",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e03043ccc84437ba6da0/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261113.html",
+        "used_for": "固定版の見出し・試合日・当日のEFF・リーグ別ポジション別TOP3。現行Web記事は本文根拠に使用していない。",
+        "source_blob_sha_verified": true
+      },
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e03043ccc84437ba6da0/source.txt",
+        "used_for": "固定版本文との照合。全試合の公式記録確定後、出場時間のある選手を当日の公式EFFでリーグ別・ポジション別に集計。今季平均ではない。兼任ポジション・同率順位・資料取得時点の登録ポジション・公式配信EFF優先などの注記を確認。画像は順位値・個人成績・出場・実際の場面を追加主張していない。",
+        "article_data_acquired_at": "2026-11-13 22:25〜22:26 JST"
+      },
+      {
+        "type": "production_rules",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "used_for": "作風・公式容姿参照・目視検品。人物選出は今回の本人指示を優先。readyは未実行。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "viewed": true,
+        "used_for": "黒×ライム、太字日本語、インク・ブラシの作風のみ。選手・日付・成績は転用なし。"
+      },
+      {
+        "type": "workflow_context",
+        "url": "https://app.notion.com/p/3fea07aafd1281bba76cd2e781ec5953",
+        "used_for": "既存案件と承認済みv3方針の確認のみ。本文の根拠には不使用。Notionへの書き込み・外部送信なし。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "山田 安斗夢",
+        "romanized_name": "Atomu Yamada",
+        "team_in_fixed_source": "熊本",
+        "selection": "ランダム",
+        "selection_method": "固定HTMLの順位表に登場する名前を重複排除した25名からPython secrets.choiceで均等に1名選出。複数選手を同じ表形式で扱う記事で、唯一の主役を特定できないため。",
+        "reference_source": "熊本ヴォルターズ公式選手プロフィール",
+        "reference_url": "https://www.volters.jp/team/players/detail/id=15877?PlayerID=9399",
+        "reference_image_url": "https://bleague.bl.kuroco-img.app/v=2026110720/files/user/roster/724/2026-27/9399_01.jpg",
+        "reference_image_local": "/tmp/e03043ccc84437ba6da0-yamada-reference.jpg",
+        "official_photo_visually_checked": true,
+        "observed_features": "短い黒〜濃茶の髪、額を見せる分け目と短いサイド、ひげのない楕円形の顔、暗い眉、アーモンド形の目、まっすぐな鼻、厚みのある唇、引き締まった肩と腕。",
+        "depiction": "ロゴ・背番号・選手名のないユニフォームでのドリブルのイラスト。公式写真の貼付なし。特定の実試合場面の再現ではない。画像内に名前・個人成績・出場や活躍の主張なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION:\nCreate exactly ONE finished Japanese basketball editorial thumbnail as a new illustration. Wide landscape 16:9 canvas, ideally 1600 x 900 or 1792 x 1008, at least 1000 pixels wide. All lettering is part of the finished art.\n\nART DIRECTION: Match the approved black-and-lime editorial reference shown earlier: deep charcoal #151A18, electric lime #CCF43B, warm ivory type, bold Japanese heavy sans-serif headline, energetic hand-cut ink shapes and dry-brush strokes. Clearly a hand-drawn sports illustration, never photographic or a photo collage. Keep the design very clean, powerful and readable at thumbnail size.\n\nTEXT — render ONLY the following exact Japanese/Latin strings, correctly spelled and crisp:\nTop small masthead: 「バスケまとめ」\nDate beneath it: 「2026.11.13」\nLarge headline: 「試合結果」\nSecond large headline in lime: 「当日のEFF」\nSmaller explanatory line, clearly legible: 「リーグ別・ポジション別TOP3」\nBottom footer in ivory, clearly readable: 「イラスト（AI生成）」\nNext to that footer: 「イメージ」\nDo not render Japanese quote brackets. No other wording, numbers, player names, statistical values, scores, labels, watermarks, jerseys numbers or signatures.\n\nLAYOUT: Put the dynamic athlete predominantly on the LEFT 43% and the type on the RIGHT 53%, a different composition from the earlier approved sample. Keep 4–5% safe margins around all lettering, the athlete's head, the orange basketball and both hands. A strong lime brush sweep curves diagonally behind the player. Position masthead/date at upper right, the two main headlines stacked centrally on right, explanatory line below. Leave a clean dark strip across the bottom for the two mandatory labels. Illustrate head through upper thighs, with the knees intentionally outside the composition below the crop, so face and both arms are spacious and anatomy clear. Do not let the athlete or brush strokes interfere with the text.\n\nREAL PERSON — only one player, Atomu Yamada (山田安斗夢), as seen in the official Kumamoto Volters profile photo inspected in this conversation. The photograph is a likeness reference ONLY; redraw him from scratch with ink. He is a Japanese adult man, compact athletic muscular shoulders and arms, medium-light warm skin, clean-shaven, defined oval face with moderately broad cheekbones, tapered but substantial jaw, small rounded chin, straight dark eyebrows, almond-shaped brown eyes, medium straight nose, fairly full lips. His short dark brown-black hair has a loose off-center part with forehead exposed, textured wavy lifted top, shorter neat sides and slightly pointed sideburns. Retain these recognizable facial features in an expressive but believable illustration, with a concentrated neutral playing expression and the face clearly visible in three-quarter view. No beard, no long hair, no headband. Draw a simple unbranded dark basketball jersey with ivory panels and restrained red trim, no team/league/sponsor logos or writing anywhere. Monochrome ivory/charcoal ink hatching on body and clothing with restrained warm skin accents; orange ball as the only warm bright accent.\n\nACTION: Atomu Yamada leaning forward in a powerful low dribble drive, body angled toward the viewer and right, his right hand on the upper surface of the basketball at hip height, left arm bent naturally protecting space. Two arms and two anatomically correct hands, five fingers per hand with natural occlusion; clear connected shoulders, wrists and fingers. Ball fully inside the frame. Make the pose energetic and balanced without adding an opponent or any other person.\n\nEDITORIAL SCOPE: This article is a multi-game results roundup dated 2026-11-13 with that day's official EFF rankings by league and position. The player was RANDOMLY selected from names in the fixed manuscript, not the article's unique star. Therefore do NOT show his name, performance, score, rank, jersey number or claims about his participation or success. Do not portray this as an actual identifiable game moment, match winning shot, exact venue, or reconstruction of a real photograph. This is a generic imagined playing pose featuring the real player's likeness. The labels 「イラスト（AI生成）」 and 「イメージ」 are mandatory. No logos, official photographs, courtside ads, scoreboards, extra players, or unsupported facts. Do not carry over any name, date, score or statistic from the approved style reference.\n\nONE PERMITTED CORRECTION:\nEdit the first reference image (the generated black-and-lime basketball thumbnail) with a targeted correction. The second reference image is Atomu Yamada's official profile photo; use it ONLY to redraw his likeness as ink illustration, never paste any photo pixels or official/sponsor/team marks.\n\nPreserve the 16:9 landscape canvas, black #151A18 and lime #CCF43B palette, energetic brushwork, orange ball, and ALL existing Japanese wording exactly:\nバスケまとめ\n2026.11.13\n試合結果\n当日のEFF\nリーグ別・ポジション別TOP3\nイラスト（AI生成）\nイメージ\nKeep every label and headline fully legible, with no new text.\n\nMake exactly these linked corrections to the illustrated player:\n1. Replace the overgrown wavy hair with the OFFICIAL PHOTO hairstyle: SHORT dark hair, neat short sides, a loose side/off-center part with exposed forehead, lightly textured lifted top. Shorter and much less fluffy than the current illustration. Match the actual face in reference two: smoother narrower eyebrows, gently rounded oval face, moderately broad cheeks, narrower almond eyes, relatively straight nose, full relaxed lips, compact rounded chin. Completely CLEAN SHAVEN, remove the dark moustache and chin-stubble appearance. Keep a focused expression in 3/4 view. Anatomically athletic but not exaggerated bodybuilder arms. Keep hand-drawn ivory/charcoal ink rendering, not a photograph.\n2. Scale and shift the illustrated player/ball group slightly inward so the entire head, BOTH HANDS, and the ENTIRE BALL have generous clear margins (at least about 40 pixels) from the left and top edges. The player can still be cropped intentionally at upper thighs at the bottom edge. Keep the low driving dribble pose and correct connected arms/wrists with five natural fingers per hand. Do not obstruct the right-hand typography.\n3. Keep plain unbranded uniform. No logos, numbers, name, statistics, claims about the randomly selected player's performance, or other people. This is a generic action IMAGINATION, not a recreation of an actual game.\nOutput exactly one finished corrected PNG, at least 1000 px wide.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generations": 1,
+      "corrections": 1,
+      "api_or_paid_cli_used": false,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1d51a-8710-7711-92e2-67474eb9389d/exec-5ad91786-fb27-4f85-9e51-e9858a4fefd8.png",
+      "saved_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e03043ccc84437ba6da0/generated.png",
+      "image_sha256": "7977cba41ae6075769af309bf3b28ce8f4098f01048cf08f4d444f093b5e11b2",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "qa_observations": {
+        "text_and_numbers": "修正版の全テキストを目視。2026.11.13、試合結果、当日のEFF、リーグ別・ポジション別TOP3の文字・数値を確認。ランダム選手の名前・個人成績なし。",
+        "source_qualifiers": "当日集計とリーグ別・ポジション別の範囲を画像上で確認。全リーグ横断順位・今季平均・実試合場面と誤認する断定なし。「イメージ」を確認。",
+        "likeness_or_no_named_person": "公式写真と比較し、髪の長さ・分け目・輪郭・目鼻・口元・ひげなしを反映した山田安斗夢選手のイラストを確認。実在人物を使用し、画像内には選手名なし。",
+        "layout": "頭部・両手・ボールの見切れなし。手指と腕の接続を目視確認。文字と人物の重なりなし。下端は意図的な太ももトリミング。約16:9。",
+        "ai_label": "画像下部の「イラスト（AI生成）」と「イメージ」を目視確認。"
+      },
+      "delivery_status": "ローカル保存のみ。ready・git・公開・外部送信は未実施。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-13T13:35:26.798883+00:00",
+  "publication_approved": false
+}

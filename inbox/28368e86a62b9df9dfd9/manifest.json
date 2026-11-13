@@ -1,0 +1,86 @@
+{
+  "id": "28368e86a62b9df9dfd9",
+  "article_path": "article-stats-20261113.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261113.html",
+  "source_commit": "",
+  "source_blob_sha": "b6403bb488ac387c57390136d2b9c2ef2751f1da",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "ffd78ef24a7b17f8cf7620941ae5583107a7c9d1da0b6de1047537f1f70e9ce3",
+  "last_observed_blob_sha": "b6403bb488ac387c57390136d2b9c2ef2751f1da",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/28368e86a62b9df9dfd9/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/28368e86a62b9df9dfd9/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-13T13:30:47.816834+00:00",
+  "creation_event_id": "cf349472bd46f58693ea",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/28368e86a62b9df9dfd9/thumbnail.png",
+  "image_sha256": "00e3d0bcaff21ad7b2a2cc6059ddbba1927409bb3d360f930fb1d5d252abf375",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "b6403bb488ac387c57390136d2b9c2ef2751f1da",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.13",
+      "群馬",
+      "ブラックシアー・ジュニア",
+      "貢献度 1位",
+      "EFF 46",
+      "この日の6試合から",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_frozen_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/28368e86a62b9df9dfd9/source.html",
+        "article_url": "https://basuke-matome.jp/article-stats-20261113.html",
+        "use": "本文の根拠。タイトル・リード・貢献度TOP3・TOP10から、2026年11月13日の6試合中、群馬のケリー・ブラックシアー・ジュニアが貢献度1位、EFF 46と確認。HTML blob SHAをgitコマンドを使わず照合。"
+      },
+      {
+        "type": "article_frozen_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/28368e86a62b9df9dfd9/source.txt",
+        "use": "固定HTMLと同じ日付・対象範囲・選手・所属・順位・EFFを照合。本文には国籍別ランキング未掲載の留保があり、画像では国籍や国籍別順位を扱わない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認。黒×ライム、太い日本語、インクとブラシの絵柄のみを参照。選手名・成績・日付は流用しない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "use": "手順書記載先にはA版が存在しなかったため、既存原本の同名v3をview_imageで確認。人物の描写と手描きの質感のみ参照。"
+      },
+      {
+        "type": "official_appearance_reference",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000145",
+        "image_url": "https://www.bleague.jp/files/user/roster/713/2026-27/51000145_03.png",
+        "use": "容姿だけの参考。公式プロフィールの画像を実際にview_imageで閲覧。外部ページの成績は本文・画像文字の根拠にしない。公式写真は完成画像に転載・合成していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ケリー・ブラックシアー・ジュニア",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿のタイトル・冒頭・TOP3で最も大きく扱われた貢献度1位の選手。",
+        "reference_source": "B.LEAGUE公式選手プロフィール",
+        "reference_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000145",
+        "reference_image_url": "https://www.bleague.jp/files/user/roster/713/2026-27/51000145_03.png",
+        "visually_checked": true,
+        "observed_features": "ごく短い黒髪、縦長の輪郭と頬骨、やや幅のある鼻、口ひげと短い顎・顎線のひげ、長い首、幅のある肩。生成イラストでこれらの特徴を確認。",
+        "depiction": "1人、ボールを両手に持つドライブのギャザー動作。成績をもとにしたイメージで、実際の試合の特定場面を再現したものではない。無地の濃紺ユニフォームに控えめな金色の縁。チーム・リーグ・スポンサーのロゴなし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset type: one finished Japanese basketball editorial thumbnail, landscape 16:9, 1536x864 or larger. Generate exactly ONE image.\n\nCreate a premium hand-drawn ink and dry-brush illustration thumbnail for バスケまとめ. Match the approved visual system already inspected: near-black #151A18 background, vivid lime #CCF43B slashing brush strokes, warm ivory Japanese lettering, visible ink hatch marks, subtle paper/print texture, few bold elements, extremely legible at thumbnail size. It must be clearly an illustration, NOT photographic or 3D.\n\nSubject: the real basketball player Kerry Blackshear Jr. / ケリー・ブラックシアー・ジュニア, the article's main subject. Official B.LEAGUE profile was visually inspected at https://www.bleague.jp/roster_detail/?PlayerID=51000145 ; portrait https://www.bleague.jp/files/user/roster/713/2026-27/51000145_03.png .\nAppearance observed in the official portrait: very short close-cropped dark hair with a slightly curved squared front hairline, medium-brown skin, tall long oval face, high cheekbones, tapered but substantial jaw and rounded chin, dark almond-shaped eyes beneath fairly straight eyebrows, moderately broad nose, broad expressive mouth, short moustache and neatly trimmed chin/jaw beard, long neck and powerful shoulders/arms. Preserve this specific likeness, not a generic invented player. Draw the face in three-quarter view visibly and clearly, looking towards upper right with a focused expression. Black/dark navy sleeveless basketball uniform with restrained gold edging, absolutely no logos, no brand lettering, no sponsor text and no jersey number. A plain dark compression sleeve on the left arm is okay.\n\nComposition: dynamic player on LEFT 43% of image in a powerful forward-driving gather step, torso twisting and leaning into movement, holding one orange basketball firmly with two hands around the left-lower chest/waist area, elbows naturally bent; crop below upper thighs deliberately. Head, ball, hands, fingers, elbows all fully inside frame, 50px safety margin. Both hands anatomically credible with natural five-finger grips. Make the actual player a substantial central visual presence. Behind him use two strong diagonal lime brush sweeps, no other people, no arena, no hoop, no graphs. This is an imagined generic playing action based on the article's statistics, not a recreation or assertion of a real moment or decisive play.\n\nTypography on RIGHT 54%, generously separated from figure, high visual hierarchy. Top small masthead and date; medium-large player name; main headline; very large lime numeric statistic. Keep all exact text legible, no typos, no added text, no substitutions. All content inside 50px margins. Use these exact strings:\nバスケまとめ\n2026.11.13\n群馬\nブラックシアー・ジュニア\n貢献度 1位\nEFF 46\nこの日の6試合から\nイラスト（AI生成）\n成績をもとにしたイメージ\n\nMake “貢献度 1位” a heavy large Japanese headline and “46” the largest type, unmistakably associated with “EFF”, not points. Player name fits on one line with slightly smaller type. Bottom footer must clearly display both “イラスト（AI生成）” and “成績をもとにしたイメージ” in clean small ivory type on a quiet near-black area across the bottom. The scope line “この日の6試合から” must be readable.\n\nArticle facts are exclusively from the provided frozen source.html and source.txt: 2026-11-13 six games, 群馬 Kerry Blackshear Jr. is contribution (EFF) ranking number one with EFF 46. Do not add points, match scores, other names, awards, season-wide ranking, flags, or unsupported claims. Do not transfer names/numbers from prior style reference images. No actual official photograph pasted or composited, no team or league logo. All artwork must be newly drawn in ink illustration style.",
+    "generator": "OpenAI built-in image_gen.imagegen; initial generation 1; corrective generations 0; PNG; no external API/CLI generation.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-13T13:43:01.239533+00:00",
+  "publication_approved": false
+}
