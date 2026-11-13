@@ -1,0 +1,93 @@
+{
+  "id": "8e8971609c980f2a3fdf",
+  "article_path": "article-results-one-next-20261114.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261114.html",
+  "source_commit": "",
+  "source_blob_sha": "c5b66a698456943fd715e66adf513a69c479f570",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "eae2dab8eb93a4004b484c5ab301f3ccdf2456a9f6f17ea045c875ed7f91b436",
+  "last_observed_blob_sha": "c5b66a698456943fd715e66adf513a69c479f570",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8e8971609c980f2a3fdf/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8e8971609c980f2a3fdf/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-13T19:55:16.413104+00:00",
+  "creation_event_id": "9769ff156d43cac26ebc",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/8e8971609c980f2a3fdf/thumbnail.png",
+  "image_sha256": "18161c4d5fe19d7298f7e3fc9c0942397447ddc54c3a5875ef2df5d6eb1e114f",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "c5b66a698456943fd715e66adf513a69c479f570",
+    "text_lines": [
+      "バスケまとめ",
+      "11/14｜試合前",
+      "登録選手の",
+      "ベスト5",
+      "リーグ別・今季平均EFFで選出",
+      "B.PREMIER / B.ONE",
+      "出場確定ではありません",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8e8971609c980f2a3fdf/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261114.html",
+        "source_blob_sha": "c5b66a698456943fd715e66adf513a69c479f570",
+        "use": "本文の根拠。試合前の登録選手をリーグ別・今季平均EFFで選ぶ記事。出場確定ではなく、当日実績ランキングでもない。"
+      },
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8e8971609c980f2a3fdf/source.txt",
+        "use": "固定版の本文と注記の照合。本文の根拠はこの文章とsource.htmlだけ。"
+      },
+      {
+        "type": "official_likeness_only",
+        "url": "https://go-seahorses.jp/news/detail/id=27406",
+        "image_url": "https://go-seahorses.bl.kuroco-img.app/v=1782703900/files/user/news/img/26/07/01/250825_3051.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8e8971609c980f2a3fdf/reference/gardner-official.jpg",
+        "use": "公式の選手紹介写真を実見し容姿だけ参照。写真、スポンサー文字、ロゴは成果物に使用せず。記事の成績・出場・試合内容の根拠には使用しない。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで実見。黒×ライム、太い和文見出し、インクとブラシのタッチのみ参照。選手名・成績・日付・スコアは引き継がない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ダバンテ・ガードナー",
+        "selection": "ランダム",
+        "selection_reason": "原稿は複数選手を表で扱い、主役が1人に絞れないため。本文に名前がある20選手から選出。",
+        "selection_method": "HTMLのstrong要素に記載された20選手を本文順で抽出。Python random.Random(int('8e8971609c980f2a3fdf',16)).choice(names) による再現可能なランダム選択。",
+        "source": "シーホース三河公式 選手契約継続のお知らせ／選手紹介写真",
+        "reference_url": "https://go-seahorses.jp/news/detail/id=27406",
+        "image_url": "https://go-seahorses.bl.kuroco-img.app/v=1782703900/files/user/news/img/26/07/01/250825_3051.jpg",
+        "observed_features": "幅のある輪郭と肩、厚みのある体格、太い眉、幅のある鼻、厚い唇、顎全体を覆う濃いひげと口ひげ。頭頂に立つ短いロックスと耳の後方に垂れるロックス。",
+        "drawing": "単独でボールを両手に持ち切り返すプレーのイメージ。公式写真を貼り付けず新規イラスト化。",
+        "qa_observation": "公式写真と生成画像を実見。輪郭・眉・鼻・ひげ・髪型・広い肩を照合。画像内に選手名・個人成績・背番号・出場や活躍の断定はない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story / editorial sports thumbnail.\nCreate exactly ONE final Japanese basketball article thumbnail, wide 16:9, preferably 1792 x 1008 pixels (at least 1000px wide), opaque PNG.\nApproved visual direction already inspected: near-black #151A18 background, electric lime #CCF43B brush sweeps, ivory-white extremely bold Japanese typography, expressive hand-drawn black ink and dry-brush sports illustration, few elements. The previously inspected Culver artwork is STYLE ONLY: do not carry over its player, headline, date, statistics, score, or jumping pose.\n\nArticle meaning, based only on the supplied frozen manuscript:\nThis is the 2026-11-14 pregame selection of registered players using current-season average EFF, separately for B.PREMIER and B.ONE. It is not today's performance ranking, not confirmed starting lineups, not confirmed appearances, and not an actual game result. Do not depict any factual game-winning play.\n\nMain subject: exactly one REAL athlete, Davante Gardner (ダバンテ・ガードナー), selected randomly from the 20 players named in the manuscript. Identity is for drawing ONLY: DO NOT print his name, team name, jersey number, individual stats, appearance claims, or personal achievements anywhere.\nOfficial portrait visually checked: https://go-seahorses.bl.kuroco-img.app/v=1782703900/files/user/news/img/26/07/01/250825_3051.jpg\nHis observed features: very broad, heavy, powerful athletic build and wide shoulders; dark skin rendered in ink and ivory shading; broad oval/rounded face; strong thick eyebrows, deep-set almond-shaped eyes, broad nose, full lips; dense full beard and moustache shaping the whole jaw; short coarse twists/locs pointing upward at the crown, closely trimmed sides, several longer locs trailing behind the ear/neck. Preserve these particular features, do not substitute a generic slim player. Portrait is likeness reference only: do not paste or reproduce a photograph, its standing pose, uniform branding, or sponsor text.\n\nScene: imaginative generic basketball action, three-quarter view of Gardner executing a powerful pivot with bent knees and a twisting torso, both hands gripping ONE orange basketball near his upper waist/chest. Head and eyes alert and looking towards the open court. Athlete dominates right 43 percent, head fully visible, shoulders massive, figure from head down through bent thighs, lower legs can naturally fall outside the lower frame. Hands and ball fully in frame, believable five-finger anatomy and two arms only. Plain unbranded ivory/charcoal basketball uniform with minimal lime trim, NO numbers or lettering. No other people, no crowd, no logos, no scoreboard, no photographic realism. Energetic diagonal lime brushstroke behind him, sparse ink flecks, ample clean space for typography on left. Clear shape separation so the face and both hands are legible.\n\nText, exact Japanese only in these nine lines/groups, no extra text:\n1. small top-left: \"バスケまとめ\"\n2. date/status near top-left, bold: \"11/14｜試合前\"\n3. medium: \"登録選手の\"\n4. largest main headline, ivory with the 5 in lime: \"ベスト5\"\n5. clear subheadline below: \"リーグ別・今季平均EFFで選出\"\n6. smaller league line: \"B.PREMIER / B.ONE\"\n7. clearly readable qualification: \"出場確定ではありません\"\n8. small but readable bottom-left label: \"イラスト（AI生成）\"\n9. next to label: \"イメージ\"\n\nTypography: heavy Japanese gothic, editorial poster clarity, dramatic headline hierarchy, not overcrowded. Leave at least 4 percent outer safe margins for all text and the face/ball/hands. Keep the qualification and AI label high-contrast and readable. No tables, no individual names, no scores or statistical values. The number 5 denotes the article's best-five format only. This is an illustration illustrating the article theme, never a recreation of an actual match. All pictorial content must be newly drawn in the ink-brush medium.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_attempts": 1,
+      "correction_attempts": 0,
+      "original_output": "/Users/genjo/.codex/generated_images/01a1d67a-86b8-7a51-aa1e-816f9db5e7a1/exec-03434750-9416-4951-a756-d0d86706a96e.png",
+      "output_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8e8971609c980f2a3fdf/generated.png",
+      "inspection": "生成結果表示とview_imageで実画像を検品。全見出し、日付、ベスト5の数字、試合前・今季平均・リーグ別・出場非確定の留保を確認。顔、両手とボールは画面内にあり、指や腕の明らかな破綻はない。下半身の画面外トリミングは意図した構図。AI生成表記とイメージ表記を確認。ロゴ・スポンサー文字・写真素材はなし。",
+      "scope": "PNGとbrief.jsonのローカル保存のみ。ready・git・公開・外部送信は未実行。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-13T19:57:59.525787+00:00",
+  "publication_approved": false
+}
