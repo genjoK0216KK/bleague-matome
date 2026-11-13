@@ -728,6 +728,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "京都ハンナリーズ対茨城ロボッツの試合前予測、5連敗の京都と3連勝の茨城"
   },
+  "article-daily-20261114.html": {
+   "article_path": "article-daily-20261114.html",
+   "editorial_fingerprint": "59dd31e06ca160b9637d6073e0cdf023475a2619f4dd4657ab730bc711c6dbfe",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261114-246e2c56b3a1.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261114-246e2c56b3a1-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "97e66704c1004c7d9a99",
+   "image_sha256": "246e2c56b3a1e07d5ae529bc1e800085e1eb699f589cf4583bd4d02284dc7f01",
+   "imported_at": "2026-11-13T23:22:41.643810+00:00",
+   "prepared_at": "2026-11-13T23:21:59.539848+00:00",
+   "source_blob_sha": "107884233e9dadfd55be081b7382872898c2d185",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "59dd31e06ca160b9637d6073e0cdf023475a2619f4dd4657ab730bc711c6dbfe",
+   "style": "ink-lime-portrait-v5",
+   "title": "アルバルク東京対広島ドラゴンフライズの試合前予測、13勝同士の上位対決は得点力の差で読む"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -2131,13 +2159,6 @@
  },
  "log": [
   {
-   "article": "article-results-one-next-20261108.html",
-   "at": "2026-11-08T10:31:52.087043+00:00",
-   "event": "imported",
-   "id": "75e3bc615bf24e4df460",
-   "image": "f9c3177c9025"
-  },
-  {
    "article": "article-games-20261108.html",
    "at": "2026-11-08T12:24:37.337406+00:00",
    "by": "138edbf6e5eed71be84f",
@@ -2689,6 +2710,13 @@
    "event": "imported",
    "id": "8e8971609c980f2a3fdf",
    "image": "18161c4d5fe1"
+  },
+  {
+   "article": "article-daily-20261114.html",
+   "at": "2026-11-13T23:22:41.643840+00:00",
+   "event": "imported",
+   "id": "97e66704c1004c7d9a99",
+   "image": "246e2c56b3a1"
   }
  ],
  "seen": {
@@ -2777,6 +2805,7 @@
   "94533bc3ce9e5c246930": "superseded:e03043ccc84437ba6da0",
   "95e267d849a9238c3703": "superseded:46adebe03cc636f48def",
   "9738ca38103aa648b879": "imported",
+  "97e66704c1004c7d9a99": "imported",
   "98e19c39f90c0bb08e5b": "superseded:5371bea30124ef22fa57",
   "99b4b4a5766dafd57c80": "superseded:11dcd132a6455b225cab",
   "9b08affa65446e4027e4": "superseded:9bdde677628afe3c1636",
