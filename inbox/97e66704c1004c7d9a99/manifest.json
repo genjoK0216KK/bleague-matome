@@ -1,0 +1,105 @@
+{
+  "id": "97e66704c1004c7d9a99",
+  "article_path": "article-daily-20261114.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261114.html",
+  "source_commit": "",
+  "source_blob_sha": "107884233e9dadfd55be081b7382872898c2d185",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "59dd31e06ca160b9637d6073e0cdf023475a2619f4dd4657ab730bc711c6dbfe",
+  "last_observed_blob_sha": "107884233e9dadfd55be081b7382872898c2d185",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/97e66704c1004c7d9a99/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/97e66704c1004c7d9a99/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-13T23:18:22.776784+00:00",
+  "creation_event_id": "69304cfc00d02effcda0",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/97e66704c1004c7d9a99/thumbnail.png",
+  "image_sha256": "246e2c56b3a1e07d5ae529bc1e800085e1eb699f589cf4583bd4d02284dc7f01",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "107884233e9dadfd55be081b7382872898c2d185",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.14",
+      "試合前予測",
+      "A東京 vs 広島",
+      "13勝同士",
+      "上位対決",
+      "出場メンバー未発表",
+      "イラスト（AI生成）",
+      "イメージ",
+      "選手の出場を示すものではありません"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/97e66704c1004c7d9a99/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261114.html",
+        "note": "本文内容の根拠。固定HTMLのGit blob SHAをgitコマンドなしで照合し、指定値との一致を確認。ライブ記事・関連記事は本文の根拠に使用していない。"
+      },
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/97e66704c1004c7d9a99/source.txt",
+        "note": "固定文章版。両チーム13勝、試合前予測、当日の出場メンバー未発表を照合。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://www.alvark-tokyo.jp/player_lp/lachlan_olbrich/",
+        "note": "アルバルク東京公式プロフィール。選手の実在と容姿の確認のみ。成績・記事内容の追加根拠には使っていない。"
+      },
+      {
+        "type": "appearance_image_only",
+        "url": "https://alvark-tokyo.bl.kuroco-img.app/v=1789441720/files/user/_/player_lp/2026-27/lachlan_olbrich/images/kv_sp.jpg",
+        "note": "公式プロフィールの顔写真をview_imageで実確認。写真そのものは成果画像に貼り付けていない。"
+      },
+      {
+        "type": "appearance_image_only",
+        "url": "https://alvark-tokyo.bl.kuroco-img.app/v=1789441720/files/user/_/player_lp/2026-27/lachlan_olbrich/images/bg_section_01_sp.jpg",
+        "note": "公式プレー写真をview_imageで実確認。試合場面の再現には使用していない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "view_imageで確認。黒×ライム、太い日本語見出し、インク・ブラシ表現のみ参照。選手名・成績は転用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ラクラン・オルブリッチ",
+        "romanized_name": "Lachlan Olbrich",
+        "selection": "ランダム",
+        "selection_pool": [
+          "ラクラン・オルブリッチ"
+        ],
+        "selection_reason": "記事は両チームの比較が主題で個人主役を絞れないため、指定の優先順で本文に登場する選手から選択。本文中の氏名はこの1人だけで、候補集合が1人のため選択結果は一意。",
+        "official_profile": "https://www.alvark-tokyo.jp/player_lp/lachlan_olbrich/",
+        "official_portrait": "https://alvark-tokyo.bl.kuroco-img.app/v=1789441720/files/user/_/player_lp/2026-27/lachlan_olbrich/images/kv_sp.jpg",
+        "inspected_features": "中央で分けた茶色の波状の髪、濃い眉、長い鼻、縦長の輪郭と顎、茶色の口ひげと薄い顎ひげ、明るい肌色、大柄な体格。公式写真と完成イラストを実見して照合。",
+        "depiction": "単独で身体をひねり、両手でボールを保持してパスに移るプレー姿のイラスト。黒い無地ユニフォームに赤の縁取り。背番号・氏名・ロゴなし。",
+        "qualifier": "本文ではインジュアリーリスト登録中。当日の出場、復帰、成績、活躍を示す描写・文字は使用しない。『試合前予測』『出場メンバー未発表』『イラスト（AI生成）』『イメージ』『選手の出場を示すものではありません』を画像に明記。実際の試合の場面ではない。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: illustration-story.\nAsset type: ONE finished Japanese basketball news thumbnail, landscape 16:9, target 1792x1008 pixels or larger. Opaque PNG.\nCreate an original hand-drawn editorial sports illustration with integrated perfect Japanese typography. Match the approved visual style: near-black #151A18 background, electric lime #CCF43B dry-brush streaks, ivory heavy Japanese sans-serif type, visible ink crosshatching and brush texture. Few elements, powerful clear hierarchy. Absolutely not photorealistic.\n\nContent: this is a PRE-GAME PREDICTION article dated 2026.11.14 about A Tokyo vs Hiroshima, both teams have 13 wins. Do not depict a result. This image is an imagined basketball action, never an actual scene from this matchup.\n\nPerson: draw exactly ONE REAL player, Lachlan Olbrich (ラクラン・オルブリッチ), selected from the only named player in the article. His name MUST NOT appear in the finished image. The official Alvark Tokyo profile was inspected solely for likeness. Likeness details observed: fair-skinned young tall strongly built Australian man, medium dark-brown wavy hair parted centrally with curtain-like wings above ears, thick brown brows, deep-set brown eyes, long straight slightly prominent nose, defined long oval face and firm angular jaw, distinctive medium brown moustache over upper lip with only light jaw stubble, full lower lip. Preserve these recognizable features, NOT an invented generic athlete. Render face clearly in ivory/black ink with restrained skin tone and brown hair, large enough to recognize.\nClothing: plain black basketball jersey with subtle red piping and plain shorts. Completely unbranded, NO letters, numbers, team/league/sponsor logos, badges, stars or marks.\nPose: dynamic three-quarter basketball drive transitioning into a two-handed chest pass, torso leaning diagonally into motion, gaze focused to the left, one orange basketball held between his two anatomically correct hands below chest. Head, both hands and entire ball inside frame. Crop at mid-thigh if needed. Show his face in 3/4 frontal view. No other people, no invented opponents, no hoop, no crowd, no arena signage, no scoreboards. This is a conceptual play illustration; he is listed injured in the fixed article, so it MUST NOT imply he is playing today, returning from injury or contributing to a result.\n\nComposition: left ~58% typography, right ~42% dynamic player, sweeping lime brush accents behind athlete. Keep a clean wide lower footer band. Minimum 5% safe margin. No face, hands or basketball over the text. Do not imitate the previous reference's upward shooting pose.\nTypography: big bold impeccably correct Japanese, no decorative pseudo letters. Text hierarchy: small brand/date at upper-left, a compact pre-game pill; large matchup; exceptionally large lime '13勝同士'; large ivory '上位対決'. Footer notices legible with good contrast, no tiny gray text. Fit cleanly.\n\nThe ONLY visible text, render VERBATIM:\n「バスケまとめ」\n「2026.11.14」\n「試合前予測」\n「A東京 vs 広島」\n「13勝同士」\n「上位対決」\n「出場メンバー未発表」\n「イラスト（AI生成）」\n「イメージ」\n「選手の出場を示すものではありません」\n\nFooter arrangement: '出場メンバー未発表' as a readable compact supporting line below main title. Bottom safety band: 'イラスト（AI生成）' and 'イメージ', then '選手の出場を示すものではありません'. Make the pre-game and illustration qualifications explicit.\nAvoid all extra text, player names, personal performance claims, scores, additional statistics, actual game recreation claims, photorealism, photo cutouts, official photos pasted into output, logos and watermarks. Deliver one finished image only.",
+      "revision": "Edit this existing Japanese basketball thumbnail. Make ONE layout correction only: the illustrated player's hair is too close to the top border, and the right elbow too close to the right border. Scale the entire illustrated player AND the ball/hands together down about 8 percent, anchored near his lower torso, then reposition slightly as needed within the right-hand area. Leave at least 35 pixels of dark background above the full crown of his hair and at least 25 pixels at the right edge past his elbow. Preserve the same recognizable Lachlan Olbrich face, middle-parted dark brown wavy hair, brown moustache, dynamic two-handed pass pose, ink illustration, anatomy, black jersey with red trim, ball and hand structure. Preserve ALL Japanese text exactly, all type sizes and locations, the black/lime/ivory palette, background brush strokes, and the footer. Do not add or remove any text or logo. Do not alter the face or redraw it as a different person. Keep the 16:9 wide aspect ratio and resolution at least as large as the original. Output exactly one corrected PNG. Text must remain: バスケまとめ / 2026.11.14 / 試合前予測 / A東京 vs 広島 / 13勝同士 / 上位対決 / 出場メンバー未発表 / イラスト（AI生成） / イメージ / 選手の出場を示すものではありません. No player name, jersey numbers, official logos or photos."
+    },
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "correction_count": 1,
+      "correction_reason": "初稿の頭頂部と右肘が画面端に近いため人物を縮小して余白を確保。修正後の画像を目視確認し合格。",
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1d734-79b7-7293-9bc5-f78e1c08f4bf/exec-e05acf42-4ccc-4889-9c63-eace8898bdf0.png",
+      "qa_method": "内蔵生成ツールが表示した実画像で10項目の文字、数字13と日付、試合前の留保、本人の特徴、手とボール、端の余白、AI注記を目視確認。初稿と1回の修正後を比較。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-13T23:21:59.539848+00:00",
+  "publication_approved": false
+}
