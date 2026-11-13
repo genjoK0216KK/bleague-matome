@@ -1,0 +1,147 @@
+{
+  "id": "df384c13fa1695e31707",
+  "article_path": "article-games-20261114.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261114.html",
+  "source_commit": "",
+  "source_blob_sha": "cec6a3e0434efb05d7e2913fc57a4b0e57de888c",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "84c6c0e7ccce619a6f08a3b07f2f4af80079aff22f98e7c92f5cab9682122f36",
+  "last_observed_blob_sha": "cec6a3e0434efb05d7e2913fc57a4b0e57de888c",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/df384c13fa1695e31707/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/df384c13fa1695e31707/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-13T17:08:37.805889+00:00",
+  "creation_event_id": "fe4643b6e9610e18845e",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/df384c13fa1695e31707/thumbnail.png",
+  "image_sha256": "14716f9c620a15f8efe49265c9d30a9668fdbf04d6892610a762b26665368437",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "cec6a3e0434efb05d7e2913fc57a4b0e57de888c",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.14",
+      "試合予定",
+      "B.PREMIER / B.ONE",
+      "当日EFFは",
+      "公式記録確定待ち",
+      "11/14 02:07時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/df384c13fa1695e31707/source.html",
+        "role": "本文の唯一の根拠（source.txtと併用）",
+        "article_url": "https://basuke-matome.jp/article-games-20261114.html",
+        "verified_blob_sha": "cec6a3e0434efb05d7e2913fc57a4b0e57de888c",
+        "facts": [
+          "試合日2026.11.14",
+          "B.PREMIER・B.ONEの各カードは11/14 02:07 JST時点で試合前",
+          "当日EFF・ポジション別TOP3は全試合の公式記録確定待ち",
+          "本文に選手名なし。越谷対福島を含む。"
+        ],
+        "qualifiers": "確定スコア・個人成績・当日出場・ランキングを断定しない。表題のベスト5は本文に順位が未掲載のためサムネに採用しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/df384c13fa1695e31707/source.txt",
+        "role": "固定本文の照合用。記事の情報はこのTXTとHTMLだけから採用。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール。ランダム選手と注記については今回の本人指定を優先。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで実見した承認済みスタイル参照。黒×ライム・太い日本語文字・インクとブラシの質感のみ参照。選手名・成績・日付は持ち越さない。"
+      },
+      {
+        "url": "https://firebonds.jp/team/players/",
+        "role": "本文に出る福島の現役選手一覧確認のみ。記事内容の根拠に使用しない。"
+      },
+      {
+        "url": "https://firebonds.jp/news/detail/id=18815",
+        "role": "2026-27ロスターの公式確認のみ。記事内容の根拠に使用しない。"
+      },
+      {
+        "url": "https://firebonds.jp/team/players/detail/id=15891?PlayerID=51000275",
+        "role": "選手本人の公式プロフィール・容姿参照のみ。ページの成績を画像に転記しない。"
+      },
+      {
+        "url": "https://firebonds.bl.kuroco-img.app/v=1789014405/files/user/2026-27-FB-WEB-BUSTUP-20.jpg",
+        "role": "公式プロフィール写真をダウンロードしてview_imageで実見。顔の特徴の確認専用。写真そのものを完成画像に合成しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ワイリー 光希スカイ",
+        "team": "福島ファイヤーボンズ",
+        "selection": "ランダム",
+        "selection_reason": "固定本文に選手名がなく、複数チームの試合予定を同列に掲載しているため。本文登場チーム→そのチームの公式現役ロスターの順でランダム抽選。",
+        "selection_method": "Python random.Random('df384c13fa1695e31707')で本文掲載順の30チームから福島を抽選。その乱数系列の次のchoiceで、公式ロスター掲載順の13選手からワイリー光希スカイを抽選。",
+        "team_pool": [
+          "千葉J",
+          "長崎",
+          "A千葉",
+          "三遠",
+          "横浜BC",
+          "滋賀",
+          "三河",
+          "富山",
+          "A東京",
+          "広島",
+          "東京U",
+          "熊本",
+          "岡山",
+          "静岡",
+          "香川",
+          "八王子",
+          "岩手",
+          "山形",
+          "越谷",
+          "福島",
+          "立川",
+          "東京Z",
+          "新潟",
+          "岐阜",
+          "金沢",
+          "横浜EX",
+          "奈良",
+          "青森",
+          "FE名古屋",
+          "愛媛"
+        ],
+        "player_pool": [
+          "大久保友貴",
+          "渡邊翔太",
+          "新川敬大",
+          "アキ・チェンバース",
+          "森田雄次",
+          "小川翔矢",
+          "パトリック・ガードナー",
+          "ワイリー光希スカイ",
+          "ジャック・ナンジ",
+          "益子拓己",
+          "米山ジャバ偉生",
+          "ケニー・マニゴールト",
+          "アルタンゲレル・アズバヤル"
+        ],
+        "reference_page": "https://firebonds.jp/team/players/detail/id=15891?PlayerID=51000275",
+        "reference_image": "https://firebonds.bl.kuroco-img.app/v=1789014405/files/user/2026-27-FB-WEB-BUSTUP-20.jpg",
+        "observed_features": "中央付近で分けて後ろへ流した黒髪、短く刈った側頭部、太い眉、切れ長の目、まっすぐな鼻、やや角のある縦長の輪郭、口ひげと顎ひげ、頬はひげが薄い。公式写真と完成イラストを目視比較。",
+        "depiction": "1人の左手ドリブル姿。実際の試合場面の再現ではない。名前・背番号・成績・出場や活躍の記述なし。ロゴ・スポンサー文字・公式写真の貼り付けなし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story. Create ONE finished Japanese basketball editorial thumbnail, landscape 16:9 PNG, 1536x864 or larger. This is a new illustration, not a photograph.\n\nArt direction: match the approved black-and-lime reference image viewed in this conversation: near-black #151A18 background, electric lime #CCF43B dry-brush strokes, off-white extra-bold Japanese lettering, hand-drawn ink crosshatching and expressive brush textures, high contrast, restrained elements. Do not carry over the reference's player, name, score, statistics, date, or shooting pose.\n\nSubject: Exactly one REAL professional basketball player, Koki Sky Wiley (ワイリー 光希スカイ) of Fukushima Firebonds, in an illustrative left-handed low dribble driving stance. His identity must be recognizable from the official portrait viewed in this conversation. Observed facial features: straight black medium-length top hair swept back and parted near the center, closely trimmed sides, thick straight dark eyebrows, almond-shaped dark eyes, long straight nose, moderately broad angular oval face, a defined dark mustache connected around the mouth to a neat full chin goatee, clean cheeks, medium-light skin tone. Tall lean athletic build. Keep the face visible in a three-quarter angle rather than looking down. Render as expressive off-white and warm-gray ink illustration with clear facial details, not photorealistic. Plain dark basketball jersey and shorts with subtle purple accents, black short-sleeve undershirt. No logos, sponsors, lettering, name or jersey number. One orange basketball controlled by his left hand, anatomically natural hands, correct number of arms and fingers. Do not reuse the reference photograph itself or its jersey markings.\n\nComposition: put the athlete in the LEFT 43 percent, energetic low diagonal forward stance, visible from head through bent thighs, ball and hands fully inside canvas. Head has clear breathing room above. A lime brush arc emphasizes movement behind him. Put clean left-aligned text in the RIGHT 53 percent. No court scenery, scoreboard, audience, opponents, or extra figures. Keep the important face, ball and all text within a generous 5 percent safe margin. No clutter or text collisions.\n\nAll visible text must be exactly the following, with no extra words:\nSmall publication label: \"バスケまとめ\"\nDate, large: \"2026.11.14\"\nMain headline, very large lime bold Japanese type: \"試合予定\"\nLeague line, medium off-white plain text (not logos): \"B.PREMIER / B.ONE\"\nImportant qualifier, clearly readable, two lines if needed: \"当日EFFは\" / \"公式記録確定待ち\"\nSmall but readable source-time line: \"11/14 02:07時点\"\nFooter, clearly readable: \"イラスト（AI生成）\" and \"イメージ\"\n\nEditorial constraints: All article information comes only from the supplied fixed source.html/source.txt. The article lists upcoming games on 2026-11-14, all marked pregame at 02:07 JST. It says the day's EFF rankings await official records; no ranking or score is confirmed. The athlete was randomly selected from a team named in the article and is only a visual illustration: do not add his name, performance, participation claims, predictions or statistics. This is an imagined generic basketball movement, not a reconstruction of an actual match scene. No team or league logos, no real photo collage, no photo style. Make Japanese text accurate and beautifully readable.",
+    "generator": "内蔵 image_gen.imagegen（image_gen__imagegen）。新規生成1回、修正0回。API/CLI不使用。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-13T17:11:31.861222+00:00",
+  "publication_approved": false
+}
