@@ -1,0 +1,86 @@
+{
+  "id": "2ffa19b961fae6d1e9bc",
+  "article_path": "article-analysis-chibajets-20261113.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-chibajets-20261113.html",
+  "source_commit": "",
+  "source_blob_sha": "135c3ba4c5176c75f26cf43b112b780b1ce11c22",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "d66c42ee735db54005a01d779e3db9d007c5e4fb147acd859e6478b999da2170",
+  "last_observed_blob_sha": "135c3ba4c5176c75f26cf43b112b780b1ce11c22",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2ffa19b961fae6d1e9bc/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2ffa19b961fae6d1e9bc/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-13T03:22:28.027939+00:00",
+  "creation_event_id": "df96f905ca3bcee6c5af",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/2ffa19b961fae6d1e9bc/thumbnail.png",
+  "image_sha256": "fdff1ce04b16aab235da781239962c1977f181bc61b84b3f2ef15149508246e9",
+  "width": 1672,
+  "height": 940,
+  "brief": {
+    "source_blob_sha": "135c3ba4c5176c75f26cf43b112b780b1ce11c22",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.13",
+      "千葉ジェッツ",
+      "直近5試合",
+      "4勝1敗",
+      "3Pで稼ぎ、2Pに課題",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2ffa19b961fae6d1e9bc/source.html",
+        "role": "本文根拠の固定HTML。Git blob形式のSHA-1を照合済み。記事タイトル、2026.11.13、千葉ジェッツ、直近5試合の4勝1敗、3Pと2Pの得点差を確認。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2ffa19b961fae6d1e9bc/source.txt",
+        "role": "本文根拠の固定文章。対象期間は2026年11月1日〜11月12日の5試合。3P得点差+45点、2P得点差-28点。画像の勝敗はシーズン通算や選手個人の数字ではなくチームの直近5試合。順位・比較条件を要するランキング表現は使用していない。"
+      },
+      {
+        "url": "https://chibajets.jp/team/players/detail/id=9633?PlayerID=9055",
+        "role": "千葉ジェッツ公式プロフィール。人物の容姿確認にのみ参照し、記事本文の事実や成績の根拠には使用していない。"
+      },
+      {
+        "url": "https://bleague.bl.kuroco-img.app/v=2026111223/files/user/roster/704/2026-27/9055_01.jpg",
+        "role": "上記公式プロフィール掲載写真。view_imageで目視。写真は画像生成の容姿参照のみで、完成サムネに写真そのものは使用していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みv3スタイル。view_imageで目視。色、筆致、タイポグラフィのみ参照し、元の選手名・数値・構図は引き継いでいない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "富樫勇樹",
+        "selection": "ランダム",
+        "reason": "チーム全体が主役の分析記事で単独の中心選手に絞れないため、固定本文に名前が出る7選手を候補にPython random.SystemRandom().choiceで1名を抽選。",
+        "candidate_pool": [
+          "ルーク・メイ",
+          "ブランドン・ランドルフ",
+          "富樫勇樹",
+          "金近廉",
+          "ネイト・ウィリアムズ",
+          "マット・コステロ",
+          "エルジー・ギル"
+        ],
+        "official_profile": "https://chibajets.jp/team/players/detail/id=9633?PlayerID=9055",
+        "official_image": "https://bleague.bl.kuroco-img.app/v=2026111223/files/user/roster/704/2026-27/9055_01.jpg",
+        "reference_local_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/2ffa19b961fae6d1e9bc/references/togashi-official.jpg",
+        "observed_features": "中央で分かれた暗色の髪と左右へ流れる毛束、卵形〜やや角張った輪郭、切れ長の目、まっすぐな眉、控えめな口ひげと顎先のひげ。生成画像を公式写真と見比べて確認。",
+        "depiction": "1人の低いドリブル姿を手描きインク調で描写。特定試合・決勝プレーの再現ではない。選手名・個人成績・出場・活躍の文字は入れていない。無地ユニフォームでロゴ・スポンサー文字・背番号なし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset: one finished Japanese basketball editorial thumbnail, wide 16:9, 1536x864 or larger, PNG.\nCreate a new article thumbnail by transforming the first reference's approved black/lime editorial design. Reference 1 is STYLE ONLY: retain its bold Japanese lettering, rough hand-inked sports illustration, dry brush energy, sparse composition, charcoal #151A18, lime #CCF43B, warm off-white. Discard every word, number, player and pose from reference 1.\nReference 2 is OFFICIAL APPEARANCE REFERENCE ONLY for the single real player Yuki Togashi (富樫勇樹). Draw him recognizably as an original hand-inked illustration: compact lean athletic build, center-parted dark medium-short wavy hair swept to each side, oval slightly squared face, narrow dark eyes, straight brows, restrained small chin goatee and faint moustache. Keep those recognizable face features, no invented generic player. Do not paste the photo or copy photographic texture, logos, sponsors, jersey text or number.\nComposition: reverse the reference layout. Player occupies left 42%, dynamically leaning into a low crossover/dribble with one hand contacting one orange basketball at hip/knee level, other arm bent naturally, torso and face visibly turning toward the court on the right. Three-quarter view with face clearly readable, knees flexed, crop naturally below knees. Hands and ball wholly in frame. Both hands anatomically correct. Plain off-white basketball uniform with black brush shadows and discreet lime edging, absolutely no letters, logos or numbers on clothing. Only one person. Do not depict opponents, crowds, an actual arena, a specific game-winning moment or a match reconstruction. This is a conceptual playing illustration, explicitly labeled イメージ.\nRight 54% is a clean readable typographic field with no art obscuring it. Team statistics are visually grouped with the team name, clearly unrelated to the player's personal statistics.\nExact visible Japanese text ONLY, with this hierarchy:\nTop right small: \"バスケまとめ\"\nNext small: \"2026.11.13\"\nRight headline bold off-white: \"千葉ジェッツ\"\nBelow headline medium: \"直近5試合\"\nLargest dominant line, with lime numbers: \"4勝1敗\"\nBelow medium bold off-white: \"3Pで稼ぎ、2Pに課題\"\nBottom footer, crisp readable white: \"イラスト（AI生成）\"\nAdjacent footer separated with ample space: \"イメージ\"\nKeep all text inside 5% safe margins; footer is readable, unobstructed. No extra text. No player name or individual stats anywhere.\nEditorial source scope: the supplied fixed article says Chiba Jets went 4 wins 1 loss in their latest five games Nov 1–12, 2026, their three-point scoring offset two-point weakness. Do not add any claims or rankings. The player was selected randomly from names in the article; the drawing makes no assertion about his contribution or specific appearance.\nFinish: energetic but uncluttered, high-contrast printed ink illustration, face recognizably based on official portrait, thick Japanese gothic lettering, confident flat graphic design. Never photorealistic. No team/league/brand/sponsor logos, no watermark, no extra fingers, no detached limbs, no repeated basketballs.",
+    "generator": "内蔵 image_gen.imagegen（image_gen__imagegen）。生成1回、修正0回。公式容姿写真と承認済みスタイルを参照。API/CLI生成・新規課金なし。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-13T03:25:20.805923+00:00",
+  "publication_approved": false
+}
