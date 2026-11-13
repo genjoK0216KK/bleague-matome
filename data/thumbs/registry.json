@@ -28,6 +28,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "宇都宮ブレックスの直近5試合をスタッツで分析 差がついたのはフリースローと2P"
   },
+  "article-analysis-chibajets-20261113.html": {
+   "article_path": "article-analysis-chibajets-20261113.html",
+   "editorial_fingerprint": "d66c42ee735db54005a01d779e3db9d007c5e4fb147acd859e6478b999da2170",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-analysis-chibajets-20261113-fdff1ce04b16.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-chibajets-20261113-fdff1ce04b16-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "2ffa19b961fae6d1e9bc",
+   "image_sha256": "fdff1ce04b16aab235da781239962c1977f181bc61b84b3f2ef15149508246e9",
+   "imported_at": "2026-11-13T03:25:51.775651+00:00",
+   "prepared_at": "2026-11-13T03:25:20.805923+00:00",
+   "source_blob_sha": "135c3ba4c5176c75f26cf43b112b780b1ce11c22",
+   "source_size": [
+    1672,
+    940
+   ],
+   "stable_fingerprint": "d66c42ee735db54005a01d779e3db9d007c5e4fb147acd859e6478b999da2170",
+   "style": "ink-lime-portrait-v5",
+   "title": "千葉ジェッツは直近5試合で4勝1敗 平均94.8点はリーグ最多、3Pで稼ぎ2Pで失う"
+  },
   "article-analysis-hokkaido-20261111.html": {
    "article_path": "article-analysis-hokkaido-20261111.html",
    "editorial_fingerprint": "2848a700954624bab3d930958d00b02038fec132983beef6b54d5e9724abb2a6",
@@ -2019,13 +2047,6 @@
  },
  "log": [
   {
-   "article": "article-results-one-next-20261107.html",
-   "at": "2026-11-07T12:11:47.907641+00:00",
-   "event": "imported",
-   "id": "9bdde677628afe3c1636",
-   "image": "8d0c29573903"
-  },
-  {
    "article": "article-stats-20261107.html",
    "at": "2026-11-07T12:11:48.043408+00:00",
    "event": "imported",
@@ -2577,6 +2598,13 @@
    "event": "imported",
    "id": "db75a6a12bbf73eb8c56",
    "image": "241f81564884"
+  },
+  {
+   "article": "article-analysis-chibajets-20261113.html",
+   "at": "2026-11-13T03:25:51.775687+00:00",
+   "event": "imported",
+   "id": "2ffa19b961fae6d1e9bc",
+   "image": "fdff1ce04b16"
   }
  ],
  "seen": {
@@ -2603,6 +2631,7 @@
   "2d836f0394de01c7d009": "superseded:7da4157f57a12da3f879",
   "2e911924d887d6fdf34a": "imported",
   "2fad4903e119f5b6b0ea": "imported",
+  "2ffa19b961fae6d1e9bc": "imported",
   "3143112bfc83546772bc": "imported",
   "31a9c1e5a34b25318ae8": "superseded:e64b9ac50fa81c41ae65",
   "3370472f9c78336a4974": "imported",
