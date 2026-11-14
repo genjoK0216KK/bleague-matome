@@ -1,0 +1,73 @@
+{
+  "id": "fe95cf5603af40345d87",
+  "article_path": "article-results-one-next-20261114.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261114.html",
+  "source_commit": "",
+  "source_blob_sha": "2070589db52f49d102407b8cc2b5edaae8b590f5",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "3f7d1e1ef11067b85bbc06a351d8524e76a99d5e3f1e5145e73ffe2efefe41a0",
+  "last_observed_blob_sha": "2070589db52f49d102407b8cc2b5edaae8b590f5",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe95cf5603af40345d87/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe95cf5603af40345d87/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-14T10:35:11.050419+00:00",
+  "creation_event_id": "268d6b52feec38eeba4c",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/fe95cf5603af40345d87/thumbnail.png",
+  "image_sha256": "417d3423a72fe565d4b217392090c353c129416a0e85b27da7e24507fe67334b",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "2070589db52f49d102407b8cc2b5edaae8b590f5",
+    "text_lines": [
+      "バスケまとめ",
+      "11/14",
+      "試合結果",
+      "当日EFF・ポジション別TOP3",
+      "公式ポジション確認後に掲載",
+      "イラスト（AI生成）　イメージ"
+    ],
+    "sources": [
+      {
+        "role": "本文の唯一の根拠（固定HTML）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe95cf5603af40345d87/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261114.html",
+        "verified_blob_sha": "2070589db52f49d102407b8cc2b5edaae8b590f5"
+      },
+      {
+        "role": "本文の唯一の根拠（固定文章）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe95cf5603af40345d87/source.txt",
+        "qualifiers": "B.PREMIERとB.ONEの当日EFF・ポジション別TOP3は、出場選手の公式ポジション未確認のため確定後に掲載。B.NEXTは試合なし。資料取得2026-11-14 19:24〜19:25 JST。"
+      },
+      {
+        "role": "承認済み絵柄のみの参照。記載選手名・成績は使用しない。",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "玉木 祥護",
+        "team": "愛媛オレンジバイキングス",
+        "selection": "ランダム",
+        "selection_reason": "固定原稿に選手名がなく、全試合結果とEFF未掲載の案内で特定の主役を絞れないため。本文に登場するチームの現役選手から選出。",
+        "selection_method": "再現可能な疑似乱数。Python random.Random('fe95cf5603af40345d87')で固定本文の対戦順30チームからchoiceし愛媛を選択。次のrandom()=0.9130601967144508を公式選手一覧の14名へ適用しfloor(値*14)=12、0始まり12番目の玉木祥護を選択。",
+        "official_roster": "https://orangevikings.jp/team/players/",
+        "official_profile": "https://orangevikings.jp/team/players/detail/id=12622?PlayerID=20003",
+        "official_portrait": "https://bleague.bl.kuroco-img.app/v=2026111315/files/user/roster/723/2026-27/20003_01.jpg",
+        "reference_checked": "公式選手一覧・プロフィールを閲覧し、公式肖像をローカルに読み取り専用の参照として取得、view_imageで実見した。",
+        "observed_appearance": "後ろへ流した長い黒髪、幅広い黒ヘッドバンド、やや面長で輪郭の明確な顔、直線的な眉、細い口ひげとあごひげ、広い肩幅。",
+        "usage": "公式写真は貼り付けず、観察した特徴をプロンプトへ反映してインク・ブラシ画として新規生成。無地のユニフォーム。名前・背番号・個人成績・出場・活躍の記述なし。特定の実戦場面の再現ではなく、ボールを両手で持ち踏み込むイメージ。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 1536×864 or larger. It must be a polished non-photorealistic hand-drawn ink-and-dry-brush sports illustration with very bold clean Japanese typography. Approved house style: almost-black #151A18 background, vivid lime #CCF43B brush swaths and sparse splatter, warm ivory type, dramatic black-and-ivory crosshatching on the real athlete. Ball is the only orange accent, uniform predominantly ivory/black. Few elements, no photographic textures.\n\nSubject: real basketball player SHOGO TAMAKI (玉木祥護) of Ehime Orange Vikings. Do not draw a generic invented athlete. I have inspected his current official roster portrait at https://bleague.bl.kuroco-img.app/v=2026111315/files/user/roster/723/2026-27/20003_01.jpg and observed: Japanese male around 30, tall 195cm powerful athletic build and broad shoulders; long straight black hair swept back, extending to the nape/shoulders, wide plain black headband across forehead, slightly long oval/angular face, straight rather thick eyebrows, almond-shaped dark eyes, defined straight nose, narrow black moustache and short goatee/chin beard connected around the chin, defined jawline. Preserve those specific likeness features in a clearly illustrated face, not a photograph, caricature, or anonymous substitute.\nPose: a powerful low forward step and torso pivot with a basketball held in BOTH hands at lower chest/waist, head turned in three-quarter view toward viewer/right, focused expression, face fully clear. Player fills LEFT 43% of composition, from head to upper thighs; energetic foreshortening but anatomically natural arms, two hands, natural fingers gripping the ball, no extra limbs. Ball and head fully within canvas, at least 5% safe margin. Plain sleeveless basketball kit WITHOUT number, text, team badge, sponsor, manufacturer, or league logo. Do not paste or reproduce any official photo. Only ONE athlete.\n\nComposition: large legible headline occupies the RIGHT 55%, clean separated area, with a rough lime diagonal brush behind the left athlete. Different composition from a right-side jump-shooter. Premium editorial poster, excellent text contrast, all text stays inside 5% safe margin. Footer is a clean dark strip. Do not cover any writing with the player or splatter.\n\nExact text only (do not add any other words, names, scores or numbers):\nsmall masthead upper right: 「バスケまとめ」\nlarge lime date: 「11/14」\nvery large ivory main headline: 「試合結果」\nsmaller supporting line: 「当日EFF・ポジション別TOP3」\nqualifier immediately below, visibly readable: 「公式ポジション確認後に掲載」\nbottom footer: 「イラスト（AI生成）　イメージ」\n\nEditorial accuracy: The only source for article content is a frozen local manuscript headed '11/14 試合結果・当日のEFF'. It lists results, but B.PREMIER and B.ONE positional EFF TOP3 are not yet published because official player positions remain unconfirmed. This thumbnail must not imply any EFF rankings have been established. The athlete is RANDOMLY selected from a team mentioned in that manuscript solely for the illustration. Never print his name, stats, award, playing-time, win, or performance claims. The pictured action is an illustrative basketball pose, NOT a recreation of an actual 11/14 game, decisive play or highlight. The footer must explicitly include both イラスト（AI生成） and イメージ. No league/team logos, no official photo, no fabricated scoreboards, no photorealism, no extra players. Render exact Japanese text accurately, horizontal upright heavy gothic lettering.",
+    "generator": "内蔵 image_gen.imagegen（API/CLI未使用）。初回生成1回、修正0回。出力1672×941 PNG。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-14T10:51:40.794210+00:00",
+  "publication_approved": false
+}
