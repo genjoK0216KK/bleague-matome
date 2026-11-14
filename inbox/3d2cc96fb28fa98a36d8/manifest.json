@@ -1,0 +1,103 @@
+{
+  "id": "3d2cc96fb28fa98a36d8",
+  "article_path": "article-games-20261115.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261115.html",
+  "source_commit": "",
+  "source_blob_sha": "4775c52ebf6cb01c36632be5d42689d6ff38493a",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "f0048498b0d3a3155b244ed85c7bc0c80cdc362a479937ccc58185337b06950a",
+  "last_observed_blob_sha": "4775c52ebf6cb01c36632be5d42689d6ff38493a",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3d2cc96fb28fa98a36d8/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3d2cc96fb28fa98a36d8/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-14T15:06:41.454870+00:00",
+  "creation_event_id": "681f123933acfaa0e61c",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/3d2cc96fb28fa98a36d8/thumbnail.png",
+  "image_sha256": "df26dd788f36ceaeac2bb4cb5d54fa6e8d54508b6f10deb14a552017cf488f0b",
+  "width": 1659,
+  "height": 948,
+  "brief": {
+    "source_blob_sha": "4775c52ebf6cb01c36632be5d42689d6ff38493a",
+    "text_lines": [
+      "バスケまとめ",
+      "11/15",
+      "試合予定",
+      "B.PREMIER・B.ONE",
+      "公式記録確定待ち",
+      "2026.11.15 00:04 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_fixed_html",
+        "path": "source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261115.html",
+        "scope": "本文の根拠。固定HTMLのGit blob SHAをhashlibで照合済み。Git操作なし。"
+      },
+      {
+        "type": "article_fixed_text",
+        "path": "source.txt",
+        "scope": "本文の根拠。11/15試合予定、B.PREMIER/B.ONE、全試合前、公式記録確定待ち、00:04 JST時点。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "scope": "view_imageで目視。黒×ライム、太い日本語見出し、インク・ブラシ。選手名・成績は転用しない。"
+      },
+      {
+        "type": "style_reference_unavailable",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "scope": "指定先にファイルなし。存在する黒×ライム承認済み見本を使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "オーティス・フレイジャー III",
+        "english_name": "Otis Frazier III",
+        "team": "宇都宮ブレックス",
+        "selection": "ランダム",
+        "reason": "本文に選手名なし。本文記載チーム・宇都宮の公式現役選手一覧15人から、作業IDをseedにPython random.Random(job_id).randrange(15)でindex=10を選択。特定選手の出場・成績・活躍を示さない。",
+        "roster_url": "https://www.utsunomiyabrex.com/team/players/",
+        "profile_url": "https://www.utsunomiyabrex.com/player_lp/otis_frazier_III/",
+        "official_image_url": "https://utsunomiyabrex.bl.kuroco-img.app/v=1789530419/files/user/lp/players/image/otis_frazier_III/kv_pc.jpg",
+        "local_reference": "references/otis-frazier-III-official.jpg",
+        "reference_checked": "公式現役選手一覧・2026年からの所属と公式プロフィール画像を確認。公式画像をview_imageで目視。外部情報は選手選定・容姿参照のみに使用。",
+        "appearance": "短い黒い巻き髪、サイドのフェード、角に丸みのある輪郭、太い眉、目鼻、薄い口ひげと短く整えた顎・顎線のひげ、筋肉質な肩。",
+        "scene": "左手でボールを扱うドライブのイメージ。特定の実戦場面を再現しない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset type: Japanese basketball editorial thumbnail, one finished PNG, 1792×1024 or equivalent wide approximately 16:9 canvas, width at least 1000 pixels.\nCreate ONE original thumbnail for バスケまとめ, based ONLY on this supplied article content: November 15, 2026 game schedules in B.PREMIER and B.ONE; all listed games are pregame as of 2026-11-15 00:04 JST; official game records are awaiting confirmation. No individual players are named in the article; no scores, performances or attendance are confirmed.\nSubject: Draw exactly one REAL athlete, Otis Frazier III (オーティス・フレイジャー III), a current Utsunomiya Brex player selected randomly from the official roster. He is an illustrative subject only, NOT a claimed participant or top performer for this day. His name must NOT appear in the artwork.\nLikeness reference observed on the official Utsunomiya profile: young adult Black male; medium-brown skin translated into warm ivory and charcoal ink shading; tall athletic muscular shoulders; dense short black springy curls on top, a subtly uneven rounded high top, closely faded sides; rounded-rectangular face with strong jaw and rounded chin, pronounced cheekbones, dark almond-shaped eyes, thick gently arched brows, straight medium-wide nose with rounded tip, full lips, short narrow moustache and closely trimmed beard along jaw and chin, cheeks mostly clean. No headband, no eyewear. Keep face clear and identifiable, not a generic fictional basketball player. The official image is a likeness reference only: redraw as expressive hand-inked illustration; never paste the official photo.\nScene and pose: dynamic low-angle three-quarter view of Otis driving diagonally toward the viewer with his left hand controlling an orange basketball at hip height, torso leaning forward, right arm bent for balance. One ball only. Clearly visible face, anatomically sound arms, natural hands with five fingers, no extra limbs. Show from head through upper thighs with intentional lower-body crop. Head, hands and whole ball must fit inside canvas with generous margins. No defender or other human. This is a generic imagined basketball action, never a depiction of a specific real play.\nStyle: match the approved v3 sports editorial visual language: deep near-black #151A18, electric lime #CCF43B, warm ivory; bold dry-brush diagonal lime strokes behind athlete, scratchy ink hatching, decisive black and white shadow shapes, subtle paper grit. Strong hand-drawn sports illustration, absolutely NOT photography or photorealism. Minimal elements, powerful typographic hierarchy, compact purposeful layout. Orange ball is the only warm saturated accent. Athlete wears a simple dark sleeveless basketball uniform with subtle cream edge trim; NO jersey letters or numbers, NO team logos, NO league logos, NO sponsor markings. Ball has plain black seams and no brand marks.\nComposition: left 58% is strong clean typography on near-black; right 42% is the athlete with motion brushwork. Player must be large, legible and emotionally present. Do not cover text with athlete. Off-white Japanese heavy Gothic block type, huge lime date, comfortable line spacing. Safe margins 60 px around all critical text, footer at least 35 px tall and highly readable, and no cropped text.\nRender ONLY the following exact Japanese text, with no other text, no invented numbers or names:\nTop-left small brand: 「バスケまとめ」\nMain large date: 「11/15」\nMain huge headline: 「試合予定」\nSupporting line: 「B.PREMIER・B.ONE」\nClearly readable qualifier under supporting line: 「公式記録確定待ち」\nSmall timestamp: 「2026.11.15 00:04 JST時点」\nBottom footer: 「イラスト（AI生成）」 and 「イメージ」\nThe qualifier is important. Do not add ベスト5, TOP3, scores, results, confirmed appearance, highlights, winner, player name, or any performance claim.\nFinal result: one premium polished editorial thumbnail, bold and energetic, accurate Japanese lettering, readable at mobile size.\n\n[修正1回目 / 実使用プロンプト]\nEdit this existing thumbnail once. Preserve exactly the same content, Japanese lettering, date, typography, colors, ink illustration style, background, and the same real athlete Otis Frazier III with the same face and pose. Only fix the athlete framing: scale the ENTIRE athlete-and-ball group down by about 12%, with its lower edge remaining anchored near the bottom; shift the group slightly left as necessary so there is at least 50 pixels of CLEAR visible background above the topmost hair curl and at least 45 pixels between the farthest-right fingertips / basketball and the right canvas edge. His whole hair silhouette, both hands and all fingers, and the whole basketball must be fully inside the canvas. Keep all Japanese text untouched and fully legible, no overlap with text. Keep the intentional lower thigh crop, but do not crop the head, hands, or ball. Do not add any new text, numbers, people, logos, branding or details. Maintain the wide approximately 16:9 PNG composition and at least 1000-pixel width. Exact existing text to preserve: バスケまとめ / 11/15 / 試合予定 / B.PREMIER・B.ONE / 公式記録確定待ち / 2026.11.15 00:04 JST時点 / イラスト（AI生成） / イメージ.",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "revision_count": 1,
+      "status": "passed_saved",
+      "initial_output": "/Users/genjo/.codex/generated_images/01a1da98-ae51-7eb0-ae05-6bd3cf556f94/exec-273d1ef1-f374-4383-88d9-5277a9da4e30.png",
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1da98-ae51-7eb0-ae05-6bd3cf556f94/exec-da3c538a-2704-4466-9391-effce3a2887c.png",
+      "saved_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3d2cc96fb28fa98a36d8/generated.png",
+      "width": 1659,
+      "height": 948,
+      "sha256": "df26dd788f36ceaeac2bb4cb5d54fa6e8d54508b6f10deb14a552017cf488f0b",
+      "revision_reason": "初回は頭髪が上端に接し、手が右端に近かったため人物とボールの構図のみ1回修正。修正版・保存PNGを目視し、頭・両手・ボールが完全に収まり、文字と干渉しないことを確認。",
+      "qa_observations": {
+        "text_and_numbers": "画像の全8行を固定原稿・指定文字と照合。11/15、B.PREMIER・B.ONE、2026.11.15 00:04 JST時点が一致。選手名・得点・試合スコア・出場や活躍を断定する文言なし。",
+        "source_qualifiers": "試合予定・公式記録確定待ち・資料時点・イメージを目視。原稿の試合前、当日EFF未確定の留保を保持。",
+        "likeness_or_no_named_person": "公式画像と照合し、オーティス・フレイジャー IIIの黒い巻き髪とサイドのフェード、輪郭、太い眉、目鼻、口ひげ・顎ひげを目視。非写真調のプレーイラスト。架空の人物は追加していない。",
+        "layout": "保存PNGで頭髪・顔・両手・全ボールが画面内に収まること、手と腕に不自然な追加部位がないこと、見出しと人物が重ならないこと、注記の可読性、ロゴとスポンサー文字の不存在を確認。1659×948。",
+        "ai_label": "イラスト（AI生成）とイメージの表記を保存PNGで目視確認。"
+      },
+      "publication": "未実施。ready・git・外部送信は実行していない。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-14T15:10:45.628871+00:00",
+  "publication_approved": false
+}
