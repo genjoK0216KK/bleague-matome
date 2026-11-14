@@ -1,6 +1,18 @@
 {
  "baseline_at": "2026-10-28T21:33:37.428442+00:00",
  "events": {
+  "article-analysis-akita-20261114.html": {
+   "article_path": "article-analysis-akita-20261114.html",
+   "article_url": "https://basuke-matome.jp/article-analysis-akita-20261114.html",
+   "editorial_fingerprint": "1dab7aa332fa791f1f36a924f252d57ba199b9c634803811503f9924f376e3b9",
+   "event_id": "d66485ad68d9383396c0",
+   "recorded_at": "2026-11-14T10:35:05.551671+00:00",
+   "source_blob_sha": "d93a66b5e7f39e036745ee12299f1aaef5cf87c4",
+   "stable_fingerprint": "1dab7aa332fa791f1f36a924f252d57ba199b9c634803811503f9924f376e3b9",
+   "status": "requested",
+   "target_date": "20261114",
+   "title": "秋田ノーザンハピネッツ 直近5試合は0勝5敗 得点は4位でも失点が26位"
+  },
   "article-analysis-brex-20261108.html": {
    "article_path": "article-analysis-brex-20261108.html",
    "article_url": "https://basuke-matome.jp/article-analysis-brex-20261108.html",
@@ -626,15 +638,16 @@
   "article-games-20261114.html": {
    "article_path": "article-games-20261114.html",
    "article_url": "https://basuke-matome.jp/article-games-20261114.html",
-   "editorial_fingerprint": "84c6c0e7ccce619a6f08a3b07f2f4af80079aff22f98e7c92f5cab9682122f36",
-   "event_id": "fe4643b6e9610e18845e",
-   "recorded_at": "2026-11-13T17:08:32.483096+00:00",
+   "editorial_fingerprint": "3f7d1e1ef11067b85bbc06a351d8524e76a99d5e3f1e5145e73ffe2efefe41a0",
+   "event_id": "f21d4c5d412351310da9",
+   "recorded_at": "2026-11-14T10:35:05.551671+00:00",
+   "revision": 1,
    "settled": false,
-   "source_blob_sha": "cec6a3e0434efb05d7e2913fc57a4b0e57de888c",
-   "stable_fingerprint": "84c6c0e7ccce619a6f08a3b07f2f4af80079aff22f98e7c92f5cab9682122f36",
+   "source_blob_sha": "52e18856dde3c77dec8b63b4f412ca052d78dd89",
+   "stable_fingerprint": "3f7d1e1ef11067b85bbc06a351d8524e76a99d5e3f1e5145e73ffe2efefe41a0",
    "status": "requested",
    "target_date": "20261114",
-   "title": "11/14 出場予定選手（登録選手）のベスト5"
+   "title": "11/14 試合結果・当日のEFF"
   },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
@@ -863,15 +876,16 @@
   "article-results-one-next-20261114.html": {
    "article_path": "article-results-one-next-20261114.html",
    "article_url": "https://basuke-matome.jp/article-results-one-next-20261114.html",
-   "editorial_fingerprint": "eae2dab8eb93a4004b484c5ab301f3ccdf2456a9f6f17ea045c875ed7f91b436",
-   "event_id": "9769ff156d43cac26ebc",
-   "recorded_at": "2026-11-13T19:55:10.818900+00:00",
+   "editorial_fingerprint": "3f7d1e1ef11067b85bbc06a351d8524e76a99d5e3f1e5145e73ffe2efefe41a0",
+   "event_id": "268d6b52feec38eeba4c",
+   "recorded_at": "2026-11-14T10:35:05.551671+00:00",
+   "revision": 1,
    "settled": false,
-   "source_blob_sha": "c5b66a698456943fd715e66adf513a69c479f570",
-   "stable_fingerprint": "eae2dab8eb93a4004b484c5ab301f3ccdf2456a9f6f17ea045c875ed7f91b436",
+   "source_blob_sha": "2070589db52f49d102407b8cc2b5edaae8b590f5",
+   "stable_fingerprint": "3f7d1e1ef11067b85bbc06a351d8524e76a99d5e3f1e5145e73ffe2efefe41a0",
    "status": "requested",
    "target_date": "20261114",
-   "title": "11/14 出場予定選手（登録選手）のベスト5"
+   "title": "11/14 試合結果・当日のEFF"
   },
   "article-stats-20261026.html": {
    "article_path": "article-stats-20261026.html",
@@ -1018,6 +1032,18 @@
    "status": "requested",
    "target_date": "20261113",
    "title": "11月13日の貢献度ランキング 1位はケリー・ブラックシアー・ジュニア（群馬）の46"
+  },
+  "article-stats-20261114.html": {
+   "article_path": "article-stats-20261114.html",
+   "article_url": "https://basuke-matome.jp/article-stats-20261114.html",
+   "editorial_fingerprint": "d0931d75fc61451f1756830831b6aabffeb9e84c857ec06d04dc3b56f683b442",
+   "event_id": "6a77a706c32f9e67e835",
+   "recorded_at": "2026-11-14T10:35:05.551671+00:00",
+   "source_blob_sha": "4149c06ea745ef0b54f756f5174a481e93ee1dd2",
+   "stable_fingerprint": "d0931d75fc61451f1756830831b6aabffeb9e84c857ec06d04dc3b56f683b442",
+   "status": "requested",
+   "target_date": "20261114",
+   "title": "11月14日の貢献度ランキング 1位はアーロン・ホワイト（三河）の49"
   }
  },
  "version": 1
