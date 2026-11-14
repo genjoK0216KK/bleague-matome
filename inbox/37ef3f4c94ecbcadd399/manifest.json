@@ -1,0 +1,105 @@
+{
+  "id": "37ef3f4c94ecbcadd399",
+  "article_path": "article-games-20261114.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261114.html",
+  "source_commit": "",
+  "source_blob_sha": "52e18856dde3c77dec8b63b4f412ca052d78dd89",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "3f7d1e1ef11067b85bbc06a351d8524e76a99d5e3f1e5145e73ffe2efefe41a0",
+  "last_observed_blob_sha": "52e18856dde3c77dec8b63b4f412ca052d78dd89",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/37ef3f4c94ecbcadd399/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/37ef3f4c94ecbcadd399/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-14T10:35:10.777177+00:00",
+  "creation_event_id": "f21d4c5d412351310da9",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/37ef3f4c94ecbcadd399/thumbnail.png",
+  "image_sha256": "9c06e83566adb28608d086a43d7b0bf3299d1288161046243d1f9e675c2c5011",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "52e18856dde3c77dec8b63b4f412ca052d78dd89",
+    "text_lines": [
+      "バスケまとめ",
+      "11/14",
+      "試合結果",
+      "当日EFFは掲載待ち",
+      "公式ポジション未確認",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/37ef3f4c94ecbcadd399/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261114.html",
+        "note": "本文の根拠は依頼時の固定HTMLのみ。blob SHAはgitを使わずバイト列から計算し一致。試合日2026-11-14。B.PREMIERとB.ONEの当日EFFは公式ポジション未確認のため掲載待ち。資料取得19:24〜19:25 JST。"
+      },
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/37ef3f4c94ecbcadd399/source.txt",
+        "note": "固定HTMLと併せて本文を確認。選手名の記載なし。外部資料から試合結果や個人成績を補完していない。"
+      },
+      {
+        "type": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "note": "人物を選べない場合も実在選手をランダム選出するという今回の本人指示を優先。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "view_imageで確認した承認済み黒×ライムのインク・ブラシ表現。参照画像の選手名・成績は引き継がない。"
+      },
+      {
+        "type": "workflow_context_only",
+        "url": "https://app.notion.com/p/3fea07aafd1281bba76cd2e781ec5953",
+        "note": "案件の正本を読取確認。記事内容の根拠には使わず、今回の外部送信禁止に従い書込みなし。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "泉 登翔",
+        "romanized_name": "Towa Izumi",
+        "team": "富山グラウジーズ",
+        "selection": "ランダム",
+        "selection_reason": "固定本文に選手名がないため、本文に登場する30チームから富山を抽選し、その公式現役選手一覧14名から泉登翔を抽選。",
+        "random_method": "Python random.Random('37ef3f4c94ecbcadd399').choice(本文出現順30チーム); random.Random('37ef3f4c94ecbcadd399:player').choice(公式ロスター掲載順14選手)",
+        "roster_source": "https://grouses.jp/roster/players/",
+        "profile_source": "https://grouses.jp/roster/players/detail/id=21743?PlayerID=51000464",
+        "official_photo_source": "https://bleague.bl.kuroco-img.app/v=2026111214/files/user/roster/696/2026-27/51000464_01.jpg",
+        "reference_viewed": true,
+        "appearance_observed": "中央分けの茶色い髪と暗い根元、耳にかかる長さのサイド、細長い輪郭と角張った顎、直線的な眉、切れ長の目、通った鼻筋、閉じた唇、ひげなし。公式写真をview_imageで確認し、修正時にも容姿参照として使用。写真の貼付けはしていない。",
+        "depiction": "ドリブルする姿の手描きイラスト。特定の実際の試合場面ではない。選手名・背番号・個人成績・出場や活躍の記載なし。チーム・リーグ・スポンサーのロゴなし。"
+      }
+    ],
+    "prompt": {
+      "initial": "Create exactly ONE finished Japanese basketball editorial thumbnail, PNG, landscape 1600 x 900 (16:9), over 1000 pixels wide. Use case: illustration-story / sports article thumbnail.\n\nCONTENT BASIS (locked local article only): 2026-11-14 game results; B.PREMIER and B.ONE have final team scores, but the daily EFF position rankings are NOT available, because official player positions have not yet been confirmed. Do not invent scores, rankings, player statistics or participation. No individual player is named in the article.\n\nART DIRECTION: approved hand-drawn black-and-lime ink sports poster. Very dark green-black background #151A18, electric lime #CCF43B broad diagonal dry-brush strokes, warm off-white bold Japanese typography, a few restrained ink flecks. High contrast, minimal elements, confident brush and crosshatching, visibly drawn illustration, not photographic, not 3D. Reproduce the spirit of the approved B-culver-black-lime-v3 reference style (bold Japanese headlines, black background, lime brush accents, strongly drawn face), but DO NOT reuse that player's appearance, text, numbers, pose or results.\n\nONE REAL PERSON: Towa Izumi (泉 登翔), currently on Toyama Grouses' official roster, selected randomly from a team present in the article. Official facial reference actually inspected: https://grouses.jp/roster/players/detail/id=21743?PlayerID=51000464 and its portrait https://bleague.bl.kuroco-img.app/v=2026111214/files/user/roster/696/2026-27/51000464_01.jpg . Closely match these observed traits in illustrated form: young Japanese adult male with medium-length chestnut-brown hair, clear center part, dark roots, thick smoothly swept curtain bangs curving to the sides around the ears, some volume at temple level. Clean-shaven, fairly long narrow oval face and angular jaw, defined chin, straight dark eyebrows, almond-shaped dark eyes looking ahead, straight defined nose, closed lips with a gently defined cupid's bow. Athletic tall lean build. Do not substitute a generic short-haired player or the athlete from the style sample.\nShow him in a dynamic low dribbling drive, on the RIGHT approximately half of the frame, with a slight three-quarter view that keeps his facial features recognizable. His torso leans forward, knees flex, one hand naturally controls an orange basketball at hip/thigh level, the other arm balances. Show head, both arms/hands, ball and both knees fully within the frame. Upper legs may finish naturally at the lower illustration boundary. Hands anatomically correct, with five natural fingers and sensible contact with the ball. A clear silhouette and curved dry-brush movement trail suggest motion. Draw his skin in warm ivory and ink shadows, hair dark brown; plain sleeveless uniform in charcoal/off-white with restrained red accent panels. Absolutely NO jersey lettering, NO name, NO number, NO sponsor marks, NO team or league logo. Only one player, no fictional opponents, no crowd faces, no specific arena. This is a general imagined basketball action illustration, not a reconstruction of an actual play or claim he played or excelled on this date.\n\nLAYOUT AND EXACT TEXT:\nKeep text area separate from face, limbs and ball. Clear quiet left half with large typography, player occupying right. Ample 5 percent safe margins. Strong thumbnail legibility.\nUpper-left small masthead, exact: \"バスケまとめ\"\nPrimary enormous lime date: \"11/14\"\nPrimary enormous off-white headline directly below, exact: \"試合結果\"\nBelow headline, medium off-white text: \"当日EFFは掲載待ち\"\nOne smaller but clearly readable qualifier directly underneath: \"公式ポジション未確認\"\nAlong bottom in a quiet dark footer, readable and uncut exact labels: \"イラスト（AI生成）\" and \"イメージ\"\nRender all Japanese text verbatim. No other text. Do not print the real player's name anywhere. Do not include results, points, wins, ranking, player performance claims, TOP3, team names, jersey numbers or logos.\nPolished finished single image. No collage, no multiple versions, no reference photos pasted into artwork, no watermarks.",
+      "revision": "Edit Image 1, the basketball thumbnail, with Image 2 as an identity reference ONLY (official portrait of real Toyama Grouses player Towa Izumi / 泉 登翔). Deliver exactly one final PNG around 16:9, 1600x900 or comparable with width above 1000px.\n\nMake this targeted correction to the player artwork: closer likeness to the official portrait and a small safe margin above his hair. Keep the rest of the approved thumbnail intact: the black #151A18 and lime #CCF43B palette, the left text placement and exact Japanese wording, dribbling pose, orange ball, plain logo-free uniform, hand anatomy, visible ink hatching and brush style.\nMatch the face to the portrait reference: slightly longer/narrower realistic face shape, straighter less exaggerated eyebrows, the actual almond eyes and straight nose, actual closed lips and angular chin; remove the generic anime-like angular eye styling. Keep a hand-drawn ink illustration, not a photo. Hair should be medium-length chestnut brown with dark roots and a center part, swept smoothly to the sides as in the official portrait: reduce the excessive curls/flaring at the ends and bulk, retaining the parted curtain shape. No beard or moustache.\nScale the player artwork down modestly within its right-hand area so ALL hair is visibly below the top frame by at least 35 pixels at 1600px width, leaving hands and ball inside the frame and the face a prominent size. Maintain the dynamic dribbling action and natural knees/lower-leg crop. Do not change the text or cover it.\n\nAll existing text must remain exactly and only:\n\"バスケまとめ\"\n\"11/14\"\n\"試合結果\"\n\"当日EFFは掲載待ち\"\n\"公式ポジション未確認\"\n\"イラスト（AI生成）\"\n\"イメージ\"\n\nDo NOT paste the photo, its jersey, logos, sponsor text, number or portrait pose. This is a new imagined action illustration of that real athlete. Do not add names or personal statistics or imply participation in an actual game. No photo realism, no new people, no new text. The reference picture is solely for his facial features/hair, and must not appear in the finished thumbnail.",
+      "revision_reference_images": [
+        "/Users/genjo/.codex/generated_images/01a1d9a3-bd8b-7393-b3aa-10fa24ac23dd/exec-d0c58e23-6a3d-48e2-a150-ace1613abe9e.png",
+        "/private/tmp/basuke-37ef-izumi-official.jpg"
+      ]
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "revisions": 1,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1d9a3-bd8b-7393-b3aa-10fa24ac23dd/exec-c55c1686-0c8f-430c-9693-c002c8e73634.png",
+      "saved_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/37ef3f4c94ecbcadd399/generated.png",
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "qa_review": "修正版を表示して目視確認。全文字・日付は意図どおりで、当日EFF掲載待ちと公式ポジション未確認の留保を保持。公式写真の髪型・輪郭・眉・目鼻・口元と照合しイラストとして確認。頭頂部に余白あり。顔・両手・ボールの見切れなし、指と腕のつながりを確認、脚の下端は意図的なフレーミング。文字と人物の重なりなし。イラスト（AI生成）およびイメージの表記が読める。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-14T10:43:25.359654+00:00",
+  "publication_approved": false
+}

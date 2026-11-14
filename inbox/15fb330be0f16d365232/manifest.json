@@ -1,0 +1,82 @@
+{
+  "id": "15fb330be0f16d365232",
+  "article_path": "article-analysis-akita-20261114.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-akita-20261114.html",
+  "source_commit": "",
+  "source_blob_sha": "d93a66b5e7f39e036745ee12299f1aaef5cf87c4",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "1dab7aa332fa791f1f36a924f252d57ba199b9c634803811503f9924f376e3b9",
+  "last_observed_blob_sha": "d93a66b5e7f39e036745ee12299f1aaef5cf87c4",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/15fb330be0f16d365232/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/15fb330be0f16d365232/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-14T10:35:10.531368+00:00",
+  "creation_event_id": "d66485ad68d9383396c0",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/15fb330be0f16d365232/thumbnail.png",
+  "image_sha256": "21085f436d7340dab2684a06ab49cb5e3ba97e419ea1b899304f0792c965ced2",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "d93a66b5e7f39e036745ee12299f1aaef5cf87c4",
+    "text_lines": [
+      "秋田ノーザンハピネッツ",
+      "直近5試合 0勝5敗",
+      "得点4位でも",
+      "失点26位",
+      "対象：2026.11.1〜11.13",
+      "B.PREMIER 全26チームの直近5試合を比較",
+      "順位は1試合平均／相手の強さ・日程は未調整",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/15fb330be0f16d365232/source.html",
+        "article_url": "https://basuke-matome.jp/article-analysis-akita-20261114.html",
+        "source_blob_sha": "d93a66b5e7f39e036745ee12299f1aaef5cf87c4",
+        "basis": "本文の見出し・対象期間・直近5試合0勝5敗・1試合平均の得点4位/失点26位・26チーム比較・相手の強さと日程は未調整。選手選定は『マーク・スミス選手に頼る攻撃』の節。公開URLの本文は使用せず、固定ファイルのみ使用。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/15fb330be0f16d365232/source.txt",
+        "basis": "固定HTMLの本文・数値・留保と照合。"
+      },
+      {
+        "type": "production_rules",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "basis": "内蔵画像生成、黒×ライム、公式容姿参照、AI表記、最大1回修正。今回の本人指示を優先。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "basis": "view_imageで実見した黒×ライム・太字日本語・手描きインクの作風のみ。選手名・成績・ポーズを流用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "マーク・スミス",
+        "selection": "本文の主役",
+        "selection_reason": "専用見出し『マーク・スミス選手に頼る攻撃』で平均得点・アシスト・リバウンド・出場時間・シュート内訳が扱われ、次戦の注目点でも言及されるため。",
+        "official_profile": "https://northern-happinets.com/team/players/detail/id=22786?PlayerID=51000410",
+        "official_portrait": "https://bleague.bl.kuroco-img.app/v=2026111417/files/user/roster/693/2026-27/51000410_01.jpg",
+        "reference_method": "クラブ公式プロフィールと選手一覧から公式写真を取得し、view_imageで容姿を実見。修正時に公式写真を容姿参照として内蔵生成に渡した。写真自体の貼付や公式ロゴの使用はなし。外部資料の成績は本文根拠に使用しない。",
+        "observed_features": "短い黒の巻き髪、縦長の輪郭、太い眉、目鼻と厚めの唇、薄い口ひげと短い顎のひげ、広い肩を確認。ピンクの簡略ユニフォーム、背番号13。",
+        "illustration_scene": "低い姿勢で前へ運ぶドリブルのイメージ。実際の特定試合・得点場面の再現ではない。",
+        "final_visual_check": "公式写真の髪型・輪郭・目鼻・口元との対応を目視確認。頭頂、両手の指、ボール全体が画面内。人物は1人。"
+      }
+    ],
+    "prompt": "[Initial generation]\nUse case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 1536×864 or larger. This is a brand-new hand-drawn illustration, not a photograph.\nApproved visual system: deep charcoal black #151A18 background, electric lime #CCF43B brush marks, off-white heavy Japanese gothic typography, energetic ink and dry-brush textures, few graphic elements. Match the inspected approved B-culver-black-lime-v3 reference's bold editorial mood, not its player, text, statistics, or pose.\n\nSUBJECT:\nDepict only the REAL basketball player Mark Smith (マーク・スミス), the central player discussed in the supplied fixed article, based on the official Akita Northern Happinets portrait I have inspected at https://northern-happinets.com/team/players/detail/id=22786?PlayerID=51000410 .\nHis likeness: young adult man with medium light-brown skin, short dense black tight curls with a neat low rounded silhouette and close sides, tall oval face, clear angular jaw, straight broad eyebrows, brown almond-shaped eyes, straight moderately broad nose, full lips, a faint narrow moustache and very light short hair on the chin. No full beard, no long hair, no headband. Broad athletic shoulders, strong guard's build. Make the face large enough to see those individual features clearly; don't black out his face.\nDraw him in a forceful low driving dribble, three-quarter view, leaning forward with bent knees, his anatomical right hand on the top/side of a fully visible orange basketball at hip-to-knee height, his other arm bent naturally. Illustrate a plausible basketball movement, not a reenactment of a particular game or a claimed scoring play. No other people. Jersey is simplified bright pink with dark trim, number 13 only. No team logo, no sponsor marks, no league logo, no brand names, no official photograph pasted into the image.\n\nLAYOUT:\nFigure on the LEFT approximately 42%, from head to bent knees, with dynamic diagonal lime ink strokes behind him. His face, both hands, and the entire ball must remain inside the canvas and separate from the type. Anatomy and five-finger hands must be natural. Reserve the right 55% for readable Japanese typography. Keep all text comfortably inside the image with 5% outer margins. Footer spans the full width on a calm dark band. No fake chart, no extra statistics, no arena crowd. Text and the player should feel balanced and bold at thumbnail scale.\nThe key subject is Akita's team analysis; the rankings belong to the TEAM, not to Mark Smith individually. Never label Smith as personally responsible for the losses.\n\nEXACT TEXT TO RENDER, and no other words:\nTop/right small header:\n「秋田ノーザンハピネッツ」\nAbove the main headline, medium:\n「直近5試合 0勝5敗」\nMain headline, two very large bold lines:\n「得点4位でも」\n「失点26位」\nMake 4 and 26 especially clear; the second headline uses lime.\nBelow headline, smaller:\n「対象：2026.11.1〜11.13」\nComparison qualifier, readable in two lines:\n「B.PREMIER 全26チームの直近5試合を比較」\n「順位は1試合平均／相手の強さ・日程は未調整」\nBottom footer, clearly legible:\n「イラスト（AI生成）」\n「成績をもとにしたイメージ」\n\nCONTENT GROUNDING:\nOnly the user's fixed source.html and source.txt supply article facts: Akita is 0–5 in its last five games from Nov 1 to Nov 13, 2026; team average points rank 4th, average points allowed rank 26th among 26 B.PREMIER teams' respective last five games, unadjusted for opponent strength or schedules. Mark Smith is the most prominently discussed player. Do not import stats from the official portrait page or from the approved style example. Do not add a personal score, a claim of a specific actual match scene, an injury, or a comeback claim.\n\nFinal output: one polished PNG image, horizontal approximately 16:9; no border or extra panel; visibly an ink illustration.\n\n[Single permitted correction]\nEdit the first image (the generated black/lime basketball thumbnail). The second image is Mark Smith's official portrait, supplied ONLY as a likeness reference. Create exactly one final PNG, retaining the first image's 16:9 dimensions, black/lime ink illustration style, layout hierarchy, pink #13 jersey, dribble concept, orange ball, and ALL Japanese wording and numbers unchanged.\n\nMake one targeted correction to the PLAYER: improve the complete framing and fidelity to the official portrait. Reduce and reposition the entire player/ball group slightly within the left 45% so that the TOP of his hair, his ENTIRE right-hand fingertips, and the ENTIRE basketball have at least 35 pixels of black background margin from the top and left canvas edges. His head should remain large and readable. It is fine to crop the thighs where they meet the footer, but the face, hair, both hands and the whole ball must be fully visible. Draw natural five-finger hands with correct anatomy. Keep his forceful crouched dribble and eye direction.\n\nMatch the second reference portrait's short tight curls (lower volume than the draft), tall oval facial shape, broad brows, almond eyes, straight nose and full lips. Keep only faint moustache and sparse short chin stubble, no thick goatee or dark jawline beard. Use obvious hand-drawn ink strokes and painted shading, not photorealistic skin; do not paste the reference photo. Do not import logos or sponsor lettering from the photo. The only jersey marking remains 13. No extra people.\n\nPreserve all wording EXACTLY, with good padding from edges and no text overlaps:\n秋田ノーザンハピネッツ\n直近5試合 0勝5敗\n得点4位でも\n失点26位\n対象：2026.11.1〜11.13\nB.PREMIER 全26チームの直近5試合を比較\n順位は1試合平均／相手の強さ・日程は未調整\nイラスト（AI生成）\n成績をもとにしたイメージ\n\nThe image is an illustrative team analysis, not a recreation of a specific actual game. All team stats come from the supplied fixed article; add no other text or numbers. Make the full ball and every hand extremity fit within the canvas.",
+    "generator": "image_gen.imagegen（内蔵）; 初回生成1回・修正1回; 採用PNG 1671×941。API/CLI生成なし。初稿はボールと指先の左端の見切れにより不採用、修正版を実見して採用。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-14T10:39:09.040835+00:00",
+  "publication_approved": false
+}

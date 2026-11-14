@@ -1,0 +1,77 @@
+{
+  "id": "3379ecab4c5d77e8e9a3",
+  "article_path": "article-stats-20261114.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261114.html",
+  "source_commit": "",
+  "source_blob_sha": "4149c06ea745ef0b54f756f5174a481e93ee1dd2",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "d0931d75fc61451f1756830831b6aabffeb9e84c857ec06d04dc3b56f683b442",
+  "last_observed_blob_sha": "4149c06ea745ef0b54f756f5174a481e93ee1dd2",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3379ecab4c5d77e8e9a3/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3379ecab4c5d77e8e9a3/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-14T10:35:11.315626+00:00",
+  "creation_event_id": "6a77a706c32f9e67e835",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/3379ecab4c5d77e8e9a3/thumbnail.png",
+  "image_sha256": "14738cde7d0acd39b05ec5eae08ca9fab737eb8850748cbbf44e689d59145590",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "4149c06ea745ef0b54f756f5174a481e93ee1dd2",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.14｜当日5試合",
+      "貢献度1位",
+      "アーロン・ホワイト",
+      "三河",
+      "EFF 49",
+      "27得点・13リバウンド",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3379ecab4c5d77e8e9a3/source.html",
+        "role": "本文の根拠（固定HTML）。見出し・lead・TOP10の1位を照合。blob SHA一致を確認。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3379ecab4c5d77e8e9a3/source.txt",
+        "role": "本文の根拠（固定文章）。11月14日当日5試合の貢献度1位、EFF49、27得点、13リバウンド。国籍別ランキング未掲載のため国籍分類・国籍別表現は使用しない。"
+      },
+      {
+        "url": "https://go-seahorses.jp/team/players/detail/id=23101?PlayerID=51000297&Year=2026",
+        "role": "公式プロフィール。容姿の参照のみ。記事の成績・内容の根拠には使用していない。"
+      },
+      {
+        "url": "https://go-seahorses.bl.kuroco-img.app/v=1789105641/files/user/team/player/2026-27/30_blue.jpg",
+        "role": "公式プロフィール掲載写真を目視で確認。容姿の参照のみ。写真を完成画像に貼り付けていない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "目視確認した承認済みスタイル参照。人物・氏名・数値・日付は転用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "アーロン・ホワイト",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿の見出し・冒頭・貢献度TOP3で1位として最も大きく扱われている。",
+        "reference_source": "https://go-seahorses.jp/team/players/detail/id=23101?PlayerID=51000297&Year=2026",
+        "reference_image": "https://go-seahorses.bl.kuroco-img.app/v=1789105641/files/user/team/player/2026-27/30_blue.jpg",
+        "observed_appearance": "ごく短い茶色の髪、高い額、長めで角のある輪郭、短い赤茶色のひげと口ひげ、右腕のタトゥーを公式写真で確認し、描画結果と比較した。",
+        "depiction": "本人の特徴を持つ手描きイラスト。青い無地のユニフォームでボールを両手に抱えるプレーのイメージ。特定の試合場面の再現ではない。チーム・リーグ・スポンサーのロゴなし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate exactly ONE finished Japanese editorial basketball thumbnail as a PNG, landscape 16:9, ideally 1792×1024 or 1920×1080, at least 1000px wide. This is a NEW illustration, not an edit or a photo collage.\n\nReference roles: the black/lime approved Culver thumbnail visible earlier is STYLE ONLY: strong Japanese typography, near-black #151A18 ground, acid lime #CCF43B broad brushstrokes, off-white ink, rough hand-painted editorial energy. Do not copy that reference person's appearance, text, scores or date. The official Aaron White portrait just viewed is LIKENESS REFERENCE ONLY. Do not paste any pixels of the photo into the output.\n\nSubject: one real basketball player, Aaron White (アーロン・ホワイト), the main subject of the supplied article. Accurately translate the official portrait's features into a hand-drawn ink/brush illustration: very short cropped brown hair, high forehead, long angular face, recognizable nose and light eyebrows, close-trimmed reddish-brown beard and mustache, fair skin, tall athletic frame. His right arm has dense tattoo patterns; his left arm is largely bare. Use a plain deep-blue basketball uniform without ANY team/sponsor/league logo, badge, lettering or jersey number. Face must be clear, expressive and recognizable in drawn form, not photorealistic.\n\nComposition: left 55% for bold legible Japanese typography and a gigantic lime number 49. Right 45% shows Aaron White alone in a dynamic three-quarter diagonal pose, twisting with an orange basketball secured in both hands around chest level as after a rebound. Show head, shoulders, torso, both elbows and both hands clearly, with the ball and fingers fully within the canvas and no collision with text. Natural hand anatomy, two arms, five fingers per hand as visible, believable ball grip. A cropped lower torso at the bottom is fine. No second player or anonymous figures. Broad sweeping lime strokes behind the player suggest motion. Keep the number and face as main visual anchors. No actual game reproduction, no arena signage, no hoop or score display.\n\nDrawn medium: bold black ink outlines, off-white and muted skin-color highlights, textured dry brush shading and lime energy strokes, like the approved editorial sample. Face should be modeled with drawn lines and restrained natural color, NOT a photo/photoreal portrait. Keep flat graphic confidence and clean readable hierarchy with generous 5% outer safe margins.\n\nExact visible text, and ONLY this text:\nSmall upper left brand: 「バスケまとめ」\nDate/scope line below: 「2026.11.14｜当日5試合」\nLarge headline: 「貢献度1位」\nPlayer name: 「アーロン・ホワイト」\nSmall affiliation near the name: 「三河」\nHuge central numeric statement: 「EFF 49」 (EFF clear and 49 dominant, must NOT label 49 as points)\nSupporting line: 「27得点・13リバウンド」\nFooter at comfortable legible size: 「イラスト（AI生成）」\nFooter alongside or beneath: 「成績をもとにしたイメージ」\n\nContent is limited to the frozen manuscript: November 14, 2026, five games that day, Aaron White of Mikawa ranked first in EFF with 49; 27 points and 13 rebounds. Not a season ranking. No other facts or numbers, no invented superlatives, no nationality label. The pose is illustrative and does not claim to depict a particular real rebound.\nEnsure Japanese characters exactly match the supplied text, no missing glyphs or truncated footer. Do not introduce any logos, watermark, photographic insert, additional names or numbers.",
+    "generator": "OpenAI built-in image_gen__imagegen（内蔵画像生成・初回1枚、修正0回）",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-14T10:48:39.892176+00:00",
+  "publication_approved": false
+}
