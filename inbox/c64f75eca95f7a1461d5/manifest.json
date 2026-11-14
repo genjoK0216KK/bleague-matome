@@ -1,0 +1,84 @@
+{
+  "id": "c64f75eca95f7a1461d5",
+  "article_path": "article-daily-20261115.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261115.html",
+  "source_commit": "",
+  "source_blob_sha": "e8fa0279dbc1d5fc472f6f5e14601d2ad1a52667",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "9e560f3a3efcfa2ec3db1d3986aaf7c241712c5899d7e1ea7f28118775a508c7",
+  "last_observed_blob_sha": "e8fa0279dbc1d5fc472f6f5e14601d2ad1a52667",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c64f75eca95f7a1461d5/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c64f75eca95f7a1461d5/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-14T23:18:27.857973+00:00",
+  "creation_event_id": "9f93dd8aaedd8d08a1e3",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/c64f75eca95f7a1461d5/thumbnail.png",
+  "image_sha256": "2b7be47a242812bb990586ec4c670ac31ad490a0056c59ebf1e3f9e59f1ba8ee",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "e8fa0279dbc1d5fc472f6f5e14601d2ad1a52667",
+    "text_lines": [
+      "バスケまとめ",
+      "11/14 試合結果",
+      "A東京 勝利",
+      "3P 21本",
+      "ホグ 30得点",
+      "A東京 99–83 広島",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c64f75eca95f7a1461d5/source.html",
+        "role": "本文・見出し・試合日・数値の固定版根拠",
+        "article_url": "https://basuke-matome.jp/article-daily-20261115.html",
+        "source_blob_sha": "e8fa0279dbc1d5fc472f6f5e14601d2ad1a52667"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c64f75eca95f7a1461d5/source.txt",
+        "role": "固定本文の読み取りと照合",
+        "facts": [
+          "試合日は11月14日（記事掲載日は11月15日）",
+          "A東京が広島に99対83で勝利",
+          "A東京の3ポイント成功21本",
+          "ディー・ジェイ・ホグ選手30得点"
+        ],
+        "qualifiers": "固定本文に掲載された試合後の結果。絵は特定の実際の試合場面の再現ではなく、成績をもとにしたイメージ。外部資料は容姿確認のみで、本文の数値や内容の根拠には使用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ディー・ジェイ・ホグ（D.J. Hogg）",
+        "selection": "本文の主役",
+        "selection_reason": "勝利したA東京で本文が最も詳しく扱う選手。30得点・3P8本成功・7リバウンドの記述がある。",
+        "source": "アルバルク東京公式 選手紹介",
+        "url": "https://www.alvark-tokyo.jp/player_lp/dj_hogg/",
+        "photo_urls": [
+          "https://alvark-tokyo.bl.kuroco-img.app/v=1789441913/files/user/_/player_lp/2026-27/dj_hogg/images/kv_sp.jpg",
+          "https://alvark-tokyo.bl.kuroco-img.app/v=1789441914/files/user/_/player_lp/2026-27/dj_hogg/images/bg_section_01_sp.jpg"
+        ],
+        "reference_usage": "公式写真を実際に目視し、短い濃茶の巻き髪、眉、目鼻、輪郭、短く整えたひげ、体格をイラスト化。写真を画像へ貼り付けていない。プレー姿はイメージ。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset type: Japanese basketball news thumbnail, single finished PNG, landscape 16:9, 1920 x 1080 or comparable resolution above 1000 pixels wide.\nCreate exactly one original editorial sports illustration for バスケまとめ. Match the approved visual style already viewed: almost-black #151A18 background, vivid lime #CCF43B brush strokes, warm ivory typography, rough hand-inked brush illustration, sparse visual elements, bold highly legible Japanese headlines. This is a new design with a different composition from the reference.\n\nSubject: exactly ONE real basketball player, D.J. Hogg (ディー・ジェイ・ホグ), selected as the primary player in the supplied article, not a fictional player. His appearance was verified in the official Alvark Tokyo profile photos at https://www.alvark-tokyo.jp/player_lp/dj_hogg/ . Draw the observed features faithfully in an unmistakably hand-drawn ink illustration: short dark brown tight curly hair with close-cut sides, broad forehead, thick dark eyebrows, dark eyes, straight substantial nose, oval-to-square face with rounded strong jaw, neatly trimmed short full beard and moustache, medium-light warm tan skin, very tall athletic frame and broad shoulders. Render his facial features clearly with ivory, gray, black and restrained warm skin tones; do not bury the face in black silhouette. Do not copy the player from the approved style sample.\n\nPose and composition: Place Hogg on the LEFT 42 percent in an active three-quarter shooting-gather pose, torso turning slightly toward upper right, knees bent, one orange basketball securely cupped in both hands near his upper chest as he raises it to shoot. His face is unobstructed and focused toward the basket off frame. Both hands are anatomically coherent with five fingers each, natural wrists and elbows. Ball, head, hands and elbows remain completely inside the image, with a safe margin. Show head to mid-thigh with deliberate lower-body crop above the bottom caption band. He wears a plain dark sleeveless basketball jersey with subtle red piping, no words, numbers, emblems or logos. It is an imagined basketball action, NOT a reconstruction of a particular actual shot or game photograph. No opponent, no extra athletes, no crowd faces, no photorealism. Add one energetic diagonal lime brush swipe behind the player.\n\nTypography layout: reserve the RIGHT 55 percent for a clear editorial type hierarchy. Keep text off the player's face, arms, hands and ball. All text is clean, accurate Japanese, not cursive, using a heavy condensed Gothic headline style. Small brand and match-date line across upper left, large victory headline on the right, the biggest accent number is 21 for the TEAM three-point total. Make the TEAM attribution explicit in the title so that 21 three-pointers is not attributed to Hogg. A smaller supporting line names Hogg's individual points. A clear bottom score strip separates the two team labels and score. Footer annotation must be readable on a quiet dark area, not clipped.\n\nText to render exactly, with no added words:\n\"バスケまとめ\"\n\"11/14 試合結果\"\n\"A東京 勝利\"\n\"3P 21本\"\n\"ホグ 30得点\"\n\"A東京 99–83 広島\"\n\"イラスト（AI生成）\"\n\"成績をもとにしたイメージ\"\n\nArticle facts, solely from the provided fixed source.html and source.txt: November 14 Alvark Tokyo beat Hiroshima 99–83; A Tokyo made 21 three-pointers; D.J. Hogg scored 30 points. Do not add any other scores, statistics, rankings, superlatives, record claims or player accomplishments. Do not imply that the pictured pose depicts an identified real scoring moment.\n\nConstraints: completely original drawn artwork only. No official photograph pasted into the design, no photographic skin rendering, no team/league/sponsor logos, no brand marks on the uniform or ball, no watermarks, no decorative fake writing, no factual text carried over from the style reference. Keep all type within at least 55px safe margins at 1920px width. Professional restrained news graphic, strong contrast, readable at thumbnail scale. Output one opaque PNG.",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "revision_calls": 0,
+      "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "style_reference_viewed": true,
+      "output_file": "generated.png"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-14T23:21:14.955456+00:00",
+  "publication_approved": false
+}

@@ -1,0 +1,90 @@
+{
+  "id": "d4f970a69e56b5bc2281",
+  "article_path": "article-games-20261114.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261114.html",
+  "source_commit": "",
+  "source_blob_sha": "27797b06f03949d770636b8b50051a432e6405dd",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "4c47ced2c1c68ca6b884300344517eb9e52855599df94ebe6d9b5b326f9c1557",
+  "last_observed_blob_sha": "27797b06f03949d770636b8b50051a432e6405dd",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d4f970a69e56b5bc2281/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d4f970a69e56b5bc2281/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-14T23:18:28.105528+00:00",
+  "creation_event_id": "37d740938e01d8f52040",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/d4f970a69e56b5bc2281/thumbnail.png",
+  "image_sha256": "4af7d76a2ddd2585c17b3693cbb6061b279bb546e97528686667b8436e8e0ca7",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "27797b06f03949d770636b8b50051a432e6405dd",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.14",
+      "試合結果",
+      "当日のEFF",
+      "リーグ別・ポジション別TOP3",
+      "B.PREMIER / B.ONE",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d4f970a69e56b5bc2281/source.html",
+        "note": "本文の根拠。ローカルでblob SHA一致を確認。外部記事・関連記事は本文根拠に使用しない。"
+      },
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d4f970a69e56b5bc2281/source.txt",
+        "note": "2026年11月14日の試合結果と当日の公式EFF。リーグ別・公式登録ポジション別TOP3。同率あり、兼任は各部門対象。B.NEXTは試合なし。資料取得2026-11-15 08:08〜08:11 JST。個人成績を画像に転記しない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "view_imageで目視。黒・ライム、太い見出し、インク・ブラシの表現のみ参照。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "游 艾喆（Ai-Che Yu）",
+        "selection": "ランダム",
+        "selection_reason": "複数試合・ポジションの選手を並列に扱う記事で、特定の主役に絞れないため本文の表に掲載された実在選手25人から抽選。",
+        "selection_method": "source.htmlのstrong要素から日本語を含む選手名を抽出し、出現順に重複除去。Python random.Random('d4f970a69e56b5bc2281').choice(names)。",
+        "reference_url": "https://shigalakes.com/team/players/detail/id=20163?PlayerID=51000382&Year=144",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026111508/files/user/roster/698/2026-27/51000382_01.jpg",
+        "appearance_reviewed": true,
+        "appearance": "公式プロフィール写真をダウンロードしview_imageで確認。中央分けで量感のある黒髪、黒いヘッドバンド、やや縦長の輪郭、張りのある頬・耳、濃い眉、ひげなし。写真は成果物へ貼り付けない。",
+        "use_scope": "容姿のみ。氏名・個人成績・出場・活躍は画像内に記載しない。実際の試合場面の再現ではない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate ONE finished editorial thumbnail for the Japanese basketball site バスケまとめ. New composition, landscape 16:9, 1920x1080 or 2048x1152, opaque PNG.\nArt direction: match the previously inspected approved B-culver-black-lime-v3 style: deep near-black #151A18, vivid lime #CCF43B, ivory-white, coarse hand-drawn black ink, vigorous dry-brush hatching and a few broad lime paint strokes. Graphic print illustration, clearly hand illustrated, never photographic. Strong, extra-bold and perfectly readable Japanese typography. Sparse, confident composition. Do NOT copy the reference's names, numbers, date or score.\nSubject: exactly ONE real basketball player, Ai-Che Yu / 游 艾喆, selected randomly from the article's listed players. Depict his recognizable appearance as observed in the official Shiga Lakes / B.LEAGUE profile portrait: youthful clean-shaven face, elongated oval face tapering to a rounded chin, straight dark eyebrows, alert almond-shaped dark eyes, straight nose, moderately full lips, slightly prominent ears, thick black wavy center-parted hair with parted fringe and volume over a narrow plain black headband. No beard or moustache. Lean athletic build with muscular shoulders. Official portrait is for identifying appearance ONLY; redraw from scratch in ink and brush, do not paste or reproduce the photograph.\nAction/composition: put the player in the LEFT 43 percent of the canvas, in a dynamic low driving pivot, torso leaning diagonally forward, bent knees suggested, one arm controlling a single orange basketball at waist height and the other bent naturally for balance. Face is unobscured in three-quarter view, eyes looking ahead. Show head, shoulders, both hands and the whole ball safely inside the canvas. Do not crop the fingers, head or ball; crop only below the thighs if needed. Anatomically coherent shoulders, elbows, wrists and five fingers on each hand, correct finger contact with ball. Ink-rendered plain sleeveless ivory and charcoal basketball uniform with no letters, numbers, logos or sponsors. Use the ball only as the player's prop.\nLayout: typography on the RIGHT 53 percent, solid dark negative space behind words. One diagonal lime brush stroke behind the player and a short lime underline are enough. No busy arena, no spectators, no extra player, no dashboard or score box. Keep a generous 5 percent safe margin around all text, head and ball.\nExact text, all Japanese legible and spelled verbatim, with no other text:\nSmall masthead near top right: 「バスケまとめ」\nSmall date beneath masthead: 「2026.11.14」\nLargest bold ivory headline on right: 「試合結果」\nNext very large lime headline: 「当日のEFF」\nMedium bold ivory subheading: 「リーグ別・ポジション別TOP3」\nSmall supporting scope line: 「B.PREMIER / B.ONE」\nClear small ivory footer across lower margin, on dark unobstructed background: 「イラスト（AI生成）」 and 「イメージ」\nSource meaning: this article covers November 14 match results and same-day official EFF position rankings by league. The illustrated athlete is a randomly selected illustrative subject, NOT a featured performance claim. Do not write his name, any personal score or rank, or any claim of his participation or achievement. Do not invent a real match moment, score, opponent, winning shot or season average. The drawing is a generic basketball play image, not reconstruction of a documented game.\nAvoid: league logos, team logos, sponsor marks, official-photo collage, photorealism, signature, watermark, extra text, named player labels, extra balls, malformed hands, cut-off text.\n\n--- 修正1回目（最終候補） ---\nEdit the FIRST input image, the generated basketball thumbnail. The SECOND input image is the OFFICIAL identity reference portrait of Ai-Che Yu / 游 艾喆; it is reference only and must never be pasted into the output.\nMake one final correction to the first image. Preserve the black #151A18 and lime #CCF43B rough ink-and-brush style, the single player's dynamic low driving pose with orange basketball on the left, and ALL existing text verbatim. Preserve a 16:9 wide canvas with resolution at least 1920x1080 (prefer 2048x1152).\n1. Fix crop and safe margins: reduce the illustrated player proportionately and move him slightly right and down so the COMPLETE hair silhouette, the complete ball and both COMPLETE hands and all fingertips fit comfortably inside the canvas. At least 55px padding from canvas edges for head, fingers, ball and text on a 1920px-wide canvas. The head currently touches the upper edge and the ball hand touches the left edge: eliminate this. Only the lower thighs may continue below the canvas. Do not add any new person.\n2. Improve the drawn likeness by carefully matching the second reference. He has fairly straight softly waved center-parted black curtain hair with a modest fluffy fringe, NOT tall curls or an enormous mass of hair. The plain black headband remains. Use the second image's genuine adult face proportions: straight eyebrows, natural-sized dark eyes (smaller and less anime-like than draft), straight nose, slightly longer oval face and rounded chin, natural lips, visible ears, no facial hair. Keep everything hand-drawn in black ink with visible hatching; do not use any photo pixels. The reference's blue jersey, text, logos and number MUST NOT appear: retain the draft's blank ivory and charcoal sleeveless jersey.\n3. Keep the right-side wording, hierarchy and legibility, but shift/scale the entire type area just enough to keep a 55px right safe margin. Keep the label strip clear.\nExact text to preserve:\nバスケまとめ\n2026.11.14\n試合結果\n当日のEFF\nリーグ別・ポジション別TOP3\nB.PREMIER / B.ONE\nイラスト（AI生成）\nイメージ\nDo not add names, jersey numbers, personal statistics, logos, sponsors, trophies, scoreboards or claims of an actual game scene. Maintain anatomically normal arms and five fingers per hand. The athlete is a randomly selected illustration of basketball; this is not an actual match reconstruction. Output exactly one finished opaque PNG.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "attempts": 2,
+      "corrections": 1,
+      "status": "passed",
+      "image_path": "/Users/genjo/.codex/generated_images/01a1dc5d-763c-7c72-aa39-8ed0d797717a/exec-ed34831c-3d7b-48ad-bd35-a3026d04acdc.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "4af7d76a2ddd2585c17b3693cbb6061b279bb546e97528686667b8436e8e0ca7",
+      "qa_evidence": {
+        "text_and_numbers": "最終生成画像を目視。全8行が指定内容と一致。日付2026.11.14、TOP3、B.PREMIER / B.ONEを確認。氏名・個人成績・試合スコアの記載なし。",
+        "source_qualifiers": "当日のEFF、リーグ別・ポジション別TOP3と表示。今季平均・総合順位・当日起用位置への読み替えなし。B.NEXTは対象表示に含めない。イメージ注記あり、実在場面・個人活躍の断定なし。",
+        "likeness_or_no_named_person": "公式プロフィール写真と最終イラストを目視比較。游艾喆の中央分けの黒髪、黒ヘッドバンド、濃い眉、縦長の輪郭、鼻・口・耳の特徴、ひげなしを確認。実在選手1人。写真貼付・ロゴなし。",
+        "layout": "初稿は頭部・手が画面端に近いため1回修正。最終画像では髪、両手、5本ずつの指、ボールと全テキストが画面内。文字と人物の重なりなし。見出しと注記が読める。下端は意図した腿のトリミングのみ。",
+        "ai_label": "イラスト（AI生成）とイメージが最終画像下部に判読可能な状態で表示。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-14T23:25:05.199915+00:00",
+  "publication_approved": false
+}

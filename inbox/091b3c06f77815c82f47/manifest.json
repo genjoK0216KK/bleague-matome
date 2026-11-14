@@ -1,0 +1,97 @@
+{
+  "id": "091b3c06f77815c82f47",
+  "article_path": "article-results-one-next-20261114.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261114.html",
+  "source_commit": "",
+  "source_blob_sha": "759c2388982749e84ec0e0a8b7aa6853bfcce0fd",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "4c47ced2c1c68ca6b884300344517eb9e52855599df94ebe6d9b5b326f9c1557",
+  "last_observed_blob_sha": "759c2388982749e84ec0e0a8b7aa6853bfcce0fd",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/091b3c06f77815c82f47/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/091b3c06f77815c82f47/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-14T23:18:28.351590+00:00",
+  "creation_event_id": "7cdf5b27be30d17e4093",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/091b3c06f77815c82f47/thumbnail.png",
+  "image_sha256": "f4a681d5e5c6912dfd0c6085fc0687a537e833f594f9482c80933e076e8267c7",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "759c2388982749e84ec0e0a8b7aa6853bfcce0fd",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.14",
+      "試合結果",
+      "当日のEFF",
+      "リーグ別・ポジション別 TOP3",
+      "B.PREMIER / B.ONE",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/091b3c06f77815c82f47/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261114.html",
+        "source_blob_sha": "759c2388982749e84ec0e0a8b7aa6853bfcce0fd",
+        "use": "本文内容の根拠。ライブ記事は取得せず、固定HTMLから見出し・日付・対象リーグ・リーグ別かつポジション別TOP3の範囲を確認。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/091b3c06f77815c82f47/source.txt",
+        "use": "本文内容の根拠。11/14の試合結果、当日の公式EFF、B.NEXTは試合なし、今季平均ではないことを確認。個人成績やスコアは画像に掲載しない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで実見。黒×ライム、太字日本語、手描きインクとブラシのみ参照。参照画像の選手・数字・日付は転用しない。"
+      },
+      {
+        "type": "production_rules",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "use": "画像生成・検品ルール。人物の選出と注記は今回の本人指示を優先。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "クリストファー・スミス",
+        "selection": "ランダム",
+        "selection_reason": "記事は複数試合と複数部門の一覧で、単独の主役を絞れないため。",
+        "selection_method": "固定HTMLのTOP3表に登場する重複除外25選手から、Python random.Random(\"091b3c06f77815c82f47\").choice(names)で1人を抽出。候補は本文の登場順。",
+        "source": "広島ドラゴンフライズ公式プロフィール",
+        "url": "https://hiroshimadragonflies.com/team/players/detail/id=21083?PlayerID=5100000055",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026111508/files/user/roster/721/2026-27/5100000055_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/091b3c06f77815c82f47/reference/christopher-smith-official.jpg",
+        "observed_features": "公式プロフィール写真をview_imageで実見。後方へ編まれたコーンロウ、短い側頭部、縦長の輪郭、頬骨、目元、鼻、厚めの唇、短い口ひげと顎ひげをイラストで表現。",
+        "use_limits": "外部資料は人物の同一性と容姿の参照だけに使用。公式写真を完成画像に貼り付けない。一般的なドリブルのイメージで、当日の実場面を再現したものではない。画像には選手名・背番号・個人成績・出場や活躍の文言を入れない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: ads-marketing / editorial sports illustration.\nCreate exactly ONE finished Japanese basketball article thumbnail as a new image, landscape 16:9, ideally 1600 x 900 pixels, at least 1000 pixels wide.\n\nUse the approved black-and-lime basketball artwork shown earlier as a STYLE reference only: near-black #151A18 background, electric lime #CCF43B, off-white lettering, bold Japanese typography, handmade ink and dry-brush strokes, energetic but minimal editorial composition. Do not reuse Culver, his name, the number 38, old dates or old scores.\n\nMain subject: ONE real basketball player, Christopher Smith (クリストファー・スミス), illustrated from the official head-and-torso portrait shown earlier. He was randomly selected from the names in this article, so his name, number, personal statistics, ranking or claim of participation must NOT appear in the image. Preserve recognizable observed appearance: tightly braided black cornrows running backward close to the scalp, clipped short sides, medium-brown skin represented through warm grayscale ink shading, elongated oval face with prominent cheekbones, slightly heavy-lidded dark eyes, straight broad nose, full closed lips, neatly trimmed thin moustache connecting to a short jawline beard and small chin goatee. Muscular tall athlete with strong shoulders, subtle abstract ink tattoo patterns on upper arms. This must be recognizably this real person, not a generic fictional player. Keep the face clearly legible and not obscured in black.\n\nIllustrate Smith on the RIGHT in an energetic low dribble drive, torso leaning forward diagonally, knees bent, head looking ahead to the left, right hand naturally spread above the orange basketball at knee/hip height, left arm bent naturally for balance. Show head to knees, intentional lower-leg crop allowed, ball fully inside the frame and both hands readable with correct anatomy and five fingers. Plain off-white basketball uniform with dark ink folds and minimal lime trim, plain dark forearm compression sleeve on right arm. No jersey lettering or number, no team or sponsor marks. Use entirely newly drawn ink illustration, NEVER paste official photography, NEVER photorealistic. Do not reproduce a specific actual game, shot, victory or documented match moment. This is only a general basketball action image. No other people.\n\nComposition: large headline text on LEFT occupying about 55%, player on RIGHT about 45%, with one broad diagonal lime brush stroke behind the figure. Black background and open breathing room around the text. Minimal elements, strong contrast, no charts, no scoreboards, no crowds, no team or league logos. Use typographic hierarchy and a restrained underline brush to make it engaging.\n\nRender ONLY the following exact text, cleanly and correctly:\nTop left small masthead: 「バスケまとめ」\nBelow masthead small date: 「2026.11.14」\nLeft main headline very large off-white: 「試合結果」\nLeft second headline very large lime: 「当日のEFF」\nBelow headline in off-white, medium bold: 「リーグ別・ポジション別 TOP3」\nBelow that in off-white, smaller: 「B.PREMIER / B.ONE」\nBottom left footer, clearly readable with safe margin: 「イラスト（AI生成）」\nFooter adjacent: 「イメージ」\n\nArticle context for text only: fixed manuscript covers 2026-11-14 game results and that day's official EFF top-three lists for each league and registered position. It is not a season-average comparison or overall league top three. B.NEXT had no games and is not included in the heading's league scope. Do not add personal names, scores, points, rankings, win claims, unstated claims or any extra words. The subtitle must visibly preserve BOTH league and position scope. Keep all Japanese text, footer, face, hands and basketball inside safe margins. The result should be a polished bold ink-and-brush illustrated thumbnail matching the approved style, not a poster with photographic elements.\n\n\nONE PERMITTED CORRECTION\nEdit this thumbnail only to fix the framing of the illustrated player and basketball. Preserve the exact same 16:9 canvas, black-and-lime ink brush style, ALL Japanese and English text exactly unchanged, and the same real-person identity, cornrow hairstyle, facial features, clothing and dribbling pose.\n\nThe orange ball is currently clipped by the bottom edge and the top of the hair is too close to the top edge. Reduce the entire right-side illustration of the player AND ball to about 85% of its current size and position it on the right so that there is at least 35 pixels of dark background above the entire head/hair and at least 40 pixels below the FULL circular ball. The ball must be fully visible. Both hands must remain anatomically correct, each with five fingers, and completely within the canvas. It is okay to intentionally crop lower legs below the knees at the bottom; do not crop the ball, head or hands. Keep the text on the left exactly as it is, in the same locations and sizes. Do not add, delete or rewrite any text. Preserve the legible footer 「イラスト（AI生成）」 and 「イメージ」. No logos, names, uniform numbers or photorealism. Make only this framing correction.\n",
+    "generator": "Built-in image_gen.imagegen; 1 initial generation + 1 framing correction; no API/CLI fallback",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    },
+    "qa_notes": {
+      "text_and_numbers": "修正版の画像を実際に目視。全8行の文字、2026.11.14、EFF、TOP3、B.PREMIER / B.ONEを確認。余分な得点・スコア・選手名・背番号なし。",
+      "source_qualifiers": "当日のEFF、リーグ別・ポジション別TOP3の範囲を画像で確認。今季平均、総合TOP3、特定選手の活躍の表現なし。イメージ表記あり。",
+      "likeness_or_no_named_person": "実在のクリストファー・スミス1人。公式写真と比較し、編み込んだ髪、輪郭、目鼻、短いひげの特徴を確認。写真風でなくインクのイラスト。",
+      "layout": "初稿はボール下端が見切れたため不採用。1回の修正後、ボール全体、頭部、両手、各5本の指、文字が画面内に収まることを目視。人物は膝下を意図的にトリミングした構図。チーム・リーグ・スポンサーのロゴなし。",
+      "ai_label": "画像左下の「イラスト（AI生成）」「イメージ」を目視確認。"
+    },
+    "output": {
+      "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/091b3c06f77815c82f47/generated.png",
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "sha256": "f4a681d5e5c6912dfd0c6085fc0687a537e833f594f9482c80933e076e8267c7",
+      "corrections": 1,
+      "status": "qa_passed_local_saved"
+    }
+  },
+  "prepared_at": "2026-11-14T23:28:53.430515+00:00",
+  "publication_approved": false
+}
