@@ -1372,6 +1372,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "11/14 試合結果・当日のEFF"
   },
+  "article-games-20261115.html": {
+   "article_path": "article-games-20261115.html",
+   "editorial_fingerprint": "f0048498b0d3a3155b244ed85c7bc0c80cdc362a479937ccc58185337b06950a",
+   "files": {
+    "eyecatch": {
+     "height": 731,
+     "path": "thumbs/auto/article-games-20261115-df26dd788f36.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-games-20261115-df26dd788f36-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "3d2cc96fb28fa98a36d8",
+   "image_sha256": "df26dd788f36ceaeac2bb4cb5d54fa6e8d54508b6f10deb14a552017cf488f0b",
+   "imported_at": "2026-11-14T15:11:19.632673+00:00",
+   "prepared_at": "2026-11-14T15:10:45.628871+00:00",
+   "source_blob_sha": "4775c52ebf6cb01c36632be5d42689d6ff38493a",
+   "source_size": [
+    1659,
+    948
+   ],
+   "stable_fingerprint": "f0048498b0d3a3155b244ed85c7bc0c80cdc362a479937ccc58185337b06950a",
+   "style": "ink-lime-portrait-v5",
+   "title": "11/15 出場予定選手（登録選手）のベスト5"
+  },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
    "editorial_fingerprint": "e19b14f8f8d94cccdae186da2df34e0edfdbee28d446a577722d48f470c2eea5",
@@ -2215,13 +2243,6 @@
  },
  "log": [
   {
-   "article": "article-stats-20261108.html",
-   "at": "2026-11-08T12:24:37.736907+00:00",
-   "event": "imported",
-   "id": "ac4bba000a13d2fa8138",
-   "image": "6967a28fde6d"
-  },
-  {
    "article": "article-games-20261109.html",
    "at": "2026-11-08T16:00:08.532312+00:00",
    "event": "imported",
@@ -2773,6 +2794,13 @@
    "event": "imported",
    "id": "fe95cf5603af40345d87",
    "image": "417d3423a72f"
+  },
+  {
+   "article": "article-games-20261115.html",
+   "at": "2026-11-14T15:11:19.632697+00:00",
+   "event": "imported",
+   "id": "3d2cc96fb28fa98a36d8",
+   "image": "df26dd788f36"
   }
  ],
  "seen": {
@@ -2812,6 +2840,7 @@
   "39075cc4edcf56d9d90d": "superseded:a9d34f9ead8bbf40b841",
   "3955308615847dff3136": "superseded:9f2558d6277a776ef982",
   "3d20be125ac18075c9b0": "superseded:9f2558d6277a776ef982",
+  "3d2cc96fb28fa98a36d8": "imported",
   "4189dc16f9911ba2f676": "superseded:2e911924d887d6fdf34a",
   "4367b17c7960b99cb3ea": "superseded:ca69b5d16263483eb1ed",
   "44da7637029692ee5a53": "superseded:a718e72ebd289b318965",
