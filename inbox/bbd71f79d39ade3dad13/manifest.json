@@ -1,0 +1,75 @@
+{
+  "id": "bbd71f79d39ade3dad13",
+  "article_path": "article-games-20261115.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261115.html",
+  "source_commit": "",
+  "source_blob_sha": "77b7da3823206d01874fc2e5417021ceed8ecf33",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "2526dd42d7b7bce397bbfabb0460051ae2769cccb93466a907f087543888766e",
+  "last_observed_blob_sha": "77b7da3823206d01874fc2e5417021ceed8ecf33",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/bbd71f79d39ade3dad13/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/bbd71f79d39ade3dad13/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-15T13:08:11.539044+00:00",
+  "creation_event_id": "79d215ccbb9de2eb0a23",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/bbd71f79d39ade3dad13/thumbnail.png",
+  "image_sha256": "d9e39e96bc523d3c13a28f9f104a512f229966be976dd5b78eebe97d5336172d",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "77b7da3823206d01874fc2e5417021ceed8ecf33",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.15",
+      "試合結果",
+      "当日のEFF",
+      "リーグ別・ポジション別TOP3",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "path": "source.html",
+        "role": "固定本文・記事タイトル・日付・当日の公式EFF選出範囲の唯一の本文根拠"
+      },
+      {
+        "path": "source.txt",
+        "role": "固定本文の文章による照合"
+      },
+      {
+        "url": "https://www.sunrockers.jp/lp/josh-hawkinson/",
+        "role": "容姿のみを参照した公式選手プロフィール。記事の内容・成績の根拠には使用しない"
+      },
+      {
+        "url": "https://sunrockers.bl.kuroco-img.app/v=1789703093/files/user/26-27_SEASON/lp/players/img/josh_profile_img01.png",
+        "role": "公式プロフィール画像をview_imageで目視。写真の貼付・転載なし"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイル参照。文字・選手名・成績は継承しない"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジョシュ・ホーキンソン",
+        "selection": "ランダム",
+        "selection_reason": "全日の複数試合・部門別TOP3記事で単独主役を絞れないため、本文の順位表に名前が出る25選手から選択",
+        "selection_method": "Python random.Random('bbd71f79d39ade3dad13').choice(固定HTMLの順位表内strong要素から出現順に重複排除した選手名25件)",
+        "official_profile": "https://www.sunrockers.jp/lp/josh-hawkinson/",
+        "official_image": "https://sunrockers.bl.kuroco-img.app/v=1789703093/files/user/26-27_SEASON/lp/players/img/josh_profile_img01.png",
+        "visually_observed_features": "短い茶髪、短く刈った側頭部、後ろと横へ流したトップ、広い額、青い目、真っ直ぐな鼻、縦長で顎のしっかりした輪郭、薄い口ひげと顎の無精ひげ、長身で厚みのある体格",
+        "depiction": "ボールを両手で保持して体をひねるプレー姿のイラスト。実際の試合場面の再現ではない。画像内に選手名・個人成績・出場活躍の文言を入れない"
+      }
+    ],
+    "prompt": "Use case: ads-marketing\nAsset type: one Japanese basketball editorial article thumbnail, PNG, landscape 16:9, 1536 x 864 or larger.\nCreate exactly ONE finished thumbnail for バスケまとめ. Use the approved visual language visible in the black/lime reference: near-black #151A18, acid lime #CCF43B, warm ivory, energetic hand-drawn ink strokes and dry-brush texture, very bold readable Japanese typography, few elements. A small orange basketball is the only additional saturated color.\n\nSubject: exactly one REAL basketball player, Josh Hawkinson (ジョシュ・ホーキンソン), in an energetic imagined basketball play. His current official club profile was visually inspected: light skin, tall athletic strong build, elongated rectangular face with broad square chin, straight prominent nose, blue eyes under straight strong brows, short brown hair with close faded sides and the longer top swept neatly back and sideways, visible forehead, nearly clean shaven with only faint moustache/chin stubble. Preserve those distinctive facial traits in a clearly hand-inked illustration. Do NOT substitute a generic athlete. Draw his face large enough to recognize, in three-quarter view looking towards the ball. This is an illustrative imagined movement, NOT reconstruction or evidence of a specific real game moment.\n\nComposition: a dynamic single-player pivot with a basketball held securely with both hands near the outside shoulder, torso twisted and knees bent, positioned on the RIGHT 45 percent. The head, both hands and the entire ball must be comfortably inside the frame; show the torso and upper legs, with intentional thigh-level lower crop. Natural anatomy and distinct plausible fingers, exactly two arms and two hands. Use a plain dark basketball uniform with ivory highlights, no words, logos, brand marks, team insignia or jersey number. Player mainly ivory/charcoal ink rendering with subtle natural face shading, NOT a photograph and NOT photorealistic. Use a sweeping lime brush arc behind him to convey movement, different from the overhead shot of the sample. No other person, no scoreboard, no fabricated venue, no hoop required.\n\nText on LEFT 55 percent, professionally arranged as a compact editorial hierarchy, with generous safe margins and no interference from the player. All text must be crisp, large, correctly spelled Japanese. Exact text and line hierarchy:\nsmall masthead: 「バスケまとめ」\ndate label: 「2026.11.15」\nhuge main headline: 「試合結果」\nlarge second headline in lime: 「当日のEFF」\nsmaller scope line: 「リーグ別・ポジション別TOP3」\nsmall footer, still clearly readable: 「イラスト（AI生成）｜イメージ」\n\nThose are the ONLY words or numerals in the image. Do not draw any quote brackets. Do not add the player's name, team name, personal scoring stats, player ranking, performance claim, scoreline or any inherited text/numbers from the sample. The date is the article date; TOP3 describes the article's league-by-league, position-by-position daily official EFF tables, not a claim about the featured randomly chosen player. The exact footer is mandatory. No league or team logos, no sponsor letters, no official photo pasted into the output, no watermark. Keep the result visually compelling at thumbnail size.",
+    "generator": "image_gen (built-in image_gen__imagegen)",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-15T13:11:08.571713+00:00",
+  "publication_approved": false
+}

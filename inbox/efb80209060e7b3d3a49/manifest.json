@@ -1,0 +1,84 @@
+{
+  "id": "efb80209060e7b3d3a49",
+  "article_path": "article-stats-20261115.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261115.html",
+  "source_commit": "",
+  "source_blob_sha": "ff4cf022b0ab8500e65fb8ab5421aaa6c8d19b54",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "5f073d50f1e335221174d56740ec0d8003cd1114783a785262aed789915da99d",
+  "last_observed_blob_sha": "ff4cf022b0ab8500e65fb8ab5421aaa6c8d19b54",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/efb80209060e7b3d3a49/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/efb80209060e7b3d3a49/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-15T13:08:12.060526+00:00",
+  "creation_event_id": "def93725a9011de0e44b",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/efb80209060e7b3d3a49/thumbnail.png",
+  "image_sha256": "5a6a36a4c476916d45358cb54bba6b76001aa103f64aed8a42dfc132c8f98e5b",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "ff4cf022b0ab8500e65fb8ab5421aaa6c8d19b54",
+    "text_lines": [
+      "2026.11.15｜4試合",
+      "貢献度1位",
+      "EFF 38",
+      "デクスター・デニス",
+      "島根｜37得点",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/efb80209060e7b3d3a49/source.html",
+        "article_url": "https://basuke-matome.jp/article-stats-20261115.html",
+        "evidence": "固定HTMLの見出し・導入文・貢献度TOP3・TOP10第1行。2026年11月15日の4試合、デクスター・デニス（島根）が貢献度1位、EFF 38、37得点。ファイルのblob SHAを標準SHA-1計算で照合済み（gitコマンド未使用）。"
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/efb80209060e7b3d3a49/source.txt",
+        "evidence": "固定文章でも日付・対象4試合・選手名・所属・貢献度順位・EFF・得点を照合。国籍別ランキングは未掲載という留保に反する国籍の分類・順位は画像に追加していない。"
+      },
+      {
+        "role": "appearance_reference_only",
+        "url": "https://www.susanoo-m.com/lp_page/roster202627_09",
+        "image_url": "https://www.susanoo-m.com/files/user/lp09/images/202627lineup/09B8gMts/main_dexter.jpg",
+        "evidence": "島根スサノオマジック公式のデクスター・デニス選手プロフィール画像を取得して目視。容姿のみ参照し、外部ページの成績は画像内容の根拠にしていない。写真やロゴは完成画像へ貼り付けていない。"
+      },
+      {
+        "role": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "evidence": "view_imageで確認。黒×ライム、太い日本語、インク・ブラシ表現を参照。参照画像の選手名・日付・成績は持ち越していない。"
+      },
+      {
+        "role": "production_rules",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "evidence": "本人の今回指示を優先。内蔵生成1回、修正0回。完成PNGを目視し文字・数値・留保・顔の特徴・手・ボール・見切れ・AI注記を確認。実寸1672×941px、約16:9。ready・公開・外部送信は実施していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "デクスター・デニス",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿のタイトル・導入文で最大に扱われる貢献度1位の選手。",
+        "source": "島根スサノオマジック公式 2026-27 SEASON 選手プロフィール",
+        "url": "https://www.susanoo-m.com/lp_page/roster202627_09",
+        "image_url": "https://www.susanoo-m.com/files/user/lp09/images/202627lineup/09B8gMts/main_dexter.jpg",
+        "observed_features": "短いツイスト状の髪と刈り上げた側頭部、角張った輪郭と顎、太い眉、目鼻、口ひげ・顎ひげを公式画像で確認し、描画結果と目視比較。",
+        "depiction": "ボールを保持して前へ踏み込むプレー姿のイラスト。特定の実際の試合場面の再現ではなく、成績をもとにしたイメージと画像内に明記。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate exactly ONE finished Japanese editorial basketball thumbnail for バスケまとめ, as a PNG, 1600×900 pixels, landscape 16:9, no border.\n\nContent basis: the supplied fixed article is about the November 15, 2026 contribution (EFF) rankings across that day's four games. Dexter Dennis of Shimane is #1 with EFF 38 and scored 37 points. Do not confuse EFF 38 with 38 points.\n\nStyle: approved editorial sports artwork, deep near-black #151A18 background, acidic lime #CCF43B dry-brush sweeps, warm ivory large bold Japanese typography. Bold hand-drawn black ink contours, brush shading, rough paper grain, limited shapes, forceful composition. Clearly an illustration, never photographic or a photo collage. A few orange accents only on the ball. Match the expressive black/lime visual language of the viewed approved reference, but not its player, score, old date, or shooting pose.\n\nSubject: ONE real basketball player, Dexter Dennis (デクスター・デニス), article's primary subject, drawn from the observed official Shimane portrait for likeness. Recognizable traits: short upright black twisted/coiled hair with subtle brown tips, closely faded sides; angular broad jaw and chin, prominent cheekbones, straight thick eyebrows, focused dark eyes, broad nose, full lips, close trimmed mustache and chin goatee with light jawline stubble, muscular long arms with loose tattoo-like ink shading. Face must stay readable with ivory highlights and distinct eyes/nose/mouth, not a black silhouette. Draw him in a new dynamic basketball drive/gather pose, three-quarter face, bending forward at the waist with strong diagonal movement, controlling an orange basketball at the hip with naturally formed hands. Show head, torso, arms and upper legs. Keep the face, ball and both hands fully inside the canvas. The action is a symbolic editorial illustration, not recreation of an actual play from the game. No other people.\nClothing: plain unbranded sleeveless basketball uniform in charcoal/ivory with a very small blue edge accent, no logos, no sponsor text, no team wordmarks, no jersey numbers, no league marks. No photographic pixels or parts pasted from the official source.\n\nComposition: text occupies the left 57%, athlete the right 43%, with diagonal lime brush strokes behind him. Keep high contrast and compact information density. The main numeric EFF 38 is the largest visual text. Keep at least 55px safe margin around all text. Bottom annotation in clearly legible small ivory type on clean dark background, not hidden by brushwork. Typography must be accurate Japanese, heavy sans-serif with a slight dry-brush texture for big numerals.\n\nRender ONLY these exact text lines, in this hierarchy:\nSmall top-left: \"2026.11.15｜4試合\"\nLarge left headline: \"貢献度1位\"\nLargest left numeric headline: \"EFF 38\"\nMedium large left player name: \"デクスター・デニス\"\nMedium left subline: \"島根｜37得点\"\nBottom left: \"イラスト（AI生成）\"\nBottom underneath or adjacent, fully readable: \"成績をもとにしたイメージ\"\n\nDo not add any other text, badge, logo, fake brand, scoreboard, opponent, ranking season claim, nationality ranking, game-winning-shot claim or trophy. No copied official photo. No duplicated ball, extra limbs, malformed fingers, cropped head, cropped ball, or obscured annotation. The only performance figures shown must be EFF 38 and 37 points, and the date/scope text must be exact.",
+    "generator": "OpenAI built-in image_gen__imagegen; 1 generation, 0 revisions; PNG 1672x941; no external API or CLI generation",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-15T13:18:58.113650+00:00",
+  "publication_approved": false
+}

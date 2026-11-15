@@ -1,0 +1,147 @@
+{
+  "id": "8a37d086b2f172a45d5b",
+  "article_path": "article-results-one-next-20261115.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261115.html",
+  "source_commit": "",
+  "source_blob_sha": "a3fca7720117672cb89d8175f6205885ccea3b4c",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "2526dd42d7b7bce397bbfabb0460051ae2769cccb93466a907f087543888766e",
+  "last_observed_blob_sha": "a3fca7720117672cb89d8175f6205885ccea3b4c",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8a37d086b2f172a45d5b/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8a37d086b2f172a45d5b/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-15T13:08:11.804141+00:00",
+  "creation_event_id": "a528cc575c06b33ff8b6",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/8a37d086b2f172a45d5b/thumbnail.png",
+  "image_sha256": "0549d8836d394295969d52c69a91cffdf195ff9a6d4dd21175bd5a60237b15c9",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "a3fca7720117672cb89d8175f6205885ccea3b4c",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.15",
+      "試合結果",
+      "当日のEFF",
+      "リーグ別・ポジション別TOP3",
+      "B.PREMIER / B.ONE",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8a37d086b2f172a45d5b/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261115.html",
+        "scope": "本文内容の根拠。固定HTMLのみ。ライブ記事は参照しない。",
+        "blob_sha": "a3fca7720117672cb89d8175f6205885ccea3b4c"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8a37d086b2f172a45d5b/source.txt",
+        "scope": "本文内容の根拠。表題、日付、当日の公式EFF、リーグ別・登録ポジション別TOP3、留保を確認。"
+      },
+      {
+        "type": "official_appearance_reference",
+        "url": "https://www.sunrockers.jp/lp/rawle-alkins/",
+        "image_urls": [
+          "https://sunrockers.bl.kuroco-img.app/v=1789702672/files/user/26-27_SEASON/lp/players/img/rawle_profile_img01.png",
+          "https://sunrockers.bl.kuroco-img.app/v=1790233123/files/user/26-27_SEASON/lp/players/img/rawle_mv_img01.png"
+        ],
+        "scope": "容姿だけの参照。本文の結果・数値の根拠には使用せず、公式写真は完成画像に貼り付けない。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "scope": "view_imageで確認。黒×ライム、太い日本語、手描きインク・ブラシのみ引き継ぎ、選手名・成績は引き継がない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ラウリー・アルキンズ",
+        "name_en": "Rawle Alkins",
+        "selection": "ランダム",
+        "selection_reason": "複数リーグ・ポジションの順位表記事で単独の主役がいないため、固定本文の表に出る重複除去済み25選手からsecrets.choiceで1人選択。",
+        "selection_evidence": {
+          "method": "secrets.choice; uniform from unique player names in the fixed article ranking tables",
+          "pool": [
+            "マーク・スミス",
+            "岡田 侑大",
+            "市場 脩斗",
+            "デクスター・デニス",
+            "ナシール・リトル",
+            "ラウリー・アルキンズ",
+            "アーロン・ヘンリー",
+            "アイザック・フォトゥ",
+            "ジョン・ハーラー",
+            "ジョシュ・ホーキンソン",
+            "マークイーズ・ボールデン",
+            "アンソニー・クレモンズ",
+            "関屋 心",
+            "村上 慎也",
+            "保岡 龍斗",
+            "久岡 賢太郎",
+            "オドゲレル トルガ",
+            "ジョーダン・スキッパーブラウン",
+            "ジェイデン・ガードナー",
+            "フランシス・ロペス",
+            "ジェイミン・ブレイクフィールド",
+            "ユージーン・フェルプス",
+            "ブラントン・チャットフィールド",
+            "タイラー・ワイドマン",
+            "ジョシュ・スコット"
+          ],
+          "selected": "ラウリー・アルキンズ"
+        },
+        "official_profile_url": "https://www.sunrockers.jp/lp/rawle-alkins/",
+        "official_photo_url": "https://sunrockers.bl.kuroco-img.app/v=1789702672/files/user/26-27_SEASON/lp/players/img/rawle_profile_img01.png",
+        "reference_viewed": true,
+        "observed_features": "非常に短い黒髪と刈り上げ、幅広い輪郭・しっかりした顎、大きな目、幅広い鼻、厚い唇、口ひげと短いあごひげ、筋肉質で肩幅が広い体格、左腕の黒いスリーブ。",
+        "depiction": "ドライブするプレー姿のインク画。実際の特定試合の再現ではない。選手名・背番号・個人成績を画像に記載せず、「イメージ」と注記。",
+        "likeness_review": "初稿の髪が長いため1回だけ修正。公式写真に合わせた短髪・顔の輪郭・目鼻・口元・ひげを修正版で目視確認。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: illustration-story\nAsset type: Japanese basketball news article thumbnail for バスケまとめ. Generate exactly ONE finished opaque PNG, landscape 16:9, preferably 1792 x 1008 pixels (width at least 1000 pixels).\n\nCreate a polished hand-drawn sports editorial illustration with huge accurate Japanese typography. Approved visual language: deep near-black green #151A18 background, electric lime #CCF43B sweeping dry-brush streaks, warm ivory typography and monochrome ink drawing, one orange basketball as a small accent, bold brush grain and sparse ink splashes. Strong deliberate layout with very few elements. Do not make it photographic, 3D, or a photo collage.\n\nContent source: fixed article title is「11/15 試合結果・当日のEFF」, dated 2026.11.15. It covers B.PREMIER and B.ONE results and that day's OFFICIAL EFF rankings, separated by league and registered position. No personal stats should appear. The graphic is an imagined basketball illustration, NOT a recreation of a particular game.\n\nSubject: depict ONE real professional basketball player, Rawle Alkins (ラウリー・アルキンズ), in an energetic low driving step with a basketball controlled by his right hand. He was randomly selected from players named in the article, NOT chosen as the article's star. Do not print his name, number, team name, personal performance, score, or imply an award. Preserve his identity in hand-drawn ink: very muscular broad-shouldered athletic build; dark-skinned Black man; close-cropped black hair with subtle short texture and closely faded sides, NOT curls or dreadlocks; broad slightly elongated oval face and strong square jaw; prominent arched brows and large deep-set eyes; broad rounded nose; full lips; neatly trimmed moustache connected to a small dense goatee and short close beard along jaw. Short chin beard slightly fuller than cheeks. Facial highlights must keep eyes, nose, lips, and jaw readable. Strong facial resemblance and powerful physique, not a generic player. He wears a plain ivory basketball jersey and plain dark shorts, with a black compression sleeve on his LEFT arm; no logos, sponsors, lettering, numbers, or brand marks anywhere on clothing or ball.\n\nComposition: text occupies the LEFT 56%; player occupies RIGHT 44%, captured in a dynamic low dribble drive rather than a static portrait or shooting stance. Use a three-quarter view so the face is large, clear, turned toward the left side with focused eyes. Torso leans forward, one knee bent entering the lower area, ball on the outer right under his RIGHT hand; left arm naturally bent protecting the drive, hand visible with natural anatomy. Keep the entire head, both hands, and entire ball comfortably inside the frame. Torso and legs may intentionally crop at lower frame, never at hands. Keep all words on calm clean dark space. A diagonal lime brush sweep behind the player creates motion but never covers text or face. No other people, no audience silhouettes, no scoreboard, no logos, no trophies, no decorative icons.\n\nRender ONLY these exact text lines; each once, with no spelling substitutions:\n「バスケまとめ」\n「2026.11.15」\n「試合結果」\n「当日のEFF」\n「リーグ別・ポジション別TOP3」\n「B.PREMIER / B.ONE」\n「イラスト（AI生成）」\n「イメージ」\n\nText hierarchy:\nUpper left small brand「バスケまとめ」and date「2026.11.15」.\nLarge primary headline「試合結果」in extremely bold ivory Japanese gothic.\nBelow it large「当日のEFF」in lime, with EFF in bold condensed Latin lettering.\nBelow that the clear readable scope qualifier「リーグ別・ポジション別TOP3」in ivory. Do not detach TOP3 from its scope or put it over the player.\nUnder it smaller plain text「B.PREMIER / B.ONE」.\nBottom left footer「イラスト（AI生成）」and beside it「イメージ」in small but readable ivory characters.\nUse generous 4% outer safe margins. Do not crop or deform characters. High-contrast typography remains legible when thumbnail is reduced. No text from other sample articles. No fabricated scores, individual stats, player name, or player number.\n\nThis is an original illustration based on visual inspection of the official Tokyo Sunrockers profile for Rawle Alkins: https://www.sunrockers.jp/lp/rawle-alkins/ . The official photos are appearance references only; do not paste or reproduce the photograph. The intended black/lime ink design is based on the user-approved B-culver-black-lime-v3.png style; do not carry over its player or its old date or scores.\n",
+      "correction": "Edit the first image, the generated basketball thumbnail, using the second image ONLY as the official visual identity reference for Rawle Alkins (ラウリー・アルキンズ).\nThis is the ONE allowed correction. Keep the existing composition, dynamic dribble pose, body and hands, unbranded clothing, basketball, black/lime palette, brushwork, and EVERY text glyph absolutely unchanged.\nOnly correct the player's head/face and its immediate edge/background. Match the second image's real person closely in an ink illustration:\n- His hair is extremely short black buzz-cut hair with closely faded sides and a smooth, closely shaven contour. Remove the current thick rows, wavy curls, twists and high textured top entirely. The remaining hair should be a short dark stippled/shaded scalp only, as in the reference.\n- Match the official face: broad oval face, strong jaw, large calm deep-set eyes, broad rounded nose and full lips, neatly trimmed moustache and small fuller goatee at the chin, short sparse close cheek/jaw beard. Keep the facial structure of the actual Rawle Alkins rather than a generic basketball player. Preserve focused action expression and face angle but relax the exaggerated raised/wrinkled brows.\n- Reduce/reposition the head locally only as needed to leave at least about 30 pixels clear dark background above the hair. No head clipping. Keep natural neck connection and realistic proportions.\nDo not paste the photograph, do not become photorealistic. Render facial features in the same confident hand-drawn ink crosshatching as the rest of the illustration.\nDo not add logos, names, numbers, sponsors, stats or text.\nText to preserve exactly:\nバスケまとめ\n2026.11.15\n試合結果\n当日のEFF\nリーグ別・ポジション別TOP3\nB.PREMIER / B.ONE\nイラスト（AI生成）\nイメージ\nPreserve landscape 16:9 and original resolution, opaque PNG. Produce exactly one corrected image.\n"
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "corrections": 1,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1df55-40c5-73a3-ac86-520e194a76ce/exec-3b44abbe-67bc-4d85-b09f-e8dac4df7496.png",
+      "image_dimensions": [
+        1672,
+        941
+      ],
+      "image_sha256": "0549d8836d394295969d52c69a91cffdf195ff9a6d4dd21175bd5a60237b15c9",
+      "final_file": "generated.png"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    },
+    "qa_notes": {
+      "inspected_at": "2026-11-15T22:15:33.674131+09:00",
+      "text_and_numbers": "修正版を実見。全8行、2026.11.15、EFF、TOP3、B.PREMIER / B.ONEを確認。個人成績・氏名・背番号なし。",
+      "source_qualifiers": "当日のEFFとリーグ別・ポジション別を併記。今季平均や全体トップ3とは表現しない。B.NEXTの試合や順位を示さない。公式登録ポジション・同率順位・算式差・公式配信値優先などの原稿の注記と矛盾する断定を加えていない。プレー場面は「イメージ」と表示。",
+      "likeness_or_no_named_person": "実在選手ラウリー・アルキンズ1人。公式プロフィール写真2枚を実見し、修正版の短髪、顔の特徴、ひげ、体格を比較。写真貼り付け・写真風表現なし。",
+      "layout": "約16:9の1672×941。頭・顔・両手・ボール・見出し・注記が画面内。手の本数と指のつながり、身体と腕の連結を目視確認。膝下は意図的なフレーム外。チーム・リーグ・スポンサーのロゴや文字なし。",
+      "ai_label": "左下に「イラスト（AI生成）」「イメージ」の読みやすい表記を実見。"
+    },
+    "workflow": {
+      "job_id": "8a37d086b2f172a45d5b",
+      "ready_executed": false,
+      "published": false,
+      "external_delivery": false,
+      "source_html_reverified": true,
+      "style_reference_note": "白地案A-faison-ivory-v3.pngは指定ディレクトリに存在しなかった。実在する承認済みB-culver-black-lime-v3.pngを参照して黒×ライムで制作。"
+    }
+  },
+  "prepared_at": "2026-11-15T13:15:44.932394+00:00",
+  "publication_approved": false
+}
