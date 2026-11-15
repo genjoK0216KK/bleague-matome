@@ -1,5 +1,12 @@
 {
- "pending": {},
+ "pending": {
+  "506595": "2026-11-16",
+  "506596": "2026-11-16",
+  "506597": "2026-11-16",
+  "506598": "2026-11-16",
+  "506599": "2026-11-16",
+  "506600": "2026-11-16"
+ },
  "published": [
   "2026-10-12",
   "2026-10-17",
@@ -24,16 +31,6 @@
   "2026-11-15"
  ],
  "days": {
-  "2026-11-08": {
-   "state": "ready",
-   "games_total": 4,
-   "games_ready": 4,
-   "players": 85,
-   "holds": [],
-   "excluded": [],
-   "content_as_of": "2026-11-09 20:30 JST",
-   "source": "data/match_articles/article-games-20261108.json"
-  },
   "2026-11-09": {
    "state": "ready",
    "games_total": 6,
@@ -103,6 +100,65 @@
    "excluded": [],
    "content_as_of": "2026-11-15 22:07 JST",
    "source": "data/match_articles/article-games-20261115.json"
+  },
+  "2026-11-16": {
+   "state": "held",
+   "games_total": 6,
+   "games_ready": 0,
+   "players": null,
+   "holds": [
+    {
+     "key": "506595",
+     "home": "群馬",
+     "away": "滋賀",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506596",
+     "home": "千葉J",
+     "away": "三遠",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506597",
+     "home": "A東京",
+     "away": "神戸",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506598",
+     "home": "横浜BC",
+     "away": "川崎",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506599",
+     "home": "広島",
+     "away": "A千葉",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    },
+    {
+     "key": "506600",
+     "home": "琉球",
+     "away": "富山",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    }
+   ],
+   "excluded": [],
+   "content_as_of": "2026-11-16 01:15 JST",
+   "source": "data/match_articles/article-games-20261116.json"
   }
  },
  "definition": {
