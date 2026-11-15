@@ -1,0 +1,88 @@
+{
+  "id": "7da656817b1822d25b0f",
+  "article_path": "article-analysis-gunma-20261115.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-gunma-20261115.html",
+  "source_commit": "",
+  "source_blob_sha": "11a1e3523a794889a7e47eb239350aaf44a8d9d0",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "ba9cb5e525de4748f9ea6bfd810d4e0ee5ba97786cffd01500d378f7b2029e61",
+  "last_observed_blob_sha": "11a1e3523a794889a7e47eb239350aaf44a8d9d0",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7da656817b1822d25b0f/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7da656817b1822d25b0f/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-15T03:27:43.321322+00:00",
+  "creation_event_id": "2b977e2c887da1a901f5",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/7da656817b1822d25b0f/thumbnail.png",
+  "image_sha256": "edd812293f0a94999c7a1e7d0c198830a5b1723b15b35bc6888b0dfcc787e831",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "11a1e3523a794889a7e47eb239350aaf44a8d9d0",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.15",
+      "直近5試合｜10/31〜11/13",
+      "群馬",
+      "5戦全勝",
+      "チーム平均失点 70.6点",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "type": "pinned_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7da656817b1822d25b0f/source.html",
+        "article_url": "https://basuke-matome.jp/article-analysis-gunma-20261115.html",
+        "used_for": "記事内容・日付・チーム成績の根拠。本文の冒頭、対象期間、平均失点を確認。",
+        "evidence": [
+          "記事日付：2026.11.15",
+          "群馬クレインサンダーズは、直近5試合を5戦全勝で終えました。",
+          "平均失点は70.6点",
+          "対象は10月31日の大阪戦から、11月13日の信州戦までの5試合です。"
+        ],
+        "qualifiers": "チーム平均失点と対象期間を画像に明記。リーグ順位や相手・日程調整後の強さを示す文言は使用しない。シーズンの連勝数や選手個人成績とは区別。"
+      },
+      {
+        "type": "pinned_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7da656817b1822d25b0f/source.txt",
+        "used_for": "固定HTMLと同じ主題・数値・期間・本文内選手名を照合。外部ページは本文の根拠に使用していない。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "used_for": "view_imageで確認した黒#151A18×ライム#CCF43B、太い日本語見出し、手描きインクの承認済み絵柄。参照の人物・成績・日付は転用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ケリー・ブラックシアー・ジュニア",
+        "selection": "ランダム",
+        "selection_reason": "記事全体の主役は群馬のチーム分析で、特定の1選手に絞れないため。本文に登場する選手を候補として選択。",
+        "selection_method": "候補を本文の登場順 [スタンリー・ジョンソン, ケリー・ブラックシアー・ジュニア, 辻直人] とし、作業ID 7da656817b1822d25b0f の SHA-256 を整数化した値 % 3 で選択。最初の非永続試行は採用せず、記録可能な決定的抽選を採用。",
+        "official_source": "https://g-crane-thunders.jp/roster/players/detail/kerry-blackshear-jr",
+        "official_photo": "https://g-crane-thunders.bl.kuroco-img.app/v=1789375653/files/user/images/roster/players/detail_2027/kerry-blackshear-jr/fv.jpg",
+        "reference_usage": "公式プロフィール画像を取得しview_imageで目視確認。修正時は容姿参照として内蔵画像生成に指定。公式写真自体の貼付・切り抜き・再利用はせず、手描き調イラストで描写。",
+        "appearance_checked": "非常に短い黒髪、広い額、眉、幅のある鼻、厚い唇、頬から顎の短いひげ、口ひげ、輪郭、筋肉質の体格。初稿の髪・ひげを1回修正して最終画像を公式資料と照合した。",
+        "depiction": "守備の構えのイメージ。特定の試合・プレー場面の再現ではない。画像内に選手名、背番号、個人成績、出場・活躍の記述なし。全表示数値はチーム記事のもの。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story\nAsset type: One finished Japanese basketball editorial thumbnail, landscape approximately 16:9, at least 1536 pixels wide, target 1792×1008 PNG.\nPrimary request: Create exactly ONE polished thumbnail for a Gunma Crane Thunders team-analysis article. Match the approved black-and-lime hand-ink sports-poster style: near-black #151A18 background, acid lime #CCF43B, warm ivory Japanese headline, expressive dry-brush strokes and etched/ink illustration. Few elements, exceptional legibility. No photographic rendering.\n\nSubject: Exactly one REAL basketball player, Kerry Blackshear Jr (ケリー・ブラックシアー・ジュニア), selected randomly from players named in the article, drawn in an energetic defensive slide, knees flexed, torso angled forward in three-quarter view, eyes tracking an imagined opponent outside the frame. His right-side placement and broad athletic silhouette anchor the image; one arm extends to the right with a clear natural open hand, the other arm bent with a natural open hand. Use an above-knee composition with head and both hands fully inside the image. No other people. No ball is necessary. This is a conceptual playing illustration, not a recreation of any documented game or event.\n\nOfficial appearance reference already inspected: https://g-crane-thunders.jp/roster/players/detail/kerry-blackshear-jr and its portrait https://g-crane-thunders.bl.kuroco-img.app/v=1789375653/files/user/images/roster/players/detail_2027/kerry-blackshear-jr/fv.jpg . Accurately represent his very short close-cropped black hair, broad forehead, pronounced brows, wide nose, full lips, strong broad oval/square jaw, short close-trimmed beard along the cheeks and jaw and chin, neat thin moustache, muscular shoulders, sturdy tall build and dark skin. Render his face with carefully readable ivory/gray highlights and hatched shadows, not a black silhouette. Do not substitute an invented generic player. His jersey is plain dark basketball kit with restrained ivory/lime edging, no text, no numbers, no logos, no sponsor marks. A dark sleeve on the left arm is acceptable. Never paste or reproduce an official photograph; all pixels must look hand-drawn.\n\nComposition: Text block occupying the left 54%, single player's dynamic defensive illustration on right 46%, no overlaps obscuring typography. Upper-left small publication title and date. Below it a medium lime scope label. Then a very bold ivory 「群馬」 and a HUGE lime 「5戦全勝」 as the main headline, with rough brush accents. A clean, smaller ivory stat line below; keep it explicitly a team statistic. Bottom-left restrained AI disclosure. Keep all type and both hands within 5% safe margins. Energetic broad lime brush stroke behind the player, sparse ink specks; avoid clutter. This must resemble the approved B-culver-black-lime-v3 style in the conversation, but do NOT carry over Culver's face, name, jersey, shooting pose, score, or statistics.\n\nText (verbatim; only these text lines may appear):\n「バスケまとめ」\n「2026.11.15」\n「直近5試合｜10/31〜11/13」\n「群馬」\n「5戦全勝」\n「チーム平均失点 70.6点」\n「イラスト（AI生成）｜イメージ」\n\nFactual scope: The 5-0 record and 70.6 points allowed are Gunma TEAM averages/results for only the five games from Oct 31 through Nov 13 in the frozen article. Do not claim a season record, league rank, individual points, individual participation, or a particular decisive play. Do not add the player's name or personal statistics anywhere.\nAvoid: team/league/manufacturer logos, sponsor text, watermarks, official photos, photorealism, invented players, a ball-only scene, extra digits/fingers/arms, cropped hands/head/text, unsupported data, garbled Japanese, visual clutter.\n\nCORRECTION 1 (only correction)\nEdit image 1, the generated black-and-lime basketball thumbnail. Image 2 is Kerry Blackshear Jr's OFFICIAL portrait, appearance reference only, NOT an image to paste. Make this one correction pass, preserving the existing Japanese copy exactly, the palette, ink-and-engraving hand-drawn style, overall left-text/right-player layout, the defensive pose, plain logo-free jersey and all content.\n\nCorrect the player's likeness using image 2 carefully: replace the taller curly hair with his VERY SHORT CLOSE-CROPPED BUZZ CUT, scalp-close with subtly visible fine dark texture, not high curls. Reduce the full dense beard to his neat SHORT TRIMMED jaw/cheek beard and thin moustache, matching the portrait's facial contour, broad forehead, strong brows, wide nose and full lips. Keep the image explicitly an ink illustration with hatching, not photorealistic. Keep the existing defensive pose and facial gaze direction, but match the real man's face and head shape more closely. Do not reproduce the official picture, logos, sponsors, or folded-arm pose.\n\nCorrect safe margins: shrink the entire foreground layout slightly (about 92–94% of current size) within the SAME landscape 16:9 canvas, extend only the near-black brush-textured background as necessary, so ALL headline edges, the top of the head, and especially the extended hand and all five fingertips are visibly surrounded by safe margin (at least 4% of canvas). Keep the text large and the original composition; no cramped fingers at the right edge and no overlapping the 70.6 line. Do not cut off head, hands or any text. Normal anatomically correct five-digit hands.\n\nPreserve these exact text contents without any new words:\nバスケまとめ\n2026.11.15\n直近5試合｜10/31〜11/13\n群馬\n5戦全勝\nチーム平均失点 70.6点\nイラスト（AI生成）｜イメージ\n\nNo player name or personal statistics. No logos, jersey lettering, jersey number, official photos, or extra people. This is a conceptual defensive playing illustration, not a specific actual game's scene. Output one finished PNG at least 1536 pixels wide, approximately 16:9.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "corrections": 1,
+      "final_generated_file": "/Users/genjo/.codex/generated_images/01a1dd3f-1d55-7dc2-b4d9-a5f2592e427e/exec-4e772ba3-0d0d-4cc0-945a-0cd60815ead1.png",
+      "correction_reason": "初稿で髪・ひげが公式資料より長く、右手の余白が狭かったため、容姿と安全余白を1回だけ修正。",
+      "inspection": "最終生成画像を実際に目視。全7行の文字、5戦全勝、70.6点、記事日付と直近5試合の対象期間、チーム成績であること、顔と短髪・ひげ、両手の形と見切れ、見出しの余白、AI生成とイメージの表記を確認。ロゴ・スポンサー文字・写真表現なし。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-15T03:31:36.918109+00:00",
+  "publication_approved": false
+}
