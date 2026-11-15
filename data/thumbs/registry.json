@@ -84,6 +84,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "千葉ジェッツは直近5試合で4勝1敗 平均94.8点はリーグ最多、3Pで稼ぎ2Pで失う"
   },
+  "article-analysis-gunma-20261115.html": {
+   "article_path": "article-analysis-gunma-20261115.html",
+   "editorial_fingerprint": "ba9cb5e525de4748f9ea6bfd810d4e0ee5ba97786cffd01500d378f7b2029e61",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-analysis-gunma-20261115-edd812293f0a.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-gunma-20261115-edd812293f0a-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "7da656817b1822d25b0f",
+   "image_sha256": "edd812293f0a94999c7a1e7d0c198830a5b1723b15b35bc6888b0dfcc787e831",
+   "imported_at": "2026-11-15T03:32:16.115454+00:00",
+   "prepared_at": "2026-11-15T03:31:36.918109+00:00",
+   "source_blob_sha": "11a1e3523a794889a7e47eb239350aaf44a8d9d0",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "ba9cb5e525de4748f9ea6bfd810d4e0ee5ba97786cffd01500d378f7b2029e61",
+   "style": "ink-lime-portrait-v5",
+   "title": "群馬クレインサンダーズの直近5試合は5戦全勝 相手のミスを得点に変えて失点はリーグ最少"
+  },
   "article-analysis-hokkaido-20261111.html": {
    "article_path": "article-analysis-hokkaido-20261111.html",
    "editorial_fingerprint": "2848a700954624bab3d930958d00b02038fec132983beef6b54d5e9724abb2a6",
@@ -2299,13 +2327,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261109.html",
-   "at": "2026-11-09T10:31:38.687199+00:00",
-   "event": "imported",
-   "id": "8aaaea72a1d9afdb5b71",
-   "image": "33071e0e3ffb"
-  },
-  {
    "article": "article-results-one-next-20261109.html",
    "at": "2026-11-09T10:31:38.687665+00:00",
    "by": "95e267d849a9238c3703",
@@ -2857,6 +2878,13 @@
    "event": "imported",
    "id": "2aad1ed827bb14d32277",
    "image": "8582f0e3b72f"
+  },
+  {
+   "article": "article-analysis-gunma-20261115.html",
+   "at": "2026-11-15T03:32:16.115483+00:00",
+   "event": "imported",
+   "id": "7da656817b1822d25b0f",
+   "image": "edd812293f0a"
   }
  ],
  "seen": {
@@ -2939,6 +2967,7 @@
   "7b37144d46a646e84340": "imported",
   "7d40ba767806af33dbf4": "superseded:ca69b5d16263483eb1ed",
   "7da4157f57a12da3f879": "imported",
+  "7da656817b1822d25b0f": "imported",
   "7fe3ccf98d343d8516b5": "superseded:46adebe03cc636f48def",
   "81cdf284d66df1d61f20": "imported",
   "8926ed6e2f6c758b34aa": "imported",
