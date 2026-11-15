@@ -12093,7 +12093,7 @@
           "PlayingFlg": false,
           "Point": 2,
           "PT3M": 0,
-          "PT3A": 2,
+          "PT3A": 3,
           "PT2M": 1,
           "PT2A": 3,
           "FTM": 0,
@@ -12111,12 +12111,12 @@
           "PTFB": 0,
           "PT2IN": 1,
           "PT2ND": 0,
-          "EFF": 5,
+          "EFF": 4,
           "PLUSMINUS": -6,
           "AST_TO": 0,
-          "EFG": 0.2,
-          "TS": 0.17006802721088435,
-          "USG": 16.833281802878837
+          "EFG": 0.16666666666666666,
+          "TS": 0.14534883720930233,
+          "USG": 19.696084830579316
         },
         {
           "Code": 546,
@@ -12177,16 +12177,16 @@
           "PlayingFlg": false,
           "Point": 14,
           "PT3M": 2,
-          "PT3A": 6,
+          "PT3A": 5,
           "PT2M": 4,
           "PT2A": 5,
           "FTM": 0,
           "FTA": 0,
           "FOUL": 3,
           "FOULON": 1,
-          "RB_OFF": 1,
+          "RB_OFF": 2,
           "RB_DEF": 3,
-          "RB_TOT": 4,
+          "RB_TOT": 5,
           "TO": 1,
           "AS": 0,
           "ST": 1,
@@ -12195,12 +12195,12 @@
           "PTFB": 1,
           "PT2IN": 4,
           "PT2ND": 1,
-          "EFF": 10,
+          "EFF": 12,
           "PLUSMINUS": -27,
           "AST_TO": 0,
-          "EFG": 0.6363636363636364,
-          "TS": 0.6363636363636364,
-          "USG": 23.81899469550953
+          "EFG": 0.7,
+          "TS": 0.7,
+          "USG": 21.834078470883735
         },
         {
           "Code": 546,
@@ -12234,7 +12234,7 @@
           "ST": 1,
           "BS": 0,
           "BSON": 0,
-          "PTFB": 0,
+          "PTFB": 1,
           "PT2IN": 0,
           "PT2ND": 0,
           "EFF": 8,
@@ -12562,9 +12562,9 @@
           "FTA": 4,
           "FOUL": 1,
           "FOULON": 3,
-          "RB_OFF": 3,
+          "RB_OFF": 2,
           "RB_DEF": 3,
-          "RB_TOT": 6,
+          "RB_TOT": 5,
           "TO": 0,
           "AS": 3,
           "ST": 2,
@@ -12573,7 +12573,7 @@
           "PTFB": 2,
           "PT2IN": 4,
           "PT2ND": 1,
-          "EFF": 20,
+          "EFF": 19,
           "PLUSMINUS": 28,
           "AST_TO": 0,
           "EFG": 0.55,
@@ -12604,20 +12604,20 @@
           "FTA": 2,
           "FOUL": 2,
           "FOULON": 1,
-          "RB_OFF": 1,
+          "RB_OFF": 2,
           "RB_DEF": 2,
-          "RB_TOT": 3,
+          "RB_TOT": 4,
           "TO": 2,
-          "AS": 5,
+          "AS": 7,
           "ST": 2,
           "BS": 2,
           "BSON": 1,
           "PTFB": 3,
           "PT2IN": 3,
           "PT2ND": 1,
-          "EFF": 17,
+          "EFF": 20,
           "PLUSMINUS": 34,
-          "AST_TO": 2.5,
+          "AST_TO": 3.5,
           "EFG": 0.6111111111111112,
           "TS": 0.6578947368421052,
           "USG": 21.51277547398729
@@ -12738,7 +12738,7 @@
           "ST": 2,
           "BS": 1,
           "BSON": 0,
-          "PTFB": 1,
+          "PTFB": 2,
           "PT2IN": 6,
           "PT2ND": 1,
           "EFF": 26,
@@ -12776,16 +12776,16 @@
           "RB_DEF": 0,
           "RB_TOT": 0,
           "TO": 1,
-          "AS": 2,
+          "AS": 1,
           "ST": 0,
           "BS": 0,
           "BSON": 0,
           "PTFB": 1,
           "PT2IN": 1,
           "PT2ND": 0,
-          "EFF": 8,
+          "EFF": 7,
           "PLUSMINUS": 9,
-          "AST_TO": 2,
+          "AST_TO": 1,
           "EFG": 1.1,
           "TS": 1.1,
           "USG": 17.986042830763328
@@ -12941,8 +12941,8 @@
           "FOUL": 3,
           "FOULON": 1,
           "RB_OFF": 1,
-          "RB_DEF": 5,
-          "RB_TOT": 6,
+          "RB_DEF": 4,
+          "RB_TOT": 5,
           "TO": 0,
           "AS": 2,
           "ST": 0,
@@ -12951,7 +12951,7 @@
           "PTFB": 1,
           "PT2IN": 3,
           "PT2ND": 1,
-          "EFF": 11,
+          "EFF": 10,
           "PLUSMINUS": 25,
           "AST_TO": 0,
           "EFG": 0.5714285714285714,
@@ -13001,7 +13001,7 @@
           "USG": 0
         }
       ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506593/114.json"
+      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/506593/116.json"
     }
   ],
   "individual_candidates": [],
@@ -13018,7 +13018,261 @@
   "errors": [],
   "lineups": {
     "BP": {
-      "error": "IL profile verification incomplete: Official fetch budget exhausted; prior data retained"
+      "teams": [
+        [
+          [
+            "PG",
+            {
+              "player_id": "51000410",
+              "name": "マーク・スミス",
+              "team": "秋田",
+              "team_id": "693",
+              "season": "2026-27",
+              "competition": "BP",
+              "positions": [
+                "PG",
+                "SG"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=693",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "31.1",
+              "games": 17,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
+              "coverage_complete": true,
+              "rank": 1
+            }
+          ],
+          [
+            "SG",
+            {
+              "player_id": "19755",
+              "name": "富永 啓生",
+              "team": "北海道",
+              "team_id": "702",
+              "season": "2026-27",
+              "competition": "BP",
+              "positions": [
+                "SG"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=702",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "24.8",
+              "games": 16,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
+              "coverage_complete": true,
+              "rank": 2
+            }
+          ],
+          [
+            "SF",
+            {
+              "player_id": "51000517",
+              "name": "ナシール・リトル",
+              "team": "佐賀",
+              "team_id": "1638",
+              "season": "2026-27",
+              "competition": "BP",
+              "positions": [
+                "SF",
+                "PF"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=1638",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "26.5",
+              "games": 15,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
+              "coverage_complete": true,
+              "rank": 1
+            }
+          ],
+          [
+            "PF",
+            {
+              "player_id": "5100000088",
+              "name": "ニック・ケイ",
+              "team": "島根",
+              "team_id": "720",
+              "season": "2026-27",
+              "competition": "BP",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=720",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "27.7",
+              "games": 15,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
+              "coverage_complete": true,
+              "rank": 1
+            }
+          ],
+          [
+            "C",
+            {
+              "player_id": "51000294",
+              "name": "ヴォーディミル・ゲルン",
+              "team": "大阪",
+              "team_id": "700",
+              "season": "2026-27",
+              "competition": "BP",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=700",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "25.5",
+              "games": 2,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
+              "coverage_complete": true,
+              "rank": 2
+            }
+          ]
+        ],
+        [
+          [
+            "PG",
+            {
+              "player_id": "14301",
+              "name": "齋藤 拓実",
+              "team": "名古屋D",
+              "team_id": "729",
+              "season": "2026-27",
+              "competition": "BP",
+              "positions": [
+                "PG"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=729",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "19.7",
+              "games": 13,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
+              "coverage_complete": true,
+              "rank": 2
+            }
+          ],
+          [
+            "SG",
+            {
+              "player_id": "51000524",
+              "name": "トレイ・ケル",
+              "team": "宇都宮",
+              "team_id": "703",
+              "season": "2026-27",
+              "competition": "BP",
+              "positions": [
+                "SG"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=703",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "24.4",
+              "games": 11,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
+              "coverage_complete": true,
+              "rank": 3
+            }
+          ],
+          [
+            "SF",
+            {
+              "player_id": "51000515",
+              "name": "ラウリー・アルキンズ",
+              "team": "東京SR",
+              "team_id": "726",
+              "season": "2026-27",
+              "competition": "BP",
+              "positions": [
+                "SF"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=726",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "22.8",
+              "games": 17,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
+              "coverage_complete": true,
+              "rank": 2
+            }
+          ],
+          [
+            "PF",
+            {
+              "player_id": "12598",
+              "name": "ジョシュ・ホーキンソン",
+              "team": "東京SR",
+              "team_id": "726",
+              "season": "2026-27",
+              "competition": "BP",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=726",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "23.9",
+              "games": 17,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
+              "coverage_complete": true,
+              "rank": 4
+            }
+          ],
+          [
+            "C",
+            {
+              "player_id": "5100000046",
+              "name": "スコット・エサトン",
+              "team": "名古屋D",
+              "team_id": "729",
+              "season": "2026-27",
+              "competition": "BP",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=729",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "23.8",
+              "games": 13,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg",
+              "coverage_complete": true,
+              "rank": 4
+            }
+          ]
+        ]
+      ],
+      "retrieved_at": "2026-11-14T10:27:30.260384+00:00",
+      "sources": [
+        "https://www.bleague.jp/club_detail/?TeamID=1638",
+        "https://www.bleague.jp/club_detail/?TeamID=693",
+        "https://www.bleague.jp/club_detail/?TeamID=700",
+        "https://www.bleague.jp/club_detail/?TeamID=702",
+        "https://www.bleague.jp/club_detail/?TeamID=703",
+        "https://www.bleague.jp/club_detail/?TeamID=720",
+        "https://www.bleague.jp/club_detail/?TeamID=726",
+        "https://www.bleague.jp/club_detail/?TeamID=729",
+        "https://www.bleague.jp/news/injury.html",
+        "https://www.bleague.jp/stats/?year=2026&tab=1&target=player-b1&value=EFFPG&o=desc&e=2&dt=avg"
+      ]
     },
     "B1": {
       "teams": [
