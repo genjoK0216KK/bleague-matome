@@ -786,29 +786,29 @@
   },
   "article-daily-20261115.html": {
    "article_path": "article-daily-20261115.html",
-   "editorial_fingerprint": "9e560f3a3efcfa2ec3db1d3986aaf7c241712c5899d7e1ea7f28118775a508c7",
+   "editorial_fingerprint": "45090f2dc20e5e7ef4aef23fe648b0da4e417c90ed41c502fb611116f9e1102c",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261115-2b7be47a2428.jpg",
+     "path": "thumbs/auto/article-daily-20261115-8582f0e3b72f.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261115-2b7be47a2428-og.jpg",
+     "path": "thumbs/auto/article-daily-20261115-8582f0e3b72f-og.jpg",
      "width": 1200
     }
    },
-   "id": "c64f75eca95f7a1461d5",
-   "image_sha256": "2b7be47a242812bb990586ec4c670ac31ad490a0056c59ebf1e3f9e59f1ba8ee",
-   "imported_at": "2026-11-14T23:29:23.578439+00:00",
-   "prepared_at": "2026-11-14T23:21:14.955456+00:00",
-   "source_blob_sha": "e8fa0279dbc1d5fc472f6f5e14601d2ad1a52667",
+   "id": "2aad1ed827bb14d32277",
+   "image_sha256": "8582f0e3b72f365beac35c0068d387572d9ff8975fb83d2e7b4cfada39af7ff9",
+   "imported_at": "2026-11-15T03:27:34.649376+00:00",
+   "prepared_at": "2026-11-15T03:19:50.653788+00:00",
+   "source_blob_sha": "b5d11f42e1f2060f64ae8a6283a7d527c9d52bf2",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "9e560f3a3efcfa2ec3db1d3986aaf7c241712c5899d7e1ea7f28118775a508c7",
+   "stable_fingerprint": "45090f2dc20e5e7ef4aef23fe648b0da4e417c90ed41c502fb611116f9e1102c",
    "style": "ink-lime-portrait-v5",
    "title": "アルバルク東京が広島に99-83で勝利、3ポイント21本とリバウンド差17本で上回る"
   },
@@ -2299,20 +2299,6 @@
  },
  "log": [
   {
-   "article": "article-daily-20261109.html",
-   "at": "2026-11-09T10:31:38.542791+00:00",
-   "event": "imported",
-   "id": "e64b9ac50fa81c41ae65",
-   "image": "a1f4e73d407e"
-  },
-  {
-   "article": "article-games-20261109.html",
-   "at": "2026-11-09T10:31:38.543344+00:00",
-   "by": "8aaaea72a1d9afdb5b71",
-   "event": "superseded",
-   "id": "de6284c9fc31a323c810"
-  },
-  {
    "article": "article-games-20261109.html",
    "at": "2026-11-09T10:31:38.687199+00:00",
    "event": "imported",
@@ -2857,6 +2843,20 @@
    "event": "imported",
    "id": "091b3c06f77815c82f47",
    "image": "f4a681d5e5c6"
+  },
+  {
+   "article": "article-daily-20261115.html",
+   "at": "2026-11-15T03:27:34.516902+00:00",
+   "by": "2aad1ed827bb14d32277",
+   "event": "superseded",
+   "id": "c64f75eca95f7a1461d5"
+  },
+  {
+   "article": "article-daily-20261115.html",
+   "at": "2026-11-15T03:27:34.649404+00:00",
+   "event": "imported",
+   "id": "2aad1ed827bb14d32277",
+   "image": "8582f0e3b72f"
   }
  ],
  "seen": {
@@ -2881,6 +2881,7 @@
   "28368e86a62b9df9dfd9": "imported",
   "2912f2bf307b5ed2a60d": "superseded:b54717dd6365eef30b2d",
   "292138556e17df566d67": "superseded:0a5c2c0f2505974f6de8",
+  "2aad1ed827bb14d32277": "imported",
   "2ab61380b5143b8db0be": "imported",
   "2d209f7594021a551b90": "superseded:9738ca38103aa648b879",
   "2d836f0394de01c7d009": "superseded:7da4157f57a12da3f879",
@@ -2991,7 +2992,7 @@
   "c3dac2b9caaaf4c62772": "imported",
   "c422e01f21c312cd1a36": "imported",
   "c59cee10214af1d2a8c4": "superseded:f662c904491c9e820ed0",
-  "c64f75eca95f7a1461d5": "imported",
+  "c64f75eca95f7a1461d5": "superseded:2aad1ed827bb14d32277",
   "c65ae6fd90ffcf57f53b": "superseded:b54717dd6365eef30b2d",
   "ca69b5d16263483eb1ed": "imported",
   "cba03e879d01718161f9": "imported",
