@@ -814,29 +814,29 @@
   },
   "article-daily-20261115.html": {
    "article_path": "article-daily-20261115.html",
-   "editorial_fingerprint": "45090f2dc20e5e7ef4aef23fe648b0da4e417c90ed41c502fb611116f9e1102c",
+   "editorial_fingerprint": "14f6fe30e3438c854a7903291e5e71a3fa0abc3d7bfe2bcb9c3428168e4a96bf",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261115-8582f0e3b72f.jpg",
+     "path": "thumbs/auto/article-daily-20261115-ba056d26e06c.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261115-8582f0e3b72f-og.jpg",
+     "path": "thumbs/auto/article-daily-20261115-ba056d26e06c-og.jpg",
      "width": 1200
     }
    },
-   "id": "2aad1ed827bb14d32277",
-   "image_sha256": "8582f0e3b72f365beac35c0068d387572d9ff8975fb83d2e7b4cfada39af7ff9",
-   "imported_at": "2026-11-15T03:27:34.649376+00:00",
-   "prepared_at": "2026-11-15T03:19:50.653788+00:00",
-   "source_blob_sha": "b5d11f42e1f2060f64ae8a6283a7d527c9d52bf2",
+   "id": "9f757581f96bc573aa5f",
+   "image_sha256": "ba056d26e06c9484a30c5e4d4e24b30a3fabc50f3554643c3a57694fe021c35a",
+   "imported_at": "2026-11-15T13:06:26.886923+00:00",
+   "prepared_at": "2026-11-15T13:05:58.345099+00:00",
+   "source_blob_sha": "66760ae3086d817225576a6970cf67ff14645e0a",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "45090f2dc20e5e7ef4aef23fe648b0da4e417c90ed41c502fb611116f9e1102c",
+   "stable_fingerprint": "14f6fe30e3438c854a7903291e5e71a3fa0abc3d7bfe2bcb9c3428168e4a96bf",
    "style": "ink-lime-portrait-v5",
    "title": "アルバルク東京が広島に99-83で勝利、3ポイント21本とリバウンド差17本で上回る"
   },
@@ -2327,27 +2327,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261109.html",
-   "at": "2026-11-09T14:36:57.585648+00:00",
-   "event": "imported",
-   "id": "4ec5ffedaee7935f9089",
-   "image": "7d4a219b293e"
-  },
-  {
-   "article": "article-results-one-next-20261109.html",
-   "at": "2026-11-09T14:36:57.586004+00:00",
-   "by": "46adebe03cc636f48def",
-   "event": "superseded",
-   "id": "7fe3ccf98d343d8516b5"
-  },
-  {
-   "article": "article-results-one-next-20261109.html",
-   "at": "2026-11-09T14:36:57.586010+00:00",
-   "by": "46adebe03cc636f48def",
-   "event": "superseded",
-   "id": "95e267d849a9238c3703"
-  },
-  {
    "article": "article-results-one-next-20261109.html",
    "at": "2026-11-09T14:36:57.684787+00:00",
    "event": "imported",
@@ -2885,6 +2864,27 @@
    "event": "imported",
    "id": "02a6048a7bd570db2c5e",
    "image": "499c893e8532"
+  },
+  {
+   "article": "article-daily-20261115.html",
+   "at": "2026-11-15T13:06:26.774113+00:00",
+   "by": "9f757581f96bc573aa5f",
+   "event": "superseded",
+   "id": "c64f75eca95f7a1461d5"
+  },
+  {
+   "article": "article-daily-20261115.html",
+   "at": "2026-11-15T13:06:26.774139+00:00",
+   "by": "9f757581f96bc573aa5f",
+   "event": "superseded",
+   "id": "2aad1ed827bb14d32277"
+  },
+  {
+   "article": "article-daily-20261115.html",
+   "at": "2026-11-15T13:06:26.886942+00:00",
+   "event": "imported",
+   "id": "9f757581f96bc573aa5f",
+   "image": "ba056d26e06c"
   }
  ],
  "seen": {
@@ -2910,7 +2910,7 @@
   "28368e86a62b9df9dfd9": "imported",
   "2912f2bf307b5ed2a60d": "superseded:b54717dd6365eef30b2d",
   "292138556e17df566d67": "superseded:0a5c2c0f2505974f6de8",
-  "2aad1ed827bb14d32277": "imported",
+  "2aad1ed827bb14d32277": "superseded:9f757581f96bc573aa5f",
   "2ab61380b5143b8db0be": "imported",
   "2d209f7594021a551b90": "superseded:9738ca38103aa648b879",
   "2d836f0394de01c7d009": "superseded:7da4157f57a12da3f879",
@@ -2990,6 +2990,7 @@
   "9bbc15165c559181134d": "superseded:619af1e58cddd34c14bc",
   "9bdde677628afe3c1636": "imported",
   "9f2558d6277a776ef982": "imported",
+  "9f757581f96bc573aa5f": "imported",
   "a080784863e72da1cb08": "imported",
   "a2b6b2b44b3ab2922589": "superseded:896bbeb35c2a1eb9d0e1",
   "a384f66c5c633ed9bdb1": "imported",
@@ -3023,7 +3024,7 @@
   "c3dac2b9caaaf4c62772": "imported",
   "c422e01f21c312cd1a36": "imported",
   "c59cee10214af1d2a8c4": "superseded:f662c904491c9e820ed0",
-  "c64f75eca95f7a1461d5": "superseded:2aad1ed827bb14d32277",
+  "c64f75eca95f7a1461d5": "superseded:9f757581f96bc573aa5f",
   "c65ae6fd90ffcf57f53b": "superseded:b54717dd6365eef30b2d",
   "ca69b5d16263483eb1ed": "imported",
   "cba03e879d01718161f9": "imported",
