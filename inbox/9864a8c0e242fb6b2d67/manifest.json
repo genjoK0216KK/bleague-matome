@@ -1,0 +1,107 @@
+{
+  "id": "9864a8c0e242fb6b2d67",
+  "article_path": "article-games-20261115.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261115.html",
+  "source_commit": "",
+  "source_blob_sha": "9d02355586e241c94cdbfca5821b5a6ab8d04885",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "286b26cf22b855a68f9b994ce43fbf6d964e381190887f3b19257b2a56ac95d2",
+  "last_observed_blob_sha": "9d02355586e241c94cdbfca5821b5a6ab8d04885",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9864a8c0e242fb6b2d67/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/9864a8c0e242fb6b2d67/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-15T11:02:54.562025+00:00",
+  "creation_event_id": "af03289fd59b0aa01203",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/9864a8c0e242fb6b2d67/thumbnail.png",
+  "image_sha256": "5e7f8cd7749ce1ec18e9d263d884ee20c052d06ab7646bcd69c00f0c6e63beb9",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "9d02355586e241c94cdbfca5821b5a6ab8d04885",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.15",
+      "試合結果",
+      "当日のEFF",
+      "B.PREMIERのEFFは確定待ち",
+      "19:51〜19:52 JST取得",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_fixed_html",
+        "path": "source.html",
+        "url": "https://basuke-matome.jp/article-games-20261115.html",
+        "usage": "記事内容の根拠。実ファイルのblob SHA一致を確認。"
+      },
+      {
+        "type": "article_fixed_text",
+        "path": "source.txt",
+        "usage": "記事内容の根拠。試合日2026.11.15、資料取得19:51〜19:52 JST、B.PREMIERの当日EFFは公式記録確定待ち。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "view_imageで目視。黒×ライム、太い見出し、インク・ブラシのみ継承。選手・成績・日付は継承しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "関屋 心",
+        "selection": "ランダム",
+        "selection_reason": "記事は複数試合・ポジション別一覧で特定の主役がいないため。本文のTOP3掲載選手14名（重複を除く）からPython random.Random('9864a8c0e242fb6b2d67').choiceで抽選。",
+        "selection_pool": [
+          "アンソニー・クレモンズ",
+          "関屋 心",
+          "村上 慎也",
+          "保岡 龍斗",
+          "久岡 賢太郎",
+          "オドゲレル トルガ",
+          "ジョーダン・スキッパーブラウン",
+          "ジェイデン・ガードナー",
+          "フランシス・ロペス",
+          "ジェイミン・ブレイクフィールド",
+          "ユージーン・フェルプス",
+          "ブラントン・チャットフィールド",
+          "タイラー・ワイドマン",
+          "ジョシュ・スコット"
+        ],
+        "source": "B.LEAGUE公式プロフィール",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000330",
+        "image_url": "https://www.bleague.jp/files/user/roster/709/2026-27/51000330_03.png",
+        "observed_features": "短い黒髪と短い前髪、サイドの刈上げ、太めの眉、細い目、幅のある輪郭、顎を中心としたひげ、上唇のひげは目立たない。黒い長袖インナー。公式写真をview_imageで目視し、容姿のみ参照。",
+        "treatment": "写真貼付なし。ロゴ・スポンサー文字・背番号を除去したイラスト。画像に氏名・個人成績・出場・活躍は書かず、実際の場面の再現としない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate exactly ONE finished Japanese basketball news thumbnail, approximately 16:9 landscape, ideally 1792x1008 pixels (at least 1000 px wide), opaque PNG.\n\nArt direction: approved editorial basketball ink illustration style. Near-black #151A18 background, vivid lime #CCF43B diagonal dry-brush marks, warm off-white Japanese typography, orange basketball as the only additional bright color. Bold high-contrast hand-drawn ink outlines, expressive brush shading and restrained halftone texture. Clearly an illustration, never photographic, no photographic collage.\n\nSubject: one REAL basketball player, Kokoro Sekiya (関屋 心), randomly selected from the article's listed players. He is the ONLY person. His appearance has been checked in the official B.LEAGUE portrait at https://www.bleague.jp/files/user/roster/709/2026-27/51000330_03.png. Depict his recognisable observed features: young adult Japanese man, compact lean athletic build, short dense black hair with a straight short fringe and neatly faded sides, broad oval-to-angular face, strong straight dark eyebrows, narrow dark eyes, moderately broad straight nose, prominent ears, clean upper lip, small dark chin beard/goatee extending lightly along the lower jaw. Face must be readable in warm ivory and black ink, not lost in shadow. Give him a concentrated playing expression. Plain light basketball jersey over a black long-sleeve compression shirt, with absolutely NO name, number, logo, sponsor marks or lettering on clothing.\n\nAction and framing: an energetic low driving dribble, torso leaning forward diagonally, knees bent, one hand naturally controlling the orange basketball near his hip/knee and the other arm bent for balance. Three-quarter front view so the face is recognisable. Place him in the right 42% of the image, from head through knees, with face, both hands, ball and all fingers contained comfortably inside the canvas. Ball is a prop controlled by the player. Natural anatomy, no extra limbs, no duplicated fingers. Use a rising lime brush diagonal behind him for movement, not the overhead shooting pose of the style sample. This is a generic illustrative basketball movement, NOT a recreation of an actual game, final shot, score or highlight.\n\nLayout: clear disciplined left text block occupying about 56% of width, ample edge safety (5%). Large heavy Japanese sans-serif headlines, 2 dominant lines; readable even at thumbnail scale. Player does not overlap or obscure any text. Small top brand/date. A compact readable secondary note below the main headline. Footnote along bottom-left kept clear of artwork. Minimal elements, no tables, no scoreboard, no logos.\n\nRender exactly the following text, with no other text:\nTop small: 「バスケまとめ」\nNext small: 「2026.11.15」\nMain huge off-white: 「試合結果」\nMain huge lime: 「当日のEFF」\nSecondary off-white: 「B.PREMIERのEFFは確定待ち」\nSmaller off-white: 「19:51〜19:52 JST取得」\nBottom visible off-white: 「イラスト（AI生成）」\nBottom next to it: 「イメージ」\n\nEditorial constraints: the ONLY article basis is the supplied fixed source.html and source.txt for article-games-20261115.html: results as of 2026-11-15 19:51 JST, data collected 19:51–19:52 JST, B.PREMIER daily EFF awaiting all official records, B.ONE daily EFF listed. Do not add any unprovided news. Because the player was selected randomly, do NOT write his name, team, individual stats, rank, participation or achievement anywhere. The visible labels must be precisely 「イラスト（AI生成）」 and 「イメージ」. Do not carry over the style sample's player, date, 38 points, team names, or score. No league/team logos, no official photographs, no invented player. Make the finished design polished, visually dynamic and clean.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "内蔵画像生成",
+      "generation_count": 1,
+      "revision_count": 0,
+      "candidate_path": "/Users/genjo/.codex/generated_images/01a1dedf-dac1-7432-b04b-e9164d3c5527/exec-3bacdab3-1ffa-41be-a953-4b8af6777ad1.png",
+      "qa_method": "生成された実画像を目視で検品。公式プロフィール写真をview_imageで事前確認。",
+      "qa_notes": {
+        "text_and_numbers": "画像の8つのテキスト要素を確認。2026.11.15、当日のEFF、19:51〜19:52 JST取得が固定本文と一致。個人成績・選手名・スコアの記載なし。",
+        "source_qualifiers": "B.PREMIERのEFFは確定待ちを画像で確認。当日の全リーグのEFF確定を断定せず、資料取得時刻を明記。",
+        "likeness_or_no_named_person": "実在の関屋心選手。公式写真に見られる短い黒髪・サイド刈上げ・眉・目・輪郭・顎ひげをイラストで確認。氏名と活躍・出場を文字で示していない。実際の特定場面の再現を称していない。",
+        "layout": "横長の黒×ライム構図、太い日本語見出し、顔・両手・ボールと必要な文字に欠けなし。自然な腕と指、読めるコントラスト、ロゴ・スポンサー文字なし。膝から下の画面外への切れは構図上の意図したクロップ。",
+        "ai_label": "画像下部に「イラスト（AI生成）」と「イメージ」を目視確認。"
+      },
+      "width": 1672,
+      "height": 941,
+      "output_sha256": "5e7f8cd7749ce1ec18e9d263d884ee20c052d06ab7646bcd69c00f0c6e63beb9",
+      "verified_at": "2026-11-15T20:05:53.997476+09:00"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-15T11:06:00.417182+00:00",
+  "publication_approved": false
+}

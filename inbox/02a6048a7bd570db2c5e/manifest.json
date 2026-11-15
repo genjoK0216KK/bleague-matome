@@ -1,0 +1,94 @@
+{
+  "id": "02a6048a7bd570db2c5e",
+  "article_path": "article-results-one-next-20261115.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261115.html",
+  "source_commit": "",
+  "source_blob_sha": "b3794f36cc36965f97211a68b29dd4776d872f80",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "286b26cf22b855a68f9b994ce43fbf6d964e381190887f3b19257b2a56ac95d2",
+  "last_observed_blob_sha": "b3794f36cc36965f97211a68b29dd4776d872f80",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/02a6048a7bd570db2c5e/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/02a6048a7bd570db2c5e/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-15T11:02:54.798787+00:00",
+  "creation_event_id": "23b5ad3b6d19e39a9ec0",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/02a6048a7bd570db2c5e/thumbnail.png",
+  "image_sha256": "499c893e85327a9574d34c04ebbda9a5d0f0bd6f44493275a601d3df79204c04",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "b3794f36cc36965f97211a68b29dd4776d872f80",
+    "text_lines": [
+      "バスケまとめ",
+      "11/15 試合結果",
+      "B.ONE 当日のEFF",
+      "ポジション別TOP3",
+      "B.PREMIER：当日EFFは確定待ち",
+      "B.NEXT：この日試合なし",
+      "2026.11.15 19:51時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/02a6048a7bd570db2c5e/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261115.html",
+        "note": "固定原稿。記事内容の根拠。blob SHA一致を確認。"
+      },
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/02a6048a7bd570db2c5e/source.txt",
+        "note": "固定原稿。B.ONE当日EFFポジション別TOP3、B.PREMIER当日EFF確定待ち、B.NEXT試合なし、19:51時点を照合。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "view_imageで実見。黒とライム、太い日本語、インク・ブラシを参照。選手・氏名・成績は転用しない。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://eftokyo-z.jp/team/players/detail/id=20532?PlayerID=51000680",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026111519/files/user/roster/715/2026-27/51000680_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/02a6048a7bd570db2c5e/references/brandton-chatfield-official.jpg",
+        "note": "公式プロフィール写真をview_imageで確認。容姿参照専用。写真を完成画像へ貼り付けず、外部の成績を本文根拠に使っていない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ブラントン・チャットフィールド",
+        "selection": "ランダム",
+        "selection_method": "本文のポジション別TOP3掲載選手14名を一意化しsecrets.choiceで選択",
+        "selection_evidence": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/02a6048a7bd570db2c5e/selection.json",
+        "reason": "複数試合・ポジション別順位の総覧で単独の本文主役がないため。",
+        "official_profile": "https://eftokyo-z.jp/team/players/detail/id=20532?PlayerID=51000680",
+        "official_photo": "https://bleague.bl.kuroco-img.app/v=2026111519/files/user/roster/715/2026-27/51000680_01.jpg",
+        "observed_features": "短い乱れた明るい茶色の巻き毛、短いサイド、広めの額、長めの顔と角のある顎、直線的な鼻、髭なし、厚い肩と腕。生成画像で対応する特徴を目視確認。",
+        "depiction": "胸元で両手にボールをつかみ上体をひねるプレーのイメージ。実際の試合場面の再現ではない。",
+        "image_text_policy": "氏名・背番号・個人成績・出場・活躍の主張なし。イラスト（AI生成）、イメージと明記。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 1536x864 pixels or larger, opaque PNG.\nPrimary request: an energetic hand-drawn ink-and-brush illustration for バスケまとめ, matching the approved black #151A18 and electric lime #CCF43B visual system, warm off-white text, orange basketball, few strong elements, rough brush streaks and crisp heavy Japanese typography. Clearly illustrated, never photographic.\n\nReal subject: Brandton Chatfield (ブラントン・チャットフィールド), the real basketball player. His official Tokyo Z profile was visually checked. Preserve these observed features: fair/light skin, short tousled curly light-brown hair with golden tips and short sides, fairly broad forehead, long oval face with a square strong jaw and chin, straight narrow nose, medium brown eyebrows, slightly deep-set eyes, clean-shaven face (NO beard or mustache), large athletic shoulders and muscular long arms. Do not substitute a generic imaginary athlete. He is selected randomly from the players named in the manuscript; no player name, jersey number, individual statistics, performance claim, or participation claim may appear in the image.\n\nComposition: player on LEFT 43% of the frame, from upper thigh to above head, body twisting dynamically as he gathers an orange basketball securely with BOTH hands at upper chest level after an imagined rebound. The head is a clear three-quarter view, eyes focused slightly upward. Ball is a prop held by the player. Strong readable silhouette, anatomically plausible two arms and hands, five natural fingers per hand with realistic occlusion. Keep face, both hands, and entire ball well inside frame. Plain sleeveless off-white basketball kit with charcoal shading; no emblems, text, sponsors or numbers on clothing. No other people. This is a generic imagined basketball action, NOT a reenactment of any real game or decisive play. Abstract black background with broad lime diagonal ink sweeps behind athlete, restrained speckles; no arena signage or scoreboard.\n\nTypography on RIGHT 54%, completely separate from face/hands/ball. Bold clean highly legible Japanese gothic headlines, carefully balanced and aligned, with safe margins. The following is the COMPLETE visible copy, spelled exactly, no extra copy:\nsmall top: 「バスケまとめ」\nlargest headline: 「11/15 試合結果」\nlime secondary headline: 「B.ONE 当日のEFF」\nbold substantial line: 「ポジション別TOP3」\nsmall but clearly readable two-line qualifiers: 「B.PREMIER：当日EFFは確定待ち」\n「B.NEXT：この日試合なし」\nsmall timestamp: 「2026.11.15 19:51時点」\nfooter: 「イラスト（AI生成）」 「イメージ」\n\nThe TOP3 applies separately to positions in B.ONE, not an overall ranking. Preserve the pending qualifier for B.PREMIER. Do not show scores or numeric player stats. Do not import the names, 38 points, dates, match scores, pose, or person from the older approved style example. No team logos, league logos, watermarks, official photographs, pasted photo cutouts, photorealism, collage, duplicated limbs, or clipped text. Render all lettering as part of the finished image.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "attempts": 1,
+      "corrections": 0,
+      "output_format": "PNG",
+      "original_output": "/Users/genjo/.codex/generated_images/01a1dee2-b01d-7a31-820f-96c2780568a9/exec-2c22cd49-cd94-47a9-a216-ce0c258d8856.png",
+      "qa_method": "生成結果とローカル出力をview_imageで実見。文字・数値・留保・容姿・両手・ボール・見切れ・AIラベルを確認。",
+      "width": 1672,
+      "height": 941,
+      "sha256": "499c893e85327a9574d34c04ebbda9a5d0f0bd6f44493275a601d3df79204c04"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-15T11:09:47.456880+00:00",
+  "publication_approved": false
+}
