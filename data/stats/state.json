@@ -1,7 +1,5 @@
 {
- "pending": {
-  "506593": "2026-11-15"
- },
+ "pending": {},
  "published": [
   "2026-10-12",
   "2026-10-17",
@@ -22,7 +20,8 @@
   "2026-11-11",
   "2026-11-12",
   "2026-11-13",
-  "2026-11-14"
+  "2026-11-14",
+  "2026-11-15"
  ],
  "days": {
   "2026-11-08": {
@@ -96,22 +95,13 @@
    "source": "data/match_articles/article-games-20261114.json"
   },
   "2026-11-15": {
-   "state": "held",
+   "state": "ready",
    "games_total": 4,
-   "games_ready": 3,
-   "players": null,
-   "holds": [
-    {
-     "key": "506593",
-     "home": "名古屋D",
-     "away": "東京SR",
-     "status": "unconfirmed",
-     "record_note": null,
-     "reason": "record_not_fixed"
-    }
-   ],
+   "games_ready": 4,
+   "players": 88,
+   "holds": [],
    "excluded": [],
-   "content_as_of": "2026-11-15 21:53 JST",
+   "content_as_of": "2026-11-15 22:07 JST",
    "source": "data/match_articles/article-games-20261115.json"
   }
  },

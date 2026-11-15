@@ -677,13 +677,13 @@
   "article-games-20261115.html": {
    "article_path": "article-games-20261115.html",
    "article_url": "https://basuke-matome.jp/article-games-20261115.html",
-   "editorial_fingerprint": "286b26cf22b855a68f9b994ce43fbf6d964e381190887f3b19257b2a56ac95d2",
-   "event_id": "af03289fd59b0aa01203",
-   "recorded_at": "2026-11-15T11:02:48.488657+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "9d02355586e241c94cdbfca5821b5a6ab8d04885",
-   "stable_fingerprint": "286b26cf22b855a68f9b994ce43fbf6d964e381190887f3b19257b2a56ac95d2",
+   "editorial_fingerprint": "2526dd42d7b7bce397bbfabb0460051ae2769cccb93466a907f087543888766e",
+   "event_id": "79d215ccbb9de2eb0a23",
+   "recorded_at": "2026-11-15T13:08:07.114919+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "77b7da3823206d01874fc2e5417021ceed8ecf33",
+   "stable_fingerprint": "2526dd42d7b7bce397bbfabb0460051ae2769cccb93466a907f087543888766e",
    "status": "requested",
    "target_date": "20261115",
    "title": "11/15 試合結果・当日のEFF"
@@ -929,13 +929,13 @@
   "article-results-one-next-20261115.html": {
    "article_path": "article-results-one-next-20261115.html",
    "article_url": "https://basuke-matome.jp/article-results-one-next-20261115.html",
-   "editorial_fingerprint": "286b26cf22b855a68f9b994ce43fbf6d964e381190887f3b19257b2a56ac95d2",
-   "event_id": "23b5ad3b6d19e39a9ec0",
-   "recorded_at": "2026-11-15T11:02:48.488657+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "b3794f36cc36965f97211a68b29dd4776d872f80",
-   "stable_fingerprint": "286b26cf22b855a68f9b994ce43fbf6d964e381190887f3b19257b2a56ac95d2",
+   "editorial_fingerprint": "2526dd42d7b7bce397bbfabb0460051ae2769cccb93466a907f087543888766e",
+   "event_id": "a528cc575c06b33ff8b6",
+   "recorded_at": "2026-11-15T13:08:07.114919+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "a3fca7720117672cb89d8175f6205885ccea3b4c",
+   "stable_fingerprint": "2526dd42d7b7bce397bbfabb0460051ae2769cccb93466a907f087543888766e",
    "status": "requested",
    "target_date": "20261115",
    "title": "11/15 試合結果・当日のEFF"
@@ -1097,6 +1097,18 @@
    "status": "requested",
    "target_date": "20261114",
    "title": "11月14日の貢献度ランキング 1位はアーロン・ホワイト（三河）の49"
+  },
+  "article-stats-20261115.html": {
+   "article_path": "article-stats-20261115.html",
+   "article_url": "https://basuke-matome.jp/article-stats-20261115.html",
+   "editorial_fingerprint": "5f073d50f1e335221174d56740ec0d8003cd1114783a785262aed789915da99d",
+   "event_id": "def93725a9011de0e44b",
+   "recorded_at": "2026-11-15T13:08:07.114919+00:00",
+   "source_blob_sha": "ff4cf022b0ab8500e65fb8ab5421aaa6c8d19b54",
+   "stable_fingerprint": "5f073d50f1e335221174d56740ec0d8003cd1114783a785262aed789915da99d",
+   "status": "requested",
+   "target_date": "20261115",
+   "title": "11月15日の貢献度ランキング 1位はデクスター・デニス（島根）の38"
   }
  },
  "version": 1
