@@ -1,0 +1,82 @@
+{
+  "id": "6b5e1fd48ec9ce315e3d",
+  "article_path": "article-daily-20261116.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261116.html",
+  "source_commit": "",
+  "source_blob_sha": "489f7c55d75b3bba1b75fd75a03340ce1e556413",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "02ac3027c5dfb4d9833158aaca07ea11341378eb47e59e805855d2bb9118a371",
+  "last_observed_blob_sha": "489f7c55d75b3bba1b75fd75a03340ce1e556413",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6b5e1fd48ec9ce315e3d/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6b5e1fd48ec9ce315e3d/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-15T23:19:52.559694+00:00",
+  "creation_event_id": "37c794add268cf0df9e5",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/6b5e1fd48ec9ce315e3d/thumbnail.png",
+  "image_sha256": "3d3f47d9af5b4e679b6b1f216835c5f47716bb71bad2a4ed5dc074fc5436f786",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "489f7c55d75b3bba1b75fd75a03340ce1e556413",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.16",
+      "千葉J vs 三遠",
+      "5連勝の攻撃力",
+      "× 堅守",
+      "試合前予測",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6b5e1fd48ec9ce315e3d/source.html",
+        "role": "本文・見出し・日付・数値・留保の唯一の根拠（source.txtと併用）",
+        "article_url": "https://basuke-matome.jp/article-daily-20261116.html",
+        "used_facts": [
+          "2026.11.16の試合前予測",
+          "千葉J対三遠",
+          "千葉Jの5連勝と攻撃力、三遠の堅守"
+        ],
+        "qualifiers": "試合前の独自分析。結果・当日出場を断定しない。5連勝は千葉Jのチーム実績。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6b5e1fd48ec9ce315e3d/source.txt",
+        "role": "固定本文の照合用。外部ページを記事内容の根拠にしない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "エルジー・ギル（LG Gill）",
+        "selection": "ランダム",
+        "selection_reason": "記事全体の主題は両チームの攻守比較で特定選手が主役ではないため、本文に登場する5選手から選出。",
+        "selection_method": "Python random.SystemRandom().choiceを1回実行。",
+        "selection_pool": [
+          "マット・コステロ",
+          "ネイト・ウィリアムズ",
+          "エルジー・ギル",
+          "ヤンテ・マテン",
+          "ダリウス・デイズ"
+        ],
+        "source": "千葉ジェッツ公式：2026-27シーズン エルジー・ギル選手契約締結のお知らせ",
+        "source_url": "https://chibajets.jp/news/detail/id=27547",
+        "official_image_url": "https://chibajets.bl.kuroco-img.app/v=1793522777/files/user/team/2026-27/LGGILL-400x500.jpg",
+        "appearance_reference": "公式掲載ポートレートをview_imageで目視。極短い黒髪と整えた生え際、面長の輪郭、目鼻、口ひげと短い顎ひげ、右腕のタトゥーを参照。写真の貼付なし。",
+        "depiction": "ドライブするプレー姿のインクイラスト。実際の試合場面を再現せず、当日の出場や活躍を示さない。画像内に選手名・個人成績・背番号は入れていない。",
+        "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "qa_observation": "修正版を実見。極短髪、輪郭、口ひげ・顎ひげを公式資料と比較。写真風ではなくインク画。顔・両手・ボール・見出しが見切れず、指と手の形は自然。試合前予測とイメージ、AI表記は可読。"
+      }
+    ],
+    "prompt": "初回生成プロンプト:\nUse case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, wide 16:9, target 1792 x 1008 pixels, opaque PNG.\nThis is a new image. Use the previously viewed black-and-lime approved thumbnail only as a STYLE reference (bold typography, dry brush ink, restrained palette); do not copy its player, name, score, date or shooting pose.\nUse the previously viewed official red-jersey portrait ONLY as an APPEARANCE reference for the one illustrated athlete, the real basketball player LG Gill (エルジー・ギル). His face has a very short close-cropped black buzz cut with neat squared hairline and faded sides, brown skin, a long oval face with defined cheekbones and jaw, focused almond shaped eyes, a broad straight nose, small mustache and closely trimmed goatee along chin and jaw. Tall lean muscular build, tattoos on his right arm. Retain recognizability in an expressive hand-inked illustration, not a photo or photo collage. Do not depict a generic imaginary player.\nLayout: player in the LEFT 40 percent, body leaning diagonally forward in an athletic low dribble drive, three-quarter view, eyes up. His near hand controls a SINGLE orange basketball at hip height, far arm bent naturally. Show his head, both hands and the whole ball fully within the canvas; thighs may end deliberately at lower boundary. Plain red basketball uniform with white trim, NO lettering, no numbers, no team/league/sponsor logos. No second person. Make the action energetic and the face clearly visible rather than buried in shadow.\nRIGHT 57 percent: carefully aligned giant Japanese type in clear open dark space; excellent readability and typographic hierarchy. Avoid collisions with player. Background deep charcoal green #151A18, lime #CCF43B sweeping ink brush gesture behind the athlete, warm ivory #F8F5EB type, subtle printed texture, orange ball and limited red uniform. Predominantly black-lime visual system. Flat editorial ink illustration, crosshatching, bold brush marks, reduced colors, not photorealistic, no 3D.\nRender ONLY these exact text lines, all clearly legible and inside 4 percent safe margins:\nTop small brand and date: 「バスケまとめ」 and 「2026.11.16」\nAbove main headline, medium: 「千葉J vs 三遠」\nMain headline in two large lines: 「5連勝の攻撃力」 then 「× 堅守」\nDistinct visible lime badge: 「試合前予測」\nBottom footer, on clean dark background, clearly readable: 「イラスト（AI生成）」 and 「イメージ」\nThe five consecutive wins refer to Chiba Jets as a team, never to an individual. This article is a pregame comparison; do not show any final score, victory, guaranteed appearance or player performance. The player was randomly selected from names in the fixed article. Do not include his name, statistics or claims of participation. The action is an imagined illustration, not a reconstructed real match moment. Do not add scoreboards, trophies, championship cues, invented arena, signatures, English slogans, other text, logos or photo elements.\nThe sole article source is the supplied fixed source.html/source.txt: Chiba Jets versus San-en, Chiba five straight wins and strong offense versus San-en defense, pregame prediction on 2026.11.16. External official player photo is for appearance only.\n\n修正プロンプト（1回）:\nEdit image 1, the generated basketball thumbnail. Image 2 is the official LG Gill portrait, used ONLY as a facial appearance reference; never paste the photo.\nMake one final polish revision focused on safe framing and the official hairstyle. Preserve the complete design, colors, exact Japanese words, dribbling pose, illustrated face identity, ink/brush style, red unbranded uniform, date, and AI label.\n1) Give every headline and date at least 60 pixels of space from the left/right/top boundaries at this resolution. In particular shrink and reposition the right-side typography block a little so the final 力 is comfortably away from the right edge. Make the text groups slightly smaller, keeping the main headlines visually dominant and all lines unchanged.\n2) Fit the player's head and both elbows, hands and ball inside the canvas with breathing room. Shift/scale the whole athlete slightly smaller while preserving the expressive pose and full readable face. The thighs may still crop naturally at the bottom. Ball stays fully visible.\n3) Match LG Gill's hair to image 2: extremely short close-cropped buzz cut with low faded sides and a neat hairline, no thick curly high top. Preserve his long oval face, trimmed mustache and short goatee, eyebrows, nose and brown skin.\nDo not add or remove any words. The exact text remains:\nバスケまとめ\n2026.11.16\n千葉J vs 三遠\n5連勝の攻撃力\n× 堅守\n試合前予測\nイラスト（AI生成）\nイメージ\nNo logos, jersey numbers, personal name, extra text, scoreboard or photographic elements. Keep approximately 16:9 and at least 1000 pixels wide. One image only.",
+    "generator": "内蔵 image_gen.imagegen。初回生成1回、修正1回。最終画像1672×941px・PNG。API/CLI画像生成なし。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-15T23:23:19.912772+00:00",
+  "publication_approved": false
+}
