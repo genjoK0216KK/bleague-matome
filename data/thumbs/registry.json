@@ -1960,6 +1960,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "11/15 試合結果・当日のEFF"
   },
+  "article-results-one-next-20261116.html": {
+   "article_path": "article-results-one-next-20261116.html",
+   "editorial_fingerprint": "9515a69f971f64652099dc02fc26b22cb76919be0315198c0e9e12ad7188d5cb",
+   "files": {
+    "eyecatch": {
+     "height": 721,
+     "path": "thumbs/auto/article-results-one-next-20261116-1782a9836670.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-results-one-next-20261116-1782a9836670-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "aeb7d91e145ec447e4e7",
+   "image_sha256": "1782a9836670bb64a771d821af643a6785b021aeb04acbd5ddee81ac11759587",
+   "imported_at": "2026-11-15T19:11:08.010268+00:00",
+   "prepared_at": "2026-11-15T19:10:32.467104+00:00",
+   "source_blob_sha": "8cf2f6c98e4e6deffac68c581b9a655cdb00f294",
+   "source_size": [
+    1671,
+    941
+   ],
+   "stable_fingerprint": "9515a69f971f64652099dc02fc26b22cb76919be0315198c0e9e12ad7188d5cb",
+   "style": "ink-lime-portrait-v5",
+   "title": "11/16 出場予定選手（登録選手）のベスト5"
+  },
   "article-stats-20261026.html": {
    "article_path": "article-stats-20261026.html",
    "editorial_fingerprint": "fa8bf9395b06c6d599e33f04949ace3dd509a5381fb0af173f99fa72386c4be5",
@@ -2354,13 +2382,6 @@
   }
  },
  "log": [
-  {
-   "article": "article-analysis-osaka-20261110.html",
-   "at": "2026-11-10T03:27:35.499793+00:00",
-   "event": "imported",
-   "id": "dfbdc23641029c7993d6",
-   "image": "620d912ab02d"
-  },
   {
    "article": "article-analysis-hokkaido-20261111.html",
    "at": "2026-11-11T19:20:48.141959+00:00",
@@ -2913,6 +2934,13 @@
    "event": "imported",
    "id": "efb80209060e7b3d3a49",
    "image": "5a6a36a4c476"
+  },
+  {
+   "article": "article-results-one-next-20261116.html",
+   "at": "2026-11-15T19:11:08.010291+00:00",
+   "event": "imported",
+   "id": "aeb7d91e145ec447e4e7",
+   "image": "1782a9836670"
   }
  ],
  "seen": {
@@ -3036,6 +3064,7 @@
   "ad6bf00b0853f0333020": "imported",
   "ada06662cc8e9eb9fc07": "superseded:138edbf6e5eed71be84f",
   "ae8de66420a50e0a2591": "superseded:c1aaf417a1880194d3ac",
+  "aeb7d91e145ec447e4e7": "imported",
   "af2c63bb867d413bfad4": "imported",
   "afa848da9cb4b37513f4": "superseded:68dfe1f0dced4d4c7777",
   "afc600cca296739a9413": "superseded:c422e01f21c312cd1a36",
