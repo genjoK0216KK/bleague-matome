@@ -1,0 +1,111 @@
+{
+  "id": "83ac9a2c488698b37f01",
+  "article_path": "article-daily-20261117.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261117.html",
+  "source_commit": "",
+  "source_blob_sha": "47b2b7f73b1c072d18a1e853d733cbbaacd3935d",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "63335b233f8772acb01daa09c72caadc25bd29688ec6f364bd58dce6dae03c6c",
+  "last_observed_blob_sha": "47b2b7f73b1c072d18a1e853d733cbbaacd3935d",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/83ac9a2c488698b37f01/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/83ac9a2c488698b37f01/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-16T23:15:45.102207+00:00",
+  "creation_event_id": "02c5d77438edf9c3c2b1",
+  "event_blob_sha": "47b2b7f73b1c072d18a1e853d733cbbaacd3935d",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/83ac9a2c488698b37f01/thumbnail.png",
+  "image_sha256": "b88e9d95a47d3d554a3e615f8078680f31d065a30a34ee95efe543bce9057cd1",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "47b2b7f73b1c072d18a1e853d733cbbaacd3935d",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.17",
+      "試合前予測",
+      "長崎 vs 三河",
+      "三河が有利",
+      "長崎の勝機は速攻",
+      "出場状況は当日発表待ち",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "role": "記事内容の唯一の根拠（固定版）",
+        "paths": [
+          "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/83ac9a2c488698b37f01/source.html",
+          "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/83ac9a2c488698b37f01/source.txt"
+        ],
+        "article_url": "https://basuke-matome.jp/article-daily-20261117.html",
+        "used_content": "長崎vs三河の試合前予測。独自予測では三河が有利。長崎の勝機はスティールからの速攻。出場状況は当日の発表待ち。選手名は本文中の抽選候補の特定のみに使用。外部ページの成績・試合情報は画像の内容根拠にしていない。"
+      },
+      {
+        "role": "承認済みスタイル（view_imageで確認）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "黒#151A18×ライム#CCF43B、太い日本語見出し、手描きインク・ブラシ。参考画像の選手・数値・日付は転用していない。"
+      },
+      {
+        "role": "容姿のみの公式資料",
+        "name": "ダバンテ・ガードナー",
+        "url": "https://go-seahorses.jp/team/players/detail/id=14186?PlayerID=&Year=227",
+        "image_url": "https://go-seahorses.bl.kuroco-img.app/v=1789089105/files/user/team/player/2026-27/54_blue.jpg",
+        "image_viewed": true
+      },
+      {
+        "role": "容姿のみの公式資料",
+        "name": "馬場雄大",
+        "url": "https://www.velca.jp/team/players/detail/id=46546?PlayerID=12577",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026111622/files/user/roster/2488/2026-27/12577_01.jpg",
+        "image_viewed": true
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ダバンテ・ガードナー",
+        "team": "シーホース三河",
+        "selection": "ランダム",
+        "selection_reason": "チーム比較・試合前予測の記事で個人の主役が一意に絞れないため、本文登場の三河選手2名（ガードナー、オマラ）から抽選。",
+        "selection_method": "Python random.Random('83ac9a2c488698b37f01').choice、三河候補→長崎候補の順に各1名を抽選。",
+        "official_profile": "https://go-seahorses.jp/team/players/detail/id=14186?PlayerID=&Year=227",
+        "official_image": "https://go-seahorses.bl.kuroco-img.app/v=1789089105/files/user/team/player/2026-27/54_blue.jpg",
+        "visually_observed_features": "厚い肩と腕、幅のある顔、太い眉、幅広の鼻、口ひげとつながった豊かな黒いひげ、短い側頭部と上部・後部にまとめた短いツイスト。",
+        "depiction": "ボールを保持して体をひねるプレーのイメージ。無地の濃紺ユニフォーム。氏名・背番号・個人成績・出場や活躍の断定は画像に入れていない。"
+      },
+      {
+        "name": "馬場雄大",
+        "team": "長崎ヴェルカ",
+        "selection": "ランダム",
+        "selection_reason": "チーム比較・試合前予測の記事で個人の主役が一意に絞れないため、本文登場の長崎選手3名（ブラントリー、ランドルフ、馬場雄大）から抽選。",
+        "selection_method": "同じrandom.Randomインスタンスで三河選手の抽選後にchoice。",
+        "official_profile": "https://www.velca.jp/team/players/detail/id=46546?PlayerID=12577",
+        "official_image": "https://bleague.bl.kuroco-img.app/v=2026111622/files/user/roster/2488/2026-27/12577_01.jpg",
+        "visually_observed_features": "ひげのない縦長の輪郭と明確な顎、細めの目、まっすぐな鼻、分け目をつけ横へ流した黒褐色の短髪、引き締まった体格。",
+        "depiction": "片手を上げて守るプレーのイメージ。無地のアイボリーのユニフォーム。氏名・背番号・個人成績・出場や活躍の断定は画像に入れていない。"
+      }
+    ],
+    "prompt": "初回生成で使用したプロンプト:\nUse case: ads-marketing.\nCreate exactly ONE finished Japanese basketball editorial thumbnail as a PNG, landscape 16:9, ideally 1792 x 1008 pixels, at least 1000 pixels wide.\n\nTopic and factual source: the supplied fixed article is a PRE-GAME independent prediction for Nagasaki vs Mikawa on 2026.11.17. It predicts Mikawa has the advantage and Nagasaki's opportunity is fast breaks. Player availability awaits the game-day announcement. Do not portray a completed game or a documented matchup.\n\nVisual style: use the approved black-and-lime hand-inked sports editorial style visible earlier: background #151A18, electric lime #CCF43B, warm ivory typography and highlights, one orange basketball. Big heavy Japanese Gothic headline, rough brush swashes, hand-ink linework and sparse halftone, only a few strong visual elements. Clearly an illustration, never photorealistic. No gradients or glossy 3D. Do NOT copy the earlier sample's athlete, wording, date, or statistics.\n\nComposition: powerful left-to-right editorial layout. Left 51% is clean high-contrast typography. Right 49% shows TWO REAL players in a dynamic one-on-one basketball illustration, hips and bent knees visible. Davante Gardner holds a single orange basketball at his hip with two correctly drawn hands while pivoting toward Yudai Baba; Baba is leaning into a defensive stance, one open hand raised, with clear spacing between their faces and arms. This is a conceptual imagined basketball pose, not a recreation of an actual play. Both faces are readable in three-quarter view. Both bodies clearly different. Keep head tops, hands and ball safely inside the canvas. Controlled lime diagonal brush marks behind players; do not obscure faces or text.\n\nPlayer likenesses based on the official portraits inspected in this conversation:\n- Davante Gardner, official Seahorses Mikawa profile at https://go-seahorses.jp/team/players/detail/id=14186?PlayerID=&Year=227 and official portrait https://go-seahorses.bl.kuroco-img.app/v=1789089105/files/user/team/player/2026-27/54_blue.jpg . Broad, heavy powerful build, thick shoulders and upper arms, dark brown skin, broad oval face, thick full black beard connected to mustache, wide nose, strong brow, close-cut sides with short twists gathered high on top and toward the back. Wear a completely plain dark uniform with subtle muted blue tint and ivory trim, absolutely no lettering or emblems.\n- Yudai Baba, official Nagasaki Velca profile https://www.velca.jp/team/players/detail/id=46546?PlayerID=12577 and official portrait https://bleague.bl.kuroco-img.app/v=2026111622/files/user/roster/2488/2026-27/12577_01.jpg . Tall lean athletic Japanese man, clean-shaven long oval face and defined jaw, straight narrow eyes, straight nose, short dark black-brown side-parted hair swept upward and across the forehead with a clear part, fair skin. Wear a completely plain ivory uniform with a subtle dark blue trim, absolutely no lettering or emblems.\nUse photos only as likeness guidance, never paste or reproduce a photo. Do not invent other people.\n\nTEXT: render only the following Japanese copy, exactly and crisply. No player names, no jersey numbers, no individual statistics, no scores.\nSmall masthead at top-left: \"バスケまとめ\"\nSmall date: \"2026.11.17\"\nA compact lime badge above headline: \"試合前予測\"\nVery bold ivory matchup headline: \"長崎 vs 三河\"\nLargest lime main headline: \"三河が有利\"\nA smaller bold ivory supporting line beneath: \"長崎の勝機は速攻\"\nClearly readable modest note near the lower-left: \"出場状況は当日発表待ち\"\nReadable ivory footer on a quiet dark band: \"イラスト（AI生成）｜イメージ\"\n\nKeep all text in safe margins at least 55 px from edges. Headlines have generous line spacing and do not overlap the players. The footer must be genuinely legible, not tiny. No logos, sponsor names, league insignia, team emblems, watermarks, advertising, signature, additional captions, scoreboard, medals, fabricated winning shot, or celebratory result. Anatomically coherent arms, hands and fingers; exactly one basketball.\n\n修正1回で使用したプロンプト:\nEdit the provided finished basketball thumbnail, changing only the illustration's framing on the right. Preserve every Japanese text line, exact wording, typography, black #151A18 and lime #CCF43B palette, brush texture, date, layout of the left text, player identities and dynamic one-on-one concept.\nCritical fix: redraw/scale the TWO illustrated athletes about 10% smaller and place them slightly inward so the entire orange ball and BOTH of Davante Gardner's ball-holding hands, every fingertip and the outside of his arm fit inside the canvas with at least 50 px breathing room on the RIGHT. Both head tops and Yudai Baba's raised hand need at least 45 px clear margin as well. Do not crop fingers at any edge. Keep Gardner's broader heavy powerful build, thick full beard, short twists gathered on top with close sides; keep Baba's clean-shaven long oval face, narrow eyes and swept side-parted black hair. Preserve their recognizable stylized likenesses and plain uniforms with no marks or numbers. Keep one ball, coherent anatomy, five fingers per hand with natural occlusion. Cropping the lower legs at the bottom is acceptable, cropping hands or the ball is not.\nThe entire text must remain fully legible and unchanged: バスケまとめ / 2026.11.17 / 試合前予測 / 長崎 vs 三河 / 三河が有利 / 長崎の勝機は速攻 / 出場状況は当日発表待ち / イラスト（AI生成）｜イメージ.\nThis is an illustration, not an actual game scene. No logos, sponsors, extra text, photographic texture or new elements. Keep the same approximately 16:9 PNG dimensions, at least 1000 px wide. Produce ONE corrected image.",
+    "generator": {
+      "tool": "built-in image_gen.imagegen",
+      "mode": "内蔵画像生成のみ",
+      "initial_generations": 1,
+      "corrections": 1,
+      "correction_reason": "初回候補は右端の手・ボールの余白が狭かったため、人物を縮小し内側へ配置。",
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1e6a5-25cc-79a3-ba25-8fed3ae6034c/exec-326f11c2-ef8d-46e5-bfaa-58fa14168de4.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "output_sha256": "b88e9d95a47d3d554a3e615f8078680f31d065a30a34ee95efe543bce9057cd1",
+      "visual_qa_notes": "修正版の実画像で全コピーと日付、予測の明示、出場未確定の留保、両者の髪型・輪郭・ひげ等、手指・腕のつながり、ボールと手の見切れ解消、AIラベルを目視確認。下腿の意図的なフレーム外はあるが、顔・頭・手・ボールは画像内。公式写真の貼付け、チーム・リーグ・スポンサーのロゴ、選手名、背番号、個人の成績表現なし。特定の実際の試合場面の再現として扱わない。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-16T23:19:36.543716+00:00",
+  "publication_approved": false
+}
