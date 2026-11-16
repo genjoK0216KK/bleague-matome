@@ -1,0 +1,99 @@
+{
+  "id": "6884e4e9ba611c0e630e",
+  "article_path": "article-games-20261117.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261117.html",
+  "source_commit": "",
+  "source_blob_sha": "3b17ce75a8fb84a740d86e3a05a3a3a2db3172fd",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "28d9e824cd3fbc6e0c51e24a6074ee9a86f9c0f72cc05e3ed787dd6da6a3b222",
+  "last_observed_blob_sha": "3b17ce75a8fb84a740d86e3a05a3a3a2db3172fd",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6884e4e9ba611c0e630e/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6884e4e9ba611c0e630e/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-16T19:29:58.614023+00:00",
+  "creation_event_id": "4f7c1c6e6a58f604d5e8",
+  "event_blob_sha": "3b17ce75a8fb84a740d86e3a05a3a3a2db3172fd",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/6884e4e9ba611c0e630e/thumbnail.png",
+  "image_sha256": "601bcab0381e31a2c92c9b809e52a7282ebb672658e19a1a26f2129833d8ed16",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "3b17ce75a8fb84a740d86e3a05a3a3a2db3172fd",
+    "text_lines": [
+      "バスケまとめ",
+      "11/17 試合予定",
+      "長崎 vs 三河",
+      "福岡 vs 徳島",
+      "ともに19:05開始予定",
+      "試合前・公式記録確定待ち",
+      "2026.11.17 04:29 JST時点",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_facts_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6884e4e9ba611c0e630e/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261117.html",
+        "blob_sha": "3b17ce75a8fb84a740d86e3a05a3a3a2db3172fd",
+        "verified_facts": "2026-11-17 04:29 JST時点。長崎—三河・福岡—徳島はともに19:05の試合前。当日のEFFは全試合の公式記録確定待ち。本文に個人名なし。タイトルのベスト5に対応する確定選手・数値は本文にないため画像に順位・個人成績を記載しない。"
+      },
+      {
+        "role": "article_facts_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6884e4e9ba611c0e630e/source.txt"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "view_imageで目視確認。黒×ライム、太字日本語、手描きインク・ブラシのみ継承。元の人物・成績・日付は継承しない。併記されたA-faison-ivory-v3.pngは指定フォルダに存在しなかったため未使用。"
+      },
+      {
+        "role": "official_roster_selection_only",
+        "url": "https://gambarous.jp/team/players/"
+      },
+      {
+        "role": "official_likeness_reference_only",
+        "url": "https://gambarous.jp/team/players/detail/id=46569?PlayerID=42689",
+        "image_url": "https://gambarous.jp/files/rcms_conv_webp/files/user/4-TEY.jpg_1789450969.webp?v=1789451181",
+        "note": "公式プロフィール写真を取得しview_imageで目視確認。容姿だけ参照。公式写真・ロゴ・スポンサー文字を成果へ貼り込んでいない。外部の成績・試合情報は画像本文に使用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "テイブリオン・ドーソン",
+        "name_en": "Tavrion Dawson",
+        "team": "徳島ガンバロウズ",
+        "selection": "ランダム",
+        "selection_reason": "固定本文に選手名なし。本文に登場する4チーム（長崎・三河・福岡・徳島）をPython random.SystemRandomで抽選して徳島、徳島公式選手一覧12人から同方法でドーソンを選出。",
+        "sources": [
+          "https://gambarous.jp/team/players/",
+          "https://gambarous.jp/team/players/detail/id=46569?PlayerID=42689",
+          "https://gambarous.jp/files/rcms_conv_webp/files/user/4-TEY.jpg_1789450969.webp?v=1789451181"
+        ],
+        "observed_features": "短い黒い縮れ毛、縦長の輪郭、高い頬、幅のある鼻、やや重いまぶた、口ひげと顎ひげ、長身で筋肉質。公式写真に照合して手描きイラストとして検品。",
+        "depiction": "1人でボールを扱いながら前傾するプレーのイメージ。実際の試合場面の再現ではない。画像に選手名・個人成績・出場・活躍の記述なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION:\nUse case: illustration-story.\nCreate exactly one finished Japanese editorial basketball thumbnail for バスケまとめ, PNG, wide 16:9 composition, ideally 1792x1008 pixels or larger. Opaque background.\n\nStyle reference: the black and lime approved thumbnail viewed in this conversation (B-culver-black-lime-v3.png) is STYLE ONLY: dark charcoal #151A18, acid lime #CCF43B, ivory ink, forceful hand-drawn brush marks, bold readable Japanese typography, few elements, print-editorial energy. Do not reuse the sample's player, player name, statistics, dates, scores, pose or layout.\n\nSubject and likeness: exactly ONE real professional basketball player: Tavrion Dawson (テイブリオン・ドーソン), from the official Tokushima Gambarous portrait that was viewed. Use the portrait only to guide drawn likeness, never paste photographic pixels. Preserve his short naturally coiled textured black afro with irregular tips, long oval face, high cheekbones, broad nose, slightly heavy-lidded eyes, moustache and short chin/goatee beard with relatively clean cheeks, dark skin and strong tall athletic build. Face must remain clearly legible, with ink highlights rather than a black silhouette. Draw him completely as a hand-inked illustration, not photorealistic.\nPose: on the LEFT 43% of the image, in a dynamic low forward drive, torso leaning diagonally, eyes looking toward play, knees bent. One hand controls an orange basketball alongside his hip, the other is bent naturally for balance. Full head, both hands and complete ball stay safely inside the canvas. Mid-thigh lower crop is intentional; no joint cutoffs or floating limbs. A simple unbranded light blue and ivory sleeveless basketball uniform, no words, no number, no team logo, no sponsor marks. Accurate hands and arm anatomy.\nThe player was randomly selected solely as an illustrative motif from a team named in the manuscript. This is not a depiction or claim of his actual appearance or performance in this game, and not an actual photographed game moment. No other people.\n\nComposition: player anchors left, typography occupies right 55%, maintaining generous 4% outer safe margins, all lines fully visible. An energetic lime brush swoosh runs behind the figure but does not obstruct text or facial details. Plain subtle charcoal backdrop; no crowd, no scoreboards, no logo. Strong size hierarchy: huge lime date and ivory headline; two clean readable fixture rows; smaller but legible factual qualifier and footer. Avoid clutter and tiny illegible text.\n\nRender ONLY these exact Japanese text lines, no extra lettering:\n「バスケまとめ」\n「11/17 試合予定」\n「長崎 vs 三河」\n「福岡 vs 徳島」\n「ともに19:05開始予定」\n「試合前・公式記録確定待ち」\n「2026.11.17 04:29 JST時点」\n「イラスト（AI生成）｜イメージ」\n\nThe two fixture names and the common scheduled 19:05 time are schedule information, NOT scores. The pending qualifier must be clearly readable. Do not add any player name, rankings, BEST5/TOP3, performance claim, result, point total or jersey text. Retain the AI illustration disclosure exactly. All article facts come only from the supplied frozen manuscript: at 2026-11-17 04:29 JST both fixtures are pregame, and official records await confirmation.\n\nONE PERMITTED REVISION:\nEdit this existing thumbnail once, changing ONLY framing / safe margins. Keep exactly the same hand-inked illustration, the same real player Tavrion Dawson likeness, the same pose, colors, brush texture, and every existing Japanese text character and number. Keep 16:9, at least 1672 pixels wide, PNG.\nPROBLEM: the player's leftmost hand touches the left image boundary, hair nearly touches the top, headline nearly touches the right.\nFIX: scale the entire existing designed content to 90% of its present size, centered within a slightly expanded matching dark charcoal #151A18 background, so there is a continuous safe margin of at least 45 pixels on all four edges. Reconstruct the tiny leftmost cropped edge of the player's hand naturally, keeping anatomically correct fingers. Do not crop hands, head, ball or text. The lower mid-thigh framing may remain intentional, with the figure naturally continuing to the bottom if needed. Preserve the text size hierarchy and layout, avoiding new visual elements. No names, scores, numbers on jersey, logos or photographic textures.\nText must stay exactly:\nバスケまとめ\n11/17 試合予定\n長崎 vs 三河\n福岡 vs 徳島\nともに19:05開始予定\n試合前・公式記録確定待ち\n2026.11.17 04:29 JST時点\nイラスト（AI生成）｜イメージ",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "内蔵画像生成",
+      "generations": 1,
+      "revisions": 1,
+      "final_original_path": "/Users/genjo/.codex/generated_images/01a1e5d6-71d9-7340-b5d6-8300a45bcdf5/exec-5c01ab43-6cda-4b8c-ad0d-4cab2cf7a71b.png",
+      "final_size": [
+        1672,
+        941
+      ],
+      "qa_method": "修正版の実画像を目視検品。文字・日付・19:05・04:29の一致、試合前/公式記録確定待ち、本人の髪型/輪郭/目鼻/ひげ、両手とボールの形、見切れなし、AI表記を確認。初稿は左手の余白不足を理由に不採用。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-16T19:33:39.755759+00:00",
+  "publication_approved": false
+}
