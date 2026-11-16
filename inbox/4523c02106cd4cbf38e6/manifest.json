@@ -1,0 +1,89 @@
+{
+  "id": "4523c02106cd4cbf38e6",
+  "article_path": "article-results-one-next-20261116.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261116.html",
+  "source_commit": "",
+  "source_blob_sha": "c28204918e8568080153486c5061ea12065cd3a3",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "53053347c0126a159fed6c43872dda836a5b1adcf3291fa84705b7b89917a0d7",
+  "last_observed_blob_sha": "c28204918e8568080153486c5061ea12065cd3a3",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4523c02106cd4cbf38e6/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4523c02106cd4cbf38e6/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-16T10:17:36.495251+00:00",
+  "creation_event_id": "6d9c6157146e5f6f5435",
+  "event_blob_sha": "c28204918e8568080153486c5061ea12065cd3a3",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/4523c02106cd4cbf38e6/thumbnail.png",
+  "image_sha256": "935da0de189e9b1913aafe43c1c4d87e148ed3be582e551b395a82aa8de31516",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "c28204918e8568080153486c5061ea12065cd3a3",
+    "text_lines": [
+      "バスケまとめ",
+      "11/16",
+      "試合結果",
+      "公式記録の",
+      "確定待ち",
+      "2026.11.16 19:08 JST時点",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4523c02106cd4cbf38e6/source.html",
+        "note": "本文根拠。読み取り時にblob SHAを指定値と照合済み。対象記事URL https://basuke-matome.jp/article-results-one-next-20261116.html は識別用で、公開記事は本文根拠として取得していない。"
+      },
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4523c02106cd4cbf38e6/source.txt",
+        "note": "本文根拠。11/16試合結果は19:08 JST時点の公式記録確定待ち。当日EFF未掲載と今季平均EFFを区別。画像は結果確定待ちのみを表現し、選手の成績・出場を断定しない。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://gambarous.jp/team/players/detail/id=52350?PlayerID=51000362",
+        "image_url": "https://gambarous.jp/files/user/16-NISHIDA.jpg",
+        "note": "徳島ガンバロウズ公式プロフィール写真をview_imageで目視。修正時の容姿参照。本文・成績の根拠には不使用。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://gambarous.jp/news/detail/id=52156",
+        "image_url": "https://gambarous.jp/files/user/202606111126_1.jpg",
+        "note": "公式加入記事のプレー写真を目視し補助的な容姿参照。写真自体・対戦場面はサムネに使用せず。"
+      },
+      {
+        "type": "style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "承認済み黒×ライム、インク・ブラシの絵柄を目視。選手・日付・数値は引き継がない。"
+      },
+      {
+        "type": "style_only",
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "note": "手順書の配置には無かったため、Notion正本に記載された元フォルダで同名承認済み画像を目視。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "西田 公陽",
+        "selection": "ランダム",
+        "selection_reason": "複数試合・今季平均の一覧が中心で特定の主役選手を絞れないため、本文に名前がある20選手から1名を選出。",
+        "selection_method": "Python random.Random('4523c02106cd4cbf38e6').choice(本文掲載順の20選手名)。選出結果：西田 公陽。",
+        "official_profile": "https://gambarous.jp/team/players/detail/id=52350?PlayerID=51000362",
+        "official_profile_image": "https://gambarous.jp/files/user/16-NISHIDA.jpg",
+        "reference_observed": "短い茶系の髪、横を短くした分け目と流した前髪、縦長の輪郭、頬と顎の形、眉・目・鼻・口元、ひげなしを公式写真と照合。写真風ではないインク画。",
+        "depiction": "低い姿勢のドライブのイメージ。実際の試合場面の再現ではない。選手名・背番号・成績・出場・活躍の文字なし。ロゴ・スポンサー文字なし。"
+      }
+    ],
+    "prompt": "[初回生成]\nUse case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 1792x1024 or 1920x1080, minimum width 1000px. Full-bleed opaque PNG.\n\nVisual direction: follow the approved black-and-lime basketball editorial samples visible in the conversation: near-black #151A18, vivid lime #CCF43B, off-white, expressive hand-drawn ink and dry brush, strong Japanese typography, few elements, professional crisp thumbnail readability. Do NOT copy any names, statistics, dates or players from those style examples.\n\nThe ONLY person is the real professional basketball player 西田公陽 / Koyo Nishida, randomly chosen from players named in the fixed article. Use the official Tokushima profile portrait just inspected in this conversation as identity reference (https://gambarous.jp/files/user/16-NISHIDA.jpg, profile https://gambarous.jp/team/players/detail/id=52350?PlayerID=51000362). Likeness details: Japanese young adult man, athletic sturdy shoulders, clean shaven, elongated oval face with a fairly broad jaw and small rounded chin, straight full eyebrows, almond dark eyes, straight medium-width nose, closed medium lips, slightly prominent ears. Short dark brown hair, sides close and top longer, parted slightly off center with swept curved fringe and a small forehead opening, as in the official portrait. Clearly hand-drawn, with light skin shown in ivory, confident ink contours and angular brush shadows, sufficiently detailed face for likeness. Not a generic invented player, no photorealism, no pasted photograph.\n\nComposition: put Nishida dynamically on the LEFT 43% of the frame in a low forward driving stance, three-quarter view toward the right, from head down to upper shins, holding an orange basketball in his right hand during a crossover gather at waist height; his left hand naturally balances the movement. Face unobscured. Anatomically correct two arms and hands, no extra fingers; show ball completely inside frame. Use a plain monochrome ivory-and-black sleeveless basketball uniform with subtle lime trim, absolutely no logos, no team/sponsor words, no player number or name. Energetic diagonal lime brush strokes behind the figure; abstract near-black background, no arena signage, scoreboard, identifiable opponent or hoop. The pose is a general basketball illustration, NOT a reconstruction of any real game moment.\n\nRIGHT 57% is a clean spacious typography block, with strong alignment and generous safe margins. Render ONLY the following Japanese text, perfectly accurate and clearly separated:\nsmall brand at upper right: 「バスケまとめ」\nlarge date below brand: 「11/16」\nvery large bold off-white headline: 「試合結果」\nprominent off-white qualifier: 「公式記録の」\nequally prominent large lime qualifier: 「確定待ち」\nsmaller supporting line below: 「2026.11.16 19:08 JST時点」\nbottom footer, clearly legible off-white and safely inset: 「イラスト（AI生成）｜イメージ」\n\nExact factual scope: the fixed manuscript is titled 11/16 試合結果（公式記録の確定待ち） and states all results and daily EFF rankings await confirmation as of 2026-11-16 19:08 JST. The words 公式記録の確定待ち must be prominent, not hidden in fine print. Do not add a score, ranking, EFF figure, winner, selected player's name, appearance claim, achievement, or any other wording. The player was randomly selected and does not represent confirmed participation or performance. Do not write 成績をもとにしたイメージ; use only イメージ. No team logo, league logo, brand marks, photography, fake paper UI, additional captions, watermarks. Keep all text, head, ball and hands well within safe margins. Aim for polished bold Japanese sports media artwork with lively brushwork and simple readable information hierarchy.\n\n[修正1回・最終採用]\nEdit the first image (the finished black/lime Japanese thumbnail) once. The second image is ONLY the official identity reference portrait of Koyo Nishida (西田公陽), not an edit target and never to be pasted.\n\nKeep the entire right-side typography block, every Japanese character, all dates/numbers, exact colors and the hand-drawn ink/brush art style unchanged. The text must remain:\nバスケまとめ\n11/16\n試合結果\n公式記録の\n確定待ち\n2026.11.16 19:08 JST時点\nイラスト（AI生成）｜イメージ\n\nFix the illustration framing on the LEFT: scale the complete player-and-ball illustration down around 10–12% and move it inward so ALL of his hair, head, both hands including every fingertip, and the entire basketball are inside the canvas with at least 35px clear safe space at the top and left edges. The lower legs/shorts can crop at bottom as an intentional composition, but head, hands and ball must not touch or cross edges. Keep the low athletic drive, two anatomically correct arms, natural five-finger hands and orange ball. Use the recovered upper/left space for abstract black and lime brush texture.\n\nRefine the face slightly toward the second official portrait: Koyo Nishida's clean-shaven elongated oval face with fuller cheeks, straight eyebrows, almond eyes, straighter nose and medium lips; short dark-brown hair closer at sides with off-center swept part. Preserve likeness as a clearly hand-drawn adult Japanese athlete, not a generic manga character, no photorealism. Plain ivory/black basketball uniform with lime trim; no name, number, team logo, sponsor marks or new text. Do not depict any other person. This remains an illustrative image, not a recreation of an actual game. Keep the landscape 16:9 canvas and resolution.",
+    "generator": "内蔵 image_gen（image_gen__imagegen）。初回生成1回＋修正1回。最終画像を実際に目視し、文字・日付時刻・公式記録確定待ちの留保・公式写真との容姿・頭と両手とボールの収まり・手指・AI生成表記を確認して採用。API/CLI画像生成なし。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-16T10:30:23.602732+00:00",
+  "publication_approved": false
+}

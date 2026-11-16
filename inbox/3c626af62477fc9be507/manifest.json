@@ -1,0 +1,86 @@
+{
+  "id": "3c626af62477fc9be507",
+  "article_path": "article-daily-20261116.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261116.html",
+  "source_commit": "",
+  "source_blob_sha": "e623b29b2f10989a8c8c718a5492834208dd9899",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "077a5d448c791a8a7e53ab372b8c4bde4bb1eecde57161f1d1d336eba771e9d6",
+  "last_observed_blob_sha": "e623b29b2f10989a8c8c718a5492834208dd9899",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3c626af62477fc9be507/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3c626af62477fc9be507/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-16T10:17:35.331428+00:00",
+  "creation_event_id": "5e0d5dd6969fd336f937",
+  "event_blob_sha": "e623b29b2f10989a8c8c718a5492834208dd9899",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/3c626af62477fc9be507/thumbnail.png",
+  "image_sha256": "d1e6cf0bcf7f3decfcfc91df1d388b9731b3dba4dd189c1fd4c9bd66a9f9d984",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "e623b29b2f10989a8c8c718a5492834208dd9899",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.16",
+      "試合前予測",
+      "千葉J × 三遠",
+      "攻撃力か、",
+      "堅守か。",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3c626af62477fc9be507/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261116.html",
+        "role": "本文の根拠。11月16日の千葉J対三遠の試合前予測、千葉Jの攻撃力と三遠の堅守の比較。HTMLのblob SHAを指定値と照合済み。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3c626af62477fc9be507/source.txt",
+        "role": "本文の根拠。試合前予測・独自分析であり結果ではない。出場可否が未確認の選手がいる。画像では個人の出場、成績、特定の試合場面を断定していない。"
+      },
+      {
+        "type": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで確認済み。黒・ライム、太い日本語、インクとブラシの絵柄のみ参照。参照画像の選手名・成績は使用していない。"
+      },
+      {
+        "type": "official_appearance_reference",
+        "url": "https://chibajets.jp/team/players/detail/id=26996?PlayerID=51000642",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026111616/files/user/roster/704/2026-27/51000642_01.jpg",
+        "role": "容姿確認のみ。外部ページの成績・試合情報は本文や画像文言の根拠にしていない。公式写真は完成画像に貼り付けていない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "マット・コステロ",
+        "selection": "本文の主役",
+        "selection_reason": "記事全体は両チームの比較。本文中の選手では、復帰時期と具体的な出場時間・得点・リバウンド・アシストが最も詳しく記載されているコステロを人物の主役に選定した。",
+        "official_profile_url": "https://chibajets.jp/team/players/detail/id=26996?PlayerID=51000642",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026111616/files/user/roster/704/2026-27/51000642_01.jpg",
+        "appearance_reference_viewed": true,
+        "observed_features": "短い茶色の髪、広い額、明るい目、まっすぐな鼻、縦長で角のある輪郭、口ひげにつながる整った茶色のフルビアード、広い肩。",
+        "depiction": "本人の容姿を参照した、ボールを両手で持ってピボットするプレー姿のイラスト。実際の試合場面の再現ではない。氏名・個人成績・出場の断定を画像には記載していない。チーム・リーグ・スポンサーのロゴなし。",
+        "revision": "1回。初稿のひげを短く整え、公式資料に合わせて髪、額、目鼻と輪郭の特徴を修正。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story\nAsset type: one finished Japanese basketball editorial thumbnail, landscape 16:9, 1600x900 or higher resolution. Generate only ONE image.\n\nCreate a bold premium sports-editorial illustration for バスケまとめ. The fixed article is a PRE-GAME analysis comparing Chiba Jets' offense and San-en's defense on November 16, 2026. It is NOT a game result. Do not invent a score, an outcome, or an actual moment from that game.\n\nDesign: very dark green-black #151A18 background, electric lime #CCF43B, warm ivory typography and monochrome ink artwork, with an orange basketball as the only secondary color. Thick Japanese gothic type, dry ink and expressive brush marks, editorial screenprint textures, few clear elements. Inspired by the approved black/lime hand-ink sports poster already reviewed, but a different action and layout: the athlete occupies the LEFT 43%, the bold text sits on the RIGHT 53%. Subtle diagonal lime brush energy behind the athlete, clean dark area behind the text. Keep all type and the athlete's head, ball and hands inside safe margins, at least 5% from edges.\n\nReal person, exactly ONE athlete: Matt Costello (マット・コステロ), as a recognizable hand-drawn illustration, no other people. His official Chiba Jets profile photo was checked. Capture these observed traits: very tall powerful broad-shouldered athletic build, light skin, close-cropped brown hair with slightly longer textured top and subtly receding temples, broad forehead, pale light eyes under straight brown eyebrows, a straight substantial nose, an elongated rectangular face with a strong jaw, and a dense neatly shaped full reddish-brown beard connected to the moustache. His beard is thick around the chin and shorter on the cheeks. Do not use a generic young clean-shaven player. Render his recognizable face in high-contrast black/ivory ink with deliberate illustrated hatching, never photographic texture.\n\nAction: an imaginative basketball pivot/drive preparation, three-quarter torso twisting toward the right, bent knees and athletic momentum. His face is clearly visible in a three-quarter view, focused eyes looking toward the open court. He securely holds one orange basketball near his waist with both anatomically plausible hands, separated fingers curling naturally around the ball. No extra fingers or limbs. Show head to mid-thigh with intentional body framing below; keep elbows and hands fully visible. A simple ivory basketball jersey and shorts with dark edge panels, entirely UNBRANDED: no team logo, league logo, sponsor, name, letters, numbers, badges, or shoe marks. This is a conceptual illustration, not a recreation of any photographed play. Do not paste any official photograph.\n\nExact visible text, and no other lettering:\nTop left, modest site label: 「バスケまとめ」\nTop right, small date: 「2026.11.16」\nAbove main headline on the right, a clear lime badge with dark lettering: 「試合前予測」\nRight side, prominent matchup line in ivory: 「千葉J × 三遠」\nBelow it, huge bold Japanese headline, two stacked lines:\n「攻撃力か、」\n「堅守か。」\nMake the second line electric lime; ensure clear balanced reading and generous legibility at thumbnail size.\nBottom in an unobstructed dark footer strip, clearly legible ivory text: 「イラスト（AI生成）」 and separately 「イメージ」\n\nNo player name in the image, no individual statistics, no claims about participation, no final score, no 'win' claim, no official logos or photos, no watermark, no photorealism. Preserve exact Japanese punctuation and the fullwidth parentheses in the AI label. Restrained energetic brush composition, crisp typography, no text overlapping face or hands.\n\nSINGLE REVISION\nEdit image 1, the already generated black-and-lime Japanese thumbnail. Image 2 is ONLY an official facial-appearance reference for real athlete Matt Costello; never paste this photograph into the output and never copy any logo or lettering from it.\nKeep the entire design of image 1 unchanged: landscape 1672x941 composition, left-side single basketball player gripping the orange ball, hand anatomy, dark background, lime brush, typography, text placement, jersey and all colors. Keep EVERY visible text character exactly unchanged.\nMake ONE targeted likeness correction to the athlete's head: more closely reflect the face in reference image 2. Shorten and neaten the beard, especially its chin projection, into the compact full beard seen in reference 2; retain connected moustache. Reduce exaggerated deep forehead wrinkles, preserve a high broad forehead, close-cropped brown hair, less spiky and flatter on top, subtle receding temples, a rectangular face, straight nose, pale eyes and straight brows. Keep the existing three-quarter pose and focused expression. Match the facial proportions from reference 2 while keeping the original bold hand-ink and crosshatch illustrated treatment of image 1, absolutely not photorealistic. Retain the visible natural hairline with no cropping of the head. Do not alter text, add stats, add a player name, add logos, or add any people.",
+    "generator": "Built-in image_gen.imagegen (image_gen__imagegen). 1 initial generation + 1 likeness revision. No API/CLI fallback.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-16T10:22:04.740508+00:00",
+  "publication_approved": false
+}

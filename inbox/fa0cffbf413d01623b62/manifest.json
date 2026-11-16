@@ -1,0 +1,82 @@
+{
+  "id": "fa0cffbf413d01623b62",
+  "article_path": "article-games-20261116.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261116.html",
+  "source_commit": "",
+  "source_blob_sha": "2ba5139021da43d54a6574bea9e8d3e890177537",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "53053347c0126a159fed6c43872dda836a5b1adcf3291fa84705b7b89917a0d7",
+  "last_observed_blob_sha": "2ba5139021da43d54a6574bea9e8d3e890177537",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fa0cffbf413d01623b62/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fa0cffbf413d01623b62/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-16T10:17:35.918845+00:00",
+  "creation_event_id": "0f64b12f0a75b5e9dc7a",
+  "event_blob_sha": "2ba5139021da43d54a6574bea9e8d3e890177537",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/fa0cffbf413d01623b62/thumbnail.png",
+  "image_sha256": "75703882ecbb64bf2308e5beef8457350f77c81668c7ffc1cc76182e900201ee",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "2ba5139021da43d54a6574bea9e8d3e890177537",
+    "text_lines": [
+      "バスケまとめ",
+      "11/16 試合結果",
+      "公式記録の",
+      "確定待ち",
+      "2026.11.16 19:08時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fa0cffbf413d01623b62/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261116.html",
+        "scope": "記事本文・日付・状態の唯一の根拠（固定TXTと併用）。HTMLのblob SHAを標準ライブラリで照合。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fa0cffbf413d01623b62/source.txt",
+        "scope": "11/16試合結果。2026-11-16 19:08 JST時点で全試合の公式記録確定待ち。当日の成績と今季平均は別集計。出場確定を示す選出ではない。"
+      },
+      {
+        "type": "official_appearance_reference",
+        "url": "https://goldenkings.jp/team/players/detail/id=26066?PlayerID=51000416",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026111619/files/user/roster/701/2026-27/51000416_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fa0cffbf413d01623b62/references/david-nwaba-official.jpg",
+        "scope": "容姿のみ。公式写真を目視確認。本文・試合状態・成績の根拠には使用せず、写真画素やロゴは完成画像へ貼り付けていない。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "scope": "黒×ライム、太い日本語文字、手描きインク・ブラシの承認済みスタイルを目視確認。参照画像の氏名・成績・日付は使用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "デイビッド・ヌワバ",
+        "selection": "ランダム",
+        "selection_reason": "本文は複数試合と各部門の選手を並列に扱い、1人の主役に絞れない。本文に登場する20選手から選定。",
+        "selection_method": "本文の表の掲載順20名を候補とし、Python random.Random(int('fa0cffbf413d01623b62',16)).choice(candidates)で1名選定。",
+        "source": "琉球ゴールデンキングス公式プロフィール",
+        "source_url": "https://goldenkings.jp/team/players/detail/id=26066?PlayerID=51000416",
+        "reference_image_url": "https://bleague.bl.kuroco-img.app/v=2026111619/files/user/roster/701/2026-27/51000416_01.jpg",
+        "appearance_observed": "短い黒い縮れ髪とサイドのフェード、太く密なあごひげと口ひげ、幅広い鼻、厚みのある唇、力強い目元、筋肉質の肩腕を公式画像と生成画像で照合。",
+        "depiction": "実在選手1名のドライブ姿のイラスト。特定の試合場面の再現ではない。文字には選手名・成績・出場・活躍の断定を入れず、「イメージ」と明記。",
+        "qa_notes": "顔・手・ボール・全テキストを実画像で確認。人物はイラスト調、無地ユニフォーム。チーム／リーグ／スポンサーロゴなし。画面端の胴体・腕のトリミングは構図の一部で、顔・手指・ボール・注記の欠損なし。"
+      }
+    ],
+    "prompt": "Use case: ads-marketing / editorial sports illustration.\nCreate exactly ONE finished Japanese basketball article thumbnail as a PNG, landscape 16:9, ideally 1920x1080, at least 1000 pixels wide.\n\nArticle content is a fixed 2026-11-16 19:08 JST snapshot. Its title is 11/16 試合結果（公式記録の確定待ち）. All B.PREMIER and B.ONE game records are still awaiting confirmation. Do not fabricate results, scores, rankings, participation or achievements.\n\nStyle: follow the approved black and lime thumbnail visual language visible in the reference: dark charcoal green #151A18, acid lime #CCF43B, ivory white lettering, expressive hand-drawn ink strokes, dry-brush diagonals, limited texture, few elements, very bold readable Japanese display typography. Clearly an illustration, NOT photorealistic, NOT a pasted photograph. Do not copy the old reference's player, text, date or scores.\n\nSubject: draw only ONE real basketball player, David Nwaba / デイビッド・ヌワバ, randomly chosen from the fixed article's 20 named players. Use his viewed official Ryukyu profile photograph solely for likeness reference: short tightly textured black hair, close fade sides, broad forehead, strong deep-set brown eyes, broad nose, full lips, dense full black beard following a squared/rounded jaw and joining the moustache, muscular broad shoulders and arms, medium-dark brown skin. Facial details must remain legible in warm ivory and brown ink highlights, not disappear into black. Plain ivory basketball uniform with dark navy edging, entirely blank with NO team name, NO logo, NO sponsor text, NO jersey number. A plain black compression sleeve on his right arm is acceptable. No additional invented people.\n\nComposition: energetic three-quarter drive pose across the LEFT 45 percent. Nwaba leans forward and drives to the right, one hand visibly controls a single orange basketball near his waist, other arm bends naturally for balance. Face fully visible in three-quarter view, preserve distinctive beard and short haircut. Hands, ball, face and elbows fully within the frame; a deliberate thigh crop at the lower edge is allowed. Anatomically correct two arms and natural five-finger hands. Lime dry-brush arc behind him suggests movement. No arena crowd, no opponent, no scoreboard, no actual game or decisive-shot reenactment. This is a general imagined playing pose.\n\nRIGHT 55 percent: a clean quiet dark type field with generous safe padding and no overlapping player parts. Large typography, compact but well spaced, high contrast. Render only these exact Japanese text lines:\nTop small brand: 「バスケまとめ」\nMedium heading: 「11/16 試合結果」\nMain two-line headline, largest typography:\n「公式記録の」\n「確定待ち」\nThe second main line is lime; first is ivory white.\nSmaller readable qualification below: 「2026.11.16 19:08時点」\nFooter, clearly legible, with adequate margin:\n「イラスト（AI生成）」 and 「イメージ」\n\nThe waiting-for-confirmation qualifier must be visually dominant, not fine print. No player name anywhere in the artwork. No player statistics, no confirmed participation, no victories, no highlights claims. Avoid English decorative text and all other unrequested text. Do not use '成績をもとにしたイメージ'; use exactly 'イメージ'. No team or league logos, no official photo pixels. Keep all text readable and inside a minimum 5% safe margin. Output one polished image only.",
+    "generator": "image_gen__imagegen（内蔵画像生成）。生成1回、修正0回。PNG 1672×941、約16:9。画像SHA256: 75703882ecbb64bf2308e5beef8457350f77c81668c7ffc1cc76182e900201ee",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-16T10:25:49.269303+00:00",
+  "publication_approved": false
+}
