@@ -98,7 +98,7 @@
    "players": 88,
    "holds": [],
    "excluded": [],
-   "content_as_of": "2026-11-16 19:08 JST",
+   "content_as_of": "2026-11-16 20:15 JST",
    "source": "data/match_articles/article-games-20261115.json"
   },
   "2026-11-16": {
@@ -111,7 +111,7 @@
      "key": "506595",
      "home": "群馬",
      "away": "滋賀",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -119,7 +119,7 @@
      "key": "506596",
      "home": "千葉J",
      "away": "三遠",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -128,7 +128,7 @@
      "home": "A東京",
      "away": "神戸",
      "status": "unconfirmed",
-     "record_note": "official_record_not_loaded",
+     "record_note": null,
      "reason": "record_not_fixed"
     },
     {
@@ -136,7 +136,7 @@
      "home": "横浜BC",
      "away": "川崎",
      "status": "unconfirmed",
-     "record_note": "official_record_not_loaded",
+     "record_note": null,
      "reason": "record_not_fixed"
     },
     {
@@ -144,20 +144,20 @@
      "home": "広島",
      "away": "A千葉",
      "status": "unconfirmed",
-     "record_note": "official_record_not_loaded",
+     "record_note": null,
      "reason": "record_not_fixed"
     },
     {
      "key": "506600",
      "home": "琉球",
      "away": "富山",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     }
    ],
    "excluded": [],
-   "content_as_of": "2026-11-16 19:08 JST",
+   "content_as_of": "2026-11-16 20:15 JST",
    "source": "data/match_articles/article-games-20261116.json"
   }
  },
