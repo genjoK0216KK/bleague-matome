@@ -716,16 +716,16 @@
   "article-games-20261116.html": {
    "article_path": "article-games-20261116.html",
    "article_url": "https://basuke-matome.jp/article-games-20261116.html",
-   "editorial_fingerprint": "53053347c0126a159fed6c43872dda836a5b1adcf3291fa84705b7b89917a0d7",
-   "event_id": "0f64b12f0a75b5e9dc7a",
-   "recorded_at": "2026-11-16T10:17:27.789376+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "2ba5139021da43d54a6574bea9e8d3e890177537",
-   "stable_fingerprint": "53053347c0126a159fed6c43872dda836a5b1adcf3291fa84705b7b89917a0d7",
+   "editorial_fingerprint": "905cae328c6ab979c237198d48bd7e940b169bb3ba66aefd22285f827c9038f6",
+   "event_id": "163fbf403ff1bdcaf279",
+   "recorded_at": "2026-11-16T13:59:56.109624+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "cf85272333e636ebb644d7ab701bae75a2ac7d80",
+   "stable_fingerprint": "905cae328c6ab979c237198d48bd7e940b169bb3ba66aefd22285f827c9038f6",
    "status": "requested",
    "target_date": "20261116",
-   "title": "11/16 試合結果（公式記録の確定待ち）"
+   "title": "11/16 試合結果・当日のEFF"
   },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
@@ -982,16 +982,16 @@
   "article-results-one-next-20261116.html": {
    "article_path": "article-results-one-next-20261116.html",
    "article_url": "https://basuke-matome.jp/article-results-one-next-20261116.html",
-   "editorial_fingerprint": "53053347c0126a159fed6c43872dda836a5b1adcf3291fa84705b7b89917a0d7",
-   "event_id": "6d9c6157146e5f6f5435",
-   "recorded_at": "2026-11-16T10:17:27.789376+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "c28204918e8568080153486c5061ea12065cd3a3",
-   "stable_fingerprint": "53053347c0126a159fed6c43872dda836a5b1adcf3291fa84705b7b89917a0d7",
+   "editorial_fingerprint": "905cae328c6ab979c237198d48bd7e940b169bb3ba66aefd22285f827c9038f6",
+   "event_id": "9d7c162033c6ae8fcce6",
+   "recorded_at": "2026-11-16T13:59:56.109624+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "d1c38d3f12fcb008951d57fcb1e0b643f33ee780",
+   "stable_fingerprint": "905cae328c6ab979c237198d48bd7e940b169bb3ba66aefd22285f827c9038f6",
    "status": "requested",
    "target_date": "20261116",
-   "title": "11/16 試合結果（公式記録の確定待ち）"
+   "title": "11/16 試合結果・当日のEFF"
   },
   "article-stats-20261026.html": {
    "article_path": "article-stats-20261026.html",
@@ -1162,6 +1162,18 @@
    "status": "requested",
    "target_date": "20261115",
    "title": "11月15日の貢献度ランキング 1位はデクスター・デニス（島根）の38"
+  },
+  "article-stats-20261116.html": {
+   "article_path": "article-stats-20261116.html",
+   "article_url": "https://basuke-matome.jp/article-stats-20261116.html",
+   "editorial_fingerprint": "9a2a317cfe61eb581281340edb4ee9e351d73398733e383f4d3bcacf869ca5fb",
+   "event_id": "6f9a86d00d7a3fe20b52",
+   "recorded_at": "2026-11-16T13:59:56.109624+00:00",
+   "source_blob_sha": "c618cd749390d0ff41bfa946e6f7b6160515e4da",
+   "stable_fingerprint": "9a2a317cfe61eb581281340edb4ee9e351d73398733e383f4d3bcacf869ca5fb",
+   "status": "requested",
+   "target_date": "20261116",
+   "title": "11月16日の貢献度ランキング 1位はジャック・クーリー（琉球）の53"
   }
  },
  "version": 1
