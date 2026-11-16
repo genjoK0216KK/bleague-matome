@@ -896,6 +896,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "千葉ジェッツ対三遠の試合前予測、5連勝の攻撃力と堅守の三遠を比べる"
   },
+  "article-daily-20261117.html": {
+   "article_path": "article-daily-20261117.html",
+   "editorial_fingerprint": "63335b233f8772acb01daa09c72caadc25bd29688ec6f364bd58dce6dae03c6c",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261117-b88e9d95a47d.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261117-b88e9d95a47d-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "83ac9a2c488698b37f01",
+   "image_sha256": "b88e9d95a47d3d554a3e615f8078680f31d065a30a34ee95efe543bce9057cd1",
+   "imported_at": "2026-11-16T23:20:13.364362+00:00",
+   "prepared_at": "2026-11-16T23:19:36.543716+00:00",
+   "source_blob_sha": "47b2b7f73b1c072d18a1e853d733cbbaacd3935d",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "63335b233f8772acb01daa09c72caadc25bd29688ec6f364bd58dce6dae03c6c",
+   "style": "ink-lime-portrait-v5",
+   "title": "長崎vs三河を試合前予測、11勝3敗の三河が有利"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -2551,13 +2579,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261112.html",
-   "at": "2026-11-12T10:31:05.417448+00:00",
-   "event": "imported",
-   "id": "d9bde7fe63871fad57c4",
-   "image": "0471333464a6"
-  },
-  {
    "article": "article-results-one-next-20261112.html",
    "at": "2026-11-12T10:31:05.418018+00:00",
    "by": "0dccc38884fa1a8278db",
@@ -3109,6 +3130,13 @@
    "event": "imported",
    "id": "7a38c81e81aa20bf71ec",
    "image": "56c4ed441dd5"
+  },
+  {
+   "article": "article-daily-20261117.html",
+   "at": "2026-11-16T23:20:13.364394+00:00",
+   "event": "imported",
+   "id": "83ac9a2c488698b37f01",
+   "image": "b88e9d95a47d"
   }
  ],
  "seen": {
@@ -3203,6 +3231,7 @@
   "7fe3ccf98d343d8516b5": "superseded:46adebe03cc636f48def",
   "81cdf284d66df1d61f20": "imported",
   "82676b8dbd055f0288e7": "superseded:a5ada266578c44560dce",
+  "83ac9a2c488698b37f01": "imported",
   "8926ed6e2f6c758b34aa": "imported",
   "896bbeb35c2a1eb9d0e1": "imported",
   "899945a3915a435651cc": "imported",
