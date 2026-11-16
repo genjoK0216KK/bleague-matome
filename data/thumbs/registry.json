@@ -140,6 +140,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "レバンガ北海道の直近5試合は4勝1敗 速攻とペイントで稼ぎ3Pは最少"
   },
+  "article-analysis-nagasaki-20261116.html": {
+   "article_path": "article-analysis-nagasaki-20261116.html",
+   "editorial_fingerprint": "72824ca575d211c8566745ae6914f312bf680a3273faa66f4e3cb349d6b9f368",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-analysis-nagasaki-20261116-68b798ba5aaf.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-nagasaki-20261116-68b798ba5aaf-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "dcbed9337501335745b7",
+   "image_sha256": "68b798ba5aaf99f46aaa7948b720698b60e713787cc2967e97f7b5d51e11f790",
+   "imported_at": "2026-11-16T03:24:12.519304+00:00",
+   "prepared_at": "2026-11-16T03:23:36.063488+00:00",
+   "source_blob_sha": "e67203377767b4fe3bedb253cae31c218949fe39",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "72824ca575d211c8566745ae6914f312bf680a3273faa66f4e3cb349d6b9f368",
+   "style": "ink-lime-portrait-v5",
+   "title": "長崎ヴェルカの直近5試合は0勝5敗 2Pはリーグ1位でもフリースローで32点差"
+  },
   "article-analysis-nagoya-20261109.html": {
    "article_path": "article-analysis-nagoya-20261109.html",
    "editorial_fingerprint": "7269b66ff74eea639157d7adb0052ab856da95940ed7a52aa690ce10e2ed0471",
@@ -2440,13 +2468,6 @@
  "log": [
   {
    "article": "article-daily-20261110.html",
-   "at": "2026-11-11T19:20:48.142665+00:00",
-   "by": "c3dac2b9caaaf4c62772",
-   "event": "superseded",
-   "id": "fe1f2384a1e2d550107e"
-  },
-  {
-   "article": "article-daily-20261110.html",
    "at": "2026-11-11T19:20:48.288322+00:00",
    "event": "imported",
    "id": "c3dac2b9caaaf4c62772",
@@ -2997,6 +3018,13 @@
    "event": "imported",
    "id": "82676b8dbd055f0288e7",
    "image": "18306a2509f7"
+  },
+  {
+   "article": "article-analysis-nagasaki-20261116.html",
+   "at": "2026-11-16T03:24:12.519332+00:00",
+   "event": "imported",
+   "id": "dcbed9337501335745b7",
+   "image": "68b798ba5aaf"
   }
  ],
  "seen": {
@@ -3158,6 +3186,7 @@
   "daa7c44bd52d9008de5a": "superseded:db75a6a12bbf73eb8c56",
   "db1b08157b4974a77014": "superseded:a384f66c5c633ed9bdb1",
   "db75a6a12bbf73eb8c56": "imported",
+  "dcbed9337501335745b7": "imported",
   "de438e71b32369b2ee65": "superseded:3370472f9c78336a4974",
   "de6284c9fc31a323c810": "superseded:4ec5ffedaee7935f9089",
   "df384c13fa1695e31707": "superseded:d4f970a69e56b5bc2281",
