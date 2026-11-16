@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-17",
+  "status": "pending",
+  "article_key": "article-results-one-next-20261117",
+  "games": [
+    {
+      "game_id": "507368",
+      "season": "2026-27",
+      "competition": "B1",
+      "starts_at": "2026-11-17T19:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507368",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "福岡",
+      "home_full": "ライジングゼファー福岡",
+      "home_id": "753",
+      "home_score": null,
+      "away": "徳島",
+      "away_full": "徳島ガンバロウズ",
+      "away_id": "2890",
+      "away_score": null
+    },
+    {
+      "game_id": "506601",
+      "season": "2026-27",
+      "competition": "BP",
+      "starts_at": "2026-11-17T19:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=506601",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE PREMIER リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "長崎",
+      "home_full": "長崎ヴェルカ",
+      "home_id": "2488",
+      "home_score": null,
+      "away": "三河",
+      "away_full": "シーホース三河",
+      "away_id": "728",
+      "away_score": null
+    }
+  ],
+  "individual_candidates": [],
+  "schedule_complete": {
+    "BP": true,
+    "B1": true,
+    "BN": true
+  },
+  "managed_highlights": []
+}
