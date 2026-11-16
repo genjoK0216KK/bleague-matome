@@ -1,5 +1,7 @@
 {
- "pending": {},
+ "pending": {
+  "506601": "2026-11-17"
+ },
  "published": [
   "2026-10-12",
   "2026-10-17",
@@ -25,16 +27,6 @@
   "2026-11-16"
  ],
  "days": {
-  "2026-11-09": {
-   "state": "ready",
-   "games_total": 6,
-   "games_ready": 6,
-   "players": 133,
-   "holds": [],
-   "excluded": [],
-   "content_as_of": "2026-11-10 20:10 JST",
-   "source": "data/match_articles/article-games-20261109.json"
-  },
   "2026-11-10": {
    "state": "ready",
    "games_total": 3,
@@ -104,6 +96,25 @@
    "excluded": [],
    "content_as_of": "2026-11-16 22:59 JST",
    "source": "data/match_articles/article-games-20261116.json"
+  },
+  "2026-11-17": {
+   "state": "held",
+   "games_total": 1,
+   "games_ready": 0,
+   "players": null,
+   "holds": [
+    {
+     "key": "506601",
+     "home": "長崎",
+     "away": "三河",
+     "status": "scheduled",
+     "record_note": null,
+     "reason": "record_not_fixed"
+    }
+   ],
+   "excluded": [],
+   "content_as_of": "2026-11-17 04:29 JST",
+   "source": "data/match_articles/article-games-20261117.json"
   }
  },
  "definition": {
