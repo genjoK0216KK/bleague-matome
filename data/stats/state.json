@@ -98,7 +98,7 @@
    "players": 88,
    "holds": [],
    "excluded": [],
-   "content_as_of": "2026-11-16 12:08 JST",
+   "content_as_of": "2026-11-16 19:08 JST",
    "source": "data/match_articles/article-games-20261115.json"
   },
   "2026-11-16": {
@@ -127,24 +127,24 @@
      "key": "506597",
      "home": "A東京",
      "away": "神戸",
-     "status": "scheduled",
-     "record_note": null,
+     "status": "unconfirmed",
+     "record_note": "official_record_not_loaded",
      "reason": "record_not_fixed"
     },
     {
      "key": "506598",
      "home": "横浜BC",
      "away": "川崎",
-     "status": "scheduled",
-     "record_note": null,
+     "status": "unconfirmed",
+     "record_note": "official_record_not_loaded",
      "reason": "record_not_fixed"
     },
     {
      "key": "506599",
      "home": "広島",
      "away": "A千葉",
-     "status": "scheduled",
-     "record_note": null,
+     "status": "unconfirmed",
+     "record_note": "official_record_not_loaded",
      "reason": "record_not_fixed"
     },
     {
@@ -157,7 +157,7 @@
     }
    ],
    "excluded": [],
-   "content_as_of": "2026-11-16 12:08 JST",
+   "content_as_of": "2026-11-16 19:08 JST",
    "source": "data/match_articles/article-games-20261116.json"
   }
  },
