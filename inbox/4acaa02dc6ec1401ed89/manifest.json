@@ -1,0 +1,99 @@
+{
+  "id": "4acaa02dc6ec1401ed89",
+  "article_path": "article-results-one-next-20261116.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261116.html",
+  "source_commit": "",
+  "source_blob_sha": "d1c38d3f12fcb008951d57fcb1e0b643f33ee780",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "905cae328c6ab979c237198d48bd7e940b169bb3ba66aefd22285f827c9038f6",
+  "last_observed_blob_sha": "d1c38d3f12fcb008951d57fcb1e0b643f33ee780",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4acaa02dc6ec1401ed89/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4acaa02dc6ec1401ed89/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-16T14:00:03.441292+00:00",
+  "creation_event_id": "9d7c162033c6ae8fcce6",
+  "event_blob_sha": "d1c38d3f12fcb008951d57fcb1e0b643f33ee780",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/4acaa02dc6ec1401ed89/thumbnail.png",
+  "image_sha256": "4164f5fe0d8c86cd18cd5a0f4ebf86f84f445bd18699151f6497883c12c9c428",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "d1c38d3f12fcb008951d57fcb1e0b643f33ee780",
+    "text_lines": [
+      "バスケまとめ",
+      "11/16",
+      "試合結果",
+      "当日のEFF",
+      "リーグ別・ポジション別TOP3",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "source.html",
+        "role": "固定版本文・日付・当日の公式EFFをリーグ別/ポジション別に集計する留保の根拠",
+        "url": "https://basuke-matome.jp/article-results-one-next-20261116.html",
+        "live_article_read": false
+      },
+      {
+        "path": "source.txt",
+        "role": "固定本文の照合"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで目視した承認済みスタイル参照"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ラポラス・アイヴァナーカス",
+        "selection": "ランダム",
+        "selection_method": "複数選手の比較で本文の主役を絞れないため、固定HTML表内の重複を除いた23選手からsecrets.choiceで無作為抽出（selection.json）",
+        "sources": [
+          {
+            "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000272",
+            "role": "B.LEAGUE公式プロフィール"
+          },
+          {
+            "url": "https://www.bleague.jp/files/user/roster/2890/2026-27/51000272_03.png",
+            "role": "公式プロフィール画像。view_imageで確認",
+            "local_reference": "/private/tmp/basuke-4acaa02dc6ec1401ed89/rapolas-profile.png"
+          },
+          {
+            "url": "https://gambarous.jp/news/detail/id=52220?nf=0",
+            "role": "徳島ガンバロウズ公式の加入発表"
+          },
+          {
+            "url": "https://gambarous.jp/files/user/202606301438_2.jpg",
+            "role": "公式記事掲載写真。容姿のみをview_imageで補助確認",
+            "local_reference": "/private/tmp/basuke-4acaa02dc6ec1401ed89/rapolas-official.jpg"
+          }
+        ],
+        "observed_features": "短い茶髪、額にかかる不揃いな前髪、口ひげ、長めの角張った輪郭、はっきりした顎、直線的な鼻、明るい瞳、長身の体形。",
+        "image_use": "公式写真は容姿確認のみ。完成画像は新規イラスト。選手名・個人成績・出場/活躍の記述は載せない。実際の試合場面の再現ではない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story / editorial sports thumbnail.\nCreate exactly ONE finished Japanese basketball article thumbnail, landscape 16:9, ideally 2048x1152 px. A new hand-drawn illustration, not a photograph.\nThe reference style already viewed is B-culver-black-lime-v3.png: near-black #151A18 backdrop, vivid lime #CCF43B broad dry-brush slashes, warm ivory bold Japanese typography, sharp black ink and brush portrait drawing, few elements. Use this visual language only, never its old names, date, score, text, or player.\n\nSubject: the real professional basketball player Rapolas Ivanauskas (ラポラス・アイヴァナーカス), selected at random among 23 distinct named players in the fixed article, illustrated with recognizable likeness based on his official 2026-27 B.LEAGUE profile just inspected. Latest profile appearance: fair skin, tall athletic/slender muscular build, elongated angular face, defined squared jaw and chin, straight long nose, blue-grey eyes, dark brown short tousled hair with a longer uneven fringe crossing the forehead, visible brown moustache, mostly clean-shaven cheeks and jaw. Do not substitute a generic/fictitious player. The inspected official profile is https://www.bleague.jp/files/user/roster/2890/2026-27/51000272_03.png and the supporting official club appearance image is https://gambarous.jp/files/user/202606301438_2.jpg . These are appearance references only, do not paste or reproduce any photo, watermark, logos, text, jersey branding, or background people.\n\nComposition: large dynamic three-quarter figure on the RIGHT 42 percent, visibly stepping forward and rotating his torso, gathering one orange basketball firmly in both hands near the right side of his waist/chest before an attacking move; bent elbows, anatomically clear wrists and fingers, broad shoulders, head and likeness clearly readable looking toward the left. Frame from head to upper thigh; all of head, ball, both hands, and elbows inside canvas, avoid cropping critical anatomy. Use a plain unbranded light/ivory sleeveless basketball jersey with black ink shadows, no numbers or lettering. One player only. Sweeping lime brush arc behind him indicates motion. No hoop is necessary. This is an illustrative generic movement, not a recreation of an actual play or any claim about performance on this date.\nLEFT 58 percent is a clean spacious typography block with generous safe margins. Small 'バスケまとめ' near top left. Strong date line '11/16'. Very large main headline '試合結果' in warm ivory, and equally legible second headline '当日のEFF' in lime. Below in smaller but clearly legible ivory, on one line if possible, 'リーグ別・ポジション別TOP3'. Plain clean readable sans serif Japanese with heavy bold main headings, not handwritten illegible Japanese. Use black separation from illustration; no text over face or hands.\nAt bottom left put the readable disclosure 'イラスト（AI生成）' and immediately alongside it 'イメージ'. Both must be fully visible, at least 28px at 1536px width. Avoid tiny disclosure.\n\nExact text to render (no other words or numeric data):\nバスケまとめ\n11/16\n試合結果\n当日のEFF\nリーグ別・ポジション別TOP3\nイラスト（AI生成）\nイメージ\n\nEditorial constraints: the only article facts are from the supplied fixed source.html/source.txt: November 16 match results and that day's official EFF top three per league and position. Keep league/position qualifiers. Do not imply overall top three, season average, prediction, or a specific winner. Because the player is randomly selected, DO NOT display his name, his individual statistics, his appearance record, or praise/claims about his performance. No scoreboards, no scores, no jersey numbers, no league or team logo, no sponsor words, no badges, no photorealism. Strong hand-drawn ink strokes and limited palette. Preserve crisp accurate Japanese typography and generous safe margins.\n\n--- 実使用の修正プロンプト（1回） ---\nEdit this existing thumbnail with ONE targeted layout correction. Preserve the canvas aspect and resolution (1672x941 PNG), every Japanese text character, all typography positions, black #151A18 and lime #CCF43B brush style, the real player Rapolas Ivanauskas likeness, moustache, hair, original face, body pose, ball and hands. The top of the hair touches/crops against the top edge: slightly reduce and reposition only the entire player-and-ball illustration on the right so that ALL hair and head have at least 40 pixels of black breathing room above and the ball/hand on the right have at least 30 pixels clear space from the right edge. Keep the upper thigh crop at bottom as intentional composition; do not crop the head, elbows, hands, fingers or ball. Do not change face identity, add any people, add logos, change or add text. Keep exact visible wording: バスケまとめ / 11/16 / 試合結果 / 当日のEFF / リーグ別・ポジション別TOP3 / イラスト（AI生成） / イメージ. Return exactly one finished corrected PNG thumbnail.",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "built-in",
+      "attempts": 2,
+      "corrections": 1,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1e4ac-3e73-72d3-b845-b2e2dc01dd2e/exec-ad053d3a-1cf8-44fd-a9a2-85be567cf596.png",
+      "inspection": "生成結果を実際に目視。日付・見出し・リーグ別/ポジション別の限定を固定本文と照合。選手名/個人成績/出場・活躍の主張なし。公式プロフィールと髪・口ひげ・輪郭を照合。修正後は頭部・両肘・両手・ボールが枠内で、指の形と文字の可読性を確認。イラスト（AI生成）・イメージの明記を確認。ロゴ・公式写真の貼付なし。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-16T14:08:21.144330+00:00",
+  "publication_approved": false
+}

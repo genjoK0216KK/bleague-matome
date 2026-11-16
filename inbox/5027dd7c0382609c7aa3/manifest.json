@@ -1,0 +1,99 @@
+{
+  "id": "5027dd7c0382609c7aa3",
+  "article_path": "article-stats-20261116.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261116.html",
+  "source_commit": "",
+  "source_blob_sha": "c618cd749390d0ff41bfa946e6f7b6160515e4da",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "9a2a317cfe61eb581281340edb4ee9e351d73398733e383f4d3bcacf869ca5fb",
+  "last_observed_blob_sha": "c618cd749390d0ff41bfa946e6f7b6160515e4da",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5027dd7c0382609c7aa3/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5027dd7c0382609c7aa3/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-16T14:00:04.084023+00:00",
+  "creation_event_id": "6f9a86d00d7a3fe20b52",
+  "event_blob_sha": "c618cd749390d0ff41bfa946e6f7b6160515e4da",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/5027dd7c0382609c7aa3/thumbnail.png",
+  "image_sha256": "a3bda6d628d49e81b53fbf4fab3794a3615a0fb7d51743110ddc0b094a5ef080",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "c618cd749390d0ff41bfa946e6f7b6160515e4da",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.16｜6試合",
+      "貢献度1位",
+      "ジャック・クーリー",
+      "琉球",
+      "EFF 53",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5027dd7c0382609c7aa3/source.html",
+        "article_url": "https://basuke-matome.jp/article-stats-20261116.html",
+        "use": "記事内容の根拠。タイトル・リード・TOP3・TOP10により、2026年11月16日、6試合、琉球のジャック・クーリーが貢献度1位、EFF 53であることを確認。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5027dd7c0382609c7aa3/source.txt",
+        "use": "固定HTMLと人物・日付・試合数・順位・EFF値を照合。外部ページの成績は本文の根拠に使用していない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで黒・ライム・太い日本語見出し・インク/ブラシ表現を目視参照。選手名・数値は引き継がない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジャック・クーリー",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿のタイトル・リード・貢献度TOP3の1位として最も大きく扱われている。",
+        "official_profile_urls": [
+          "https://www.bleague.jp/roster_detail/?PlayerID=26914",
+          "https://goldenkings.jp/team/players/detail/id=14102?PlayerID=26914&Year=2024"
+        ],
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026102013/files/user/roster/701/2026-27/26914_01.jpg",
+        "reference_viewed": true,
+        "reference_method": "公式クラブのプロフィールから画像URLを取得し、ローカルにダウンロードした写真をview_imageで目視。容姿参照のみで、完成画像へ公式写真を貼り付けていない。",
+        "observed_features": "短い暗褐色の横分け髪、幅のある輪郭と顎、まっすぐな鼻、薄いひげ、明るい目、厚みのある体格。",
+        "depiction": "両手でボールを確保しながら身体をひねるプレー姿。実際の試合の特定場面を再現したものではなく、成績をもとにしたイメージ。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset type: One finished Japanese basketball editorial thumbnail, landscape 16:9, target 1600x900 PNG, opaque.\nPrimary request: Create one original illustrated thumbnail for バスケまとめ. Main subject is the real basketball player Jack Cooley (ジャック・クーリー), the principal player in the fixed article. The information below is exactly from that article; do not infer any additional game facts.\nVisual style: Match the approved thumbnail observed in this conversation: near-black #151A18 background, electric lime #CCF43B brush swashes, ivory white heavyweight Japanese type, energetic hand-drawn black ink, dry-brush hatch shading and limited screen-print texture. Orange basketball is the one secondary accent. Strong editorial illustration, clearly drawn rather than photographic. Few elements, uncluttered, highly legible at thumbnail size.\nLikeness: Jack Cooley must be recognizable, not a generic or invented player. Official Ryukyu/B.LEAGUE portrait visually checked: broad powerful build, fair skin, broad rectangular-to-oval face, substantial square jaw, short dark brown hair neatly side-parted and swept across the top with close sides, slightly prominent ears, straight narrow bridge and long nose, light eyes under relatively straight brows, subtle short brown beard stubble along cheeks and jaw and moustache, thin closed lips. Do not give him a thick beard, curls, long hair, or a different face. Reference source used for likeness only: https://bleague.bl.kuroco-img.app/v=2026102013/files/user/roster/701/2026-27/26914_01.jpg . Do not paste or collage any photograph.\nScene and composition: Large three-quarter action illustration of Cooley on the RIGHT, thighs-up, body twisting into a strong basketball pivot while securely cradling a single orange ball in both hands near his upper torso after an imagined rebound. Face clearly visible and turned slightly toward the viewer, focused expression. Natural anatomically plausible grip, five fingers per hand, both elbows and entire ball kept within frame. He wears a plain ivory basketball jersey with dark piping, no team names, no jersey number, no sponsors, no emblems. No other people. Use two broad lime brush diagonals behind the player to imply movement. Left approximately 55% contains the typography; no text overlaps face, hands or ball. This is a generic imagined basketball play, not a reconstruction of any actual game moment.\nText, verbatim Japanese, include only the following:\nTop-left small publication line: \"バスケまとめ\"\nSmall date/context directly below: \"2026.11.16｜6試合\"\nLarge bold ivory headline: \"貢献度1位\"\nPlayer identification, clean readable ivory: \"ジャック・クーリー\"\nSmaller affiliation under the name: \"琉球\"\nHero metric with enormous lime numerals and clearly associated label: \"EFF 53\"\nBottom-left, clearly readable white footnote on solid dark background: \"イラスト（AI生成）\"\nAdjacent or next-line footnote: \"成績をもとにしたイメージ\"\nInformation semantics: EFF 53 is the contribution rating, NOT 53 points. The rank applies only to the six games of November 16, 2026. Do not add season rankings, league records, quotes, winner claims, match scores, nationalities, or additional statistics.\nConstraints: One image only. Preserve all exact text and punctuation. Keep essential text and illustration 5% inside borders; no clipping. No team logo, league logo, sponsor marks, watermark, official photography, photorealism, other player names, or text from the earlier approved style thumbnail. Output a polished finished thumbnail.",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "built-in",
+      "use_case": "illustration-story",
+      "generation_count": 1,
+      "revision_count": 0,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "original_output": "/Users/genjo/.codex/generated_images/01a1e4af-fdd4-7ec2-afdb-fe474ae0141f/exec-a33174ba-56c8-4b88-85ef-17845bfc734c.png",
+      "final_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5027dd7c0382609c7aa3/generated.png",
+      "sha256": "a3bda6d628d49e81b53fbf4fab3794a3615a0fb7d51743110ddc0b094a5ef080"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    },
+    "qa_notes": {
+      "inspection": "生成結果の表示画像と保存元PNGを実際に目視検品。画像内容の後加工なし。",
+      "text_and_numbers": "バスケまとめ、2026.11.16、6試合、貢献度1位、ジャック・クーリー、琉球、EFF 53、2行の注記を確認。53は得点と表示していない。",
+      "source_qualifiers": "日付と6試合を画像に表示し、その日のランキングという範囲を維持。国籍別ランキングやシーズン記録、決勝場面など原稿外の主張を追加していない。",
+      "likeness_or_no_named_person": "公式写真と髪型、輪郭、鼻、目、短いひげ、体格の特徴を照合。本文の主役1人のみ。公式写真・チームロゴ・リーグロゴ・スポンサー文字なし。",
+      "layout": "黒×ライムのイラスト。文字、顔、両手、ボールに致命的な見切れや重なりなし。手の握りと身体の接続を確認。1672×941、約16:9。",
+      "ai_label": "「イラスト（AI生成）」「成績をもとにしたイメージ」が左下で読める。",
+      "result": "pass"
+    }
+  },
+  "prepared_at": "2026-11-16T14:11:18.436849+00:00",
+  "publication_approved": false
+}

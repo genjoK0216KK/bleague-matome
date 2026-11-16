@@ -1,0 +1,103 @@
+{
+  "id": "a5ada266578c44560dce",
+  "article_path": "article-games-20261116.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261116.html",
+  "source_commit": "",
+  "source_blob_sha": "cf85272333e636ebb644d7ab701bae75a2ac7d80",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "905cae328c6ab979c237198d48bd7e940b169bb3ba66aefd22285f827c9038f6",
+  "last_observed_blob_sha": "cf85272333e636ebb644d7ab701bae75a2ac7d80",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a5ada266578c44560dce/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a5ada266578c44560dce/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-16T14:00:02.836870+00:00",
+  "creation_event_id": "163fbf403ff1bdcaf279",
+  "event_blob_sha": "cf85272333e636ebb644d7ab701bae75a2ac7d80",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/a5ada266578c44560dce/thumbnail.png",
+  "image_sha256": "30e3b9c0d4feab75794f0729df86256fc591fe371aa741bcccaa1f66799eeac6",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "cf85272333e636ebb644d7ab701bae75a2ac7d80",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.16",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "B.PREMIER / B.ONE",
+      "イラスト（AI生成）　イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a5ada266578c44560dce/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261116.html",
+        "verified_blob_sha": "cf85272333e636ebb644d7ab701bae75a2ac7d80",
+        "used_for": "固定版の見出し、対象日、当日のEFF・リーグ別ポジション別TOP3。外部記事の本文・数値は不使用。"
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a5ada266578c44560dce/source.txt",
+        "used_for": "固定版文章とHTMLの見出し照合、本文登場23選手からのランダム選択。B.NEXTは試合なしのため画像の対象リーグに含めない。個人の成績・出場・活躍は画像に記載しない。"
+      },
+      {
+        "role": "appearance_only",
+        "url": "https://gambarous.jp/team/players/detail/id=52504?PlayerID=49517",
+        "image_url": "https://gambarous.jp/files/rcms_conv_webp/files/user/8-OLI.jpg_1789450969.webp?v=1789451181",
+        "publisher": "徳島ガンバロウズ公式",
+        "used_for": "オリバー・シュウ本人の容姿を公式プロフィール写真で目視確認。完成画像への写真の貼付・転載はなし。"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "used_for": "view_imageで確認した黒×ライム、太字見出し、手描きインク・ブラシ。参照内の人名・日付・成績・試合結果は引き継がない。",
+        "note": "手順書のA-faison-ivory-v3.pngは指定フォルダに存在せず、存在を確認した黒×ライム版を参照。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "オリバー・シュウ",
+        "name_en": "Oliver Xu",
+        "selection": "ランダム",
+        "method": "random.Random('a5ada266578c44560dce').choice(source.txtの表に出る重複除外23選手・出現順)",
+        "official_profile": "https://gambarous.jp/team/players/detail/id=52504?PlayerID=49517",
+        "official_photo": "https://gambarous.jp/files/rcms_conv_webp/files/user/8-OLI.jpg_1789450969.webp?v=1789451181",
+        "selection_reason": "原稿は複数試合の結果とリーグ別・ポジション別EFF表で、特定の選手を最大の主役に絞れないため。本文の表の選手欄を出現順に重複除外した23人から作業IDをシードに1人を抽選。",
+        "candidate_count": 23,
+        "appearance_confirmed": "公式プロフィール写真をview_imageで実見。短く刈った側頭部、片側へ流す短い黒髪、細い卵形の輪郭と顎、まっすぐな眉、切れ長の目、鼻筋、薄めの唇、ひげのない顔、引き締まった体格をイラストに反映。",
+        "portrayal": "ロゴ・スポンサー文字・背番号なしのユニフォームでドリブルする1人の手描きイラスト。選手名・個人成績・出場・活躍は文字にせず、特定の実際の試合場面を再現したものとは示さない。",
+        "visual_qa": "修正版を実見し、公式写真に対応する髪型・輪郭・目鼻を確認。頭頂部、両手、ボールに見切れなし。指と腕の形は自然で、隠れる指も含めた手のつながりに破綻なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION:\nUse case: illustration-story.\nCreate exactly ONE finished editorial thumbnail for the Japanese basketball article, wide 16:9 landscape, ideally 1792x1024 or 1536x864, width at least 1000 px, opaque PNG.\nSTYLE REFERENCE: the black/lime approved thumbnail already viewed (B-culver-black-lime-v3.png). Use its hand-drawn expressive black ink, dry-brush grit, bold Japanese sans-serif typography, warm ivory highlights, dark charcoal #151A18 background, vivid lime #CCF43B. Do not copy ANY old article names, dates, scores, or its shooting composition.\nPERSON REFERENCE: the official Tokushima Gambarous profile portrait of Oliver Xu (オリバー・シュウ), just viewed in the conversation, from https://gambarous.jp/files/rcms_conv_webp/files/user/8-OLI.jpg_1789450969.webp?v=1789451181 . This is an appearance reference ONLY, never paste or reproduce the photo. The person must be the real Oliver Xu, not a generic invented basketball player. Recognizable likeness: clean-shaven slender oval face with tapering jaw and small rounded chin, short straight black hair with closely cropped sides and fuller side-swept textured top, a slightly asymmetrical diagonal fringe, straight dark eyebrows, almond-shaped dark eyes, straight defined nose, slim lips, visible ears, lean muscular arms and shoulders. Render him clearly as hand-drawn ink illustration, with ivory/lime and restrained warm skin accents, no photographic texture. Preserve those facial features.\nCOMPOSITION: action athlete on LEFT 43%, text on RIGHT 53%, radically different from the reference's right-side jumpshot. Oliver Xu in a dynamic low forward drive, torso leaning diagonally, head angled slightly toward the viewer so face is identifiable; controlled dribble with right hand on top of a single orange basketball near waist/thigh, left forearm bent naturally for balance, three-quarter view. Show him from head to upper knees, with intentional clean lower-body crop only. Keep head, face, both hands and the entire ball safely inside canvas. Anatomically sound two arms/two hands, five fingers per hand where visible, natural wrists. Plain ivory basketball uniform with dark ink shadows and simple narrow lime trim; absolutely no team/sponsor/league logo, no numbers, no names or writing on uniform. The orange ball is his prop, not the hero. A broad diagonal lime dry-brush stroke and a few ink flecks behind his figure convey motion, minimal background, no identifiable arena, no crowd, no second player.\nTEXT: all text in Japanese must be exactly these seven lines, with flawless glyphs and no added wording:\n\"バスケまとめ\"\n\"2026.11.16\"\n\"試合結果\"\n\"当日のEFF\"\n\"ポジション別TOP3\"\n\"B.PREMIER / B.ONE\"\n\"イラスト（AI生成）　イメージ\"\nText hierarchy: small brand and date across top right; extremely bold and large ivory 試合結果 at upper right; extremely bold large lime 当日のEFF below it; medium bold ivory ポジション別TOP3 directly below; small but readable B.PREMIER / B.ONE below that. Keep comfortable spacing and excellent thumbnail readability, no crowded boxes. Bottom footer spanning clean black space is イラスト（AI生成）　イメージ, readable ivory sans serif, at least 28 px on a 1536-wide canvas. All text and footer must have at least 50 px safe margins. Balanced spacious layout without excessive empty space.\nCONTENT CONSTRAINTS: Article describes 2026-11-16 results and that day's official EFF top three BY POSITION for B.PREMIER and B.ONE. It is not a season-average or forecast ranking and not a single overall TOP3. Oliver Xu was selected randomly from players named in the fixed source article: do not print his name, number, personal performance, participation, accomplishments, scores, or any claim that he led a ranking. This drawing is an illustrative imagined basketball pose, NOT a recreation of any actual game or a decisive moment. No scoreboard, no victory caption, no trophy. No official photos, logo marks or sponsor text. Do not copy the style reference's Culver or 38 points or Sendai score. Output one final finished thumbnail only.\n\nONE ALLOWED CORRECTION:\nEdit the first attached image, the already generated black/lime Japanese basketball thumbnail. The second attached image is the official appearance reference portrait of real player Oliver Xu, ONLY for facial likeness, NEVER for photo collage. This is the one final correction.\nChange only the illustrated athlete and the immediate background behind him. Preserve the entire right-side typographic composition, every existing word, spelling, date and footer exactly unchanged; preserve the 1672x941 approximately 16:9 landscape canvas and black/ivory/lime brush style.\nCORRECTION: Scale the athlete down slightly and move him a little right/down so his COMPLETE hair silhouette is inside the image, with at least 40 pixels dark/brush background between the tallest hair and top border, and a small margin between his leftmost elbow and left border. Keep both hands and basketball completely within frame. The lower legs may remain intentionally cropped at the bottom; do not crop his head.\nRefine ONLY his illustrated facial features and hair to match the supplied real Oliver Xu reference better: shorter, tidier side-swept straight black hair with close-cut sides and modest top volume, not the exaggerated high tousled hair; slender oval face with tapered jaw, softer natural straight eyebrows rather than exaggerated heavy/angry eyebrows, almond-shaped eyes, slim lips and clean-shaven face. Use the official portrait's facial proportions and recognizable identity while retaining the dynamic three-quarter dribbling pose. He is lean athletic, with slightly less exaggerated arm bulk. Keep expressive hand-drawn black ink strokes, completely illustrated face, no photographic textures. Preserve anatomically natural arms/hands, five digits per hand where visible. Preserve uniform with NO logos, names, sponsor text or jersey number. Single orange basketball controlled by his hand. Do not add any new text, player name, statistic, scoreboard or extra person. This remains an imagined action illustration, not a real game scene. Output exactly one corrected PNG.",
+    "generator": {
+      "tool": "image_gen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "correction_count": 1,
+      "final_selected_output": "/Users/genjo/.codex/generated_images/01a1e4a8-676c-7af3-8ba2-b456da69da23/exec-db2bf1f0-18a9-4b50-a13a-b46a57b2996e.png",
+      "final_format": "PNG",
+      "final_dimensions": [
+        1672,
+        941
+      ],
+      "visual_qa_notes": {
+        "text_and_numbers": "修正版を実見し、2026.11.16、試合結果、当日のEFF、ポジション別TOP3、B.PREMIER / B.ONEの表記が固定原稿と一致。個人名や個人成績の表示なし。",
+        "source_qualifiers": "当日・ポジション別・対象リーグを明記。季節平均、予想、全体総合順位に読み替えていない。イメージ注記があり実試合の特定場面と断定していない。",
+        "likeness_or_no_named_person": "オリバー・シュウの公式写真を見て容姿を確認し、修正版の髪型・輪郭・目鼻に反映されていることを実見。実在選手1人のみ。",
+        "layout": "初稿の頭頂部の見切れを1回の修正で解消。修正版の頭、両手、ボール、すべての文字が画像内。膝付近の意図した画角によるトリミングのみ。見出しと人物の重なりなし。",
+        "ai_label": "下部のイラスト（AI生成）およびイメージの注記を実見。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-16T14:04:15.576139+00:00",
+  "publication_approved": false
+}
