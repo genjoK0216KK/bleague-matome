@@ -1,0 +1,98 @@
+{
+  "id": "dcbed9337501335745b7",
+  "article_path": "article-analysis-nagasaki-20261116.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-nagasaki-20261116.html",
+  "source_commit": "",
+  "source_blob_sha": "e67203377767b4fe3bedb253cae31c218949fe39",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "72824ca575d211c8566745ae6914f312bf680a3273faa66f4e3cb349d6b9f368",
+  "last_observed_blob_sha": "e67203377767b4fe3bedb253cae31c218949fe39",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/dcbed9337501335745b7/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/dcbed9337501335745b7/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-16T03:18:13.695040+00:00",
+  "creation_event_id": "6cc565666527d1aa4bd0",
+  "event_blob_sha": "e67203377767b4fe3bedb253cae31c218949fe39",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/dcbed9337501335745b7/thumbnail.png",
+  "image_sha256": "68b798ba5aaf99f46aaa7948b720698b60e713787cc2967e97f7b5d51e11f790",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "e67203377767b4fe3bedb253cae31c218949fe39",
+    "text_lines": [
+      "長崎ヴェルカ",
+      "直近5試合 0勝5敗",
+      "フリースローで",
+      "32点差",
+      "5試合合計：長崎45点／相手77点",
+      "対象：11/1〜11/14",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/dcbed9337501335745b7/source.html",
+        "article_url": "https://basuke-matome.jp/article-analysis-nagasaki-20261116.html",
+        "used_for": "本文の根拠。2026年11月1日から11月14日の直近5試合は0勝5敗。フリースローは長崎45点、相手77点、5試合合計32点差。ライブ版記事や外部ページの成績は使用していない。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/dcbed9337501335745b7/source.txt",
+        "used_for": "固定HTMLとの照合、チーム集計と対象期間の確認。順位や2P成功率は画像に掲載していない。"
+      },
+      {
+        "type": "official_player_profile",
+        "url": "https://www.velca.jp/team/players/detail/id=47621",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026111612/files/user/roster/2488/2026-27/19957_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/dcbed9337501335745b7/kumagai-official-reference.jpg",
+        "used_for": "熊谷航選手の容姿確認のみ。公式写真を完成画像に貼り付けていない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "used_for": "view_imageで確認した承認済みの黒とライム、太い日本語、インクとブラシ表現。旧記事の選手名・成績・日付は持ち越していない。"
+      },
+      {
+        "type": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "used_for": "制作・検品手順。人物の選定方法と注記は今回の本人指示を優先。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "熊谷航",
+        "selection": "ランダム",
+        "selection_reason": "記事は長崎ヴェルカのチーム分析で、特定選手を中心にした記事ではないため。",
+        "selection_method": "secrets.choice：本文に名前が出る6選手から1人。selection.jsonに記録。",
+        "candidates": [
+          "リーヴァイ・ランドルフ",
+          "ジャレル・ブラントリー",
+          "馬場雄大",
+          "熊谷航",
+          "パブロ・アギラール",
+          "アキル・ミッチェル"
+        ],
+        "reference_source": "長崎ヴェルカ公式プロフィール",
+        "reference_url": "https://www.velca.jp/team/players/detail/id=47621",
+        "reference_image_url": "https://bleague.bl.kuroco-img.app/v=2026111612/files/user/roster/2488/2026-27/19957_01.jpg",
+        "visual_reference_checked": true,
+        "likeness_observed": "公式写真と修正後画像を目視比較。黒い短髪と横へ流した前髪、細めの目、やや幅のある顎、鼻筋、ひげのない顔を確認。",
+        "depiction": "1人で低くドライブするプレー姿の手描きイラスト。実際の試合場面の再現ではない。",
+        "image_text_policy": "選手名・背番号・個人成績・出場・活躍を示す文字なし。数値はすべて長崎のチーム集計。注記はイラスト（AI生成）とイメージ。"
+      }
+    ],
+    "prompt": "[Initial generation]\nUse case: illustration-story\nAsset type: Japanese basketball editorial thumbnail, exactly one finished PNG, horizontal 16:9, ideally 1536 × 864 pixels, no transparent background.\n\nCreate a NEW thumbnail for a team-analysis article about Nagasaki Velca. Use the black-and-lime approved thumbnail already shown in the conversation as STYLE reference ONLY: charcoal #151A18, electric lime #CCF43B, warm ivory typography, hand-drawn black ink and dry-brush texture, few bold graphic elements, very strong Japanese typography. Do NOT copy its player, score, player name, date or composition exactly. The official portrait shown in the conversation is an IDENTITY reference ONLY for the real player Ko Kumagai (熊谷航). Redraw him as an expressive ink illustration; never paste or trace photographic pixels into the final.\n\nSubject: exactly ONE real player, Ko Kumagai, selected at random from the six players named in the supplied manuscript because this article is about the team. Recognizable likeness to the official Nagasaki Velca roster portrait: Japanese man, straight dense short black hair, rounded side-swept fringe across the upper forehead with an off-center part; longer oval face with fairly broad lower jaw, narrow almond-shaped dark eyes, straight medium nose, subtle closed lips, completely clean-shaven. Compact athletic guard's build. Keep the face light enough to read its distinguishing features. No invented teammate or opponent.\n\nAction: an energetic low driving dribble, torso angled diagonally forward, eyes looking up the court, illustrated from head to upper thighs on the RIGHT side of the canvas. One hand controlling the orange basketball alongside the hip; the other arm naturally held out for balance. Anatomically coherent arms, hands and five fingers. Keep the head, all shown hands, and entire ball safely inside the frame. Plain sleeveless dark navy / ivory uniform, no team logo, no sponsor marks, no league logo, no name, no jersey number. The drawing is a generic playing-motion concept, NOT a reconstruction of an actual game, shot or turnover.\n\nComposition: text on the left 58%, player in the right 42%; abundant breathing room between text and hands. Powerful diagonal lime brush strokes behind the player, dark quiet field behind text. Large dramatic headline; 32 is the strongest lime numeric element, and 点差 sits beside it in ivory. Make the entire phrase unambiguously a TEAM FREE-THROW POINT GAP, not this randomly selected player's score. Do not include a scoreboard, victory celebration, realistic arena, opponent or game result beyond the exact team-level copy below. All text must remain visible with safe margins of at least 48px.\n\nExact Japanese text, render only the following content verbatim:\nUpper left, bold team title: 「長崎ヴェルカ」\nBelow team title, smaller: 「直近5試合 0勝5敗」\nMain headline first line: 「フリースローで」\nMain headline second line, largest: 「32点差」\nBelow headline, clearly readable data scope: 「5試合合計：長崎45点／相手77点」\nBelow that, small but legible: 「対象：11/1〜11/14」\nBottom safe margin, clear ivory annotation: 「イラスト（AI生成）」\nNext to that annotation: 「イメージ」\n\nSource limitations: all article claims above come ONLY from the supplied fixed manuscript. The 32-point gap is the total across the five team games, long-side Nagasaki 45 points versus all opponents 77 points. It is NOT a single-game score or individual stat. Do not add rankings, shooting percentage, additional dates, player names, performance claims, headlines, English labels or other words. No claim that the pictured player appeared in any particular game. Keep the two annotations exactly as given. Finished artwork should unmistakably be a hand-inked editorial illustration, never photorealistic.\n\n[Single permitted correction]\nEdit the first input image, the generated black/lime basketball thumbnail. The second input is an IDENTITY REFERENCE ONLY: the official portrait of real player Ko Kumagai (熊谷航). Do not reproduce the photograph, its pose, printed jersey or logos.\n\nMake one focused correction to the PLAYER ONLY, leaving all typography, exact wording, brush background, palette and infographic hierarchy unchanged:\n1. Scale the illustrated player and basketball down by approximately 8%, anchored at the lower-right area so the top of his head has at least 50px of visible dark/brush background above it. Keep both hands and the entire basketball fully within the image with adequate right margin; the thighs may continue beyond the bottom edge naturally. Preserve the same dynamic low dribble pose and anatomically valid five-finger hands.\n2. Strengthen Ko Kumagai's recognizable facial likeness to the official portrait: slightly broader lower jaw and chin, smaller narrower horizontal almond eyes (not large anime eyes), straighter subtle eyebrows, the same straight medium nose and closed thin lips. Use his short dense black hair with naturally side-swept fringe, not an invented voluminous middle-part hairstyle. Keep a clean-shaven face. Maintain a hand-drawn ink illustration with the same lively brushwork, not photorealism, and preserve the plain navy/ivory unbranded sleeveless jersey with no number.\n\nDo not alter or omit ANY of the existing exact text:\n長崎ヴェルカ\n直近5試合 0勝5敗\nフリースローで\n32点差\n5試合合計：長崎45点／相手77点\n対象：11/1〜11/14\nイラスト（AI生成）\nイメージ\n\nThis is a team statistic, not an individual performance. No player name, no individual stats, no new text, no logos, no photo compositing. Retain the same horizontal approximately 16:9 canvas and resolution. Return exactly ONE finished corrected PNG.",
+    "generator": "Built-in image_gen.imagegen; one initial generation and one correction. No API/CLI image generation. No publishing or external delivery.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-16T03:23:36.063488+00:00",
+  "publication_approved": false
+}
