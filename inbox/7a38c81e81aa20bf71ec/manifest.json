@@ -1,0 +1,104 @@
+{
+  "id": "7a38c81e81aa20bf71ec",
+  "article_path": "article-results-one-next-20261117.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261117.html",
+  "source_commit": "",
+  "source_blob_sha": "52730381dbd0d8adbab10faae8149ba8377149fd",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "91d8b3079260667fee98a69810ab565f05dadfeea09f8d9a85e1ceff0faeedfe",
+  "last_observed_blob_sha": "52730381dbd0d8adbab10faae8149ba8377149fd",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7a38c81e81aa20bf71ec/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7a38c81e81aa20bf71ec/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-16T22:15:24.525660+00:00",
+  "creation_event_id": "4dc5af8d856b5152ce87",
+  "event_blob_sha": "52730381dbd0d8adbab10faae8149ba8377149fd",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/7a38c81e81aa20bf71ec/thumbnail.png",
+  "image_sha256": "56c4ed441dd5c7712d524da5cf2e621016ea6fca8147fe8a975ecb42ad375ead",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "52730381dbd0d8adbab10faae8149ba8377149fd",
+    "text_lines": [
+      "11/17　試合前",
+      "登録選手の",
+      "ベスト5",
+      "今季平均EFFで選出",
+      "出場確定ではありません",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_body",
+        "path": "source.html",
+        "scope": "本文の唯一の根拠の一つ。固定HTML。blob SHA一致を確認。"
+      },
+      {
+        "type": "article_body",
+        "path": "source.txt",
+        "scope": "本文の唯一の根拠の一つ。固定テキスト。"
+      },
+      {
+        "type": "style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "scope": "view_imageで目視。配色・筆致・文字の階層のみ参照。人物・数値は転用しない。"
+      },
+      {
+        "type": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "scope": "画像生成・検品ルール。人物選定は最新の本人指示を優先。"
+      },
+      {
+        "type": "person_appearance_only",
+        "url": "https://go-seahorses.jp/team/players/detail/id=17209?PlayerID=30403",
+        "scope": "公式プロフィール写真の容姿のみ。記事の内容や数値の根拠には使用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "西田 優大",
+        "selection": "ランダム",
+        "selection_reason": "複数選手を同じ表形式で扱う記事のため、本文に名前が出ている全20選手からPython secrets.choiceで1名抽選。",
+        "reference_source": "シーホース三河 公式選手プロフィール",
+        "reference_url": "https://go-seahorses.jp/team/players/detail/id=17209?PlayerID=30403",
+        "image_url": "https://go-seahorses.bl.kuroco-img.app/v=1789089098/files/user/team/player/2026-27/19_blue.jpg",
+        "visual_inspection": "公式2026-27プロフィール写真をダウンロード後、view_imageで確認。明るいアッシュブラウンのハイライトがあるセンターパート寄りの暗い髪、面長の輪郭、細めの目、厚みのある唇、ひげなし。",
+        "depiction": "実際の試合を再現しないドライブ動作のイメージ。画像に氏名・個人成績・出場や活躍の断定を入れない。"
+      }
+    ],
+    "prompt": "Use case: ads-marketing.\nCreate exactly ONE polished Japanese basketball editorial thumbnail as a PNG, landscape 16:9, preferably 1792x1024 or 1920x1080, width over 1000 pixels. Fully opaque.\n\nMatch the approved visual style previously viewed: near-black #151A18 background, electric lime #CCF43B dry-brush slashes, warm ivory Japanese typography, energetic hand-drawn black ink hatching and screenprint texture. Minimal, bold, highly readable. The reference thumbnail is STYLE ONLY: do not copy its person, names, statistics, scores, or date.\n\nSubject: exactly one REAL player, Yudai Nishida (西田優大), selected randomly from the fixed article's named players. Render an original ink-and-brush illustration of Nishida making a low, forward-driving basketball move, three-quarter frontal view, eyes focused ahead, one hand controlling an orange basketball low beside his waist and the other arm naturally bent for balance. Keep face, both hands and entire basketball visible, anatomically believable fingers and joints. It is a general imagined basketball movement, not a recreation of an actual game, scoring moment, appearance or result. No other players or human silhouettes.\n\nAppearance based on the official SeaHorses Mikawa 2026-27 profile photo inspected in this conversation (https://go-seahorses.jp/team/players/detail/id=17209?PlayerID=30403; image https://go-seahorses.bl.kuroco-img.app/v=1789089098/files/user/team/player/2026-27/19_blue.jpg): Japanese man with a lean athletic upper body and long neck, elongated oval face, straight medium-length dark hair with light ash-brown highlights, off-center part and front locks framing the forehead, straight brows, narrow almond-shaped eyes, straight nose, slightly full lips, small beauty mark near cheek/upper lip area, clean shaven with no beard or moustache. Preserve these recognizable facial features. Do not reuse the earlier reference's Black player or invent a generic player. Ink-rendered face must remain clearly readable, not lost in black shadow. Jersey and shorts plain dark blue and ivory, completely unbranded, without letters, logos, sponsor marks, or jersey numbers. No photographic pixels and no photorealism.\n\nComposition: player on RIGHT 43% of canvas, leaning forward diagonally into the image with strong motion; visible from head to around knees. Typography on LEFT 57%, safely separated from hands and ball. A restrained broad diagonal lime brush stroke behind player only; keep text background quiet. Leave generous safe margins at all edges. The visual emphasis is the editorial selection, not the depicted individual's performance.\n\nRender ONLY the following exact Japanese text, each item cleanly legible:\nTop small: \"11/17　試合前\"\nMain heading white, large: \"登録選手の\"\nMain heading below, largest and lime: \"ベスト5\"\nSubheading white, medium: \"今季平均EFFで選出\"\nBelow subheading white, smaller but clearly readable: \"出場確定ではありません\"\nBottom left footnote, high contrast and readable: \"イラスト（AI生成）\"\nNext to footnote: \"イメージ\"\n\nText is based only on fixed source.html and source.txt for 2026-11-17: a pregame selection from registered players using season-average EFF, not match-day results or confirmed starters. Show no player name, individual performance, score, personal statistic, guaranteed participation, ranking comparison between leagues, or team/league branding. Do not add other text, fake logos, date fragments, captions, watermarks, or decoration that looks like writing. Do not copy the official photo into the artwork.",
+    "generator": {
+      "mode": "built-in",
+      "tool": "image_gen.imagegen",
+      "generation_count": 1,
+      "revision_count": 0,
+      "output_original": "/Users/genjo/.codex/generated_images/01a1e66d-e6ec-7463-b422-ea6d28d07c6f/exec-1cf2d8a9-8ee2-465f-9016-cfaa67d6c095.png",
+      "api_or_cli_used": false,
+      "output_saved": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7a38c81e81aa20bf71ec/generated.png",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "png_sha256": "56c4ed441dd5c7712d524da5cf2e621016ea6fca8147fe8a975ecb42ad375ead"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    },
+    "qa_notes": {
+      "text_and_numbers": "生成画像を目視し、11/17、登録選手のベスト5、今季平均EFFで選出を確認。個人名・個人成績・試合結果の表示なし。",
+      "source_qualifiers": "『試合前』『今季平均EFFで選出』『出場確定ではありません』を確認。当日の公式記録確定待ちを試合結果として扱っていない。",
+      "likeness_or_no_named_person": "西田優大の公式プロフィール写真と見比べ、分けた前髪と明るいハイライト、面長の輪郭、細めの目、口元の特徴、ひげなしを確認。実在選手1名のイラストで、名前や活躍の断定は画像内にない。",
+      "layout": "黒×ライムのインク・ブラシ表現。文字と顔は判読可能。両手とボール全体が見え、指・関節に目立つ破綻なし。顔・ボール・文字の欠けなし。ユニフォームにロゴ・スポンサー・番号なし。下半身と右肘の端は動きを示す意図的なトリミング。",
+      "ai_label": "『イラスト（AI生成）』『イメージ』を画像下部で目視確認。",
+      "inspection_method": "内蔵生成結果の実画像および生成PNGのview_image表示を確認。初回生成で合格、修正0回。",
+      "scope": "固定原稿だけを本文の根拠とした。公式プロフィールは容姿のみ、承認済み画像は絵柄のみ参照。ready・git・公開・外部送信は実行しない。"
+    }
+  },
+  "prepared_at": "2026-11-16T22:18:05.283019+00:00",
+  "publication_approved": false
+}
