@@ -28,6 +28,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "秋田ノーザンハピネッツ 直近5試合は0勝5敗 得点は4位でも失点が26位"
   },
+  "article-analysis-alvark-20261117.html": {
+   "article_path": "article-analysis-alvark-20261117.html",
+   "editorial_fingerprint": "dcdc8c8ec55764a4ae3103546cf7c213a139b1214f62d577780fad55f8f4b139",
+   "files": {
+    "eyecatch": {
+     "height": 721,
+     "path": "thumbs/auto/article-analysis-alvark-20261117-b8cf7e01973c.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-alvark-20261117-b8cf7e01973c-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "5183171d8e8431a899f6",
+   "image_sha256": "b8cf7e01973c524f21f0f274bbaaa8299cdd675a90672b6dc8ff9b149808e938",
+   "imported_at": "2026-11-17T03:27:43.797181+00:00",
+   "prepared_at": "2026-11-17T03:26:56.782499+00:00",
+   "source_blob_sha": "9731d02638ce87e6ad009e610fdbb4e15b03a01f",
+   "source_size": [
+    1671,
+    941
+   ],
+   "stable_fingerprint": "dcdc8c8ec55764a4ae3103546cf7c213a139b1214f62d577780fad55f8f4b139",
+   "style": "ink-lime-portrait-v5",
+   "title": "アルバルク東京 直近5試合は4勝1敗 失点の少なさとミスの少なさが目立つ"
+  },
   "article-analysis-brex-20261108.html": {
    "article_path": "article-analysis-brex-20261108.html",
    "editorial_fingerprint": "663d32c494ac3d0e8d30d5e3e7d27605a4edf570ea70f0634ff0c6c5c4219071",
@@ -2580,13 +2608,6 @@
  "log": [
   {
    "article": "article-games-20261112.html",
-   "at": "2026-11-12T14:12:29.225359+00:00",
-   "by": "ad6bf00b0853f0333020",
-   "event": "superseded",
-   "id": "d9bde7fe63871fad57c4"
-  },
-  {
-   "article": "article-games-20261112.html",
    "at": "2026-11-12T14:12:29.378911+00:00",
    "event": "imported",
    "id": "ad6bf00b0853f0333020",
@@ -3137,6 +3158,13 @@
    "event": "imported",
    "id": "50f378a3747dbb63cef8",
    "image": "798f71e4d5a2"
+  },
+  {
+   "article": "article-analysis-alvark-20261117.html",
+   "at": "2026-11-17T03:27:43.797201+00:00",
+   "event": "imported",
+   "id": "5183171d8e8431a899f6",
+   "image": "b8cf7e01973c"
   }
  ],
  "seen": {
@@ -3196,6 +3224,7 @@
   "50222bd804efe24c13be": "superseded:75a5c2e5b4ddddc773c3",
   "5027dd7c0382609c7aa3": "imported",
   "50f378a3747dbb63cef8": "imported",
+  "5183171d8e8431a899f6": "imported",
   "5371bea30124ef22fa57": "imported",
   "556a6a0e14555b13288a": "imported",
   "570a778c73159b26d00d": "superseded:e581198d6acbcde5fe72",
