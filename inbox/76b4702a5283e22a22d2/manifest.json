@@ -1,0 +1,139 @@
+{
+  "id": "76b4702a5283e22a22d2",
+  "article_path": "article-games-20261117.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261117.html",
+  "source_commit": "",
+  "source_blob_sha": "695c3ea85c06ecc7ecbd1900048a8959e15b1f0e",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "f5a82195360fab7c23036e434c5b1de4324d611ed538f50ea799fc97f9e3a9c8",
+  "last_observed_blob_sha": "695c3ea85c06ecc7ecbd1900048a8959e15b1f0e",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/76b4702a5283e22a22d2/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/76b4702a5283e22a22d2/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-17T10:19:32.729622+00:00",
+  "creation_event_id": "cc798bbd8f227d76ba12",
+  "event_blob_sha": "695c3ea85c06ecc7ecbd1900048a8959e15b1f0e",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/76b4702a5283e22a22d2/thumbnail.png",
+  "image_sha256": "ba97861710ad31686e0baf9d4f118548812a38bb87796b1a8cb06914a388a97a",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "695c3ea85c06ecc7ecbd1900048a8959e15b1f0e",
+    "text_lines": [
+      "バスケまとめ",
+      "11/17 試合結果",
+      "公式記録の",
+      "確定待ち",
+      "長崎 vs 三河",
+      "福岡 vs 徳島",
+      "2026.11.17 19:11時点",
+      "イラスト（AI生成）／イメージ"
+    ],
+    "sources": [
+      {
+        "role": "本文の唯一の根拠（固定HTML）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/76b4702a5283e22a22d2/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261117.html",
+        "verified_blob_sha": "695c3ea85c06ecc7ecbd1900048a8959e15b1f0e"
+      },
+      {
+        "role": "本文の唯一の根拠（固定文章）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/76b4702a5283e22a22d2/source.txt",
+        "qualifier": "2026-11-17 19:11 JST時点。長崎—三河、福岡—徳島は開始・公式記録未確定。結果・当日EFF・出場・ランキング確定を表現しない。"
+      },
+      {
+        "role": "画像生成・検品ルール",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "note": "本人の今回指示に従い、特定の主役がない記事でも本文登場の実在選手をランダム選出。readyは実行しない。"
+      },
+      {
+        "role": "承認済みスタイル参照・実画像確認済み",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "黒×ライム、太い日本語、インク・ブラシの絵柄だけを参照。参照画像の人物・名前・日付・成績は引き継がない。白地のA-faison-ivory-v3.pngは指定場所に存在せず、未使用。"
+      },
+      {
+        "role": "人物容姿のみの公式参照（本文内容の根拠には使用しない）",
+        "url": "https://gambarous.jp/team/players/detail/id=46555?PlayerID=22403",
+        "image_url": "https://gambarous.jp/files/user/2-TSUKAMOTO.jpg"
+      },
+      {
+        "role": "人物容姿のみの公式参照（本文内容の根拠には使用しない）",
+        "url": "https://gambarous.jp/team/players/detail/id=46555?PlayerID=22403&Year=2023",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026091414/files/user/roster/2890/2026-27/22403_01.jpg"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "塚本 雄貴",
+        "team_in_fixed_article": "徳島",
+        "selection": "ランダム",
+        "reason": "記事は2試合の公式記録確定待ちと複数選手の今季平均比較で、単独の主役が絞れないため、本文に名前が登場する20選手から選出。",
+        "random_method": "Python random.Random('76b4702a5283e22a22d2').choice(candidates)。候補は固定文章の登場順。",
+        "candidates": [
+          "久保田 義章",
+          "リーヴァイ・ランドルフ",
+          "西田 優大",
+          "ダバンテ・ガードナー",
+          "ショーン・オマラ",
+          "熊谷 航",
+          "馬場 雄大",
+          "トーマス・ケネディ",
+          "ジャレル・ブラントリー",
+          "アーロン・ホワイト",
+          "野溝 利一",
+          "オリバー・シュウ",
+          "西川 貴之",
+          "ラポラス・アイヴァナーカス",
+          "キャメロン・オリバー",
+          "塚本 雄貴",
+          "西田 公陽",
+          "森山 修斗",
+          "テイブリオン・ドーソン",
+          "アイザック・バッツ"
+        ],
+        "official_profile_url": "https://gambarous.jp/team/players/detail/id=46555?PlayerID=22403",
+        "official_image_urls": [
+          "https://gambarous.jp/files/user/2-TSUKAMOTO.jpg",
+          "https://bleague.bl.kuroco-img.app/v=2026091414/files/user/roster/2890/2026-27/22403_01.jpg"
+        ],
+        "reference_images_visually_inspected": true,
+        "observed_features": "暗い根元と側頭部、金髪のセンター付近分け。額の出る前髪、やや角のある卵形の輪郭、細めの目、暗い眉、まっすぐな鼻、明確な唇と顎。大きなひげなし。",
+        "rendered_scene": "腰を落としたドリブル姿のイラスト。実際の試合場面の再現ではない。",
+        "identity_in_image_text": false,
+        "individual_statistics_or_appearance_claims": false,
+        "photo_pasted": false,
+        "logos_or_sponsors": false
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate exactly ONE finished editorial thumbnail PNG for the Japanese basketball site バスケまとめ. Landscape 16:9, target 1792×1008 pixels, width and height at least 1000 pixels if possible. This is a brand-new original hand-drawn artwork, not a photo or a collage.\n\nSTYLE REFERENCE: Match the previously viewed approved B-culver-black-lime-v3.png only in visual language: near-black #151A18 background, electric lime #CCF43B, ivory-white heavy Japanese typography, expressive hand-painted ink and dry brush marks, restrained splatter, strong simple composition. Do not transfer the reference's player, names, statistics, dates or shooting pose.\n\nSUBJECT / IDENTITY: Draw exactly one REAL player, Yutaka Tsukamoto (塚本雄貴), from Tokushima Gambarous. Use the previously inspected OFFICIAL PORTRAITS solely as appearance reference:\nhttps://gambarous.jp/team/players/detail/id=46555?PlayerID=22403\nhttps://gambarous.jp/files/user/2-TSUKAMOTO.jpg\nhttps://bleague.bl.kuroco-img.app/v=2026091414/files/user/roster/2890/2026-27/22403_01.jpg\nObserved traits: Japanese man, athletic compact guard build; bleached sandy-blond curtain hair parted near the center, darker black roots and short dark sides, visible forehead, softly angular oval face with defined jaw and chin, straight dark eyebrows, narrow almond-shaped dark eyes, straight medium nose, defined closed lips, essentially clean shaven with only subtle natural shadow at chin. Keep his real facial proportions clearly recognizable through bold ink illustration. Do not substitute a generic athlete, other reference player or invented person. Render skin with ivory/gray ink strokes and a small amount of natural warmth; hair must retain its blond color. Plain light-cyan sleeveless jersey and shorts with minimal navy trim. Absolutely no team crest, league logo, sponsor, uniform text, uniform number, or clothing brand. Never paste the official photographs.\n\nCOMPOSITION: Left 56% is calm typographic space. Right 44% is a large dynamic three-quarter illustration of Tsukamoto driving forward in a low dribble stance, bent knees and leaning torso, face clearly visible above the shoulder. One hand controls a basketball at waist-to-knee height at the right side of the image; the other arm is naturally bent, separate and anatomically clear. This is a conceptual basketball play illustration, NOT a recreation or claim about the November 17 game. Ball is a supporting prop held/controlled by the player, not the central subject. Orange ball with hand-inked black seams and no branding. All fingers, ball, face and essential typography remain fully inside the canvas with 5% safe margins. Lower legs may end at a purposeful lower-edge crop, but no accidental clipping of hands, head, or ball. Broad diagonal lime brush strokes behind the figure suggest speed. Use a different low dribble composition from the reference jump-shot. No opponents, no background crowd, no scoreboards, no logos.\n\nTEXT: Use exactly these Japanese strings and nothing else. Strong correct Japanese glyphs, not distorted, no invented wording. Hierarchy and positions:\n1. Small upper-left masthead: 「バスケまとめ」\n2. Clear large white line below: 「11/17 試合結果」\n3. Dominant central-left white line: 「公式記録の」\n4. Dominant larger lime line immediately beneath: 「確定待ち」\n5. Beneath the headline, moderate white type: 「長崎 vs 三河」\n6. Next line, same style: 「福岡 vs 徳島」\n7. Smaller but legible timestamp near bottom left: 「2026.11.17 19:11時点」\n8. Bottom strip with generous safe margin, readable white Japanese: 「イラスト（AI生成）／イメージ」\n\nSOURCE GUARDRAILS: The only source for article claims is the supplied fixed source.html/source.txt. That fixed article says both listed games have started and official records are unconfirmed as of 2026-11-17 19:11 JST. Do not imply final results, a winner, scores, player appearances, player performance, or completed rankings. The illustrated player was randomly selected from names appearing in the article. His name MUST NOT appear anywhere in the image. No statistics or personal accomplishment text. The exact pending qualifier and timestamp are essential. No extra captions such as 成績をもとにしたイメージ. Keep イラスト（AI生成） and イメージ visible.\n\nDELIVERABLE: A polished single 16:9 PNG, striking and readable at thumbnail size, visibly hand-drawn editorial sports illustration.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built_in",
+      "generation_count": 1,
+      "correction_count": 0,
+      "generated_original": "/Users/genjo/.codex/generated_images/01a1e909-d57b-7b40-8f2c-6e5d685db3bb/exec-7858d011-197d-4b88-b555-ae230c298199.png",
+      "output_filename": "generated.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "sha256": "ba97861710ad31686e0baf9d4f118548812a38bb87796b1a8cb06914a388a97a",
+      "qa_method": "生成された実画像を目視し、公式容姿参照・固定原稿・指定文字列と照合。PNGチャンクCRCおよび画像データの展開も確認。",
+      "qa_observations": {
+        "text_and_numbers": "全8文字列を実画像で確認。日付11/17、2026.11.17、時刻19:11、両対戦名が固定原稿と一致。選手名・成績・得点・順位の記載なし。",
+        "source_qualifiers": "主見出しに『公式記録の』『確定待ち』、下部に『2026.11.17 19:11時点』。勝敗・出場・当日成績の確定や特定の試合場面を示さない。",
+        "likeness_or_no_named_person": "実在の塚本雄貴選手の公式画像を2点目視確認し、金髪・黒い根元・分け目・輪郭・眉目・鼻・口元を生成画と照合。選手名の画像内表記なし。",
+        "layout": "約16:9、1672×941。主見出しと人物が読み分けられ、顔・両手・ボール・全文字に見切れなし。指と関節に目立った破綻なし。ロゴ・スポンサー・写真貼付なし。",
+        "ai_label": "下部の『イラスト（AI生成）／イメージ』を実画像で判読確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-17T10:29:17.076712+00:00",
+  "publication_approved": false
+}

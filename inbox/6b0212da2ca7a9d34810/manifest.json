@@ -1,0 +1,126 @@
+{
+  "id": "6b0212da2ca7a9d34810",
+  "article_path": "article-daily-20261117.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261117.html",
+  "source_commit": "",
+  "source_blob_sha": "3dac9d3ddd79c19c267e9118260cfa5cf1f1c981",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "2aa2f5cc0c9d2b37bcebe631b088a9e8ec36a6ca6d4cd408a1a94e74fa6b00c5",
+  "last_observed_blob_sha": "3dac9d3ddd79c19c267e9118260cfa5cf1f1c981",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6b0212da2ca7a9d34810/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6b0212da2ca7a9d34810/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-17T10:19:32.213267+00:00",
+  "creation_event_id": "38c19bf7502f9f52d7a9",
+  "event_blob_sha": "3dac9d3ddd79c19c267e9118260cfa5cf1f1c981",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/6b0212da2ca7a9d34810/thumbnail.png",
+  "image_sha256": "b1baa69d6730e06ae7daaad82c44dd3e0e3221236b22dc17263ba55969801830",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "3dac9d3ddd79c19c267e9118260cfa5cf1f1c981",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.17",
+      "試合前予測｜独自分析",
+      "長崎 vs 三河",
+      "三河が有利",
+      "長崎の勝機は速攻",
+      "出場状況は当日発表待ち",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6b0212da2ca7a9d34810/source.html",
+        "role": "本文の根拠（固定HTML）。標題、日付、試合前の独自予測、速攻、出場状況の留保を確認。Gitコマンドを使わずblob SHAを算出し指定値との一致を確認。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6b0212da2ca7a9d34810/source.txt",
+        "role": "本文の根拠（固定文章）。HTML本文と照合。"
+      },
+      {
+        "url": "https://basuke-matome.jp/article-daily-20261117.html",
+        "role": "対象記事の識別のみ。公開ページを本文根拠として参照していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルールを参照。人物選択は本人の最新依頼を優先。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイル。view_imageで目視確認。配色・インク画調・太字見出しのみ参照し、選手・成績は転用しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "role": "指定パスには存在せず。白地案は参照・採用していない。"
+      },
+      {
+        "url": "https://www.velca.jp/team/players/detail/id=47736?PlayerID=51000395&Year=2025",
+        "role": "アキル・ミッチェル選手の容姿のみ。公式プロフィール写真をダウンロードしview_imageで目視。本文・成績の根拠に使用せず、写真を完成画像に貼り付けていない。"
+      },
+      {
+        "url": "https://go-seahorses.jp/team/players/detail/id=27764?PlayerID=26912",
+        "role": "ショーン・オマラ選手の容姿のみ。公式プロフィール写真をダウンロードしview_imageで目視。本文・成績の根拠に使用せず、写真を完成画像に貼り付けていない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "アキル・ミッチェル",
+        "team": "長崎ヴェルカ",
+        "selection": "ランダム",
+        "selection_method": "チーム比較の記事で特定選手を主役に絞れないため、本文に名前が出る長崎の4選手からPython標準secrets.choiceで1人を抽選。",
+        "candidates": [
+          "ブラントリー",
+          "ランドルフ",
+          "馬場雄大",
+          "アキル・ミッチェル"
+        ],
+        "official_profile": "https://www.velca.jp/team/players/detail/id=47736?PlayerID=51000395&Year=2025",
+        "official_photo": "https://bleague.bl.kuroco-img.app/v=2026111117/files/user/roster/2488/2026-27/51000395_01.jpg",
+        "observed_features": "黒いヘッドバンド、短い黒髪、縦長の輪郭、頬骨、目鼻、短い黒いフルビアードと口ひげ、左腕のタトゥー、右腕の黒いスリーブ。完成画像で対応を目視確認。",
+        "depiction": "紺色の無地ユニフォームで守備姿勢。選手名・個人成績・出場確定の記載なし。特定試合の再現ではない。"
+      },
+      {
+        "name": "ショーン・オマラ",
+        "team": "シーホース三河",
+        "selection": "ランダム",
+        "selection_method": "本文に名前が出る三河の2選手からPython標準secrets.choiceで1人を抽選。",
+        "candidates": [
+          "ガードナー",
+          "オマラ"
+        ],
+        "official_profile": "https://go-seahorses.jp/team/players/detail/id=27764?PlayerID=26912",
+        "official_photo": "https://go-seahorses.bl.kuroco-img.app/v=1789089105/files/user/team/player/2026-27/50_blue.jpg",
+        "observed_features": "ごく短い濃茶の髪、長い角張った輪郭、通った鼻、濃い眉、短い茶色のフルビアードと口ひげ、色白の肌、幅広い肩。完成画像で対応を目視確認。",
+        "depiction": "白系の無地ユニフォームで両手にボールを持つピボット姿勢。選手名・個人成績・出場確定の記載なし。特定試合の再現ではない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION (verbatim):\nUse case: illustration-story\nAsset type: ONE finished Japanese basketball editorial thumbnail for バスケまとめ. Landscape 16:9, 1536 x 864 or larger, PNG, opaque.\nCreate a polished hand-drawn sports ink-and-brush illustration with bold Japanese typography. Black charcoal #151A18 background, electric lime #CCF43B brush strokes, warm ivory lettering, orange basketball, restrained deep-blue clothing accents. Energetic rough dry-brush edges and fine ink hatching, very clearly an illustration, never photographic. Match the previously inspected approved black/lime v3 visual style, but use a fresh two-player composition. No reference sample names or scores.\n\nEDITORIAL CONTENT: A pre-game independent prediction of Nagasaki versus Mikawa on 2026-11-17. Mikawa is favored; Nagasaki's opportunity is fast breaks. Actual player availability is still pending the game-day announcement. No final result, score, individual performance or confirmed appearance is being asserted.\n\nEXACT VISIBLE TEXT, and no other text:\nTop left small brand: 「バスケまとめ」\nSmall date beside/below brand: 「2026.11.17」\nA compact lime label: 「試合前予測｜独自分析」\nMain headline, large bold ivory: 「長崎 vs 三河」\nSecond headline, very large lime: 「三河が有利」\nSmaller ivory supporting line: 「長崎の勝機は速攻」\nLower-left clear qualifier: 「出場状況は当日発表待ち」\nBottom-left legible disclosure: 「イラスト（AI生成）｜イメージ」\nDo not include Japanese quote marks around the visible text. Spell all Japanese accurately. Set the text as a clean hierarchy, not scattered. Keep every word fully inside safe margins of about 55px. The qualifier and AI disclosure must be readable, not tiny. No other numerals, no names, no uniform lettering or uniform numbers, no logos.\n\nCOMPOSITION: Text occupies roughly left 51%, two clearly identifiable real players in dynamic basketball action occupy the right 49%. Use a low athletic, diagonal post-up / one-on-one contest image. Both faces are visible in three-quarter views, with readable features and enough room above heads; figures shown head to around mid-thigh with purposeful lower-body crop. Both players have distinct heads, shoulders and arms, with natural correct anatomy. The ball is entirely inside the frame and is a handheld prop. The right foreground player pivots while protecting the orange basketball in both hands near his chest; the other defender has bent knees, a wide defensive stance, one hand raised in open space and the other lower. Neither touches or overlaps any type. The scene is a conceptual illustration, not a recreation of this particular match, not a decisive winning moment. Sparse lime diagonal brush shapes behind the players, minimal backdrop; no crowd, no scoreboard, no hoop needed.\n\nREAL PLAYER APPEARANCES, derived from actual official profile photographs that were visually inspected:\n1. AKIL MITCHELL / アキル・ミッチェル, Nagasaki. Reference https://www.velca.jp/team/players/detail/id=47736?PlayerID=51000395&Year=2025 and its official photo. Tall, long-limbed strong athletic build; medium-dark brown skin; close short hair covered by a snug broad black sports headband across the forehead; long oval face with defined cheekbones, narrow almond-shaped eyes, wide straight nose, full lips; neatly trimmed full short black beard joined to a mustache, stronger beard at chin. Visible tattoos on his LEFT upper arm and forearm; plain black compression sleeve on his RIGHT arm. Plain dark navy sleeveless uniform with narrow light trim, no logos, names or numbers. Depict as the defender behind and to the left of O'Mara, head and face fully visible; preserve these distinctive features.\n2. SEAN O'MARA / ショーン・オマラ, Mikawa. Reference https://go-seahorses.jp/team/players/detail/id=27764?PlayerID=26912 and its official photo. Very tall, broad-shouldered strong stocky athletic center; fair skin; very short dark brown buzz-cut hair, tapered sides, slightly receding squared hairline, long rectangular/oval face, prominent straight nose, dark eyebrows, light eyes, close brown full beard and mustache with a slightly fuller chin. Plain ivory/light-gray sleeveless uniform with restrained deep-blue trim, no logos, names or numbers, simple black wristband. Depict as the ball-holder at right foreground with face fully visible in three-quarter view and natural determined expression.\nThese are real players selected randomly from names in the manuscript, not invented characters. Preserve their distinct likenesses through drawn features. Do not show their names or individual statistics anywhere.\n\nQUALITY: beautifully finished editorial illustration, minimal clean layout, strong silhouettes, high contrast, no photos or photo collage, no generic anonymous substitute faces, no logos or sponsor text, no extra arms or fingers, no cropped hands or ball, no text on faces, no invented game results.\n\nSINGLE CORRECTION (verbatim):\nEdit this existing basketball thumbnail once. Fix only the composition boundary problem: the basketball and the ball-holder's far hand are cut by the right edge, and the defender's raised fingertips are too close to the top edge. Keep the entire existing text exactly unchanged and in the same positions, preserve all Japanese typography, the black/lime palette, hand-drawn ink illustration, player identities and facial features, uniforms, poses, and AI disclosure. Reduce the size of the two-player illustration together by about 12-15% and reposition it within the right-hand area so the WHOLE basketball and BOTH of Sean O'Mara's hands are comfortably visible inside the frame with at least 65 pixels of clear margin at the right, and the WHOLE raised hand of Akil Mitchell has at least 45 pixels of top margin. The basketball must remain a complete circular ball held naturally in two hands, with correct fingers. Leave the text unobscured. Purposeful lower-body crop below the thighs is allowed. Preserve recognizable Akil Mitchell (black headband, short black hair, short full black beard, dark navy uniform, tattooed left arm and black right-arm sleeve) and Sean O'Mara (short dark brown buzz cut, long rectangular face, close brown beard, ivory uniform, black wristband). No new people, no extra limbs, no logos, no names, no uniform text or numbers. Do not change any news content. Keep landscape 16:9 and the original high resolution. Exact text remains: バスケまとめ / 2026.11.17 / 試合前予測｜独自分析 / 長崎 vs 三河 / 三河が有利 / 長崎の勝機は速攻 / 出場状況は当日発表待ち / イラスト（AI生成）｜イメージ. This is the single allowed correction.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "内蔵画像生成",
+      "generation_calls": 2,
+      "initial_generations": 1,
+      "corrections": 1,
+      "initial_image": "/Users/genjo/.codex/generated_images/01a1e904-e143-70a0-a3f5-d2d1c634499f/exec-3af8ae41-69b6-4c44-afff-8c8e5fe1ab4e.png",
+      "initial_qa": "右端のボールと奥側の手が見切れていたため不採用。1回の修正で人物を縮小し枠内へ収めた。",
+      "selected_image": "/Users/genjo/.codex/generated_images/01a1e904-e143-70a0-a3f5-d2d1c634499f/exec-d97dbd79-1956-42ea-883a-aa30f53c474b.png",
+      "output": "generated.png",
+      "width": 1671,
+      "height": 941,
+      "format": "PNG",
+      "sha256": "b1baa69d6730e06ae7daaad82c44dd3e0e3221236b22dc17263ba55969801830",
+      "qa_method": "生成結果の実画像を目視。8行の文字、日付、試合前予測・独自分析・出場待ちの留保、公式写真を参照した顔の特徴、両者の手、ボールの収まり、見出しとの分離、ロゴ不使用、AI生成とイメージの表記を確認。PNGシグネチャ・寸法・全チャンクCRCも確認。",
+      "final_status": "合格。ローカルのPNGとbrief.jsonのみ保存。ready・git操作・公開・外部送信は未実施。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-17T10:24:57.929027+00:00",
+  "publication_approved": false
+}

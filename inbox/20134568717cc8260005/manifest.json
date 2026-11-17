@@ -1,0 +1,95 @@
+{
+  "id": "20134568717cc8260005",
+  "article_path": "article-results-one-next-20261117.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261117.html",
+  "source_commit": "",
+  "source_blob_sha": "c11751c68a259b3007c1c1497c496d50388fe70a",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "f5a82195360fab7c23036e434c5b1de4324d611ed538f50ea799fc97f9e3a9c8",
+  "last_observed_blob_sha": "c11751c68a259b3007c1c1497c496d50388fe70a",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/20134568717cc8260005/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/20134568717cc8260005/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-17T10:19:33.438905+00:00",
+  "creation_event_id": "850795f7798e5683872f",
+  "event_blob_sha": "c11751c68a259b3007c1c1497c496d50388fe70a",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/20134568717cc8260005/thumbnail.png",
+  "image_sha256": "e6e881855b66815230d0208b3dcaff065d7c417f607f6044069f947bd2a1a2a5",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "c11751c68a259b3007c1c1497c496d50388fe70a",
+    "text_lines": [
+      "バスケまとめ",
+      "11/17 試合結果",
+      "公式記録の",
+      "確定待ち",
+      "長崎 vs 三河 ／ 福岡 vs 徳島",
+      "2026.11.17 19:11時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/20134568717cc8260005/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261117.html",
+        "notes": "固定HTMLのblob SHAを生成前・保存前に照合。記事URLの現行本文は使用せず、この固定HTMLとTXTだけを本文の根拠にした。"
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/20134568717cc8260005/source.txt",
+        "notes": "11/17試合結果は2026-11-17 19:11 JST時点で公式記録確定待ち。長崎－三河、福岡－徳島。選手一覧は今季平均の登録選手からの選出で、当日の出場確定や成績を意味しない。画像に勝敗・スコア・当日成績・選手名は掲載していない。"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "notes": "view_imageで確認した承認済みの黒×ライム、太い日本語文字、手描きインク・ブラシ表現を参照。既存画像の選手名・成績は転用していない。"
+      },
+      {
+        "role": "production_rules_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "notes": "人物を特定できない記事の扱いは、今回の本人指示「実在選手をランダム選出」を優先。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "久保田 義章",
+        "selection": "ランダム",
+        "selection_pool": "固定原稿に名前が掲載された20選手。記事が複数選手の平均表と未確定の試合結果を同列に扱っており、単独の主役が絞れないため。",
+        "selection_method": "source.htmlのstrong要素から本文に登場する選手名を文書順で取得し、random.Random('20134568717cc8260005').choice(names)で1人選択。",
+        "source": "シーホース三河 公式選手プロフィール",
+        "url": "https://go-seahorses.jp/team/players/detail/id=20172?PlayerID=30469",
+        "image_url": "https://go-seahorses.bl.kuroco-img.app/v=1789089098/files/user/team/player/2026-27/11_blue.jpg",
+        "reference_verified": "公式プロフィールの本人写真をダウンロードしてview_imageで目視確認。修正時は容姿参照として内蔵画像生成に渡した。写真の貼り付け・ユニフォームのロゴ転用はしていない。",
+        "observed_features": "中央付近で分けた滑らかな黒髪と額を囲む前髪、耳周りを短く抑えた髪型、縦長の卵形の輪郭、顎の形、直線的な眉、細めの目、鼻と薄めの唇、ひげなし、がっしりした肩・腕。",
+        "qa_notes": "初稿の髪のボリュームと顔立ちを公式写真に寄せる修正を1回行った。最終画像を目視し、髪型・輪郭・目鼻・口・ひげなしの特徴を確認。実際の試合の再現や当日の出場を表すものではなく、ドリブル動作のイメージ。画像に選手名・出場・活躍・成績は記載せず、「イラスト（AI生成）」「イメージ」を明示。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story\nAsset type: one finished Japanese basketball news thumbnail, PNG, landscape 2048x1152 (16:9), opaque background.\nCreate a new polished editorial illustration in the approved reference style already viewed: near-black #151A18, electric lime #CCF43B, ivory typography, expressive hand-ink contours, dry-brush diagonal energy, sparse speckles, few strong elements, high readability at thumbnail size. Do not reproduce the old reference's player, dates, name, scores or stats.\n\nSubject: ONE real player, Yoshiaki Kubota (久保田義章), selected randomly from the supplied article, never a fictional generic player. The official SeaHorses Mikawa profile portrait has been visually checked. Reproduce the distinguishing likeness in hand-drawn form: Japanese adult man, black medium-length smooth hair parted near the center with two curved curtain-shaped locks exposing his forehead, side hair close to head and around the ears; long oval face with a tapering defined jaw and slightly squared chin; straight dark eyebrows; narrow almond eyes; straight moderately narrow nose; thin relaxed lips; clean-shaven, no beard or moustache. Compact muscular guard build, strong shoulders/forearms. His face must remain clearly visible, three-quarter near-frontal angle, focused expression. Avoid generic anime facial features.\nAction/composition: On the right 43% of the canvas, a dynamic low driving dribble toward the lower-right, torso leaning forward, one hand resting naturally on top of an orange basketball at hip height, other arm bent for balance, knees bent. Crop artistically at the lower thighs; entire face, both hands and entire basketball inside the canvas. One continuous anatomically plausible body, natural five-finger hands, no extra limbs. Plain dark basketball jersey and shorts with off-white edging, no name or numbers, no logos or sponsor marks. Original imagined basketball motion, not a reconstruction of any actual game or decisive play. No opponent or anonymous extra players.\nStyle: unmistakably drawn ink-and-brush illustration, monochrome ivory and charcoal skin rendering, modest orange basketball accent, a bold lime sweeping brushstroke behind the figure. No photographic pixels, no photorealism, no official photograph inserted. Typography is crisp bold Japanese Gothic. Letterforms may be clean even where the illustrations are textured.\n\nEditorial content: The only article source is the supplied fixed source.html/source.txt snapshot. It says Nov 17 game results are awaiting official confirmation at 19:11 JST. All results and daily stats remain unconfirmed. DO NOT invent a result, score, win, loss, ranking, attendance, appearance, player achievement, or scoring number. The randomly selected player is just an illustration.\n\nText to render EXACTLY, and no other text:\nTop-left small brand: 「バスケまとめ」\nBelow brand medium-large: 「11/17 試合結果」\nMain left headline, two lines with the second larger in lime:\n「公式記録の」\n「確定待ち」\nBelow the main headline, compact ivory line: 「長崎 vs 三河 ／ 福岡 vs 徳島」\nBelow this, clear small time qualifier: 「2026.11.17 19:11時点」\nBottom-left readable disclosure: 「イラスト（AI生成）」\nAlongside the disclosure with ample spacing: 「イメージ」\n\nLayout: left 57% for text, right 43% for player; do not overlap text with player, hands or ball. Keep all text and the whole ball at least 4% away from edges; footnote above the bottom safe margin, sharp and readable. The big pending headline must dominate and clearly qualify 試合結果, so it never reads as confirmed results. No cards, charts, scoreboards, badges, team/league logos, flags, watermarks or decorative pseudo-text. Match the bold approved black/lime ink aesthetic. Deliver exactly one complete thumbnail.\n\nONE PERMITTED CORRECTION\nEdit the FIRST input image, the finished black/lime Japanese basketball thumbnail. The SECOND input is the official profile photograph of the real player Yoshiaki Kubota (久保田義章), a LIKENESS REFERENCE ONLY.\n\nMake one targeted correction: redraw only the player's HEAD/FACE/HAIR so that his identity looks more like the second reference, preserving the head's current size, placement, nearly frontal angle and serious basketball expression. Match the real player's flatter smoother center-parted black curtain hair with less high fluffy volume; shorter closer hair around the ears; long oval face with a subtly squared/tapered chin, straight brow shape, narrower less stylized natural almond eyes, actual nose width and shape, and thin closed lips. He is clean-shaven: no moustache, beard, goatee or stubble. Use sparse ink hatching to model skin rather than facial-hair textures. Keep the complexion rendered in ivory/black hand-drawn ink. Preserve his clear recognizable real-person facial proportions from the reference rather than a generic manga hero.\n\nEverything else is invariant: preserve the player's body, dynamic dribbling pose, hands, ball, plain logo-free clothes, black #151A18 and lime #CCF43B background, brush textures, entire composition, 16:9 landscape dimensions and crisp Japanese typography. Do not paste any photographic pixels into the thumbnail. Do not add any jersey marks, sponsors, logos, number or name from the reference. Do not include the reference photograph as a panel.\nPreserve every word and all numbers exactly as currently present:\nバスケまとめ\n11/17 試合結果\n公式記録の\n確定待ち\n長崎 vs 三河 ／ 福岡 vs 徳島\n2026.11.17 19:11時点\nイラスト（AI生成）\nイメージ\nKeep the entire head, ball, both hands and all lettering uncut and readable. Return one complete edited thumbnail, unmistakably an illustration, never photorealistic.",
+    "generator": {
+      "name": "OpenAI built-in image_gen",
+      "mode": "generation followed by one corrective edit",
+      "initial_calls": 1,
+      "correction_calls": 1,
+      "final_output": "generated.png",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "format": "PNG",
+      "sha256": "e6e881855b66815230d0208b3dcaff065d7c417f607f6044069f947bd2a1a2a5",
+      "final_internal_file": "/Users/genjo/.codex/generated_images/01a1e90d-c91e-75c1-8758-e255d898f80a/exec-c40b2c2b-b80d-45d4-83ff-3365bc752d05.png"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-17T10:33:56.973413+00:00",
+  "publication_approved": false
+}
