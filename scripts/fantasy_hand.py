@@ -105,7 +105,7 @@ def collect(root, summary):
 def html(result):
     if not result:
         return ''
-    body = ('<section class="game-eff fantasy-best" id="fantasy-best"><p class="phase-label result-label">試合結果 ／ FANTASY ARENA</p>'
+    body = ('<section class="game-eff fantasy-best hand-v2" id="fantasy-best"><p class="phase-label result-label">試合結果 ／ FANTASY ARENA</p>'
             '<h2>最高の手札（この日の結果から）</h2>'
             '<p class="candidate-label">この日の公式EFFで、あとから見て一番点が出た5人。カードの点だけ（ボーナス別）</p>')
     if result.get('error'):

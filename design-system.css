@@ -429,24 +429,24 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .stats-article .pos-grid{display:grid;grid-template-columns:minmax(0,1fr);column-gap:24px}
 @media(min-width:768px){.stats-article .pos-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .stats-article .pos-block{min-width:0}
-.wrap .stats-article .game-eff h4{margin:16px 0 8px}
-.wrap .stats-article .game-eff .tablewrap{margin:0 0 16px}
-.wrap .stats-article .game-eff td{padding-top:8px;padding-bottom:8px}
-.wrap .stats-article .game-eff table{min-width:0}
+.wrap .stats-article .eff-v2 h4{margin:16px 0 8px}
+.wrap .stats-article .eff-v2 .tablewrap{margin:0 0 16px}
+.wrap .stats-article .eff-v2 td{padding-top:8px;padding-bottom:8px}
+.wrap .stats-article .eff-v2 table{min-width:0}
 /* FANTASY ARENA 最高の手札：黒い見出し帯、合計点を大きく、カードは小さな枠 */
-.stats-article .fantasy-best{border:1px solid #151a18;border-radius:8px;overflow:hidden;margin:32px 0;padding:0 0 8px;background:#fff}
-.stats-article .fantasy-best>.phase-label{margin:0;padding:12px 16px 0;background:#151a18;color:#ccf43b;font-size:14px}
-.wrap .stats-article .fantasy-best>h2{margin:0;padding:0 16px 12px;background:#151a18;color:#fff;border-bottom:4px solid #ccf43b}
-.wrap .stats-article .fantasy-best>.candidate-label,.stats-article .fantasy-best>.game-eff-pending{margin:12px 16px}
+.stats-article .hand-v2{border:1px solid #151a18;border-radius:8px;overflow:hidden;margin:32px 0;padding:0 0 8px;background:#fff}
+.stats-article .hand-v2>.phase-label{margin:0;padding:12px 16px 0;background:#151a18;color:#ccf43b;font-size:14px}
+.wrap .stats-article .hand-v2>h2{margin:0;padding:0 16px 12px;background:#151a18;color:#fff;border-bottom:4px solid #ccf43b}
+.wrap .stats-article .hand-v2>.candidate-label,.stats-article .hand-v2>.game-eff-pending{margin:12px 16px}
 .stats-article .hand-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;padding:0 16px}
 @media(min-width:768px){.stats-article .hand-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .stats-article .hand-block{min-width:0}
-.wrap .stats-article .fantasy-best h3.hand-total{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 8px;margin:0 0 8px;padding:12px 16px;background:#151a18;color:#fff;border-radius:8px}
+.wrap .stats-article .hand-v2 h3.hand-total{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 8px;margin:0 0 8px;padding:12px 16px;background:#151a18;color:#fff;border-radius:8px}
 .hand-total .hand-label{flex:1 1 auto;font-size:14px;font-weight:700;line-height:1.5}
 .hand-total .hand-sep{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .hand-total b{font-size:32px;line-height:1.1;font-weight:700;color:#ccf43b;font-variant-numeric:tabular-nums}
 .hand-total .hand-unit{font-size:16px;color:#ccf43b}
-.wrap .stats-article .fantasy-best .tablewrap{margin:0}
+.wrap .stats-article .hand-v2 .tablewrap{margin:0}
 .wrap .stats-article .game-eff table.hand-table{min-width:0;width:100%;table-layout:fixed}
 .wrap .stats-article .hand-table th:nth-child(1){width:10%}
 .wrap .stats-article .hand-table th:nth-child(2){width:auto}
@@ -471,4 +471,18 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .wrap .side .card h4::before{display:block;content:"";width:4px;height:18px;background:#ccf43b;border-radius:2px}
 }
 @media(max-width:480px){.recent-thumb{flex-basis:96px;width:96px}}
-@media(max-width:359px){.wrap .stats-article .game-eff th{font-size:14px;padding-left:4px;padding-right:4px}.wrap .stats-article .game-eff th:first-child{width:28px}.wrap .stats-article .game-eff th:nth-child(n+3){width:38px}}
+/* スマホの長さ（2026-11-18 チャッピーQA）：文字は16pxのまま、略語の見出しだけ14pxにして名前の欄を広げ、余白を詰める */
+@media(max-width:767px){
+.wrap .stats-article .eff-v2 th{font-size:14px;padding:8px 4px}
+.wrap .stats-article .eff-v2 th:first-child{width:28px}
+.wrap .stats-article .eff-v2 th:nth-child(n+3){width:40px}
+.wrap .stats-article .eff-v2 h4{margin:12px 0 4px}
+.wrap .stats-article .eff-v2 .tablewrap{margin:0 0 12px}
+.score-card{padding:8px 12px}
+.score-card .sc-state{margin:0 0 4px}
+.score-card .sc-row{padding:2px 8px 2px 12px}
+.score-card .sc-row+.sc-row{margin-top:4px}
+.wrap .stats-article .hand-table th{font-size:14px;padding-top:8px;padding-bottom:8px}
+}
+@media(max-width:359px){.wrap .stats-article .eff-v2 th{font-size:14px;padding-left:4px;padding-right:4px}.wrap .stats-article .eff-v2 th:first-child{width:28px}.wrap .stats-article .eff-v2 th:nth-child(n+3){width:38px}}
+@media(max-width:767px){.home-updates .upd-group{border:0;border-radius:0;padding:0;overflow:visible}.wrap .home-updates .upd-group h3{margin:0;padding:8px 12px}}

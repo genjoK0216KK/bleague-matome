@@ -59,7 +59,7 @@ def lineup_html(summary, heading=True):
 def game_eff_html(summary):
     leagues=summary.get('game_day_rankings',{}).get('leagues',{})
     if not leagues:return ''
-    body='<section class="game-eff" id="game-eff"><p class="phase-label result-label">試合結果 ／ 当日の EFF</p><h2>当日のEFF・ポジション別TOP3</h2><p class="candidate-label">実際に出場した選手・公式試合スタッツ</p>'
+    body='<section class="game-eff eff-v2" id="game-eff"><p class="phase-label result-label">試合結果 ／ 当日の EFF</p><h2>当日のEFF・ポジション別TOP3</h2><p class="candidate-label">実際に出場した選手・公式試合スタッツ</p>'
     for league,result in leagues.items():
         body+='<h3>'+official.LEAGUES[league][3]+'</h3>'
         if result.get('error'):
