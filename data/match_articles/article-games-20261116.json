@@ -8131,5 +8131,115 @@
         ]
       }
     }
+  },
+  "fantasy_hand": {
+    "star1": {
+      "total": 438,
+      "lineup": [
+        {
+          "slot": "PG",
+          "name": "佐々木 隆成",
+          "team": "三遠",
+          "league": "BP",
+          "eff": 30,
+          "rare": 1,
+          "points": 60
+        },
+        {
+          "slot": "SG",
+          "name": "ブライアン・アンゴラ",
+          "team": "富山",
+          "league": "BP",
+          "eff": 48,
+          "rare": 1,
+          "points": 96
+        },
+        {
+          "slot": "SF",
+          "name": "キヨンテ・ジョンソン",
+          "team": "A東京",
+          "league": "BP",
+          "eff": 52,
+          "rare": 1,
+          "points": 104
+        },
+        {
+          "slot": "PF",
+          "name": "マット・ボンズ",
+          "team": "川崎",
+          "league": "BP",
+          "eff": 36,
+          "rare": 1,
+          "points": 72
+        },
+        {
+          "slot": "C",
+          "name": "ジャック・クーリー",
+          "team": "琉球",
+          "league": "BP",
+          "eff": 53,
+          "rare": 1,
+          "points": 106
+        }
+      ]
+    },
+    "best": {
+      "total": 585,
+      "lineup": [
+        {
+          "slot": "PG",
+          "name": "佐々木 隆成",
+          "team": "三遠",
+          "league": "BP",
+          "eff": 30,
+          "rare": 4,
+          "points": 81
+        },
+        {
+          "slot": "SG",
+          "name": "クリストファー・スミス",
+          "team": "広島",
+          "league": "BP",
+          "eff": 38,
+          "rare": 5,
+          "points": 114
+        },
+        {
+          "slot": "SF",
+          "name": "キヨンテ・ジョンソン",
+          "team": "A東京",
+          "league": "BP",
+          "eff": 52,
+          "rare": 5,
+          "points": 156
+        },
+        {
+          "slot": "PF",
+          "name": "ケリー・ブラックシアー・ジュニア",
+          "team": "群馬",
+          "league": "BP",
+          "eff": 34,
+          "rare": 4,
+          "points": 91
+        },
+        {
+          "slot": "C",
+          "name": "ジャック・クーリー",
+          "team": "琉球",
+          "league": "BP",
+          "eff": 53,
+          "rare": 4,
+          "points": 143
+        }
+      ]
+    },
+    "uncarded": [
+      "ジャック・クラーク（福岡）",
+      "エルジー・ギル（千葉J）",
+      "ジェームズ・ベル（横浜BC）",
+      "モハメド-アリ・アブドゥル-ラフマン（川崎）"
+    ],
+    "cards_retrieved_at": "2026-11-17T16:21:30+09:00",
+    "cards_source": "https://api-card.bleaguepark.jp/jpbl/js_master/cards_json/2026"
   }
 }
