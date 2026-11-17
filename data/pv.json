@@ -1,15 +1,15 @@
 {
  "status": "success",
- "updated": "2026-11-16T07:57:58.781379+09:00",
+ "updated": "2026-11-17T10:53:46.772861+09:00",
  "timezone": "Asia/Tokyo",
  "period": {
-  "start": "2026-11-09",
-  "end": "2026-11-15"
+  "start": "2026-11-10",
+  "end": "2026-11-16"
  },
- "total_through": "2026-11-15",
+ "total_through": "2026-11-16",
  "total": {
-  "/": 337,
-  "/next-games.html": 105,
+  "/": 342,
+  "/next-games.html": 107,
   "/index.html": 86,
   "/cat-kekka.html": 56,
   "/cat-data.html": 55,
@@ -23,7 +23,7 @@
   "/article-games-20261014.html": 19,
   "/article-games-20261021.html": 17,
   "/cat-iseki.html": 17,
-  "/matome.html": 15,
+  "/matome.html": 16,
   "/article-daily-20261022.html": 13,
   "/article-stats-20261012.html": 13,
   "/article-stats-20261030.html": 13,
@@ -250,6 +250,7 @@
   "/article-daily-20261111.html": 2,
   "/article-daily-20261112.html": 2,
   "/article-daily-20261115.html": 2,
+  "/article-daily-20261116.html": 2,
   "/article-games-20261115.html": 2,
   "/article-stats-20261107.html": 2,
   "/article-stats-20261109.html": 2,
@@ -270,22 +271,24 @@
   "/article-stats-20261101.html": 1,
   "/article-stats-20261110.html": 1,
   "/article-stats-20261111.html": 1,
-  "/article-stats-20261112.html": 1
+  "/article-stats-20261112.html": 1,
+  "/article-stats-20261115.html": 1,
+  "/article-stats-20261116.html": 1
  },
  "week": {
-  "/": 37,
-  "/next-games.html": 10,
-  "/articles.html": 5,
-  "/article-analysis-nagoya-20261109.html": 2,
+  "/": 38,
+  "/next-games.html": 11,
+  "/articles.html": 3,
   "/article-daily-20261111.html": 2,
   "/article-daily-20261112.html": 2,
   "/article-daily-20261115.html": 2,
+  "/article-daily-20261116.html": 2,
   "/article-games-20261115.html": 2,
-  "/article-stats-20261108.html": 2,
   "/article-stats-20261109.html": 2,
   "/article-stats-20261113.html": 2,
   "/article-stats-20261114.html": 2,
   "/index.html": 2,
+  "/article-analysis-nagoya-20261109.html": 1,
   "/article-daily-20260820.html": 1,
   "/article-daily-20261110.html": 1,
   "/article-daily-20261113.html": 1,
@@ -299,10 +302,13 @@
   "/article-stats-20261031.html": 1,
   "/article-stats-20261106.html": 1,
   "/article-stats-20261107.html": 1,
+  "/article-stats-20261108.html": 1,
   "/article-stats-20261110.html": 1,
   "/article-stats-20261111.html": 1,
   "/article-stats-20261112.html": 1,
+  "/article-stats-20261115.html": 1,
+  "/article-stats-20261116.html": 1,
   "/articles-2.html": 1,
-  "/injury.html": 1
+  "/matome.html": 1
  }
 }
