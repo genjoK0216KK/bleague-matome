@@ -473,7 +473,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 @media(max-width:480px){.recent-thumb{flex-basis:96px;width:96px}}
 /* スマホの長さ（2026-11-18 チャッピーQA）：文字は16pxのまま、略語の見出しだけ14pxにして名前の欄を広げ、余白を詰める */
 @media(max-width:767px){
-.wrap .stats-article .eff-v2 th{font-size:14px;padding:8px 4px}
+.wrap .stats-article .eff-v2 th{padding:8px 4px}
+.wrap .stats-article .eff-v2 th:nth-child(n+3){font-size:14px}
 .wrap .stats-article .eff-v2 th:first-child{width:28px}
 .wrap .stats-article .eff-v2 th:nth-child(n+3){width:40px}
 .wrap .stats-article .eff-v2 h4{margin:12px 0 4px}
@@ -482,7 +483,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .score-card .sc-state{margin:0 0 4px}
 .score-card .sc-row{padding:2px 8px 2px 12px}
 .score-card .sc-row+.sc-row{margin-top:4px}
-.wrap .stats-article .hand-table th{font-size:14px;padding-top:8px;padding-bottom:8px}
+.wrap .stats-article .hand-table th{padding-top:8px;padding-bottom:8px}
 }
-@media(max-width:359px){.wrap .stats-article .eff-v2 th{font-size:14px;padding-left:4px;padding-right:4px}.wrap .stats-article .eff-v2 th:first-child{width:28px}.wrap .stats-article .eff-v2 th:nth-child(n+3){width:38px}}
+@media(max-width:359px){.wrap .stats-article .eff-v2 th{padding-left:4px;padding-right:4px}.wrap .stats-article .eff-v2 th:nth-child(n+3){font-size:14px}.wrap .stats-article .eff-v2 th:first-child{width:28px}.wrap .stats-article .eff-v2 th:nth-child(n+3){width:38px}}
 @media(max-width:767px){.home-updates .upd-group{border:0;border-radius:0;padding:0;overflow:visible}.wrap .home-updates .upd-group h3{margin:0;padding:8px 12px}}
