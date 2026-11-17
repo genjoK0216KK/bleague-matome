@@ -1,0 +1,85 @@
+{
+  "id": "181b75656b5f7d298f00",
+  "article_path": "article-stats-20261117.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261117.html",
+  "source_commit": "",
+  "source_blob_sha": "2c123c60c0e68675954122ae91634cf5f2798799",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "0958029b88aef5cdce056825335cd017083e1674bc421267bcc9c23d47f99752",
+  "last_observed_blob_sha": "2c123c60c0e68675954122ae91634cf5f2798799",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/181b75656b5f7d298f00/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/181b75656b5f7d298f00/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-17T14:54:04.950401+00:00",
+  "creation_event_id": "3b6b1d37a57488c91aad",
+  "event_blob_sha": "2c123c60c0e68675954122ae91634cf5f2798799",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/181b75656b5f7d298f00/thumbnail.png",
+  "image_sha256": "ddcc809e1ad7b1992a72df7c551a4d8db4c5fce9814188cea5e6157be6a16ff5",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "2c123c60c0e68675954122ae91634cf5f2798799",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.17｜全1試合",
+      "貢献度1位",
+      "アキル・ミッチェル（長崎）",
+      "EFF 30",
+      "12得点・12リバウンド・4アシスト",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/181b75656b5f7d298f00/source.html",
+        "article_url": "https://basuke-matome.jp/article-stats-20261117.html",
+        "use": "本文・氏名・所属・日付・対象範囲・順位・数値の根拠。指定Git blob SHAと一致を確認。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/181b75656b5f7d298f00/source.txt",
+        "use": "本文根拠。2026年11月17日の全1試合、アキル・ミッチェル（長崎）の貢献度1位・EFF30・12得点・12リバウンド・4アシストを確認。外部ページの成績は使用しない。"
+      },
+      {
+        "type": "official_likeness_only",
+        "url": "https://www.velca.jp/team/players/detail/id=47736?PlayerID=51000395",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026111800/files/user/roster/2488/2026-27/51000395_01.jpg",
+        "use": "長崎ヴェルカ公式プロフィール写真をview_imageで確認。容姿参照のみ。公式写真の貼付・合成なし。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認。黒×ライム・手描きインク・太い見出しのみを参照。見本の選手・日付・成績は不使用。"
+      },
+      {
+        "type": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "use": "画像生成・検品ルールを参照。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "アキル・ミッチェル",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿の見出し・リードおよび貢献度ランキング1位として最も大きく扱われているため。",
+        "reference_source": "長崎ヴェルカ公式選手プロフィール",
+        "reference_url": "https://www.velca.jp/team/players/detail/id=47736?PlayerID=51000395",
+        "reference_image_url": "https://bleague.bl.kuroco-img.app/v=2026111800/files/user/roster/2488/2026-27/51000395_01.jpg",
+        "observed_features": "黒い密着したヘッドラップ、縦長の顔、顎から頬を覆う短いひげと口ひげ、耳・目鼻・唇の特徴、長い腕と肩、右腕の黒いスリーブ、左腕のタトゥーを公式写真と照合。",
+        "depiction": "本人の特徴を反映した手描きイラスト。ボールを両手で確保するリバウンドのイメージ。実際の試合の特定場面を再現したものではない。ロゴ・スポンサー文字・背番号・写真素材なし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail as a PNG, landscape 16:9, ideally 1600 x 900 or larger. This is a brand-new image.\n\nSTYLE: Follow the approved black/lime basketball thumbnail visible earlier in the conversation only for its visual style: deep green-black #151A18, acid lime #CCF43B, warm ivory, boldly drawn ink contours, dry brush strokes and minimal halftone texture, huge Japanese sports headline typography. Clear hand-drawn editorial illustration, NOT a photograph or a photo filter. Do not reuse the sample player, its text, dates or scores.\n\nSUBJECT: Only ONE real athlete, Akil Mitchell / アキル・ミッチェル, whose official Nagasaki Velca profile portrait was just inspected. Use that visible portrait only as a likeness guide, do not paste its pixels. Accurately preserve his distinctive long oval face, closely trimmed full beard around jaw and chin joined to his moustache, medium broad straight nose, full lips, deep-set almond eyes and prominent ears. He wears a close-fitting black skullcap/head wrap covering his hair, no visible hair spikes or long hair. Tall strong athletic shoulders and long arms. Right forearm has a black compression sleeve, left upper arm subtle abstract tattoo shading. Plain dark sleeveless basketball uniform with light trim, completely free of logos, sponsors, letters and numbers. The head wrap is also unbranded.\n\nACTION AND COMPOSITION: Text in the left 58% of frame, athlete occupying the right 42%. Depict Mitchell in a powerful rebound gathering motion: three-quarter torso twisted, both hands naturally and firmly grasping ONE orange basketball near the right side of his head as he brings it down, elbows visibly bent, eyes focused toward the ball. Show his face unobstructed and recognizable. This is an imagined sporting action illustrating the statistics, never a recreation of a specific game moment. No opponent or background people. No hoop required. Keep the entire ball, both hands, head and elbows safely inside the image boundaries. Lower torso may naturally exit the bottom-right edge above a clear footer. Use one broad diagonal lime brush sweep behind him for energy; leave clean dark negative space behind text. Anatomically correct hands, natural fingers wrapping around the ball, no duplicated limbs.\n\nTEXT, EXACT JAPANESE:\nTop-left small brand: \"バスケまとめ\"\nBelow it, clearly readable date/scope: \"2026.11.17｜全1試合\"\nMain bold ivory headline: \"貢献度1位\"\nPlayer identification below: \"アキル・ミッチェル（長崎）\"\nLargest central-left metric: \"EFF 30\" — EFF must be clearly adjacent to 30; 30 in enormous lime dry-brush numerals, never label it points.\nSupporting line: \"12得点・12リバウンド・4アシスト\"\nBottom footer exact text: \"イラスト（AI生成）\"\nBeside or below that footer: \"成績をもとにしたイメージ\"\n\nKeep all text verbatim, sharp and readable, no extra text. Give text and footer generous 4% safe margins. Main headline and numeric metric should read at small thumbnail size. The scope is ONLY the single game on 2026-11-17, not a season-wide ranking. Facts come solely from the fixed manuscript: Mitchell of Nagasaki ranked 1st with EFF 30, 12 points, 12 rebounds and 4 assists. Do not introduce other statistics, a score, achievement badge, championship claim or game-winning moment. Do not use any league logo, team logo, sponsor mark, official photograph, watermark or photorealism. Keep the AI label and image disclaimer legible.",
+    "generator": "内蔵 image_gen.imagegen / PNG / 1672×941 / 1回生成・修正0回。生成画像を実際に目視確認後、内容を変更せずgenerated.pngへコピー。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-17T15:06:31.986484+00:00",
+  "publication_approved": false
+}

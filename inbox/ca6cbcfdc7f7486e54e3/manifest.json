@@ -1,0 +1,125 @@
+{
+  "id": "ca6cbcfdc7f7486e54e3",
+  "article_path": "article-results-one-next-20261117.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261117.html",
+  "source_commit": "",
+  "source_blob_sha": "3b02d96aa1fd6ac045e3e4363444fd9fbe312f28",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "add2adfec9c9f61c03537aec36380f69758561b6ac8527627929e629d9d8163d",
+  "last_observed_blob_sha": "3b02d96aa1fd6ac045e3e4363444fd9fbe312f28",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca6cbcfdc7f7486e54e3/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca6cbcfdc7f7486e54e3/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-17T14:54:04.411595+00:00",
+  "creation_event_id": "8573a9d0a6681659b539",
+  "event_blob_sha": "3b02d96aa1fd6ac045e3e4363444fd9fbe312f28",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/ca6cbcfdc7f7486e54e3/thumbnail.png",
+  "image_sha256": "8b81c7ad656bdca8e2d46ed014b3d895b7dffe5c724ac0626bf13c2dd4966dd1",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "3b02d96aa1fd6ac045e3e4363444fd9fbe312f28",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.17",
+      "試合結果",
+      "当日のEFF",
+      "リーグ別・ポジション別TOP3",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca6cbcfdc7f7486e54e3/source.html",
+        "role": "本文内容の根拠。固定HTMLのみ。",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261117.html",
+        "source_blob_sha": "3b02d96aa1fd6ac045e3e4363444fd9fbe312f28",
+        "evidence": [
+          "h1: 11/17 試合結果・当日のEFF",
+          "試合日 2026.11.17",
+          "当日のEFF・ポジション別TOP3",
+          "当日TOP3は全試合の公式記録確定後、出場時間がある選手の公式EFFでリーグ別・ポジション別に選出。今季平均や予想とは別集計。"
+        ],
+        "qualifiers_preserved": "当日・リーグ別・ポジション別を画像に明記。個人成績、総合順位、カード得点、確定した実際のプレー場面の主張は入れていない。",
+        "alias_note": "固定HTMLのcanonicalはarticle-games-20261117.htmlだが、この依頼の対象URLと固定版をそのまま使用。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca6cbcfdc7f7486e54e3/source.txt",
+        "role": "本文内容の照合用。固定文章のみ。",
+        "sha256": "add2adfec9c9f61c03537aec36380f69758561b6ac8527627929e629d9d8163d"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "加藤 寿一",
+        "selection": "ランダム",
+        "selection_reason": "複数試合の結果と部門別EFF一覧が主題で、単独の主役選手がいないためランダム選出",
+        "selection_method": "本文の重複を除いた選手名一覧からSystemRandomで1人を一様抽選",
+        "candidate_count": 23,
+        "candidate_names": [
+          "長野 誠史",
+          "平良 彰吾",
+          "熊谷 航",
+          "馬場 雄大",
+          "リーヴァイ・ランドルフ",
+          "石井 講祐",
+          "田中 流嘉州",
+          "アキル・ミッチェル",
+          "ジャレル・ブラントリー",
+          "アーロン・ホワイト",
+          "ショーン・オマラ",
+          "中谷 麻登",
+          "小林 遥太",
+          "綱井 勇介",
+          "オリバー・シュウ",
+          "加藤 寿一",
+          "谷口 光貴",
+          "ジャック・クラーク",
+          "西川 貴之",
+          "キャメロン・オリバー",
+          "ラポラス・アイヴァナーカス",
+          "ウィリアム・アルティノ",
+          "アイザック・バッツ"
+        ],
+        "source": "ライジングゼファー福岡 公式選手プロフィール",
+        "source_url": "https://r-zephyr.com/team/players/detail/id=17026?PlayerID=8595",
+        "photo_url": "https://bleague.bl.kuroco-img.app/v=2026111800/files/user/roster/753/2026-27/8595_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca6cbcfdc7f7486e54e3/references/toshikazu-kato-official.jpg",
+        "reference_viewed": true,
+        "observed_features": "短い黒髪、中央寄りの分け目と左右へ流したやや波のある髪、額を出した髪型、縦長の輪郭、細めの顎、目立つ耳、暗い眉と目、通った鼻筋、ひげのない口元、長身で細身の体格。",
+        "usage": "容姿確認のみ。公式写真を貼り付けずインク調に描写。チームロゴ、スポンサー、背番号、選手名、個人成績は描いていない。ランダム選出であり当日の活躍を示す図ではない。",
+        "scene": "一般的なドライブ動作のイメージ。実際の試合の特定場面の再現ではない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nAsset type: Japanese basketball news thumbnail, one finished wide PNG, exact 16:9 composition, target 1600x900 or larger than 1000 pixels wide.\n\nCreate one striking editorial sports illustration for バスケまとめ. Match the approved visual system observed in the conversation: deep ink black #151A18 background, vivid lime #CCF43B brush slashes, warm ivory #F5F2E8 type and hand-painted figure, a small orange basketball accent. Rough dry-brush / ink line work and restrained paper grain, clearly an illustration, never a photograph or photorealistic render. Few elements, bold condensed Japanese typography with excellent small-thumbnail legibility.\n\nSUBJECT AND LIKENESS: Depict exactly ONE real athlete, Toshikazu Kato (加藤寿一), based on the official Rizing Zephyr Fukuoka portrait examined for this task. His verified visible features: Japanese man in his early thirties, lean tall athletic build, elongated oval face, narrow tapered chin and jaw, fairly prominent ears, short black subtly wavy hair parted close to the center with the longer top swept back and to both sides, forehead visible, dark straight eyebrows, dark almond eyes with clear eyelids, a straight defined nose and closed medium lips, clean-shaven with no beard or moustache. Preserve these recognizable features in expressive ivory-and-black ink drawing, with readable face planes rather than a black silhouette. No fictional substitute athlete. The portrait is only an appearance reference: do not paste or recreate the photograph, its pose, its uniform marks or its background.\n\nACTION: On the right 45 percent of the image, show Kato in a dynamic low forward drive, torso leaning diagonally toward the center-left, knees flexed, head up with a focused expression, controlling an orange basketball beside his right hip with his right hand while the other arm balances the motion. Three-quarter view, upper legs visible; natural anatomy, exactly two arms, hands and ball clearly readable. Keep face, both hands and the whole ball comfortably within the canvas. The torso and lower body can extend toward the lower-right edge. Use a simple unbranded ivory basketball jersey and shorts with black shadow planes; no logos, sponsors, numbers or name lettering. This is a generic imagined basketball movement, not a reenactment or claim about a particular real game, result, shot or performance. Do not draw an opponent or audience.\n\nLAYOUT: Text occupies left 55 percent, clean and unobstructed. Top-left small brand and date. Very large ivory headline 試合結果, then large lime 当日のEFF below it. A restrained lime brush underline and a smaller ivory subheading underneath. The player fills the right side, with diagonal lime brush energy behind him, varied from a static upright jump-shooting composition. Ensure at least 5 percent safe margin for all text. Bottom-left footer is small but clearly legible. Do not include frames, scoreboards, charts, badges or extra decorative icons.\n\nTEXT: Render ONLY these exact seven strings, in this reading order:\nバスケまとめ\n2026.11.17\n試合結果\n当日のEFF\nリーグ別・ポジション別TOP3\nイラスト（AI生成）\nイメージ\n\nThe last two strings form a visible footer. Make Japanese characters correct, intact and sharp. No other words or numbers anywhere, including on jersey or basketball.\nFACTUAL LIMITS: This article aggregates multiple games and position-specific EFF lists. Kato was randomly selected from names in the fixed article; the picture must contain no player name, personal statistics, claim of participation, heroics or implication that Kato led the rankings. TOP3 explicitly belongs to league-by-league, position-by-position lists, not overall rankings. No team or league logos. No official photographs in the final image. No copied text, player names, scores or dates from the earlier style sample. Deliver one single complete thumbnail.\n",
+    "generator": {
+      "name": "内蔵 image_gen",
+      "tool": "image_gen.imagegen",
+      "mode": "generate",
+      "attempts": 1,
+      "corrections": 0,
+      "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "style_reference_viewed": true,
+      "original_output": "/Users/genjo/.codex/generated_images/01a1ea04-fcb2-7c91-af42-dbc3c6080234/exec-382ffd3f-39fc-4116-8dc9-eb0c877ec359.png",
+      "width": 1672,
+      "height": 941,
+      "png_sha256": "8b81c7ad656bdca8e2d46ed014b3d895b7dffe5c724ac0626bf13c2dd4966dd1",
+      "visual_qa_notes": {
+        "text_and_numbers": "生成画像を目視。指定の見出し、2026.11.17、リーグ別・ポジション別TOP3に誤字・欠けなし。",
+        "source_qualifiers": "当日のEFFという対象期間と、リーグ別・ポジション別の範囲を表示。ランダム選手名・個人成績・出場や活躍の断定なし。イメージ表記を確認。",
+        "likeness_or_no_named_person": "公式プロフィール写真と描画を目視比較。髪型、額、目鼻、縦長の輪郭、耳、ひげのない口元を反映。",
+        "layout": "約16:9。文字と顔の重なりなし。顔、両手、ボールの欠けなし。手指と腕に明らかな破綻なし。黒とライム、インク・ブラシの絵柄を確認。",
+        "ai_label": "下部のイラスト（AI生成）とイメージを目視確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-17T15:03:19.867004+00:00",
+  "publication_approved": false
+}
