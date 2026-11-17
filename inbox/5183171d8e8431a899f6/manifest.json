@@ -1,0 +1,102 @@
+{
+  "id": "5183171d8e8431a899f6",
+  "article_path": "article-analysis-alvark-20261117.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-alvark-20261117.html",
+  "source_commit": "",
+  "source_blob_sha": "9731d02638ce87e6ad009e610fdbb4e15b03a01f",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "dcdc8c8ec55764a4ae3103546cf7c213a139b1214f62d577780fad55f8f4b139",
+  "last_observed_blob_sha": "9731d02638ce87e6ad009e610fdbb4e15b03a01f",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5183171d8e8431a899f6/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5183171d8e8431a899f6/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-17T03:22:09.314089+00:00",
+  "creation_event_id": "b1834ff89c784ac63f45",
+  "event_blob_sha": "9731d02638ce87e6ad009e610fdbb4e15b03a01f",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/5183171d8e8431a899f6/thumbnail.png",
+  "image_sha256": "b8cf7e01973c524f21f0f274bbaaa8299cdd675a90672b6dc8ff9b149808e938",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "9731d02638ce87e6ad009e610fdbb4e15b03a01f",
+    "text_lines": [
+      "バスケまとめ",
+      "アルバルク東京",
+      "直近5試合",
+      "4勝1敗",
+      "失点とミスの少なさが強み",
+      "対象：11/6〜11/16",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5183171d8e8431a899f6/source.html",
+        "role": "記事内容の根拠（固定HTML）。blob SHAを生成前と保存前に計算して指定値と一致確認。",
+        "supports": [
+          "チーム名：アルバルク東京",
+          "直近5試合：4勝1敗",
+          "対象：11月6日から11月16日",
+          "主題：失点の少なさとミスの少なさ"
+        ]
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5183171d8e8431a899f6/source.txt",
+        "role": "記事内容の根拠（固定文章）。HTMLとの本文内容を確認。",
+        "qualifiers": "チームの5試合の結果として表示。ランキング・比較値は画像に載せていない。特定の試合場面を再現せず「イメージ」と表示。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "キヨンテ・ジョンソン（Keyontae Johnson）",
+        "selection": "ランダム",
+        "reason": "チーム分析記事のため、本文に名前がある選手4名から選択。",
+        "selection_pool": [
+          "キヨンテ・ジョンソン",
+          "ディー・ジェイ・ホグ",
+          "ライアン・ロシター",
+          "安藤周人"
+        ],
+        "selection_method": "Python random.SystemRandom().choiceによる1回の無作為抽出",
+        "source": "アルバルク東京公式 選手紹介",
+        "url": "https://www.alvark-tokyo.jp/player_lp/keyontae_johnson/",
+        "image_urls": [
+          "https://alvark-tokyo.bl.kuroco-img.app/v=1789441750/files/user/_/player_lp/2026-27/keyontae_johnson/images/kv_sp.jpg",
+          "https://alvark-tokyo.bl.kuroco-img.app/v=1789441750/files/user/_/player_lp/2026-27/keyontae_johnson/images/bg_section_01_sp.jpg"
+        ],
+        "reference_checked": "公式プロフィールの顔写真とプレー写真をダウンロードしview_imageで目視。髪型・輪郭・眉・目鼻・口ひげ・顎ひげ・体格を参照。公式写真は完成画像に貼り付けていない。",
+        "observed_features": "短く密な黒いアフロ、太い眉、広めの輪郭、厚めの唇、口ひげと顎先のひげ、筋肉質な体格。完成イラストでも確認。",
+        "depiction": "ボールを運ぶプレー姿のイメージ。選手名・個人成績・出場や活躍の説明は画像に入れず、チームの情報だけを表示。無地ユニフォーム、チーム・リーグ・スポンサーのロゴなし。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 2048 x 1152 PNG, opaque background. This is a new original illustrated artwork for バスケまとめ.\nStyle: approved black-and-lime editorial look: near-black #151A18 background, acid lime #CCF43B, warm ivory ink highlights, bold rough hand-ink drawing, expressive dry-brush and sparse splatter, large extremely legible Japanese gothic typography, few elements. Clearly drawn illustration, NOT a photo or photoreal rendering.\nSubject: ONE real basketball player, Keyontae Johnson of Alvark Tokyo, selected at random from the fixed article's named players. Depict his actual distinctive appearance from the official Alvark profile: a muscular broad-shouldered young man, medium brown skin rendered in warm ivory and dark ink shading, compact rounded short dense black afro with clean temple edges, strong broad oval/squared jaw, thick arched dark eyebrows, slightly hooded light hazel-gray eyes, broad straight nose, full lips, narrow moustache and distinct small pointed chin goatee, very light cheek stubble. Face must be visibly recognizable and well-lit with readable eyes/nose/mouth, not blacked out, not a generic invented athlete. Official identity reference consulted: https://www.alvark-tokyo.jp/player_lp/keyontae_johnson/ (kv_sp.jpg headshot). Do NOT paste any official photograph.\nComposition: athlete on LEFT roughly 43% of canvas, head around upper-left quarter, face turned 3/4 toward viewer/right, a dynamic crouched forward driving dribble with a twist of torso, visible from head to upper thighs. One hand on the top/back of a single orange basketball near hip, the other arm bent naturally close to his torso. The basketball is a held/controlled prop next to the player. Correct two arms and hands, anatomically coherent fingers. Keep head, both hands and the entire ball safely inside frame, at least 60 px margins. The figure's lower thigh may intentionally meet the lower edge. Plain black basketball kit with subtle deep red trim, no logos, no sponsor, no writing, no jersey number. One broad rising lime brush stroke behind him. This is a conceptual playing illustration, not a reconstruction of any actual game or decisive moment.\nText occupies the RIGHT 55% of the canvas with clean strong alignment and generous separation from the athlete. Large readable team name on one line or two neatly balanced lines; record is the largest element. Use ONLY the following exact Japanese text, with no player name and no individual statistics:\nSmall top brand: 「バスケまとめ」\nLarge team heading: 「アルバルク東京」\nMedium label directly above record: 「直近5試合」\nVery large record, lime with ivory counters if useful: 「4勝1敗」\nSupporting subheading in ivory, two lines if needed: 「失点とミスの少なさが強み」\nSmall legible period beneath: 「対象：11/6〜11/16」\nBottom footer, safely inset, legible on solid near-black, separate from illustration and other copy: 「イラスト（AI生成）」 and 「イメージ」\nAll these numbers refer to the TEAM only. Do not label the player, do not claim his stats or performance. Do not include standings, defensive ranks, other numbers, scores, opponents, photographs, court diagrams, trophy, team logos, league logos, shoe brands, sponsor text, watermarks or extra decorative text. Match Japanese text exactly, including 直近5試合, 4勝1敗, 11/6〜11/16, fullwidth parentheses in イラスト（AI生成）. Elegant polished thumbnail, impactful but uncluttered, complete readable content with no clipping.",
+      "revision": "Edit this thumbnail with ONE precise layout correction only. Keep canvas 1672 x 941 (approximately 16:9) or higher resolution same ratio. Preserve every Japanese word, all typography, all colors, the right-hand text layout, the player Keyontae Johnson's recognizable face, clothing, pose, and the ink brush illustration style. All current text is correct and must remain unchanged.\n\nThe player's hair is too near the TOP edge, and the outermost fingertip of the hand on the basketball is clipped by the LEFT edge. Slightly reduce and move the entire illustrated player-and-ball group inward, enough so that there is at least a 35 pixel clear margin ABOVE his complete hair silhouette and at least a 35 pixel clear margin LEFT of the complete hand and basketball. His two hands and all five fingers on each hand, head, hair, ball and elbows must be fully inside frame, with natural anatomy. Preserve the lower thigh meeting the bottom edge; maintain a dynamic powerful pose. Do not disturb the right-hand text. Extend the dark/brush background naturally into the newly exposed margins.\n\nDo not add other people, new text, logos, jersey lettering, or numbers. Do not alter the team record, time window, subtitle, or the AI and image labels. Remain clearly a hand-ink illustration, not a photo. This is the only allowed correction.",
+      "revision_input": "/Users/genjo/.codex/generated_images/01a1e786-bc95-7b72-9157-ed59fe6c894e/exec-233bb022-8c9c-4be3-a74b-a67c4d13e844.png",
+      "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "style_reference_note": "view_imageで承認済み黒×ライム案を確認。手順書記載のA-faison-ivory-v3.pngは指定フォルダに存在しないため未使用。"
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "内蔵画像生成",
+      "initial_generations": 1,
+      "revisions": 1,
+      "revision_reason": "初回画像の左端の指と頭上の余白不足を修正。修正版を目視してから保存。",
+      "output": "generated.png",
+      "width": 1671,
+      "height": 941,
+      "sha256": "b8cf7e01973c524f21f0f274bbaaa8299cdd675a90672b6dc8ff9b149808e938",
+      "qa_method": "生成された修正版の実画像を目視。文字・数字、対象期間とチーム情報の留保、公式容姿との対応、手指と頭部とボールの収まり、AIラベルを確認。",
+      "status": "検品合格・ローカル保存済み。ready未実行・未公開・外部送信なし。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-17T03:26:56.782499+00:00",
+  "publication_approved": false
+}
