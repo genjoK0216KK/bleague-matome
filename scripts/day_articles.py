@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 try:
-    from . import official_data as official, preview_data as data, match_articles as articles, daily_lineups, game_day_rankings, result_status
+    from . import official_data as official, preview_data as data, match_articles as articles, daily_lineups, game_day_rankings, result_status, fantasy_hand
 except ImportError:
     import result_status
     import official_data as official
@@ -11,6 +11,7 @@ except ImportError:
     import match_articles as articles
     import daily_lineups
     import game_day_rankings
+    import fantasy_hand
 
 
 def filename(date):
@@ -93,6 +94,7 @@ def render(summary, preview_root, preview_names, updated):
     if finished: summary=dict(summary,lineups={})
     body='<nav class="article-jumps" aria-label="記事内の移動"><a href="#daily-results">試合</a>'
     if summary.get('game_day_rankings',{}).get('leagues'):body+='<a href="#game-eff">当日TOP3</a>'
+    if summary.get('fantasy_hand'):body+='<a href="#fantasy-best">最高の手札</a>'
     if summary.get('lineups'):body+='<a href="#daily-lineups">今季平均</a>'
     body+='</nav>'
     checked=_checked_at(updated)
@@ -121,7 +123,7 @@ def render(summary, preview_root, preview_names, updated):
                 state=result_status.game_state(g,checked,data.is_verified_final)
             body+='<a class="daily-score" id="game-'+articles.esc(g['game_id'])+'" href="'+articles.esc(g['source'])+'"><span>'+articles.esc(g['home'])+'</span><strong>'+articles.esc(status)+'</strong><span>'+articles.esc(g['away'])+'</span><small>'+state+'</small></a>'
     if empty:body+='<p class="empty-games">この日試合なし：'+articles.esc('・'.join(empty))+'</p>'
-    body+='</section>'+game_eff_html(summary)+lineup_html(summary)
+    body+='</section>'+game_eff_html(summary)+fantasy_hand.html(summary.get('fantasy_hand'))+lineup_html(summary)
     body+='<details class="match-notes"><summary>出典・選出ルール・注記</summary>'
     if summary.get('game_day_rankings',{}).get('leagues'):
         body+='<p>当日TOP3は全試合の公式記録確定後、出場時間がある選手の公式EFFでリーグ別・ポジション別に選出します。今季平均や予想とは別集計です。</p>'
@@ -132,6 +134,7 @@ def render(summary, preview_root, preview_names, updated):
             if result.get('position_retrieved_at'):body+='<p>当日TOP3のポジション資料取得：'+datetime.fromisoformat(result['position_retrieved_at']).astimezone(data.JST).strftime('%Y-%m-%d %H:%M JST')+'</p>'
             if result.get('formula_differences'):
                 body+='<p>公式EFFと内訳算式の差を確認した記録：'+articles.esc('、'.join(p['name']+'（公式'+str(p['eff'])+'／内訳'+str(p['formula_value'])+'）' for p in result['formula_differences']))+'。公式配信値を優先しています。</p>'
+    body+=fantasy_hand.notes(summary.get('fantasy_hand'))
     if summary.get('lineups'):
         body+='<p>対象試合の現在登録選手を、資料取得時点の今季平均EFFで選びます。対象試合の実績ランキングとは別集計です。</p>'
     if summary.get('lineups'):
@@ -218,6 +221,7 @@ def write(client, root, summary, previews, updated, refresh_players=True, rankin
     ranking_source = rankings_client if rankings_client is not None else (client if refresh_players else None)
     summary['game_day_rankings'] = merge_rankings(game_day_rankings.collect(ranking_source, root, summary),
                                                   prior_rankings, stable_leagues)
+    summary['fantasy_hand'] = fantasy_hand.collect(root, summary)
     name, html = render(summary, root, previews, updated)
     annotated = articles.readable_match(articles.annotate_provenance(html,client))
     (root/name).write_text(annotated,encoding='utf-8')
