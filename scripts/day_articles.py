@@ -65,16 +65,33 @@ def game_eff_html(summary):
         if result.get('error'):
             body+='<p class="game-eff-pending">'+articles.esc(result['error'])+'。確定後に掲載します。</p>'
             continue
+        body+='<div class="pos-grid">'
         for position,rows in result['positions'].items():
-            body+='<h4>'+position+'</h4>'
+            body+='<div class="pos-block"><h4>'+position+'</h4>'
             if not rows:
-                body+='<p>対象の出場選手なし</p>';continue
+                body+='<p>対象の出場選手なし</p></div>';continue
             body+='<div class="tablewrap" tabindex="0" aria-label="'+position+' 当日EFF順位表"><table><thead><tr><th scope="col">位</th><th scope="col">選手・所属</th><th scope="col">得点</th><th scope="col">REB</th><th scope="col">AST</th><th scope="col">EFF</th></tr></thead><tbody>'
             for player in rows:
                 body+='<tr><td>'+str(player['rank'])+'</td><td><strong>'+articles.esc(player['name'])+'</strong><small>'+articles.esc(player['team']+'・'+'/'.join(player['positions']))+'</small></td>'
                 body+=''.join('<td>'+str(player[k])+'</td>' for k in ('pts','reb','ast','eff'))+'</tr>'
-            body+='</tbody></table></div>'
+            body+='</tbody></table></div></div>'
+        body+='</div>'
     return body+'</section>'
+
+
+def score_card(g, final, state):
+    """1試合のスコア。ホーム→アウェーの2行。勝ちの印は公式記録が確定した試合で点が違うときだけ。"""
+    scores=(g.get('home_score'),g.get('away_score')) if final else (None,None)
+    known=all(isinstance(v,int) and not isinstance(v,bool) for v in scores)
+    win=None
+    if known and scores[0]!=scores[1]:
+        win=0 if scores[0]>scores[1] else 1
+    body='<a class="score-card" id="game-'+articles.esc(g['game_id'])+'" href="'+articles.esc(g['source'])+'"><small class="sc-state">'+state+'</small>'
+    for i,team in enumerate((g['home'],g['away'])):
+        body+=('<span class="sc-row'+(' is-win' if win==i else '')+'"><span class="sc-team">'+articles.esc(team)+'</span>'
+               +('<span class="sc-badge">勝利</span>' if win==i else '')
+               +'<b class="sc-pts">'+(str(scores[i]) if known else '—')+'</b></span>')
+    return body+'</a>'
 
 
 def _checked_at(updated):
@@ -110,7 +127,7 @@ def render(summary, preview_root, preview_names, updated):
         elif not games:
             empty.append(settings[3])
         if not games:continue
-        body+='<h3 id="league-'+league.lower()+'">'+settings[3]+'</h3>'
+        body+='<h3 id="league-'+league.lower()+'">'+settings[3]+'</h3><div class="score-grid">'
         for g in games:
             sources.append(g['source'])
             if data.is_verified_final(g):
@@ -121,7 +138,8 @@ def render(summary, preview_root, preview_names, updated):
             else:
                 status='—'
                 state=result_status.game_state(g,checked,data.is_verified_final)
-            body+='<a class="daily-score" id="game-'+articles.esc(g['game_id'])+'" href="'+articles.esc(g['source'])+'"><span>'+articles.esc(g['home'])+'</span><strong>'+articles.esc(status)+'</strong><span>'+articles.esc(g['away'])+'</span><small>'+state+'</small></a>'
+            body+=score_card(g,data.is_verified_final(g),state)
+        body+='</div>'
     if empty:body+='<p class="empty-games">この日試合なし：'+articles.esc('・'.join(empty))+'</p>'
     body+='</section>'+game_eff_html(summary)+fantasy_hand.html(summary.get('fantasy_hand'))+lineup_html(summary)
     body+='<details class="match-notes"><summary>出典・選出ルール・注記</summary>'

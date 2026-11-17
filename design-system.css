@@ -403,3 +403,72 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .wrap .article .sources ul{margin:0 0 8px;padding-left:20px}
 .wrap .article .sources li{font-size:14px;line-height:21px;margin:0 0 8px;color:var(--muted)}
 .wrap .article .sources a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+/* ===== デザイン見直し2回目（2026-11-18・チャッピー案をClaudeが組み込み） ===== */
+/* 試合結果の記事：記事内の移動リンクを、押せる3つの領域に */
+.stats-article .article-jumps{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:8px;padding:8px;margin:16px 0 24px;background:#f3f5f3;border:1px solid #d5dad6;border-radius:8px}
+.wrap .stats-article .article-jumps a{min-height:48px;min-width:0;padding:8px 4px;display:flex;align-items:center;justify-content:center;color:#151a18;background:#fff;border:1px solid #737b75;border-radius:4px;font-size:14px;font-weight:700;line-height:1.5;text-align:center;text-decoration:underline;text-underline-offset:.18em;overflow-wrap:anywhere}
+.wrap .stats-article .article-jumps a:hover{background:#ccf43b}
+.stats-article .article-jumps a:focus-visible{outline:3px solid #151a18;outline-offset:2px}
+.stats-article [id]{scroll-margin-top:90px}
+@media(max-width:319px){.stats-article .article-jumps{grid-auto-flow:row}}
+/* スコア：1試合1枚、ホーム・アウェーの2行。勝ったチームはライムの左線＋太字＋「勝利」 */
+.stats-article .score-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin:0 0 16px}
+@media(min-width:768px){.stats-article .score-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+.score-card{display:block;min-width:0;padding:12px;border:1px solid #d5dad6;border-radius:8px;background:#fff;color:#151a18;text-decoration:none}
+.score-card:hover{border-color:#151a18}
+.score-card:focus-visible{outline:3px solid #151a18;outline-offset:2px}
+.score-card .sc-state{display:block;font-size:14px;line-height:1.5;color:#525b55;margin:0 0 8px}
+.score-card .sc-row{display:grid;grid-template-columns:minmax(0,1fr) auto 64px;align-items:center;gap:8px;padding:4px 8px 4px 12px;border-left:4px solid transparent;border-radius:4px}
+.score-card .sc-row+.sc-row{margin-top:8px}
+.score-card .sc-team{grid-column:1;font-size:16px;line-height:1.5;overflow-wrap:anywhere;text-decoration:underline;text-underline-offset:.18em;text-decoration-color:#d5dad6}
+.score-card .sc-badge{grid-column:2;padding:0 8px;border-radius:4px;background:#151a18;color:#ccf43b;font-size:14px;font-weight:700;line-height:1.6}
+.score-card .sc-pts{grid-column:3;font-size:28px;line-height:1.15;font-weight:400;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.score-card .is-win{border-left-color:#ccf43b;background:#f5f8e9}
+.score-card .is-win .sc-team,.score-card .is-win .sc-pts{font-weight:700}
+/* 当日TOP3：表は表のまま。スマホは余白を詰め、PCはポジションを2列に */
+.stats-article .pos-grid{display:grid;grid-template-columns:minmax(0,1fr);column-gap:24px}
+@media(min-width:768px){.stats-article .pos-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stats-article .pos-block{min-width:0}
+.wrap .stats-article .game-eff h4{margin:16px 0 8px}
+.wrap .stats-article .game-eff .tablewrap{margin:0 0 16px}
+.wrap .stats-article .game-eff td{padding-top:8px;padding-bottom:8px}
+.wrap .stats-article .game-eff table{min-width:0}
+/* FANTASY ARENA 最高の手札：黒い見出し帯、合計点を大きく、カードは小さな枠 */
+.stats-article .fantasy-best{border:1px solid #151a18;border-radius:8px;overflow:hidden;margin:32px 0;padding:0 0 8px;background:#fff}
+.stats-article .fantasy-best>.phase-label{margin:0;padding:12px 16px 0;background:#151a18;color:#ccf43b;font-size:14px}
+.wrap .stats-article .fantasy-best>h2{margin:0;padding:0 16px 12px;background:#151a18;color:#fff;border-bottom:4px solid #ccf43b}
+.wrap .stats-article .fantasy-best>.candidate-label,.stats-article .fantasy-best>.game-eff-pending{margin:12px 16px}
+.stats-article .hand-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;padding:0 16px}
+@media(min-width:768px){.stats-article .hand-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stats-article .hand-block{min-width:0}
+.wrap .stats-article .fantasy-best h3.hand-total{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 8px;margin:0 0 8px;padding:12px 16px;background:#151a18;color:#fff;border-radius:8px}
+.hand-total .hand-label{flex:1 1 auto;font-size:14px;font-weight:700;line-height:1.5}
+.hand-total .hand-sep{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hand-total b{font-size:32px;line-height:1.1;font-weight:700;color:#ccf43b;font-variant-numeric:tabular-nums}
+.hand-total .hand-unit{font-size:16px;color:#ccf43b}
+.wrap .stats-article .fantasy-best .tablewrap{margin:0}
+.wrap .stats-article .game-eff table.hand-table{min-width:0;width:100%;table-layout:fixed}
+.wrap .stats-article .hand-table th:nth-child(1){width:10%}
+.wrap .stats-article .hand-table th:nth-child(2){width:auto}
+.wrap .stats-article .hand-table th:nth-child(3){width:14%}
+.wrap .stats-article .hand-table th:nth-child(4){width:18%}
+.wrap .stats-article .hand-table th:nth-child(5){width:14%}
+.wrap .stats-article .hand-table th,.wrap .stats-article .hand-table td{padding-left:4px;padding-right:4px}
+.wrap .stats-article .hand-table td:nth-child(4),.wrap .stats-article .hand-table th:nth-child(4){text-align:center}
+.wrap .stats-article .hand-table td:last-child{background:#f5f8e9;font-size:16px}
+.hand-table .rare{display:inline-block;padding:2px 6px;border:1px solid #151a18;border-radius:999px;background:#fff;font-size:14px;font-weight:700;line-height:1.3;white-space:nowrap}
+/* トップ：公式・外部の更新を、見出し帯つきのまとまりに */
+.home-updates .upd-group{border:1px solid #d5dad6;border-radius:8px;padding:0 16px;background:#fff;overflow:hidden}
+.wrap .home-updates .upd-group h3{margin:0 -16px;padding:12px 16px;background:#f3f5f3;border-left:4px solid #ccf43b;font-size:16px;line-height:1.5}
+.home-updates .upd-list li{padding:12px 0}
+.home-updates .upd-list li:last-child{border-bottom:0}
+.wrap .home-updates .upd-list a{min-height:0}
+.home-updates .upd-group>.day-detail{border-top:1px solid #d5dad6}
+/* PCの右側：順位表・人気記事などを白い独立したまとまりに（広告枠はそのまま） */
+@media(min-width:1024px){
+.wrap .side .card{border:1px solid #d5dad6;border-radius:8px;padding:16px;margin:0 0 24px;background:#fff}
+.wrap .side .card h4{display:flex;align-items:center;gap:8px;margin:0 0 12px}
+.wrap .side .card h4::before{display:block;content:"";width:4px;height:18px;background:#ccf43b;border-radius:2px}
+}
+@media(max-width:480px){.recent-thumb{flex-basis:96px;width:96px}}
+@media(max-width:359px){.wrap .stats-article .game-eff th{font-size:14px;padding-left:4px;padding-right:4px}.wrap .stats-article .game-eff th:first-child{width:28px}.wrap .stats-article .game-eff th:nth-child(n+3){width:38px}}

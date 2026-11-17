@@ -110,17 +110,19 @@ def html(result):
             '<p class="candidate-label">この日の公式EFFで、あとから見て一番点が出た5人。カードの点だけ（ボーナス別）</p>')
     if result.get('error'):
         return body + '<p class="game-eff-pending">' + articles.esc(result['error']) + '。確定後に掲載します。</p></section>'
+    body += '<div class="hand-grid">'
     for key, label in (('star1', '☆1だけ（だれでも使える）'), ('best', '全カードから（いちばん高いレア）')):
         hand = result[key]
-        body += '<h3>' + label + '：' + str(hand['total']) + '点</h3>'
-        body += ('<div class="tablewrap" tabindex="0" aria-label="' + label + '"><table><thead><tr><th scope="col">枠</th>'
+        body += ('<div class="hand-block"><h3 class="hand-total"><span class="hand-label">' + label + '</span><span class="hand-sep">：</span>'
+                 '<b>' + str(hand['total']) + '</b><span class="hand-unit">点</span></h3>')
+        body += ('<div class="tablewrap" tabindex="0" aria-label="' + label + '"><table class="hand-table"><thead><tr><th scope="col">枠</th>'
                  '<th scope="col">選手・所属</th><th scope="col">EFF</th><th scope="col">カード</th><th scope="col">点</th></tr></thead><tbody>')
         for r in hand['lineup']:
             body += ('<tr><td>' + r['slot'] + '</td><td><strong>' + articles.esc(r['name']) + '</strong><small>'
                      + articles.esc(r['team'] + '・' + official.LEAGUES.get(r['league'], ('', '', '', r['league']))[3]) + '</small></td>'
-                     '<td>' + str(r['eff']) + '</td><td>' + STAR[r['rare']] + '</td><td>' + str(r['points']) + '</td></tr>')
-        body += '</tbody></table></div>'
-    return body + '</section>'
+                     '<td>' + str(r['eff']) + '</td><td><span class="rare">' + STAR[r['rare']] + '</span></td><td>' + str(r['points']) + '</td></tr>')
+        body += '</tbody></table></div></div>'
+    return body + '</div></section>'
 
 
 def notes(result):
