@@ -1,0 +1,135 @@
+{
+  "id": "f17a38e3f83c904e6b04",
+  "article_path": "article-games-20261118.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261118.html",
+  "source_commit": "",
+  "source_blob_sha": "8bd2f44299c3109805049a8e991ae7c3f1cbc9dd",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "49d95fdf65685690d513ef8efd0de4ee3afac86167506eda56506d9ad2d449cb",
+  "last_observed_blob_sha": "8bd2f44299c3109805049a8e991ae7c3f1cbc9dd",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f17a38e3f83c904e6b04/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f17a38e3f83c904e6b04/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-17T18:25:48.781826+00:00",
+  "creation_event_id": "c0035fdafc4fd801e5fe",
+  "event_blob_sha": "8bd2f44299c3109805049a8e991ae7c3f1cbc9dd",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/f17a38e3f83c904e6b04/thumbnail.png",
+  "image_sha256": "bc5483fd97e021075262ce43a227b93b08ea8cf9d5c635be9f14ada0a4f0b703",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "8bd2f44299c3109805049a8e991ae7c3f1cbc9dd",
+    "text_lines": [
+      "バスケまとめ",
+      "B.PREMIER",
+      "11/18",
+      "試合予定",
+      "全試合 試合前",
+      "公式記録確定待ち",
+      "2026.11.18 03:25 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_fixed_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f17a38e3f83c904e6b04/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261118.html",
+        "role": "本文の根拠。11/18のB.PREMIER全試合は03:25 JST時点で試合前。公式記録は確定待ち。HTMLのblob SHAを標準ライブラリで照合済み。"
+      },
+      {
+        "type": "article_fixed_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f17a38e3f83c904e6b04/source.txt",
+        "role": "本文の根拠。HTMLと本文・日付・留保を確認。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで目視した承認済み黒×ライム・太字見出し・インク調の参照。選手・成績・日付は引き継がない。"
+      },
+      {
+        "type": "official_roster",
+        "url": "https://hiroshimadragonflies.com/team/players/",
+        "role": "本文に登場する広島の現役選手一覧。ランダム選出の候補と所属確認にのみ利用。記事の成績・予定の根拠には利用しない。"
+      },
+      {
+        "type": "official_player_profile",
+        "url": "https://hiroshimadragonflies.com/team/players/detail/id=21083?PlayerID=5100000055",
+        "role": "クリストファー・スミスの本人確認と公式容姿参照。プロフィール記載の成績は画像に使用しない。"
+      },
+      {
+        "type": "official_player_portrait_reference_only",
+        "url": "https://bleague.bl.kuroco-img.app/v=2026111617/files/user/roster/721/2026-27/5100000055_01.jpg",
+        "role": "公式プロフィールからリンクされた顔写真をダウンロードしてview_imageで確認。本人の外見を言語化し新規の手描きイラストへ反映。元写真を貼り付けず、ロゴ・スポンサー・氏名・背番号も描かない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "クリストファー・スミス",
+        "team": "広島ドラゴンフライズ",
+        "selection": "ランダム",
+        "selection_method": "本文に個人名がないため、本文掲載20チームからPython random.SystemRandom().choiceで広島を抽選。公式現役選手一覧14名から同じ方法でクリストファー・スミスを抽選。",
+        "team_pool": [
+          "仙台",
+          "三遠",
+          "宇都宮",
+          "北海道",
+          "群馬",
+          "島根",
+          "千葉J",
+          "秋田",
+          "東京SR",
+          "A東京",
+          "横浜BC",
+          "佐賀",
+          "名古屋D",
+          "琉球",
+          "大阪",
+          "広島",
+          "神戸",
+          "川崎",
+          "京都",
+          "信州"
+        ],
+        "player_pool": [
+          "寺嶋 良",
+          "伊藤 達哉",
+          "ロバーツ ケイン",
+          "クリストファー・スミス",
+          "上澤 俊喜",
+          "ドウェイン・エバンス",
+          "渡部 琉",
+          "コフィ・コーバーン",
+          "メイヨ ニック",
+          "山崎 稜",
+          "松野 遥弥",
+          "晴山 ケビン",
+          "三谷 桂司朗",
+          "佐藤 涼成"
+        ],
+        "reference_source": "https://hiroshimadragonflies.com/team/players/detail/id=21083?PlayerID=5100000055",
+        "portrait_source": "https://bleague.bl.kuroco-img.app/v=2026111617/files/user/roster/721/2026-27/5100000055_01.jpg",
+        "observed_features": "後方へ編み込んだ黒いコーンロウ、短いサイドと耳後ろの編み毛、縦長の輪郭、頬骨、水平気味の眉と目元、鼻筋、短い口ひげ・あごひげ、両上腕のタトゥー、右腕の黒いスリーブ。完成画でも顔・髪・ひげの対応を目視確認。",
+        "depiction": "実在選手1人のドリブル姿を新規イラストで描写。実際の11/18の試合場面・出場・活躍を示すものではない。氏名・成績・背番号は画像に入れず、『イラスト（AI生成）』『イメージ』を明記。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape 1920x1080 (16:9), PNG, all artwork and text inside safe margins. This is a new hand-drawn illustration with complete Japanese typography, not a photo or photo collage.\n\nEditorial context strictly from the fixed article: November 18, 2026 B.PREMIER games are all pregame at 03:25 JST; official records are pending. There is no reported result, player performance, or confirmed participation. The illustration is a generic play image and must not look like documentary evidence of this day's actual game.\n\nVisual style: approved basketball publication style, deep ink black #151A18 ground, electric lime #CCF43B, warm ivory typography, confident hand-drawn ink and dry-brush marks, energetic diagonal strokes, strong negative space, very few elements. Clearly drawn editorial sports illustration, recognizable facial structure but never photographic. High-contrast bold Japanese gothic typography, lime date, ivory headline. No team or league graphic logos, no sponsor graphics, no photo assets.\n\nSubject: ONE real athlete, Christopher Smith of Hiroshima Dragonflies, selected randomly among the official current roster of a team mentioned in the article. He is not the article's featured best performer. Do not print his name anywhere. Use these visually verified features from the official portrait: a medium-dark brown-skinned athletic adult man, closely braided black cornrows going straight back from the forehead with small braid ends behind the ears, closely shaved sides, high forehead, long oval face, strong cheekbones, straight substantial nose, dark almond-shaped eyes with near-horizontal eyebrows, short neat mustache connected to short goatee and close-cropped jaw beard, strong neck and powerful shoulders. Tattoos visible on both upper arms, simplified as ink shading. A black sleeve on his right arm. Render his likeness as expressive ink contours with ivory and warm gray highlights; facial details clear and not lost in darkness. Plain light ivory basketball jersey and shorts with dark side panels; NO jersey text, NO numbers, NO emblems. Do not draw a generic invented athlete.\n\nPose/composition: on the RIGHT 45% of the frame, Christopher Smith leans forward into a low driving dribble, knees bent, torso turned three-quarter toward viewer, face clearly visible and focused looking toward the open court on the left. Show him from head to below the knees, with both shoulders, elbows, wrists and hands completely legible. His RIGHT hand is naturally pressing down onto the top of an orange basketball at hip level, fingers naturally spread with anatomically correct joints; left arm bent naturally as balance. Keep entire ball and hands inside frame. Cropping below the knees is intentional. Use energetic diagonal lime brush strokes BEHIND the figure. No opponent, no other humans, no hoop, no scoreboard, no arena photograph. This is an imagined generic play, not a specific scoring or winning scene.\n\nLayout and exact text ONLY, every line accurately legible:\nSmall top-left masthead: \"バスケまとめ\"\nSmall text below masthead: \"B.PREMIER\"\nVery large lime date on left upper-middle: \"11/18\"\nVery large bold ivory title below the date: \"試合予定\"\nTwo smaller clear lines in the lower left:\n\"全試合 試合前\"\n\"公式記録確定待ち\"\nSmall but comfortably readable source timestamp below them:\n\"2026.11.18 03:25 JST時点\"\nBottom safe footer in ivory, separated from art with negative space:\n\"イラスト（AI生成）\"\n\"イメージ\"\n\nNo other words, names, digits, stats, rankings, scores or claim of athlete appearance. Do not reproduce any wording from other thumbnail examples. The statement about pregame is explicitly qualified by the timestamp. Keep text and face clear, no overlaps, no clipped glyphs. Preserve the understated footer labels exactly.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "revision_count": 0,
+      "source_output": "/Users/genjo/.codex/generated_images/01a1eac2-0f6f-7a41-b796-36158b82b9b4/exec-e48a84e8-369f-4e18-88f2-b1ab6b243f84.png",
+      "visual_review": "生成結果表示と保存元PNGのview_imageで目視。文字・日付・時点・確定待ち・人物の特徴・手指・ボールの収まり・文字の見切れ・AI表記を確認。ロゴとスポンサー文字なし。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-17T18:28:46.197177+00:00",
+  "publication_approved": false
+}
