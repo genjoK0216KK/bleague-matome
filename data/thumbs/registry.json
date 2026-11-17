@@ -898,29 +898,29 @@
   },
   "article-daily-20261117.html": {
    "article_path": "article-daily-20261117.html",
-   "editorial_fingerprint": "63335b233f8772acb01daa09c72caadc25bd29688ec6f364bd58dce6dae03c6c",
+   "editorial_fingerprint": "c033bed581160219a9698186cfabd5ce5fece24535eef7e4145919537cd07839",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261117-b88e9d95a47d.jpg",
+     "path": "thumbs/auto/article-daily-20261117-798f71e4d5a2.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261117-b88e9d95a47d-og.jpg",
+     "path": "thumbs/auto/article-daily-20261117-798f71e4d5a2-og.jpg",
      "width": 1200
     }
    },
-   "id": "83ac9a2c488698b37f01",
-   "image_sha256": "b88e9d95a47d3d554a3e615f8078680f31d065a30a34ee95efe543bce9057cd1",
-   "imported_at": "2026-11-16T23:20:13.364362+00:00",
-   "prepared_at": "2026-11-16T23:19:36.543716+00:00",
-   "source_blob_sha": "47b2b7f73b1c072d18a1e853d733cbbaacd3935d",
+   "id": "50f378a3747dbb63cef8",
+   "image_sha256": "798f71e4d5a207648880081dd4902d7cad507e7c42e69d4d5726ce9f58f1f219",
+   "imported_at": "2026-11-17T03:21:54.588698+00:00",
+   "prepared_at": "2026-11-17T03:19:16.671563+00:00",
+   "source_blob_sha": "4ae1c19328214b4293fedbea74a30af1d50020d7",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "63335b233f8772acb01daa09c72caadc25bd29688ec6f364bd58dce6dae03c6c",
+   "stable_fingerprint": "c033bed581160219a9698186cfabd5ce5fece24535eef7e4145919537cd07839",
    "style": "ink-lime-portrait-v5",
    "title": "長崎vs三河を試合前予測、11勝3敗の三河が有利"
   },
@@ -2579,20 +2579,6 @@
  },
  "log": [
   {
-   "article": "article-results-one-next-20261112.html",
-   "at": "2026-11-12T10:31:05.418018+00:00",
-   "by": "0dccc38884fa1a8278db",
-   "event": "superseded",
-   "id": "e69360a387e1306be411"
-  },
-  {
-   "article": "article-results-one-next-20261112.html",
-   "at": "2026-11-12T10:31:05.564157+00:00",
-   "event": "imported",
-   "id": "0dccc38884fa1a8278db",
-   "image": "5d29987a4f3b"
-  },
-  {
    "article": "article-games-20261112.html",
    "at": "2026-11-12T14:12:29.225359+00:00",
    "by": "ad6bf00b0853f0333020",
@@ -3137,6 +3123,20 @@
    "event": "imported",
    "id": "83ac9a2c488698b37f01",
    "image": "b88e9d95a47d"
+  },
+  {
+   "article": "article-daily-20261117.html",
+   "at": "2026-11-17T03:21:54.428924+00:00",
+   "by": "50f378a3747dbb63cef8",
+   "event": "superseded",
+   "id": "83ac9a2c488698b37f01"
+  },
+  {
+   "article": "article-daily-20261117.html",
+   "at": "2026-11-17T03:21:54.588725+00:00",
+   "event": "imported",
+   "id": "50f378a3747dbb63cef8",
+   "image": "798f71e4d5a2"
   }
  ],
  "seen": {
@@ -3195,6 +3195,7 @@
   "4f8263992a0a733cc2e3": "superseded:75a5c2e5b4ddddc773c3",
   "50222bd804efe24c13be": "superseded:75a5c2e5b4ddddc773c3",
   "5027dd7c0382609c7aa3": "imported",
+  "50f378a3747dbb63cef8": "imported",
   "5371bea30124ef22fa57": "imported",
   "556a6a0e14555b13288a": "imported",
   "570a778c73159b26d00d": "superseded:e581198d6acbcde5fe72",
@@ -3231,7 +3232,7 @@
   "7fe3ccf98d343d8516b5": "superseded:46adebe03cc636f48def",
   "81cdf284d66df1d61f20": "imported",
   "82676b8dbd055f0288e7": "superseded:a5ada266578c44560dce",
-  "83ac9a2c488698b37f01": "imported",
+  "83ac9a2c488698b37f01": "superseded:50f378a3747dbb63cef8",
   "8926ed6e2f6c758b34aa": "imported",
   "896bbeb35c2a1eb9d0e1": "imported",
   "899945a3915a435651cc": "imported",
