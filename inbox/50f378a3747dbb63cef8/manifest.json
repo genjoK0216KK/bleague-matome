@@ -1,0 +1,99 @@
+{
+  "id": "50f378a3747dbb63cef8",
+  "article_path": "article-daily-20261117.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261117.html",
+  "source_commit": "",
+  "source_blob_sha": "4ae1c19328214b4293fedbea74a30af1d50020d7",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "c033bed581160219a9698186cfabd5ce5fece24535eef7e4145919537cd07839",
+  "last_observed_blob_sha": "4ae1c19328214b4293fedbea74a30af1d50020d7",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/50f378a3747dbb63cef8/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/50f378a3747dbb63cef8/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-17T03:14:29.710010+00:00",
+  "creation_event_id": "ab1a8b2cc3cbef1b4d88",
+  "event_blob_sha": "4ae1c19328214b4293fedbea74a30af1d50020d7",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/50f378a3747dbb63cef8/thumbnail.png",
+  "image_sha256": "798f71e4d5a207648880081dd4902d7cad507e7c42e69d4d5726ce9f58f1f219",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "4ae1c19328214b4293fedbea74a30af1d50020d7",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.17",
+      "長崎vs三河",
+      "試合前予測",
+      "三河が有利",
+      "独自分析｜出場状況は当日発表待ち",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/50f378a3747dbb63cef8/source.html",
+        "role": "記事内容の根拠・固定HTML",
+        "article_url": "https://basuke-matome.jp/article-daily-20261117.html",
+        "verified_blob_sha": "4ae1c19328214b4293fedbea74a30af1d50020d7"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/50f378a3747dbb63cef8/source.txt",
+        "role": "記事内容の根拠・固定文章",
+        "basis": "試合前予測／独自分析。長崎vs三河、当サイトの予測は三河勝利。出場状況は試合当日の発表待ち。選手個人の出場・成績・活躍は画像内に記載しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで実見した承認済みスタイル参照。色・インク表現のみ参照し、旧記事の人物・文字・数値は不使用。"
+      },
+      {
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=9040",
+        "role": "ガードナーの公式人物資料。本文内容の根拠には不使用。"
+      },
+      {
+        "url": "https://www.velca.jp/team/players/detail/id=50907?PlayerID=51000670",
+        "role": "ランドルフの公式人物資料。本文内容の根拠には不使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ダバンテ・ガードナー",
+        "team_in_source": "シーホース三河",
+        "selection": "ランダム",
+        "selection_method": "Python random.Random('50f378a3747dbb63cef8')。まず三河の本文掲載選手 [ダバンテ・ガードナー, ショーン・オマラ] からchoice。その後長崎をchoice。",
+        "official_profile": "https://www.bleague.jp/roster_detail/?PlayerID=9040",
+        "official_photo": "https://www.bleague.jp/files/user/roster/728/2026-27/9040_03.png",
+        "reference_visually_checked": true,
+        "observed_features": "短く立ったツイストヘアと刈り込んだ側頭部、丸みのある幅広の輪郭、厚いフルビアードと口ひげ、太い首と大柄な体格。",
+        "portrayal": "ロゴ・番号・文字なしの青いウェア。ボールを守ってピボットする架空のプレー場面のイメージ。実在選手を描くが、実際の出場やプレーの再現ではない。",
+        "final_visual_check": "公式写真と比較して髪型・輪郭・ひげ・目鼻・体格の特徴を確認。両手とボールの見切れ修正済み。写真の画素の貼り付けなし。"
+      },
+      {
+        "name": "リーヴァイ・ランドルフ",
+        "team_in_source": "長崎ヴェルカ",
+        "selection": "ランダム",
+        "selection_method": "同じrandom.Random('50f378a3747dbb63cef8')で三河選出後、長崎の本文掲載選手 [ジャレル・ブラントリー, リーヴァイ・ランドルフ, 馬場雄大] からchoice。",
+        "official_profile": "https://www.velca.jp/team/players/detail/id=50907?PlayerID=51000670",
+        "official_photo": "https://bleague.bl.kuroco-img.app/v=2026111617/files/user/roster/2488/2026-27/51000670_01.jpg",
+        "reference_visually_checked": true,
+        "observed_features": "黒いヘッドバンドと編み込んだ髪、比較的細長い顔、整えたひげと口ひげ、大きな目、腕のタトゥー、左腕の黒いスリーブ、引き締まった体格。",
+        "portrayal": "ロゴ・番号・文字なしの濃紺のウェア。低い姿勢で片手を上げたディフェンスのイメージ。実際の対戦場面や出場を主張しない。",
+        "final_visual_check": "公式写真と比較して頭髪・輪郭・ひげ・目鼻の特徴を確認。左腕スリーブと両手の形を実見。名前・個人成績・出場・活躍を画像内に記載していない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT:\nUse case: illustration-story\nAsset type: a finished Japanese basketball editorial thumbnail, one image only.\nCreate a landscape 1792x1024 PNG (approximately 16:9, all text safely within a 5% margin).\n\nSTYLE: Match the approved black-and-lime ink editorial example shown in the conversation: deep charcoal #151A18, acid lime #CCF43B, warm off-white lettering, rough hand-drawn pen hatching and energetic dry brush strokes. Clean hierarchy and very few elements. Obvious illustration, absolutely not photography or photorealism. Do not copy the sample's athlete, old date, score, or any of its words.\n\nCOMPOSITION: Bold text occupies the left 52%. Two recognizable REAL basketball players in an imagined dynamic one-on-one basketball matchup occupy the right 48%, both faces clearly visible in three-quarter view. Frame from the head to mid-thigh with deliberate lower-body crop, keep both heads and all hands fully inside the image. Davante Gardner protects a single orange basketball near his torso with both hands, pivots into a drive; Levi Randolph has a low defensive stance, one open hand raised and the other extended laterally. Distinct and anatomically clear arms and hands with natural five-finger anatomy; no interlocking fingers or merged limbs. No basket or scoreboard needed. Brushwork suggests movement.\n\nREAL PERSON IDENTITY REFERENCES: Official profile portraits were visually checked in this conversation.\n1. Davante Gardner, official B.LEAGUE portrait https://www.bleague.jp/files/user/roster/728/2026-27/9040_03.png : a very broad, heavy powerful build, thick neck and broad shoulders, dark brown skin, broad oval-round face, short small upright twists with faded sides, thick full rounded black beard joined to mustache, broad nose, strong brows. Preserve these individual characteristics in hand-drawn ink. Plain royal-blue jersey with NO letters, number, crest, sponsor or branding.\n2. Levi Randolph, official Nagasaki Velca profile portrait https://bleague.bl.kuroco-img.app/v=2026111617/files/user/roster/2488/2026-27/51000670_01.jpg : taller-looking lean muscular build, medium-dark brown skin, longer narrow oval face than Gardner, black plain headband over tightly braided hair tied back, neatly trimmed full beard and mustache, large attentive eyes, tattooed upper arms, black compression sleeve on his left arm. Plain dark teal/navy jersey with NO letters, number, crest, sponsor or branding. Headband has NO Nike mark.\nUse the inspected official portraits only to understand appearance. Do not paste any pixels of official photos. Draw the two named real players, not anonymous or invented substitutes. Their names must NOT appear as text.\n\nTEXT: Render exactly these eight text strings, and no other text. Crisp readable bold Japanese type with strong stroke weight, not decorative pseudo-characters:\ntop-left small: \"バスケまとめ\"\nbelow it small: \"2026.11.17\"\nmain title very large off-white: \"長崎vs三河\"\nlime label below title, large and prominent: \"試合前予測\"\nmain conclusion very large off-white/lime: \"三河が有利\"\nnear bottom left in clearly readable smaller off-white type: \"独自分析｜出場状況は当日発表待ち\"\nbottom safe footer: \"イラスト（AI生成）\"\nbeside that footer: \"イメージ\"\n\nMEANING CONSTRAINTS: This is a pregame prediction, not a final result. The claim that Mikawa is favored is the article's independent prediction. Player availability is uncertain until the game-day announcement. The two players were randomly selected among those named in the article, one from each team; do not imply actual participation or an observed matchup. This is an imagined basketball illustration, never a recreation of a real game moment. Include both required labels exactly. Do not include personal statistics, achievements, scoring claims, player names, scorelines, win/loss figures, or extra numerical statistics. No team or league logos, no sponsors, no watermarks. Rich professional brush illustration and compelling active pose, restrained background.\n\nONE ALLOWED CORRECTION PROMPT:\nEdit the first attached image as the thumbnail target. The second and third images are identity reference photographs only (Davante Gardner, then Levi Randolph); never paste or collage photograph pixels into the finished illustration.\n\nFix the framing and refine identity while preserving the entire existing Japanese typography, exact text, wording, date, black #151A18 / lime #CCF43B design, energetic hand-drawn ink-and-brush style, and all caveats. Only one final landscape image, approximately 16:9, at least 1600 pixels wide.\nMove and slightly reduce the two-player illustration together so the entire basketball AND BOTH of Gardner's hands are clearly INSIDE the frame with at least 60 pixels of space to the right. Randolph's raised fingertips must have at least 45 pixels of room from the upper edge. Keep the faces clearly readable and naturally posed, arms clearly separated and anatomically correct, five fingers per hand. Lower-body cropping at mid-thigh remains intentional. Don't overlap any text. Do not reduce or change the text.\n\nGardner (blue jersey, ball carrier) should preserve his broad heavy build, thick neck, broad oval-round face, short small upright twists with faded sides and thick rounded full beard, taking likeness from reference photo 2. Randolph (dark navy/teal defending) should preserve the narrower oval face, alert eyes, black unbranded headband over close braids and neatly trimmed beard from reference photo 3. On Randolph, put the black compression sleeve on his anatomical LEFT arm (his raised arm here), as shown in the reference; his lowered anatomical right arm is bare and tattooed. Preserve both real player identities in an obvious illustration. No photo realism, no logos, no sponsor writing, no player names or numbers.\n\nAll text must stay exactly:\nバスケまとめ\n2026.11.17\n長崎vs三河\n試合前予測\n三河が有利\n独自分析｜出場状況は当日発表待ち\nイラスト（AI生成）\nイメージ\n\nThis is an imagined pregame matchup, not a documented actual play; it must not claim these randomly selected players will participate. No new score, no new data or statistics.",
+    "generator": "OpenAI built-in image_gen.imagegen. 初回生成1回＋修正1回。API/CLIは不使用。最終PNG: 1672x941, SHA-256 798f71e4d5a207648880081dd4902d7cad507e7c42e69d4d5726ce9f58f1f219。修正版をview_imageで実見し、5項目を検品。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-17T03:19:16.671563+00:00",
+  "publication_approved": false
+}
