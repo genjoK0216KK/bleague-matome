@@ -104,7 +104,7 @@
    "players": 20,
    "holds": [],
    "excluded": [],
-   "content_as_of": "2026-11-18 08:09 JST",
+   "content_as_of": "2026-11-18 20:40 JST",
    "source": "data/match_articles/article-games-20261117.json"
   },
   "2026-11-18": {
@@ -117,7 +117,7 @@
      "key": "506602",
      "home": "仙台",
      "away": "三遠",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -125,7 +125,7 @@
      "key": "506603",
      "home": "宇都宮",
      "away": "北海道",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -133,7 +133,7 @@
      "key": "506604",
      "home": "群馬",
      "away": "島根",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -141,7 +141,7 @@
      "key": "506605",
      "home": "千葉J",
      "away": "秋田",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -149,7 +149,7 @@
      "key": "506606",
      "home": "東京SR",
      "away": "A東京",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -157,7 +157,7 @@
      "key": "506607",
      "home": "横浜BC",
      "away": "佐賀",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -165,7 +165,7 @@
      "key": "506608",
      "home": "名古屋D",
      "away": "琉球",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -173,7 +173,7 @@
      "key": "506609",
      "home": "京都",
      "away": "信州",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -181,7 +181,7 @@
      "key": "506610",
      "home": "大阪",
      "away": "広島",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     },
@@ -189,13 +189,13 @@
      "key": "506611",
      "home": "神戸",
      "away": "川崎",
-     "status": "scheduled",
+     "status": "unconfirmed",
      "record_note": null,
      "reason": "record_not_fixed"
     }
    ],
    "excluded": [],
-   "content_as_of": "2026-11-18 08:09 JST",
+   "content_as_of": "2026-11-18 20:40 JST",
    "source": "data/match_articles/article-games-20261118.json"
   }
  },
