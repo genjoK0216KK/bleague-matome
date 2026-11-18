@@ -1008,6 +1008,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "琉球ゴールデンキングス対名古屋Dの試合前予測、首位の名古屋Dが有利"
   },
+  "article-daily-20261119.html": {
+   "article_path": "article-daily-20261119.html",
+   "editorial_fingerprint": "d8f3e5fdb9eeda845659a02d23dadd59d0b7ca053954e47182b19a33f331ee48",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261119-d9bca6ed8e62.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261119-d9bca6ed8e62-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "610858d34f8ebc0a29a5",
+   "image_sha256": "d9bca6ed8e6201c7a9a6b34dcd077e7c9eab6bf4201ca7399a7350b3c3b99019",
+   "imported_at": "2026-11-18T23:21:11.444306+00:00",
+   "prepared_at": "2026-11-18T23:20:34.977477+00:00",
+   "source_blob_sha": "d9dba1f1d2d2e49e5d4e0ffd4c75d90f4cf27fdb",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "d8f3e5fdb9eeda845659a02d23dadd59d0b7ca053954e47182b19a33f331ee48",
+   "style": "ink-lime-portrait-v5",
+   "title": "琉球ゴールデンキングス対名古屋Dを検証、名古屋Dが93-76で快勝"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -2803,13 +2831,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261114.html",
-   "at": "2026-11-14T10:49:13.258927+00:00",
-   "event": "imported",
-   "id": "37ef3f4c94ecbcadd399",
-   "image": "9c06e83566ad"
-  },
-  {
    "article": "article-stats-20261114.html",
    "at": "2026-11-14T10:49:13.412190+00:00",
    "event": "imported",
@@ -3361,6 +3382,13 @@
    "event": "imported",
    "id": "330254df3808c570f4b6",
    "image": "06d84356b687"
+  },
+  {
+   "article": "article-daily-20261119.html",
+   "at": "2026-11-18T23:21:11.444334+00:00",
+   "event": "imported",
+   "id": "610858d34f8ebc0a29a5",
+   "image": "d9bca6ed8e62"
   }
  ],
  "seen": {
@@ -3434,6 +3462,7 @@
   "5b9d534e1962778a709e": "imported",
   "5e231e28b370cb26f1f6": "imported",
   "602157ba437d2c7416b9": "imported",
+  "610858d34f8ebc0a29a5": "imported",
   "619af1e58cddd34c14bc": "imported",
   "63c6e53ee8fdfa5ca846": "imported",
   "64677ebbbdc4b4827d54": "superseded:13dc704824ed84d25fee",
