@@ -1708,6 +1708,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "11/18 試合結果・当日のEFF"
   },
+  "article-games-20261119.html": {
+   "article_path": "article-games-20261119.html",
+   "editorial_fingerprint": "5e867e488ebe994a78b54ff8653da3cdedeea18b96e331db629e0c72d24b7fd9",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-games-20261119-06d84356b687.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-games-20261119-06d84356b687-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "330254df3808c570f4b6",
+   "image_sha256": "06d84356b687375b8df40cdb4c375dd506f2d19c2fa731b4d9b8204fed60f471",
+   "imported_at": "2026-11-18T20:49:16.052431+00:00",
+   "prepared_at": "2026-11-18T20:48:41.326556+00:00",
+   "source_blob_sha": "e7698fd255bcfdb96fd8d9c1ab390e4830d5e5a7",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "5e867e488ebe994a78b54ff8653da3cdedeea18b96e331db629e0c72d24b7fd9",
+   "style": "ink-lime-portrait-v5",
+   "title": "11/19 試合なし"
+  },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
    "editorial_fingerprint": "e19b14f8f8d94cccdae186da2df34e0edfdbee28d446a577722d48f470c2eea5",
@@ -2776,13 +2804,6 @@
  "log": [
   {
    "article": "article-games-20261114.html",
-   "at": "2026-11-14T10:49:13.111607+00:00",
-   "by": "37ef3f4c94ecbcadd399",
-   "event": "superseded",
-   "id": "df384c13fa1695e31707"
-  },
-  {
-   "article": "article-games-20261114.html",
    "at": "2026-11-14T10:49:13.258927+00:00",
    "event": "imported",
    "id": "37ef3f4c94ecbcadd399",
@@ -3333,6 +3354,13 @@
    "event": "imported",
    "id": "fe35e8e879067561251c",
    "image": "7318823209d6"
+  },
+  {
+   "article": "article-games-20261119.html",
+   "at": "2026-11-18T20:49:16.052469+00:00",
+   "event": "imported",
+   "id": "330254df3808c570f4b6",
+   "image": "06d84356b687"
   }
  ],
  "seen": {
@@ -3369,6 +3397,7 @@
   "2ffa19b961fae6d1e9bc": "imported",
   "3143112bfc83546772bc": "imported",
   "31a9c1e5a34b25318ae8": "superseded:e64b9ac50fa81c41ae65",
+  "330254df3808c570f4b6": "imported",
   "3370472f9c78336a4974": "imported",
   "3379ecab4c5d77e8e9a3": "imported",
   "347558cc6a9b226d7c1c": "superseded:f60ec06f0d2f4ee967a2",
