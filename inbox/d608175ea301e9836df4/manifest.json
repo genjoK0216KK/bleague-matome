@@ -1,0 +1,108 @@
+{
+  "id": "d608175ea301e9836df4",
+  "article_path": "article-results-one-next-20261118.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261118.html",
+  "source_commit": "",
+  "source_blob_sha": "17bd7d511699964ece753f4234be25a04df1b8c5",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "caf2e46860eb108df89c8c14d7ad937b72146decd80a5643c912cbb48da8a90d",
+  "last_observed_blob_sha": "17bd7d511699964ece753f4234be25a04df1b8c5",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d608175ea301e9836df4/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d608175ea301e9836df4/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-18T14:34:02.042685+00:00",
+  "creation_event_id": "fdf5452c65a331095a8d",
+  "event_blob_sha": "17bd7d511699964ece753f4234be25a04df1b8c5",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/d608175ea301e9836df4/thumbnail.png",
+  "image_sha256": "ed56e0e883ab7d56bd9d50df24ea559196590ee776490ed98331daedbcc54ed2",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "17bd7d511699964ece753f4234be25a04df1b8c5",
+    "text_lines": [
+      "バスケまとめ",
+      "11/18",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d608175ea301e9836df4/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261118.html",
+        "title": "11/18 試合結果・当日のEFF",
+        "source_blob_sha_verified": true
+      },
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d608175ea301e9836df4/source.txt",
+        "used_for": "見出し・日付・当日のEFF・ポジション別TOP3の根拠。本文の内容はこの固定TXTと固定HTMLのみから採用。",
+        "qualifiers": "当日の出場選手の公式試合スタッツを対象とする集計。今季平均・予想とは別。画像に個人成績、ファンタジーの点数、選手名、個人の出場・活躍の断定を入れていない。B.ONE・B.NEXTはこの日試合なしという原稿の内容と矛盾する表現なし。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://nagoya-dolphins.jp/team/players/detail/id=18710?PlayerID=32995",
+        "title": "名古屋ダイヤモンドドルフィンズ公式 アイザイア・マーフィー選手プロフィール",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026111823/files/user/roster/729/2026-27/32995_01.jpg",
+        "used_for": "公式プロフィール写真を実際に表示し、髪型・輪郭・目鼻・ひげを確認。本文の成績の根拠としては使用していない。写真の貼り付けなし。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "used_for": "view_imageで確認した承認済みの黒×ライム、太い日本語見出し、インクとブラシの描画。参考画像の選手名・成績は転用していない。"
+      },
+      {
+        "type": "procedure",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "used_for": "画像生成・検品ルール。実在選手のランダム選出と注記は今回の本人指定を優先。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "アイザイア・マーフィー",
+        "selection": "ランダム",
+        "selection_reason": "複数試合・ポジション別TOP3の集計で単独の主役を絞れないため、本文のTOP3表に登場する11人の重複を除いた候補からPython secrets.choiceで1人を選出。",
+        "candidate_names": [
+          "マーク・スミス",
+          "岡田 侑大",
+          "アイザイア・マーフィー",
+          "ジャレット・カルバー",
+          "スタンリー・ジョンソン",
+          "ジェイク・ヴァン・タバーゲン",
+          "アーロン・ヘンリー",
+          "ギャビン・エドワーズ",
+          "ケリー・ブラックシアー・ジュニア",
+          "ジャック・クーリー",
+          "ファーダウス・アイマク"
+        ],
+        "reference_source": "名古屋ダイヤモンドドルフィンズ公式プロフィール",
+        "reference_url": "https://nagoya-dolphins.jp/team/players/detail/id=18710?PlayerID=32995",
+        "official_photo_url": "https://bleague.bl.kuroco-img.app/v=2026111823/files/user/roster/729/2026-27/32995_01.jpg",
+        "appearance_observed": "短く刈った黒髪、短いサイド、縦長の輪郭、太い眉、細めの目、口ひげと短いあごひげ、細身で筋肉質の体形を公式写真で確認し、最終イラストと目視比較した。",
+        "depiction": "ボールを両手で集めて低く切り込むプレーのイメージ。特定の試合場面の再現ではない。名前・背番号・個人成績・個人の出場や活躍を示す文字なし。ロゴやスポンサー文字のないユニフォーム。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT\nCreate exactly ONE finished Japanese basketball editorial thumbnail as a PNG, wide 16:9 composition, target 1600 x 900 pixels (at least 1000 pixels wide).\n\nUse case: editorial-illustration / sports article thumbnail for バスケまとめ.\nArticle content comes ONLY from the supplied frozen source.html/source.txt: title \"11/18 試合結果・当日のEFF\", dated 2026-11-18. It is an aggregate report of game results and position-specific daily EFF TOP3. Do not depict or write individual achievements, scores, team results, or fantasy-card points.\n\nArt direction: match the approved black and lime ink-and-brush visual language inspected earlier: near-black #151A18 background, vivid lime #CCF43B rough dry-brush streaks, warm ivory heavy Japanese headline type, rich hand-drawn black ink hatching, energetic editorial sports illustration, a single orange basketball. Restrained graphic elements, professional thumbnail legibility, generous 55-pixel safe edges. Do not reuse any player, date, statistic or score from the style sample. Entire artwork must unmistakably be drawn illustration, NEVER photorealistic or a photograph collage.\n\nSubject: exactly one REAL basketball player, Isaiah Murphy (アイザイア・マーフィー), selected randomly from the named players in this article. Recreate his observed official-profile appearance as a hand-drawn ink illustration; do not invent a generic player. Official appearance source already inspected: https://nagoya-dolphins.jp/team/players/detail/id=18710?PlayerID=32995 ; official photo https://bleague.bl.kuroco-img.app/v=2026111823/files/user/roster/729/2026-27/32995_01.jpg . He has closely cropped short black textured hair, short faded sides, tidy fairly straight hairline, a long oval face, defined jaw and narrow chin, prominent ears, dark thick eyebrows, deep-set almond-shaped dark eyes, a straight medium nose, fine connected moustache and short sparse beard concentrated around chin/jaw, warm medium brown skin, tall lean athletic build and muscular shoulders. Keep these recognizable features, face large and readable, not blacked out. Draw the hair closely cropped, not tall curly hair. A few abstract ink marks can suggest the tattooed left upper arm. Uniform is a plain ivory and black sleeveless basketball jersey and shorts, NO team/league/sponsor logos, NO branding, NO words, NO name, NO jersey number. No official photograph pixels appear in the output.\n\nComposition: left approximately 53% is a clean typography field, right approximately 47% is the large expressive player. Show Murphy in a dynamic low attacking drive with bent knees, torso angled diagonally, face looking forward and slightly toward viewer, both hands naturally gathering ONE basketball near his hip on the far right. Head, face, both hands, all visible fingers and the full ball must be within frame, no overlaps into text. Three-quarter figure down to upper shins is suitable, intentional lower-leg cropping only. Show momentum through a controlled lime brush arc behind the figure and black ink speed lines, not a still posed portrait and not the overhead jump-shot of the style reference. Anatomically plausible wrists, elbows and five fingers per hand, no extra limbs. No second person, no anonymous opponents, no crowd, no arena logos or scoreboard. This is a general imagined play illustration, NOT a reconstruction of a specific real game moment.\n\nRender these Japanese strings EXACTLY, with no other text:\nSmall upper-left masthead: \"バスケまとめ\"\nProminent date above title: \"11/18\"\nHuge strongest headline: \"試合結果\"\nSecond large headline in lime: \"当日のEFF\"\nMedium subheading on a simple brush underline: \"ポジション別TOP3\"\nBottom-left small but clearly legible notice: \"イラスト（AI生成）\"\nNext to that notice with clear spacing: \"イメージ\"\n\nText hierarchy: giant bold Japanese gothic headlines with slight dry-brush texture, perfectly readable characters, date distinctly separate. No player name anywhere. No personal score, EFF value, appearance claim, win claim or personal accolade. No invented additional numbers. Do not use \"成績をもとにしたイメージ\"; the exact footer is \"イラスト（AI生成）\" and \"イメージ\". Do not include decorative lettering. Keep all text fully inside the canvas. Deliver only the single polished artwork.\n\nONE ALLOWED REVISION PROMPT\nEdit the supplied basketball thumbnail once for layout safety only. Keep the same 16:9 canvas, black #151A18 / lime #CCF43B / ivory palette, hand-drawn ink style, exact Japanese text, line breaks, typography and date unchanged. Keep the depicted real player Isaiah Murphy, his recognizable face, close-cropped black hair, moustache/goatee, uniform with no logos or words, energetic bent-knee ball-gather drive and exactly one basketball.\n\nThe original player's hair nearly touches the top edge and the fingertips holding the far-right side of the ball nearly touch the right edge. Scale the player plus ball as one coherent unit down by about 12 percent and place within the right half, so there are AT LEAST 55 pixels of visible dark background above the top of his hair and AT LEAST 60 pixels between the rightmost fingertip or ball and the right canvas edge. Keep his face at least 150 pixels tall, clearly visible. All fingers and the whole ball must be completely inside the frame. Maintain natural hand anatomy with five fingers on each hand, proper wrists and elbows. Keep the player separate from the left-hand typography, and leave the footer unobstructed. Cropping only the legs at the lower image border is fine. Adjust the background brush marks naturally to fit. No new elements.\n\nThe text must remain exactly:\nバスケまとめ\n11/18\n試合結果\n当日のEFF\nポジション別TOP3\nイラスト（AI生成）\nイメージ\n\nNo player name, no personal achievement or appearance claim, no extra text, no logos, no photography. Output only the revised single finished PNG.",
+    "generator": {
+      "tool": "image_gen.imagegen (built-in)",
+      "initial_generations": 1,
+      "revisions": 1,
+      "revision_reason": "初稿の頭と右端の指が画面端に近かったため、人物とボールを縮小し余白を確保。",
+      "final_original_path": "/Users/genjo/.codex/generated_images/01a1ef16-f502-7bd0-8a62-366013e2fc59/exec-11515aee-7a55-47b8-946f-9ef8f900ade4.png",
+      "output_format": "PNG",
+      "visual_qa_evidence": "最終生成画像を実際に表示して、7つの文言、11/18とTOP3、当日のEFFの表現、本人の髪・輪郭・目鼻・ひげ、手指とボールの形、頭と手・球の余白、見出しと人物の非重複、AI生成とイメージの注記を確認。頭上と右端に余白を確保した修正版を採用。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-18T14:41:16.515552+00:00",
+  "publication_approved": false
+}

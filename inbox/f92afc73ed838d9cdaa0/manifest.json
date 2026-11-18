@@ -1,0 +1,119 @@
+{
+  "id": "f92afc73ed838d9cdaa0",
+  "article_path": "article-games-20261118.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261118.html",
+  "source_commit": "",
+  "source_blob_sha": "839d3fbb6ae950436e1ce3d7f14a5bd824a82dcf",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "caf2e46860eb108df89c8c14d7ad937b72146decd80a5643c912cbb48da8a90d",
+  "last_observed_blob_sha": "839d3fbb6ae950436e1ce3d7f14a5bd824a82dcf",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f92afc73ed838d9cdaa0/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f92afc73ed838d9cdaa0/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-18T14:34:01.477558+00:00",
+  "creation_event_id": "d107a6d1aa1fb701458e",
+  "event_blob_sha": "839d3fbb6ae950436e1ce3d7f14a5bd824a82dcf",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/f92afc73ed838d9cdaa0/thumbnail.png",
+  "image_sha256": "fef35a2942ab937b16ff6c7d3b76b603cc52f1a13d6f060c55572c48784bdaa1",
+  "width": 1672,
+  "height": 940,
+  "brief": {
+    "source_blob_sha": "839d3fbb6ae950436e1ce3d7f14a5bd824a82dcf",
+    "text_lines": [
+      "バスケまとめ",
+      "11/18",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f92afc73ed838d9cdaa0/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261118.html",
+        "basis": "固定HTML。blob SHAをGitコマンドを使わず計算し、指定値との一致を確認。記事日付は2026-11-18、見出しは試合結果・当日のEFF・ポジション別TOP3。"
+      },
+      {
+        "type": "article_content",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f92afc73ed838d9cdaa0/source.txt",
+        "basis": "本文の根拠は固定HTMLとこの文章のみ。複数選手を同じ形式で扱う結果一覧のため、個人を主役と断定せずランダム選択。"
+      },
+      {
+        "type": "source_qualifiers",
+        "basis": "原稿は当日の実出場選手・公式EFFによるリーグ別、ポジション別TOP3。今季平均や予想とは別集計。画像は記事全体の見出しのみで、描いた選手の氏名、個人成績、出場、活躍、順位、特定の試合場面を主張しない。最高の手札のカード点・アプリ合計点も載せない。ラベルは本人指定の「イラスト（AI生成）」「イメージ」。"
+      },
+      {
+        "type": "appearance_only",
+        "title": "群馬クレインサンダーズ公式 選手プロフィール",
+        "url": "https://g-crane-thunders.jp/roster/players/detail/kerry-blackshear-jr",
+        "image_url": "https://g-crane-thunders.bl.kuroco-img.app/v=1789375653/files/user/images/roster/players/detail_2027/kerry-blackshear-jr/fv.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f92afc73ed838d9cdaa0/references/kerry-blackshear-jr-official.jpg",
+        "use": "容姿の参照に限定。公式写真を完成画像へ貼り付けず、ロゴやスポンサー表記も転用しない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認。黒#151A18×ライム#CCF43B、太い見出し、インク・ブラシ表現のみを継承。"
+      },
+      {
+        "type": "approved_style_secondary",
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "use": "手順書の指定フォルダにはA画像が無いため、既存制作フォルダの同名v3をview_imageで確認。生成入力には使わず、黒×ライム案を採用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ケリー・ブラックシアー・ジュニア",
+        "english_name": "Kerry Blackshear Jr.",
+        "selection": "ランダム",
+        "selection_reason": "記事は日付別の試合結果と複数選手の同形式ランキングで、本文の主役を1人に絞れないため。",
+        "selection_method": "固定本文のEFF表に掲載された11人を初出順で重複除去。作業IDのSHA-256整数値を11で割った剰余8（0始まり）を用いる再現可能な疑似ランダム選択。",
+        "candidate_names": [
+          "マーク・スミス",
+          "岡田 侑大",
+          "アイザイア・マーフィー",
+          "ジャレット・カルバー",
+          "スタンリー・ジョンソン",
+          "ジェイク・ヴァン・タバーゲン",
+          "アーロン・ヘンリー",
+          "ギャビン・エドワーズ",
+          "ケリー・ブラックシアー・ジュニア",
+          "ジャック・クーリー",
+          "ファーダウス・アイマク"
+        ],
+        "reference_source": "群馬クレインサンダーズ公式プロフィール",
+        "reference_url": "https://g-crane-thunders.jp/roster/players/detail/kerry-blackshear-jr",
+        "reference_image_url": "https://g-crane-thunders.bl.kuroco-img.app/v=1789375653/files/user/images/roster/players/detail_2027/kerry-blackshear-jr/fv.jpg",
+        "observed_features": "非常に短い黒髪、広い額、太めの眉、やや奥まった目、幅のある鼻、厚めの唇、顎から輪郭に沿う短いひげと薄い口ひげ、力強い肩・上半身。公式写真と生成画像を目視比較。",
+        "depiction": "両手でボールを保持して上体をひねるプレーのイメージ。実際の試合の再現ではない。",
+        "name_in_artwork": false,
+        "individual_performance_in_artwork": false
+      }
+    ],
+    "prompt": "Use case: ads-marketing.\nEdit and adapt the first reference thumbnail into ONE new Japanese basketball editorial thumbnail for the fixed article dated 2026-11-18. Completely replace its text, player identity and pose. Output a single landscape PNG, 1792 x 1008 pixels (16:9), opaque background.\n\nREFERENCE ROLES:\nReference 1: approved visual style only, black #151A18 and lime #CCF43B, bold Japanese typography, expressive hand-drawn ink and dry-brush strokes. Do NOT carry over Culver, the 38 points, team names, scores, date or any text from this image.\nReference 2: official profile of the real player Kerry Blackshear Jr., identity reference ONLY. Study and preserve his very short close-cropped black hair, broad forehead, substantial jaw with slightly pointed chin, defined cheekbones, thick brows, slightly hooded eyes, broad nose, full lips, closely trimmed beard along jaw and chin and fine mustache, dark brown skin and powerful tall build. Redraw entirely as a recognizably hand-inked illustration. Do not paste, trace or recreate the photo composition, uniform logos, sponsors or photograph lighting.\n\nSUBJECT / ACTION:\nOne real athlete: Kerry Blackshear Jr. only. Show an energetic three-quarter waist-to-thigh portrait in the right 43% of the canvas, body twisting through a basketball pivot as he securely grips an orange basketball with both hands near the outer right hip, bent elbows, intent face turned slightly left, preparing a pass. His face should be large and recognizable, with crosshatched ink shadows and warm muted skin highlights, not a silhouette. Anatomically coherent arms and hands; one hand each on the opposite sides of the ball, natural fingers partly occluded by the ball, no extra limbs. Plain dark basketball uniform with narrow ivory trim; no text, names, numbers, logos or sponsors anywhere on uniform or ball. This is an imagined illustrative action, not a reconstruction of any actual game event. Do not add a defender or extra people.\n\nLAYOUT:\nLeft 55% for headlines. Strong dark editorial background, a controlled diagonal lime brush gesture behind the player, a few ink flecks, generous contrast with readable typography. The large main heading is off-white and the secondary heading is lime; make the date clearly visible. Keep all letters, face, hands and the entire ball inside the canvas with at least 55px margins. Lower thighs may end at the lower composition edge, but no abrupt cut through hands or ball. Footer labels unobstructed, clearly readable. Avoid complex decorative panels, tables, charts, fake statistics or game-score boards.\n\nEXACT TEXT ONLY, verbatim:\nTop-left small masthead: 「バスケまとめ」\nBelow masthead medium large date: 「11/18」\nLeft dominant first headline: 「試合結果」\nLeft dominant second headline: 「当日のEFF」\nSupporting line below: 「ポジション別TOP3」\nBottom-left footer: 「イラスト（AI生成）」\nBeside it: 「イメージ」\n\nNo quotation brackets in the artwork. No additional text. No player name or individual performance claim. The random-selected player illustrates the general article topic. Keep the two footer labels exactly as written, without claiming the pose is based on specific recorded performance. Match the confident black-and-lime approved hand-inked illustration aesthetic, never photorealistic.",
+    "generator": {
+      "tool": "image_gen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "revision_count": 0,
+      "format": "PNG",
+      "width": 1672,
+      "height": 940,
+      "transparent_background": false,
+      "output_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/f92afc73ed838d9cdaa0/generated.png",
+      "original_output_file": "/Users/genjo/.codex/generated_images/01a1ef14-3abf-7343-b715-3c13cb5a1789/exec-ad17ba7b-cbb1-4aba-bbec-e78c259f3659.png",
+      "qa_method": "生成結果の画像表示と保存元PNGのview_imageを確認。文字・日付が固定原稿と一致し、個人情報・個人成績の文字なし。公式写真に基づく短髪・目鼻・唇・短いひげを比較。顔・両手・ボール・全見出し・注記の見切れなし。手の指とボールの保持が自然で、写真風・ロゴ・スポンサー表示なし。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-18T14:37:01.445039+00:00",
+  "publication_approved": false
+}

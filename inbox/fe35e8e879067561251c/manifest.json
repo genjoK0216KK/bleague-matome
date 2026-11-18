@@ -1,0 +1,101 @@
+{
+  "id": "fe35e8e879067561251c",
+  "article_path": "article-stats-20261118.html",
+  "article_url": "https://basuke-matome.jp/article-stats-20261118.html",
+  "source_commit": "",
+  "source_blob_sha": "493a8f3e95ccb3048b8ca89db48dead6db01cb5c",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "68b5c14a8d258f2c9e429de692dacdc461d4979ecd763ca1829642838f8c360c",
+  "last_observed_blob_sha": "493a8f3e95ccb3048b8ca89db48dead6db01cb5c",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe35e8e879067561251c/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe35e8e879067561251c/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-18T14:34:02.596361+00:00",
+  "creation_event_id": "dedb439ee3c29106a4d8",
+  "event_blob_sha": "493a8f3e95ccb3048b8ca89db48dead6db01cb5c",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/fe35e8e879067561251c/thumbnail.png",
+  "image_sha256": "7318823209d6d6a2bc8ce47780375d283e92c8ee9b50ddf6a6a39ad0f81d55dd",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "493a8f3e95ccb3048b8ca89db48dead6db01cb5c",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.18",
+      "貢献度1位",
+      "スタンリー・ジョンソン",
+      "群馬",
+      "EFF 45",
+      "37得点・6リバウンド・5アシスト",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_identifier",
+        "url": "https://basuke-matome.jp/article-stats-20261118.html",
+        "usage": "記事の識別のみ。公開ページを本文根拠にしていない。"
+      },
+      {
+        "type": "fixed_manuscript",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe35e8e879067561251c/source.html",
+        "usage": "本文の根拠。日付・選手名・群馬・貢献度1位・EFF 45・37得点・6リバウンド・5アシストを確認。国籍別順位は載せず、特定の実際のプレーを断定しない。"
+      },
+      {
+        "type": "fixed_manuscript",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe35e8e879067561251c/source.txt",
+        "usage": "本文の根拠。HTMLと表示文字を照合。"
+      },
+      {
+        "type": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "usage": "画像生成・検品ルールを参照。人物選定は今回の本人指示を優先。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "view_imageで確認。黒・ライム、太い文字、手描きインク・ブラシを参照。選手・数値・日付は持ち越していない。"
+      },
+      {
+        "type": "official_appearance_reference",
+        "url": "https://g-crane-thunders.jp/roster/players/detail/stanley-johnson",
+        "image_url": "https://g-crane-thunders.bl.kuroco-img.app/v=1789375626/files/user/images/roster/players/detail_2027/stanley-johnson/fv.jpg",
+        "usage": "公式プロフィール写真をダウンロードしview_imageで容姿を確認。容姿参照のみで、本文の根拠としては使用せず、写真の貼り付け・ロゴ転用もしていない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "スタンリー・ジョンソン",
+        "selection": "本文の主役",
+        "reason": "固定原稿のタイトル・リード・TOP3で貢献度1位として最も大きく扱われている選手。",
+        "source": "群馬クレインサンダーズ公式プロフィール",
+        "url": "https://g-crane-thunders.jp/roster/players/detail/stanley-johnson",
+        "image_url": "https://g-crane-thunders.bl.kuroco-img.app/v=1789375626/files/user/images/roster/players/detail_2027/stanley-johnson/fv.jpg",
+        "observed_features": "密な自然なカールのアフロ、短い側頭部、太い眉、ややまぶたの重い目、幅のある鼻、厚い唇、短い口ひげと顎ひげ、頬と顎の輪郭、広い肩と筋肉質な体格を公式写真と比較して確認。",
+        "depiction": "実在選手1名のドリブル姿を描いたイラスト。特定の試合・プレーの再現ではなく、成績をもとにしたイメージ。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT:\nUse case: ads-marketing.\nAsset type: Japanese basketball editorial thumbnail, one finished landscape PNG, 1536 x 864 pixels (16:9), all text and artwork together in a single image.\n\nCreate a fresh バスケまとめ thumbnail in the approved hand-inked sports-poster style visible in the earlier black-and-lime Culver reference: almost-black #151A18, electric lime #CCF43B, warm ivory lettering, rough expressive ink/brush strokes, strong silhouette, few elements, premium bold Japanese sports editorial typography. Use that reference only for graphic style, never its player, numbers, name, score, date or shooting pose.\n\nSubject: the real professional basketball player Stanley Johnson / スタンリー・ジョンソン, the main subject of the supplied article. Base his recognizable illustrated face on the official Gunma player portrait just inspected: dark skin rendered in expressive ivory/charcoal ink planes, powerful broad shoulders and stocky athletic muscular build, moderately tall dense natural coiled afro with uneven clustered curls and close short temples, broad somewhat angular oval face, strong cheeks and jaw, thick eyebrows, slightly hooded almond eyes, broad nose, full lips, short mustache and closely trimmed goatee with light jaw stubble. No long beard, no braids, no headband. Draw him clearly as a bold hand-drawn ink illustration, never photorealistic and never a pasted photograph.\nPose: a dynamic three-quarter forward drive, torso low and diagonal, head looking ahead, one anatomically clear hand controlling an orange basketball below waist level on his outside while the opposite forearm extends naturally for balance. Show head, shoulders, both arms and hands, ball and upper legs with comfortable margins; lower legs can exit the frame. One player only. Ball fully inside the frame. This is a conceptual illustration of performance, not a reconstruction of a specific actual play.\nClothing: plain dark sleeveless basketball uniform with restrained lime edge trim, completely without logos, sponsor wording, team emblems, numbers or brand marks. No necklace.\n\nComposition: player in the RIGHT 43% of the canvas; left 55% reserved for very readable text, no overlap. Make his face large enough to recognize. Rough diagonal lime brush marks behind him and a short brush underline by the statistic, not clutter. Do not replicate the reference's raised-arm shot pose. Keep all text at least 50px from canvas edges. Text hierarchy with one giant numerical focal point, short bold headline, and restrained small footer. The left text should be crisp Japanese, perfectly spelled, with clearly separated lines. Main statistic 45 must be the dominant lime element and visibly associated with EFF, never with 得点.\n\nText (verbatim, these are the only words/numbers in the image):\ntop-left small brand: \"バスケまとめ\"\ntop-left date: \"2026.11.18\"\nlarge headline: \"貢献度1位\"\nplayer name below headline, medium bold, fits on one line: \"スタンリー・ジョンソン\"\nsmall team name directly beside or below name: \"群馬\"\ncentral giant statistic: \"EFF 45\"\nsupporting line below statistic: \"37得点・6リバウンド・5アシスト\"\nfooter, very legible and unobstructed: \"イラスト（AI生成）\"\nfooter beside it: \"成績をもとにしたイメージ\"\n\nContent grounding: the only article sources are the supplied fixed source.html and source.txt for article-stats-20261118.html. They state November 18, 2026, daily contribution ranking first place Stanley Johnson (Gunma), EFF 45, 37 points, 6 rebounds and 5 assists. Do not add MVP, season-leading, career-best, decisive basket, final-shot claims, win score, opponent, nationality ranking, or any other factual claim. Official portrait is only a likeness reference; no external stats may enter this design.\nAvoid: photography, 3D rendering, team or league logos, sponsor text, actual official photo pixels, watermark, arbitrary decorations, trophies, extra balls, extra players, malformed hands, overlapping body parts, cropped head/ball/hands, missing AI label, illegible Japanese, accidental extra text. Produce one polished final thumbnail only.\n\nONE REVISION PROMPT:\nEdit the first reference image (the generated Stanley Johnson black/lime basketball thumbnail). The second reference is Stanley Johnson's official club portrait and is ONLY for his facial and hair appearance, never to paste photograph pixels or copy its logos/clothing. Make ONE focused correction: pull the illustrated player back slightly so the entire top of his hair is visible with at least 40 pixels of dark margin, and his rightmost elbow/arm is comfortably inside the right edge with at least 30 pixels margin. Keep both hands and the complete basketball clearly visible, anatomically natural with five digits each. Preserve the same dynamic forward dribbling pose and recognizable real Stanley Johnson identity, using his short dense natural afro and short mustache/goatee from the official photo; make the afro slightly lower and tighter/coiled, not tall long twists. The body may still crop at the thighs along the bottom. Preserve everything else exactly: the black #151A18 and lime #CCF43B ink/brush illustration style, warm ivory text, diagonal brush marks, all typography placement, and all Japanese text and numbers without any changes. Text must remain exactly: バスケまとめ / 2026.11.18 / 貢献度1位 / スタンリー・ジョンソン / 群馬 / EFF 45 / 37得点・6リバウンド・5アシスト / イラスト（AI生成） / 成績をもとにしたイメージ. Do not add any text, logos, sponsor marks, jersey number or jewelry. Keep the illustrated non-photoreal look, one real player only. Return a single finished landscape 16:9 PNG at least 1536 pixels wide.",
+    "generator": {
+      "tool": "image_gen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "revision_count": 1,
+      "final_size": {
+        "width": 1672,
+        "height": 941
+      },
+      "revision_reason": "初稿で頭髪と右腕が画面端に触れたため人物を引き、最終画像で頭・腕・手・ボールの余白を目視確認。",
+      "no_api_or_cli_generation": true
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-18T14:44:41.424898+00:00",
+  "publication_approved": false
+}
