@@ -794,16 +794,16 @@
   "article-games-20261118.html": {
    "article_path": "article-games-20261118.html",
    "article_url": "https://basuke-matome.jp/article-games-20261118.html",
-   "editorial_fingerprint": "eb9bdc8485b0896d5bf1d6deaa9ba1151e34d3d73bec76fc8cd3f8c6fdebd48b",
-   "event_id": "417a0695463f86ecd2ef",
-   "recorded_at": "2026-11-18T11:50:50.822510+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "5f89c5cfa4b6a9effe156d2e766dd9d617545f11",
-   "stable_fingerprint": "eb9bdc8485b0896d5bf1d6deaa9ba1151e34d3d73bec76fc8cd3f8c6fdebd48b",
+   "editorial_fingerprint": "caf2e46860eb108df89c8c14d7ad937b72146decd80a5643c912cbb48da8a90d",
+   "event_id": "d107a6d1aa1fb701458e",
+   "recorded_at": "2026-11-18T14:33:47.250496+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "839d3fbb6ae950436e1ce3d7f14a5bd824a82dcf",
+   "stable_fingerprint": "caf2e46860eb108df89c8c14d7ad937b72146decd80a5643c912cbb48da8a90d",
    "status": "requested",
    "target_date": "20261118",
-   "title": "11/18 試合結果（公式記録の確定待ち）"
+   "title": "11/18 試合結果・当日のEFF"
   },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
@@ -1088,16 +1088,16 @@
   "article-results-one-next-20261118.html": {
    "article_path": "article-results-one-next-20261118.html",
    "article_url": "https://basuke-matome.jp/article-results-one-next-20261118.html",
-   "editorial_fingerprint": "eb9bdc8485b0896d5bf1d6deaa9ba1151e34d3d73bec76fc8cd3f8c6fdebd48b",
-   "event_id": "85ce41c77548da826900",
-   "recorded_at": "2026-11-18T11:50:50.822510+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "895d3756b08e7f23798df477b0bb23cdbc03e917",
-   "stable_fingerprint": "eb9bdc8485b0896d5bf1d6deaa9ba1151e34d3d73bec76fc8cd3f8c6fdebd48b",
+   "editorial_fingerprint": "caf2e46860eb108df89c8c14d7ad937b72146decd80a5643c912cbb48da8a90d",
+   "event_id": "fdf5452c65a331095a8d",
+   "recorded_at": "2026-11-18T14:33:47.250496+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "17bd7d511699964ece753f4234be25a04df1b8c5",
+   "stable_fingerprint": "caf2e46860eb108df89c8c14d7ad937b72146decd80a5643c912cbb48da8a90d",
    "status": "requested",
    "target_date": "20261118",
-   "title": "11/18 試合結果（公式記録の確定待ち）"
+   "title": "11/18 試合結果・当日のEFF"
   },
   "article-stats-20261026.html": {
    "article_path": "article-stats-20261026.html",
@@ -1292,6 +1292,18 @@
    "status": "requested",
    "target_date": "20261117",
    "title": "11月17日の貢献度ランキング 1位はアキル・ミッチェル（長崎）の30"
+  },
+  "article-stats-20261118.html": {
+   "article_path": "article-stats-20261118.html",
+   "article_url": "https://basuke-matome.jp/article-stats-20261118.html",
+   "editorial_fingerprint": "68b5c14a8d258f2c9e429de692dacdc461d4979ecd763ca1829642838f8c360c",
+   "event_id": "dedb439ee3c29106a4d8",
+   "recorded_at": "2026-11-18T14:33:47.250496+00:00",
+   "source_blob_sha": "493a8f3e95ccb3048b8ca89db48dead6db01cb5c",
+   "stable_fingerprint": "68b5c14a8d258f2c9e429de692dacdc461d4979ecd763ca1829642838f8c360c",
+   "status": "requested",
+   "target_date": "20261118",
+   "title": "11月18日の貢献度ランキング 1位はスタンリー・ジョンソン（群馬）の45"
   }
  },
  "version": 1
