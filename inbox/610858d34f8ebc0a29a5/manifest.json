@@ -1,0 +1,79 @@
+{
+  "id": "610858d34f8ebc0a29a5",
+  "article_path": "article-daily-20261119.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261119.html",
+  "source_commit": "",
+  "source_blob_sha": "d9dba1f1d2d2e49e5d4e0ffd4c75d90f4cf27fdb",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "d8f3e5fdb9eeda845659a02d23dadd59d0b7ca053954e47182b19a33f331ee48",
+  "last_observed_blob_sha": "d9dba1f1d2d2e49e5d4e0ffd4c75d90f4cf27fdb",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/610858d34f8ebc0a29a5/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/610858d34f8ebc0a29a5/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-18T23:16:56.556577+00:00",
+  "creation_event_id": "c779da21b98774123d24",
+  "event_blob_sha": "d9dba1f1d2d2e49e5d4e0ffd4c75d90f4cf27fdb",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/610858d34f8ebc0a29a5/thumbnail.png",
+  "image_sha256": "d9bca6ed8e6201c7a9a6b34dcd077e7c9eab6bf4201ca7399a7350b3c3b99019",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "d9dba1f1d2d2e49e5d4e0ffd4c75d90f4cf27fdb",
+    "text_lines": [
+      "バスケまとめ",
+      "名古屋D 快勝",
+      "名古屋D",
+      "琉球",
+      "93–76",
+      "2ポイントと速攻を検証",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/610858d34f8ebc0a29a5/source.html",
+        "role": "固定版本文。名古屋D 93対76 琉球、2ポイントと速攻の分析。古い試合前予測のog:titleと関連記事は見出しの根拠にしていない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/610858d34f8ebc0a29a5/source.txt",
+        "role": "固定版本文と掲載文字の照合。試合結果と分析を区別し、分析見出しは「検証」とした。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "アーロン・ヘンリー",
+        "selection": "本文の主役",
+        "selection_reason": "試合結果記事の勝利チーム・名古屋Dの主要選手として、表の先頭と本文で取り上げられているため選択。",
+        "official_page": "https://nagoya-dolphins.jp/news/detail/id=23701",
+        "official_image": "https://nagoya-dolphins.bl.kuroco-img.app/v=1780233073/files/user/common/2025-26/player/11_photo_1-0x500.jpg",
+        "official_profile": "https://www.bleague.jp/roster_detail/?PlayerID=51000268",
+        "reference_scope": "公式ページ内のプロフィール写真を取得してview_imageで目視。外見参照だけに使用し、画像への貼り付けや外部ページの成績の転用はしていない。",
+        "observed_features": "密な自然な黒いアフロ、頬から顎のひげと口ひげ、輪郭・眉・目鼻・厚い唇、がっしりした体格。左腕の黒いスリーブ。",
+        "depiction": "前傾姿勢でボールを運ぶイラスト。実際の試合場面の再現ではない。無地の赤いユニフォーム、ロゴ・スポンサー文字・背番号なし。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: illustration-story.\nCreate exactly ONE finished editorial basketball thumbnail PNG for the Japanese site バスケまとめ. Wide landscape 16:9, target 1600x900 or larger, all text sharp and comfortably inside safe margins.\nApproved visual direction: black #151A18 background, electric lime #CCF43B, warm ivory lettering, hand-drawn black ink and dry-brush sports illustration, rough energetic brush swashes, restrained print grain, very few elements, premium bold Japanese sports editorial design. Match the visual language of the approved black/lime reference previously inspected, but do not copy its player, name, date, score, or shooting pose.\nSubject: Exactly one REAL player, Aaron Henry (アーロン・ヘンリー), the main winning-team player highlighted in the supplied article. Use the appearance confirmed from his official Nagoya Diamond Dolphins profile portrait: dark skin; tall, muscular athletic build; distinctive dense natural black afro, medium length with uneven tufts spreading upward and sideways; elongated broad-cheeked face; strong eyebrows, deep-set dark eyes, broad nose, full lips, substantial black beard along jaw and chin and moustache. Preserve these recognisable facial features in a clearly drawn illustration; no generic substitute player. Red sleeveless basketball jersey with black and white edging, black compression sleeve on HIS LEFT arm. Completely plain jersey and shorts: NO logos, NO sponsor writing, NO team wordmarks, NO jersey numbers.\nScene and composition: the player occupies the LEFT 45 percent, in an explosive low forward drive toward the viewer, torso angled diagonally, face clearly visible in a 3/4 front view, eyes focused ahead, bent knees. One orange basketball controlled close by his unsleeved right hand near his right hip, visible contact with the ball, the sleeved left arm bent naturally for balance, all fingers and joints anatomically plausible. Show head through knees, keep head, hands and entire ball within frame; leg cropping below knees is intentional. Strong hand-inked face and body shading, rich drawn texture, no photography. Lime diagonal brush strokes behind the figure convey motion. No extra players, no court marks, no arena, no hoop, no scoreboard photograph. This is a conceptual PLAY IMAGE, not a claim to recreate an actual photographed moment.\nTypography: RIGHT 55 percent is calm dark negative space containing bold heavy Japanese type, ivory and lime. Top-right small publication label. Below it, very bold headline. Under the headline a team-name row and huge score precisely aligned: 名古屋D above the left number 93, 琉球 above the right number 76. Large score 93–76 in lime, preferably the largest text element. Below that an ivory analytical subheading. Thin brush underline. Footer across bottom in clearly legible ivory small type, unobstructed.\nRender ONLY these exact text strings, correctly spelled:\n「バスケまとめ」\n「名古屋D 快勝」\n「名古屋D」\n「琉球」\n「93–76」\n「2ポイントと速攻を検証」\n「イラスト（AI生成）」\n「成績をもとにしたイメージ」\nThe two footer strings may share one line separated by space. Do not add dates, player names, player statistics, English titles, explanations, watermarks, extra text or other numbers.\nSource facts ONLY from the supplied fixed article: Nagoya D beat Ryukyu 93–76; article examines 2-point shooting and fast breaks. Do not claim definitive causality beyond the word 検証. Official profile imagery is solely a likeness reference; do not reproduce, paste, or photorealistically render the source photo. No league or team logos. Ensure text/face/ball never overlap, strong small-thumbnail legibility, balanced layout and visibly AI-illustration caption.",
+      "correction": "Edit this existing thumbnail once, preserving its black #151A18 / lime #CCF43B / ivory ink-and-brush style, Aaron Henry likeness, dynamic driving pose, plain red uniform and sleeve, exact score and all text.\nMake one targeted layout correction: ALL of the afro hair, BOTH hands, and the ENTIRE orange ball must be visibly inside the canvas with at least 35-45 px of breathing room (about 3% of image width). The current top of the afro and outer ball-side fingers touch/crop against the top/left edges. Recompose the left-side player slightly smaller and shifted inward/downward; keep his entire hair visible with a clear dark/lime background margin above it. Keep head and face recognisable and detailed. The lower thighs/knees may continue naturally off the bottom as intentional body cropping. Do not introduce extra limbs or cut-off upper-body parts. Preserve correct human hand anatomy with five fingers on each hand.\nGive the far-right text comfortable right-edge margins too, preserving hierarchy and legibility. Do not change typography wording or add any content. Keep the team names accurately above their corresponding scores and no overlaps. The image is exactly one landscape 16:9 PNG at least 1600 px wide.\nThe exact text must remain:\nバスケまとめ\n名古屋D 快勝\n名古屋D\n琉球\n93–76\n2ポイントと速攻を検証\nイラスト（AI生成）\n成績をもとにしたイメージ\nNo player names or statistics, dates, team/league logos, sponsors or jersey numbers. It is an illustrated imagined play, not a real game photograph. Only fix the edge margins and preserve the rest.",
+      "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "style_reference_checked": "view_imageで確認済み。黒×ライム、太い日本語見出し、手描きインクとブラシの絵柄を参照。旧選手名・成績は転用なし。白地参考画像は指定場所に存在しなかったため使用していない。"
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "correction_count": 1,
+      "chosen_output": "/Users/genjo/.codex/generated_images/01a1f0f2-f51f-7521-a529-54caa1802a27/exec-72536024-f566-4a99-a006-185531ad7a95.png",
+      "qa_method": "生成結果を実際に目視。初回の髪・手の画面端への接近を1回修正し、修正版の文字、スコア、留保、顔の特徴、指、ボール、余白、注記を再確認。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-18T23:20:34.977477+00:00",
+  "publication_approved": false
+}
