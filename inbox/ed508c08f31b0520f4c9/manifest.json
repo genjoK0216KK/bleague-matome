@@ -1,0 +1,81 @@
+{
+  "id": "ed508c08f31b0520f4c9",
+  "article_path": "article-daily-20261118.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261118.html",
+  "source_commit": "",
+  "source_blob_sha": "bda283d9eab8ab24010fcf100216529e31030279",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "feec8bc52ca7aeae62e12efb6409e7606784abdd64fb6b546a483bd990f75084",
+  "last_observed_blob_sha": "bda283d9eab8ab24010fcf100216529e31030279",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ed508c08f31b0520f4c9/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ed508c08f31b0520f4c9/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-18T10:37:08.567695+00:00",
+  "creation_event_id": "ee51eefe262966208aa9",
+  "event_blob_sha": "bda283d9eab8ab24010fcf100216529e31030279",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/ed508c08f31b0520f4c9/thumbnail.png",
+  "image_sha256": "abee229b455df5b0fa3632b8f1715db0aa146bf14f3050aa59645c0575e0f30a",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "bda283d9eab8ab24010fcf100216529e31030279",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.18｜試合前予測",
+      "名古屋D 有利か",
+      "琉球の勝機は",
+      "名古屋D vs 琉球｜独自分析",
+      "イラスト（AI生成）｜イメージ",
+      "出場を示すものではありません"
+    ],
+    "sources": [
+      {
+        "role": "本文根拠（固定HTML）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ed508c08f31b0520f4c9/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261118.html"
+      },
+      {
+        "role": "本文根拠（固定文章）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ed508c08f31b0520f4c9/source.txt"
+      },
+      {
+        "role": "容姿参照のみ・本文や成績の根拠には未使用",
+        "title": "琉球ゴールデンキングス公式 グラント・ジェレット選手プロフィール",
+        "url": "https://goldenkings.jp/team/players/detail/id=26065?PlayerID=18430",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026111822/files/user/roster/701/2026-27/18430_01.jpg"
+      },
+      {
+        "role": "承認済みスタイル参照のみ",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "グラント・ジェレット",
+        "selection": "ランダム",
+        "selection_reason": "本文の主役は両チームの比較・試合前予測であり特定選手ではない。指定の優先順に従い本文登場選手から選定。本文に名前がある候補はグラント・ジェレット1名のみ。",
+        "candidates": [
+          "グラント・ジェレット"
+        ],
+        "reference_source": "琉球ゴールデンキングス公式プロフィール写真",
+        "reference_url": "https://goldenkings.jp/team/players/detail/id=26065?PlayerID=18430",
+        "reference_image_url": "https://bleague.bl.kuroco-img.app/v=2026111822/files/user/roster/701/2026-27/18430_01.jpg",
+        "reference_visually_inspected": true,
+        "appearance": "短く細かい黒い巻き髪、短いサイド、太い眉、長めの鼻、縦長の輪郭、口ひげとつながる厚く長い黒ひげを公式写真で確認し、生成画像の特徴と照合した。",
+        "depiction": "ボールを両手で保持し、身体をひねってパスへ移るプレー姿のイメージ。実際の試合場面の再現ではない。無地・番号なしのウェア。",
+        "source_qualifier": "固定原稿ではインジュアリーリスト掲載中。画像に氏名・個人成績・活躍・出場の主張は入れず、『イメージ』『出場を示すものではありません』を明記した。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset type: one finished editorial thumbnail for the Japanese basketball site バスケまとめ. Create ONE landscape PNG, 2048 x 1152 pixels, approximately 16:9.\n\nPrimary request: A bold, beautifully hand-inked Japanese basketball pregame editorial thumbnail. Match the approved black-and-lime reference already shown in this conversation: near-black #151A18 background, acid-lime #CCF43B diagonal dry-brush strokes, warm ivory lettering, rough ink and brush textures, very few elements, a clearly illustrated real athlete. The reference's existing player, name, stats, score and date must NOT be copied.\n\nFactual text is based ONLY on the supplied fixed article: November 18, 2026 Nagoya Diamond Dolphins vs Ryukyu Golden Kings pregame prediction. The article favors Nagoya D but considers Ryukyu's chances. This is independent pregame analysis, NOT a game result.\n\nSubject: Exactly one real basketball player, Grant Jerrett (グラント・ジェレット). His official Ryukyu profile portrait has just been shown in the conversation. Use that portrait ONLY to study likeness; do not paste or reproduce the official photo itself. Preserve his short tight black curls, tapered sides, medium olive-tan complexion, thick dark eyebrows, long straight nose, strong elongated oval face, distinctive full dense dark beard long below the chin and connected moustache. Tall broad athletic shoulders, strong long arms. His face must remain readable and recognizable as an ink illustration. No invented or additional players.\nIMPORTANT CONTEXT: He was randomly selected from the only player name in the article. The article says he is on the injury list. This symbolic basketball illustration must NOT imply he appeared, is available to play, or had any achievement. No player name or number anywhere in the image, no personal stats or claims. No medical imagery.\n\nComposition: The player fills the right 43 percent, shown in a dynamic three-quarter torso turning/pivoting with a basketball securely held in BOTH hands near his waist, as a conceptual passing motion. Clearly readable face above the ball, looking slightly toward the left. Both hands, fingers and the entire ball visible inside the frame, anatomically coherent. A plain ivory basketball jersey with simple dark collar/side trim, entirely unbranded and numberless. This is a generic isolated basketball movement against abstract dry-brush strokes, not a recreated game, no recognizable arena, no hoop, no opponent, no scoreboard. His torso may end intentionally at the lower edge, but keep the head, hands and ball inside safe margins. Use monochrome ink/ivory for the athlete with subtle warm skin hatching; an orange ball is the sole small extra accent. Do not use photorealistic rendering.\n\nTypography/layout: Left 57 percent is powerful, spacious, extremely legible bold Japanese gothic typography with a lightly brushed texture. All characters must be exact. No overlap with face or hands. Safe margins at least 70 pixels. Strong hierarchy:\n- Top-left small site name: 「バスケまとめ」\n- Below it a compact lime tag: 「2026.11.18｜試合前予測」\n- Large ivory main line: 「名古屋D 有利か」\n- Large lime main line beneath: 「琉球の勝機は」\n- Smaller ivory subline: 「名古屋D vs 琉球｜独自分析」\n- Footer in clearly legible ivory, separated from art with enough space: 「イラスト（AI生成）｜イメージ」\n- Another clear small footer line: 「出場を示すものではありません」\nRender EXACTLY these seven text strings (without the enclosing corner quotes). Do not invent any other text, names, numbers, logos or badges. Keep main text large enough to read as a thumbnail; footer must not be microprint.\n\nConstraints: fully illustrated hand-inked sports editorial art, no photographs or photomontage, no team logos, league logos, sponsor marks, apparel brands, signatures or watermark. No claims of real match recreation, no result score, no player performance text. One polished finished thumbnail only.",
+    "generator": "内蔵 image_gen.imagegen／生成1回・修正0回／公式写真の貼り付けなし",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-18T13:14:46.834315+00:00",
+  "publication_approved": false
+}

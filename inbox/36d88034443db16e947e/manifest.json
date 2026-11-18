@@ -1,0 +1,116 @@
+{
+  "id": "36d88034443db16e947e",
+  "article_path": "article-results-one-next-20261118.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261118.html",
+  "source_commit": "",
+  "source_blob_sha": "895d3756b08e7f23798df477b0bb23cdbc03e917",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "eb9bdc8485b0896d5bf1d6deaa9ba1151e34d3d73bec76fc8cd3f8c6fdebd48b",
+  "last_observed_blob_sha": "895d3756b08e7f23798df477b0bb23cdbc03e917",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/36d88034443db16e947e/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/36d88034443db16e947e/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-18T12:07:22.421299+00:00",
+  "creation_event_id": "85ce41c77548da826900",
+  "event_blob_sha": "895d3756b08e7f23798df477b0bb23cdbc03e917",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/36d88034443db16e947e/thumbnail.png",
+  "image_sha256": "a693ec67a760b9fd51ced4263aed77733b3fd570478de12acf724bd0055fa4e1",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "895d3756b08e7f23798df477b0bb23cdbc03e917",
+    "text_lines": [
+      "バスケまとめ",
+      "11/18",
+      "試合結果",
+      "公式記録の確定待ち",
+      "2026年11月18日 20:40 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_body",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/36d88034443db16e947e/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261118.html",
+        "note": "固定HTMLのみを記事本文の根拠に使用。Gitのblob形式SHA-1をローカル計算し指定値と一致。原稿内canonicalはarticle-games-20261118.htmlであるが、対象は依頼されたURLと固定版。"
+      },
+      {
+        "type": "article_body",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/36d88034443db16e947e/source.txt",
+        "note": "全試合の公式記録確定待ち。試合状態は2026-11-18 20:40 JST時点。今季平均の選出は当日の実績・出場確定を示さない。"
+      },
+      {
+        "type": "production_rules",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "note": "人物選出と注記は今回の本人指示を優先。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "view_imageで確認。黒・ライム・太字・手描きインクの絵柄のみ参照し、氏名・数字・成績は継承しない。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://www.susanoo-m.com/lp_page/roster202627_04",
+        "image_url": "https://www.susanoo-m.com/files/user/lp09/images/202627lineup/04cR4wMm/main_kay.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/36d88034443db16e947e/references/nick-kay-official.jpg",
+        "note": "島根スサノオマジック公式。公式画像をview_imageで実見し容姿のみ参照。公式写真そのものを完成画像には使用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ニック・ケイ",
+        "selection": "ランダム",
+        "selection_method": "本文に氏名がある10人からPython secrets.choiceで1人を選出。本文は試合全体の記録確定待ちで特定の選手が主役ではない。",
+        "candidate_pool": [
+          "マーク・スミス",
+          "ジャレット・カルバー",
+          "ドウェイン・エバンス",
+          "ケリー・ブラックシアー・ジュニア",
+          "コフィ・コーバーン",
+          "岡田 侑大",
+          "富永 啓生",
+          "アンジェロ・カロイアロ",
+          "ニック・ケイ",
+          "チャールズ・ジャクソン"
+        ],
+        "source": "島根スサノオマジック 2026-27 SEASON 公式プロフィール",
+        "url": "https://www.susanoo-m.com/lp_page/roster202627_04",
+        "image_url": "https://www.susanoo-m.com/files/user/lp09/images/202627lineup/04cR4wMm/main_kay.jpg",
+        "observed_features": "短い暗褐色の髪と短いサイド、横に流れる前髪、やや縦長で角のある輪郭、太い眉、まっすぐな鼻、口ひげと薄い顎ひげ、長身で厚みのある体格。",
+        "depiction": "両手でボールを保持してパスへ向かうピボット姿のイメージ。実際の試合場面の再現ではない。画像内に選手名・背番号・成績・出場・活躍・チーム名は記載していない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset type: Japanese basketball editorial website thumbnail, one final PNG, landscape 16:9, 1536x864 or larger.\n\nCreate ONE original hand-drawn ink-and-brush illustration thumbnail for バスケまとめ. Match the approved style seen earlier: near-black #151A18 background, vivid lime #CCF43B brush sweeps, warm ivory oversized Japanese typography, limited orange only for the basketball, energetic editorial sports ink drawing, strong visible brush and crosshatch marks, few visual elements, no photographic rendering.\n\nSOURCE AND EDITORIAL MEANING:\nThe fixed article is headed \"11/18 試合結果（公式記録の確定待ち）\". As of 2026-11-18 20:40 JST all games' official records are pending. Do not imply any confirmed scores, participation, performance, victory, or a real specific play. One real player was randomly selected from ten names present in this article: Nick Kay (ニック・ケイ). His name must NOT appear in the image, nor any player stats or uniform numbers. The action is only a conceptual image.\n\nSUBJECT:\nOne real athlete, Nick Kay, drawn recognizably as a stylized illustration based on the official Shimane 2026-27 profile image viewed in this conversation, https://www.susanoo-m.com/lp_page/roster202627_04 (appearance reference only).\nPreserve the observed features: very tall solid athletic build, light skin rendered in ivory and charcoal ink, short dark brown hair with shorter sides and naturally side-swept textured top, slightly long rectangular/oval face, broad angular jaw, prominent straight nose, visible ears, heavy eyebrows and deep-set light eyes, a distinct short brown moustache and light jaw/chin stubble. Keep the face clearly readable and characteristic, with shading that does not bury the eyes or nose in black. Do not depict the player from the approved style example; that example provides only ink style and palette.\nAction on the RIGHT 45 percent of canvas: dynamic bent-knee pivot into a strong two-handed pass, waist and shoulders twisting, holding ONE orange basketball at chest/waist height, head turned in a readable three-quarter view toward the left. Clearly connected elbows and wrists, natural hands supporting the ball, five fingers per hand where visible, no duplicated limbs. Show head, both arms, ball and knees safely inside the image. Use a plain dark and ivory basketball uniform without lettering, numbers, team logos, sponsor marks, league logos, or recognizable proprietary graphic patterns. No other people, no invented defender. No scoreboard or actual game venue.\n\nCOMPOSITION:\nLEFT 55 percent reserved for clear huge heavy Japanese type. Keep a clean dark field behind text; do not overlap text with player. Lime brush arc behind the right-side player implies pivot motion, distinct from the earlier straight diagonal shooting reference. Maintain generous safe margins, all text inside the canvas. Compact and bold, not cluttered. Footer readable even when reduced. All artwork is newly drawn, do not paste any official photo or reproduce any reference poster.\n\nEXACT VISIBLE TEXT ONLY (in Japanese, precise characters, no added words):\nTop-left small white brand: \"バスケまとめ\"\nMain title, very large bold ivory on two lines:\n\"11/18\"\n\"試合結果\"\nBelow title a prominent lime band with heavy near-black text: \"公式記録の確定待ち\"\nBelow the band small but legible ivory: \"2026年11月18日 20:40 JST時点\"\nBottom-left clearly readable label: \"イラスト（AI生成）\"\nNext to that label: \"イメージ\"\n\nDo not write Nick Kay's name, any other name, point totals, EFF, team names, a win/loss, predictions, final results, \"速報\", or \"成績をもとにした\". No watermarks apart from the exact AI label. One polished image only.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built_in",
+      "generation_calls": 1,
+      "revision_calls": 0,
+      "original_output": "/Users/genjo/.codex/generated_images/01a1eecf-4e11-72a3-baa3-2f2921935a08/exec-ca2af8cc-11b2-4f02-9539-ae836106ddb0.png",
+      "output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/36d88034443db16e947e/generated.png",
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "qa_method": "生成画像を表示して目視確認後、指定パスへコピーしview_imageで保存画像を開いた。sipsでPNG形式と寸法を確認。",
+      "qa_observations": {
+        "text_and_numbers": "画像の全7行を固定本文および指定注記と照合。11/18、2026年11月18日、20:40 JSTが一致。スコア・EFF・個人成績なし。",
+        "source_qualifiers": "公式記録の確定待ちをライム帯に明示。状態の基準日時あり。出場や結果を断定せず、イメージ表記あり。",
+        "likeness_or_no_named_person": "公式画像で確認したニック・ケイの髪型、顔の輪郭、太い眉、鼻、口ひげ・短い顎ひげをイラストで確認。実在選手1名、架空選手なし。氏名は画像に表示しない。",
+        "layout": "約16:9。文字・頭・顔・ボール・両手が画面内。脚は下端で自然にトリミング。指と腕の接続に明らかな破綻なし。文字と人物が重ならず、チーム・リーグ・スポンサーロゴなし。",
+        "ai_label": "画像下部にイラスト（AI生成）とイメージが明瞭に表示。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-18T13:21:41.819807+00:00",
+  "publication_approved": false
+}

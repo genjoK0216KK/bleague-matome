@@ -1,0 +1,85 @@
+{
+  "id": "8df0690ede1d9702deb9",
+  "article_path": "article-analysis-yokohama-20261118.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-yokohama-20261118.html",
+  "source_commit": "",
+  "source_blob_sha": "2b98ef871375f1fb862c3990a7df0526b86789ad",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "3abde8f740d70384f1f628ecfa9dd6eab982f057630302cf360578e98c495a9c",
+  "last_observed_blob_sha": "2b98ef871375f1fb862c3990a7df0526b86789ad",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8df0690ede1d9702deb9/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8df0690ede1d9702deb9/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-18T04:07:31.964484+00:00",
+  "creation_event_id": "91f92d588dfcd105a21f",
+  "event_blob_sha": "2b98ef871375f1fb862c3990a7df0526b86789ad",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/8df0690ede1d9702deb9/thumbnail.png",
+  "image_sha256": "308b6dd0e3bbc5d81cd918cc443559949c8dcf06b9c16a0f6d57c649b8679512",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "2b98ef871375f1fb862c3990a7df0526b86789ad",
+    "text_lines": [
+      "バスケまとめ",
+      "横浜BC",
+      "直近5試合 1勝4敗",
+      "後半の得失点差",
+      "−49点",
+      "5試合合計｜11/1〜11/16",
+      "イラスト（AI生成）｜成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8df0690ede1d9702deb9/source.html",
+        "article_url": "https://basuke-matome.jp/article-analysis-yokohama-20261118.html",
+        "use": "本文の根拠。直近5試合1勝4敗、11/1〜11/16、後半の得失点差は5試合合計−49点。チームの合計値であり個人成績や1試合の点差ではない。原稿のblob SHAを一致確認。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8df0690ede1d9702deb9/source.txt",
+        "use": "固定HTMLとあわせ本文の根拠に使用。順位・対戦相手強度の調整済み評価は画像に記載せず、特定試合のプレー再現とも扱わない。"
+      },
+      {
+        "type": "official_player_appearance_only",
+        "url": "https://b-corsairs.com/team/players/detail/id=18728?PlayerID=51000394",
+        "image_url": "https://b-corsairs.bl.kuroco-img.app/v=1788768680/files/user/team/2026-27/21_KOTSAR.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8df0690ede1d9702deb9/references/maik-kotsar-official.jpg",
+        "use": "容姿参照のみ。公式写真を目視し、修正時の人物参照に使用。本文や成績の根拠には使用せず、完成画像への写真貼付なし。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "目視した承認済み黒×ライム、太い日本語、インクとブラシの作例。旧選手・成績は持ち越さない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "use": "指定outputs側のAは存在せず、既存の制作元にある同名v3を目視確認。今回は黒×ライム案を使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "マイク・コッツァー",
+        "romanized_name": "Maik Kotsar",
+        "selection": "本文の主役",
+        "selection_reason": "固定本文の『コッツァー選手が中心、マクガスティ選手はIL』節で中心として扱われ、平均得点・リバウンド・OR・2Pまで説明されているため選択。",
+        "official_profile": "https://b-corsairs.com/team/players/detail/id=18728?PlayerID=51000394",
+        "official_portrait": "https://b-corsairs.bl.kuroco-img.app/v=1788768680/files/user/team/2026-27/21_KOTSAR.jpg",
+        "appearance_checked": "公式写真を目視。短い横分けの茶髪、やや縦長の角張った輪郭、細めの目と眉、まっすぐな鼻、薄い唇、薄い無精ひげ。1回の修正後、髪型と輪郭・目鼻・ひげが公式写真を参照したイラストになっていることを目視確認。",
+        "depiction": "紺色の無地ユニフォームと黒いアンダーシャツ。両手でボールを保持し身体をひねるプレーのイメージ。実際の試合場面の再現ではない。チームロゴ・リーグロゴ・スポンサー・公式写真の貼付なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: ads-marketing / editorial sports illustration.\nCreate ONE finished Japanese basketball news thumbnail, landscape approximately 16:9, 1536x864 or larger. Opaque PNG. Approved art direction: deep charcoal black #151A18 background, electric lime #CCF43B dry-brush strokes, warm off-white Japanese bold typography, energetic hand-drawn ink strokes and crosshatching, sparse high-impact composition. Clearly an illustration, never photorealistic.\n\nArticle content exclusively from fixed supplied source.html / source.txt: Yokohama B-Corsairs were 1 win and 4 losses across their most recent five games, November 1–16, 2026. The team's aggregate second-half scoring margin across those FIVE games was minus 49 points. These are TEAM aggregate results, NOT this individual player's plus/minus, and NOT a single game's 49-point margin.\n\nLayout: Left 58% contains exceptionally readable typography with generous safe margins. Right 42% features real professional basketball player MAIK KOTSAR (マイク・コッツァー) in a dynamic three-quarter post-pivot stance, knees bent, torso turning, holding ONE orange basketball securely with two anatomically correct hands near his lower chest, protecting the ball while scanning the court. Crop at thighs only. Keep all of head, both hands, and ball inside the canvas. No other people. The play is an illustrative imagined generic movement, not a reenactment of any actual match or decisive basket.\n\nPlayer likeness based on the viewed current official Yokohama B-Corsairs portrait at https://b-corsairs.com/team/players/detail/id=18728?PlayerID=51000394 and official portrait https://b-corsairs.bl.kuroco-img.app/v=1788768680/files/user/team/2026-27/21_KOTSAR.jpg . Depict this real player, not a generic invented basketball player: tall, powerful broad-shouldered Estonian center, light skin; short medium-brown hair neatly side-parted and swept sideways with a slightly raised front, short tidy sides; long somewhat rectangular face with broad angular jaw, wide forehead, straight narrow bridge nose, small light-colored deep-set eyes beneath fairly straight eyebrows, defined ears, thin lips, very light sandy-brown stubble around chin and upper lip, no full beard. Clearly articulate eyes, nose and mouth with ink rather than blacking out the face. Focused natural expression. Simple navy sleeveless basketball jersey over a black short-sleeve undershirt, narrow muted red/off-white trim; absolutely no logos, sponsor marks, team emblems, numbers, or jersey text. Reinterpret the face as a hand-drawn illustration; do not paste a photograph.\n\nText to render EXACTLY, with no additional words or numbers:\nsmall upper-left masthead: \"バスケまとめ\"\nvery large team headline: \"横浜BC\"\nmedium strong line: \"直近5試合 1勝4敗\"\nlabel immediately above the main number: \"後半の得失点差\"\nmain focal statistic, enormous lime dry-brush numerals with off-white unit: \"−49点\"\ndirectly below the number, readable qualifier: \"5試合合計｜11/1〜11/16\"\nsmall but fully legible footer, unobscured: \"イラスト（AI生成）｜成績をもとにしたイメージ\"\n\nKeep the minus sign clearly visible. Hierarchy: team headline, enormous −49, readable 5-game aggregate label. Lime diagonal brush movement behind the player can bridge text and figure but must not obscure any lettering. No tables, charts, opponent, arena signage, scoreboards or added statistics. Do not carry over names, faces, scores or dates from any earlier example. Include only this real player. Do not imply that he personally caused the aggregate deficit. Use the same lively ink/brush and restrained elements as the approved black-and-lime style. All text completely within a minimum 40px safe margin.\n\nONE ALLOWED CORRECTION\nEdit the FIRST image, the finished black-and-lime Yokohama BC thumbnail. Use the SECOND image (the club's official portrait of real player Maik Kotsar) ONLY as a visual reference for his actual identity. The first image is the edit target, second is likeness reference, not an insert.\n\nMake ONE focused correction: refine the illustrated man's face and hair so he recognizably resembles Maik Kotsar in the second image. Match his actual slightly longer softly rectangular face, broad but not exaggerated jaw, straighter narrower eyebrows, narrower and less dramatically deep-set eyes, slim straight nose, subtle cheek contours, thin lips and very light stubble. Hair should be shorter and neater with the modest natural side-swept part seen in the official portrait; reduce the current exaggerated tall quiff. Avoid an idealized generic handsome action-hero face. Keep a focused game expression and the same head angle, eye direction, lighting and hand-drawn crosshatched illustration technique. Do NOT paste, trace, or photorealistically transplant the reference photo. No additional people.\n\nLock EVERYTHING ELSE in the first image: exact 16:9 canvas and resolution, all text and numbers, charcoal/lime/off-white palette, layout, figure's pose/body, hands, ball, plain navy jersey over black undershirt, brush strokes, and image margins. Do not transfer any logo, sponsor, lettering or jersey number from the photo. Keep the scene a generic basketball movement image, not a recreation of a real match.\n\nAll the existing text must remain exactly and legibly:\nバスケまとめ\n横浜BC\n直近5試合 1勝4敗\n後半の得失点差\n−49点\n5試合合計｜11/1〜11/16\nイラスト（AI生成）｜成績をもとにしたイメージ\n\nReturn one finished opaque PNG only.",
+    "generator": "Built-in image_gen.imagegen only. Initial generation: 1. Likeness correction: 1. Final selected output: exec-6d24f9a4-3ec1-4ac5-9f3f-a5898678f4ea.png. No API/CLI generation.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-18T13:11:21.636481+00:00",
+  "publication_approved": false
+}

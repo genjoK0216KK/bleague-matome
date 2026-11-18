@@ -1,0 +1,96 @@
+{
+  "id": "bfca0a49ccb938a128d8",
+  "article_path": "article-games-20261118.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261118.html",
+  "source_commit": "",
+  "source_blob_sha": "5f89c5cfa4b6a9effe156d2e766dd9d617545f11",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "eb9bdc8485b0896d5bf1d6deaa9ba1151e34d3d73bec76fc8cd3f8c6fdebd48b",
+  "last_observed_blob_sha": "5f89c5cfa4b6a9effe156d2e766dd9d617545f11",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/bfca0a49ccb938a128d8/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/bfca0a49ccb938a128d8/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-18T12:07:21.928004+00:00",
+  "creation_event_id": "417a0695463f86ecd2ef",
+  "event_blob_sha": "5f89c5cfa4b6a9effe156d2e766dd9d617545f11",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/bfca0a49ccb938a128d8/thumbnail.png",
+  "image_sha256": "ecf41fdb4e3845050182f98c5734efe41ed783a7660a06c43dff5fc16604d587",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "5f89c5cfa4b6a9effe156d2e766dd9d617545f11",
+    "text_lines": [
+      "バスケまとめ",
+      "11/18 試合結果",
+      "公式記録の",
+      "確定待ち",
+      "2026.11.18 20:40時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "source.html",
+        "url": "https://basuke-matome.jp/article-games-20261118.html",
+        "note": "固定HTMLのみを本文の根拠として使用。Git blob形式のSHA-1をgit操作なしで照合済み。"
+      },
+      {
+        "type": "article_content",
+        "path": "source.txt",
+        "note": "固定本文。全試合の公式記録確定待ち。状態基準は2026-11-18 20:40 JST。"
+      },
+      {
+        "type": "style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "view_imageで確認。配色・筆致・文字のスタイルだけを参照。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://www.bleague.jp/en/roster_detail/?PlayerID=51000410",
+        "image_url": "https://www.bleague.jp/files/user/roster/693/2026-27/51000410_03.png",
+        "note": "B.LEAGUE公式プロフィール。公式写真をダウンロードしview_imageで容姿を確認。記事内容の根拠には不使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "マーク・スミス",
+        "selection": "ランダム",
+        "selection_method": "本文掲載10人を本文順に並べ、Python random.Random(int('bfca0a49ccb938a128d8',16)).choiceで1人抽選。記事全体が主題で特定選手の当日実績は未確定のため。",
+        "reference_url": "https://www.bleague.jp/en/roster_detail/?PlayerID=51000410",
+        "reference_image_url": "https://www.bleague.jp/files/user/roster/693/2026-27/51000410_03.png",
+        "local_reference": "references/mark-smith-official.png",
+        "observed_features": "短い黒い巻き髪、濃い眉、やや切れ長の目、直線的な鼻、明瞭な顎の輪郭、短く薄い口ひげ・顎ひげ、がっしりしたガード体型。",
+        "usage": "プレー姿はイメージ。氏名・背番号・成績・出場・活躍の文字は描かない。公式写真は画面に貼り込まない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT\nUse case: illustration-story\nCreate exactly ONE finished Japanese editorial basketball thumbnail, landscape 16:9, preferably 2048 x 1152 pixels, PNG. This is a new artwork.\n\nReference roles: the already viewed B-culver-black-lime-v3.png is a STYLE reference ONLY: near-black #151A18, electric lime #CCF43B, warm ivory, bold Japanese typography, rough hand-ink and dry-brush strokes, few elements. Do not copy that reference's text, numbers, face, or pose. The already viewed official B.LEAGUE portrait (https://www.bleague.jp/files/user/roster/693/2026-27/51000410_03.png) is a LIKENESS reference for Mark Smith ONLY. Redraw him as an illustration; never paste the photo into the output.\n\nSubject: exactly one real basketball player, Mark Smith (マーク・スミス), selected randomly from the article's named players. Preserve his visible distinctive features: short dense black curly hair with neat lower sides, prominent dark brows, almond-shaped eyes, medium-width straight nose, medium-brown skin translated into ink and ivory shading, oval face with a defined jaw, subtle short moustache and chin stubble, strong athletic guard build. Keep facial features clear instead of obscuring them in black shadow. Do NOT depict Jarrett Culver from the style reference.\n\nComposition: player occupies the LEFT 43 percent, a dynamic low dribble with his torso leaning forward and bent knees, three-quarter view, looking ahead, one anatomically natural hand visibly controlling one orange basketball at hip/knee height. Other arm balances naturally. Show head, both arms, both hands and entire ball fully inside the canvas. Crop lower legs deliberately below the knees if needed. Generic ivory basketball jersey and shorts with dark edging, NO logos, NO sponsor writing, NO names, NO jersey numbers. Face remains recognizable in expressive ink-brush illustration. This is a generic imagined playing pose, NOT a recreation of a documented game, shot, or result. No opponent, arena logos, scoreboard or trophy.\n\nThe RIGHT 55 percent is clean typographic hierarchy, large and readable, with ample safe margins (at least 5 percent). Use thick Japanese sans-serif/brush-influenced block lettering with clean exact glyphs. Large heading \"11/18 試合結果\" at top right (can break after 11/18). Main lime headline \"公式記録の\" and \"確定待ち\" below it. Small brand \"バスケまとめ\" in upper margin. Smaller but readable timestamp \"2026.11.18 20:40時点\" below main headline. Bottom footer \"イラスト（AI生成）\" and \"イメージ\". All seven specified text strings are mandatory and must be spelled exactly:\n\"バスケまとめ\"\n\"11/18 試合結果\"\n\"公式記録の\"\n\"確定待ち\"\n\"2026.11.18 20:40時点\"\n\"イラスト（AI生成）\"\n\"イメージ\"\n\nEditorial facts: the fixed article is the November 18 game-results page, with ALL official game records still pending at 20:40 JST. Never imply results finalized, a victory, player appearance or performance. No player name, team name, score, statistics, rankings or achievement text. No added writing. Use \"イメージ\" exactly, not \"成績をもとにしたイメージ\". This is clearly stylized hand-drawn art, not a photograph or photoreal rendering. Energetic sweeping lime brush behind the player, subtle ink texture on dark background, uncluttered typography, no official team or league logos. Ensure natural hands, single ball, no duplicated limbs, no clipped text.\n\nSINGLE REVISION PROMPT\nEdit the FIRST image, the generated black-and-lime Japanese basketball thumbnail. The SECOND image is the official portrait of the real player Mark Smith and is a FACE/HAIR/LIKENESS reference only.\n\nMake this single corrective revision:\n1. Correct the illustrated player's likeness to Mark Smith in the second image. His official portrait has SHORT, CLOSE-CROPPED small black curls, a flatter compact silhouette, no tall curly high-top. Match the official reference's straight nose, eye spacing, brows, long oval facial proportions, defined jaw and ears. He has a very subtle thin moustache and faint chin stubble, NOT the conspicuous goatee and thick moustache shown in the generated image. Redraw the face as the same recognizable man in the reference, with a focused playing expression. Maintain the original ink illustration style and athletic dribbling pose. Do not insert or paste any actual photo.\n2. Slightly reduce/reposition only the player and ball within the left region so his entire hair/head and outer left elbow are safely inside the canvas, with at least 40px clearance from top and left edges at this size. Both hands and the ball remain fully visible and anatomically natural. Keep deliberate lower-leg cropping.\nPreserve the 16:9 canvas, black #151A18 and lime #CCF43B editorial style, all typography and exact existing words, their hierarchy, date, pending-status qualifiers, footer, and uncluttered design. The exact texts remain:\nバスケまとめ\n11/18 試合結果\n公式記録の\n確定待ち\n2026.11.18 20:40時点\nイラスト（AI生成）\nイメージ\nKeep unbranded ivory sportswear. No names, jersey numbers, logos, sponsor marks, results, claims of appearance, additional people or extra text. Generic imagined playing action, never a reconstruction of the November 18 game. Output exactly one final PNG, approximately 16:9, at least 1000px wide.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "attempts": 2,
+      "corrections": 1,
+      "status": "passed",
+      "image_width": 1672,
+      "image_height": 941,
+      "format": "PNG",
+      "final_generated_path": "/Users/genjo/.codex/generated_images/01a1eecb-aa7b-7461-956e-163be4f15e7b/exec-a674abbc-9504-41bf-b9cc-613db1060627.png",
+      "visual_qa_notes": {
+        "text_and_numbers": "最終画像を実見し、7つの文字列を照合。11/18、2026.11.18、20:40は固定本文と一致。成績・選手名・背番号なし。",
+        "source_qualifiers": "『公式記録の 確定待ち』『2026.11.18 20:40時点』『イメージ』が明瞭。確定結果・出場・活躍の断定なし。",
+        "likeness_or_no_named_person": "公式写真と対比し、マーク・スミスの短い巻き髪、濃い眉、目鼻、楕円形の輪郭、薄い短いひげを確認。修正で髪の高さとあごひげの濃さを抑えた。写真貼付・公式ロゴなし。",
+        "layout": "1672×941、16:9相当。頭・肘・両手・ボール・文字は画面内。指、単一のボール、腕と体の接続に重大な破綻なし。下肢は意図したトリミング。",
+        "ai_label": "下部の『イラスト（AI生成）』『イメージ』が読める。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-18T13:18:45.487042+00:00",
+  "publication_approved": false
+}
