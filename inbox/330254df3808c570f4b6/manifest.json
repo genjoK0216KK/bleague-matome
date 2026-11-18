@@ -1,0 +1,91 @@
+{
+  "id": "330254df3808c570f4b6",
+  "article_path": "article-games-20261119.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261119.html",
+  "source_commit": "",
+  "source_blob_sha": "e7698fd255bcfdb96fd8d9c1ab390e4830d5e5a7",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "5e867e488ebe994a78b54ff8653da3cdedeea18b96e331db629e0c72d24b7fd9",
+  "last_observed_blob_sha": "e7698fd255bcfdb96fd8d9c1ab390e4830d5e5a7",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/330254df3808c570f4b6/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/330254df3808c570f4b6/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-18T20:44:31.240512+00:00",
+  "creation_event_id": "a11b0d310ee13ae111f9",
+  "event_blob_sha": "e7698fd255bcfdb96fd8d9c1ab390e4830d5e5a7",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/330254df3808c570f4b6/thumbnail.png",
+  "image_sha256": "06d84356b687375b8df40cdb4c375dd506f2d19c2fa731b4d9b8204fed60f471",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "e7698fd255bcfdb96fd8d9c1ab390e4830d5e5a7",
+    "text_lines": [
+      "バスケまとめ",
+      "11/19",
+      "試合なし",
+      "B.PREMIER・B.ONE・B.NEXT",
+      "2026.11.19 05:36 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/330254df3808c570f4b6/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261119.html",
+        "role": "本文の根拠。11/19はB.PREMIER・B.ONE・B.NEXTの試合なし。資料取得2026-11-19 05:36 JST。",
+        "blob_sha": "e7698fd255bcfdb96fd8d9c1ab390e4830d5e5a7"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/330254df3808c570f4b6/source.txt",
+        "role": "本文の根拠。固定HTMLと日付・試合なし・対象リーグ・取得時刻を照合。"
+      },
+      {
+        "type": "production_rules",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール。人物選定は今回の本人指示を優先。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで目視。黒×ライム、太い日本語、インク・ブラシの絵柄のみ参照。固有名詞・成績は引き継がない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ブランドン・ランドルフ",
+        "name_en": "Brandon Randolph",
+        "selection": "ランダム",
+        "selection_reason": "本文に選手名・チーム名がないため、B.LEAGUE現役選手から選定。",
+        "selection_method": "千葉ジェッツ公式現役ロスター16人からSystemRandomによる無作為抽選。selection.jsonに候補・抽選結果を保存。",
+        "roster_url": "https://chibajets.jp/team/players/",
+        "official_profile_url": "https://chibajets.jp/team/players/detail/id=26997?PlayerID=51000643",
+        "official_photo_url": "https://bleague.bl.kuroco-img.app/v=2026111818/files/user/roster/704/2026-27/51000643_01.jpg",
+        "local_reference_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/330254df3808c570f4b6/references/brandon-randolph-official.jpg",
+        "reference_checked": "公式現役ロスターとプロフィールを閲覧し、公式プロフィール写真をダウンロードしてview_imageで目視確認。",
+        "observed_features": [
+          "後方へ編み込むコーンロウ、側頭部が短い髪型",
+          "縦長でやや角のある輪郭",
+          "太く直線的な眉、奥まった目",
+          "やや幅のある鼻、厚めの唇",
+          "薄い口ひげと短く尖ったあごひげ",
+          "細身で長い腕の体格"
+        ],
+        "depiction": "公式資料の容姿を参照したプレーのイメージ。特定の実試合や実際の場面の再現ではない。写真の貼付けなし。名前・成績・出場・活躍を画像に記載せず、無地のユニフォームにした。",
+        "visual_qa": "修正後の画像で、髪型・顔の輪郭・眉目・鼻・唇・口ひげ・あごひげの特徴を公式資料と見比べた。両手の指先・ボール・頭部の余白を確認。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story\nAsset type: Japanese basketball editorial thumbnail, one finished PNG, 16:9 landscape, 1792 x 1024 or preferably 1920 x 1080; at least 1000 pixels wide.\nPrimary request: Create one striking hand-drawn ink-and-brush thumbnail for a fixed article whose entire factual content is: 2026-11-19 has no games in B.PREMIER, B.ONE, B.NEXT, according to source retrieval at 2026-11-19 05:36 JST. Do not add other sports facts.\nReference context: The previously viewed approved B-culver-black-lime-v3 image supplies the visual style ONLY: deep near-black #151A18, acid lime #CCF43B, ivory, rough dry-brush strokes, bold Japanese typography, dramatic hand-inked player. Do NOT copy its person, name, stats, date or shooting pose. The previously viewed official Brandon Randolph portrait supplies his appearance ONLY. Do NOT use photo pixels, logos or uniform graphics.\nSubject: Exactly one real basketball player, Brandon Randolph (ブランドン・ランドルフ), selected at random from the current official Chiba Jets roster. Depict a recognizable stylized ink illustration of him, not a fictional player. Likeness details observed in his official portrait: long oval/angular face, medium-dark brown skin represented with ink and ivory/lime highlights, neatly braided straight-back cornrows with visible parallel scalp partings and closely cropped sides, strong straight brows, deep-set brown eyes, moderately broad nose, full lips, slim moustache and distinct short pointed chin goatee, lean tall athletic build. Preserve these specific facial/hair characteristics. Face clearly visible at three-quarter angle, focused expression.\nScene: An explicitly imagined basketball movement, not a documented game moment. Randolph in a powerful low forward attacking step, torso leaning diagonally, right hand cradling/controlling an orange basketball close to hip, left arm balanced outward. Show head, both arms, both hands, the whole ball, torso and bent thighs with intentional framing. Natural anatomy, correct fingers and wrist connections. Plain ivory-and-dark basketball jersey and shorts, entirely unbranded, no lettering, no jersey number. Do not use his official red uniform design.\nComposition: Bold text on left about 56 percent, player on right about 44 percent, dynamic diagonal lime brush stroke sweeping behind the figure. Clear hierarchy with oversized date and Japanese headline. Small amount of texture; uncluttered. Ink silhouette and recognizable face remain distinct. No stadium detail, no other people, no opponent, no real play reenactment. Keep all text, face, hands and ball within safe margins, none overlapping headline.\nStyle/medium: Premium Japanese sports editorial linocut/ink illustration, expressive hand drawing and thick brush lines, rough paper flecks, two-tone hand-rendered facial shading. Clearly illustration, never photorealistic, no photographic collage. Strong contrast readable on a mobile thumbnail.\nText (verbatim, no additional text):\nTop-left small: 「バスケまとめ」\nLarge lime date: 「11/19」\nVery large bold ivory headline: 「試合なし」\nBelow headline, a crisp plain-text line, not logos: 「B.PREMIER・B.ONE・B.NEXT」\nSmall but readable qualification under it: 「2026.11.19 05:36 JST時点」\nFooter, readable and uncropped: 「イラスト（AI生成）」 and 「イメージ」\nConstraints: Exact Japanese spelling and numerals. No player's name, team name, numbers, score, achievement, participation claim or statistics anywhere. The chosen player is only an illustration image; headline makes clear no games today. Do not write 成績をもとにしたイメージ. No team logos, league logos, sponsor text, badges, watermarks, fake signature or copied official photo. No invented game outcome. Output just one polished image.\n\nONE REVISION\nEdit the supplied generated thumbnail with ONE targeted correction: improve the player's safe framing. Preserve the exact existing design, all Japanese text, colors, ink illustration style, identity/face/cornrows/goatee of Brandon Randolph, pose, uniform and basketball. Scale ONLY the player including both hands and ball down by about 9 percent around the center of the right-side illustration area, then position it so that his entire braided hair has at least 35 pixels top margin, and ALL FIVE fingers of his left hand on the far right are completely visible with at least 55 pixels right margin. Maintain anatomical correctness; draw any fingertip that was cut at the right edge. The basketball and both hands must be completely inside the canvas and must not touch the headline. A deliberate lower-thigh crop at the bottom is fine.\nDo not change or add any text. Text must remain verbatim: バスケまとめ; 11/19; 試合なし; B.PREMIER・B.ONE・B.NEXT; 2026.11.19 05:36 JST時点; イラスト（AI生成）; イメージ.\nKeep landscape approximately 16:9 and over 1000 pixels wide. No logos, team names, player names, sponsor marks, jersey number or additional words. Output ONE corrected image.",
+    "generator": "内蔵 image_gen.imagegen。初回生成1回、手指・頭部の余白を確保する修正1回。採用版1672×941 PNG。API/CLI生成なし。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-18T20:48:41.326556+00:00",
+  "publication_approved": false
+}
