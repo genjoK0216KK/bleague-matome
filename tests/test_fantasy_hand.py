@@ -1,4 +1,5 @@
 import unittest
+from pathlib import Path
 from scripts import fantasy_hand as fh
 
 
@@ -29,6 +30,23 @@ class FantasyHandTest(unittest.TestCase):
     def test_waits_until_every_game_is_final(self):
         summary = {'schedule_complete': {'BP': True}, 'games': [{'status': 'scheduled', 'season': '2026-27', 'competition': 'BP'}]}
         self.assertEqual(fh.collect('.', summary)['error'], '全試合の公式記録確定待ち')
+
+    def test_forecast_uses_season_average_and_waits_for_every_league(self):
+        import json, tempfile
+        with tempfile.TemporaryDirectory() as root:
+            (Path(root) / 'data/fantasy').mkdir(parents=True)
+            players = {'T|P' + str(i): dict(bits=b, max_rare=1 if i else 4, star1=True) for i, b in enumerate((1, 2, 4, 8, 16))}
+            (Path(root) / 'data/fantasy/cards-2026.json').write_text(json.dumps(
+                {'retrieved_at': '2026-11-17T00:00:00+09:00', 'source': 'x', 'players': players}))
+            pool = [dict(player_id=str(i), name='P' + str(i), team='T', average='10.5') for i in range(5)]
+            state = {'games': [{'season': '2026-27', 'competition': 'BP', 'status': 'scheduled'}],
+                     'lineups': {'BP': {'pool': pool}}}
+            hand = fh.forecast(root, state)
+            self.assertEqual(hand['star1']['total'], 21 * 5)          # 10.5 × 2 = 21
+            self.assertEqual(hand['best']['total'], 21 * 4 + 28)      # ★4：10.5 × 2.7 = 28.35
+            self.assertIn('id="fantasy-forecast"', fh.html(hand, forecast=True))
+            state['games'].append({'season': '2026-27', 'competition': 'B1', 'status': 'scheduled'})
+            self.assertIn('error', fh.forecast(root, state))
 
 
 if __name__ == '__main__':

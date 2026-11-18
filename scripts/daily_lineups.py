@@ -94,7 +94,10 @@ def collect(client, root, summary):
                         raise ValueError('同一選手の記録が不一致')
                     players[p['player_id']] = p
                 times.append(bundle['retrieved_at'])
-            result[league] = {'teams': select(list(players.values()),games[0]['season'],league), 'retrieved_at':min(times), 'sources':sorted({p[k] for p in players.values() for k in ('position_source','stats_source','il_source') if p.get(k)} | {official.BASE+'/news/injury.html'})}
+            pool = data.position_rankings(list(players.values()), season=games[0]['season'], competition=league, metric='EFF')
+            pool = list({p['player_id']: dict(player_id=p['player_id'], name=p['name'], team=p['team'], average=p['average'])
+                         for ps in pool['positions'].values() for p in ps}.values())
+            result[league] = {'teams': select(list(players.values()),games[0]['season'],league), 'pool': pool, 'retrieved_at':min(times), 'sources':sorted({p[k] for p in players.values() for k in ('position_source','stats_source','il_source') if p.get(k)} | {official.BASE+'/news/injury.html'})}
         except (ValueError, official.requests.RequestException) as exc:
             result[league] = {'error': str(exc)}
     return result

@@ -7,6 +7,7 @@
 import itertools
 import json
 import re
+from decimal import Decimal
 from pathlib import Path
 try:
     from . import official_data as official, preview_data as data, match_articles as articles
@@ -58,7 +59,8 @@ def pool(summary, cards):
 
 
 def score(eff, rare):
-    return max(1, eff * (20 + RARE_BONUS[rare]) // 10)
+    # 予想では今季平均（小数）も入る。正の数は切り捨て、負の数は最低1点になるので丸め方の違いは出ない。
+    return max(1, int(Decimal(str(eff)) * (20 + RARE_BONUS[rare]) / 10))
 
 
 def best_hand(rows, rare_of):
@@ -102,14 +104,24 @@ def collect(root, summary):
             'cards_retrieved_at': cards['retrieved_at'], 'cards_source': cards['source']}
 
 
-def html(result):
+NOTE = ('※点は「カードの点」だけです。カードの点＝{eff}×（1＋レア度＋ポジション一致100%）の切り捨て'
+        '（☆1・★2 +0%、★3 +30%、★4 +70%、★5 +100%、最低1点）。デッキ・勝利予想・応援バッジ・特効のボーナスは入っていないので、'
+        'アプリの合計点とは違います。「全カードから」は、その選手のいちばん高いレアのカードを持っている場合の点です。')
+
+
+def html(result, forecast=False):
     if not result:
         return ''
-    body = ('<section class="game-eff fantasy-best hand-v2" id="fantasy-best"><p class="phase-label result-label">試合結果 ／ FANTASY ARENA</p>'
-            '<h2>最高の手札（この日の結果から）</h2>'
-            '<p class="candidate-label">この日の公式EFFで、あとから見て一番点が出た5人。カードの点だけ（ボーナス別）</p>')
+    if forecast:
+        body = ('<section class="game-eff fantasy-best hand-v2" id="fantasy-forecast"><p class="phase-label">試合前 ／ FANTASY ARENA</p>'
+                '<h2>最高の手札の予想（今季平均EFFから）</h2>'
+                '<p class="candidate-label">次の開催日に試合があるチームの登録選手から、今季平均EFFで一番点が出そうな5人。表のEFFは今季平均、点は予想。カードの点だけ（ボーナス別）</p>')
+    else:
+        body = ('<section class="game-eff fantasy-best hand-v2" id="fantasy-best"><p class="phase-label result-label">試合結果 ／ FANTASY ARENA</p>'
+                '<h2>最高の手札（この日の結果から）</h2>'
+                '<p class="candidate-label">この日の公式EFFで、あとから見て一番点が出た5人。カードの点だけ（ボーナス別）</p>')
     if result.get('error'):
-        return body + '<p class="game-eff-pending">' + articles.esc(result['error']) + '。確定後に掲載します。</p></section>'
+        return body + '<p class="game-eff-pending">' + articles.esc(result['error']) + '。' + ('そろい次第掲載します。' if forecast else '確定後に掲載します。') + '</p></section>'
     body += '<div class="hand-grid">'
     for key, label in (('star1', '☆1だけ（だれでも使える）'), ('best', '全カードから（いちばん高いレア）')):
         hand = result[key]
@@ -122,7 +134,10 @@ def html(result):
                      + articles.esc(r['team'] + '・' + official.LEAGUES.get(r['league'], ('', '', '', r['league']))[3]) + '</small></td>'
                      '<td>' + str(r['eff']) + '</td><td><span class="rare">' + STAR[r['rare']] + '</span></td><td>' + str(r['points']) + '</td></tr>')
         body += '</tbody></table></div></div>'
-    return body + '</div></section>'
+    note = NOTE.format(eff='今季平均EFF' if forecast else '公式EFF')
+    if forecast:
+        note += '当日の出場・欠場は反映していません（公式のIL登録中の選手は除いています）。'
+    return body + '</div><p class="hand-note">' + note + '</p></section>'
 
 
 def notes(result):
@@ -135,3 +150,35 @@ def notes(result):
     if result.get('uncarded'):
         text += '<p>今季のカードがまだ無い出場選手は対象外：' + articles.esc('、'.join(result['uncarded'])) + '</p>'
     return text
+
+
+def forecast(root, state):
+    """次の開催日の登録選手（IL登録中を除く）の今季平均EFFで、最高の手札を予想する。"""
+    games = [g for g in state.get('games', []) if g.get('status') not in ('cancelled', 'postponed')]
+    if not games:
+        return None
+    cards = load_cards(root, games[0].get('season') or '')
+    if not cards:
+        return {'error': 'カードデータが未取得'}
+    lineups = state.get('lineups', {})
+    leagues = {g['competition'] for g in games}
+    if any(not lineups.get(k, {}).get('pool') for k in leagues):
+        return {'error': '全チームの選手資料がそろっていません'}
+    rows, uncarded, seen = [], [], set()
+    for league in sorted(leagues):
+        for p in lineups[league]['pool']:
+            if p['player_id'] in seen:
+                continue
+            seen.add(p['player_id'])
+            card = cards['players'].get(p['team'] + '|' + norm(p['name']))
+            if not card:
+                uncarded.append(p['name'] + '（' + p['team'] + '）')
+                continue
+            rows.append(dict(player_id=p['player_id'], name=p['name'], team=p['team'], league=league,
+                             eff=Decimal(str(p['average'])), **card))
+    star1 = best_hand(rows, lambda r: 1 if r['star1'] else 0)
+    top = best_hand(rows, lambda r: r['max_rare'])
+    if not star1 or not top:
+        return {'error': '手札を組める選手がそろっていません'}
+    return {'star1': star1, 'best': top, 'uncarded': uncarded,
+            'cards_retrieved_at': cards['retrieved_at'], 'cards_source': cards['source']}

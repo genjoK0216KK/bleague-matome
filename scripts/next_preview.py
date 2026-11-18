@@ -3,9 +3,9 @@ import json
 from datetime import datetime, timedelta
 from pathlib import Path
 try:
-    from . import official_data as official, preview_data as data, daily_lineups, day_articles, match_articles as articles, stats
+    from . import official_data as official, preview_data as data, daily_lineups, day_articles, match_articles as articles, stats, fantasy_hand
 except ImportError:
-    import official_data as official, preview_data as data, daily_lineups, day_articles, match_articles as articles, stats
+    import official_data as official, preview_data as data, daily_lineups, day_articles, match_articles as articles, stats, fantasy_hand
 
 TITLE = '出場予定選手（登録選手）のベスト5'
 
@@ -60,6 +60,8 @@ def render(state, now):
         body+='<p class="empty-games">'+('次の日程を確認中です。' if state['errors'] else '35日以内に確認できる次の日程はありません。日程未発表の場合もあります。')+'</p>'
     else:
         body+=day_articles.lineup_html(state, heading=False)
+        hand=fantasy_hand.forecast(Path(__file__).resolve().parents[1],state)
+        if hand:body+=fantasy_hand.html(hand,forecast=True)
         body+='<section class="next-fixtures"><h2>対象の試合</h2>'
         for league in official.LEAGUES:
             games=[g for g in state['games'] if g['competition']==league]
@@ -70,6 +72,10 @@ def render(state, now):
             body+='</ul>'
         body+='</section>'
     body+='<p><a class="day-detail" href="cat-kekka.html">試合結果・当日の EFFを見る →</a></p><details class="match-notes"><summary>出典・選出ルール・注記</summary><p>登録は当日のエントリー・出場確定を意味しません。対象試合の現在登録選手を、取得時点の公式今季平均EFFで選出しています。</p><p>公式IL登録中・平均未確認の選手は除外。PG→SG→SF→PF→Cの順でベスト5、残りからサブ5を選びます。同一選手は1枠、同値は選手ID順です。</p>'
+    hand=fantasy_hand.forecast(Path(__file__).resolve().parents[1],state) if state.get('games') else None
+    if hand and not hand.get('error'):
+        body+='<p>最高の手札の予想は、次の開催日の全試合の登録選手（公式IL登録中・平均未確認を除く）から、PG・SG・SF・PF・Cの枠に1人ずつ、今季平均EFFで計算したカードの点の合計がいちばん高くなる5人です。カードの種類・ポジションは B.LEAGUE CARD 公式データ（'+articles.esc(hand['cards_retrieved_at'][:10])+' 取得）です。</p>'
+        if hand.get('uncarded'):body+='<p>今季のカードがまだ無い選手は対象外：'+articles.esc('、'.join(hand['uncarded']))+'</p>'
     for league,result in state.get('lineups',{}).items():
         if result.get('retrieved_at'):body+='<p>'+official.LEAGUES[league][3]+' 選手資料取得：'+datetime.fromisoformat(result['retrieved_at']).astimezone(data.JST).strftime('%Y-%m-%d %H:%M JST')+'</p>'
         for team in result.get('teams',[]):
