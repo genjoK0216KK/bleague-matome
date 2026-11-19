@@ -1,0 +1,103 @@
+{
+  "id": "ca8a2a139daad0448ac9",
+  "article_path": "article-analysis-sendai-20261119.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-sendai-20261119.html",
+  "source_commit": "",
+  "source_blob_sha": "99b3388d48541ca3774e6c579b65abc005e8767c",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "f29434b6512324ddb5e5c5633a0ac65c6b0f41aab157c5c2b7cd96b4720a404d",
+  "last_observed_blob_sha": "99b3388d48541ca3774e6c579b65abc005e8767c",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca8a2a139daad0448ac9/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca8a2a139daad0448ac9/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-19T03:16:15.034342+00:00",
+  "creation_event_id": "c66d5f72bb66768aebef",
+  "event_blob_sha": "99b3388d48541ca3774e6c579b65abc005e8767c",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/ca8a2a139daad0448ac9/thumbnail.png",
+  "image_sha256": "fe3edfff8e8cc4a73c44d70b03dff6fe61c42e34668823b2a03a5e63c999f232",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "99b3388d48541ca3774e6c579b65abc005e8767c",
+    "text_lines": [
+      "バスケまとめ",
+      "仙台89ERS",
+      "直近5試合",
+      "5勝0敗",
+      "チーム3P成功率",
+      "41.5%",
+      "対象：11/6〜11/18",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca8a2a139daad0448ac9/source.html",
+        "role": "固定本文の根拠",
+        "evidence": [
+          "見出しと本文：仙台89ERSの直近5試合は5勝0敗。",
+          "対象期間：11月6日から11月18日までの5試合。",
+          "チームの3P成功率41.5%。",
+          "「中心はカルバー選手」：ジャレット・カルバー選手を主役に選定。"
+        ],
+        "qualifiers": "直近5試合のチーム成績として表示。個人成績や今季全体の成功率にはしない。順位は画像に表示せず、相手・日程を調整した比較とも表現しない。実際の特定プレーの再現ではなくイメージ。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca8a2a139daad0448ac9/source.txt",
+        "role": "固定本文の照合",
+        "evidence": "HTMLと本文・数値・対象期間・主役選手が一致。"
+      },
+      {
+        "url": "https://www.89ers.jp/roster/players/detail/id=18409?PlayerID=51000531",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026111713/files/user/roster/692/2026-27/51000531_01.jpg",
+        "role": "ジャレット・カルバー選手の公式容姿参照のみ。外部の成績・本文は画像文言の根拠に使用していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済み黒×ライムの画風参照。目視済み。旧日付・旧成績は流用していない。"
+      },
+      {
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "role": "承認済み白地案の画風参照。手順書の配置先には存在せず、Notion正本に記載された既存保存先の同名画像を目視確認。採用した配色は黒×ライム。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジャレット・カルバー",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿に「中心はカルバー選手」の節があり、個人選手として最も中心的に扱われている。",
+        "source": "仙台89ERS公式選手プロフィール",
+        "source_url": "https://www.89ers.jp/roster/players/detail/id=18409?PlayerID=51000531",
+        "reference_image_url": "https://bleague.bl.kuroco-img.app/v=2026111713/files/user/roster/692/2026-27/51000531_01.jpg",
+        "reference_viewed": true,
+        "observed_features": "短い立ち上がった黒いカールと短いサイド、細長い輪郭、目鼻・耳・口元、薄い口ひげと顎ひげ、長い首、細身で筋肉のある体格を公式写真で確認。",
+        "depiction": "1人のドリブル姿をインク・ブラシで描いたイラスト。特定試合の場面再現ではない。無地のユニフォームでチームロゴ・リーグロゴ・スポンサー文字なし。公式写真そのものの貼り付けなし。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: ads-marketing / editorial sports illustration.\nCreate exactly ONE finished Japanese basketball article thumbnail, horizontal 16:9, 1600 x 900 px or larger. Opaque PNG. Brand: バスケまとめ. This is a completely new thumbnail for the fixed manuscript dated 2026-11-19.\n\nVisual guidance: Match the approved black and lime reference thumbnail already viewed in this conversation: near-black #151A18 background, fluorescent lime #CCF43B brush swashes, off-white heavy Japanese typography, energetic hand-drawn ink hatching, bold brush textures, very few elements. Do NOT carry over any names, dates, scores or numbers from the reference thumbnails.\n\nSubject: The ONE and only person is real basketball player Jarrett Culver (ジャレット・カルバー). He is the featured player in the fixed article section 「中心はカルバー選手」. Base his likeness on the official Sendai 89ERS portrait viewed immediately before this request (official roster portrait, filename 51000531_01.jpg): short dense upright black textured curls with tapered sides, long slim oval face, prominent ears, dark almond eyes, defined cheekbones, medium-wide nose, slight moustache and sparse short chin beard, long neck, slim athletic muscular build. Preserve these specific facial features. He must be recognisable as Culver and not a generic invented athlete. Draw him entirely as a crisp expressive ink illustration, not a photograph or photorealistic rendering. No pasted official photo.\n\nComposition: Culver on the LEFT approximately 42% of the canvas, in a dynamic low driving dribble pose, torso angled forward, face visible in three-quarter view, gaze focused across the frame. His right hand controls an orange basketball below waist level, anatomically natural wrist and visible fingers. The other arm balances the drive. The basketball remains a prop held/controlled by the player. Show head, torso, both arms and upper legs without clipping face, hands or ball. Use a plain sleeveless yellow-lime uniform with dark trim, no logos, no sponsor text, no lettering or jersey numbers. A restrained diagonal lime brush stroke behind him evokes motion. No other people. No crowd, arena, scoreboard, hoop or specific match scene. This is a conceptual illustration based on statistics, not a recreation or a claim about a particular play.\n\nTypography on the RIGHT about 55% of canvas with generous 55px outer margins. Keep all text horizontal, crisp, spelled exactly, separated from the player and not intersecting his face or hands. Clear editorial hierarchy with huge heavy Japanese sans-serif. The main 5 and 0 are luminous lime, 勝 and 敗 off-white. The next figure 41.5% is large off-white/lime and explicitly grouped with the TEAM statistic label. Retain the decimal point and percent sign. The two figures must be easy to read at thumbnail size.\n\nRender ONLY these exact text strings:\n「バスケまとめ」 (small masthead)\n「仙台89ERS」\n「直近5試合」\n「5勝0敗」 (largest headline)\n「チーム3P成功率」\n「41.5%」 (large second headline)\n「対象：11/6〜11/18」 (small but legible under statistics)\n「イラスト（AI生成）」 (legible bottom footer)\n「成績をもとにしたイメージ」 (legible bottom footer)\n\nFactual scope: These are Sendai TEAM totals/rate for the latest five games, November 6 through November 18, as stated by the fixed manuscript, NOT Culver's personal 3-point percentage. No league ranking, no season-average claim, no unsupported superlatives, no claim of 5 consecutive wins as the full current streak, no additional player performance numbers. No player name text is necessary. Do not add or invent any other words or numbers.\nConstraints: one image only; illustrated real player as main subject; natural hands and anatomy; face/hands/ball/text fully inside frame; team and league logos absent; no official photo pixels; avoid clutter and photorealism; retain BOTH exact AI and conceptual-illustration labels.",
+      "revision": "Edit this existing thumbnail only to fix the left illustration's edge clearance. Keep the entire right-side Japanese typography, every text string, numerals, decimal point, date range, AI disclosure, conceptual-image label, background palette, ink brush style and 16:9 dimensions unchanged. The main player is real Jarrett Culver, exactly the same identity already depicted.\nMake the entire left player illustration about 12% smaller and move it slightly inward so the FULL hair, FULL dribbling hand including every fingertip, FULL orange basketball, elbow and other hand are all visibly inside the frame with at least 40 pixels of black background clearance from the top and left edges. Keep both visible hands anatomically natural with five fingers each, one hand controlling the ball. Keep face unobstructed, short textured upright curls, tapered sides, slim oval facial structure and sparse short moustache/chin hair. Upper legs may terminate at the bottom but no face, hair, arm, hand or basketball should touch or cross the frame. Preserve the dynamic driving dribble pose, plain lime uniform with no logos, all existing text exactly. Do not add a border or any new text. This is the single permitted revision. Output one high-resolution horizontal PNG."
+    },
+    "generator": {
+      "name": "image_gen.imagegen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "revisions": 1,
+      "final_candidate": "/Users/genjo/.codex/generated_images/01a1f1ce-0cce-73b2-bbc7-65df6bb9bdc6/exec-103b690b-13fb-442e-b6f1-38ea0bdfe68b.png",
+      "qa_method": "生成画像を実際に目視。初稿の髪・手・ボールの端への接近を1回修正。最終画像で文字・数値・対象期間・チーム成績の明示・本人の特徴・自然な両手・顔/手/ボール/文字の収まり・AI表記を再確認。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-19T03:19:59.391329+00:00",
+  "publication_approved": false
+}
