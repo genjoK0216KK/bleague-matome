@@ -1,0 +1,100 @@
+{
+  "id": "5610585c712ced4f4449",
+  "article_path": "article-daily-20261120.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261120.html",
+  "source_commit": "",
+  "source_blob_sha": "7f1994aab38a5aa5c40dbddc61d574e32d5808dc",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "df1d1d73e76b22c4d05f5b12b384da013ffc7e0a73565659981bf609b75f9a51",
+  "last_observed_blob_sha": "7f1994aab38a5aa5c40dbddc61d574e32d5808dc",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5610585c712ced4f4449/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5610585c712ced4f4449/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-19T23:13:49.225616+00:00",
+  "creation_event_id": "4ec1cc1df1db2d3dfb03",
+  "event_blob_sha": "7f1994aab38a5aa5c40dbddc61d574e32d5808dc",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/5610585c712ced4f4449/thumbnail.png",
+  "image_sha256": "7340dc677bcc88f5d9bc655058ca07c68e57b42f7820a46fb183630c3d1f8b10",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "7f1994aab38a5aa5c40dbddc61d574e32d5808dc",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.20",
+      "試合前予測",
+      "愛媛 vs 岡山",
+      "11連勝の",
+      "岡山が有利",
+      "イラスト（AI生成）　イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5610585c712ced4f4449/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261120.html",
+        "basis": "記事名・日付・岡山11連勝・岡山有利という試合前予測。本文の根拠は固定HTML/TXTのみ。blob SHAをローカル計算して指定値との一致を確認。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5610585c712ced4f4449/source.txt",
+        "basis": "主題・本文記載選手・予測の留保を照合。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "basis": "view_imageで確認。黒・ライム・太い見出し・インクとブラシの表現だけを参照。既存の人名・成績・日付は転用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "レイナルド・ガルシア",
+        "selection": "ランダム",
+        "method": "チーム比較が主題。本文の岡山の注目選手（レイナルド・ガルシア／ジョシュ・スコット）からrandom.Random('5610585c712ced4f4449').choiceで選出。インジュアリーリスト記載選手を候補から除外。",
+        "source": "B.LEAGUE公式 選手プロフィール",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=33100",
+        "image_url": "https://www.bleague.jp/files/user/roster/1639/2026-27/33100_03.png",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5610585c712ced4f4449/references/garcia-official.png",
+        "appearance_observed": "短い黒髪、輪郭のしっかりした顔、太い眉、顎下まで長い濃い黒ひげ、筋肉質の肩と腕、腕のタトゥー。",
+        "use": "容姿参照のみ。公式写真・ロゴは成果物に貼り付けない。名前・個人成績・出場断定を画像に記載しない。",
+        "final_appearance_checked": "1回修正後の画像で、短く刈った黒髪、太い眉・鼻、顎下の長く濃い黒ひげを公式写真と目視比較。"
+      },
+      {
+        "name": "シャキール・ハインズ",
+        "selection": "ランダム",
+        "method": "対戦双方から1人ずつ描く方針。本文の愛媛の注目選手でインジュアリーリスト記載を除いた候補1人から選出。",
+        "source": "愛媛オレンジバイキングス公式 選手プロフィール",
+        "url": "https://orangevikings.jp/roster/players/detail/id=13453?PlayerID=5100000050&Year=2025",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026103020/files/user/roster/723/2026-27/5100000050_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5610585c712ced4f4449/references/hines-official.jpg",
+        "appearance_observed": "短く四角い輪郭の黒髪、縦長で細い顔、頬骨、短い口ひげと整ったあごひげ、長身で細身、腕のタトゥー。",
+        "use": "容姿参照のみ。外部プロフィールの成績は本文根拠にしない。公式写真・ロゴは貼り付けず、画像に名前・個人成績・出場断定を記載しない。",
+        "final_appearance_checked": "1回修正後の画像で、短い黒髪、縦長の輪郭、短い口ひげとあごひげを公式写真と目視比較。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION:\nUse case: illustration-story\nAsset type: ONE final Japanese basketball editorial thumbnail, landscape 16:9, 1536x864 or larger.\nCreate an original bold hand-drawn ink-and-brush illustration with excellent Japanese typography. Follow the previously viewed approved black/lime reference's visual language only: near-black #151A18 background, electric lime #CCF43B dry-brush energy, off-white typography, visible hand-ink strokes, very few elements. Do NOT inherit its player, name, date, score, shooting pose or statistics.\n\nArticle meaning (only these fixed-manuscript facts may inform copy): a pregame prediction for Ehime versus Okayama on 2026.11.20. Okayama enters with eleven consecutive wins and the author predicts an advantage for Okayama. This is a forecast, NOT a completed result. No score, player performance, appearance confirmation, or historic game moment is being asserted.\n\nComposition: left 47% a clean readable typographic column. Right 53% two recognizable real professional players in a dynamic generic one-on-one basketball illustration: Reynaldo Garcia on the near-left of the illustration driving low with a basketball, Shaquille Hines on the far-right sliding in a defensive stance. Both faces visible in three-quarter view, both heads completely inside the canvas. Ball is a prop controlled by Garcia. Depict only these two actual people, no invented players or spectators. An invented generic illustration, not a recreation of a real play. Distinct silhouette and good limb separation; natural hands with five fingers, no extra limbs. Frame from head to around knee level if necessary with intentional lower-body framing; hands and faces must not be clipped. Keep all artwork away from headline letters. One broad horizontal-to-diagonal lime brush streak behind the action, restrained spatter.\n\nLikeness references already inspected from official profile photos:\n1. Reynaldo Garcia: https://www.bleague.jp/files/user/roster/1639/2026-27/33100_03.png . Closely cropped black hair with low fade, dark brown skin, strong fairly broad face, strong brows, wide nose, very distinctive long full dense black beard extending well below chin and connected moustache, muscular compact shoulders/arms with tattoos. Maintain his facial structure and long beard, not a generic athlete. Plain off-white basketball kit with charcoal ink shading, no lettering, logo or number.\n2. Shaquille Hines: https://bleague.bl.kuroco-img.app/v=2026103020/files/user/roster/723/2026-27/5100000050_01.jpg . Short tightly curled squared black hair, dark brown skin, longer narrow angular face and high forehead, defined cheekbones, narrow moustache connected to neat close-cropped goatee, notably far less beard than Garcia, lean tall build and tattooed arms. Preserve these distinct features. Plain charcoal kit with subtle off-white outlines, no lettering, logo or number.\nUse these photos for appearance reference ONLY. Redraw both men completely as expressive monochrome ink illustrations with natural skin-tone undertones. Do not paste or reproduce photographs. Not photorealistic.\n\nText (verbatim; render only these seven text elements, no player names):\nTop-left small brand: \"バスケまとめ\"\nNext small date: \"2026.11.20\"\nVery prominent lime rectangular badge with dark bold text above headline: \"試合前予測\"\nMatchup line, bold off-white: \"愛媛 vs 岡山\"\nMain headline line 1, extra-bold off-white with the numeral 11 in lime: \"11連勝の\"\nMain headline line 2, extra-bold lime: \"岡山が有利\"\nBottom footer in clean readable off-white Japanese type: \"イラスト（AI生成）　イメージ\"\n\nTypography: professionally typeset heavy Japanese Gothic; make the two-line headline massive and readable at thumbnail size. Keep prediction badge obvious and attached to headline. Reserve bottom safe footer strip, 4% padding around all text. Exact characters and date. No team logos, league logos, sponsor text, watermarks, jersey numbers, scoreboard or other text. The eleven-win statement is explicitly about Okayama, never either individual player. High-quality simplified editorial composition.\n\nSINGLE CORRECTION (edit):\nUse case: identity-preserve.\nEdit the FIRST input image, the finished black/lime Japanese basketball thumbnail. Inputs TWO and THREE are official appearance references ONLY, not compositing material.\nMake one tightly scoped likeness correction to the two drawn faces and hairstyles, preserving the ink illustration medium and every other aspect of image 1.\n\nThe near-left player handling the ball is Reynaldo Garcia, shown in input 2. His reference has very closely cropped black hair with a low fade and a relatively smooth short silhouette, NOT the longer bumpy curls currently drawn. Correct his hair to that very short official-reference cut. Refine his eyes, nose and facial proportions toward image 2: fairly broad strong face, heavy brows, wide nose, full lips; retain the defining very long full black beard and connected moustache. Retain his focused game expression and three-quarter head orientation.\n\nThe far-right defender is Shaquille Hines, shown in input 3. His reference has close short black hair with a gently squared neat silhouette, NOT the taller messy textured hairstyle currently drawn. Correct his haircut accordingly. Refine his longer narrow face, high forehead, narrow moustache, compact neat goatee, defined cheekbones and eyes toward input 3 while retaining the focused expression and orientation. His beard must remain distinctly much shorter than Garcia's.\n\nBoth remain fully hand-drawn expressive ink artwork, NOT photos. Do NOT import the reference uniforms, sponsors, logos or jersey numbers. Keep all text pixel-equivalent in meaning and spelling, exactly:\nバスケまとめ\n2026.11.20\n試合前予測\n愛媛 vs 岡山\n11連勝の\n岡山が有利\nイラスト（AI生成）　イメージ\n\nPreserve the existing aspect ratio, near-black and lime colors, layout, brush backdrop, player poses, hands, limbs, clean unbranded uniforms, ball, typography and footer placement. No new elements or text. No reference-photo pixels in output. The scene remains a generic AI illustration, not a real event reconstruction.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "attempts": 2,
+      "corrections": 1,
+      "initial_output": "/Users/genjo/.codex/generated_images/01a1f616-752f-77f0-98f2-e70441c5578b/exec-e97a43ad-6ff1-47a5-8437-bb5ea16114cf.png",
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1f616-752f-77f0-98f2-e70441c5578b/exec-03099511-68bf-47f8-942e-ab6b5d785407.png",
+      "saved_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/5610585c712ced4f4449/generated.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "sha256": "7340dc677bcc88f5d9bc655058ca07c68e57b42f7820a46fb183630c3d1f8b10",
+      "visual_qa": "生成画像と1回修正後の画像を実際に目視。文字・11連勝・日付が固定原稿と一致。試合前予測の大きなラベルにより結果と区別できる。人物の名前・成績・出場・特定の実際のプレーの断定なし。両選手の髪型を修正し、ガルシアの長い黒ひげと広めの顔、ハインズの縦長の顔と短いあごひげを公式画像と比較。見える手と指、腕の接続、顔と手の見切れ、文字との重なり、余白、ロゴ・スポンサー文字の不在を確認。脚の画面下の切れは意図した構図。AI生成・イメージ注記を確認。保存時にPNGサイズ・ハッシュ・固定HTML blob SHAを再照合。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-19T23:17:42.854592+00:00",
+  "publication_approved": false
+}
