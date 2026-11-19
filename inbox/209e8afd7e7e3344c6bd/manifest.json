@@ -1,0 +1,100 @@
+{
+  "id": "209e8afd7e7e3344c6bd",
+  "article_path": "article-games-20261120.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261120.html",
+  "source_commit": "",
+  "source_blob_sha": "09e9f867afc18ffcc0695aa1688fa5b24322f6f0",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "fca854b1b10d9d6d9f2c88569d136420f26882b7bba4307096bc4d9d948f7c2c",
+  "last_observed_blob_sha": "09e9f867afc18ffcc0695aa1688fa5b24322f6f0",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/209e8afd7e7e3344c6bd/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/209e8afd7e7e3344c6bd/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-19T18:10:38.702533+00:00",
+  "creation_event_id": "3d3b9da285bb0de30abe",
+  "event_blob_sha": "09e9f867afc18ffcc0695aa1688fa5b24322f6f0",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/209e8afd7e7e3344c6bd/thumbnail.png",
+  "image_sha256": "ee8923bde96564a1929aafdee3650c86d0a91ca7f676e9fcffb27acd291a237e",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "09e9f867afc18ffcc0695aa1688fa5b24322f6f0",
+    "text_lines": [
+      "バスケまとめ",
+      "11/20",
+      "B.ONE",
+      "3試合",
+      "19:05 開始予定",
+      "試合前｜公式記録確定待ち",
+      "11/20 03:10 JST時点",
+      "イラスト（AI生成）／イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_content",
+        "path": "source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261120.html",
+        "as_of": "2026-11-20 03:10 JST",
+        "notes": "本文根拠。B.ONE 3試合、全て19:05開始予定・試合前。全試合公式記録確定待ち。"
+      },
+      {
+        "type": "article_content",
+        "path": "source.txt",
+        "notes": "本文根拠。source.htmlと相互確認。外部記事・関連記事は本文根拠として使用しない。"
+      },
+      {
+        "type": "style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "notes": "view_imageで実見。黒×ライム・インクブラシ調のみ参照。人物・文字・成績は流用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "伊集 貴也",
+        "romanized_name": "Takaya Iju",
+        "team": "山形ワイヴァンズ",
+        "selection": "ランダム",
+        "selection_reason": "本文に個人名がなく主役を絞れないため、本文登場6チームからSystemRandomで山形を選び、公式現役ロスターからランダムに選出。初回抽選のホアン チウシーは公式画像404で容姿を確認できず、同チーム公式ロスターの画像リンクがある選手から再抽選し伊集貴也を選出。",
+        "roster_url": "https://www.wyverns.jp/roster/players/",
+        "profile_url": "https://www.wyverns.jp/roster/players/detail/id=20791?PlayerID=18174",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=1789593200/files/user/roster/710/2026-27/18174_03.png",
+        "reference_local_path": "references/selected-player-official.png",
+        "appearance_observed": "公式写真をview_imageで実見。茶色のハイライトを含むボリュームのある巻き髪、細めの卵形の輪郭、濃い眉、細めの目、細い口ひげ、小さなあごひげ。左腕に黒いスリーブ。",
+        "usage": "容姿参照のみ。公式写真は完成画像に貼り付けない。名前・成績・出場・活躍は文字にせず、実際の試合の再現としない。",
+        "appearance_verified_in_final": true
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT\nUse case: illustration-story / sports editorial thumbnail.\nCreate exactly ONE finished Japanese basketball article thumbnail, landscape 16:9, target 1536 x 864 pixels (at least 1000 px wide), opaque PNG.\nStyle reference: the previously viewed approved black/lime basketball thumbnail. Match its deep charcoal #151A18, electric lime #CCF43B, warm off-white, bold Japanese sans-serif headlines, expressive hand-drawn black ink and dry brush hatching. Orange only for the basketball. Sparse, powerful editorial composition, not a photo. Do not copy any names, dates, scores, logos, or pose from that reference.\nSubject: depict ONLY the real professional basketball player Takaya Iju (伊集 貴也), randomly selected from Yamagata Wyverns' official current roster. Appearance is based on the official portrait viewed in this conversation: lean athletic Japanese man, warm medium skin, oval fairly narrow face, curly voluminous dark-brown hair with lighter brown curls and fringe, closely cropped sides, dark gently arched eyebrows, almond-shaped dark eyes, narrow straight nose, small thin moustache and small pointed goatee beneath his chin. Keep these individual facial features recognizable in ink illustration. Not a generic invented athlete. Face visible in three-quarter view, focused expression. Plain sleeveless off-white basketball jersey with minimal lime trim, blank chest, no name, no number, no logo or sponsorship. Black compression sleeve on his LEFT arm.\nAction and composition: dynamic low forward dribble, body leaning diagonally, face at upper right; right bare arm directs the orange basketball near his right hip, left sleeved arm bent for balance. Natural anatomy, both hands clearly drawn with correct fingers. Frame from head to mid-thigh, head/face/hands/ball entirely inside canvas. Athlete takes right 42% of canvas; the left 55% is calm negative space for type. One bold diagonal lime dry-brush swash behind the athlete, a few ink flecks. This is a conceptual basketball illustration, not a depiction of an actual game, decisive play, confirmed participation, or performance.\nExact text, with no additional text:\nTop left small masthead: \"バスケまとめ\"\nLeft headline first line, large off-white: \"11/20\"\nLeft headline second line, very bold off-white: \"B.ONE\"\nLeft headline third line, biggest lime characters: \"3試合\"\nBelow headline, white medium text: \"19:05 開始予定\"\nBelow that, a clearly readable lime-highlighted status line: \"試合前｜公式記録確定待ち\"\nSmall but readable source timestamp at lower left: \"11/20 03:10 JST時点\"\nBottom footer, readable off-white text on clean charcoal with sufficient margin: \"イラスト（AI生成）／イメージ\"\nText must be typeset accurately in Japanese, not hand-scribbled, with high contrast. Hierarchy: 3試合 largest, then B.ONE and 11/20, then start time and status. All text fully visible with at least 55 px outer margin. Keep the image legible at thumbnail size. Do not overlap typography with athlete or basketball.\nSource constraints: frozen article says three B.ONE fixtures on November 20, all at 19:05 and pregame as of 03:10 JST; all official results and EFF awaiting confirmation. Do NOT invent a result, score, player stat, best-five selection, appearance, or active role. Do NOT put any player name anywhere. No official photos pasted, no team logo, no league logo, no sponsor lettering, no photorealism, no additional people. This image is explicitly an AI-generated conceptual illustration.\n\nSINGLE CORRECTION PROMPT\nEdit this existing basketball thumbnail with ONE targeted layout correction. Keep every Japanese text string, all numbers, typography, font sizes, text positions, colors, status qualifier, footer, style, and the recognizable identity of Takaya Iju unchanged. The current hair touches and is cropped by the upper canvas edge, and right side of sleeve is too close to edge. Recompose ONLY the illustrated player and his basketball as one coherent unit: scale that entire player+ball illustration down by about 10%, and move it down slightly so the TOP OF EVERY CURL has at least 45 pixels of clean dark background before the upper edge, and the rightmost sleeve/hand has at least 35 pixels before the right edge. Keep the left text area exactly fixed and fully readable. Athlete remains the strong focal point on right side, dynamic low dribble, curly highlighted brown hair, thin moustache and small goatee, plain white/lime jersey, left arm black compression sleeve. Both hands and ball stay fully inside canvas with natural five-finger anatomy. Intentional mid-thigh cropping at bottom is acceptable; no hair, face, hands or ball cropped. Keep hand-drawn ink/brush illustration, charcoal #151A18 and lime #CCF43B. Keep 16:9 aspect ratio, same resolution as input. No added people, logos, jersey numbers, player names, photo content, or any text changes. Exact existing text to preserve: バスケまとめ / 11/20 / B.ONE / 3試合 / 19:05 開始予定 / 試合前｜公式記録確定待ち / 11/20 03:10 JST時点 / イラスト（AI生成）／イメージ.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "status": "passed",
+      "generation_calls": 2,
+      "corrections": 1,
+      "initial_output": "/Users/genjo/.codex/generated_images/01a1f500-e4a0-7482-80c3-f01e6591ae6e/exec-9b56c107-00f5-4a01-9c38-5db220e16ee0.png",
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1f500-e4a0-7482-80c3-f01e6591ae6e/exec-1fb6d6b2-08c6-4fbc-a6cd-6bd2a4f0c211.png",
+      "saved_output": "generated.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "sha256": "ee8923bde96564a1929aafdee3650c86d0a91ca7f676e9fcffb27acd291a237e",
+      "review": {
+        "method": "内蔵画像生成の表示および保存されたPNGをview_imageで実見。保存PNGと生成データの一致も確認。",
+        "text_and_numbers": "11/20、B.ONE、3試合、19:05開始予定、11/20 03:10 JST時点を固定原稿と照合。選手名・選手成績・出場や活躍の断定なし。",
+        "source_qualifiers": "『試合前｜公式記録確定待ち』を判読確認。元記事は3試合すべて試合前で、当日EFF・最高の手札とも確定待ち。ベスト5が確定した印象を与える文字は入れていない。",
+        "likeness_or_no_named_person": "公式写真の伊集貴也と、巻き髪・輪郭・眉と目・口ひげ・あごひげ・左腕スリーブを照合。1人の実在選手をイラスト化。人物名の画像内表示なし。公式写真の貼り付け、ロゴ、スポンサー文字なし。",
+        "layout": "初回の頭髪上部の見切れを1回の修正で解消。頭・顔・両手・ボールは画面内。手指の形と関節に大きな破綻なし。本文文字と人物の重なりなし、全注記を判読可能。太もも部分は意図した構図上のトリミング。",
+        "ai_label": "下部の『イラスト（AI生成）／イメージ』を実画像で確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-19T18:14:45.499107+00:00",
+  "publication_approved": false
+}
