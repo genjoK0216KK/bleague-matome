@@ -280,6 +280,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "佐賀バルーナーズの直近5試合は0勝5敗 前半の失点と守備の数字が重い"
   },
+  "article-analysis-sendai-20261119.html": {
+   "article_path": "article-analysis-sendai-20261119.html",
+   "editorial_fingerprint": "f29434b6512324ddb5e5c5633a0ac65c6b0f41aab157c5c2b7cd96b4720a404d",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-analysis-sendai-20261119-fe3edfff8e8c.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-sendai-20261119-fe3edfff8e8c-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "ca8a2a139daad0448ac9",
+   "image_sha256": "fe3edfff8e8cc4a73c44d70b03dff6fe61c42e34668823b2a03a5e63c999f232",
+   "imported_at": "2026-11-19T03:20:36.112445+00:00",
+   "prepared_at": "2026-11-19T03:19:59.391329+00:00",
+   "source_blob_sha": "99b3388d48541ca3774e6c579b65abc005e8767c",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "f29434b6512324ddb5e5c5633a0ac65c6b0f41aab157c5c2b7cd96b4720a404d",
+   "style": "ink-lime-portrait-v5",
+   "title": "仙台89ERSの直近5試合は5勝0敗 3P成功率41.5%はリーグ1位"
+  },
   "article-analysis-yokohama-20261118.html": {
    "article_path": "article-analysis-yokohama-20261118.html",
    "editorial_fingerprint": "3abde8f740d70384f1f628ecfa9dd6eab982f057630302cf360578e98c495a9c",
@@ -2831,13 +2859,6 @@
  },
  "log": [
   {
-   "article": "article-stats-20261114.html",
-   "at": "2026-11-14T10:49:13.412190+00:00",
-   "event": "imported",
-   "id": "3379ecab4c5d77e8e9a3",
-   "image": "14738cde7d0a"
-  },
-  {
    "article": "article-results-one-next-20261114.html",
    "at": "2026-11-14T10:52:26.618826+00:00",
    "by": "fe95cf5603af40345d87",
@@ -3389,6 +3410,13 @@
    "event": "imported",
    "id": "610858d34f8ebc0a29a5",
    "image": "d9bca6ed8e62"
+  },
+  {
+   "article": "article-analysis-sendai-20261119.html",
+   "at": "2026-11-19T03:20:36.112482+00:00",
+   "event": "imported",
+   "id": "ca8a2a139daad0448ac9",
+   "image": "fe3edfff8e8c"
   }
  ],
  "seen": {
@@ -3557,6 +3585,7 @@
   "c65ae6fd90ffcf57f53b": "superseded:b54717dd6365eef30b2d",
   "ca69b5d16263483eb1ed": "imported",
   "ca6cbcfdc7f7486e54e3": "imported",
+  "ca8a2a139daad0448ac9": "imported",
   "cba03e879d01718161f9": "imported",
   "cfa0f4e414a3d04bd5f5": "superseded:7229b09a7f88459f4780",
   "d2b98de7905eaa94bd7d": "superseded:735854177d32ca38deca",
