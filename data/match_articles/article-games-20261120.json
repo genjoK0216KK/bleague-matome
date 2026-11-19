@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-20",
+  "status": "pending",
+  "article_key": "article-results-one-next-20261120",
+  "games": [
+    {
+      "game_id": "507371",
+      "season": "2026-27",
+      "competition": "B1",
+      "starts_at": "2026-11-20T19:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507371",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "山形",
+      "home_full": "山形ワイヴァンズ",
+      "home_id": "710",
+      "home_score": null,
+      "away": "金沢",
+      "away_full": "金沢サムライズ",
+      "away_id": "750",
+      "away_score": null
+    },
+    {
+      "game_id": "507377",
+      "season": "2026-27",
+      "competition": "B1",
+      "starts_at": "2026-11-20T19:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507377",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "八王子",
+      "home_full": "東京八王子ビートレインズ",
+      "home_id": "749",
+      "home_score": null,
+      "away": "福島",
+      "away_full": "福島ファイヤーボンズ",
+      "away_id": "711",
+      "away_score": null
+    },
+    {
+      "game_id": "507389",
+      "season": "2026-27",
+      "competition": "B1",
+      "starts_at": "2026-11-20T19:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507389",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "愛媛",
+      "home_full": "愛媛オレンジバイキングス",
+      "home_id": "723",
+      "home_score": null,
+      "away": "岡山",
+      "away_full": "トライフープ岡山",
+      "away_id": "1639",
+      "away_score": null
+    }
+  ],
+  "individual_candidates": [],
+  "schedule_complete": {
+    "BP": true,
+    "B1": true,
+    "BN": true
+  },
+  "sources": [
+    "https://www.bleague.jp/schedule/?tab=1&year=2026&mon=11&day=20",
+    "https://www.bleague.jp/schedule/?tab=2&year=2026&mon=11&day=20",
+    "https://www.bleague.jp/schedule/?tab=3&year=2026&mon=11&day=20"
+  ],
+  "errors": [],
+  "lineups": {},
+  "game_day_rankings": {
+    "date": "2026-11-20",
+    "metric": "EFF",
+    "aggregation": "game_total",
+    "leagues": {
+      "B1": {
+        "error": "全試合の公式記録確定待ち"
+      }
+    }
+  },
+  "fantasy_hand": {
+    "error": "全試合の公式記録確定待ち"
+  }
+}
