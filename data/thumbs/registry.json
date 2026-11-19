@@ -1064,6 +1064,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "琉球ゴールデンキングス対名古屋Dを検証、名古屋Dが93-76で快勝"
   },
+  "article-daily-20261120.html": {
+   "article_path": "article-daily-20261120.html",
+   "editorial_fingerprint": "df1d1d73e76b22c4d05f5b12b384da013ffc7e0a73565659981bf609b75f9a51",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261120-7340dc677bcc.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261120-7340dc677bcc-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "5610585c712ced4f4449",
+   "image_sha256": "7340dc677bcc88f5d9bc655058ca07c68e57b42f7820a46fb183630c3d1f8b10",
+   "imported_at": "2026-11-19T23:18:20.460831+00:00",
+   "prepared_at": "2026-11-19T23:17:42.854592+00:00",
+   "source_blob_sha": "7f1994aab38a5aa5c40dbddc61d574e32d5808dc",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "df1d1d73e76b22c4d05f5b12b384da013ffc7e0a73565659981bf609b75f9a51",
+   "style": "ink-lime-portrait-v5",
+   "title": "愛媛対岡山を試合前予測、11連勝の岡山が有利"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -2915,13 +2943,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261115.html",
-   "at": "2026-11-14T15:11:19.632697+00:00",
-   "event": "imported",
-   "id": "3d2cc96fb28fa98a36d8",
-   "image": "df26dd788f36"
-  },
-  {
    "article": "article-results-one-next-20261115.html",
    "at": "2026-11-14T18:22:07.228247+00:00",
    "event": "imported",
@@ -3473,6 +3494,13 @@
    "event": "imported",
    "id": "7593bd60766ec1d9f791",
    "image": "431cd89a9b39"
+  },
+  {
+   "article": "article-daily-20261120.html",
+   "at": "2026-11-19T23:18:20.460868+00:00",
+   "event": "imported",
+   "id": "5610585c712ced4f4449",
+   "image": "7340dc677bcc"
   }
  ],
  "seen": {
@@ -3540,6 +3568,7 @@
   "5183171d8e8431a899f6": "imported",
   "5371bea30124ef22fa57": "imported",
   "556a6a0e14555b13288a": "imported",
+  "5610585c712ced4f4449": "imported",
   "570a778c73159b26d00d": "superseded:e581198d6acbcde5fe72",
   "574068c2a0f59824e769": "superseded:2e911924d887d6fdf34a",
   "5a66e834a435acc4ef91": "superseded:c3dac2b9caaaf4c62772",
