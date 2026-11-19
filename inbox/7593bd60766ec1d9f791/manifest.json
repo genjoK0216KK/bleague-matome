@@ -1,0 +1,106 @@
+{
+  "id": "7593bd60766ec1d9f791",
+  "article_path": "article-results-one-next-20261120.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261120.html",
+  "source_commit": "",
+  "source_blob_sha": "ce3cc2942c3cf880a788d7ef8cb65d0be7ddf523",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "49bfb539955981bd2ad54cf60bd5ba8542a2bd683efb8722c2ff0cf59e1fc96b",
+  "last_observed_blob_sha": "ce3cc2942c3cf880a788d7ef8cb65d0be7ddf523",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7593bd60766ec1d9f791/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7593bd60766ec1d9f791/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-19T20:48:10.104879+00:00",
+  "creation_event_id": "4af1199d300be95cb000",
+  "event_blob_sha": "ce3cc2942c3cf880a788d7ef8cb65d0be7ddf523",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/7593bd60766ec1d9f791/thumbnail.png",
+  "image_sha256": "431cd89a9b398d2476e08db86f3698c93da55007b70d3c4f77aa453a13764c09",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "ce3cc2942c3cf880a788d7ef8cb65d0be7ddf523",
+    "text_lines": [
+      "11/20 B.ONE",
+      "今季平均EFFで選出",
+      "登録選手の",
+      "ベスト5",
+      "試合前の選出｜出場確定ではありません",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7593bd60766ec1d9f791/source.html",
+        "role": "本文の唯一の根拠（固定HTML、blob SHA一致を保存直前に確認）",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261120.html",
+        "evidence": [
+          "対象日2026-11-20、B.ONE",
+          "試合前／今季平均EFFによる登録選手のベスト5",
+          "対象試合の実績ランキングとは別集計",
+          "出場確定を示す選出ではありません",
+          "全試合の公式記録確定待ち"
+        ]
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7593bd60766ec1d9f791/source.txt",
+        "role": "本文の根拠（固定文章、固定HTMLと照合）",
+        "qualifiers": {
+          "game_status_as_of": "2026-11-20 05:42 JST",
+          "season_average_and_player_data_as_of": "2026-11-18 20:43 JST",
+          "scope": "今季平均EFFに基づく試合前選出。未確定の当日結果や個人成績は画像に入れていない。"
+        }
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで目視した承認済みスタイル参照のみ。選手・数値・文言は転用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "キャメロン・ジャクソン",
+        "selection": "ランダム",
+        "selection_method": "固定原稿のベスト5・サブ5に記載された10選手を対象にPython secrets.choiceで1名を抽選。",
+        "reason": "複数選手を同じ形式で扱う記事で単独の主役を絞れないため、本人指定の優先順位に従い本文に名前が出る選手からランダムに選んだ。",
+        "reference_source": "B.LEAGUE公式 選手プロフィール",
+        "profile_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000319",
+        "image_url": "https://www.bleague.jp/files/user/roster/1639/2026-27/51000319_03.png",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7593bd60766ec1d9f791/references/cameron-jackson-official.png",
+        "viewed": true,
+        "appearance_observed": "肩付近までの黒褐色のロックス、額を出した髪型、やや明るい毛先、丸みのある輪郭、厚みのある頬、幅のある鼻、口ひげと短いあごひげ、広い肩。",
+        "image_use": "容姿確認に限る。公式写真・ユニフォームのロゴ・スポンサー表記は成果画像に使わない。",
+        "portrayal": "本人の特徴に寄せたインク・ブラシのプレー姿イラスト。実際の試合場面の再現ではない。",
+        "text_restrictions_checked": "選手名、背番号、所属、個人成績、出場・活躍の断定を画像に入れていない。"
+      }
+    ],
+    "prompt": "Use case: ads-marketing\nAsset type: One editorial basketball article thumbnail, Japanese, landscape 16:9, 1792x1024 or preferably 1920x1080, width above 1000 pixels.\nPrimary request: Create ONE finished image with all typography integrated. Ink and brush illustration, not a photo. The article is a PRE-GAME selection of registered players based on season-average EFF, for 2026-11-20 B.ONE. No result or individual achievement claim.\n\nVisual references already inspected in this conversation: the approved black/lime Culver thumbnail is STYLE ONLY (heavy Japanese typography, charcoal background, energetic lime brush stroke, few elements, orange ball, hand-inked illustrated athlete); do NOT carry over its name, score, date, pose or likeness. The official portrait of Cameron Jackson is LIKENESS ONLY. Do not paste either reference image or official photo into the output.\n\nSubject: Draw the REAL basketball player Cameron Jackson / キャメロン・ジャクソン (B.LEAGUE player 51000319), one person only, unmistakably an illustration. Preserve his official portrait features: medium-brown skin, shoulder-length brown-black locs swept back from a fairly high forehead, loose locs beside both ears reaching shoulders with slightly lighter brown tips, oval rounded face with full cheeks, thick gently arched eyebrows, almond eyes, broad rounded nose, moustache and a short compact chin goatee. Strong broad shoulders and powerful muscular upper body. Do NOT substitute a generic athlete with short curls or a different face. His likeness is based on the official portrait just inspected. This player was randomly selected among names in the fixed article, so he is an illustrative motif only. DO NOT print his name, number, team, individual stats, or claims about his appearance/performance.\n\nComposition: Left 57% is strong typographic hierarchy; right 43% is the illustrated player in an energetic low driving dribble, knees flexed, torso leaning forward toward the viewer, face visible in a mild three-quarter angle and eyes focused ahead. His right hand controls the orange basketball beside his right hip, left arm naturally bent for balance. Ball is a held/controlled prop. Keep head, face, hands, fingers and ball entirely inside the canvas. The legs may blend into brush marks at the bottom edge, without awkward anatomical cuts. Hands anatomically plausible, five fingers each. Plain ivory jersey and shorts with charcoal trim; absolutely no logos, sponsorships, team words or jersey numbers. A sweeping diagonal lime brush mark behind the player gives movement. No other people, no audience, no scoreboard. This is an imagined generic basketball motion, NOT a recreated moment from an actual game.\n\nStyle/medium: Premium Japanese sports editorial poster, hand-drawn black ink outlines and dry-brush hatching, limited color screenprint feel, expressive yet recognizable face, off-white highlights, charcoal shadows, slightly rough paper texture. Not photographic, not 3D. Same art direction as the approved black/lime sample.\nPalette: Deep charcoal #151A18, vivid lime #CCF43B, warm ivory, orange basketball. Large clean Japanese bold sans lettering, dry-brush texture only lightly on the huge numeral 5; no texture that harms reading.\n\nText (verbatim; render only these strings):\n\"11/20  B.ONE\"\n\"今季平均EFFで選出\"\n\"登録選手の\"\n\"ベスト5\"\n\"試合前の選出｜出場確定ではありません\"\n\"イラスト（AI生成）\"\n\"イメージ\"\n\nTypography layout: Small top-left date and league line. Under it, medium lime text 今季平均EFFで選出. Center-left very bold ivory 登録選手の, then huge ベスト5 with the 5 in vivid lime. Main headline is dominant and legible at thumbnail size. Lower-left qualification 試合前の選出｜出場確定ではありません, clearly readable and comfortably above the bottom footer. Bottom-left small but easily readable labels イラスト（AI生成） and イメージ separated by generous space. Maintain safe margins on every text line, no overflow or overlap with athlete. All characters must be correct Japanese.\nConstraints: No team logo, league logo, official photographs, watermarks or additional text. B.ONE is plain typeset text only. Do not show scores or individual data. Do not use 今日の結果, 活躍, 出場決定, or actual-event claims. Return one image only.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "revision_calls": 0,
+      "output_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/7593bd60766ec1d9f791/generated.png",
+      "original_output": "/Users/genjo/.codex/generated_images/01a1f591-1c0b-7313-81cd-2a61fb402b72/exec-671e7708-e545-42ab-83f6-45c9192c52f9.png",
+      "format": "PNG",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "sha256": "431cd89a9b398d2476e08db86f3698c93da55007b70d3c4f77aa453a13764c09",
+      "qa_method": "生成画像の表示と保存元PNGを目視。文字・数字・留保・顔の特徴・手指・見切れ・ロゴなし・AI表記を確認。PNGヘッダー、寸法、コピー内容一致と固定HTMLのblob SHAを標準ライブラリで確認。",
+      "style_note": "指定の白地参照A-faison-ivory-v3.pngはその場所に存在しなかったため、目視確認済みの黒ライム参照を使用。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-19T20:50:47.629544+00:00",
+  "publication_approved": false
+}
