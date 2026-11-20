@@ -1,0 +1,97 @@
+{
+  "id": "32b2d1daa11df55f4a4e",
+  "article_path": "article-daily-20261121.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261121.html",
+  "source_commit": "",
+  "source_blob_sha": "113e73118399c2fc5a2a0a5648930fe8fabe8277",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "77d78c84f8d009ef95a32fbbcdf4a31b5e2cee42a2d1d2171fe10bf4a4486e2a",
+  "last_observed_blob_sha": "113e73118399c2fc5a2a0a5648930fe8fabe8277",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/32b2d1daa11df55f4a4e/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/32b2d1daa11df55f4a4e/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-20T23:17:32.302060+00:00",
+  "creation_event_id": "3672873e4bdb1f4d15b3",
+  "event_blob_sha": "113e73118399c2fc5a2a0a5648930fe8fabe8277",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/32b2d1daa11df55f4a4e/thumbnail.png",
+  "image_sha256": "c076d77f58fa496815bf8b9fa240d2b28aae81d59dc6a85db5be7e5551139d93",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "113e73118399c2fc5a2a0a5648930fe8fabe8277",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.21",
+      "第1戦結果",
+      "岡山 84–71 愛媛",
+      "独自予測",
+      "第2戦も",
+      "岡山有利？",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/32b2d1daa11df55f4a4e/source.html",
+        "role": "本文・チームスコア・日付・第2戦の独自予測の根拠（固定原稿）"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/32b2d1daa11df55f4a4e/source.txt",
+        "role": "本文・チームスコア・日付・第2戦の独自予測の根拠（固定原稿）"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "中村瑞稀",
+        "selection": "ランダム",
+        "selection_method": "記事は両チームの比較が中心。本文の『両チームの主な選手』にある岡山4人からPython random.SystemRandom().choiceで1人選択。",
+        "selection_pool": [
+          "レイナルド・ガルシア",
+          "ジョシュ・スコット",
+          "笠井康平",
+          "中村瑞稀"
+        ],
+        "source": "https://tryhoop.com/news/detail/id=2026-27_signed_nakamura?nf=0",
+        "image_source": "https://tryhoop.com/files/user/%2339_nakamura_1.jpg",
+        "reference_usage": "公式写真を目視し、髪型・輪郭・目鼻・口元のみ参照。最終画像へ写真やロゴは貼り付けずイラストで表現。",
+        "observed_features": "暗色のほぼ中央分けのストレートな前髪、細めの目、ひげのない顔、柔らかな顎と頬。",
+        "depiction": "手前の青い無地ユニフォームでドリブルする選手。画像内に名前・背番号・個人成績・出場や活躍の記載はない。"
+      },
+      {
+        "name": "ネマニャ・ラドヴィッチ",
+        "selection": "ランダム",
+        "selection_method": "記事は両チームの比較が中心。本文の『両チームの主な選手』にある愛媛2人からPython random.SystemRandom().choiceで1人選択。",
+        "selection_pool": [
+          "ネマニャ・ラドヴィッチ",
+          "シャキール・ハインズ"
+        ],
+        "source": "https://orangevikings.jp/team/players/detail/id=17037?PlayerID=51000665",
+        "image_source": "https://bleague.bl.kuroco-img.app/v=2026112107/files/user/roster/723/2026-27/51000665_01.jpg",
+        "reference_usage": "現在の公式選手一覧から本人の詳細ページと画像を確認。検索結果の古い別選手リンクは採用せず、容姿のみ参照。最終画像に公式写真・ロゴは使っていない。",
+        "observed_features": "短く刈った茶色系の髪、やや後退した生え際、細長い輪郭、太い眉、まっすぐな鼻、顎付近に少し灰色がある濃いひげと口ひげ。",
+        "depiction": "奥のオレンジ色の無地ユニフォームで守る背の高い選手。画像内に名前・背番号・個人成績・出場や活躍の記載はない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset type: ONE finished editorial thumbnail for Japanese basketball site バスケまとめ. Create a brand-new image, landscape 2048x1152 pixels (16:9), opaque PNG.\nPrimary request: An energetic, beautifully art-directed black-and-lime Japanese basketball editorial thumbnail. Use the previously viewed approved black/lime example ONLY as a style reference: near-black #151A18, vivid lime #CCF43B, warm ivory, rough hand-inked sports illustration and broad dry-brush strokes, bold highly legible Japanese typography, few elements. Do not copy its player or old scores.\n\nCONTENT AND HIERARCHY: Reserve roughly the left 53% for excellent Japanese typography and the right 47% for two real basketball players in a dynamic one-on-one imagined matchup. Keep a strong readable margin, no text/face/ball overlap. On the left:\n1. Small header: 「バスケまとめ」 and small date 「2026.11.21」.\n2. Small label 「第1戦結果」 above the score.\n3. Bold clean ivory score line 「岡山 84–71 愛媛」. This is a TEAM result of the first game, NOT an individual statistic.\n4. Below, a little label 「独自予測」 followed by the main giant headline on two lines 「第2戦も」 then 「岡山有利？」. Use ivory for 第2戦も and vivid lime for 岡山有利？. Preserve the question mark. This is a forecast, not a confirmed second-game result.\n5. Bottom-left footer, legible and within safe margins: 「イラスト（AI生成）」 then 「イメージ」.\n\nPERSON SUBJECTS: Exactly two real people; no generic fictional basketball players. Use the previously inspected official reference portraits as likeness guidance only. Draw original stylized ink illustrations, never paste or trace the photos.\n- Foreground ball handler is Mizuki Nakamura (中村瑞稀): the young adult Japanese man in the inspected official Tryhoop portrait. Slim athletic guard, medium-length glossy dark hair parted slightly off center into smooth curtain bangs reaching toward eyebrows/temples, narrower almond-shaped eyes, straight dark brows, smooth clean-shaven face, oval face with softly squared chin, small straight nose, closed medium lips. Capture his individual features clearly, face in a visible three-quarter view. Plain deep blue/dark uniform with small ivory edges, absolutely no logo, text, numbers or sponsor marks.\n- Defender is Nemanja Radović (ネマニャ・ラドヴィッチ): the tall athletic adult man from the inspected official Ehime portrait. Much taller and more robust build than Nakamura, short dark brown close-cropped hair with slightly receding temples, strong brow and deep-set light eyes, long straight nose, substantial full dark beard and moustache with a little gray around chin, elongated face and defined jaw. Keep his face clearly visible, not a shadow silhouette. Plain orange sleeveless uniform with dark edging, no logo, text, numbers or sponsor marks.\nMake a dramatic diagonal one-on-one action: Nakamura leaning into a low right-handed dribble in the foreground, ball directly under his dribbling hand as his prop; Radović behind and to the far right, bending his knees defensively, one arm extended outward and the other raised without hiding either face. Their body sizes should respect the guard-versus-tall-center contrast. Full coherent arms, five plausible fingers per visible hand, no extra limbs. Frame from head to approximately knees, with deliberate lower-body crop only; keep heads, hands and the entire ball inside the canvas with room to breathe.\nThis is an imagined generic basketball matchup, NOT a reconstruction of any actual game moment or prediction of individual participation/performance. These players were randomly selected from names in the supplied article and must have NO written names, numbers or individual stats in the image.\nScene/backdrop: Abstract near-black court atmosphere, several expressive lime brush sweeps behind the two figures, restrained ivory hatching, dynamic but uncluttered. A mostly monochromatic hand-inked treatment for faces and skin; blue and orange on uniforms only as muted identification accents. Orange basketball as a held/dribbled prop. No court-only scene, audience, hoop required, extra people, trophy or scoreboard.\nText (verbatim; only these strings, no other lettering):\nバスケまとめ\n2026.11.21\n第1戦結果\n岡山 84–71 愛媛\n独自予測\n第2戦も\n岡山有利？\nイラスト（AI生成）\nイメージ\nConstraints: All typography crisp, accurately spelled, well spaced, visible at thumbnail size. Editorial illustrated sports-poster style, NOT photography, photorealism or 3D. No team logos, league logos, sponsors, watermark, copied official photos, or past reference text. Final image should be one polished flat thumbnail, no mockup frame, no extra variants.\n\n--- ONE CORRECTION PASS ---\nEdit the attached thumbnail (image 1) once to fix framing and improve the two real players' likenesses. This is the single correction pass; deliver one final polished 16:9 PNG at least 1600 pixels wide.\n\nImage roles:\nImage 1: edit target, the current black/lime basketball thumbnail. Preserve all its exact Japanese text, score, date, text hierarchy, black/lime palette, background brushwork and strongly hand-inked illustration style.\nImage 2: official portrait of Mizuki Nakamura, identity/face reference ONLY for the foreground blue-uniform ball handler.\nImage 3: official portrait of Nemanja Radović, identity/face reference ONLY for the tall orange-uniform defender.\nNever paste photographic pixels or copy any reference uniform logo/sponsor/text.\n\nFIX 1, FRAMING: Recompose/scale the player illustration group down slightly (about 12-15%) and shift it upward and inward so the ENTIRE basketball and ALL FOUR hands (including all fingertips) fit clearly within the frame with at least 35 pixels of safe clearance. In the target, the ball and the ball handler's low free hand are clipped at the bottom; fully repair this. Keep the defender's raised fingertips comfortably below the upper edge. Deliberate lower-leg cropping is fine, but hands, faces and ball cannot be cropped. Preserve a coherent, energetic one-on-one dribble/defensive stance with natural anatomy, five plausible fingers on every visible hand and two arms per player. Keep the right-side player composition completely separate from the text.\n\nFIX 2, IDENTITY: Refine the face and hair of the foreground player directly against image 2: Mizuki Nakamura has smooth, fairly straight dark curtain hair parted near center, not wavy shaggy anime hair; relatively narrow almond eyes, a modest straight nose, softly squared oval jaw, natural cheek fullness, clean shaven. Render a recognisable original ink illustration of this specific adult athlete, not a generic manga character. Refine the defender directly against image 3: Nemanja Radović has a close-cropped dark receding hairline, long oval face, straight nose, strong brows, full but compact neatly shaped dark beard, not a large overgrown or pointed beard, with a little gray at the chin. Keep the much taller robust defender and the smaller guard, both athletic. Keep facial details in pen-and-brush illustration style, NOT photorealism.\n\nALL TEXT MUST BE PRESERVED, ACCURATE AND LEGIBLE:\nバスケまとめ\n2026.11.21\n第1戦結果\n岡山 84–71 愛媛\n独自予測\n第2戦も\n岡山有利？\nイラスト（AI生成）\nイメージ\nThe score is the TEAM result for the first game; the second-game text is explicitly an independent forecast. The illustration is an imagined matchup, not a real moment. Do not add player names, jersey numbers, individual stats, extra people, team logos, league logos, sponsors or any additional lettering. Keep all text safely inside the canvas. Produce one finished image.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "corrections": 1,
+      "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "style_reference_inspected": true,
+      "unused_style_reference": "A-faison-ivory-v3.png は指定ディレクトリに存在せず。今回使用する黒×ライムの承認済み参照は目視済み。",
+      "final_image_original": "/Users/genjo/.codex/generated_images/01a1fb40-3874-7e53-89d5-65f458c35f4b/exec-217c8d85-156f-4bba-a650-e1217f7f32ef.png",
+      "review_notes": "初稿は下端の手・ボールが見切れたため1回だけ修正。修正版を実画像で確認し、全文字、84–71の得点順、第1戦結果と第2戦の独自予測の区別、選手の顔・髪・ひげ、4つの手とボールの収まり、ロゴなし、AI生成とイメージの注記を確認。特定試合の実際の場面を再現したものではない。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-20T23:21:09.669254+00:00",
+  "publication_approved": false
+}
