@@ -1,0 +1,127 @@
+{
+  "id": "54903eab3566ffc03029",
+  "article_path": "article-results-one-next-20261120.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261120.html",
+  "source_commit": "",
+  "source_blob_sha": "de52e83b79f88cd639ae587db54f7de1df471bbd",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "5e13c120b14177e20c5c495a576e1ab44eb8489ad87604862a28e573530e5d07",
+  "last_observed_blob_sha": "de52e83b79f88cd639ae587db54f7de1df471bbd",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/54903eab3566ffc03029/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/54903eab3566ffc03029/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-20T14:22:19.435665+00:00",
+  "creation_event_id": "8fbf9ee992c1145121b5",
+  "event_blob_sha": "de52e83b79f88cd639ae587db54f7de1df471bbd",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/54903eab3566ffc03029/thumbnail.png",
+  "image_sha256": "0e8546dce67b884b056810b1e128c17e07e680990fb4c365041eaa1ea33244c4",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "de52e83b79f88cd639ae587db54f7de1df471bbd",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.20",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/54903eab3566ffc03029/source.html",
+        "role": "本文根拠・固定HTML",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261120.html",
+        "evidence": "h1『11/20 試合結果・当日のEFF』、試合日2026.11.20、h2『当日のEFF・ポジション別TOP3』。本文の事実はこのHTMLとsource.txtだけを使用。",
+        "qualifiers": "当日出場選手の公式EFFをリーグ別・公式登録ポジション別に集計。今季平均や予想ではない。実際の当日起用位置を断定しない。画像では個人成績・順位・カード点数を表示しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/54903eab3566ffc03029/source.txt",
+        "role": "本文根拠・固定文章",
+        "evidence": "複数試合の結果とポジション別TOP3の一覧。特定の1選手が本文の主役ではないと判断。"
+      },
+      {
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=36969",
+        "role": "人物の実在と公式プロフィール確認専用。外部の成績は見出しに使用していない。"
+      },
+      {
+        "url": "https://samuraiz.jp/team/players/detail/id=16112?PlayerID=36969",
+        "role": "富田一成選手の公式プロフィール・顔写真の出所確認専用。"
+      },
+      {
+        "url": "https://bleague.bl.kuroco-img.app/v=2026102419/files/user/roster/750/2026-27/36969_01.jpg",
+        "role": "公式プロフィールからリンクされた顔写真をダウンロードしてview_imageで容姿確認。修正時は容姿参照としてのみ使用。写真を完成画像へ貼り付けていない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みの黒×ライム、太字、インク・ブラシの絵柄参照。view_imageで確認。選手・成績・日付の流用なし。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール。人物選定は今回の本人指示を優先。白地参照A-faison-ivory-v3.pngは指定場所に存在せず、実在する承認済み黒×ライム案を採用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "富田 一成",
+        "selection": "ランダム",
+        "selection_reason": "複数試合・複数選手の一覧記事で、本文の主役を1人に絞れないため。",
+        "selection_method": "固定原稿のstrong要素にある重複を除いた11選手から、Python secrets.choiceで1回抽選。結果はselection.jsonに保存。",
+        "candidate_names": [
+          "マーク・バートン",
+          "レイナルド・ガルシア",
+          "阿部 龍星",
+          "富田 一成",
+          "シャキール・ハインズ",
+          "ジョーダン・ナタイ",
+          "ジョシュ・マッセイ",
+          "ネマニャ・ラドヴィッチ",
+          "ジョシュ・スコット",
+          "キーガン・レコード",
+          "ジャック・ナンジ"
+        ],
+        "official_profile": "https://samuraiz.jp/team/players/detail/id=16112?PlayerID=36969",
+        "official_portrait": "https://bleague.bl.kuroco-img.app/v=2026102419/files/user/roster/750/2026-27/36969_01.jpg",
+        "observed_features": "黒く厚みのある波打つ短髪、短いサイドと不揃いの前髪。やや縦長で角が柔らかい輪郭、丸みのある目、まっすぐな眉、丸みのある鼻先、ひげなし。太い首と広い肩。",
+        "illustration": "ボールを片手で保持して前へ踏み込むプレーのイメージ。特定試合・特定プレーの再現ではない。1人のみ描写。",
+        "final_visual_check": "公式写真と修正版を目視照合。髪型、輪郭、目鼻、ひげなしを確認。手の形・腕・ボールの見切れなし。選手名・所属・背番号・個人成績は文字に入れていない。ロゴ・スポンサーなし。写真風ではない。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: illustration-story\nAsset type: Japanese basketball news thumbnail, ONE finished landscape image, 16:9 aspect ratio, 1536 x 864 pixels or larger. Opaque PNG.\nPrimary request: Create an editorial hand-drawn basketball thumbnail for the fixed article \"11/20 試合結果・当日のEFF\". This is a roundup, not a story about an individual player. Use a real athlete as an illustrative subject: Issei Tomida (富田一成). He was randomly chosen from the names in the supplied article, so do not print his name, jersey number, team name, or individual stats, and do not imply a specific actual game moment.\n\nSubject likeness: Draw exactly one real player, Issei Tomida, in an energetic, low forward driving stance holding an orange basketball at his hip with one hand, other arm naturally bent. Face clearly visible in a near-front three-quarter view. Based on his inspected official 2026-27 portrait from https://samuraiz.jp/team/players/detail/id=16112?PlayerID=36969 and its official portrait https://bleague.bl.kuroco-img.app/v=2026102419/files/user/roster/750/2026-27/36969_01.jpg : Japanese man in his late twenties, thick black tousled wavy hair with a dense voluminous top and short sides, uneven curled fringe falling lightly across the forehead; dark, slightly rounded almond eyes and fairly straight eyebrows; elongated oval face, softly squared jaw, medium full cheeks, straight medium-length nose with rounded tip, closed lips with fuller lower lip, no beard or mustache. Strong neck and broad athletic shoulders, muscular natural proportions. Keep these specific facial features recognisable in drawn ink; not a generic invented player. No headband. Outfit: plain off-white basketball singlet and dark shorts with restrained lime edging. Absolutely no words, numbers, logos, brands or sponsors on clothing. This is a newly drawn illustration, never paste the official photo or make it photorealistic.\n\nStyle/medium: Match the inspected approved black-and-lime v3 thumbnail style: near-black #151A18 background, electric lime #CCF43B, warm white typography, bold black ink outlines, sketchy brush strokes and restrained crosshatching in the athlete. Orange basketball only as a prop in the player's hand. Minimal elements, vigorous editorial sports illustration, high contrast, handcrafted brush texture. No photographic textures or realistic photo skin. Lime diagonal brush sweep behind athlete, sparing ink flecks. Keep text areas calm and solid.\n\nComposition: Fresh dynamic composition, player on the LEFT 44% of canvas from head through bent knees, driving diagonally toward the middle, face unobstructed, orange ball fully visible lower-left-center with natural hand grasp. Keep face, hands and ball entirely inside canvas. Large stacked Japanese headline on the RIGHT 52%. Separate illustration from all lettering. Small masthead at upper right, date below. Main headline \"試合結果\" in very large heavy white Japanese gothic type. Second headline \"当日のEFF\" in large lime type. Small supporting line under it \"ポジション別TOP3\". Plenty of readable negative space. Avoid scoreboards, tables, card illustrations, trophies or extra people. All text inside 5% safe margins. Bottom full-width quiet dark footer with the two short labels legible in off-white.\n\nText (verbatim, print only these seven lines):\n\"バスケまとめ\"\n\"2026.11.20\"\n\"試合結果\"\n\"当日のEFF\"\n\"ポジション別TOP3\"\n\"イラスト（AI生成）\"\n\"イメージ\"\n\nFactual constraints: The headline describes the day's results and official daily EFF ranked by position, not season averages or a prediction. Do not add individual scores, rankings or names to the randomly chosen player. Do not add fantasy-card scores or any other facts. Keep the AI label and the word イメージ clear and accurate. Do not depict a claimed winning shot, actual matchup, or official photograph. No league or team logos. Hands and limb anatomy must be plausible, no extra fingers, no cut-off face, no clipped letters. Render Japanese exactly as supplied. One finished thumbnail only.",
+      "correction": "Use case: identity-preserve\nEdit the first input image, the already generated black/lime Japanese basketball thumbnail. The second input is the OFFICIAL PORTRAIT of the real player Issei Tomida (富田一成), used ONLY as a likeness reference. Do NOT paste the portrait, duplicate its outfit marks, or make the output photographic.\n\nOne targeted correction pass for player likeness and safe margins. Keep the exact headline text, black #151A18 and lime #CCF43B palette, orange ball, bold type, layout concept (athlete left, headline right), expressive hand-drawn ink illustration, AI footer, and the driving pose. Keep ONE player and no logos.\n\nCorrect the athlete's face to closely match input 2: CLEAN SHAVEN, absolutely no mustache, chin beard, soul patch, stubble, dark hatching above the upper lip or chin that looks like facial hair. Official face has a longer, softly squared oval shape, fuller smooth cheeks, narrower straighter brows, gently rounded dark eyes, straight medium nose, closed neutral lips. Use the official portrait's actual face proportions rather than an invented heroic face. Hair is black, dense and softly tousled/wavy, with modest volume and short sides, natural wavy fringe. Reduce the huge exaggerated ringlet curls in input 1, matching the much more compact hairstyle in input 2. Maintain an athletic realistic build, avoid exaggerated bodybuilder definition. Preserve illustrated brush hatching on clothing and limbs, keep facial skin cleaner. Plain blank off-white singlet and dark shorts with lime trim, no name or number.\n\nReframe slightly so the WHOLE hair and both hands, orange basketball and all lettering have visible breathing room from the outer frame, minimum approximately 4-5% margin at top and sides. Reduce the player illustration a little and move it inward; its lower body may end naturally at the footer. Keep hands anatomically natural. Move/reduce the right text block slightly so no characters crowd the frame. Keep headline dramatically large and readable. Footer two labels legible within margins.\n\nText MUST remain exactly:\nバスケまとめ\n2026.11.20\n試合結果\n当日のEFF\nポジション別TOP3\nイラスト（AI生成）\nイメージ\n\nDo not print the player's name, team, jersey number or individual results. This is an illustrative action image, not an actual match scene. No additional text. One finished opaque PNG, landscape approximately 16:9 and minimum width 1536 px.",
+      "correction_reference_paths": [
+        "/Users/genjo/.codex/generated_images/01a1f959-ed58-70f3-8a87-cf8da5607f6a/exec-64faf8dd-9a69-4f82-9bad-afb91e746d43.png",
+        "/private/tmp/basuke-54903eab-tomida-reference.jpg"
+      ],
+      "correction_reason": "初稿の不要なひげ線と上端に近すぎる髪を修正し、公式写真への容姿の類似性と余白を改善。修正は1回のみ。"
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "initial_generation_count": 1,
+      "correction_count": 1,
+      "total_calls": 2,
+      "adopted_image_count": 1,
+      "final_generated_path": "/Users/genjo/.codex/generated_images/01a1f959-ed58-70f3-8a87-cf8da5607f6a/exec-68770b0f-850d-4418-9796-6e2d50b94b0c.png",
+      "saved_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/54903eab3566ffc03029/generated.png",
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "sha256": "0e8546dce67b884b056810b1e128c17e07e680990fb4c365041eaa1ea33244c4",
+      "inspection": "修正版の実画像を目視確認。7行の文字・日付・TOP3が一致。個人成績の訴求なし、イメージ注記あり。顔・手・ボール・文字の見切れなし、背景との判読性良好。AI表記あり。PNGコピー後のバイト一致と固定HTMLのblob SHA一致も検証。",
+      "ready_executed": false,
+      "published": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-20T14:30:04.101206+00:00",
+  "publication_approved": false
+}

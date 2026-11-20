@@ -1,0 +1,115 @@
+{
+  "id": "be964f4359fb4b535b50",
+  "article_path": "article-games-20261120.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261120.html",
+  "source_commit": "",
+  "source_blob_sha": "ef8ff8c31a32a67885d3fc4b9eab4cf6b4ca9818",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "5e13c120b14177e20c5c495a576e1ab44eb8489ad87604862a28e573530e5d07",
+  "last_observed_blob_sha": "ef8ff8c31a32a67885d3fc4b9eab4cf6b4ca9818",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/be964f4359fb4b535b50/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/be964f4359fb4b535b50/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-20T14:22:18.878237+00:00",
+  "creation_event_id": "b6177590e4e51340113c",
+  "event_blob_sha": "ef8ff8c31a32a67885d3fc4b9eab4cf6b4ca9818",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/be964f4359fb4b535b50/thumbnail.png",
+  "image_sha256": "c55bf0ea2d02da33f30b0fbe3d99483f4268649d5cca28494936acd2440752f2",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "ef8ff8c31a32a67885d3fc4b9eab4cf6b4ca9818",
+    "text_lines": [
+      "バスケまとめ",
+      "11/20 試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_body",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/be964f4359fb4b535b50/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261120.html",
+        "role": "本文根拠。固定HTMLを読み、指定blob SHAを生成前・保存時に照合。外部の試合情報は画像内容へ使用していない。"
+      },
+      {
+        "type": "article_body",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/be964f4359fb4b535b50/source.txt",
+        "role": "本文根拠。11/20の試合結果と、当日の公式EFFによるリーグ別・ポジション別TOP3を確認。個人の名前・成績・出場・活躍、総合順位、カード合計点は画像に載せていない。"
+      },
+      {
+        "type": "style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで実見。黒・ライム、太い日本語、インク・ブラシ表現のみ参照。人物名・数値・ポーズは流用しない。白地A-faison-ivory-v3.pngは指定場所に存在せず、不使用。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://www.wyverns.jp/roster/players/detail/id=16456?PlayerID=51000097",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026112022/files/user/roster/710/2026-27/51000097_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/be964f4359fb4b535b50/reference-abe-official.jpg",
+        "role": "クラブ公式プロフィール掲載のリーグ公式写真。容姿参照のみ。写真・ロゴ・スポンサー文字を完成画像に転載していない。"
+      },
+      {
+        "type": "appearance_identity_check",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000097",
+        "role": "公式プロフィールで人物同定。外部ページの成績等は不使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "阿部 龍星",
+        "selection": "ランダム",
+        "selection_reason": "記事は複数試合と各ポジションの比較を並列に扱い、特定の1人が主役ではないため。本文TOP3表に登場する重複を除いた11選手からsecrets.choiceで1回抽選。再抽選なし。",
+        "selection_pool": [
+          "マーク・バートン",
+          "レイナルド・ガルシア",
+          "阿部 龍星",
+          "富田 一成",
+          "シャキール・ハインズ",
+          "ジョーダン・ナタイ",
+          "ジョシュ・マッセイ",
+          "ネマニャ・ラドヴィッチ",
+          "ジョシュ・スコット",
+          "キーガン・レコード",
+          "ジャック・ナンジ"
+        ],
+        "reference_page": "https://www.wyverns.jp/roster/players/detail/id=16456?PlayerID=51000097",
+        "reference_image": "https://bleague.bl.kuroco-img.app/v=2026112022/files/user/roster/710/2026-27/51000097_01.jpg",
+        "observed_features": "茶色のやや短い無造作な分け目のある髪、中央の額、細めの眉とまぶた、面長の卵形輪郭、丸みのある顎、自然な閉じた口、髭なしを公式写真と完成画像で比較。",
+        "depiction": "本人の容姿を参照したドライブ姿のイラスト。実際の当日の場面の再現ではない。画像に名前、所属、個人成績、出場や活躍の説明を入れていない。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: ads-marketing\nAsset type: single finished Japanese basketball editorial thumbnail, PNG, landscape 1792 x 1024 or 1920 x 1080 (approximately 16:9, width over 1000px).\nPrimary request: Create one original finished thumbnail for バスケまとめ for the frozen article dated 2026-11-20 about daily game results and position-specific EFF top three. All typography and illustration must be generated together.\n\nStyle/medium: bold hand-painted sports editorial ink illustration, visible dry-brush hatching and graphic silhouette. Base near-black #151A18, fluorescent lime #CCF43B, warm ivory lettering and skin highlights, a single orange basketball. Match the inspected black/lime approved reference's bold Japanese sans-serif headline, sparse composition, diagonal ink strokes, high contrast. Do NOT copy its player, text, score, shooting pose, or date. Strictly illustration, not photorealistic, no photographic face or pasted photo.\n\nSubject: ONE real player, Ryusei Abe (阿部 龍星), selected randomly from the article's named players. His official Yamagata Wyverns / B.LEAGUE 2026-27 portrait has been visually inspected. Preserve these actual features: young adult Japanese male basketball guard, lean athletic frame, light warm skin, clean-shaven, medium-short voluminous chestnut/dark brown hair with tousled wavy layered locks and a loose off-center part; visible forehead center, hair slightly over temples, dark almond-shaped eyes with subtly hooded lids, straight natural eyebrows, oval face narrowing into a rounded chin, moderately long straight nose, defined closed lips, slightly prominent ears. No beard, no mustache, no headband, no buzz cut. Maintain his recognizable facial proportions in expressive ink drawing, without exaggeration. Plain dark purple basketball jersey and shorts with slim yellow edging rendered primarily in monochrome ink; NO jersey letters, numbers, team marks, sponsors or logos.\n\nScene/composition: Dynamic original conceptual illustration of Abe driving with the ball, three-quarter body on the right 43% of the frame, knees bent, torso leaning forward, face turned enough toward the viewer to recognize, looking forward. His hand is touching/controlling an orange basketball at hip-to-thigh level in a low dribble; other arm naturally bent for balance. Two arms, anatomically clear hands and separated natural fingers; no extra fingers, extra limbs, or duplicate basketball. Both hands and the ball fully visible with comfortable edge clearance. Figure may finish around thighs near lower edge but do not sever fingers or ball. Use diagonal lime brush speed strokes behind him and small ink splashes, no literal stadium, no opponent, no hoop necessary. This is an imagined basketball pose, not a reconstruction of a specific game or scoring event.\n\nLayout: left 54% reserved for exact text on clean black. Top left small publication line. Below it medium-large date/results line. Main headline is 当日のEFF in huge warm ivory, and ポジション別TOP3 in lime on the next line, both kept completely within safe margins and not touching the figure. Readable bold Japanese gothic typography; the word ポジション別 must stay clearly readable because rankings are by position, not an overall ranking. Bottom left two separate readable annotations. Keep safe margins of at least 5% on all text. Do not let lime marks interfere with text. No tables, card symbols, statistics, scores, names, labels on clothing, extra words or decorative pseudo-text.\n\nText (verbatim), exactly these six strings:\n\"バスケまとめ\"\n\"11/20 試合結果\"\n\"当日のEFF\"\n\"ポジション別TOP3\"\n\"イラスト（AI生成）\"\n\"イメージ\"\n\nConstraints: selected player is purely an illustrative subject. Never write his name, team, points, rank, performance, appearance or any personal claim on the image. No real-game reenactment or victory celebration. No team or league logos, sponsor lettering, watermarks, official photography, copied reference photo. The only content facts shown are 11/20, game results, daily EFF and position-specific TOP3, supported by the supplied frozen manuscript. Do not add claims from external sources. One polished image only.\n",
+      "revision": "Use case: identity-preserve\nEdit target: Image 1 is the generated black/lime basketball thumbnail. Image 2 is the official portrait of real player Ryusei Abe (阿部 龍星), supplied solely for facial identity reference. Modify ONLY the illustrated player and his basketball plus the immediate background around him. Keep all six Japanese text strings, their typography, wording, color, hierarchy, placement, and the overall dark #151A18 / lime #CCF43B brush design exactly unchanged. Keep canvas approximately 16:9 at least 1000 px wide.\n\nCorrection: Redraw the same driving/dribbling figure about 12% smaller and slightly inward within the right side so the entire hair silhouette has at least 35px of black clearance above, both hands and all fingertips are completely visible, and the entire ball has at least 40px clearance above the bottom edge. His waist/thighs may meet the lower image edge, but his head, hands, and ball must not touch or cross any edge. Keep the same two-arm pose and one ball.\n\nIdentity: Refer closely to the actual face and hair of Image 2, then translate those proportions into the same hand-drawn ink/brush illustration medium of Image 1. Do not paste or photorealistically reproduce the photo. The first drawing has too much voluminous curly hair, thicker eyebrows and an overly sculpted model-like face. Match the reference's shorter slightly tousled chestnut brown layered hair, flatter loose off-center part, visible central forehead, naturally finer straight brows, subtly hooded dark eyes, oval longer midface, softly rounded narrower chin, natural closed mouth and slightly prominent ears. Absolutely no facial hair. Retain an athletic guard's physique. Jersey remains plain purple/yellow with NO letters, numbers, sponsors, club or league logos.\n\nExact text to preserve:\nバスケまとめ\n11/20 試合結果\n当日のEFF\nポジション別TOP3\nイラスト（AI生成）\nイメージ\n\nThis remains a conceptual illustration of a randomly selected real player, not a recreation of a game. No player name or personal performance text. One corrected finished PNG only.\n",
+      "revision_input_images": [
+        "/Users/genjo/.codex/generated_images/01a1f956-389b-7ec2-ade3-69f88c3615fd/exec-7f2a0fcd-2292-494a-be46-611623660fa1.png",
+        "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/be964f4359fb4b535b50/reference-abe-official.jpg"
+      ]
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "revisions": 1,
+      "final_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/be964f4359fb4b535b50/generated.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "sha256": "c55bf0ea2d02da33f30b0fbe3d99483f4268649d5cca28494936acd2440752f2",
+      "qa_checked_at": "2026-11-20T23:26:11.561886+09:00",
+      "qa_method": "生成画像を実見。初稿の人物とボールの端の余白、髪型・顔立ちを1回修正。修正版の全6文字列、11/20とTOP3、当日・ポジション別の限定、公式写真との容姿、人物・両手・指・ボールの見切れ、ロゴなし、AI表記を目視確認。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-20T14:26:22.530233+00:00",
+  "publication_approved": false
+}
