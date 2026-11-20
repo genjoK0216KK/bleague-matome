@@ -1,0 +1,115 @@
+{
+  "id": "fd75d53bcb2937406abe",
+  "article_path": "article-analysis-kobe-20261120.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-kobe-20261120.html",
+  "source_commit": "",
+  "source_blob_sha": "1400002c2a0f14c6dca472c64dff2dcacf0fab89",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "a1acd25a63726235252bbeafacc8e6c50e9f86a617df839e95597104d6ea3998",
+  "last_observed_blob_sha": "1400002c2a0f14c6dca472c64dff2dcacf0fab89",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fd75d53bcb2937406abe/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fd75d53bcb2937406abe/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-20T03:17:23.381054+00:00",
+  "creation_event_id": "cfa6ff0a72043e94f3de",
+  "event_blob_sha": "1400002c2a0f14c6dca472c64dff2dcacf0fab89",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/fd75d53bcb2937406abe/thumbnail.png",
+  "image_sha256": "026c3068999de00cb1cd2243ba422180b42982ff89adf8c9bb27e177c8f7f503",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "1400002c2a0f14c6dca472c64dff2dcacf0fab89",
+    "text_lines": [
+      "バスケまとめ",
+      "神戸ストークス",
+      "直近5試合｜11/7〜11/18",
+      "1勝4敗",
+      "失点の中心は",
+      "ペイント内",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "本文根拠・固定HTML",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fd75d53bcb2937406abe/source.html",
+        "article_url": "https://basuke-matome.jp/article-analysis-kobe-20261120.html",
+        "evidence": [
+          "h1: 神戸ストークスの直近5試合 1勝4敗の試合結果とスタッツ 失点の中心はペイント内",
+          "対象は11月7日の横浜BC戦から、11月18日の川崎戦までの5試合です。"
+        ],
+        "qualifiers": "直近5試合の期間を画像内に明記。相手の強さや日程の違いは未調整という留保のある順位・チーム比較は画像に採用していない。個人成績・出場・活躍の文字を採用していない。"
+      },
+      {
+        "role": "本文根拠・固定文章",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fd75d53bcb2937406abe/source.txt",
+        "evidence": "固定HTMLと同内容で、チーム名・1勝4敗・対象期間・見出しを照合。記事内容は指定された2ファイルだけを根拠にした。"
+      },
+      {
+        "role": "承認済みスタイル参照",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認。黒×ライム、太い日本語見出し、手描きインクとブラシ、少ない要素を参照。人物・名前・数値・日付・元の構図は流用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "金田龍弥",
+        "selection": "ランダム",
+        "selection_method": "チーム分析の記事で単独の主役を絞れないため、本文に名前がある4選手を対象にPython secrets.choiceで1人を抽選。再抽選なし。",
+        "candidates": [
+          "ファーダウス・アイマク",
+          "ヨーリ・チャイルズ",
+          "金田龍弥",
+          "寺園脩斗"
+        ],
+        "official_sources": [
+          {
+            "title": "神戸ストークス公式・金田龍弥 選手プロフィール",
+            "url": "https://www.storks.jp/team/players/detail/id=16352?PlayerID=5100000031",
+            "image_url": "https://storks.bl.kuroco-img.app/v=1788785551/files/user/%2330_%E9%87%91%E7%94%B0%E9%BE%8D%E5%BC%A5.jpg",
+            "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fd75d53bcb2937406abe/references/kaneda-profile-photo.jpg",
+            "inspection": "公式ページの本人名付き写真をダウンロードし、view_imageで実見。"
+          },
+          {
+            "title": "神戸ストークス公式・金田龍弥 選手紹介",
+            "url": "https://www.storks.jp/player_lp/ryuya_kaneda/",
+            "image_url": "https://storks.bl.kuroco-img.app/v=1759394557/files/user/_/player_25-26/image/2025_pc_30.webp",
+            "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fd75d53bcb2937406abe/references/kaneda-official.webp",
+            "inspection": "公式プロフィール掲載の人物画像をview_imageで実見。"
+          }
+        ],
+        "observed_features": "黒い中分けのカーテン状の髪、額の見える分け目、長めの卵型の輪郭、細めの目、まっすぐな眉、鼻筋、顎、ひげのない顔、頬の小さなほくろ、長い首と細身の体格を参照。",
+        "depiction": "左側でボールを扱いながらドライブするプレー姿の手描きイラスト。実際の試合場面の再現ではない。本人名・背番号・個人成績・出場・活躍の文字は入れず、『イラスト（AI生成）』『イメージ』を表示。写真を貼り付けず、ロゴとスポンサー文字を描いていない。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset type: one finished Japanese basketball editorial thumbnail, landscape PNG 1536 x 864 (16:9), high resolution.\nCreate a brand new image for the basketball fan publication バスケまとめ. Use the already viewed black/lime approved Culver thumbnail only as a style reference: deep near-black #151A18, acid lime #CCF43B, warm off-white, expressive hand-painted ink and dry-brush strokes, bold Japanese typography, strong spacious hierarchy. Do NOT reuse that reference's player, pose, text, scores, date, or layout.\nSubject identity reference: the last viewed official profile portrait is the real player Ryuya Kaneda / 金田龍弥 of Kobe Storks. Draw ONLY this one real person, in a new playing pose. Preserve his recognizable face: clean-shaven elongated oval face and tapered rounded chin, dark almond-shaped eyes, straight dark eyebrows, straight medium-width nose with rounded tip, medium lips, long neck, lean tall athletic build, dark medium-length curtain hair with a near-center part exposing the forehead, swept gently outward around ears. Include the small cheek mole subtly. Do not use a generic invented athlete, do not substitute the face from the style reference.\nComposition: dynamic illustrated Kaneda on the LEFT 40 percent, driving forward diagonally with torso leaning, knees flexed, orange basketball controlled at the near-side waist by one anatomically correct hand, other arm naturally bent for balance. Three-quarter face clearly visible and sufficiently large to recognize. Head, ball and both hands wholly inside the canvas with breathing room. Crop naturally at mid-thigh near the lower edge. Plain dark-green/black basketball kit, clean unmarked fabric with subtle ivory/lime edges, no jersey lettering or numbers at all. No tattoos invented. Entire subject must be visibly hand-drawn with expressive black ink contours and textured ivory shadows, not a photograph, not photorealistic, not a photo collage.\nBackground: sparse near-black field with one diagonal lime dry-brush sweep behind the player for motion. Keep the RIGHT 55 percent quiet for headline copy. No additional humans, crowd, arena logos or scoreboard. Ball is a prop held by the person.\nEditorial meaning: the article is a TEAM ANALYSIS of Kobe Storks' most recent FIVE games, November 7–18, 2026, with 1 win and 4 losses and paint scoring central to points conceded. Player was RANDOMLY selected among names in the article solely as a visual subject. It is an imagined basketball pose, never a recreation of an actual game or scoring event. Do not mention his name, personal statistics, participation, success or failure anywhere in the image. No league rankings or new facts.\nText (verbatim, Japanese, absolutely correct and clearly readable):\ntop small publication line: \"バスケまとめ\"\nright top team header, bold off-white: \"神戸ストークス\"\nright upper small line: \"直近5試合｜11/7〜11/18\"\nright upper-middle medium bold: \"1勝4敗\"\nright main headline in two large lines: \"失点の中心は\" and \"ペイント内\"\nbottom safe-area label: \"イラスト（AI生成）\" and \"イメージ\"\nAll text is horizontal. Make ペイント内 the dominant lime headline; 失点の中心は off-white, substantially large. Team header establishes all numbers and claims as team-level. The record is a supporting fact, not bigger than the main headline. Typography should be heavy, readable Japanese sans-serif with restrained rough ink edge treatment. Bottom labels must be readable, not tiny. Keep all text within generous 50px safe margins, clear of the person and brush edges.\nConstraints: Exactly one thumbnail; no borders, no multi-panel grids, no extra words, no English text other than AI within the required label, no athlete name, no date other than stated date range, no watermarks, no team/league/sponsor logos, no pasted official photos. Photographs only inform likeness. Do not include 38 points, Culver, Sendai, or any text from the style reference. Anatomically plausible hands and body. Opaque background.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "correction_calls": 0,
+      "source_output": "/Users/genjo/.codex/generated_images/01a1f6f5-73bf-7d63-b513-ae3b701b1f1d/exec-6f8d2938-2594-4949-a9a1-e793835cb9d9.png",
+      "saved_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fd75d53bcb2937406abe/generated.png",
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "inspection_method": "内蔵生成ツールの画像表示および保存元PNGのview_imageを実見。sipsで画像寸法とPNG形式を確認。",
+      "inspection_notes": {
+        "text_and_numbers": "チーム名、直近5試合、11/7〜11/18、1勝4敗、見出しが固定原稿と一致することを画像で確認。",
+        "source_qualifiers": "対象期間が表示され、特定試合の再現やランダム選手の成績・出場・活躍を示す文字がなく、イメージ表記があることを画像で確認。",
+        "likeness_or_no_named_person": "金田龍弥の公式写真で見た髪型・輪郭・眉・目鼻・ひげのない顔・頬のほくろをイラストと比較。人物は1人で、個人名の表示なし。",
+        "layout": "顔、ボール、両手、見出し、注記が画面内に収まり、文字と顔の重なりなし。両手の指と関節に目立つ破綻なし。太ももでの意図した人物トリミング。",
+        "ai_label": "『イラスト（AI生成）』『イメージ』が画面右下に読める大きさで存在。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-20T03:20:43.407315+00:00",
+  "publication_approved": false
+}
