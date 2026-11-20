@@ -1,0 +1,112 @@
+{
+  "id": "e9216099cfca79a988e3",
+  "article_path": "article-results-one-next-20261121.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261121.html",
+  "source_commit": "",
+  "source_blob_sha": "6237d0f668ff700df8c5a6f45a0d8f8bb4ca0632",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "e61e47fb7b7df1439fa4f41f233af4cc74b888b364d69d8b8f3252657ebed1d7",
+  "last_observed_blob_sha": "6237d0f668ff700df8c5a6f45a0d8f8bb4ca0632",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e9216099cfca79a988e3/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e9216099cfca79a988e3/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-20T20:34:46.911676+00:00",
+  "creation_event_id": "924fe99e5c39fa6f5654",
+  "event_blob_sha": "6237d0f668ff700df8c5a6f45a0d8f8bb4ca0632",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/e9216099cfca79a988e3/thumbnail.png",
+  "image_sha256": "f96fcc4adafecdec706908dd7cca55a9e1e03ddd1e52b30bddb8c8f1b0d03840",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "6237d0f668ff700df8c5a6f45a0d8f8bb4ca0632",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.21｜試合前",
+      "B.ONE / B.NEXT",
+      "今季平均EFFで選ぶ",
+      "ベスト5・サブ5",
+      "対象試合の登録選手から選出",
+      "出場確定ではありません",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e9216099cfca79a988e3/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261121.html",
+        "verified_blob_sha": "6237d0f668ff700df8c5a6f45a0d8f8bb4ca0632",
+        "evidence": "2026-11-21の試合前。B.ONE/B.NEXT。今季平均EFFで対象試合の登録選手からリーグ別ベスト5・サブ5を選出。出場確定を示す選出ではない。当日の公式結果は確定待ち。"
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/e9216099cfca79a988e3/source.txt",
+        "evidence": "固定テキストの見出し・表・注記を確認。外部ページの成績を本文根拠として追加していない。"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "inspection": "view_imageで目視。黒×ライム、太い日本語見出し、インク・ブラシを参照。元の選手・得点・日付は流用していない。"
+      },
+      {
+        "role": "likeness_only",
+        "url": "https://veertien-basketball.jp/team/players/detail/id=60009?PlayerID=50011",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026112104/files/user/roster/2726/2026-27/50011_01.jpg",
+        "inspection": "クラブ公式プロフィールの氏名と画像を確認し、プロフィール画像をview_imageで目視。修正生成では容姿参照に使用。公式写真の貼り込みはしていない。"
+      },
+      {
+        "role": "supplemental_likeness_only",
+        "url": "https://www.bleague.jp/valentine/2026/player/vm/",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=1769029569/files/user/_/valentines/2026/img/player/51_vm_01.jpg",
+        "inspection": "リーグ公式掲載の同選手写真をview_imageで目視。髪型・顔の補助確認のみ。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "新本 風河",
+        "romanized_name": "Fuga Aramoto",
+        "selection": "ランダム",
+        "selection_reason": "複数選手の比較表が中心で、本文の主役が1人に絞れないため、本文に名前のある20人から抽選。",
+        "selection_method": "Python random.Random('e9216099cfca79a988e3').choice(article_named_players)",
+        "selection_pool": [
+          "レイナルド・ガルシア",
+          "トレイ・ボイド",
+          "ジャック・クラーク",
+          "ユージーン・フェルプス",
+          "ジョーダン・フェイゾン",
+          "アンソニー・クレモンズ",
+          "アンソニー・ゲインズ・ジュニア",
+          "タッカー・ヘイモンド",
+          "グレゴリー・エチェニケ",
+          "キーガン・レコード",
+          "山根 響",
+          "髙木 慎哉",
+          "イブラヒム・ディアビ",
+          "サム・ティミンズ",
+          "ハイデン・コヴァル",
+          "新本 風河",
+          "石井 智大",
+          "ジョーダン・ジャイルズ",
+          "ジャマル・ポップラー",
+          "マイク・エドワーズ"
+        ],
+        "source": "ヴィアティン三重公式プロフィール",
+        "url": "https://veertien-basketball.jp/team/players/detail/id=60009?PlayerID=50011",
+        "official_profile_image": "https://bleague.bl.kuroco-img.app/v=2026112104/files/user/roster/2726/2026-27/50011_01.jpg",
+        "appearance_observed": "中央付近で分けた黒いストレートヘア、丸みのある頬、短めの輪郭、自然なまっすぐの眉、細めの目、短い鼻、ひげなし。最終画像の顔を参照写真と見比べて確認。",
+        "depiction": "右側でドリブルする実在選手1人のインクイラスト。特定試合の再現ではない。",
+        "image_text_constraints": "選手名、個人成績、出場・活躍の断定、背番号は画像に入れていない。注記はイラスト（AI生成）とイメージ。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT\nUse case: illustration-story\nAsset type: ONE finished Japanese basketball editorial thumbnail, horizontal 16:9, 2048x1152 PNG, fully opaque.\nCreate a new original hand-drawn ink-and-brush illustration with integrated Japanese typography. Match the approved black/lime reference already inspected in this conversation: deep near-black #151A18, electric lime #CCF43B, ivory white, sparse energetic dry-brush accents, high contrast, bold condensed Japanese Gothic lettering. No photography or photorealism.\n\nSubject: exactly ONE real player, Fuga Aramoto (新本 風河), visually based on the official 2026-27 Veertien Mie portrait inspected in this conversation. He is a compact athletic young adult Japanese male guard. Preserve the distinctive reference appearance: straight smooth black hair with a slightly off-center middle part and two rounded curtains ending above/along the ears, exposed central forehead, oval face with moderately rounded cheeks and a gently tapered jaw, straight dark eyebrows, narrow almond eyes, straight short nose, medium closed lips, clean-shaven, no facial hair. Do not invent a generic player. Draw his face recognizably in clean expressive ink strokes with restrained flat shading, not realistic skin texture.\nPose: dynamic three-quarter driving dribble on the RIGHT half, torso leaning forward, eyes looking ahead toward the left, knees bent, right hand naturally above an orange basketball under his control, other arm bent for balance. Keep face, both hands and entire ball in frame; natural anatomy, five fingers where visible. Lower legs may end at the lower art boundary. Plain unbranded light jersey over black short-sleeve base layer and plain dark shorts. No jersey number, no name, no writing on the uniform, no badges, logos or sponsors. This is an imagined basketball action illustration, not a reconstruction of any match.\n\nComposition: typography occupies left 58% with generous margins, the athlete occupies right 42%, with a lively diagonal lime brush stroke behind him. Keep the left text area calm. No additional people, arena crowds, scoreboards, cards, charts, team logos or league logos. Render league names as ordinary text only.\nTypography hierarchy: modest masthead at top-left, clear date and league line, enormous main headline over two lines across the left, then two readable qualifier lines. Bottom edge holds the AI/imagination label. Do not overlay text on face or ball. All text stays safely inside canvas (at least 65 px). The small qualification and AI label must remain clearly legible.\n\nText (verbatim, every line exactly as shown, no additional words or numerals):\nバスケまとめ\n2026.11.21｜試合前\nB.ONE / B.NEXT\n今季平均EFFで選ぶ\nベスト5・サブ5\n対象試合の登録選手から選出\n出場確定ではありません\nイラスト（AI生成）｜イメージ\n\nMake 「ベスト5・サブ5」 the largest lime headline, and 「今季平均EFFで選ぶ」 large ivory lettering immediately above it. Other text ivory, date may use lime.\nEditorial accuracy: source article is a pregame preview using season-average EFF, rankings separately by league, and no results have been confirmed. The chosen player was RANDOMLY selected from the article's mentioned players solely as an illustration model. Do NOT write the player's name, statistics, participation, achievements, selection rank, victory, or any claim about his game. No score, no inferred results. The illustrated action is purely imaginative. Do not carry over the reference artwork's player, date, team names, scores or \"38\".\nOutput exactly one polished thumbnail.\n\nSINGLE REVISION PROMPT\nEdit the first image into the final approved thumbnail. Image 1 is the ONLY edit target. Image 2 is the official photographic profile of real basketball player Fuga Aramoto (新本 風河), a reference ONLY for his facial likeness. Never paste any part of the photo into the artwork.\n\nMake exactly these quality corrections in one pass:\n1. Rework the illustrated player's FACE to closely match the real man in Image 2 while keeping the current hand-drawn editorial ink/brush medium. His face is shorter and rounder than Image 1: fuller rounded cheeks, less angular jaw, gently tapered small chin, straight thinner natural eyebrows (not dramatic V-shaped manga brows), narrower relaxed almond eyes, a small straight nose, medium closed lips and a youthful but adult clean-shaven face. Preserve his distinctive smooth black center-parted curtain haircut and central forehead opening. Reduce the generic anime look; retain a specific real-person likeness through the proportions. Keep the dynamic dribbling pose and keep it illustrated, not photographic.\n2. Reduce and position the right-side athlete and ball together slightly so the COMPLETE orange basketball has a clear margin of at least 45 pixels above the bottom edge, the head has at least 30 pixels above it, and both hands are entirely inside the frame. No chopped basketball, fingers or hair. The ball must remain naturally under his right hand. Keep five natural fingers on each hand where visible. It is okay to crop the lower legs, but never the ball. Keep the text area unobstructed.\n\nPreserve EVERYTHING else: horizontal approximately 16:9 canvas, black #151A18 and lime #CCF43B/ivory hand-drawn ink design, the plain unbranded light jersey over black short-sleeved base layer, no jersey name or number, no logos, and the current Japanese type layout and exact wording. Do not add people or extra text.\nThe following text must remain complete and correctly spelled:\nバスケまとめ\n2026.11.21｜試合前\nB.ONE / B.NEXT\n今季平均EFFで選ぶ\nベスト5・サブ5\n対象試合の登録選手から選出\n出場確定ではありません\nイラスト（AI生成）｜イメージ\n\nThis is a random choice of a real player used as an imagined action illustration for a season-average preview. Do not insert his name, any individual statistics, any result, or claims that he played or excelled on that date. Photo reference is for likeness only: do not reproduce its logos, jersey number, sponsor lettering or background. Output ONE complete final PNG, width at least 1600 pixels, approximately 16:9.",
+    "generator": "Built-in image_gen.imagegen only. One initial generation and one revision. No API/CLI generation, new billing, git operation, publication, external delivery or thumbnail_queue.py ready. Final image visually inspected before saving.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-20T20:38:29.281260+00:00",
+  "publication_approved": false
+}
