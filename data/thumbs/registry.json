@@ -1120,6 +1120,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "愛媛対岡山を試合前予測、11連勝の岡山が有利"
   },
+  "article-daily-20261121.html": {
+   "article_path": "article-daily-20261121.html",
+   "editorial_fingerprint": "77d78c84f8d009ef95a32fbbcdf4a31b5e2cee42a2d1d2171fe10bf4a4486e2a",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261121-c076d77f58fa.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261121-c076d77f58fa-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "32b2d1daa11df55f4a4e",
+   "image_sha256": "c076d77f58fa496815bf8b9fa240d2b28aae81d59dc6a85db5be7e5551139d93",
+   "imported_at": "2026-11-20T23:21:47.540899+00:00",
+   "prepared_at": "2026-11-20T23:21:09.669254+00:00",
+   "source_blob_sha": "113e73118399c2fc5a2a0a5648930fe8fabe8277",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "77d78c84f8d009ef95a32fbbcdf4a31b5e2cee42a2d1d2171fe10bf4a4486e2a",
+   "style": "ink-lime-portrait-v5",
+   "title": "愛媛対岡山を検証し第2戦を予測、岡山が84-71で先勝"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -3028,13 +3056,6 @@
  "log": [
   {
    "article": "article-daily-20261115.html",
-   "at": "2026-11-15T13:06:26.774113+00:00",
-   "by": "9f757581f96bc573aa5f",
-   "event": "superseded",
-   "id": "c64f75eca95f7a1461d5"
-  },
-  {
-   "article": "article-daily-20261115.html",
    "at": "2026-11-15T13:06:26.774139+00:00",
    "by": "9f757581f96bc573aa5f",
    "event": "superseded",
@@ -3585,6 +3606,13 @@
    "event": "imported",
    "id": "e9216099cfca79a988e3",
    "image": "f96fcc4adafe"
+  },
+  {
+   "article": "article-daily-20261121.html",
+   "at": "2026-11-20T23:21:47.540926+00:00",
+   "event": "imported",
+   "id": "32b2d1daa11df55f4a4e",
+   "image": "c076d77f58fa"
   }
  ],
  "seen": {
@@ -3622,6 +3650,7 @@
   "2ffa19b961fae6d1e9bc": "imported",
   "3143112bfc83546772bc": "imported",
   "31a9c1e5a34b25318ae8": "superseded:e64b9ac50fa81c41ae65",
+  "32b2d1daa11df55f4a4e": "imported",
   "330254df3808c570f4b6": "imported",
   "3370472f9c78336a4974": "imported",
   "3379ecab4c5d77e8e9a3": "imported",
