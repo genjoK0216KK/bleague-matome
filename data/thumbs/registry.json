@@ -1876,6 +1876,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "11/20 試合結果・当日のEFF"
   },
+  "article-games-20261121.html": {
+   "article_path": "article-games-20261121.html",
+   "editorial_fingerprint": "8c497d5e318c6f7dabfe0d8833d532d274ebcadf7204b065362a66a52a780297",
+   "files": {
+    "eyecatch": {
+     "height": 721,
+     "path": "thumbs/auto/article-games-20261121-03dff4106f96.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-games-20261121-03dff4106f96-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "c1589b0cca1c4132780e",
+   "image_sha256": "03dff4106f96a07092b3d24b347b0f76d45fa6d55694daa77a787a8f2eab7dd7",
+   "imported_at": "2026-11-20T17:48:12.243741+00:00",
+   "prepared_at": "2026-11-20T17:47:29.671107+00:00",
+   "source_blob_sha": "23c0c97f9a576e1fe05a43b0a06319c81ab72f3a",
+   "source_size": [
+    1671,
+    941
+   ],
+   "stable_fingerprint": "8c497d5e318c6f7dabfe0d8833d532d274ebcadf7204b065362a66a52a780297",
+   "style": "ink-lime-portrait-v5",
+   "title": "11/21 出場予定選手（登録選手）のベスト5"
+  },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
    "editorial_fingerprint": "e19b14f8f8d94cccdae186da2df34e0edfdbee28d446a577722d48f470c2eea5",
@@ -2972,13 +3000,6 @@
  "log": [
   {
    "article": "article-results-one-next-20261115.html",
-   "at": "2026-11-15T11:10:22.876766+00:00",
-   "by": "02a6048a7bd570db2c5e",
-   "event": "superseded",
-   "id": "944bf2324fc374c45c83"
-  },
-  {
-   "article": "article-results-one-next-20261115.html",
    "at": "2026-11-15T11:10:23.001989+00:00",
    "event": "imported",
    "id": "02a6048a7bd570db2c5e",
@@ -3529,6 +3550,13 @@
    "event": "imported",
    "id": "54903eab3566ffc03029",
    "image": "0e8546dce67b"
+  },
+  {
+   "article": "article-games-20261121.html",
+   "at": "2026-11-20T17:48:12.243772+00:00",
+   "event": "imported",
+   "id": "c1589b0cca1c4132780e",
+   "image": "03dff4106f96"
   }
  ],
  "seen": {
@@ -3694,6 +3722,7 @@
   "bd3d709f0889950146e7": "superseded:e64b9ac50fa81c41ae65",
   "be964f4359fb4b535b50": "imported",
   "bfca0a49ccb938a128d8": "superseded:f92afc73ed838d9cdaa0",
+  "c1589b0cca1c4132780e": "imported",
   "c1aaf417a1880194d3ac": "imported",
   "c30cc01686bce3bc931c": "imported",
   "c3151cd8b45c0d6d80ab": "superseded:556a6a0e14555b13288a",
