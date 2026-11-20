@@ -168,6 +168,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "レバンガ北海道の直近5試合は4勝1敗 速攻とペイントで稼ぎ3Pは最少"
   },
+  "article-analysis-kobe-20261120.html": {
+   "article_path": "article-analysis-kobe-20261120.html",
+   "editorial_fingerprint": "a1acd25a63726235252bbeafacc8e6c50e9f86a617df839e95597104d6ea3998",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-analysis-kobe-20261120-026c3068999d.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-kobe-20261120-026c3068999d-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "fd75d53bcb2937406abe",
+   "image_sha256": "026c3068999de00cb1cd2243ba422180b42982ff89adf8c9bb27e177c8f7f503",
+   "imported_at": "2026-11-20T03:21:21.413289+00:00",
+   "prepared_at": "2026-11-20T03:20:43.407315+00:00",
+   "source_blob_sha": "1400002c2a0f14c6dca472c64dff2dcacf0fab89",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "a1acd25a63726235252bbeafacc8e6c50e9f86a617df839e95597104d6ea3998",
+   "style": "ink-lime-portrait-v5",
+   "title": "神戸ストークスの直近5試合 1勝4敗の試合結果とスタッツ 失点の中心はペイント内"
+  },
   "article-analysis-nagasaki-20261116.html": {
    "article_path": "article-analysis-nagasaki-20261116.html",
    "editorial_fingerprint": "72824ca575d211c8566745ae6914f312bf680a3273faa66f4e3cb349d6b9f368",
@@ -2943,13 +2971,6 @@
  },
  "log": [
   {
-   "article": "article-results-one-next-20261115.html",
-   "at": "2026-11-14T18:22:07.228247+00:00",
-   "event": "imported",
-   "id": "944bf2324fc374c45c83",
-   "image": "a496b59b71f8"
-  },
-  {
    "article": "article-daily-20261115.html",
    "at": "2026-11-14T23:29:23.578469+00:00",
    "event": "imported",
@@ -3501,6 +3522,13 @@
    "event": "imported",
    "id": "5610585c712ced4f4449",
    "image": "7340dc677bcc"
+  },
+  {
+   "article": "article-analysis-kobe-20261120.html",
+   "at": "2026-11-20T03:21:21.413318+00:00",
+   "event": "imported",
+   "id": "fd75d53bcb2937406abe",
+   "image": "026c3068999d"
   }
  ],
  "seen": {
@@ -3716,6 +3744,7 @@
   "fa0cffbf413d01623b62": "superseded:a5ada266578c44560dce",
   "faacf40f2eedbd5f216f": "imported",
   "fcf33c7c4f183753d4ec": "imported",
+  "fd75d53bcb2937406abe": "imported",
   "fe1ea3cd5a175ef3ddfa": "imported",
   "fe1f2384a1e2d550107e": "superseded:c3dac2b9caaaf4c62772",
   "fe35e8e879067561251c": "imported",
