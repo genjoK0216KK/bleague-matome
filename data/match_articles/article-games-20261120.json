@@ -32,7 +32,7 @@
       "fixed": false,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507377",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-      "status": "scheduled",
+      "status": "unconfirmed",
       "players": [],
       "home": "八王子",
       "home_full": "東京八王子ビートレインズ",
@@ -41,7 +41,8 @@
       "away": "福島",
       "away_full": "福島ファイヤーボンズ",
       "away_id": "711",
-      "away_score": null
+      "away_score": null,
+      "record_note": "official_record_not_loaded"
     },
     {
       "game_id": "507389",
@@ -52,7 +53,7 @@
       "fixed": false,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507389",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-      "status": "scheduled",
+      "status": "unconfirmed",
       "players": [],
       "home": "愛媛",
       "home_full": "愛媛オレンジバイキングス",
@@ -61,7 +62,8 @@
       "away": "岡山",
       "away_full": "トライフープ岡山",
       "away_id": "1639",
-      "away_score": null
+      "away_score": null,
+      "record_note": "official_record_not_loaded"
     }
   ],
   "individual_candidates": [],
