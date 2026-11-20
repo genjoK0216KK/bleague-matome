@@ -1,0 +1,93 @@
+{
+  "id": "934355c9baaddd366a4c",
+  "article_path": "article-daily-20261120.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261120.html",
+  "source_commit": "",
+  "source_blob_sha": "f27f90bf3c5212d160001dc9ec8619218a7e664f",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "737635de8516aa769291447b518fb77d0e80d09741f046f66e6d2f37a76e83f4",
+  "last_observed_blob_sha": "f27f90bf3c5212d160001dc9ec8619218a7e664f",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/934355c9baaddd366a4c/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/934355c9baaddd366a4c/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-20T10:22:32.841885+00:00",
+  "creation_event_id": "a65bf4e16a6b5cdcb93d",
+  "event_blob_sha": "f27f90bf3c5212d160001dc9ec8619218a7e664f",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/934355c9baaddd366a4c/thumbnail.png",
+  "image_sha256": "6c3b1120314565e5ca2f1cde44ab68b0e1982fda321f1a32287f33fb33668561",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "f27f90bf3c5212d160001dc9ec8619218a7e664f",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.20",
+      "試合前予測",
+      "愛媛 vs 岡山",
+      "11連勝の",
+      "岡山が有利",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_body",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/934355c9baaddd366a4c/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261120.html",
+        "used_for": "本文の唯一の根拠（固定HTML/TXT）。対戦・日付・岡山11連勝・試合前予測。掲載済み試合結果とは扱わない。"
+      },
+      {
+        "type": "article_body",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/934355c9baaddd366a4c/source.txt",
+        "used_for": "固定本文のテキスト照合。外部ページの成績や本文は画像の内容根拠に追加していない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "used_for": "view_imageで確認した黒・ライム、太い日本語、インクとブラシの承認済みスタイル。人物・成績は持ち越していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジョシュ・スコット",
+        "selection": "ランダム",
+        "selection_method": "チーム比較記事のため、本文に登場する岡山の選手から抽選。本文でインジュアリーリスト登録中とされる選手を除外。Python random.Random('934355c9baaddd366a4c')で['レイナルド・ガルシア','ジョシュ・スコット']からchoice。",
+        "official_profile": "https://www.bleague.jp/roster_detail/?PlayerID=12631",
+        "official_photo": "https://www.bleague.jp/files/user/roster/1639/2026-27/12631_03.png",
+        "reference_use": "公式プロフィール写真をダウンロードしview_imageで容姿確認。修正時にも参照画像として渡した。短い巻き毛・刈り上げ、太い眉、鼻・輪郭、ひげのない顔、がっしりした体格をイラスト化。公式写真そのものは成果物に貼り付けていない。",
+        "depiction": "青の無地ユニフォームでボールを持つ人物。ロゴ・名前・背番号・個人成績なし。実際の試合場面を再現したという主張なし。"
+      },
+      {
+        "name": "シャキール・ハインズ",
+        "selection": "ランダム",
+        "selection_method": "同じ乱数生成器で、本文に登場する愛媛の選手から抽選。インジュアリーリスト登録中の選手を除外した候補は['シャキール・ハインズ']のみ。",
+        "official_profile": "https://www.bleague.jp/roster_detail/?PlayerID=5100000050",
+        "official_photo": "https://www.bleague.jp/files/user/roster/723/2026-27/5100000050_03.png",
+        "reference_use": "公式プロフィール写真をダウンロードしview_imageで容姿確認。修正時にも参照画像として渡した。短く頭に沿う髪型、面長の輪郭、口ひげ・顎ひげ、細身の体格をイラスト化。公式写真そのものは成果物に貼り付けていない。",
+        "depiction": "オレンジの無地ユニフォームで守備をする人物。ロゴ・名前・背番号・個人成績なし。実際の試合場面を再現したという主張なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION:\nUse case: illustration-story\nAsset type: one Japanese basketball editorial thumbnail, landscape 16:9, 1536×864 or larger.\nCreate exactly ONE finished illustration.\n\nEditorial content is ONLY this fixed article: preview of Ehime versus Okayama on 2026.11.20. Okayama has won 11 consecutive games, and the author's pregame prediction favors Okayama. It is not a completed match result. Do not add scores, predictions of exact margin, individual statistics, or any additional factual claim.\n\nVisual design: match the approved black-and-lime basketball editorial style shown in the conversation: deep charcoal #151A18, electric lime #CCF43B, warm off-white lettering, expressive rough ink outlines, dry-brush strokes and a little paper grain. Strong flat drawn shapes, hand-drawn ink hatching, editorial sports illustration. Absolutely NOT photographic, NOT photorealistic, NO pasted photographic areas. Sparse energetic composition and very readable huge bold Japanese type. Black/lime dominates; selective orange on basketball and orange jersey, subtle blue on other jersey. No team logos, league logos, sponsors, manufacturer marks, shirt lettering, jersey numerals or watermarks.\n\nTwo real players must be unmistakably based on the official profile portraits inspected in this conversation:\n1) Josh Scott / ジョシュ・スコット, official B.LEAGUE photo https://www.bleague.jp/files/user/roster/1639/2026-27/12631_03.png. Tall broad-shouldered muscular build, light tan complexion, short tight dark curls on top with closely tapered sides, strong dark eyebrows, broad straight nose, square-oval jaw, clean-shaven cheeks and chin. Draw this actual person's facial proportions, not a generic substitute. Plain blue sleeveless uniform with restrained warm trim, no markings.\n2) Shaquille Hines / シャキール・ハインズ, official B.LEAGUE photo https://www.bleague.jp/files/user/roster/723/2026-27/5100000050_03.png. Slightly shorter and leaner than Scott, deep brown complexion, short dense upright black afro, long slim face, defined cheekbones, narrow jaw with short goatee and mustache, short sideburns, attentive dark eyes. Tattooed upper arms translated into simple ink forms. Plain orange sleeveless uniform with dark neckline, no markings.\nDo not depict Reynaldo Garcia or the player from the style reference. Do not copy official photographs into the image. These photos inform facial likeness ONLY. Both selected players are random representatives of the article's two teams; do not print their names, playing records or performance claims.\n\nScene: an imagined, energetic post-up one-on-one basketball play, not an actual recorded match or definitive scoring play. On the right half, Scott rotates his shoulders with a basketball held naturally in both hands around chest height, looking toward the left; Hines defends at his right side and slightly behind, one arm raised and the other out to the side. Keep both faces clearly visible, recognizably different, and all important hands inside frame. Natural hands, five fingers on each visible hand, no fused fingers or extra limbs. Frame thighs upward. Express effort through body movement; no victory celebration. No hoop or detailed arena needed. Lime diagonal brush sweeps imply motion behind the players. The basketball must be held by a player.\n\nLayout: left 52% primarily typography, right 48% the two-player illustrated action, no player or brush stroke obscures letters. All text fully inside at least 50px safe margins. Bottom caption sits on calm black background and remains clearly legible. No tiny illegible text.\nExact text, and ONLY this text:\ntop-left small brand: 「バスケまとめ」\nsmall date: 「2026.11.20」\nprominent lime badge: 「試合前予測」\nlarge off-white matchup: 「愛媛 vs 岡山」\nhuge headline, two lines: 「11連勝の」「岡山が有利」\nbottom-left caption: 「イラスト（AI生成）」\nbeside caption: 「イメージ」\n\nUse the headline to communicate the article's pregame prediction. '11連勝' belongs to Okayama as a team, never as an individual player achievement. Make the qualifier 試合前予測 unmissable. Lettering must be exact, beautiful, crisp, heavy Japanese gothic with modest brush texture. No other words or numbers.\n\nONE PERMITTED CORRECTION:\nEdit the first supplied image (the completed black-and-lime basketball thumbnail). The second image is the official Josh Scott portrait, and the third is the official Shaquille Hines portrait. These two photos are ONLY facial likeness references and must NEVER be pasted into the artwork.\n\nMake this single final correction:\n1. Give the two illustrated players enough breathing room: reduce the combined player group a little (about 10 percent), lower the raised defensive hand, and bring the basketball and rightmost hand inward so that ALL fingertips, hands, heads and the entire basketball are inside the canvas with at least 35px clearance at the top and right edges. Keep the same energetic post-up action, blue-uniform Scott foreground right, orange-uniform Hines defending beside/behind him. It is fine that thighs continue beyond the lower edge. Keep natural anatomy and five fingers per visible hand.\n2. Match both real players more closely to their official portraits. Scott: short, compact, tight dark curls, closely tapered sides, thick dark eyebrows, broad nose and square-oval clean-shaven face, muscular build. Hines: MUCH shorter hair than in the current illustration: a very short close-cropped dense afro following the skull, not a high fluffy curly hairstyle. Hines has a long slender face, narrower jaw, short neat goatee and mustache, deeper brown skin, slim athletic build. Preserve the clearly illustrated ink/brush style; do not turn their faces photographic. Both references show short hair.\n3. Retain the EXACT complete existing text and the black #151A18, lime #CCF43B, off-white, orange/blue palette and strong composition. Keep every letter unobscured with safe margins. Do not add new wording, names, jersey numbers, logos, sponsors or other symbols.\n\nText that must remain unchanged:\nバスケまとめ\n2026.11.20\n試合前予測\n愛媛 vs 岡山\n11連勝の\n岡山が有利\nイラスト（AI生成）\nイメージ\n\nMaintain a horizontal approximately 16:9 PNG, at least 1536px wide. Produce ONE image. It is an imagined illustration for a pregame preview, not a photograph, match result, or an actual match scene.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 2,
+      "correction_count": 1,
+      "final_selected_output": "/Users/genjo/.codex/generated_images/01a1f87a-b27c-7080-b832-2ab1787e4e64/exec-1de7fa5b-4e73-49a8-9bbb-eb6ac0865d2a.png",
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "visual_inspection": "初稿と修正版を実際に目視。修正版の全文字・数字、試合前予測とイメージの留保、公式写真との容姿比較、手の形・顔と手とボールの見切れなし、AI生成表記を確認。名前や個人成績、公式ロゴなし。",
+      "operations": "API・CLI生成・新課金・git操作・公開・外部送信・thumbnail_queue.py readyは実施していない。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-20T10:26:32.443929+00:00",
+  "publication_approved": false
+}
