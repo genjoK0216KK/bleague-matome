@@ -1,0 +1,173 @@
+{
+  "id": "c1589b0cca1c4132780e",
+  "article_path": "article-games-20261121.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261121.html",
+  "source_commit": "",
+  "source_blob_sha": "23c0c97f9a576e1fe05a43b0a06319c81ab72f3a",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "8c497d5e318c6f7dabfe0d8833d532d274ebcadf7204b065362a66a52a780297",
+  "last_observed_blob_sha": "23c0c97f9a576e1fe05a43b0a06319c81ab72f3a",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c1589b0cca1c4132780e/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c1589b0cca1c4132780e/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-20T17:43:32.972584+00:00",
+  "creation_event_id": "002e7254fe6aaf690fc3",
+  "event_blob_sha": "23c0c97f9a576e1fe05a43b0a06319c81ab72f3a",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/c1589b0cca1c4132780e/thumbnail.png",
+  "image_sha256": "03dff4106f96a07092b3d24b347b0f76d45fa6d55694daa77a787a8f2eab7dd7",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "23c0c97f9a576e1fe05a43b0a06319c81ab72f3a",
+    "text_lines": [
+      "バスケまとめ",
+      "11/21",
+      "試合予定",
+      "B.ONE・B.NEXT",
+      "試合前",
+      "当日TOP3・ベスト5は公式記録確定待ち",
+      "2026/11/21 02:42〜02:43 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "本文根拠（固定HTML）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c1589b0cca1c4132780e/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261121.html",
+        "verified_blob_sha": "23c0c97f9a576e1fe05a43b0a06319c81ab72f3a"
+      },
+      {
+        "role": "本文根拠（固定文章）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c1589b0cca1c4132780e/source.txt",
+        "facts_used": [
+          "試合日2026年11月21日",
+          "B.ONEおよびB.NEXTの全掲載試合は試合前",
+          "当日EFF・ポジション別TOP3と最高の手札5人は全試合の公式記録確定待ち",
+          "資料取得2026-11-21 02:42〜02:43 JST"
+        ],
+        "qualifier_policy": "タイトルから出場やベスト5選出を断定せず、本文の試合前・公式記録確定待ちを明記。外部ページの成績・日程は本文根拠に使用していない。"
+      },
+      {
+        "role": "制作ルール",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "precedence": "主役は実在選手にする最新ユーザー指示を優先。ready・公開・外部送信は実施しない。"
+      },
+      {
+        "role": "承認済みスタイル参照（目視確認）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "scope": "色・インク画風・太い日本語見出しのみ。参照元の選手・成績・日付は不使用。"
+      },
+      {
+        "role": "人物の現役所属確認のみ",
+        "url": "https://tryhoop.com/team/players/"
+      },
+      {
+        "role": "人物の容姿参照のみ",
+        "url": "https://tryhoop.com/team/players/detail/id=51060?PlayerID=51000483"
+      },
+      {
+        "role": "公式プロフィール写真（目視確認、完成画像への貼付なし）",
+        "url": "https://tryhoop.com/files/rcms_conv_webp/files/user/sano_yusei_hp_main.png_1792456522.webp?v=1792456536",
+        "local_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c1589b0cca1c4132780e/references/sano-yusei-official.webp"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "佐野 悠星",
+        "name_en": "Yusei Sano",
+        "team": "トライフープ岡山",
+        "selection": "ランダム",
+        "reason": "固定本文に選手名がなく、本文の登場チームの現役選手を選ぶ優先順に従った。",
+        "method": "Python random.Random('c1589b0cca1c4132780e').choice(本文の登場順の28チーム)で岡山を選択。公式選手一覧の背番号順14人を候補とし、random.Random('c1589b0cca1c4132780e:player').choiceで佐野悠星を選択。",
+        "team_pool": [
+          "八王子",
+          "福島",
+          "静岡",
+          "奈良",
+          "愛媛",
+          "岡山",
+          "青森",
+          "越谷",
+          "山形",
+          "金沢",
+          "埼玉",
+          "立川",
+          "福井",
+          "新潟",
+          "岐阜",
+          "福岡",
+          "徳島",
+          "岩手",
+          "鹿児島",
+          "香川",
+          "東京Z",
+          "東京U",
+          "横浜EX",
+          "熊本",
+          "三重",
+          "山口",
+          "湘南",
+          "品川"
+        ],
+        "player_pool": [
+          "内山晴輝",
+          "レイナルド・ガルシア",
+          "佐野悠星",
+          "秋山熙",
+          "笠井康平",
+          "若狭功希",
+          "ソウシェリフ",
+          "フォファナママドゥ",
+          "向井祐介",
+          "横川俊樹",
+          "キャメロン・ジャクソン",
+          "中村瑞稀",
+          "ジョシュ・スコット",
+          "横山悠人"
+        ],
+        "reference_source": "トライフープ岡山公式 選手一覧・佐野悠星プロフィール",
+        "reference_url": "https://tryhoop.com/team/players/detail/id=51060?PlayerID=51000483",
+        "image_reference_url": "https://tryhoop.com/files/rcms_conv_webp/files/user/sano_yusei_hp_main.png_1792456522.webp?v=1792456536",
+        "observed_features": "額を見せた分け目のある短い黒髪、短い側頭部、細めの卵形で顎に角のある輪郭、まっすぐな眉、切れ長の目、通った鼻筋、ひげなし、引き締まった体型。",
+        "final_visual_check": "修正版を実際に目視し、髪型・輪郭・眉目・鼻・ひげなしの特徴が公式写真を参照したイラストとして反映されていることを確認。",
+        "depiction": "低いドライブ姿のイメージ。実際の当該試合の場面・出場・成績・活躍・TOP3またはベスト5選出を示さない。",
+        "name_or_stats_in_image": false,
+        "official_photo_embedded": false
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: ads-marketing.\nCreate exactly ONE original Japanese basketball editorial thumbnail, a wide landscape PNG, 2048 x 1152 pixels, 16:9.\nStyle reference: the approved black/lime thumbnail already viewed in this conversation (B-culver-black-lime-v3.png). Borrow its charcoal #151A18, electric lime #CCF43B, warm white, coarse hand-drawn ink hatching, energetic dry-brush streaks, huge readable Japanese typography, strong editorial hierarchy, and restrained orange basketball accent. DO NOT copy the reference player's face, name, scores, date, pose, or wording.\nSubject identity reference: the official portrait of real basketball player Yusei Sano / 佐野悠星 (Tryhoop Okayama), viewed in this conversation, local reference references/sano-yusei-official.webp, official https://tryhoop.com/files/rcms_conv_webp/files/user/sano_yusei_hp_main.png_1792456522.webp?v=1792456536 . Use it ONLY to guide likeness, never paste any photograph. Draw only this one real player. His recognizable features: short black hair with parted raised front exposing the forehead, short sides, slim oval face with a slightly angular jaw, straight dark brows, focused dark eyes, straight nose, clean shaven, young adult Japanese man, compact lean athletic guard physique. Keep likeness specific, do not invent a generic player or make him resemble the athlete in the style reference.\nComposition: left 54% is clear typographic space, right 46% a dynamic three-quarter-view illustration of Sano leaning forward into a low dribble, torso and thighs visible. He faces diagonally toward the viewer and left, with face clearly visible rather than profile. One anatomically natural hand is controlling the orange basketball near hip height; other arm balances the action. Keep head, both hands and ball fully inside the canvas; anatomically coherent arms and natural five-fingered hands. The lower legs can end in intentional brush marks. He wears an unbranded warm-white and charcoal sleeveless basketball uniform with tiny lime trim; no names, numbers, insignia, sponsors or logos. Draw all of him in visible ink-and-brush illustration, with black/white/grey face shading and controlled lime edge accents, never photographic. A diagonal sweeping lime brush behind him supplies movement. No additional people.\nContent basis: frozen article for 2026-11-21 shows B.ONE and B.NEXT games all before start, and says that day's EFF TOP3 and retrospectively selected best five remain pending until all official records are final. There are NO named players in the article; Sano was randomly selected from a mentioned team's current official roster for visual illustration only. This drawing is NOT a reconstruction of an actual play and must not imply his participation, performance, ranking, result or selection among the best five. No fabricated score or result. All article-derived visible information is specified verbatim below.\nTypography / Text (verbatim, no extra words):\nTop-left small: \"バスケまとめ\"\nMain left upper, extremely large electric lime: \"11/21\"\nMain left middle, huge bold warm white Japanese: \"試合予定\"\nUnder headline, medium warm white: \"B.ONE・B.NEXT\"\nSmall lime badge near this block: \"試合前\"\nAlong the lower band, readable bold warm white: \"当日TOP3・ベスト5は公式記録確定待ち\"\nBelow that, smaller but clearly readable: \"2026/11/21 02:42〜02:43 JST時点\"\nAt the very bottom left, clear warm-white disclosure: \"イラスト（AI生成）\"\nBeside this disclosure: \"イメージ\"\nKeep the long lower information line within a protected full-width dark footer band, do not cover it with the player or ball. Minimum safe margin 5% on all edges for text, head and hands. All Japanese characters must be correct, sharp, and readable. Plenty of separation. Do not include player name or jersey number anywhere. Do not include club logos, league logos, sponsor text, official photos, badges resembling logos, watermarks, scoreboards, stat claims, victory imagery, or a visible actual-game setting. Final image must be a clearly stylized editorial illustration, like an ink sports poster, with few elements and strong legibility.\n\nSINGLE CORRECTION\nEdit the first image, the existing black-and-lime basketball thumbnail. This is the single permitted correction pass.\nInput roles: Image 1 is the edit target. Image 2 is Yusei Sano's official profile portrait, an identity reference only, not a photo to paste. Image 3 is the approved graphic style reference only.\nChange ONLY the illustration on the right to improve safe framing and the same real player's likeness. Keep all existing typography, exact wording, colors, black/lime graphic style, text hierarchy and footer unchanged. Keep the canvas wide, approximately 16:9, with width at least 1000 px.\nThe entire crown of his head is currently clipped by the top edge. Scale the entire illustrated player and ball down about 12%, and position him so there is clearly visible dark background of about 5% image height ABOVE all of his hair. Keep BOTH hands and every fingertip entirely above the black footer, with a visible gap between fingers and the footer. The ball and controlling hand must both be fully inside the illustration region. The only acceptable intentional crop is the lower legs at the footer. Keep the same one-person low driving/dribbling action, anatomically coherent body and arms, natural five-finger hands.\nMatch the player to Image 2 more precisely: Yusei Sano / 佐野悠星. Give him SHORTER black hair, particularly reduce the tall top volume and shorten the fringe. It is swept back from a side/near-center part exposing the forehead, short sides. A slim oval face with slightly angular jaw, relatively slender straight eyes, straight eyebrows, straight nose, clean shaven, lean compact adult guard build. Retain hand-drawn ink hatching, not photorealism. No player name or jersey number in the image, no team or league logo, no sponsor.\nPreserve every existing visible text verbatim:\nバスケまとめ\n11/21\n試合予定\nB.ONE・B.NEXT\n試合前\n当日TOP3・ベスト5は公式記録確定待ち\n2026/11/21 02:42〜02:43 JST時点\nイラスト（AI生成）\nイメージ\nDo not add any text or statistics. This is an illustrative image of a randomly selected actual player, not a depiction of an actual game's event or a claim of participation or best-five selection.",
+    "generator": {
+      "mode": "built-in",
+      "tool": "image_gen.imagegen",
+      "generation_calls": 2,
+      "initial_generations": 1,
+      "corrections": 1,
+      "api_or_cli_used": false,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1fa0e-71c7-7470-80fe-d890ded0d573/exec-204110ac-b441-4979-851e-89a05c432cfa.png",
+      "saved_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c1589b0cca1c4132780e/generated.png",
+      "format": "PNG",
+      "width": 1671,
+      "height": 941,
+      "sha256": "03dff4106f96a07092b3d24b347b0f76d45fa6d55694daa77a787a8f2eab7dd7",
+      "first_candidate_review": "文字・数値・試合前と記録確定待ちの留保・AI表記を確認。頭頂部の見切れのため不採用とし、人物の縮小・余白確保および公式写真に合わせた髪型調整を1回だけ実施。",
+      "final_visual_review": {
+        "text_and_numbers": "表示された9項目を目視。11/21、B.ONE・B.NEXT、TOP3・ベスト5、2026/11/21 02:42〜02:43 JST時点が原稿と一致。成績・スコアの追加なし。",
+        "source_qualifiers": "試合前と当日TOP3・ベスト5は公式記録確定待ちを明記。時点を表示し、ランダム選手の出場・成績・選出を断定していない。",
+        "likeness_or_no_named_person": "実在の佐野悠星を公式写真と照合。選手名・背番号は画面に表示しない。短い黒髪、目眉、輪郭、鼻、ひげなしを確認。写真貼付なし。",
+        "layout": "約16:9、横1671px。頭頂に余白があり、両手・指先・ボールは画面内で下帯にも接触しない。腕と手は自然で、文字の見切れ・人物との重なりなし。黒×ライムのインク画。ロゴ・スポンサー文字なし。",
+        "ai_label": "イラスト（AI生成）とイメージの両方が下部で読み取れる。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-20T17:47:29.671107+00:00",
+  "publication_approved": false
+}
