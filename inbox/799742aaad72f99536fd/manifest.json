@@ -1,0 +1,101 @@
+{
+  "id": "799742aaad72f99536fd",
+  "article_path": "article-results-one-next-20261120.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261120.html",
+  "source_commit": "",
+  "source_blob_sha": "32e5e7a49c6769c2ec5f675c40f626cd91cf1927",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "faaeb8fc519bc6241970f946a2c00886808cbe92fe0917e4a8b8cdce696a6457",
+  "last_observed_blob_sha": "32e5e7a49c6769c2ec5f675c40f626cd91cf1927",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/799742aaad72f99536fd/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/799742aaad72f99536fd/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-20T10:12:55.250747+00:00",
+  "creation_event_id": "48eb629a2631cf5dbaa9",
+  "event_blob_sha": "32e5e7a49c6769c2ec5f675c40f626cd91cf1927",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/799742aaad72f99536fd/thumbnail.png",
+  "image_sha256": "99b97b06b4523cdb269399041bc6ef1dff259fb4497463d081b8b62e3082c21f",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "32e5e7a49c6769c2ec5f675c40f626cd91cf1927",
+    "text_lines": [
+      "バスケまとめ",
+      "11/20 試合結果",
+      "B.ONE",
+      "公式記録",
+      "確定待ち",
+      "2026.11.20 19:05 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/799742aaad72f99536fd/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261120.html",
+        "note": "固定HTMLのみを本文内容の根拠として使用。ライブ記事は未参照。19:05 JST時点で全試合の公式記録確定待ち。"
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/799742aaad72f99536fd/source.txt",
+        "note": "固定文章。今季平均は当日の実績や出場確定を示さないため、個人成績・選手名は画像に表示しない。"
+      },
+      {
+        "role": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "note": "view_imageで実見。黒・ライム・太い日本語見出し・インクの筆致のみ参照。別記事の人名・成績は転用しない。白地参照A-faison-ivory-v3.pngは指定先に存在しなかったため未使用。"
+      },
+      {
+        "role": "person_appearance_only",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=5100000090",
+        "image_url": "https://www.bleague.jp/files/user/roster/750/2026-27/5100000090_03.png",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/799742aaad72f99536fd/references/mark-burton-official.png",
+        "note": "公式プロフィール写真をダウンロードしてview_imageで実見。容姿の確認とイラストの参照だけに使用。写真の貼付け、ロゴ・スポンサー文字の転用なし。記事内容や試合結果の根拠としては不使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "マーク・バートン",
+        "selection": "ランダム",
+        "selection_method": "Python random.SystemRandom().choiceで本文に名前がある10選手から1人を一様ランダム抽選。再抽選なし。",
+        "selection_pool": [
+          "レイナルド・ガルシア",
+          "マーク・バートン",
+          "シャキール・ハインズ",
+          "ジョシュ・スコット",
+          "キーガン・レコード",
+          "森田 雄次",
+          "ワイリー 光希スカイ",
+          "ケニー・マニゴールト",
+          "キャメロン・ジャクソン",
+          "ノア・ウォーターマン"
+        ],
+        "selection_reason": "当日結果は未確定で特定選手を大きく扱っていないため、本文に実名のある10選手から選択。",
+        "source": "B.LEAGUE公式選手プロフィール",
+        "reference_url": "https://www.bleague.jp/roster_detail/?PlayerID=5100000090",
+        "reference_image_url": "https://www.bleague.jp/files/user/roster/750/2026-27/5100000090_03.png",
+        "reference_image_viewed": true,
+        "observed_features": "短い黒髪と低いフェード、細長い卵形の輪郭、目鼻、細い口ひげと小さな尖ったあごひげ、腕のタトゥー、右腕の黒いスリーブを確認。",
+        "depiction": "本人の容姿を参照したドリブル姿の手描き風イラスト。特定試合の再現ではなくイメージ。選手名・背番号・成績・出場・活躍の文言は画像に入れない。",
+        "final_visual_check": "最終画像を実見し、短髪、輪郭、目鼻、口ひげ・あごひげ、右腕スリーブを参照写真と照合。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story\nAsset type: ONE Japanese basketball article thumbnail, landscape 16:9, 1792 x 1024 or preferably 1920 x 1080 pixels; minimum width 1000 px. Generate a single finished opaque PNG.\nPrimary request: Create an original hand-drawn ink-and-brush sports editorial illustration for バスケまとめ, matching the approved black/lime reference's visual vocabulary: near-black #151A18, electric lime #CCF43B, warm off-white, orange basketball, strong brushwork, bold readable Japanese typography, few elements. Not photorealistic.\n\nEditorial content source is ONLY the supplied fixed article: November 20, 2026 B.ONE games have started at 19:05 JST but every official game record remains unconfirmed as of 19:05 JST. No final scores or confirmed player performances. The season averages listed in the article are not that day's achievements.\nSubject: exactly ONE real athlete, Mark Burton (マーク・バートン), randomly drawn from the ten named players in the article. Use his appearance as seen in the official B.LEAGUE profile photograph viewed in the conversation (https://www.bleague.jp/files/user/roster/750/2026-27/5100000090_03.png). Do not render a generic invented athlete. Likeness details: close-cropped black hair with low fade and neat rounded hairline, medium warm brown skin represented in ink/off-white shading, elongated oval face with defined cheekbones and tapered jaw, dark almond-shaped eyes, gently arched dark eyebrows, medium-width nose, a slim moustache and distinct small pointed chin goatee separated from cheeks; slim athletic guard build; tattoos across shoulders and arms; black compression sleeve on his RIGHT elbow/forearm. Match face shape, short hair, moustache and pointed goatee faithfully. The profile smile may become a focused playing expression, with eyes and mouth shapes recognizable. Do not copy the photograph into the result.\nClothes: completely plain off-white basketball jersey and shorts with black shading, no lettering, number, sponsor marks, league/team logos, or badge shapes. Tattoos can be abstract ink motifs without lettering.\nScene: imagined basketball motion, never a reconstruction of a November 20 game. A dynamic low driving dribble, torso leaning forward, face in a readable near-front three-quarter view, one hand naturally spread over an orange basketball at hip/knee height and the other arm bent to protect the drive. Anatomically credible two arms, two hands, five fingers per hand, plausible joints. Only one ball, as a prop being controlled by the player.\nComposition: athlete on the LEFT 44% of canvas, head fully visible, face large enough to recognize; upper body and thighs in frame, with the lower legs intentionally outside frame. Basketball and both hands entirely inside frame. Diagonal lime dry-brush streaks behind athlete. Text on the RIGHT 52%, clear of face, hands, ball and brush splatter. This deliberately varies the reference's right-side shooter layout. No stadium, other people, scoreboard, court markings, extra decorations or panels.\nText (verbatim, no other text and do not put athlete name on image):\nsmall header at upper right: \"バスケまとめ\"\nmedium line beneath: \"11/20 試合結果\"\nsmall tag: \"B.ONE\"\nvery large headline on two lines:\n\"公式記録\"\n\"確定待ち\"\nThe first headline line is warm white, second is vivid lime; extra-bold Japanese gothic, clear correct characters with restrained ink texture.\nmedium qualifying line directly below headline: \"2026.11.20 19:05 JST時点\"\nfully readable footer near bottom right, at least 28 px tall at 1792 px output: \"イラスト（AI生成）\"\nnext to it or on the following line: \"イメージ\"\nAll text must be spelled exactly; no name, jersey number, scores, rankings, statistics, performance claims or claims of participation. The large wording 確定待ち is mandatory and cannot be visually minimized.\nKeep at least 5% safety margins around all lettering; no clipped glyphs or hands. All lettering horizontal. Premium, energetic editorial ink illustration, not a photo or 3D render. Do not inherit any name, date, point total, game result or team name from the approved reference.\n\nONE ALLOWED REVISION\nEdit image 1, the generated basketball thumbnail. Image 2 is the official B.LEAGUE portrait of the real player Mark Burton; use image 2 ONLY to refine facial likeness and haircut, never paste the photograph and never copy any uniform logo, sponsor, badge or number.\nMake this one final correction pass. Preserve the existing black #151A18 / lime #CCF43B / off-white ink-brush illustration, left-hand athlete placement (the athlete's own RIGHT arm has the black sleeve), right-hand typography, orange ball, all exact text, and 16:9 horizontal shape.\nCorrect the framing: zoom out the illustration and typography slightly within the SAME full black/lime 16:9 canvas, redistribute space gracefully, and extend the brush background as needed. Show the entire orange basketball with a small clear margin below it; both hands, all fingers, head and arm joints must be wholly inside the frame. Torso/thighs may continue naturally off the bottom; do not shrink into a square. Keep every text glyph and footer at least 4% away from the right and bottom image edges. The two-line headline remains the largest element and legible at thumbnail size. Do not clip any glyph.\nRefine likeness against image 2: much shorter close-cropped black hair, neat rounded hairline, smooth low fade (NOT a tall or curly top); preserve the official photograph's elongated oval face, gentle eye shape, eyebrow shape, nose, narrow moustache and small pointed chin goatee, with relatively clean cheeks. Match the player identity while keeping the focused dynamic dribble expression and hand-drawn illustrated style. No photorealism.\nKeep the anatomically plausible pose and precisely five fingers per hand. No extra people or ball.\nAll text MUST remain verbatim, with no additions:\nバスケまとめ\n11/20 試合結果\nB.ONE\n公式記録\n確定待ち\n2026.11.20 19:05 JST時点\nイラスト（AI生成）\nイメージ\nThis is an imaginary action illustration, not an actual match scene; do not add the player's name, jersey number, stats, final scores or claims of participation.\nOutput exactly one polished PNG, around 16:9, width above 1000 pixels.",
+    "generator": "内蔵 image_gen.imagegen。生成1回、目視検品後の修正1回。最終PNG 1671x941 px。API・CLI画像生成は不使用。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-20T10:20:36.410988+00:00",
+  "publication_approved": false
+}
