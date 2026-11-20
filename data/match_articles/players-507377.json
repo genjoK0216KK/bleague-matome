@@ -459,6 +459,46 @@
       "coverage_complete": true
     },
     {
+      "player_id": "8452",
+      "name": "アイラ・ブラウン",
+      "team": "福島",
+      "team_id": "711",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "SF",
+        "PF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=711",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": null,
+      "games": null,
+      "stats_source": null,
+      "coverage_complete": false
+    },
+    {
+      "player_id": "32991",
+      "name": "マム シェッハ イブラヒマ・ディオップ",
+      "team": "福島",
+      "team_id": "711",
+      "season": "2026-27",
+      "competition": "B1",
+      "positions": [
+        "C",
+        "PF"
+      ],
+      "position_source": "https://www.bleague.jp/club_detail/?TeamID=711",
+      "availability": "unknown",
+      "metric": "EFF",
+      "aggregation": "average",
+      "average": null,
+      "games": null,
+      "stats_source": null,
+      "coverage_complete": false
+    },
+    {
       "player_id": "51000233",
       "name": "益子 拓己",
       "team": "福島",
@@ -537,5 +577,5 @@
       "coverage_complete": true
     }
   ],
-  "retrieved_at": "2026-11-18T11:43:51.761049+00:00"
+  "retrieved_at": "2026-11-20T03:06:26.772727+00:00"
 }
