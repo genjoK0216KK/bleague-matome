@@ -1934,29 +1934,29 @@
   },
   "article-games-20261121.html": {
    "article_path": "article-games-20261121.html",
-   "editorial_fingerprint": "f1c878b93c4ef62a1bb3660c8d1d175f4c37d16b5ed878a7fcf3cfc977b74fb7",
+   "editorial_fingerprint": "6fa3101f1d60ddb517fc62e90d590f07414eb128684c0e0c32445616798a99d6",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-games-20261121-b6aeab4e6d14.jpg",
+     "path": "thumbs/auto/article-games-20261121-275e9fdd04c6.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-games-20261121-b6aeab4e6d14-og.jpg",
+     "path": "thumbs/auto/article-games-20261121-275e9fdd04c6-og.jpg",
      "width": 1200
     }
    },
-   "id": "3a331756a5389aaef088",
-   "image_sha256": "b6aeab4e6d141a28ef7770f598350da0cd019731ce09fa4ecf4264f95a5a813f",
-   "imported_at": "2026-11-21T10:22:22.952245+00:00",
-   "prepared_at": "2026-11-21T10:15:38.507643+00:00",
-   "source_blob_sha": "972829f3f37d6699bf2d7536078e07dea8f20b4d",
+   "id": "505522b8e4b0159f9478",
+   "image_sha256": "275e9fdd04c600c38509a4c58598aedf249d25ea5913710cc7a4faf522379a3a",
+   "imported_at": "2026-11-21T13:52:14.182809+00:00",
+   "prepared_at": "2026-11-21T13:47:22.693835+00:00",
+   "source_blob_sha": "2d370aea253dd7fa822c6e59c7b59eebb1ec3e32",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "f1c878b93c4ef62a1bb3660c8d1d175f4c37d16b5ed878a7fcf3cfc977b74fb7",
+   "stable_fingerprint": "6fa3101f1d60ddb517fc62e90d590f07414eb128684c0e0c32445616798a99d6",
    "style": "ink-lime-portrait-v5",
    "title": "11/21 試合結果・当日のEFF"
   },
@@ -2578,29 +2578,29 @@
   },
   "article-results-one-next-20261121.html": {
    "article_path": "article-results-one-next-20261121.html",
-   "editorial_fingerprint": "f1c878b93c4ef62a1bb3660c8d1d175f4c37d16b5ed878a7fcf3cfc977b74fb7",
+   "editorial_fingerprint": "6fa3101f1d60ddb517fc62e90d590f07414eb128684c0e0c32445616798a99d6",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-results-one-next-20261121-7eae0f29bf9e.jpg",
+     "path": "thumbs/auto/article-results-one-next-20261121-f33049215761.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-results-one-next-20261121-7eae0f29bf9e-og.jpg",
+     "path": "thumbs/auto/article-results-one-next-20261121-f33049215761-og.jpg",
      "width": 1200
     }
    },
-   "id": "20f3bc101823b00a1fb5",
-   "image_sha256": "7eae0f29bf9eda2af60610b53b191f3e22f71eba26442e8353f926547d32586b",
-   "imported_at": "2026-11-21T10:22:23.098709+00:00",
-   "prepared_at": "2026-11-21T10:19:12.218368+00:00",
-   "source_blob_sha": "b02bca45dc37aacd35cbb8fcc1c44afd388d6f49",
+   "id": "ca3d5577dc3f486dd299",
+   "image_sha256": "f33049215761a7daf472408f840182c7b800dd77d0b1537d796f622bf306c85a",
+   "imported_at": "2026-11-21T13:52:14.276348+00:00",
+   "prepared_at": "2026-11-21T13:51:38.766817+00:00",
+   "source_blob_sha": "af9b7f0c22f34a83d77c30488cb643543ebff642",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "f1c878b93c4ef62a1bb3660c8d1d175f4c37d16b5ed878a7fcf3cfc977b74fb7",
+   "stable_fingerprint": "6fa3101f1d60ddb517fc62e90d590f07414eb128684c0e0c32445616798a99d6",
    "style": "ink-lime-portrait-v5",
    "title": "11/21 試合結果・当日のEFF"
   },
@@ -3082,48 +3082,6 @@
   }
  },
  "log": [
-  {
-   "article": "article-results-one-next-20261115.html",
-   "at": "2026-11-15T13:19:34.197797+00:00",
-   "event": "imported",
-   "id": "8a37d086b2f172a45d5b",
-   "image": "0549d8836d39"
-  },
-  {
-   "article": "article-stats-20261115.html",
-   "at": "2026-11-15T13:19:34.347469+00:00",
-   "event": "imported",
-   "id": "efb80209060e7b3d3a49",
-   "image": "5a6a36a4c476"
-  },
-  {
-   "article": "article-results-one-next-20261116.html",
-   "at": "2026-11-15T19:11:08.010291+00:00",
-   "event": "imported",
-   "id": "aeb7d91e145ec447e4e7",
-   "image": "1782a9836670"
-  },
-  {
-   "article": "article-daily-20261116.html",
-   "at": "2026-11-15T23:23:52.920619+00:00",
-   "event": "imported",
-   "id": "6b5e1fd48ec9ce315e3d",
-   "image": "3d3f47d9af5b"
-  },
-  {
-   "article": "article-games-20261116.html",
-   "at": "2026-11-16T02:28:01.793704+00:00",
-   "event": "imported",
-   "id": "82676b8dbd055f0288e7",
-   "image": "18306a2509f7"
-  },
-  {
-   "article": "article-analysis-nagasaki-20261116.html",
-   "at": "2026-11-16T03:24:12.519332+00:00",
-   "event": "imported",
-   "id": "dcbed9337501335745b7",
-   "image": "68b798ba5aaf"
-  },
   {
    "article": "article-daily-20261116.html",
    "at": "2026-11-16T10:30:58.966276+00:00",
@@ -3641,6 +3599,48 @@
    "event": "imported",
    "id": "99c879962bb973d9b339",
    "image": "f37d8cd5a3fb"
+  },
+  {
+   "article": "article-games-20261121.html",
+   "at": "2026-11-21T13:52:14.067411+00:00",
+   "by": "505522b8e4b0159f9478",
+   "event": "superseded",
+   "id": "c1589b0cca1c4132780e"
+  },
+  {
+   "article": "article-games-20261121.html",
+   "at": "2026-11-21T13:52:14.067439+00:00",
+   "by": "505522b8e4b0159f9478",
+   "event": "superseded",
+   "id": "3a331756a5389aaef088"
+  },
+  {
+   "article": "article-games-20261121.html",
+   "at": "2026-11-21T13:52:14.182826+00:00",
+   "event": "imported",
+   "id": "505522b8e4b0159f9478",
+   "image": "275e9fdd04c6"
+  },
+  {
+   "article": "article-results-one-next-20261121.html",
+   "at": "2026-11-21T13:52:14.183270+00:00",
+   "by": "ca3d5577dc3f486dd299",
+   "event": "superseded",
+   "id": "e9216099cfca79a988e3"
+  },
+  {
+   "article": "article-results-one-next-20261121.html",
+   "at": "2026-11-21T13:52:14.183273+00:00",
+   "by": "ca3d5577dc3f486dd299",
+   "event": "superseded",
+   "id": "20f3bc101823b00a1fb5"
+  },
+  {
+   "article": "article-results-one-next-20261121.html",
+   "at": "2026-11-21T13:52:14.276359+00:00",
+   "event": "imported",
+   "id": "ca3d5577dc3f486dd299",
+   "image": "f33049215761"
   }
  ],
  "seen": {
@@ -3664,7 +3664,7 @@
   "2004d09328ace296fc36": "imported",
   "20134568717cc8260005": "superseded:ca6cbcfdc7f7486e54e3",
   "209e8afd7e7e3344c6bd": "superseded:be964f4359fb4b535b50",
-  "20f3bc101823b00a1fb5": "imported",
+  "20f3bc101823b00a1fb5": "superseded:ca3d5577dc3f486dd299",
   "221f82c44ae5094ac68b": "superseded:c422e01f21c312cd1a36",
   "227771a8a08cdddea2d2": "imported",
   "28368e86a62b9df9dfd9": "imported",
@@ -3689,7 +3689,7 @@
   "37ef3f4c94ecbcadd399": "superseded:d4f970a69e56b5bc2281",
   "39075cc4edcf56d9d90d": "superseded:a9d34f9ead8bbf40b841",
   "3955308615847dff3136": "superseded:9f2558d6277a776ef982",
-  "3a331756a5389aaef088": "imported",
+  "3a331756a5389aaef088": "superseded:505522b8e4b0159f9478",
   "3c626af62477fc9be507": "imported",
   "3d20be125ac18075c9b0": "superseded:9f2558d6277a776ef982",
   "3d2cc96fb28fa98a36d8": "superseded:bbd71f79d39ade3dad13",
@@ -3708,6 +3708,7 @@
   "4f8263992a0a733cc2e3": "superseded:75a5c2e5b4ddddc773c3",
   "50222bd804efe24c13be": "superseded:75a5c2e5b4ddddc773c3",
   "5027dd7c0382609c7aa3": "imported",
+  "505522b8e4b0159f9478": "imported",
   "50f378a3747dbb63cef8": "superseded:6b0212da2ca7a9d34810",
   "5183171d8e8431a899f6": "imported",
   "5371bea30124ef22fa57": "imported",
@@ -3811,7 +3812,7 @@
   "bd3d709f0889950146e7": "superseded:e64b9ac50fa81c41ae65",
   "be964f4359fb4b535b50": "imported",
   "bfca0a49ccb938a128d8": "superseded:f92afc73ed838d9cdaa0",
-  "c1589b0cca1c4132780e": "superseded:3a331756a5389aaef088",
+  "c1589b0cca1c4132780e": "superseded:505522b8e4b0159f9478",
   "c1aaf417a1880194d3ac": "imported",
   "c30cc01686bce3bc931c": "imported",
   "c3151cd8b45c0d6d80ab": "superseded:556a6a0e14555b13288a",
@@ -3821,6 +3822,7 @@
   "c59cee10214af1d2a8c4": "superseded:f662c904491c9e820ed0",
   "c64f75eca95f7a1461d5": "superseded:9f757581f96bc573aa5f",
   "c65ae6fd90ffcf57f53b": "superseded:b54717dd6365eef30b2d",
+  "ca3d5577dc3f486dd299": "imported",
   "ca69b5d16263483eb1ed": "imported",
   "ca6cbcfdc7f7486e54e3": "imported",
   "ca8a2a139daad0448ac9": "imported",
@@ -3851,7 +3853,7 @@
   "e581198d6acbcde5fe72": "imported",
   "e64b9ac50fa81c41ae65": "imported",
   "e69360a387e1306be411": "superseded:af2c63bb867d413bfad4",
-  "e9216099cfca79a988e3": "superseded:20f3bc101823b00a1fb5",
+  "e9216099cfca79a988e3": "superseded:ca3d5577dc3f486dd299",
   "ea934f8b9b81d63c7fc5": "superseded:3370472f9c78336a4974",
   "ec1f89cf4982bf75312d": "superseded:896bbeb35c2a1eb9d0e1",
   "ed508c08f31b0520f4c9": "imported",
