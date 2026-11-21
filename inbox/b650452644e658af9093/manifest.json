@@ -1,0 +1,90 @@
+{
+  "id": "b650452644e658af9093",
+  "article_path": "article-games-20261122.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261122.html",
+  "source_commit": "",
+  "source_blob_sha": "b2ef421c13fcb92fd5096aeb1be93123f1518b63",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "b642d50b2a8f336b6cbea1f00106caedf590a6a4f7cc188035300f55aec3e976",
+  "last_observed_blob_sha": "b2ef421c13fcb92fd5096aeb1be93123f1518b63",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b650452644e658af9093/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b650452644e658af9093/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-21T16:44:26.628464+00:00",
+  "creation_event_id": "dcbe7668784bed4b27db",
+  "event_blob_sha": "b2ef421c13fcb92fd5096aeb1be93123f1518b63",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/b650452644e658af9093/thumbnail.png",
+  "image_sha256": "25cbe945a27a0f6e62a1c5d9837e54067ba7ee17e5e3084b4381592488fe4ef1",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "b2ef421c13fcb92fd5096aeb1be93123f1518b63",
+    "text_lines": [
+      "バスケまとめ",
+      "11/22",
+      "試合予定",
+      "B.ONE / B.NEXT",
+      "公式記録確定待ち",
+      "2026.11.22 01:43 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b650452644e658af9093/source.html",
+        "role": "本文内容の根拠（固定HTML）",
+        "article_url": "https://basuke-matome.jp/article-games-20261122.html",
+        "notes": "全11試合は試合前。状態は2026-11-22 01:43 JST時点。B.ONE/B.NEXTの公式記録・当日TOP3・最高の手札は確定待ち。選手名・個人成績なし。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b650452644e658af9093/source.txt",
+        "role": "本文内容の根拠（固定文章）",
+        "notes": "HTMLと同じ内容であることを照合。外部ページは本文内容の根拠に使用していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "目視確認した承認済みスタイル参照",
+        "notes": "黒・ライム・太い日本語文字・インク/ブラシ表現だけを参照。参照内の選手名・成績は持ち越していない。白地のA-faison-ivory-v3.pngは指定場所になく、使用しなかった。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "高橋耕陽",
+        "team": "香川ファイブアローズ",
+        "selection": "ランダム",
+        "selection_reason": "固定本文に選手名がなく、特定の主役を絞れないため、本文の22チームからsecrets.choiceで香川を抽選し、公式掲載の13選手からsecrets.choiceで高橋耕陽を抽選した。",
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b650452644e658af9093/selection.json",
+        "roster_source": "https://www.fivearrows.jp/team/roster/",
+        "profile_source": "https://www.fivearrows.jp/team/players/detail/id=17667?PlayerID=10818",
+        "portrait_source": "https://bleague.bl.kuroco-img.app/v=2026112201/files/user/roster/722/2026-27/10818_01.jpg",
+        "portrait_local": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b650452644e658af9093/references/koyo-takahashi-official.jpg",
+        "reference_use": "公式プロフィール写真を実際に目視し、容姿確認のみに使用。最終修正の参照画像として入力。公式写真の貼付・チームロゴ・リーグロゴ・スポンサー文字はなし。",
+        "observed_features": "黒〜濃茶の短めで波打つ髪、中央付近で分かれた前髪、細めの卵形の輪郭、細めの目、比較的まっすぐな眉と鼻筋、ひげなし。",
+        "final_visual_check": "修正版の髪型・輪郭・目鼻・ひげなしを公式写真と比較した。動きのあるドリブル姿のイラスト。本文で選ばれたベスト5や当日出場・活躍の主張ではない。画像に選手名、背番号、個人成績を入れていない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION (exact prompt):\nUse case: illustration-story.\nAsset type: One Japanese basketball editorial thumbnail, landscape 16:9, preferably 1600x900 or 1792x1024, minimum width 1000 pixels.\nCreate exactly ONE finished image. Hand-painted sports editorial illustration, NOT a photograph, NOT a photorealistic rendering.\nArticle facts are limited to the supplied frozen article: 2026-11-22 games are pre-game as of 01:43 JST; B.ONE and B.NEXT games are scheduled; official results and player rankings are pending. Do not imply final scores, a selected best five, individual participation, individual performance, a victory, or an actual observed game scene.\n\nArt direction: match the inspected approved black/lime v3 reference's visual language: deep green-black #151A18 background, acid lime #CCF43B dry-brush energy streaks, off-white heavy Japanese typography, very strong editorial hierarchy, rough ink, brush and sparse halftone. Keep few elements and generous negative space.\nSubject: exactly one REAL basketball player: 高橋耕陽 / Koyo Takahashi of Kagawa Five Arrows. He was randomly selected from a team named in the article. Do not write his name on the image. Depict him recognizably using the official team portrait inspected in the conversation ONLY as likeness reference, never paste or reproduce the photograph.\nLikeness observed from official portrait: Japanese adult male, tall lean athletic build with long neck, medium-short dark brown/black tousled wavy hair, voluminous middle/top and a subtly parted fringe exposing central forehead, tapered sides, clean-shaven, slim oval face with slightly angular lower jaw, straight eyebrows, relatively narrow almond eyes, straight medium nose, small closed lips. Preserve these particular facial traits; do not invent a generic athlete or use the player from the style reference.\nClothing: plain off-white sleeveless basketball jersey and shorts with dark trim, without letters, numbers, team/league/sponsor logos, patterns or emblems.\nPose and composition: dynamic low driving dribble toward the lower left in three-quarter view, torso leaning diagonally, knees naturally bent, face visible and recognizable, one hand controlling an orange basketball near the left hip/knee and the other arm bent naturally for balance. Player occupies the left 40-43% of canvas, with the head well inside the top edge. Anatomically correct fingers and hands, exactly two arms. Editorial crop at or below knees is fine but do not clip face, hands or basketball. No other people, no spectators, no actual court/venue depiction. Energetic lime brush arc behind him, clear separation from headline.\nText occupies the right 53%, fully inside a 5% safe margin. All Japanese text accurately rendered, crisp legible heavy Gothic sans-serif. Date and headline very large; small factual status remains readable. Use exactly these text blocks, once each, with no extra text:\n\"バスケまとめ\" (small top right header)\n\"11/22\" (largest lime type)\n\"試合予定\" (huge off-white type)\n\"B.ONE / B.NEXT\" (medium off-white)\n\"公式記録確定待ち\" (medium lime or dark text on lime brush band)\n\"2026.11.22 01:43 JST時点\" (small but clearly readable)\nBottom edge footer with ample safe margin:\n\"イラスト（AI生成）\"\n\"イメージ\"\nTreat these as plain text, not league logos. No named-player claims, stats, jersey number, rank, best-five claim, score, versus label, or carried-over 38 points. This is explicitly a general imagined illustration, not a reconstruction of this day's game. All required text and subject must fit safely inside frame.\n\nONE PERMITTED REVISION (exact prompt):\nUse case: identity-preserve and precise-object-edit. Make ONE correction to the existing illustrated basketball thumbnail.\nInput image 1 is the EDIT TARGET, the black/lime Japanese thumbnail. Input image 2 is an OFFICIAL LIKENESS REFERENCE ONLY, the portrait of the real player 高橋耕陽 / Koyo Takahashi. Do not paste or reproduce the photo and do not reproduce any logos, sponsor writing, jersey text or numbers from it.\nKeep the complete right-side typography, all wording, exact dates, status, black #151A18/lime #CCF43B/off-white palette, dry-brush editorial illustration medium and dynamic driving-dribble concept.\nCorrect only the illustrated player on the left:\n(1) Scale/reposition the player and basketball to give the entire hair/head at least 45 pixels top clearance and the entire ball and all fingers at least 35 pixels left clearance. Face, hair, both hands and ball must be fully inside the frame, not touching edges. Slight lower-leg/knee cropping is okay.\n(2) Match the real face and hair in reference image 2 faithfully as a hand-painted ink illustration: hair is medium-SHORT wavy tousled black/dark brown with a subtly parted fringe, less long and less inflated than the edit target; use the reference's slim oval face, softly angular chin, narrower eyes, straight eyebrows, small closed lips and straight nose. Clean-shaven. Do not beautify into a generic manga hero, do not add facial hair. He is a tall lean adult athlete, not excessively muscular.\n(3) Anatomically correct two hands, five natural digits each, one hand on the basketball and one balancing. Plain off-white sleeveless uniform with dark trim and no writing or number.\nDo not add a second player. No team logos, league logos, sponsors or pasted photography. Never write the player's name or any claims about his attendance or performance. This is an imagined illustration, not an actual game recreation.\nThe text MUST remain exactly:\nバスケまとめ\n11/22\n試合予定\nB.ONE / B.NEXT\n公式記録確定待ち\n2026.11.22 01:43 JST時点\nイラスト（AI生成）\nイメージ\nKeep all text comfortably within the frame. Preserve the approximately 16:9 landscape canvas, 1672x941 or another near-16:9 size over 1000 pixels wide.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "revisions": 1,
+      "accepted_output": "/Users/genjo/.codex/generated_images/01a1fefe-b0f4-7580-adda-033783e888b8/exec-9fdbc623-323e-4d12-aa30-db0db6627f16.png",
+      "format": "PNG",
+      "visual_qa": "最終画像を実際に目視。8つの文字ブロックと数値・試合前/公式記録確定待ちの留保、顔の特徴、頭/手/ボールの余白、左右の手指、AI生成とイメージの注記を確認。初稿の頭頂部・手の見切れを1回の修正で解消。ロゴ・写真貼付なし。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-21T16:48:11.251281+00:00",
+  "publication_approved": false
+}
