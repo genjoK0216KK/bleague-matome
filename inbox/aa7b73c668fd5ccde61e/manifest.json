@@ -1,0 +1,75 @@
+{
+  "id": "aa7b73c668fd5ccde61e",
+  "article_path": "article-results-one-next-20261122.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261122.html",
+  "source_commit": "",
+  "source_blob_sha": "86072116a3ac2ef4406701cb69c70ee66d5f25fb",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "2334da620ae3a1feff24d9399adfc4e9336a3ab24c27b43002e784302f14b638",
+  "last_observed_blob_sha": "86072116a3ac2ef4406701cb69c70ee66d5f25fb",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/aa7b73c668fd5ccde61e/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/aa7b73c668fd5ccde61e/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-21T19:29:26.679766+00:00",
+  "creation_event_id": "78bcbdad14b358e19a57",
+  "event_blob_sha": "86072116a3ac2ef4406701cb69c70ee66d5f25fb",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/aa7b73c668fd5ccde61e/thumbnail.png",
+  "image_sha256": "b73a9ddc97512b3d296f3bef8653df11dba96ac641f40eb96ce2d08f380110a0",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "86072116a3ac2ef4406701cb69c70ee66d5f25fb",
+    "text_lines": [
+      "11/22  B.ONE・B.NEXT",
+      "試合前｜今季平均EFF",
+      "登録選手の",
+      "ベスト5",
+      "対象試合の登録選手から",
+      "リーグ別に選出",
+      "出場確定ではありません",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/aa7b73c668fd5ccde61e/source.html",
+        "role": "本文の唯一の根拠（固定HTML）"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/aa7b73c668fd5ccde61e/source.txt",
+        "role": "本文の唯一の根拠（固定文章）"
+      },
+      {
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000121",
+        "role": "容姿のみ参照。外部ページの成績情報は画像に使用しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイルのみ参照"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "石井 智大",
+        "selection": "ランダム",
+        "selection_method": "本文に登場する20名からPython SystemRandom.choiceで無作為に1名選出。比較記事のため単独の主役なし。",
+        "source": "https://www.bleague.jp/roster_detail/?PlayerID=51000121",
+        "image_url": "https://www.bleague.jp/files/user/roster/2728/2026-27/51000121_03.png",
+        "observed_features": "茶色のセンターパート、ゆるい波状の短髪、やや幅のある卵形の輪郭、まっすぐな眉、細めの目、ひげなし。",
+        "usage": "公式写真は容姿確認のみ。イラストに写真やロゴを貼り込まない。選手名、個人成績、当日の出場・活躍は画像に記載しない。",
+        "qa_observation": "最終画像を目視。公式写真のセンターパート、茶髪、眉・目鼻、輪郭、ひげなしをイラストとして反映。2本の腕と両手・ボールの形、顔・文字の見切れなしを確認。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION:\nUse case: ads-marketing / illustration-story.\nCreate exactly one finished Japanese basketball editorial thumbnail, wide 16:9, ideally 1920x1080 and at least 1000px wide. It is a NEW image for バスケまとめ, based on the fixed 2026-11-22 pregame registered-player best-five article.\nVisual references already viewed in conversation: black-and-lime approved B-culver-black-lime-v3.png is STYLE ONLY; the official B.LEAGUE portrait of Tomohiro Ishii is LIKENESS ONLY. Do not copy any text, player identity, scores, logos, or pose from the style reference; do not paste any official photo.\n\nStyle: sophisticated bold hand-drawn sports editorial ink-and-dry-brush illustration, charcoal black #151A18 background, acid lime #CCF43B brush accents, warm ivory type and illustrated skin, one orange basketball accent. Obviously an illustration, never photographic. Few elements, exceptional Japanese typographic clarity, strong negative space.\nSubject: exactly one REAL player, 石井智大 / Tomohiro Ishii. He was randomly chosen from named players in the fixed source, NOT identified as the article's star. Match the official portrait just viewed: Japanese adult man, athletic broad shoulders, clean-shaven face, somewhat broad oval face tapering to a soft jaw, short softly waved brown hair with darker roots and a clear middle part, curtain-like front locks to the temples, exposed center forehead, relatively straight dark eyebrows, narrow dark almond eyes, medium straight nose, recognisable mouth and cheek contours. Do not invent a different person's face. Express focused determination while keeping these identity features.\nComposition: athlete occupies the LEFT 43% of the canvas, twisting in a low forward dribble in three-quarter view, face clearly visible, knees bent, one hand controlling the single ball at hip/upper-thigh level, other arm balancing naturally. Draw two anatomically coherent arms and hands; all fingers plausible. Plain ivory and charcoal basketball uniform with absolutely NO names, numbers, team emblems, league marks or sponsor lettering. Frame from head through knees with deliberate clean lower crop; entire head, both hands and ball safely inside canvas. A sweeping lime dry-brush curve behind the athlete suggests motion. This is a generic imagined basketball action, NOT a depiction/reconstruction of any actual game, no opponent, no hoop, no arena signage.\nType on the RIGHT 53%, balanced and clear; bold heavy Japanese Gothic with occasional brush emphasis. Headline huge, and emphasize ベスト5 in lime. Leave generous padding around all text and a clearly readable full-width footer. No text touches athlete.\nText, verbatim, and ONLY the following text:\nSmall top line: \"11/22  B.ONE・B.NEXT\"\nSmall pregame descriptor: \"試合前｜今季平均EFF\"\nLarge headline split over two lines:\n\"登録選手の\"\n\"ベスト5\"\nSupporting scope line: \"対象試合の登録選手から\"\nSupporting scope line: \"リーグ別に選出\"\nLegible caution near the bottom: \"出場確定ではありません\"\nBottom footer: \"イラスト（AI生成）\" and \"イメージ\"\n\nEditorial constraints: the frozen article is pregame, using season-average EFF and current registration, and official game results are not yet confirmed. Do not claim game outcomes, performance on this day, confirmed appearance, best-player honors for the illustrated person, combined inter-league ranking, or reproduce scores/stats. Never print the athlete's name. All text must be spelled exactly as above with no invented characters or extra copy. The AI label and イメージ must be visible inside safe margins. Do not render logos, photo fragments, watermark, signature, jersey number or personal name.\n\nONE PERMITTED CORRECTION:\nEdit the FIRST attached image, the finished black/lime Japanese basketball thumbnail. The SECOND attached image is an official portrait of the real player Tomohiro Ishii and is LIKENESS REFERENCE ONLY, never paste it or reproduce its jersey.\nMake exactly one targeted correction: improve the drawn athlete's head and face resemblance to Ishii in the second image, preserving the ink illustration medium and focused game-face expression. The current face is too gaunt and angular and the hair too large/high. Use his broader, softer oval cheek and jaw contours, smoother clean-shaven chin, straighter relatively narrow dark brows, narrower eyes, and actual nose and mouth proportions from the official portrait. Reduce the high hair volume to his actual compact brown softly-wavy center-parted curtain hairstyle, sides falling near the temples, with visible forehead and darker roots. Keep the entire head safely inside the canvas.\nKeep ALL remaining parts of the first image exactly unchanged: composition, body pose, two natural hands, single basketball, logo-free and number-free ivory jersey, charcoal/lime palette, hand-painted brush texture, every Japanese letter and number, exact wording, headline hierarchy, caution bar, and AI footer. No official photo fragment, no photorealism, no names, no new text, no logos.\nAll nine text lines remain exactly: \"11/22  B.ONE・B.NEXT\", \"試合前｜今季平均EFF\", \"登録選手の\", \"ベスト5\", \"対象試合の登録選手から\", \"リーグ別に選出\", \"出場確定ではありません\", \"イラスト（AI生成）\", \"イメージ\". Output exactly one PNG in the same wide approximately 16:9 dimensions at least 1000px wide.",
+    "generator": "OpenAI built-in image_gen.imagegen; initial generation plus one likeness correction; final PNG visually inspected.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-21T19:32:25.301982+00:00",
+  "publication_approved": false
+}
