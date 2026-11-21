@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "status": "pending",
+  "status": "ready",
   "article_key": "article-results-one-next-20261121",
   "games": [
     {
@@ -10866,10 +10866,10 @@
       "competition": "B1",
       "starts_at": "2026-11-21T08:35:00+00:00",
       "ended": true,
-      "fixed": false,
+      "fixed": true,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507379",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-      "status": "unconfirmed",
+      "status": "final",
       "home": "横浜EX",
       "home_full": "横浜エクセレンス",
       "home_id": "714",
@@ -11845,8 +11845,7 @@
           "TS": 0.8136094674556213,
           "USG": 11.785292026424909
         }
-      ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/507379/122.json"
+      ]
     },
     {
       "game_id": "507935",
