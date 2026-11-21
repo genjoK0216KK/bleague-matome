@@ -1176,6 +1176,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "愛媛対岡山は岡山が95-59で連勝、36点差の第2戦を検証"
   },
+  "article-daily-20261122.html": {
+   "article_path": "article-daily-20261122.html",
+   "editorial_fingerprint": "c3d3901a7336f828f0f3c509038ce63e4de0dc71497e14033cc8ddd85ef73978",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261122-89f19aff02dd.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261122-89f19aff02dd-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "49779d10a7f35fd62adf",
+   "image_sha256": "89f19aff02dd4d64ad07aa27efc9195f5e104ce8b118ca9d97fe20f20a14808b",
+   "imported_at": "2026-11-21T23:22:52.907830+00:00",
+   "prepared_at": "2026-11-21T23:22:11.862545+00:00",
+   "source_blob_sha": "b4fa68a7c302bd1643780bda4649637b71980b13",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "c3d3901a7336f828f0f3c509038ce63e4de0dc71497e14033cc8ddd85ef73978",
+   "style": "ink-lime-portrait-v5",
+   "title": "越谷対青森を試合前予測、16勝2敗の越谷が有利"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -3140,13 +3168,6 @@
  "log": [
   {
    "article": "article-games-20261116.html",
-   "at": "2026-11-16T10:30:59.083739+00:00",
-   "by": "fa0cffbf413d01623b62",
-   "event": "superseded",
-   "id": "82676b8dbd055f0288e7"
-  },
-  {
-   "article": "article-games-20261116.html",
    "at": "2026-11-16T10:30:59.178410+00:00",
    "event": "imported",
    "id": "fa0cffbf413d01623b62",
@@ -3697,6 +3718,13 @@
    "event": "imported",
    "id": "aa7b73c668fd5ccde61e",
    "image": "b73a9ddc9751"
+  },
+  {
+   "article": "article-daily-20261122.html",
+   "at": "2026-11-21T23:22:52.907853+00:00",
+   "event": "imported",
+   "id": "49779d10a7f35fd62adf",
+   "image": "89f19aff02dd"
   }
  ],
  "seen": {
@@ -3756,6 +3784,7 @@
   "45bb49c6e6574fb7d88a": "superseded:5e231e28b370cb26f1f6",
   "462d421c439cd54c6d5a": "superseded:0a5c2c0f2505974f6de8",
   "46adebe03cc636f48def": "imported",
+  "49779d10a7f35fd62adf": "imported",
   "49bbacec4ae3cfcad2fa": "superseded:899945a3915a435651cc",
   "4a1cd77fbe86da6af1f2": "superseded:be964f4359fb4b535b50",
   "4acaa02dc6ec1401ed89": "imported",
