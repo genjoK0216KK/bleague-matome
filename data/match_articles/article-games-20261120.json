@@ -4063,7 +4063,7 @@
       ]
     },
     "best": {
-      "total": 279,
+      "total": 330,
       "lineup": [
         {
           "slot": "PG",
@@ -4080,8 +4080,8 @@
           "team": "金沢",
           "league": "B1",
           "eff": 29,
-          "rare": 1,
-          "points": 58
+          "rare": 5,
+          "points": 87
         },
         {
           "slot": "SF",
@@ -4089,8 +4089,8 @@
           "team": "愛媛",
           "league": "B1",
           "eff": 22,
-          "rare": 1,
-          "points": 44
+          "rare": 5,
+          "points": 66
         },
         {
           "slot": "PF",
@@ -4119,7 +4119,7 @@
       "スティーブン・ハート（愛媛）",
       "佐野 悠星（岡山）"
     ],
-    "cards_retrieved_at": "2026-11-17T16:21:30+09:00",
+    "cards_retrieved_at": "2026-11-22T00:04:30+09:00",
     "cards_source": "https://api-card.bleaguepark.jp/jpbl/js_master/cards_json/2026"
   }
 }

@@ -17249,7 +17249,7 @@
       ]
     },
     "best": {
-      "total": 403,
+      "total": 456,
       "lineup": [
         {
           "slot": "PG",
@@ -17271,21 +17271,21 @@
         },
         {
           "slot": "SF",
-          "name": "タッカー・ヘイモンド",
-          "team": "立川",
+          "name": "ジャスティン・マッツ",
+          "team": "熊本",
           "league": "B1",
-          "eff": 37,
-          "rare": 3,
-          "points": 85
+          "eff": 35,
+          "rare": 5,
+          "points": 105
         },
         {
           "slot": "PF",
-          "name": "ジョーダン・ハミルトン",
-          "team": "埼玉",
-          "league": "B1",
-          "eff": 34,
-          "rare": 3,
-          "points": 78
+          "name": "ジャマル・ポップラー",
+          "team": "三重",
+          "league": "BN",
+          "eff": 37,
+          "rare": 5,
+          "points": 111
         },
         {
           "slot": "C",
@@ -17316,7 +17316,7 @@
       "宮永 颯太（東京U）",
       "ジェヴォニー・スコット（三重）"
     ],
-    "cards_retrieved_at": "2026-11-17T16:21:30+09:00",
+    "cards_retrieved_at": "2026-11-22T00:04:30+09:00",
     "cards_source": "https://api-card.bleaguepark.jp/jpbl/js_master/cards_json/2026"
   }
 }
