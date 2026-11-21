@@ -1,0 +1,95 @@
+{
+  "id": "99c879962bb973d9b339",
+  "article_path": "article-daily-20261121.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261121.html",
+  "source_commit": "",
+  "source_blob_sha": "b557bfad8eecd8e2aadc9208948203654ac2f227",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "38396f59e476f87f774d30a7ba421068bb7863946c39c91dda06858785ce951e",
+  "last_observed_blob_sha": "b557bfad8eecd8e2aadc9208948203654ac2f227",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/99c879962bb973d9b339/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/99c879962bb973d9b339/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-21T10:22:35.139406+00:00",
+  "creation_event_id": "dd75fced121b7a86d9dd",
+  "event_blob_sha": "b557bfad8eecd8e2aadc9208948203654ac2f227",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/99c879962bb973d9b339/thumbnail.png",
+  "image_sha256": "f37d8cd5a3fb4bb4d7f7117861aac77f976fed127353927cb5f4aeabb01f3cb4",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "b557bfad8eecd8e2aadc9208948203654ac2f227",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.21",
+      "岡山 95–59 愛媛",
+      "36点差",
+      "第2戦を検証",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/99c879962bb973d9b339/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261121.html",
+        "usage": "記事内容の根拠。見出し、日付、岡山95対59愛媛、36点差、第2戦の検証を確認。実際の特定プレーの再現とはしない。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/99c879962bb973d9b339/source.txt",
+        "usage": "HTMLと突合した本文根拠。試合後の検証記事であり、朝の試合前予測は参考として区別。画像では予測の的中や個人成績を主張しない。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "view_imageで確認した承認済み黒×ライム、太い見出し、手描きインクの画風。元の選手名・成績・日付は引き継いでいない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ソウ・シェリフ",
+        "selection": "ランダム",
+        "selection_reason": "チーム結果と複数選手を扱う記事で単独の主役に絞れないため、固定原稿中の7選手からSystemRandom.choiceで1人を抽選。",
+        "selection_pool": [
+          "キャメロン・ジャクソン",
+          "ジョシュ・スコット",
+          "ソウ・シェリフ",
+          "レイナルド・ガルシア",
+          "シャキール・ハインズ",
+          "田渡凌",
+          "ネマニャ・ラドヴィッチ"
+        ],
+        "source": "トライフープ岡山公式プロフィールのソウ・シェリフ選手肖像",
+        "profile_url": "https://tryhoop.com/team/players/detail/id=47406?PlayerID=8522",
+        "official_identity_url": "https://www.bleague.jp/roster_detail/?PlayerID=8522",
+        "image_url": "https://tryhoop.com/files/rcms_conv_webp/files/user/sow_cherif_hp_main.png_1789350699.webp?v=1789352071",
+        "viewed_local_reference": "/tmp/basuke-99c879962bb973d9b339-sow-reference.webp",
+        "appearance_confirmed": "公式肖像をview_imageで確認。極めて短い黒髪、やや縦長の輪郭、幅のある鼻、厚い唇、頬骨、あごと下あご沿いの短いひげ、長い首と長身の体格を参照。生成画像の顔・髪・ひげ・目鼻を照合。",
+        "image_treatment": "本人の容姿を参照して描いたドライブのイラスト。実際の試合場面の再現ではない。名前・背番号・個人成績・出場や活躍の主張は画像に含めない。公式写真の貼付、チーム・リーグ・スポンサーのロゴは含めない。"
+      }
+    ],
+    "prompt": "Use case: ads-marketing\nAsset type: Japanese basketball editorial website thumbnail. Create exactly ONE finished PNG image, landscape approximately 16:9, preferably 1792x1024 or 1920x1080, width at least 1000 pixels.\n\nPrimary request: A bold black-and-lime hand-painted sports illustration with exceptionally clear Japanese typography. Story: Okayama defeated Ehime 95–59; the article examines the 36-point margin in game two on 2026.11.21. The factual basis is only the supplied fixed manuscript. No other statistics.\n\nStyle/medium: Match the approved black #151A18 and electric lime #CCF43B reference style: expressive black ink, dry-brush strokes, limited off-white highlights, strong graphic silhouette, textured print illustration. Unmistakably illustrated, no photographic rendering. One lime sweeping diagonal behind the player, restrained flecks, uncluttered background.\n\nSubject: Exactly one REAL basketball player: Cherif Sow / ソウ・シェリフ, selected randomly from the seven names in the manuscript. Appearance was checked in the official Tryhoop Okayama portrait https://tryhoop.com/files/rcms_conv_webp/files/user/sow_cherif_hp_main.png_1789350699.webp?v=1789352071 . Depict his identifiable features: dark skin represented with legible warm dark gray and off-white ink planes, very close-cropped nearly shaved black hair, slightly elongated oval head, broad nose, full lips, high cheekbones, short neat beard concentrated along chin and lower jaw, subtle moustache, long neck, tall lean muscular athletic build. Preserve this face, not the curly-haired player in the approved style sample. Face should remain readable rather than a black silhouette.\nClothing: plain dark charcoal basketball sleeveless jersey over a plain fitted black short-sleeved undershirt, plain shorts, off-white edge highlights. NO logos, NO brands, NO sponsor text, NO team lettering, NO jersey number.\nAction: Energetic low three-quarter forward drive toward viewer's right, knees bent, torso twisting, the orange basketball cradled securely at his waist/hip in both hands. Anatomically convincing two arms, two hands with natural fingers gripping the ball, and two legs. Show the face clearly in three-quarter view. This is a freely composed conceptual basketball illustration, NOT a reconstruction or evidence of any moment in this actual game. No other people, no hoop needed.\n\nComposition: Player fills the LEFT 40 percent, head and both hands/ball inside safe margins, visible to mid-thigh or knees with intentional lower-body crop at the bottom. A clear empty right 56 percent is reserved for typography. At top right, modest brand name and date. Below them, clearly ordered score on one line. The largest visual text is “36点差” in lime with a bold brush-textured 36 and heavyweight Japanese type. Below it, “第2戦を検証” in off-white. Maintain a minimum 5 percent safe margin for text on all edges and separation from the figure. At the bottom in a quiet clear dark strip, a small but perfectly readable AI disclosure, around 28–32px equivalent at 1920px width. Text and illustration feel like one designed editorial cover.\n\nText (verbatim; no additional text anywhere):\nバスケまとめ\n2026.11.21\n岡山 95–59 愛媛\n36点差\n第2戦を検証\nイラスト（AI生成）\nイメージ\n\nTypography: Strong Japanese heavy gothic, clean exact glyphs. Score must show Okayama 95 and Ehime 59 in that order. 36 is the TEAM POINT MARGIN, not a player's scoring figure. Put the two footer labels next to each other, “イラスト（AI生成）　イメージ”. Do not print the player's name, any player statistics, appearances, awards, or performance assertions.\nConstraints: Exactly one new final thumbnail. No collage, no alternate variants, no official photo pasted into the illustration. No league or team logo. No photorealism. No trophy, victory pose or invented decisive play. Do not inherit player names, date or numbers from the style reference.",
+    "generator": {
+      "tool": "image_gen__imagegen",
+      "mode": "built_in",
+      "generation_calls": 1,
+      "revision_calls": 0,
+      "original_output_path": "/Users/genjo/.codex/generated_images/01a1fda1-1705-7d91-8e48-7fa83576744b/exec-864328e6-7454-4044-b8e6-694efea7cd94.png",
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "image_sha256": "f37d8cd5a3fb4bb4d7f7117861aac77f976fed127353927cb5f4aeabb01f3cb4",
+      "inspection": "生成ツールで実画像を表示し目視検品。95–59のチーム対応、36点差、第2戦、日付、AIとイメージ表記を読み取り確認。公式肖像と顔の特徴を照合。手・指の球への接触、腕の連続、主要文字・頭部・ボールが切れていないこと、意図的な下半身のトリミングを確認。写真風でなくインクのイラスト。修正不要と判定。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-21T10:25:38.375546+00:00",
+  "publication_approved": false
+}
