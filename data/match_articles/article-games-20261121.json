@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "status": "pending",
+  "status": "ready",
   "article_key": "article-results-one-next-20261121",
   "games": [
     {
@@ -10866,10 +10866,10 @@
       "competition": "B1",
       "starts_at": "2026-11-21T08:35:00+00:00",
       "ended": true,
-      "fixed": false,
+      "fixed": true,
       "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507379",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-      "status": "unconfirmed",
+      "status": "final",
       "home": "横浜EX",
       "home_full": "横浜エクセレンス",
       "home_id": "714",
@@ -11845,8 +11845,7 @@
           "TS": 0.8136094674556213,
           "USG": 11.785292026424909
         }
-      ],
-      "record_source": "https://b-league.s3.amazonaws.com/web_json/v2_genius_contexts/507379/122.json"
+      ]
     },
     {
       "game_id": "507935",
@@ -16533,7 +16532,368 @@
     "aggregation": "game_total",
     "leagues": {
       "B1": {
-        "error": "全試合の公式記録確定待ち"
+        "positions": {
+          "PG": [
+            {
+              "player_id": "8615",
+              "team_id": "750",
+              "name": "村上 駿斗",
+              "team": "金沢",
+              "positions": [
+                "PG",
+                "SG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507372",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=750",
+              "game_id": "507372",
+              "formula_value": 28,
+              "pts": 24,
+              "reb": 5,
+              "ast": 7,
+              "eff": 28,
+              "rank": 1
+            },
+            {
+              "player_id": "51000448",
+              "team_id": "753",
+              "name": "野溝 利一",
+              "team": "福岡",
+              "positions": [
+                "PG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507383",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=753",
+              "game_id": "507383",
+              "formula_value": 25,
+              "pts": 23,
+              "reb": 1,
+              "ast": 6,
+              "eff": 25,
+              "rank": 2
+            },
+            {
+              "player_id": "5100000090",
+              "team_id": "750",
+              "name": "マーク・バートン",
+              "team": "金沢",
+              "positions": [
+                "PG",
+                "SG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507372",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=750",
+              "game_id": "507372",
+              "formula_value": 25,
+              "pts": 22,
+              "reb": 4,
+              "ast": 4,
+              "eff": 25,
+              "rank": 2
+            }
+          ],
+          "SG": [
+            {
+              "player_id": "36799",
+              "team_id": "725",
+              "name": "アンソニー・ゲインズ・ジュニア",
+              "team": "鹿児島",
+              "positions": [
+                "SG",
+                "SF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507391",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=725",
+              "game_id": "507391",
+              "formula_value": 41,
+              "pts": 23,
+              "reb": 15,
+              "ast": 8,
+              "eff": 41,
+              "rank": 1
+            },
+            {
+              "player_id": "43445",
+              "team_id": "714",
+              "name": "トレイ・ボイド",
+              "team": "横浜EX",
+              "positions": [
+                "SG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507379",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=714",
+              "game_id": "507379",
+              "formula_value": 29,
+              "pts": 35,
+              "reb": 4,
+              "ast": 3,
+              "eff": 29,
+              "rank": 2
+            },
+            {
+              "player_id": "8615",
+              "team_id": "750",
+              "name": "村上 駿斗",
+              "team": "金沢",
+              "positions": [
+                "PG",
+                "SG"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507372",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=750",
+              "game_id": "507372",
+              "formula_value": 28,
+              "pts": 24,
+              "reb": 5,
+              "ast": 7,
+              "eff": 28,
+              "rank": 3
+            }
+          ],
+          "SF": [
+            {
+              "player_id": "36799",
+              "team_id": "725",
+              "name": "アンソニー・ゲインズ・ジュニア",
+              "team": "鹿児島",
+              "positions": [
+                "SG",
+                "SF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507391",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=725",
+              "game_id": "507391",
+              "formula_value": 41,
+              "pts": 23,
+              "reb": 15,
+              "ast": 8,
+              "eff": 41,
+              "rank": 1
+            },
+            {
+              "player_id": "36795",
+              "team_id": "2727",
+              "name": "タッカー・ヘイモンド",
+              "team": "立川",
+              "positions": [
+                "SF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507373",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2727",
+              "game_id": "507373",
+              "formula_value": 37,
+              "pts": 38,
+              "reb": 3,
+              "ast": 1,
+              "eff": 37,
+              "rank": 2
+            },
+            {
+              "player_id": "51000286",
+              "team_id": "724",
+              "name": "ジャスティン・マッツ",
+              "team": "熊本",
+              "positions": [
+                "SF",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507379",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=724",
+              "game_id": "507379",
+              "formula_value": 35,
+              "pts": 20,
+              "reb": 11,
+              "ast": 5,
+              "eff": 35,
+              "rank": 3
+            }
+          ],
+          "PF": [
+            {
+              "player_id": "51000286",
+              "team_id": "724",
+              "name": "ジャスティン・マッツ",
+              "team": "熊本",
+              "positions": [
+                "SF",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507379",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=724",
+              "game_id": "507379",
+              "formula_value": 35,
+              "pts": 20,
+              "reb": 11,
+              "ast": 5,
+              "eff": 35,
+              "rank": 1
+            },
+            {
+              "player_id": "33038",
+              "team_id": "744",
+              "name": "ジョーダン・ハミルトン",
+              "team": "埼玉",
+              "positions": [
+                "SF",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507373",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=744",
+              "game_id": "507373",
+              "formula_value": 34,
+              "pts": 24,
+              "reb": 12,
+              "ast": 7,
+              "eff": 34,
+              "rank": 2
+            },
+            {
+              "player_id": "46901",
+              "team_id": "1363",
+              "name": "ブレイク・プレストン",
+              "team": "岐阜",
+              "positions": [
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507383",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=1363",
+              "game_id": "507383",
+              "formula_value": 33,
+              "pts": 23,
+              "reb": 15,
+              "ast": 2,
+              "eff": 33,
+              "rank": 3
+            }
+          ],
+          "C": [
+            {
+              "player_id": "41165",
+              "team_id": "749",
+              "name": "クベマ スティーブ",
+              "team": "八王子",
+              "positions": [
+                "C"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507378",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=749",
+              "game_id": "507378",
+              "formula_value": 35,
+              "pts": 22,
+              "reb": 8,
+              "ast": 4,
+              "eff": 35,
+              "rank": 1
+            },
+            {
+              "player_id": "51000680",
+              "team_id": "715",
+              "name": "ブラントン・チャットフィールド",
+              "team": "東京Z",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507375",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=715",
+              "game_id": "507375",
+              "formula_value": 32,
+              "pts": 24,
+              "reb": 17,
+              "ast": 1,
+              "eff": 32,
+              "rank": 2
+            },
+            {
+              "player_id": "51000690",
+              "team_id": "753",
+              "name": "キャメロン・オリバー",
+              "team": "福岡",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507383",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=753",
+              "game_id": "507383",
+              "formula_value": 32,
+              "pts": 21,
+              "reb": 7,
+              "ast": 8,
+              "eff": 31,
+              "rank": 3
+            }
+          ]
+        },
+        "eligible_players": 264,
+        "position_retrieved_at": "2026-11-20T10:07:02.235441+00:00",
+        "formula_differences": [
+          {
+            "player_id": "51000646",
+            "name": "チュディアー・バイル",
+            "eff": 4,
+            "formula_value": 5,
+            "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507385"
+          },
+          {
+            "player_id": "15832",
+            "name": "白戸 大聖",
+            "eff": 5,
+            "formula_value": 6,
+            "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507372"
+          },
+          {
+            "player_id": "51000690",
+            "name": "キャメロン・オリバー",
+            "eff": 31,
+            "formula_value": 32,
+            "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507383"
+          },
+          {
+            "player_id": "51000678",
+            "name": "ブランドン・ウォルターズ",
+            "eff": 4,
+            "formula_value": 5,
+            "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507375"
+          }
+        ],
+        "sources": [
+          "https://www.bleague.jp/club_detail/?TeamID=1363",
+          "https://www.bleague.jp/club_detail/?TeamID=1637",
+          "https://www.bleague.jp/club_detail/?TeamID=1639",
+          "https://www.bleague.jp/club_detail/?TeamID=2725",
+          "https://www.bleague.jp/club_detail/?TeamID=2727",
+          "https://www.bleague.jp/club_detail/?TeamID=2890",
+          "https://www.bleague.jp/club_detail/?TeamID=2891",
+          "https://www.bleague.jp/club_detail/?TeamID=695",
+          "https://www.bleague.jp/club_detail/?TeamID=708",
+          "https://www.bleague.jp/club_detail/?TeamID=709",
+          "https://www.bleague.jp/club_detail/?TeamID=710",
+          "https://www.bleague.jp/club_detail/?TeamID=711",
+          "https://www.bleague.jp/club_detail/?TeamID=714",
+          "https://www.bleague.jp/club_detail/?TeamID=715",
+          "https://www.bleague.jp/club_detail/?TeamID=719",
+          "https://www.bleague.jp/club_detail/?TeamID=722",
+          "https://www.bleague.jp/club_detail/?TeamID=723",
+          "https://www.bleague.jp/club_detail/?TeamID=724",
+          "https://www.bleague.jp/club_detail/?TeamID=725",
+          "https://www.bleague.jp/club_detail/?TeamID=744",
+          "https://www.bleague.jp/club_detail/?TeamID=745",
+          "https://www.bleague.jp/club_detail/?TeamID=749",
+          "https://www.bleague.jp/club_detail/?TeamID=750",
+          "https://www.bleague.jp/club_detail/?TeamID=753",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507369",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507372",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507373",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507375",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507378",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507379",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507381",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507383",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507385",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507387",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507390",
+          "https://www.bleague.jp/game_detail/?ScheduleKey=507391"
+        ]
       },
       "BN": {
         "positions": {
@@ -16838,6 +17198,125 @@
     }
   },
   "fantasy_hand": {
-    "error": "全試合の公式記録確定待ち"
+    "star1": {
+      "total": 356,
+      "lineup": [
+        {
+          "slot": "PG",
+          "name": "村上 駿斗",
+          "team": "金沢",
+          "league": "B1",
+          "eff": 28,
+          "rare": 1,
+          "points": 56
+        },
+        {
+          "slot": "SG",
+          "name": "アンソニー・ゲインズ・ジュニア",
+          "team": "鹿児島",
+          "league": "B1",
+          "eff": 41,
+          "rare": 1,
+          "points": 82
+        },
+        {
+          "slot": "SF",
+          "name": "タッカー・ヘイモンド",
+          "team": "立川",
+          "league": "B1",
+          "eff": 37,
+          "rare": 1,
+          "points": 74
+        },
+        {
+          "slot": "PF",
+          "name": "ジャマル・ポップラー",
+          "team": "三重",
+          "league": "BN",
+          "eff": 37,
+          "rare": 1,
+          "points": 74
+        },
+        {
+          "slot": "C",
+          "name": "クベマ スティーブ",
+          "team": "八王子",
+          "league": "B1",
+          "eff": 35,
+          "rare": 1,
+          "points": 70
+        }
+      ]
+    },
+    "best": {
+      "total": 403,
+      "lineup": [
+        {
+          "slot": "PG",
+          "name": "村上 駿斗",
+          "team": "金沢",
+          "league": "B1",
+          "eff": 28,
+          "rare": 4,
+          "points": 75
+        },
+        {
+          "slot": "SG",
+          "name": "アンソニー・ゲインズ・ジュニア",
+          "team": "鹿児島",
+          "league": "B1",
+          "eff": 41,
+          "rare": 3,
+          "points": 94
+        },
+        {
+          "slot": "SF",
+          "name": "タッカー・ヘイモンド",
+          "team": "立川",
+          "league": "B1",
+          "eff": 37,
+          "rare": 3,
+          "points": 85
+        },
+        {
+          "slot": "PF",
+          "name": "ジョーダン・ハミルトン",
+          "team": "埼玉",
+          "league": "B1",
+          "eff": 34,
+          "rare": 3,
+          "points": 78
+        },
+        {
+          "slot": "C",
+          "name": "キャメロン・オリバー",
+          "team": "福岡",
+          "league": "B1",
+          "eff": 31,
+          "rare": 3,
+          "points": 71
+        }
+      ]
+    },
+    "uncarded": [
+      "アイラ・ブラウン（福島）",
+      "マム シェッハ イブラヒマ・ディオップ（福島）",
+      "アンドリュー・ランダル（静岡）",
+      "今野 海輝（静岡）",
+      "ユージーン・フェルプス（奈良）",
+      "スティーブン・ハート（愛媛）",
+      "佐野 悠星（岡山）",
+      "ホアン チウシー（山形）",
+      "デモンテ・フラニガン（岐阜）",
+      "ジャック・クラーク（福岡）",
+      "ファイ パプ月瑠（香川）",
+      "松本 礼太（香川）",
+      "石川 裕大（東京Z）",
+      "權藤 隼斗（東京U）",
+      "宮永 颯太（東京U）",
+      "ジェヴォニー・スコット（三重）"
+    ],
+    "cards_retrieved_at": "2026-11-17T16:21:30+09:00",
+    "cards_source": "https://api-card.bleaguepark.jp/jpbl/js_master/cards_json/2026"
   }
 }
