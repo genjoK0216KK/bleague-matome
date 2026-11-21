@@ -336,6 +336,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "仙台89ERSの直近5試合は5勝0敗 3P成功率41.5%はリーグ1位"
   },
+  "article-analysis-shinshu-20261121.html": {
+   "article_path": "article-analysis-shinshu-20261121.html",
+   "editorial_fingerprint": "b1dc38871ea0cc3103119ed40751af3e3b849f34913877fa4a29c80b71fdde49",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-analysis-shinshu-20261121-296215df0909.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-shinshu-20261121-296215df0909-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "8594401e4cc02e1d4d66",
+   "image_sha256": "296215df09091de6cb21a4972db45514a3dea0d431e0829e0fd7b351341a4c17",
+   "imported_at": "2026-11-21T03:26:57.471394+00:00",
+   "prepared_at": "2026-11-21T03:21:11.084987+00:00",
+   "source_blob_sha": "cd97f0adcd6da6b7dd2e78eadf2dab57cfe8f3f5",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "b1dc38871ea0cc3103119ed40751af3e3b849f34913877fa4a29c80b71fdde49",
+   "style": "ink-lime-portrait-v5",
+   "title": "信州ブレイブウォリアーズの直近5試合 2勝3敗でターンオーバー割合はリーグ最多"
+  },
   "article-analysis-yokohama-20261118.html": {
    "article_path": "article-analysis-yokohama-20261118.html",
    "editorial_fingerprint": "3abde8f740d70384f1f628ecfa9dd6eab982f057630302cf360578e98c495a9c",
@@ -3056,13 +3084,6 @@
  "log": [
   {
    "article": "article-daily-20261115.html",
-   "at": "2026-11-15T13:06:26.774139+00:00",
-   "by": "9f757581f96bc573aa5f",
-   "event": "superseded",
-   "id": "2aad1ed827bb14d32277"
-  },
-  {
-   "article": "article-daily-20261115.html",
    "at": "2026-11-15T13:06:26.886942+00:00",
    "event": "imported",
    "id": "9f757581f96bc573aa5f",
@@ -3613,6 +3634,13 @@
    "event": "imported",
    "id": "32b2d1daa11df55f4a4e",
    "image": "c076d77f58fa"
+  },
+  {
+   "article": "article-analysis-shinshu-20261121.html",
+   "at": "2026-11-21T03:26:57.471427+00:00",
+   "event": "imported",
+   "id": "8594401e4cc02e1d4d66",
+   "image": "296215df0909"
   }
  ],
  "seen": {
@@ -3725,6 +3753,7 @@
   "81cdf284d66df1d61f20": "imported",
   "82676b8dbd055f0288e7": "superseded:a5ada266578c44560dce",
   "83ac9a2c488698b37f01": "superseded:6b0212da2ca7a9d34810",
+  "8594401e4cc02e1d4d66": "imported",
   "8926ed6e2f6c758b34aa": "imported",
   "896bbeb35c2a1eb9d0e1": "imported",
   "899945a3915a435651cc": "imported",
