@@ -1,0 +1,106 @@
+{
+  "id": "49779d10a7f35fd62adf",
+  "article_path": "article-daily-20261122.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261122.html",
+  "source_commit": "",
+  "source_blob_sha": "b4fa68a7c302bd1643780bda4649637b71980b13",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "c3d3901a7336f828f0f3c509038ce63e4de0dc71497e14033cc8ddd85ef73978",
+  "last_observed_blob_sha": "b4fa68a7c302bd1643780bda4649637b71980b13",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/49779d10a7f35fd62adf/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/49779d10a7f35fd62adf/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-21T23:18:47.961299+00:00",
+  "creation_event_id": "d9730ed10879d58a1680",
+  "event_blob_sha": "b4fa68a7c302bd1643780bda4649637b71980b13",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/49779d10a7f35fd62adf/thumbnail.png",
+  "image_sha256": "89f19aff02dd4d64ad07aa27efc9195f5e104ce8b118ca9d97fe20f20a14808b",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "b4fa68a7c302bd1643780bda4649637b71980b13",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.22",
+      "試合前予測 / 独自分析",
+      "青森 vs 越谷",
+      "越谷が有利",
+      "と予測",
+      "越谷 16勝2敗",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/49779d10a7f35fd62adf/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261122.html",
+        "source_blob_sha": "b4fa68a7c302bd1643780bda4649637b71980b13",
+        "evidence": "タイトル、2026.11.22、青森対越谷、越谷16勝2敗、試合前予測 / 独自分析。本文は越谷が勝つと予測。四家魁人はけが人情報にのみ登場。"
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/49779d10a7f35fd62adf/source.txt",
+        "sha256": "c3d3901a7336f828f0f3c509038ce63e4de0dc71497e14033cc8ddd85ef73978",
+        "evidence": "固定HTMLと文章版を照合。外部ページを記事内容・数値の根拠に使用していない。"
+      },
+      {
+        "role": "official_player_appearance_reference_only",
+        "title": "越谷アルファーズ公式：四家 魁人 選手 / 2026-27シーズン選手契約合意(継続)のお知らせ",
+        "url": "https://www.koshigaya-alphas.com/news/202627s_resigned_info_kaitoshike",
+        "image_url": "https://www.koshigaya-alphas.com/files/rcms_conv_webp/files/user/images/NEWS/202627s_playerinfo_image_kaitoshike.jpg_1778586412.webp?v=1778641226",
+        "inspected": true,
+        "note": "公式掲載のプロフィール写真をダウンロードしてview_imageで容姿を実確認。写真を貼り付けず、顔・髪の特徴だけをイラストの参考とした。"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "inspected": true,
+        "note": "黒×ライム、太い日本語文字、インク・ブラシ表現を参照。選手名・数値・日付を転用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "四家魁人",
+        "selection": "ランダム",
+        "selection_pool": [
+          "四家魁人"
+        ],
+        "selection_reason": "記事の主役は両チームの比較で特定選手ではないため、本人指定の優先順に従い本文に名前が出ている選手から選択。該当者が1人なので選択結果は四家魁人。",
+        "official_profile_url": "https://www.koshigaya-alphas.com/news/202627s_resigned_info_kaitoshike",
+        "official_photo_url": "https://www.koshigaya-alphas.com/files/rcms_conv_webp/files/user/images/NEWS/202627s_playerinfo_image_kaitoshike.jpg_1778586412.webp?v=1778641226",
+        "observed_features": "暗い色のセンター分けの髪、左右に丸く流れる前髪、頬から顎にかけて緩やかに細くなる輪郭、太めの眉、切れ長の目、丸みのある鼻、やや厚めの下唇、目立つひげなし。",
+        "depiction": "無地のユニフォームでドリブルする手描きイラスト。特定試合の場面の再現ではない。",
+        "qualifiers": "固定原稿ではけが人として言及されている。画像に名前・個人成績・出場・活躍・復帰を示す文言を入れず、『イラスト（AI生成）』『イメージ』を明記。16勝2敗は越谷のチーム成績として同じ行に記載。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT (verbatim)\nUse case: stylized-concept\nAsset type: Japanese basketball editorial thumbnail, one finished PNG, landscape 16:9, ideally 2048 x 1152 pixels.\nPrimary request: Create a bold hand-drawn ink and brush illustration thumbnail for a PRE-GAME independent prediction article. This is an imagined illustration, never a documentary recreation of a game.\n\nReference roles: The black-and-lime approved thumbnail already viewed in this conversation is STYLE ONLY: deep charcoal #151A18, lime #CCF43B, warm ivory, large thick Japanese lettering, expressive dry-brush strokes and sparse paint speckles. Never carry over its player, player name, date, score, statistics or shooting pose.\nThe official Koshigaya Alphas profile photo of real player Kaito Shike (四家魁人) viewed in this conversation is LIKENESS REFERENCE ONLY, never paste its photograph, logos, uniform print or text. Official source: https://www.koshigaya-alphas.com/news/202627s_resigned_info_kaitoshike .\nLikeness: young adult Japanese man, broad softly oval face tapering to a rounded chin, balanced straight dark eyebrows, almond dark eyes, softly rounded nose, full lower lip, dark medium-length center-parted curtain hair with curved volume and shorter sides, clean-shaven with no visible beard. Fit compact point-guard build. Preserve his individual facial appearance in expressive ink drawing, not a generic invented player.\n\nScene and composition: Player occupies the left 40 percent of the frame in a dynamic low dribbling drive, 3/4 view with face clearly visible, torso leaning forward, orange basketball low at left held under his right dribbling hand; left arm bent naturally for balance. Frame from head to upper thighs, keep head, both hands and full ball safely inside canvas. Two anatomically correct arms and hands, natural fingers. Plain unbranded ivory/charcoal basketball uniform, no numbers, lettering, logos, sponsors or insignia. Strong hand-drawn hatching on face and uniform, not photorealistic. Abstract charcoal background with one broad diagonal lime dry-brush stroke behind the athlete, sparse controlled ink flecks, no actual arena, no opponent, no scoreboard. Right 56 percent is clear typographic negative space. All text and feet of letters comfortably within 5 percent safe margins. No text overlaps the face or ball.\n\nArticle facts are ONLY these: the frozen manuscript dated 2026.11.22 previews Aomori versus Koshigaya, and independently predicts Koshigaya is favored based on season performance. Koshigaya team record is 16 wins and 2 losses. It is not a result. The player was randomly chosen from the only named player in the manuscript, which mentions him only in its injury section. His appearance is a generic basketball image and makes NO claim of participation, achievement, fitness or game action in this fixture. Do not put his name or any individual statistic on the image.\n\nTypography and exact text (Japanese must be perfectly legible; reproduce only these eight text elements, no additions):\nSmall brand at upper left: \"バスケまとめ\"\nSmall date at upper right: \"2026.11.22\"\nCompact lime badge above headline: \"試合前予測 / 独自分析\"\nMatchup in medium ivory type on the right: \"青森 vs 越谷\"\nMain headline on right, very large bold ivory Japanese sans-serif, may break after 有利: \"越谷が有利と予測\"\nTeam statistic below headline, emphasize numerals in lime but keep team attribution adjacent on SAME line: \"越谷 16勝2敗\"\nFooter lower edge in clean legible ivory type: \"イラスト（AI生成）\"\nFooter next to it: \"イメージ\"\n\nConstraints: exactly one real player, no fictional person, no photographs, no photorealism, no team/league/sponsor logo, no watermark except the requested AI disclosure, no player name, no jersey number, no personal statistics, no win/result assertion, no extra words. Keep an editorial sports print feel with limited elements and excellent small-thumbnail readability.\n\nONE REVISION PROMPT (verbatim)\nEdit this generated Japanese basketball thumbnail with ONE targeted correction: increase safe margins and prevent clipping. Preserve the same illustrated real player likeness (Kaito Shike), exact pose, face, hands, uniform, basketball, black #151A18 and lime #CCF43B ink/brush style, and all exact Japanese text, date, team statistic, and AI disclosure.\nRecompose to fit all critical content safely inside the 16:9 canvas: reduce the player-and-ball group about 10 percent and place it so the entire hair silhouette has clear dark background above it, and the entire basketball and fingers have clear dark background to the left and below. Keep intentional thigh crop at the very bottom if needed; do not crop head, hands or basketball. Reduce the right typography group slightly so every letter has at least 4 percent outer margin. Headline should wrap as two lines \"越谷が有利\" and \"と予測\", maintaining the full wording \"越谷が有利と予測\". Keep the brand/date and footer fully inside safe margins. Extend the original charcoal and lime brush background naturally to fill. Do not add anything.\nExact text to preserve:\n\"バスケまとめ\"\n\"2026.11.22\"\n\"試合前予測 / 独自分析\"\n\"青森 vs 越谷\"\n\"越谷が有利と予測\"\n\"越谷 16勝2敗\"\n\"イラスト（AI生成）\"\n\"イメージ\"\nNo player name, logos, jersey numbers, new text or personal statistics. This is an imagined pre-game editorial illustration, not actual game footage. Output one landscape PNG, preserve aspect ratio near 16:9 and width at least 1000 pixels.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 2,
+      "revision_count": 1,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a20067-bc2c-7d20-9fbd-837904a7c9ce/exec-4d46216d-3f7c-42df-b95b-c27d5bd190f1.png",
+      "output_png": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/49779d10a7f35fd62adf/generated.png",
+      "width": 1672,
+      "height": 941,
+      "qa_method": "生成ツールが返した最終画像を実際に目視。文字と数値は固定HTML/TXTと照合し、顔はview_imageで確認した公式プロフィール写真と比較。PNGの形式・寸法・コピー一致はローカルで検証。",
+      "visual_check_notes": {
+        "text_and_numbers": "日付2026.11.22、青森 vs 越谷、見出し『越谷が有利と予測』、越谷16勝2敗を確認。誤字や余分な選手名・個人成績なし。",
+        "source_qualifiers": "『試合前予測 / 独自分析』『と予測』『イメージ』を確認。試合結果や出場を断定する文言なし。",
+        "likeness_or_no_named_person": "公式写真のセンター分け、顔の輪郭、眉・目・鼻・口の特徴をイラストで照合。実在の四家魁人選手1人。写真・ロゴ・スポンサー文字・背番号なし。",
+        "layout": "修正後は頭髪・両手・ボール・全テキストが枠内。左右の手の自然な指の形と腕の連続性を確認。脚は意図的なフレームクロップ。見出しが人物に重ならず読みやすい。",
+        "ai_label": "『イラスト（AI生成）』『イメージ』の両表記を下部で確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-21T23:22:11.862545+00:00",
+  "publication_approved": false
+}
