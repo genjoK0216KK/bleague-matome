@@ -1,0 +1,89 @@
+{
+  "id": "3a331756a5389aaef088",
+  "article_path": "article-games-20261121.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261121.html",
+  "source_commit": "",
+  "source_blob_sha": "972829f3f37d6699bf2d7536078e07dea8f20b4d",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "f1c878b93c4ef62a1bb3660c8d1d175f4c37d16b5ed878a7fcf3cfc977b74fb7",
+  "last_observed_blob_sha": "972829f3f37d6699bf2d7536078e07dea8f20b4d",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3a331756a5389aaef088/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3a331756a5389aaef088/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-21T10:11:52.935494+00:00",
+  "creation_event_id": "b8b6818528f7f7bdb122",
+  "event_blob_sha": "972829f3f37d6699bf2d7536078e07dea8f20b4d",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/3a331756a5389aaef088/thumbnail.png",
+  "image_sha256": "b6aeab4e6d141a28ef7770f598350da0cd019731ce09fa4ecf4264f95a5a813f",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "972829f3f37d6699bf2d7536078e07dea8f20b4d",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.21",
+      "試合結果",
+      "当日のEFF",
+      "19:05時点｜一部公式記録未確定",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3a331756a5389aaef088/source.html",
+        "role": "本文の根拠（固定HTML）",
+        "article_url": "https://basuke-matome.jp/article-games-20261121.html",
+        "verified_blob_sha": "972829f3f37d6699bf2d7536078e07dea8f20b4d",
+        "evidence": "記事タイトル『11/21 試合結果・当日のEFF』。試合日2026.11.21。各試合の状態は2026-11-21 19:05 JST時点。一部のB.ONE試合が『開始・公式記録未確定』。B.ONEの当日EFFおよび最高の手札は全試合の公式記録確定待ち。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3a331756a5389aaef088/source.txt",
+        "role": "本文の根拠（固定文章）",
+        "evidence": "上記のタイトル・日付・時点・未確定の留保、および石井智大の名前が本文にあることを確認。画像には個人成績・順位・氏名を記載しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品の手順"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "目視済みの承認済みスタイル参照のみ。選手・日付・成績は継承しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "石井 智大",
+        "selection": "ランダム",
+        "selection_method": "主役が一人に絞れない試合結果・複数ポジション比較記事のため、本文登場選手14人（重複を除く）からPython random.SystemRandom().choiceで1人を抽選。結果は石井智大。",
+        "source": "B.LEAGUE公式 2026 バレンタイン特設サイト 石井智大 選手紹介",
+        "url": "https://www.bleague.jp/valentine/2026/player/su/",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=1769029634/files/user/_/valentines/2026/img/player/47_su_01.png",
+        "roster_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000121",
+        "viewed_local_reference": "/tmp/basuke-3a331756-ishii-official.png",
+        "appearance_observed": "明るい茶色の短髪、暗い根元と短いサイド、横に流した前髪、太く濃い眉、やや細い目、頬に厚みのある卵形の輪郭、丸みのある顎、ひげなし。公式写真を目視し、生成イラストの髪・眉・目鼻・輪郭と照合。",
+        "usage": "容姿の参考のみ。公式写真の貼付・転載なし。無地ユニフォームでドリブルするイメージ。実際の当日のプレー再現ではない。画像内に選手名・成績・出場・活躍を記載しない。"
+      }
+    ],
+    "prompt": "Use case: ads-marketing.\nCreate exactly ONE finished Japanese basketball editorial thumbnail as an opaque PNG, landscape 16:9, target 1792×1024 or another landscape size at least 1000 px wide.\n\nPrimary request: A thumbnail for the fixed article titled \"11/21 試合結果・当日のEFF\". The article's data snapshot is 2026-11-21 19:05 JST, and some official game records are still unconfirmed. This qualifier must remain plainly readable. No individual performance claim.\n\nStyle reference: the approved black/lime B-culver-black-lime-v3 thumbnail viewed in this conversation is STYLE guidance only: deep charcoal #151A18, vivid lime #CCF43B, warm white, orange basketball, bold Japanese sans-serif headline, expressive hand-inked outlines and dry-brush strokes. Do not copy its player, date, name, score, or shooting pose. Keep the image unmistakably a hand-drawn editorial illustration rather than a photograph.\n\nSubject: exactly ONE REAL player, Tomohiro Ishii (石井智大), selected randomly from the players explicitly named in the fixed article. Use the official B.LEAGUE 2026 Valentine player portrait that was inspected in this conversation only as an appearance reference, not as pasted pixels. Appearance source: https://www.bleague.jp/valentine/2026/player/su/ and its portrait https://bleague.bl.kuroco-img.app/v=1769029634/files/user/_/valentines/2026/img/player/47_su_01.png . Match the visible athlete's appearance: young Japanese adult, short honey/light-brown dyed hair with dark roots, darker short sides and swept side-parted top, thick dark straight eyebrows, slightly narrow dark eyes, oval face with full cheeks, a rounded tapered chin, straight nose, clean-shaven face, solid athletic shoulders. Do not depict the player in the older black/lime style reference. Draw Ishii in a plain sleeveless light-colored basketball jersey and shorts with charcoal shadows and restrained lime trim, with NO writing, numbers, team insignia, manufacturer branding, or sponsor logos.\n\nAction and composition: right half of the canvas, one forceful forward dribble, torso leaning diagonally, bent knees, face seen clearly in three-quarter view and eyes looking ahead, one anatomically correct hand controlling an orange basketball near hip/knee level, the other arm naturally balanced. The ball is a prop controlled by this player and must fit entirely inside the canvas. Keep all fingers and both hands anatomically plausible. This is an imagined basketball motion, NOT a reconstruction of any actual game, decisive shot, or actual performance on this date. Do not depict an opponent, crowd members, or any other person. Use a few broad diagonal lime brush strokes behind the player. No scoreboard, court details, hoop, badges, or decorative extra text. Keep a quiet left half for typography and generous safe margins.\n\nText (verbatim, only these seven strings; render all accurately in Japanese):\n1. \"バスケまとめ\" — small masthead top-left.\n2. \"2026.11.21\" — small date immediately below the masthead.\n3. \"試合結果\" — dominant, huge warm-white bold Japanese headline on the left.\n4. \"当日のEFF\" — large lime secondary headline directly below, visually part of the article title rather than a label for the player.\n5. \"19:05時点｜一部公式記録未確定\" — an easily readable warm-white qualifier in a dark, uncluttered strip below the title; do not omit, shorten, or obscure it.\n6. \"イラスト（AI生成）\" — legible footer at bottom-left.\n7. \"イメージ\" — legible footer next to the AI label.\n\nConstraints: player identity likeness from the official reference, no player name anywhere in the image, no player statistics or performance statements, no score, no ranking, no actual-game claim, no team/league logos, no official-photo collage, no photorealism, no watermark. Ensure every character stays fully inside the frame, no text overlaps the player, facial details remain readable, and the entire layout has the same confident black-and-lime ink/brush energy as the approved style.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "revision_count": 0,
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "image_sha256": "b6aeab4e6d141a28ef7770f598350da0cd019731ce09fa4ecf4264f95a5a813f",
+      "qa_method": "生成された画像を実際に目視。7つの表示文言、留保、公式参照に対する顔の特徴、手指、ボール全体の収まり、文字や顔の見切れ、AI生成表記を確認。PNGシグネチャ・寸法・全チャンクCRCと固定HTMLのblob SHAを別途検証。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-21T10:15:38.507643+00:00",
+  "publication_approved": false
+}

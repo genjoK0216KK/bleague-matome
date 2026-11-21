@@ -1,0 +1,84 @@
+{
+  "id": "20f3bc101823b00a1fb5",
+  "article_path": "article-results-one-next-20261121.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261121.html",
+  "source_commit": "",
+  "source_blob_sha": "b02bca45dc37aacd35cbb8fcc1c44afd388d6f49",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "f1c878b93c4ef62a1bb3660c8d1d175f4c37d16b5ed878a7fcf3cfc977b74fb7",
+  "last_observed_blob_sha": "b02bca45dc37aacd35cbb8fcc1c44afd388d6f49",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/20f3bc101823b00a1fb5/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/20f3bc101823b00a1fb5/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-21T10:11:53.460693+00:00",
+  "creation_event_id": "c1f314e5466a51ad3d2f",
+  "event_blob_sha": "b02bca45dc37aacd35cbb8fcc1c44afd388d6f49",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/20f3bc101823b00a1fb5/thumbnail.png",
+  "image_sha256": "7eae0f29bf9eda2af60610b53b191f3e22f71eba26442e8353f926547d32586b",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "b02bca45dc37aacd35cbb8fcc1c44afd388d6f49",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.21",
+      "試合結果",
+      "当日のEFF",
+      "B.ONE / B.NEXT",
+      "B.ONE 全試合の公式記録確定待ち",
+      "19:05時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/20f3bc101823b00a1fb5/source.html",
+        "role": "固定HTML。記事内容・日付・リーグ・19:05時点の状態とB.ONE記録確定待ちの唯一の本文根拠（source.txtと併用）。Git blob方式SHA-1一致確認済み。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/20f3bc101823b00a1fb5/source.txt",
+        "role": "固定文章。11/21試合結果・当日のEFF、B.ONE全試合の公式記録確定待ちを照合。外部ページの試合情報・成績は使用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "重冨 周希",
+        "selection": "ランダム",
+        "selection_method": "記事に特定の主役がないため、source.txtに名前が載る重複を除いた14選手からPython random.SystemRandom().choiceで1人を抽選。",
+        "candidate_names": [
+          "新本 風河",
+          "重冨 周希",
+          "板橋 真平",
+          "山口 力也",
+          "髙木 慎哉",
+          "石井 智大",
+          "ジョーダン・ジャイルズ",
+          "イブラヒム・ディアビ",
+          "神田 壮一郎",
+          "ジャマル・ポップラー",
+          "ライアン・ローガン",
+          "サム・ティミンズ",
+          "マイク・エドワーズ",
+          "ハイデン・コヴァル"
+        ],
+        "official_profile": "https://www.bleague.jp/roster_detail/?PlayerID=5100000076",
+        "official_image": "https://www.bleague.jp/files/user/roster/2728/2026-27/5100000076_03.png",
+        "reference_scope": "公式プロフィールの容姿のみ。顔写真をview_imageで目視確認し、修正時には容姿参照として内蔵画像生成に渡した。写真そのものは成果画像に使用していない。",
+        "observed_features": "額を見せた黒いウェーブの分け髪、短めのサイド、細めの目、比較的まっすぐな眉、柔らかい頬から丸い顎へ続く卵形の輪郭、ひげなし。",
+        "image_depiction": "ドリブルで踏み込むプレー姿のイラスト。特定試合の実際の場面の再現ではない。選手名・背番号・出場や個人成績の主張なし。",
+        "qa_observation": "初稿では眉・輪郭とひげ状の陰影が公式写真から離れていたため1回修正。最終画像では髪型・目鼻・頬と顎の形・ひげなしを参照写真と比較確認。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story / editorial sports thumbnail.\nCreate exactly ONE finished Japanese basketball article thumbnail as a PNG, landscape 1600×900 (16:9), opaque background.\nStyle: approved バスケまとめ visual language: near-black #151A18 background, vivid lime #CCF43B dry-brush diagonals, warm ivory bold Japanese typography, hand-drawn ink and brush hatching, sparse composition and strong small-size legibility. This is an illustration, clearly not a photo.\nSubject: ONE real basketball player, Shuki Shigetomi / 重冨周希, selected randomly from the article's listed players. Depict his likeness as seen in the official B.LEAGUE 2026-27 portrait, never a generic fictional substitute: Japanese adult male, athletic compact guard build, clean-shaven, oval face with broad soft cheek contours tapering to a rounded chin, medium straight nose, narrow smiling almond eyes, dark nearly straight brows, medium-full lips, short black wavy hair parted off-center with raised tousled volume and curled locks at the temples, forehead visible, sides shorter. Draw the face recognizably and naturally in expressive pen-and-ink, with a focused playing expression. No beard, no headband, no invented tattoos.\nPose: right half of frame, dynamic low driving stance, torso leaning diagonally forward, face in readable three-quarter view toward the left. His right hand is in contact with the top of a single orange basketball at hip level during a dribbling drive; left arm naturally bent for balance. Show two anatomically plausible arms and correct hands. Compose from head to knees, hands, face and ball fully inside the canvas. Plain ivory/black sleeveless basketball uniform; no lettering, numbers, emblems or sponsors. Lime brush strokes emphasize movement behind him. This is a conceptual playing illustration, NOT a reconstruction of a particular match, decisive play, score or achievement.\nText area: left 57% of frame with large clean generous margins. Main headline in very heavy Japanese gothic, warm white and lime, never obscured by the player. At least 50px safe margins at all edges, keep footer fully readable.\nRender ONLY the following exact text, no other text:\nTop small: \"バスケまとめ\"\nDate small beneath: \"2026.11.21\"\nMain very large two lines: \"試合結果\" and \"当日のEFF\"\nSecondary: \"B.ONE / B.NEXT\"\nQualifier in a distinct clean lower-left band, readable and subordinate to headline, two lines: \"B.ONE 全試合の公式記録確定待ち\" and \"19:05時点\"\nFooter: \"イラスト（AI生成）\" and \"イメージ\"\nSource meaning: frozen article as of 2026-11-21 19:05 JST includes B.ONE and B.NEXT results, B.NEXT positional EFF tables, while B.ONE full official records and its EFF standings are still pending. Do not imply every match or ranking is final.\nDo not put the player's name, team name, jersey number, individual stats, performance or attendance claim anywhere in the image. Do not carry over Culver's name, 38 points, or Sendai/Kobe scores from the approved style reference. Do not include any team or league logo, official photo, watermark, realistic photography, extra people or extra basketballs. Use generic text typesetting for B.ONE / B.NEXT, not league logotypes. Clear editorial hierarchy, excellent Japanese typography, no cropping of text.\n\nSINGLE CORRECTION\nEdit the FIRST image (the generated black/lime basketball thumbnail). The SECOND image is an official portrait of the actual player Shuki Shigetomi / 重冨周希, provided ONLY as a face and hair likeness reference; do not paste, reproduce, or composite the photograph itself.\nThis is the single permitted correction. Keep all Japanese text EXACTLY as it currently appears, preserve the 1672×941 landscape canvas, headline arrangement, colors, paper-and-ink brush style, generic unbranded uniform, body pose, ball and hands.\nCorrect the illustrated player's identity to match the SECOND portrait: his face has softer fuller cheeks, a longer oval contour tapering smoothly to a rounded chin, narrow almond-shaped eyes, nearly straight relatively thin eyebrows (not the thick sharply angled brows in the current illustration), a natural medium nose, fuller lips and recognizable facial proportions. He is completely CLEAN SHAVEN: remove all moustache marks and beard/stubble at the upper lip, lower lip, chin and jaw. Preserve natural pen-and-ink contour shading without depicting facial hair. Match the official portrait's wavy parted black hair with less exaggerated volume; short sides, open forehead and loose locks either side. Retain a focused playing expression but allow his softer facial features to remain recognizable. No generic heroic comic-book face. Draw him as a hand-inked illustration, not a photo.\nAlso reduce/reposition the head slightly so the entire hair silhouette sits at least 30px below the top border, without covering any text. Keep the rest of the thumbnail unchanged.\nDo not add the player's name or jersey number anywhere. No logos, official photographs, extra people, new text, or invented achievements. Maintain the existing annotations “イラスト（AI生成）” and “イメージ”.\n\nCorrection references (first: edit target; second: official portrait for likeness only):\n/Users/genjo/.codex/generated_images/01a1fd9a-bb76-7a93-bc06-0b8f3088e79d/exec-fae7a408-330a-4e38-bf0c-e180071e2068.png\n/tmp/basuke-20f3bc101823b00a1fb5/shigetomi-official.png",
+    "generator": "内蔵 image_gen.imagegen（image_gen__imagegen）。新規生成1回、修正1回。最終PNG 1672×941、約16:9。外部API・CLI画像生成・後処理なし。承認済みB-culver-black-lime-v3.pngを目視でスタイル参照。A-faison-ivory-v3.pngは指定場所に存在せず、黒×ライム案を使用。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-21T10:19:12.218368+00:00",
+  "publication_approved": false
+}
