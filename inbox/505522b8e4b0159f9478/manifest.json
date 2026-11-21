@@ -1,0 +1,85 @@
+{
+  "id": "505522b8e4b0159f9478",
+  "article_path": "article-games-20261121.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261121.html",
+  "source_commit": "",
+  "source_blob_sha": "2d370aea253dd7fa822c6e59c7b59eebb1ec3e32",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "6fa3101f1d60ddb517fc62e90d590f07414eb128684c0e0c32445616798a99d6",
+  "last_observed_blob_sha": "2d370aea253dd7fa822c6e59c7b59eebb1ec3e32",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/505522b8e4b0159f9478/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/505522b8e4b0159f9478/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-21T13:43:22.140616+00:00",
+  "creation_event_id": "a47f06f8af4f2684df2e",
+  "event_blob_sha": "2d370aea253dd7fa822c6e59c7b59eebb1ec3e32",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/505522b8e4b0159f9478/thumbnail.png",
+  "image_sha256": "275e9fdd04c600c38509a4c58598aedf249d25ea5913710cc7a4faf522379a3a",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "2d370aea253dd7fa822c6e59c7b59eebb1ec3e32",
+    "text_lines": [
+      "バスケまとめ",
+      "11/21",
+      "試合結果",
+      "当日のEFF",
+      "B.ONE・B.NEXT",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/505522b8e4b0159f9478/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261121.html",
+        "blob_sha": "2d370aea253dd7fa822c6e59c7b59eebb1ec3e32"
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/505522b8e4b0159f9478/source.txt",
+        "evidence": "見出し「11/21 試合結果・当日のEFF」。B.ONE・B.NEXTの結果と当日ポジション別EFF。B.PREMIERは試合なし。資料取得2026-11-21 22:42〜22:43 JST。",
+        "qualifiers_preserved": "リーグ範囲をB.ONE・B.NEXTと表記。個人成績・順位・出場の主張やカード点数は表示せず、実際の場面の再現でない「イメージ」と明示。"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "visually_reviewed": true,
+        "use": "黒・ライム、太い日本語文字、インク・ブラシの画風のみを参照。選手名・成績は転用していない。"
+      },
+      {
+        "role": "appearance_only",
+        "url": "https://www.bleague.jp/en/roster_detail/?PlayerID=43437",
+        "image_url": "https://www.bleague.jp/files/user/roster/2728/2026-27/43437_03.png",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/505522b8e4b0159f9478/references/hayden-koval-official.png",
+        "visually_reviewed": true
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ハイデン・コヴァル",
+        "english_name": "Hayden Koval",
+        "selection": "ランダム",
+        "selection_reason": "複数試合・ポジション別ランキングを並列に扱う記事で単独の主役を絞れないため、本文TOP3表の登場選手26名を重複除去して抽選。",
+        "selection_method": "Python random.Random(int('505522b8e4b0159f9478',16)).choice(candidates); candidates are unique player entries in fixed source.txt TOP3-table order.",
+        "source": "B.LEAGUE公式プロフィール",
+        "url": "https://www.bleague.jp/en/roster_detail/?PlayerID=43437",
+        "image_url": "https://www.bleague.jp/files/user/roster/2728/2026-27/43437_03.png",
+        "observed_features": "短い明るい茶色の横流しの髪、長めの輪郭と角のある顎、まっすぐな鼻、明るい目、ひげなし、長い首と手足。",
+        "depiction": "1人でボールを両手に保持して切り返すプレーのイメージ。無地ユニフォーム。氏名・背番号・個人成績・出場や活躍の記載なし。",
+        "likeness_review": "公式写真と修正版を目視比較。短髪、輪郭、顎、目鼻、ひげなしの特徴を確認。写真の貼付けや写真風ではなくインク画。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail, landscape approximately 16:9, preferably 1920x1080 PNG. This is a new original hand-drawn illustration with integrated typography, not a photograph.\n\nArt direction: approved バスケまとめ style: near-black #151A18 background, electric lime #CCF43B broad diagonal dry-brush strokes, ivory text, confident rough ink and brush hatching, a few orange accents only on the basketball. Bold Japanese gothic headline, extremely clear at thumbnail size, few elements and generous spacing. No logos of any kind.\n\nSubject: ONE real professional basketball player, Hayden Koval (ハイデン・コヴァル), selected at random from names in the supplied article. His official B.LEAGUE profile photo was visually inspected: https://www.bleague.jp/files/user/roster/2728/2026-27/43437_03.png (profile https://www.bleague.jp/en/roster_detail/?PlayerID=43437).\nAccurately reflect the observed appearance: very tall, lean athletic adult man, fair skin, short sandy/light brown hair parted loosely on his left and swept across the forehead toward his right, modest volume on top with neat short sides; long angular face with squared jaw and pronounced chin; straight prominent nose; light blue eyes with slightly narrowed lids; thin light eyebrows; wide mouth and distinct smile lines; completely clean-shaven; long neck and long arms. Do not depict the dark-haired bearded player in the style example. Use stylized ivory/black ink facial planes with recognizable hair, nose, eyes, jaw and chin, not photorealism, not a generic substitute.\n\nComposition: player fills the LEFT 42 percent, from head to upper thighs, three-quarter front view, in a dynamic low-post pivot, knees bent and torso turning right while holding an orange basketball securely at chest/upper waist with both hands. Face clearly visible. Two anatomically coherent arms and two natural hands, fingers partly wrapping the ball, no extra fingers or limbs. Whole head, elbows, hands and ball comfortably inside canvas. Plain dark sleeveless basketball uniform with a subtle ivory edge, absolutely no letters, no numbers, no team badges, no sponsor marks. Lower thighs may naturally meet the bottom edge. A wide lime brush slash behind the figure conveys motion. Background is abstract, not a documented arena.\n\nText block on the RIGHT 53 percent, aligned left within that block, separated cleanly from figure. Top small ivory masthead, then lime date large, then largest ivory Japanese headline, then lime/ivory subheadline and smaller league names. Keep 6% outer safe margins, all text fully inside frame. Footer across bottom on a clear near-black strip, readable.\nText (verbatim, render ONLY these strings):\n\"バスケまとめ\"\n\"11/21\"\n\"試合結果\"\n\"当日のEFF\"\n\"B.ONE・B.NEXT\"\n\"イラスト（AI生成）\"\n\"イメージ\"\n\nSource context: fixed article title is 11/21 試合結果・当日のEFF, date 2026-11-21, B.ONE and B.NEXT results plus position EFF tables; B.PREMIER had no games. The picture is an imagined basketball movement, not a recreation of a specific game. Do not put the selected player's name, individual scores, performance, appearance claims or a uniform number in the image. Do not add a score, rank, result, opponent, fantasy card points or any unsupported text. Do not copy the official photograph or use a photographic cutout. Clearly illustrated, strong brush texture but clean legible face and text.\n\n\nONE ALLOWED REVISION\nEdit image 1, the generated basketball thumbnail. Image 2 is the official portrait of the SAME real athlete Hayden Koval, for likeness reference ONLY; never paste photographic pixels, uniform, logos or lettering from image 2.\n\nMake ONE targeted revision to the illustrated athlete on the LEFT: create comfortable framing and closer face/hair likeness. Reduce the entire illustrated figure (including arms and basketball) slightly and place it lower so the complete head and all hair have at least 45px of dark/brush background above them. Keep both elbows, hands and ball inside the canvas with at least 25px from the left edge. The lower thighs may meet the bottom edge naturally. Do not shrink or move the right text block.\nRe-draw the face and hair closer to official portrait 2: compact short sandy/light brown hair with a modest side-swept fringe, neatly short sides, no long voluminous flowing locks. Match the portrait's long angular face, squared chin, straight nose, clean-shaven cheeks, thin light eyebrows and light blue eyes; reduce the exaggerated thick eyebrows. Athletic very tall lean build. Preserve the lively low-post pivot holding the orange ball, hand-drawn ink/brush illustration style, plain unmarked black uniform and the black #151A18/lime #CCF43B/ivory palette. NO photograph, no logo, no uniform number, no sponsor marks.\n\nEverything else must remain as in image 1: same landscape roughly 16:9 size at least 1000px wide, right-side text and hierarchy, date, all exact wording and spelling, colors, lower label. The only displayed text is:\nバスケまとめ\n11/21\n試合結果\n当日のEFF\nB.ONE・B.NEXT\nイラスト（AI生成）\nイメージ\n\nKeep the typography clean and fully inside the frame. Keep fingers anatomically natural. Do not add anyone else or any new text. This is an imagined play illustration and never a reconstruction of an actual game.\n",
+    "generator": "Built-in image_gen.imagegen only; 1 initial generation + 1 revision. Final PNG 1672x941. Final generated file: /Users/genjo/.codex/generated_images/01a1fe58-eba5-7bb3-b44e-499de51487af/exec-95f128e4-cdb1-406c-8a3f-f7c02d8bcc2e.png. Initial image rejected for hair touching upper edge; final image visually inspected for corrected margins, text, hands, likeness and AI label. No API/CLI generation or postprocessing.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-21T13:47:22.693835+00:00",
+  "publication_approved": false
+}

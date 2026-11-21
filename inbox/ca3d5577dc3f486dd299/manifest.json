@@ -1,0 +1,95 @@
+{
+  "id": "ca3d5577dc3f486dd299",
+  "article_path": "article-results-one-next-20261121.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261121.html",
+  "source_commit": "",
+  "source_blob_sha": "af9b7f0c22f34a83d77c30488cb643543ebff642",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "6fa3101f1d60ddb517fc62e90d590f07414eb128684c0e0c32445616798a99d6",
+  "last_observed_blob_sha": "af9b7f0c22f34a83d77c30488cb643543ebff642",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca3d5577dc3f486dd299/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca3d5577dc3f486dd299/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-21T13:43:22.675791+00:00",
+  "creation_event_id": "3961bac77177b262a650",
+  "event_blob_sha": "af9b7f0c22f34a83d77c30488cb643543ebff642",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/ca3d5577dc3f486dd299/thumbnail.png",
+  "image_sha256": "f33049215761a7daf472408f840182c7b800dd77d0b1537d796f622bf306c85a",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "af9b7f0c22f34a83d77c30488cb643543ebff642",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.21",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "B.ONE / B.NEXT",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "frozen_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca3d5577dc3f486dd299/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261121.html",
+        "usage": "本文根拠。試合日2026.11.21、試合結果、当日のEFF・ポジション別TOP3、B.ONE・B.NEXT。固定HTMLのblob SHAを保存時に再照合。"
+      },
+      {
+        "type": "frozen_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca3d5577dc3f486dd299/source.txt",
+        "usage": "本文根拠。上記の見出しを照合。資料取得2026-11-21 22:42〜22:43 JST。当日TOP3は出場選手の公式配信EFFをリーグ別・登録ポジション別に集計。今季平均・予想とは異なる。サムネに個人の得点・EFF・順位、試合スコア、カード点は表示していない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "目視確認済み。黒×ライム、太い日本語、手描きインク・ブラシ、少ない要素。人物・名前・数値・日付は流用しない。"
+      },
+      {
+        "type": "official_appearance_reference",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000121",
+        "image_url": "https://www.bleague.jp/files/user/roster/2728/2026-27/51000121_03.png",
+        "usage": "石井智大選手の容姿参照のみ。外部ページの成績を本文根拠には使用せず、写真・ロゴ・スポンサー文字を完成画像へ貼り付けていない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "石井 智大",
+        "selection": "ランダム",
+        "selection_reason": "複数試合の結果と複数部門のランキングを扱い、特定の選手が本文の主役と絞れないため。",
+        "selection_method": "source.html の strong 要素内の重複除去済み選手名26名から Python secrets.choice で抽選。候補と抽選結果は selection.json に保存。",
+        "candidate_count": 26,
+        "official_profile_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000121",
+        "official_photo_url": "https://www.bleague.jp/files/user/roster/2728/2026-27/51000121_03.png",
+        "local_reference_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/ca3d5577dc3f486dd299/ishii-official-reference.png",
+        "appearance_observed": "明るいアッシュブラウンの中央分け、額の中央が見える短めのカーテン状の髪。幅のある頬、柔らかい角のある顎、直線的な眉、細めの目、ひげなし。公式写真を目視確認し、完成画像の特徴と比較した。",
+        "depiction": "ドリブルする本人のイラスト。実際の試合場面を再現したものではない。画像内に名前・個人成績・出場・活躍の記述は置かず、「イラスト（AI生成）」「イメージ」を表示。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT\nUse case: ads-marketing.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape 16:9, ideally 1792x1008 or 1536x864, opaque PNG, at least 1000 pixels wide.\n\nApproved visual direction: the black-and-lime ink basketball thumbnail already shown in the conversation is a STYLE REFERENCE ONLY. Near-black #151A18 background, vivid lime #CCF43B paint sweep, warm ivory bold Japanese typography, strong hand-drawn black/white ink and brush rendering, minimal elements. Do not inherit the reference's player, name, date, scores, shooting pose, or any text.\n\nSubject identity: depict ONE real player, 石井智大 / Tomohiro Ishii, using the OFFICIAL PROFILE PORTRAIT shown in this conversation as appearance reference ONLY, from https://www.bleague.jp/roster_detail/?PlayerID=51000121 and https://www.bleague.jp/files/user/roster/2728/2026-27/51000121_03.png . Preserve the observed likeness: young Japanese man with light-medium skin, full cheeks, broad softly squared lower face, straight brows, narrow almond eyes, straight nose, clean-shaven face, medium-length light ash-brown hair parted centrally with loose wavy curtain sections that expose the central forehead and curve down at the temples. Athletic muscular shoulders and arms. Do not invent another athlete and do not transfer the black-lime reference athlete's face or hair. Do not paste the photograph. Render the face and entire player as bold drawn ink illustration, with visible hatching and brush edges, not photographic skin.\n\nComposition: text occupies left 57%, illustrated athlete fills right 43%, in an energetic low dribbling drive diagonally toward the viewer, knee-up three-quarter view, head and face clearly visible at upper-right, torso leaning forward, one anatomically correct hand naturally controlling an orange basketball near the lower-right and the other arm balancing the movement. Keep both hands and ball inside the frame. Monochrome ivory/black sleeveless basketball jersey with simple piping, NO jersey numbers, names, logos, league insignia, sponsors, brands or team markings. One player only. Broad lime brush gesture behind him evokes speed, minimal splatters, no crowd, no competing graphics. Leave generous calm space behind lettering. This is a conceptual sports illustration, NOT a recreation of any real game or recorded play.\n\nText (verbatim, no other text):\n\"バスケまとめ\"\n\"2026.11.21\"\n\"試合結果\"\n\"当日のEFF\"\n\"ポジション別TOP3\"\n\"B.ONE / B.NEXT\"\n\"イラスト（AI生成）\"\n\"イメージ\"\n\nTypography hierarchy: small white brand and date at top-left; very large bold warm-white \"試合結果\"; very large lime \"当日のEFF\" below; white medium bold \"ポジション別TOP3\" beneath that; smaller white \"B.ONE / B.NEXT\". Bottom-left footer: clearly legible \"イラスト（AI生成）\" and \"イメージ\" side by side. Keep all text at least 4% inside canvas edges. High thumbnail readability, refined Japanese gothic type, accurate characters and punctuation, natural spacing.\nFactual scope: this thumbnail labels the frozen article's 2026-11-21 results and SAME-DAY position-specific official EFF TOP3 for B.ONE and B.NEXT. Do not imply season averages, predictions, overall ranking, or an individual player's highlight. No names, personal statistics, scores, win claims, game situation claims, trophies or extra text. No logo or official photo in the output.\nOutput a single complete thumbnail only.\n\nSINGLE CORRECTION PROMPT\nEdit the existing Japanese basketball thumbnail in reference image 1. Reference image 1 is the EDIT TARGET; reference image 2 is the OFFICIAL PORTRAIT of real player 石井智大 / Tomohiro Ishii and is APPEARANCE REFERENCE ONLY.\nMake one focused correction to the athlete's likeness and head clearance. Keep the entire established poster design, every Japanese/Latin character, date, text location, typography, colors, brushwork, hand anatomy, dribbling pose, ball, jersey, layout and 1672x941 landscape aspect unchanged.\nRedraw only the head/face/hair as a hand-inked interpretation closely matching image 2: shorter and less fluffy light ash-brown middle-parted curtain hair, the actual compact haircut of image 2, no oversized wavy halo; broad softly rounded cheeks and softly squared jaw, face proportion and nose/lips/eyebrow-eye spacing of image 2, clean-shaven. Keep a focused playing expression without distorting his real features. Do not make a generic handsome manga face. Preserve a bold illustration treatment with ink contours and hatching rather than photo skin. The official photo is for likeness only and must never be pasted or reproduced in the final graphic.\nKeep the player's head in the upper-right but reduce the hair silhouette enough to create about 3% canvas-height visible black margin above the hair; no head clipping. Everything else should remain as close to image 1 as possible. No new elements or text, no names, numbers, logos, sponsors, or team insignia.\nExact existing text to preserve unchanged:\nバスケまとめ\n2026.11.21\n試合結果\n当日のEFF\nポジション別TOP3\nB.ONE / B.NEXT\nイラスト（AI生成）\nイメージ\nThis remains an imagined editorial illustration, not any actual game scene. Output exactly one corrected finished opaque PNG thumbnail at the same wide aspect and at least 1000px wide.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "correction_calls": 1,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a1fe5c-95cf-7b20-aba7-a5d234f64b3b/exec-2640442a-f14e-444e-91a2-6dbbee546f42.png",
+      "output_dimensions": [
+        1672,
+        941
+      ],
+      "format": "PNG",
+      "revision_reason": "初回画像の髪が公式写真より長く頭頂部の余白が不足。1回の修正で髪型・顔立ちを公式写真へ寄せ、頭頂部の余白を確保。",
+      "qa_observation": "修正後画像を実際に表示して全8行、日付、EFF・TOP3の文脈、顔・髪、両手とボール、文字と頭頂部の見切れ、AI表記を確認。意図した膝付近のトリミング以外の主要部分の欠損なし。ロゴ・名前・背番号なし。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-21T13:51:38.766817+00:00",
+  "publication_approved": false
+}
