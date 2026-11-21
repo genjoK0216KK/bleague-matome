@@ -1,0 +1,103 @@
+{
+  "id": "8594401e4cc02e1d4d66",
+  "article_path": "article-analysis-shinshu-20261121.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-shinshu-20261121.html",
+  "source_commit": "",
+  "source_blob_sha": "cd97f0adcd6da6b7dd2e78eadf2dab57cfe8f3f5",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "b1dc38871ea0cc3103119ed40751af3e3b849f34913877fa4a29c80b71fdde49",
+  "last_observed_blob_sha": "cd97f0adcd6da6b7dd2e78eadf2dab57cfe8f3f5",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8594401e4cc02e1d4d66/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8594401e4cc02e1d4d66/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-21T03:17:53.362093+00:00",
+  "creation_event_id": "f1b1ce4e63e33c81056f",
+  "event_blob_sha": "cd97f0adcd6da6b7dd2e78eadf2dab57cfe8f3f5",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/8594401e4cc02e1d4d66/thumbnail.png",
+  "image_sha256": "296215df09091de6cb21a4972db45514a3dea0d431e0829e0fd7b351341a4c17",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "cd97f0adcd6da6b7dd2e78eadf2dab57cfe8f3f5",
+    "text_lines": [
+      "バスケまとめ",
+      "信州",
+      "直近5試合 2勝3敗",
+      "ターンオーバー割合",
+      "18.1%",
+      "対象：11/1〜11/18",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_fixed_html",
+        "path": "source.html",
+        "article_url": "https://basuke-matome.jp/article-analysis-shinshu-20261121.html",
+        "usage": "本文の根拠。信州の11/1〜11/18の直近5試合、2勝3敗、チームのターンオーバー割合18.1%。"
+      },
+      {
+        "type": "article_fixed_text",
+        "path": "source.txt",
+        "usage": "本文の根拠および固定HTMLとの内容照合。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "目視した承認済み黒×ライムの画風のみ。選手・数値は転用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "キーボン・ハリス",
+        "name_en": "Kevon Harris",
+        "selection": "本文の主役",
+        "reason": "チーム分析記事の中で『ハリス選手が攻撃を引っ張る』という専用節があり、最も詳しく扱われる選手。",
+        "official_page": "https://www.b-warriors.net/news/detail/id=20389",
+        "official_image": "https://b-warriors.bl.kuroco-img.app/v=1784768778/files/user/images/%E6%96%B0%E8%A6%8F_%E3%82%B1%E3%83%9B%E3%82%99%E3%83%B3%E3%83%8F%E3%83%AA%E3%82%B9_%E3%82%B5%E3%83%A0%E3%83%8D.jpg",
+        "identity_confirmation": "https://www.bleague.jp/roster_detail/?PlayerID=51000658",
+        "local_reference": "person-reference-official.jpg",
+        "reference_observed": true,
+        "appearance": "後ろへ流れる中〜肩丈のロックヘア、わずかに赤茶の毛先、太い眉、幅のある鼻、厚めの唇、口ひげとつながる豊かなひげ、幅広い輪郭、筋肉質。",
+        "usage": "容姿の参照のみ。写真・ロゴ・ユニフォーム文字を完成画像に流用しない。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: ads-marketing\nAsset type: one Japanese basketball editorial thumbnail for バスケまとめ.\nCreate exactly one finished landscape PNG, 1536 x 864 pixels (16:9), with all lettering integrated in the generated image.\n\nReference roles: The viewed B-culver-black-lime-v3.png is STYLE ONLY: near-black #151A18, electric lime #CCF43B, warm ivory, thick Japanese typography, energetic hand drawn ink and brush texture. Do NOT repeat the example's player, pose, date, names, stats or match score. The viewed official Shinshu announcement photo person-reference-official.jpg is LIKENESS ONLY for the actual athlete Kevon Harris / キーボン・ハリス. Do not paste or reproduce the photograph, its composition, logos, typography, jersey markings or branding.\n\nSubject: exactly one real basketball player, Kevon Harris, drawn as a clearly hand-painted editorial sports illustration. Recognizable face matching the official photo: broad oval-square face, broad nose, full lips, heavy brows, dark skin, thick full beard connecting to moustache, black medium/shoulder-length locks swept back with subtle reddish ends. Strong muscular shoulders and arms. Do not use the short hair or thin beard of the style reference. He wears a plain dark basketball uniform with ivory trim; no team crest, no sponsor, no manufacturer marks, no words and no jersey number.\nAction: dynamic low driving dribble toward the foreground, torso leaning forward, face fully visible in a three-quarter near-frontal view, one hand naturally guiding a single orange basketball, the other arm naturally bent for balance. Preserve plausible anatomy, two arms, two hands, normal fingers. The ball remains controlled; do not depict him losing the ball. This is a generic imagined basketball action, not a recreation of any specific actual game.\nComposition: strong spacious left 57 percent typography panel, right 43 percent player illustration over a diagonal lime dry-brush sweep. Main player's face prominent upper-right, ball lower-right; head, hands, ball and all text safely within frame. Knee/waist lower crop is acceptable. Clear visual hierarchy, few elements, ample negative space. No secondary player, no crowd, no charts, no hoop needed.\nColor and medium: matte black, lime, ivory; warm orange only for the basketball, restrained warm gray/brown in the player's face. Visible ink lines, coarse painted shadows, screenprint grain and expressive brush edges, not photographic, not 3D, not glossy.\n\nExact Japanese text, rendered once each, no other text:\nTop-left small brand: 「バスケまとめ」\nLarge bold ivory heading: 「信州」\nImmediately below in bold ivory: 「直近5試合 2勝3敗」\nMiddle-left label: 「ターンオーバー割合」\nHuge lime number below label: 「18.1%」\nSmall clear period note: 「対象：11/1〜11/18」\nBottom safe footer in legible ivory: 「イラスト（AI生成）」\nNext to that footer: 「成績をもとにしたイメージ」\n\nMeaning/accuracy constraints: 18.1% is SHINSHU TEAM'S share of possessions ending in a turnover over the five-game sample 11/1 to 11/18, not this player's individual statistic. Keep the team name, sample, label and figure visually grouped on the left, separated from the player. 2 wins and 3 losses is also the team sample. Do not insert rankings, season totals, player stats or player name. No claim that this imagined action happened in a particular game. No team, league or sponsor logos. All text must be faithful, including decimal point, percent sign, both scores, period and AI label.",
+      "revision": "Edit the provided generated basketball thumbnail. Make one targeted layout correction only: reduce the scale of the entire player-and-ball illustration by about 10 percent and move it slightly left and down within the right-hand panel. The top of all hair must be fully inside the image with at least 35 pixels of dark/lime background above it. The rightmost fingers must be fully inside the image with at least 40 pixels of background to the right. The entire basketball must be inside with at least 30 pixels below and to the right. Keep the head, face, full hands, every fingertip and ball uncropped. A natural crop through the lower thighs at the bottom is acceptable. Maintain readable separation from the text, especially the percentage.\n\nPreserve everything else: same real person Kevon Harris, face likeness, medium/shoulder-length dark locks with reddish ends, full beard, muscular body, pose, jersey without any logo or text, controlled single orange ball, hand-drawn ink/brush style, matte #151A18 black, #CCF43B lime, ivory. Keep exactly the same existing Japanese text, typography and placement, without introducing any new text, logos, stats or player names:\nバスケまとめ\n信州\n直近5試合 2勝3敗\nターンオーバー割合\n18.1%\n対象：11/1〜11/18\nイラスト（AI生成）\n成績をもとにしたイメージ\n\nKeep a 16:9 landscape canvas at least 1536 pixels wide. Do not crop or obscure text. The image is an imagined sporting illustration, not a real game recreation."
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "requested_count": 1,
+      "revision_count": 1,
+      "status": "passed",
+      "initial_output": "/Users/genjo/.codex/generated_images/01a1fc1c-44d2-7813-be90-e86e4f0163bb/exec-70ba0621-be7a-4341-844f-162c7db7961a.png",
+      "revision_reason": "初回画像は頭頂部と右手の外周がフレーム端に接近・一部見切れ。文字と数値は正確。",
+      "final_output": "/Users/genjo/.codex/generated_images/01a1fc1c-44d2-7813-be90-e86e4f0163bb/exec-6f53c2b1-397c-44e9-9940-6136ce0c45b5.png",
+      "saved_output": "generated.png",
+      "qa_method": "生成画像を実際に目視して固定原稿・公式容姿資料と照合。初回の余白不足を1回だけ修正し、修正版を再目視。",
+      "qa_notes": {
+        "text_and_numbers": "全8テキスト要素を目視。信州、直近5試合、2勝3敗、ターンオーバー割合18.1%、対象11/1〜11/18が固定原稿に一致。別記事の文字・選手成績なし。",
+        "source_qualifiers": "直近5試合と対象期間を表示。数字は左の信州の見出しと一体でチームの値として表現。比較順位・シーズン全体・対戦条件調整の主張を追加していない。11/15の中止試合を5試合に含める表現なし。プレーを実際の場面と特定しないイメージ注記を確認。",
+        "likeness_or_no_named_person": "描いた人物はキーボン・ハリス1人。公式写真で確認したロックヘア、赤茶の毛先、濃い口ひげとひげ、鼻・唇・眉・幅広い輪郭をイラストで確認。架空の別選手・公式写真の貼り付けなし。",
+        "layout": "約16:9。修正版で頭髪全体、両手の指先、ボールがフレーム内に収まり余白あり。文字の見切れ・人物との重なりなし。左右の手と指・腕のつながりは自然。下辺は大腿で意図的にトリミング。ロゴ・スポンサー文字なし。",
+        "ai_label": "下部に『イラスト（AI生成）』『成績をもとにしたイメージ』を目視確認。"
+      },
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "png_sha256": "296215df09091de6cb21a4972db45514a3dea0d431e0829e0fd7b351341a4c17"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-21T03:21:11.084987+00:00",
+  "publication_approved": false
+}
