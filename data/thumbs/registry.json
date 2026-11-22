@@ -1232,6 +1232,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "越谷対青森は越谷が113-73で圧勝、試合前予測を検証"
   },
+  "article-daily-20261123.html": {
+   "article_path": "article-daily-20261123.html",
+   "editorial_fingerprint": "a1a6eda118e3e9b818fc2d78ed9fbff0db13f7ca87f545c73820d22321873a5a",
+   "files": {
+    "eyecatch": {
+     "height": 721,
+     "path": "thumbs/auto/article-daily-20261123-543bb09d5f6e.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261123-543bb09d5f6e-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "fabda2ad7b1d2fb89f40",
+   "image_sha256": "543bb09d5f6ef002e215e370c446941d455b14889ce0859ae4d33e3468abcb42",
+   "imported_at": "2026-11-22T23:22:25.022956+00:00",
+   "prepared_at": "2026-11-22T23:21:36.853700+00:00",
+   "source_blob_sha": "0988eb9b622bcfdacd4053b4dbb51fd6119d4722",
+   "source_size": [
+    1671,
+    941
+   ],
+   "stable_fingerprint": "a1a6eda118e3e9b818fc2d78ed9fbff0db13f7ca87f545c73820d22321873a5a",
+   "style": "ink-lime-portrait-v5",
+   "title": "熊本が横浜EXに2連勝、107-83と87-84の2試合を検証"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -3223,13 +3251,6 @@
  },
  "log": [
   {
-   "article": "article-results-one-next-20261116.html",
-   "at": "2026-11-16T14:11:58.579549+00:00",
-   "event": "imported",
-   "id": "4acaa02dc6ec1401ed89",
-   "image": "4164f5fe0d8c"
-  },
-  {
    "article": "article-stats-20261116.html",
    "at": "2026-11-16T14:11:58.722377+00:00",
    "event": "imported",
@@ -3781,6 +3802,13 @@
    "event": "imported",
    "id": "d92135f0c0d495f517b8",
    "image": "e8b9dd88f694"
+  },
+  {
+   "article": "article-daily-20261123.html",
+   "at": "2026-11-22T23:22:25.022981+00:00",
+   "event": "imported",
+   "id": "fabda2ad7b1d2fb89f40",
+   "image": "543bb09d5f6e"
   }
  ],
  "seen": {
@@ -4017,6 +4045,7 @@
   "f92afc73ed838d9cdaa0": "imported",
   "fa0cffbf413d01623b62": "superseded:a5ada266578c44560dce",
   "faacf40f2eedbd5f216f": "imported",
+  "fabda2ad7b1d2fb89f40": "imported",
   "fcf33c7c4f183753d4ec": "imported",
   "fd75d53bcb2937406abe": "imported",
   "fe1ea3cd5a175ef3ddfa": "imported",
