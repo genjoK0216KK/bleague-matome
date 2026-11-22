@@ -1206,31 +1206,31 @@
   },
   "article-daily-20261122.html": {
    "article_path": "article-daily-20261122.html",
-   "editorial_fingerprint": "c3d3901a7336f828f0f3c509038ce63e4de0dc71497e14033cc8ddd85ef73978",
+   "editorial_fingerprint": "0714c987a8b8b2584744c2aec0e79a4102e7a249fdfdf648d0807e6c52e8271e",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261122-89f19aff02dd.jpg",
+     "path": "thumbs/auto/article-daily-20261122-18aae7432761.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261122-89f19aff02dd-og.jpg",
+     "path": "thumbs/auto/article-daily-20261122-18aae7432761-og.jpg",
      "width": 1200
     }
    },
-   "id": "49779d10a7f35fd62adf",
-   "image_sha256": "89f19aff02dd4d64ad07aa27efc9195f5e104ce8b118ca9d97fe20f20a14808b",
-   "imported_at": "2026-11-21T23:22:52.907830+00:00",
-   "prepared_at": "2026-11-21T23:22:11.862545+00:00",
-   "source_blob_sha": "b4fa68a7c302bd1643780bda4649637b71980b13",
+   "id": "3f51c921b8ab1d38524a",
+   "image_sha256": "18aae7432761f9987a4ac37b5023e85713ec63f369890c34b23090a904227ad1",
+   "imported_at": "2026-11-22T10:23:44.053290+00:00",
+   "prepared_at": "2026-11-22T10:23:10.514140+00:00",
+   "source_blob_sha": "357ea81bd0a940c4097e62a93d8f54ae26d5ca9f",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "c3d3901a7336f828f0f3c509038ce63e4de0dc71497e14033cc8ddd85ef73978",
+   "stable_fingerprint": "0714c987a8b8b2584744c2aec0e79a4102e7a249fdfdf648d0807e6c52e8271e",
    "style": "ink-lime-portrait-v5",
-   "title": "越谷対青森を試合前予測、16勝2敗の越谷が有利"
+   "title": "越谷対青森は越谷が113-73で圧勝、試合前予測を検証"
   },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
@@ -3195,20 +3195,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261116.html",
-   "at": "2026-11-16T14:11:58.435100+00:00",
-   "event": "imported",
-   "id": "a5ada266578c44560dce",
-   "image": "30e3b9c0d4fe"
-  },
-  {
-   "article": "article-results-one-next-20261116.html",
-   "at": "2026-11-16T14:11:58.435812+00:00",
-   "by": "4acaa02dc6ec1401ed89",
-   "event": "superseded",
-   "id": "aeb7d91e145ec447e4e7"
-  },
-  {
    "article": "article-results-one-next-20261116.html",
    "at": "2026-11-16T14:11:58.435821+00:00",
    "by": "4acaa02dc6ec1401ed89",
@@ -3753,6 +3739,20 @@
    "event": "imported",
    "id": "32bb71b00310d24cc2fc",
    "image": "cb577036424d"
+  },
+  {
+   "article": "article-daily-20261122.html",
+   "at": "2026-11-22T10:23:43.933421+00:00",
+   "by": "3f51c921b8ab1d38524a",
+   "event": "superseded",
+   "id": "49779d10a7f35fd62adf"
+  },
+  {
+   "article": "article-daily-20261122.html",
+   "at": "2026-11-22T10:23:44.053315+00:00",
+   "event": "imported",
+   "id": "3f51c921b8ab1d38524a",
+   "image": "18aae7432761"
   }
  ],
  "seen": {
@@ -3806,6 +3806,7 @@
   "3c626af62477fc9be507": "imported",
   "3d20be125ac18075c9b0": "superseded:9f2558d6277a776ef982",
   "3d2cc96fb28fa98a36d8": "superseded:bbd71f79d39ade3dad13",
+  "3f51c921b8ab1d38524a": "imported",
   "4189dc16f9911ba2f676": "superseded:2e911924d887d6fdf34a",
   "4367b17c7960b99cb3ea": "superseded:ca69b5d16263483eb1ed",
   "44da7637029692ee5a53": "superseded:a718e72ebd289b318965",
@@ -3813,7 +3814,7 @@
   "45bb49c6e6574fb7d88a": "superseded:5e231e28b370cb26f1f6",
   "462d421c439cd54c6d5a": "superseded:0a5c2c0f2505974f6de8",
   "46adebe03cc636f48def": "imported",
-  "49779d10a7f35fd62adf": "imported",
+  "49779d10a7f35fd62adf": "superseded:3f51c921b8ab1d38524a",
   "49bbacec4ae3cfcad2fa": "superseded:899945a3915a435651cc",
   "4a1cd77fbe86da6af1f2": "superseded:be964f4359fb4b535b50",
   "4a6423c87dbbfdc202b9": "imported",
