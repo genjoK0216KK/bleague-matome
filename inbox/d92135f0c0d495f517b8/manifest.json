@@ -1,0 +1,85 @@
+{
+  "id": "d92135f0c0d495f517b8",
+  "article_path": "article-games-20261123.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261123.html",
+  "source_commit": "",
+  "source_blob_sha": "40c76c9912441f61acd31c8e2032f7d9eedfae89",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "3558df06b26639ced2c172935496791706ef53d7d2492f8906cda95dfd3fda27",
+  "last_observed_blob_sha": "40c76c9912441f61acd31c8e2032f7d9eedfae89",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d92135f0c0d495f517b8/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d92135f0c0d495f517b8/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-22T19:52:30.566019+00:00",
+  "creation_event_id": "0eac80867aaae6301c1f",
+  "event_blob_sha": "40c76c9912441f61acd31c8e2032f7d9eedfae89",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/d92135f0c0d495f517b8/thumbnail.png",
+  "image_sha256": "e8b9dd88f694b881ddc9c54461172800d07a199b417518ec227bc8760c4fd0c6",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "40c76c9912441f61acd31c8e2032f7d9eedfae89",
+    "text_lines": [
+      "バスケまとめ",
+      "2026",
+      "11/23",
+      "試合なし",
+      "B.PREMIER・B.ONE・B.NEXT",
+      "11/23 04:45 JST取得時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d92135f0c0d495f517b8/source.html"
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d92135f0c0d495f517b8/source.txt"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png"
+      },
+      {
+        "role": "player_selection_and_current_roster_only",
+        "url": "https://www.bleague.jp/roster/"
+      },
+      {
+        "role": "person_identity_and_current_team_only",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=9031"
+      },
+      {
+        "role": "appearance_reference_only_not_reproduced",
+        "url": "https://www.bleague.jp/files/user/roster/706/2026-27/9031_03.png"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ザック・バランスキー",
+        "selection": "ランダム",
+        "selection_reason": "固定本文に選手名・チーム名がないため、B.LEAGUE現役選手から選択。",
+        "selection_method": "今回開いたB.LEAGUE公式選手一覧の先頭ページ40名を母集団とし、Python secrets.randbelow(40)+1で得た23番目を選択。取得結果では23番目がザック・バランスキー。",
+        "profile_url": "https://www.bleague.jp/roster_detail/?PlayerID=9031",
+        "official_image_url": "https://www.bleague.jp/files/user/roster/706/2026-27/9031_03.png",
+        "official_image_local_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d92135f0c0d495f517b8/references/zack-baranski-official.png",
+        "current_roster_verification": "公式プロフィールに2026-27 A東京と記載。",
+        "appearance_observed": "短いダークブラウンの髪、短く刈った側頭部、軽く波打った前髪、縦長で顎の角がある輪郭、通った鼻筋、短い口ひげと顎ひげ。公式写真をview_imageで目視。",
+        "depiction": "ドリブル姿のイメージ。実際の試合の再現ではない。画像内に名前・成績・出場・活躍の記載を入れない。",
+        "final_visual_check": "公式写真と修正版を目視比較。短い髪・側頭部・輪郭・鼻・目の位置・短い口ひげと顎ひげを確認。名前や成績の文字は入れていない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT:\nUse case: illustration-story\nAsset type: one finished Japanese basketball news thumbnail, landscape 16:9, 1920 x 1080 PNG.\nCreate ONE original image, fully illustrated, not a photo. Use the approved black-and-lime thumbnail shown in this conversation ONLY as a style reference: dark near-black #151A18 background, electric lime #CCF43B paint strokes, ivory white ink, bold oversized Japanese type, expressive hand-drawn ink and brush hatching, few elements. Do NOT copy any player, name, statistics, score, or date from that style reference.\n\nSubject: ONE real professional basketball player, Zack Baranski (ザック・バランスキー), whose official B.LEAGUE portrait was just visually reviewed. Use his specific visible appearance as likeness guidance: tall athletic adult man, light skin, short dark brown slightly wavy hair with closely cropped sides and a short textured fringe, broad upper forehead, fairly long oval/angular face, straight substantial nose, light eyes beneath straight brows, short connected dark brown beard and moustache concentrated along jaw and chin. His ears are visible. Match this real person's facial structure and hair rather than inventing a generic player. Do not paste or reproduce the official photo. Draw everything as expressive ink illustration.\nOutfit: blank dark sleeveless basketball jersey with pale trim and blank shorts. Absolutely no team logos, league logos, sponsors, brand names, player names, jersey numbers, or text on clothing.\nPose: dynamic low dribble moving diagonally toward the left, body leaning forward, head in three-quarter view looking forward so his face remains recognizable, right hand naturally resting over an orange basketball just beside his knee, left arm bent naturally for balance. Show a coherent single pair of arms and hands with anatomically plausible fingers. Keep head, both hands and the ball wholly within the canvas. Thigh-up composition on the RIGHT 42% of the image. It is a free illustrative pose, not a reconstruction of an actual game or a claim that he played on this date. No opponent, scoreboard, hoop, crowd, arena signage, victory gesture or invented event.\n\nComposition: generous 5% safe margins. On LEFT 56%, clean solid near-black text field. Bold large white \"11/23\" near upper-middle; underneath, the biggest lime headline \"試合なし\". Below headline, the league scope in readable white. At upper left, small \"バスケまとめ\" and \"2026\" as date-year context. Behind the figure only, energetic rough lime diagonal brush arcs, intentionally different composition from the shooting pose of the sample. Basketball is orange as a minor accent, player mostly black/ivory with subtle natural light skin tone, illustrated facial linework. Maintain ample separation between text and subject.\n\nRender exactly these visible text lines, no other text:\n\"バスケまとめ\"\n\"2026\"\n\"11/23\"\n\"試合なし\"\n\"B.PREMIER・B.ONE・B.NEXT\"\n\"11/23 04:45 JST取得時点\"\n\"イラスト（AI生成）\"\n\"イメージ\"\n\nTypography: clean extremely bold Japanese Gothic headline, supporting lines neat sans serif. The retrieval-time line must be readily readable in the lower left. Along the bottom in a clear safe-margin footer put \"イラスト（AI生成）\" and \"イメージ\" in ivory white. Preserve all exact Latin spelling, decimal dots, middle dots, slash, digits, colon and full Japanese parentheses. The main date is November 23, 2026; do not create performance numbers. No personal name appears anywhere in the artwork.\nArticle factual grounding is ONLY the supplied frozen source.html and source.txt: no games on 2026-11-23 in B.PREMIER, B.ONE, B.NEXT, based on retrieval at 04:45 JST. The player is a randomly selected illustrative real player, unrelated to a reported appearance or performance. No additional factual claims.\n\nONE CORRECTION PROMPT:\nUse case: identity-preserve. Make the ONE allowed correction to the first image (the completed black/lime Japanese basketball thumbnail). The second image is the official portrait of the real player Zack Baranski, used ONLY as a likeness reference, never pasted or photorealistically reproduced.\n\nCorrect only the illustrated player region: closely match the face, hair and short facial hair in the official second image. Specifically his hair is SHORT, dark brown with modest soft waves, short fringe, closely cropped sides; remove the excessive tall tousled curls of the current illustration. His face is lean and long with the official portrait's cheekbones, nose, eye spacing and jaw proportions. His beard is short and neatly close to the jaw, not the thick longer beard of the current illustration. Preserve the recognizable real person, rendered in hand-drawn ink and brush hatching with light skin and no photo textures. Keep his focused dribbling expression, but preserve the photo's facial geometry rather than a generic tough-looking face.\nSlightly reduce/reposition the illustrated player and basketball together within the RIGHT side to leave a small safe border above his hair, around his rightmost elbow, and below the entire basketball. The ball and both hands must be fully inside the frame. Maintain natural fingers, two arms, one ball and the same dynamic dribble pose. Legs may continue past the bottom edge in a deliberate thigh-up crop.\n\nKeep ALL left-side text, exact spelling, numbers, colors, placement, typography, black/lime brushwork, landscape 16:9 canvas, and footer unchanged. The eight existing lines must stay exactly:\nバスケまとめ\n2026\n11/23\n試合なし\nB.PREMIER・B.ONE・B.NEXT\n11/23 04:45 JST取得時点\nイラスト（AI生成）\nイメージ\n\nDo not introduce the photo's jersey text, number, logos, sponsor marks or official uniform graphics. Keep clothing blank black with pale trim. Do not add any names, statistics, performance or game claims. This is a randomly selected real player in an illustrative pose, not a real event depiction. Output one finished PNG thumbnail at the same resolution as the first image (1672 x 941 pixels) or larger with the same 16:9 framing.",
+    "generator": "built-in image_gen.imagegen; initial generation 1, correction 1; final output exec-8810975b-4bb5-41a3-8e1f-7cb0c478620d.png",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-22T19:56:39.125467+00:00",
+  "publication_approved": false
+}
