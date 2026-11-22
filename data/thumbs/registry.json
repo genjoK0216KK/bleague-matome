@@ -168,6 +168,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "レバンガ北海道の直近5試合は4勝1敗 速攻とペイントで稼ぎ3Pは最少"
   },
+  "article-analysis-kawasaki-20261122.html": {
+   "article_path": "article-analysis-kawasaki-20261122.html",
+   "editorial_fingerprint": "9a5a0c8bec4a908da9c00deeebbd80e0aad2c36cf7f8cf43eb5bd2f8525c02a1",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-analysis-kawasaki-20261122-a357f682eb1e.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-kawasaki-20261122-a357f682eb1e-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "4a6423c87dbbfdc202b9",
+   "image_sha256": "a357f682eb1ec09a2a5893c0df8d6281837d713fe4b0553d55ce9bf9a3e08490",
+   "imported_at": "2026-11-22T03:21:37.959566+00:00",
+   "prepared_at": "2026-11-22T03:20:45.669934+00:00",
+   "source_blob_sha": "a758e1c2dd4ee8995416cef71d4d2e07a6da992c",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "9a5a0c8bec4a908da9c00deeebbd80e0aad2c36cf7f8cf43eb5bd2f8525c02a1",
+   "style": "ink-lime-portrait-v5",
+   "title": "川崎ブレイブサンダースの直近5試合は3勝2敗 オフェンスリバウンドとフリースローで3連勝"
+  },
   "article-analysis-kobe-20261120.html": {
    "article_path": "article-analysis-kobe-20261120.html",
    "editorial_fingerprint": "a1acd25a63726235252bbeafacc8e6c50e9f86a617df839e95597104d6ea3998",
@@ -3167,13 +3195,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261116.html",
-   "at": "2026-11-16T10:30:59.178410+00:00",
-   "event": "imported",
-   "id": "fa0cffbf413d01623b62",
-   "image": "75703882ecbb"
-  },
-  {
    "article": "article-results-one-next-20261116.html",
    "at": "2026-11-16T10:30:59.178868+00:00",
    "by": "4523c02106cd4cbf38e6",
@@ -3725,6 +3746,13 @@
    "event": "imported",
    "id": "49779d10a7f35fd62adf",
    "image": "89f19aff02dd"
+  },
+  {
+   "article": "article-analysis-kawasaki-20261122.html",
+   "at": "2026-11-22T03:21:37.959602+00:00",
+   "event": "imported",
+   "id": "4a6423c87dbbfdc202b9",
+   "image": "a357f682eb1e"
   }
  ],
  "seen": {
@@ -3787,6 +3815,7 @@
   "49779d10a7f35fd62adf": "imported",
   "49bbacec4ae3cfcad2fa": "superseded:899945a3915a435651cc",
   "4a1cd77fbe86da6af1f2": "superseded:be964f4359fb4b535b50",
+  "4a6423c87dbbfdc202b9": "imported",
   "4acaa02dc6ec1401ed89": "imported",
   "4c4f1870a93c2d66f8f1": "imported",
   "4ec5ffedaee7935f9089": "imported",
