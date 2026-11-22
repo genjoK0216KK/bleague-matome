@@ -1,0 +1,81 @@
+{
+  "id": "4a6423c87dbbfdc202b9",
+  "article_path": "article-analysis-kawasaki-20261122.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-kawasaki-20261122.html",
+  "source_commit": "",
+  "source_blob_sha": "a758e1c2dd4ee8995416cef71d4d2e07a6da992c",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "9a5a0c8bec4a908da9c00deeebbd80e0aad2c36cf7f8cf43eb5bd2f8525c02a1",
+  "last_observed_blob_sha": "a758e1c2dd4ee8995416cef71d4d2e07a6da992c",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4a6423c87dbbfdc202b9/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4a6423c87dbbfdc202b9/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-22T03:17:34.476993+00:00",
+  "creation_event_id": "b2f7b4a97efcb5dc126b",
+  "event_blob_sha": "a758e1c2dd4ee8995416cef71d4d2e07a6da992c",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/4a6423c87dbbfdc202b9/thumbnail.png",
+  "image_sha256": "a357f682eb1ec09a2a5893c0df8d6281837d713fe4b0553d55ce9bf9a3e08490",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "a758e1c2dd4ee8995416cef71d4d2e07a6da992c",
+    "text_lines": [
+      "バスケまとめ",
+      "直近5試合 3勝2敗",
+      "川崎",
+      "3連勝",
+      "オフェンスリバウンドと",
+      "フリースローが支える",
+      "対象：11/9〜11/18",
+      "イラスト（AI生成）   イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4a6423c87dbbfdc202b9/source.html",
+        "role": "固定本文・内容の根拠",
+        "evidence": "川崎の直近5試合は3勝2敗、現在3連勝。対象は11月9日から11月18日。強みはオフェンスリバウンドとフリースロー。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4a6423c87dbbfdc202b9/source.txt",
+        "role": "固定本文・文字照合",
+        "evidence": "HTMLと文章の同じ主題・数値・対象期間を照合。順位や個人成績は画像に採用していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイルのみ",
+        "evidence": "view_imageで確認。黒とライム、太い日本語文字、インクとブラシの描写を参照。選手・数値・日付は流用していない。"
+      },
+      {
+        "url": "https://kawasaki-bravethunders.com/news/detail/id=25373",
+        "image_url": "https://kawasaki-bravethunders.bl.kuroco-img.app/v=1783492454/files/user/260708matt.jpg",
+        "role": "選手の容姿確認のみ",
+        "evidence": "川崎公式のマット・ボンズ選手プロフィール写真を取得してview_imageで目視。外部資料の成績を本文・画像の根拠にしていない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "マット・ボンズ",
+        "selection": "ランダム",
+        "selection_reason": "チーム分析が主題で人物1人が主役ではないため、本文に名前が出るマット・ボンズ／ジェイデン・リディ／アレックス・カークの3人からPython random.SystemRandom().choiceで1人を選んだ。",
+        "official_source": "https://kawasaki-bravethunders.com/news/detail/id=25373",
+        "official_image": "https://kawasaki-bravethunders.bl.kuroco-img.app/v=1783492454/files/user/260708matt.jpg",
+        "reference_viewed": true,
+        "observed_features": "大きく丸みのある黒いアフロ、あごに向かって細くなる輪郭、厚めの唇、黒い口ひげとあご側が濃いひげ、筋肉質の肩と腕。",
+        "depiction": "本人の顔の特徴を反映したインク・ブラシのプレー姿イラスト。無地のユニフォーム。写真の貼付、ロゴ、スポンサー文字なし。",
+        "image_text_restriction": "名前・個人成績・出場・個人の活躍は画像に記載しない。文字は川崎チームの成績と特徴のみ。",
+        "scene_qualifier": "実際の試合の再現ではないリバウンドのイメージ。画像内に「イラスト（AI生成）」「イメージ」を明示。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story.\nCreate exactly ONE finished editorial thumbnail for the Japanese independent basketball site バスケまとめ. Landscape PNG, 16:9, preferably 1536 x 864 pixels or larger. This is a NEW hand-drawn illustration, not a photograph, not a collage.\n\nSource content is frozen: Kawasaki Brave Thunders went 3 wins and 2 losses in their last five games, November 9 through November 18, 2026, and are on a three-game winning streak. The article describes offensive rebounding and free throws as the team's strengths. Do not add individual statistics, rankings, or factual claims.\n\nVisual style: Match the approved black-and-lime editorial reference already viewed: deep near-black #151A18 background, bold warm ivory Japanese typography, acid lime #CCF43B broad dry-brush strokes and a little ink splatter, hand-drawn sports ink illustration with decisive black shadows and ivory hatchwork. Spacious and minimal, strong mobile legibility. Do not copy the previous thumbnail's athlete, name, numbers, date, or exact composition.\n\nSubject: Exactly one real player, Matt Bonds, randomly selected from the article's three named players. His name must NOT appear in the image. Draw his actual likeness based on the official Kawasaki profile portrait viewed: broad rounded voluminous black afro with slightly squared upper mass; medium-dark warm brown skin rendered as ink/ivory tonal illustration; oval face narrowing to chin; full lips; medium broad straight nose; dark almond-shaped eyes; short connected moustache and dark beard with a fuller pointed chin section; strong shoulders and muscular athletic arms. Keep these distinctive facial traits. Not a generic imaginary athlete, not the short-haired player from the style example. He wears a plain basketball singlet with no lettering, number, emblem, sponsor, team logo, or league logo. Do not paste any official photograph.\n\nComposition: Put the player on the LEFT 42 percent, dynamically twisting and gathering an orange basketball with BOTH HANDS just above the left side of his head, as a conceptual rebound action. Face visible in a near-front three-quarter view, eyes toward the ball. Each hand has five anatomically correct fingers naturally wrapping the ball. All head, afro, fingers, elbows and ball stay inside the canvas with safe margins. Crop deliberately at upper thighs near the bottom edge, if needed. Brush strokes provide movement behind the athlete without crossing or obscuring the text. No additional players, no crowd, no arena details, no opponent, no scoreboard. This is an illustrative concept, NOT a recreation of an actual play or a particular match.\n\nText layout RIGHT 52 percent, aligned left in clean generous rows. Use accurate bold Japanese sans-serif lettering, no garbled or added characters. Important headline large and right-side textual block never overlaps the player's hands or head. The team name and result must clearly read as team-level, never as the selected player's achievement.\nText (verbatim), exactly these strings:\nsmall masthead: \"バスケまとめ\"\nsmall contextual line: \"直近5試合 3勝2敗\"\nheadline first row in ivory: \"川崎\"\nheadline second row, largest lime lettering: \"3連勝\"\nsupporting two rows, medium ivory:\n\"オフェンスリバウンドと\"\n\"フリースローが支える\"\nsmall bottom line with readable comfortable spacing: \"対象：11/9〜11/18\"\nfooter safely inset from lower edge, unobstructed: \"イラスト（AI生成）   イメージ\"\n\nDo not write the player's name or personal performance anywhere. No logos, no watermarks, no official photos, no photorealism. Preserve the AI-generated label exactly. Crisp polished composition with generous edges and a calm text area.\n\nONE PERMITTED REVISION\nEdit the provided generated basketball thumbnail. Make ONE targeted layout correction only: move the entire illustrated athlete and basketball assembly downward enough that the very top of the ball has at least 35 pixels (about 4% canvas height) of clear dark background above it. Slightly reduce the left-side figure by about 5% only if needed so that the whole ball, afro, fingers, and both elbows stay inside the image; deliberate lower torso cropping at bottom is fine. Preserve the real Matt Bonds facial likeness, afro, beard, hands, pose, ink illustration treatment, background, colors, all right-side text positions, type sizes, wording, AI label and other design exactly. Keep the output 1672 x 941 or equivalent 16:9 landscape at least 1000px wide. No added words, logos, photographic elements or players. Exact unchanged text: バスケまとめ / 直近5試合 3勝2敗 / 川崎 / 3連勝 / オフェンスリバウンドと / フリースローが支える / 対象：11/9〜11/18 / イラスト（AI生成）   イメージ.",
+    "generator": "OpenAI内蔵 image_gen.imagegen。初回生成1回、上端のボール余白を広げる修正1回。API・CLI生成は未使用。最終画像1672×941 PNG。目視で文字、数値、対象期間、顔・手、見切れ、注記を確認。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-22T03:20:45.669934+00:00",
+  "publication_approved": false
+}
