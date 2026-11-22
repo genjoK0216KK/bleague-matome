@@ -1,0 +1,95 @@
+{
+  "id": "3f51c921b8ab1d38524a",
+  "article_path": "article-daily-20261122.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261122.html",
+  "source_commit": "",
+  "source_blob_sha": "357ea81bd0a940c4097e62a93d8f54ae26d5ca9f",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "0714c987a8b8b2584744c2aec0e79a4102e7a249fdfdf648d0807e6c52e8271e",
+  "last_observed_blob_sha": "357ea81bd0a940c4097e62a93d8f54ae26d5ca9f",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3f51c921b8ab1d38524a/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3f51c921b8ab1d38524a/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-22T10:19:26.584149+00:00",
+  "creation_event_id": "06f059e30b708a13166e",
+  "event_blob_sha": "357ea81bd0a940c4097e62a93d8f54ae26d5ca9f",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/3f51c921b8ab1d38524a/thumbnail.png",
+  "image_sha256": "18aae7432761f9987a4ac37b5023e85713ec63f369890c34b23090a904227ad1",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "357ea81bd0a940c4097e62a93d8f54ae26d5ca9f",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.22",
+      "越谷圧勝",
+      "越谷 113-73 青森",
+      "試合前予測を検証",
+      "勝敗は的中、点差は予想以上",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3f51c921b8ab1d38524a/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261122.html",
+        "usage": "本文の根拠。見出し、11月22日の試合結果113対73、勝敗予測は的中・僅差予測は外れたという留保を使用。残存する試合前の成績・予定・負傷情報は結果情報と混同しない。外部の試合ページは根拠として使用していない。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3f51c921b8ab1d38524a/source.txt",
+        "usage": "固定HTMLと本文を照合。記事の主役はチーム・試合結果と予測検証で、単独の中心選手を特定できない。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "view_imageで実見。黒×ライム、太字、手描きインク・ブラシのみ参照。参照画像の人物・固有名・数値は不使用。"
+      },
+      {
+        "type": "official_person_profile",
+        "url": "https://www.koshigaya-alphas.com/team/players/detail/id=50781?PlayerID=5100000079",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026112219/files/user/roster/745/2026-27/5100000079_01.jpg",
+        "usage": "人物同定・容姿の参照のみ。画像をローカル取得してview_imageで実見。公式写真自体を成果物に貼り付けていない。"
+      },
+      {
+        "type": "official_person_announcement",
+        "url": "https://www.koshigaya-alphas.com/news/202627s_newsigned_chasefieler",
+        "image_url": "https://www.koshigaya-alphas.com/files/rcms_conv_webp/files/user/images/NEWS/202627s_newsigned_img_chasefieler.jpg_1782460738.webp?v=1782788412",
+        "usage": "人物同定・容姿の補助参照のみ。view_imageで実見。最終修正では最新の公式プロフィール写真を容姿参照入力に使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "チェイス・フィーラー",
+        "article_name": "フィーラー選手",
+        "selection": "ランダム",
+        "selection_reason": "チームと試合前予測の検証が主題で、単独の中心選手は絞れないため。本文の試合結果段落に登場する4選手からPython secrets.choiceで抽選し、フィーラーを選出。姓名は公式名簿・公式プロフィールで確定。",
+        "random_candidate_article_names": [
+          "クレモンズ",
+          "フィーラー",
+          "ライトフット",
+          "モンゴメリー"
+        ],
+        "source": "越谷アルファーズ公式プロフィールおよび公式契約発表の顔写真",
+        "reference_url": "https://www.koshigaya-alphas.com/team/players/detail/id=50781?PlayerID=5100000079",
+        "reference_image_url": "https://bleague.bl.kuroco-img.app/v=2026112219/files/user/roster/745/2026-27/5100000079_01.jpg",
+        "observed_features": "短い濃茶の髪、短く刈った側頭部、やや長い四角形の輪郭、太めの眉、まっすぐな鼻、口ひげとつながる短いひげ、がっしりした肩。",
+        "depiction": "本人の特徴に寄せた手描きイラスト。無地のえんじ色ユニフォーム。両手でボールを持ち、体をひねってパスを準備する概念的な場面。実際の試合場面の再現ではない。",
+        "image_text_restrictions": "選手名、背番号、個人成績、出場・活躍の主張を入れていない。チームスコアのみ。注記は『イラスト（AI生成）』『イメージ』。",
+        "visual_qa": "修正後の画像を実見し、公式写真と髪・輪郭・眉鼻・ひげの特徴を比較。頭・両手・ボールの見切れなし。両手に明らかな余剰指や破綻なし。チーム・リーグ・スポンサーのロゴや公式写真の貼付なし。"
+      }
+    ],
+    "prompt": "【初回生成：実使用プロンプト】\nUse case: illustration-story\nAsset type: ONE finished Japanese basketball news thumbnail, landscape 16:9, target 1920x1080 PNG, opaque background.\nPrimary request: Create one editorial illustration for the fixed article on Koshigaya's 113-73 victory over Aomori on 2026.11.22 and review of the pregame prediction. All factual text is supplied below. The win prediction was correct but the predicted close margin was wrong. Do not invent additional factual statements.\nStyle reference: the approved black-and-lime basketball thumbnail inspected in this conversation. Match its near-black #151A18 background, acid lime #CCF43B broad dry-brush strokes, ivory-white ultra-bold Japanese sans serif headlines, strong hand-drawn ink hatching, sparse sports editorial layout. Do NOT copy its player, name, numbers, date, or exact arrangement.\nSubject: exactly ONE REAL player, Chase Fieler (チェイス・フィーラー), selected randomly from players named in the article. His latest official Koshigaya roster photograph was visually inspected: light skin, short dark-brown hair cropped close at sides with a short textured straight top, slightly high forehead, fairly straight thick brown eyebrows, deep-set hazel-brown eyes, long straight nose, elongated rectangular face and broad jaw, neat short dark-brown full beard connected to moustache, athletic tall strong shoulders. Keep these recognizable facial features, not a generic invented player. See the official portrait already displayed in context for likeness. Depict only a drawn interpretation, no photograph or photo collage.\nAction/composition: LEFT 42% features Fieler in a dynamic three-quarter waist-up pivot, knees implied off-canvas, torso twisting toward the right as he prepares a two-handed basketball pass at lower chest level, looking toward the passing lane. Face clearly readable, no arm or ball obscures it. Both forearms and hands anatomically coherent, five fingers on each hand with natural ball contact, no extra limbs. One orange basketball held as his prop, not a separate hero. Plain dark burgundy sleeveless basketball kit with small neutral ivory trim; no jersey number, team name, sponsor writing, crest, or logos. Monochrome ink rendering of skin with sparse muted warm tones. Diagonal lime dry-brush energy behind him, mostly confined to the left.\nRIGHT 54% is a spacious typography panel with strong hierarchy; text never crosses the face or hands. At least 5% safe margin on every edge. Upper small header: バスケまとめ and 2026.11.22. Huge ivory headline 越谷圧勝. Below, a prominent lime score 113–73 with 越谷 clearly associated with 113 and 青森 clearly associated with 73, preferably on one aligned score row. A smaller ivory subheadline 試合前予測を検証. Below this, one short supporting line 勝敗は的中、点差は予想以上. Readable footer along bottom: イラスト（AI生成）  イメージ.\nText (verbatim; only these strings, all correctly spelled):\nバスケまとめ\n2026.11.22\n越谷圧勝\n越谷\n113–73\n青森\n試合前予測を検証\n勝敗は的中、点差は予想以上\nイラスト（AI生成）\nイメージ\nConstraints: This is a conceptual illustration, not a reconstruction of any actual play. Do not put Fieler's name, personal statistics, appearance or performance claims anywhere in the image. No team or league logos, no sponsor logos, no official photo elements, no photorealism, no fabricated other players, no arena detail, no scoreboard resembling an actual venue, no badges, no extra slogans. Retain readable AI-generation and conceptual-image labels. Preserve the distinction between correct winner prediction and unexpected margin. The only score is the team score 113–73. Hand-drawn ink and brushwork, clean and striking at thumbnail size.\n\n【修正1回目：実使用プロンプト】\nEdit the first attached image into the single final basketball article thumbnail. The first input is the edit target; the second input is the latest official portrait of Chase Fieler and is ONLY a facial likeness reference, never a photograph to paste.\nMake one corrective revision: fix the player illustration's framing and likeness while keeping the existing design and all editorial text intact.\nRecompose with enough padding so the entire player's head, both hands, every visible fingertip, and the whole orange basketball are comfortably INSIDE the canvas, at least 60 px from the top and left edges at this size. Shrink/reposition the player illustration within the left panel as necessary; the torso may exit only at the bottom. His right hand on the left of the ball MUST NOT be cut off by the left edge. Draw naturally wrapped hands with five fingers per hand, anatomically coherent wrists.\nImprove Chase Fieler's likeness to official portrait input 2: shorter close-cropped dark brown hair, cropped sides, a short forward textured top rather than long tousled hair; neat SHORT close-trimmed dark beard and connected moustache, not a full bushy beard; relatively long straight nose, rectangular face with broad jaw, thick fairly straight brows, deep-set brown-hazel eyes. Preserve a dynamic three-quarter pivot and two-handed pass preparation with his face unobstructed. Stylized hand-drawn ink, no photorealism.\nKeep burgundy jersey plain, with NO logos, lettering, number, team crest, or sponsor marks. Do not copy anything from the official photo except the person's visual features.\nPreserve the black #151A18 and lime #CCF43B brush style, ivory type, orange ball, and right-hand type hierarchy. Keep ALL words and numbers identical, with safe margins on right/bottom too:\nバスケまとめ\n2026.11.22\n越谷圧勝\n越谷 113–73 青森\n試合前予測を検証\n勝敗は的中、点差は予想以上\nイラスト（AI生成）\nイメージ\nNo extra words, no player name or individual statistics. This remains an imagined editorial illustration, not an actual match scene. Maintain wide 16:9 aspect ratio at least 1600px wide, opaque PNG. Produce ONE final corrected image.",
+    "generator": "内蔵 image_gen.imagegen。初回1枚＋修正1回。修正版1枚のみ採用。外部API・CLI生成・追加課金は未使用。初稿の左手見切れを修正し、髪・ひげも公式写真へ近づけた。採用PNG: 1672×941（約16:9）。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-22T10:23:10.514140+00:00",
+  "publication_approved": false
+}
