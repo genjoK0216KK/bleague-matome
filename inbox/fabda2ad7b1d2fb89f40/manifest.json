@@ -1,0 +1,103 @@
+{
+  "id": "fabda2ad7b1d2fb89f40",
+  "article_path": "article-daily-20261123.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261123.html",
+  "source_commit": "",
+  "source_blob_sha": "0988eb9b622bcfdacd4053b4dbb51fd6119d4722",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "a1a6eda118e3e9b818fc2d78ed9fbff0db13f7ca87f545c73820d22321873a5a",
+  "last_observed_blob_sha": "0988eb9b622bcfdacd4053b4dbb51fd6119d4722",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fabda2ad7b1d2fb89f40/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fabda2ad7b1d2fb89f40/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-22T23:16:59.345405+00:00",
+  "creation_event_id": "90c34cb019ed7cd82b35",
+  "event_blob_sha": "0988eb9b622bcfdacd4053b4dbb51fd6119d4722",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/fabda2ad7b1d2fb89f40/thumbnail.png",
+  "image_sha256": "543bb09d5f6ef002e215e370c446941d455b14889ce0859ae4d33e3468abcb42",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "0988eb9b622bcfdacd4053b4dbb51fd6119d4722",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.23",
+      "熊本",
+      "2連勝",
+      "横浜EXとの2試合を検証",
+      "第1戦 107-83",
+      "第2戦 87-84",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fabda2ad7b1d2fb89f40/source.html",
+        "role": "本文の根拠。見出し、記事日付、熊本の2連勝、第1戦107-83、第2戦87-84。",
+        "article_url": "https://basuke-matome.jp/article-daily-20261123.html",
+        "blob_sha": "0988eb9b622bcfdacd4053b4dbb51fd6119d4722"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fabda2ad7b1d2fb89f40/source.txt",
+        "role": "固定版本文の照合。外部ページの試合成績は本文根拠に使用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジャスティン・マッツ / Justyn Mutts",
+        "selection": "本文の主役",
+        "selection_reason": "対戦記事の両チームから1人ずつ。熊本側は2試合とも得点・リバウンド・アシストが具体的に扱われるマッツを選定。",
+        "source": "熊本ヴォルターズ公式プロフィール",
+        "url": "https://www.volters.jp/team/players/detail/id=19825?PlayerID=51000286",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026112214/files/user/roster/724/2026-27/51000286_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fabda2ad7b1d2fb89f40/references/justyn-mutts-official.jpg",
+        "reference_scope": "容姿確認のみ。公式写真は完成画像へ貼り付けていない。",
+        "observed_features": "短い黒髪、幅の広い黒いヘッドバンド、縦長の輪郭、細い口ひげ、小さい顎ひげ。修正版で髪の長さと顔の特徴を再確認。",
+        "depiction": "手前の赤い無地ユニフォーム。ボールを保持するイメージ。実際の試合場面の再現ではない。"
+      },
+      {
+        "name": "トレイ・ボイド / Tray Boyd",
+        "selection": "本文の主役",
+        "selection_reason": "対戦記事の両チームから1人ずつ。本文で両試合の得点とチームへの依存が繰り返し扱われる横浜EX側の中心選手。",
+        "source": "横浜エクセレンス公式プロフィール",
+        "url": "https://yokohama-ex.jp/team/players/detail/id=21601?PlayerID=43445",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026112123/files/user/roster/714/2026-27/43445_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fabda2ad7b1d2fb89f40/references/tray-boyd-official.jpg",
+        "reference_scope": "容姿確認のみ。公式写真は完成画像へ貼り付けていない。",
+        "observed_features": "顔の両脇に垂れる細い編み髪、黒いヘッドバンド、濃い口ひげと顎・頬のひげ、太い眉。",
+        "depiction": "奥の緑と黒の無地ユニフォーム。守備のイメージ。実際の試合場面の再現ではない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: ads-marketing\nAsset type: one Japanese basketball editorial thumbnail, landscape 16:9, 1792x1024 or 1920x1080 PNG, long edge at least 1000 pixels.\nCreate exactly ONE finished image, not alternatives, not a mockup.\n\nStyle: Approved Basuke Matome black-and-lime visual direction: nearly black #151A18 background, electric lime #CCF43B dry-brush strokes, off-white giant Japanese gothic type, confident hand-drawn ink illustration, cross-hatching and brush texture. Sparse clean graphic hierarchy, energetic and editorial. No photorealism or photo collage. Make an original layout with a dynamic TWO-player basketball encounter on the right, occupying about half the canvas, and headline on the left. Preserve generous safe margins around all typography and heads/hands.\n\nArticle facts ONLY: Kumamoto won two games against Yokohama EX, game 1 107-83 and game 2 87-84. This image introduces analysis of these two games. Do not add any other score, statistic, quote or claim.\n\nReal people to draw, using the official-profile appearances inspected:\n1. Justyn Mutts / ジャスティン・マッツ, Kumamoto: tall muscular athlete, dark brown skin, elongated oval face, high cheekbones, slightly heavy upper eyelids, broad nose, full lips, small narrow mustache and small pointed chin goatee (NOT a full bushy beard). Very short tightly curled dark hair with a broad plain BLACK headband. The official profile shows red jersey. Draw him in a plain crimson-red basketball jersey with black edging, no lettering, no number, no marks. In the front of the two-player grouping, bent knees, dynamic forward lean, holding one orange basketball firmly at waist height with both hands while beginning a drive, looking toward the court. Face must remain visible in three-quarter view.\n2. Tray Boyd / トレイ・ボイド, Yokohama EX: slightly shorter, leaner athlete, medium brown skin, dark shoulder-length thin braids framing the face, broad plain BLACK headband across the forehead, full dark beard and mustache, broad cheeks, thick eyebrows, wide nose. Draw in a plain deep-green and black basketball jersey over a black short-sleeved compression shirt, no lettering, no number, no logos or neck jewelry. Positioned slightly behind and to the right of Mutts in a defensive stance, one hand raised and one arm extended sideways. Face visible, focused on the ball-handler. Natural understated tattoo ink shading on arms may be abstracted.\nPreserve these two distinct real-player appearances. Do not use generic invented players. Both have exactly two anatomically coherent arms and two hands; show plausible joints and fingers, no merged hands. Only one basketball. Mid-thigh crop is acceptable. Heads, ball and hands fully in frame. Draw all body and facial detail in visible stylized pen/brush strokes, not realistic photographic skin.\n\nScene is a conceptual illustration of a matchup, NOT a reconstruction of a particular possession or decisive play. No arena-identifying signage, game clock, hoop, spectators, camera overlay or photograph. Avoid winner/loser humiliation; neutral competitive expressions. The image must not claim Mutts played against Boyd in this specific illustrated possession.\n\nText (verbatim, Japanese, no extra text):\nSmall masthead upper left: \"バスケまとめ\"\nSmall date below masthead: \"2026.11.23\"\nHuge left headline, two lines:\n\"熊本\"\n\"2連勝\"\nBelow headline, medium: \"横浜EXとの2試合を検証\"\nTwo neatly stacked score rows, comfortably sized and high contrast:\n\"第1戦 107-83\"\n\"第2戦 87-84\"\nBottom left in readable small clean type, separate from score rows:\n\"イラスト（AI生成）\"\n\"成績をもとにしたイメージ\"\n\nTypography: bold Japanese gothic sans for main text, huge lime 2連勝, off-white 熊本, crisp readable digits. Do not curve, slant excessively or partially obscure text. Headlines on solid dark negative space. Brush accents stay behind player artwork. Layout should remain legible as a small website card.\nNo team logo, league logo, sponsor logos, sportswear emblems, player names, uniform numbers, watermarks, tiny invented text or replicated official photo. Do not carry over any player, headline or score from the approved style example. Output one polished final PNG.\n\nSINGLE CORRECTION\nUse case: identity-preserve.\nEdit the first image, the existing completed black-and-lime basketball thumbnail. This is the single permitted correction of the same thumbnail, not a new design.\nInput roles: Image 1 is the EDIT TARGET. Image 2 is the official Justyn Mutts portrait for facial and hair likeness reference ONLY. Image 3 is the official Tray Boyd portrait for facial and hair likeness reference ONLY. Never paste photographic pixels, official logos, uniform lettering, numbers or sportswear marks into the thumbnail.\nMake only these targeted corrections:\n1. Restore comfortable 35-45 px safe margins at the TOP and RIGHT of the canvas: the raised defender hand and especially the defender hand at the far right must be fully visible with all five fingers anatomically coherent. Slightly scale down/reposition the TWO-player illustrated grouping within its current right-side zone. Keep both arms per player distinct and natural; only a mid-thigh crop at the bottom is allowed. Keep the orange basketball and both ball-holding hands fully visible and natural.\n2. Improve the FRONT red-jersey player's likeness to the official Justyn Mutts reference in Image 2: very SHORT close-cropped tightly curled hair, almost no height above the headband, NOT high-volume curls. Broad plain black headband without any logo. Longer narrower oval face, relaxed heavy upper eyelids, official nose/lip proportions, THIN subtle mustache and SMALL pointed chin goatee, not a broad thick mustache or heavy beard. Preserve the visible hand-drawn ink and crosshatching style on face and body. No photographic appearance.\n3. Keep the rear green-jersey Tray Boyd player's recognizable shoulder-length thin braids, black headband, full beard, face proportions as in Image 3. Keep it an illustration.\nPreserve all existing typographic content VERBATIM, its placement, sizes, numbers, lime backgrounds and readability. The existing text reads:\nバスケまとめ\n2026.11.23\n熊本\n2連勝\n横浜EXとの2試合を検証\n第1戦 107-83\n第2戦 87-84\nイラスト（AI生成）\n成績をもとにしたイメージ\nKeep exactly these words and numbers, no additions. Preserve near-black #151A18 / lime #CCF43B palette, red and deep-green plain uniforms, original brush graphic design, same 16:9 landscape canvas at least 1000px wide. No names, logos, team marks, numbers on clothing, sponsor text or photographs. This is a conceptual matchup illustration, not a depiction of an actual recorded possession. Output the one corrected final PNG.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "内蔵画像生成のみ",
+      "initial_generations": 1,
+      "corrections": 1,
+      "selected_output": "/Users/genjo/.codex/generated_images/01a2058c-6fdb-77c2-b6f1-9002182b56e9/exec-6094ba98-a961-45b7-8672-c38a0cbf296e.png",
+      "saved_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fabda2ad7b1d2fb89f40/generated.png",
+      "format": "PNG",
+      "width": 1671,
+      "height": 941,
+      "sha256": "543bb09d5f6ef002e215e370c446941d455b14889ce0859ae4d33e3468abcb42",
+      "approved_style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "qa_method": "初稿と修正版を実画像で目視。初稿の右端の手の見切れとマッツの髪型を1回修正。修正版の文字、数値、留保、両選手の顔の特徴、手の形、見切れ、AI表記を確認。PNGのCRC・圧縮データ検査と保存後のバイト一致を確認。",
+      "qa_notes": {
+        "text_and_numbers": "見出し、記事日付、第1戦107-83、第2戦87-84を固定原稿と照合。",
+        "source_qualifiers": "推測による勝因を断定する文言なし。成績をもとにしたイメージと明記。特定の試合場面を再現したとは記していない。",
+        "likeness_or_no_named_person": "2人とも公式写真の髪型・輪郭・ひげ・目鼻を参照してイラスト化。選手名・個人成績は画像に入れていない。",
+        "layout": "見出しと注記の見切れなし。顔、ボール、4つの手が画面内。手指に大きな破綻なし。下端の太腿は意図したトリミング。",
+        "ai_label": "イラスト（AI生成）と成績をもとにしたイメージが左下で読める。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-22T23:21:36.853700+00:00",
+  "publication_approved": false
+}
