@@ -2044,6 +2044,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "11/22 試合結果・当日のEFF"
   },
+  "article-games-20261123.html": {
+   "article_path": "article-games-20261123.html",
+   "editorial_fingerprint": "3558df06b26639ced2c172935496791706ef53d7d2492f8906cda95dfd3fda27",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-games-20261123-e8b9dd88f694.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-games-20261123-e8b9dd88f694-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "d92135f0c0d495f517b8",
+   "image_sha256": "e8b9dd88f694b881ddc9c54461172800d07a199b417518ec227bc8760c4fd0c6",
+   "imported_at": "2026-11-22T19:57:15.289763+00:00",
+   "prepared_at": "2026-11-22T19:56:39.125467+00:00",
+   "source_blob_sha": "40c76c9912441f61acd31c8e2032f7d9eedfae89",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "3558df06b26639ced2c172935496791706ef53d7d2492f8906cda95dfd3fda27",
+   "style": "ink-lime-portrait-v5",
+   "title": "11/23 試合なし"
+  },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
    "editorial_fingerprint": "e19b14f8f8d94cccdae186da2df34e0edfdbee28d446a577722d48f470c2eea5",
@@ -3196,13 +3224,6 @@
  "log": [
   {
    "article": "article-results-one-next-20261116.html",
-   "at": "2026-11-16T14:11:58.435821+00:00",
-   "by": "4acaa02dc6ec1401ed89",
-   "event": "superseded",
-   "id": "4523c02106cd4cbf38e6"
-  },
-  {
-   "article": "article-results-one-next-20261116.html",
    "at": "2026-11-16T14:11:58.579549+00:00",
    "event": "imported",
    "id": "4acaa02dc6ec1401ed89",
@@ -3753,6 +3774,13 @@
    "event": "imported",
    "id": "3f51c921b8ab1d38524a",
    "image": "18aae7432761"
+  },
+  {
+   "article": "article-games-20261123.html",
+   "at": "2026-11-22T19:57:15.289787+00:00",
+   "event": "imported",
+   "id": "d92135f0c0d495f517b8",
+   "image": "e8b9dd88f694"
   }
  ],
  "seen": {
@@ -3956,6 +3984,7 @@
   "d608175ea301e9836df4": "imported",
   "d751b892af758cf975ea": "superseded:faacf40f2eedbd5f216f",
   "d87a8ec3bf24b1b0559b": "superseded:81cdf284d66df1d61f20",
+  "d92135f0c0d495f517b8": "imported",
   "d9bde7fe63871fad57c4": "superseded:ad6bf00b0853f0333020",
   "daa7c44bd52d9008de5a": "superseded:db75a6a12bbf73eb8c56",
   "db1b08157b4974a77014": "superseded:a384f66c5c633ed9bdb1",
