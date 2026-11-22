@@ -1,0 +1,104 @@
+{
+  "id": "32bb71b00310d24cc2fc",
+  "article_path": "article-results-one-next-20261122.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261122.html",
+  "source_commit": "",
+  "source_blob_sha": "d150c629738a87cdb24d639b01d7072563d54f2d",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "b7c32e0908c468bbefe92870acedb48c003ba565855783deff7f5c8e82a97312",
+  "last_observed_blob_sha": "d150c629738a87cdb24d639b01d7072563d54f2d",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/32bb71b00310d24cc2fc/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/32bb71b00310d24cc2fc/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-22T10:08:53.575196+00:00",
+  "creation_event_id": "a7290503951826140ac7",
+  "event_blob_sha": "d150c629738a87cdb24d639b01d7072563d54f2d",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/32bb71b00310d24cc2fc/thumbnail.png",
+  "image_sha256": "cb577036424dcbf9444a7095ebdaa1057fa6d582d06c773c33ede0583a96be14",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "d150c629738a87cdb24d639b01d7072563d54f2d",
+    "text_lines": [
+      "バスケまとめ",
+      "11/22",
+      "試合結果",
+      "当日のEFF",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_body",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/32bb71b00310d24cc2fc/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261122.html",
+        "role": "固定版本文。見出し・日付・当日EFFの根拠。ライブ記事は本文根拠として参照していない。"
+      },
+      {
+        "type": "article_body",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/32bb71b00310d24cc2fc/source.txt",
+        "role": "固定版本文。複数試合の結果・リーグ別ポジション別TOP3。単独の主役は絞らず、画像に個人成績・カード点・実際の試合場面の断定は載せない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "目視確認済み。黒×ライム・太い日本語文字・インクとブラシの画風のみ参照。選手や成績は持ち越さない。"
+      },
+      {
+        "type": "appearance_only",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000286",
+        "image_url": "https://www.bleague.jp/files/user/roster/724/2026-27/51000286_03.png",
+        "local_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/32bb71b00310d24cc2fc/references/justyn-mutts-profile.png",
+        "role": "現行の公式プロフィール写真を目視。容姿のみの根拠。写真・ロゴを完成画像に貼り付けていない。"
+      },
+      {
+        "type": "appearance_crosscheck",
+        "url": "https://www.volters.jp/news/detail/id=19809",
+        "image_url": "https://volters.bl.kuroco-img.app/v=1782291037/files/user/202606241750_1.jpg",
+        "role": "公式契約発表写真も目視したが、長い髪の旧写真なので現行プロフィール写真を優先。本文・成績の根拠には使用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジャスティン・マッツ",
+        "english_name": "Justyn Mutts",
+        "selection": "ランダム",
+        "selection_reason": "試合結果と複数選手の比較記事で、単独の主役は絞れないため。指定された優先順位の最初である本文登場選手から抽選。",
+        "selection_method": "Python secrets.choiceで固定source.txtのポジション別TOP3掲載選手23人（重複を除く）から一様ランダムに1人抽選。",
+        "selected_source_entry": "ジャスティン・マッツ熊本・SF/PF",
+        "candidate_count": 23,
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/32bb71b00310d24cc2fc/selection.json",
+        "reference_source": "B.LEAGUE公式プロフィール",
+        "reference_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000286",
+        "reference_image_url": "https://www.bleague.jp/files/user/roster/724/2026-27/51000286_03.png",
+        "observed_features": "黒い幅広のヘッドバンド、コンパクトな黒髪、縦長の輪郭、頬骨、切れ長の目、幅のある鼻、薄い口ひげと顎先のひげ。現在の公式写真を目視して参照。",
+        "depiction": "両手でボールを抱えて踏み込む動きのイラスト。実際の試合場面の再現ではない。無地のユニフォームとヘッドバンド。画像内に選手名・個人成績・出場・活躍の記述はない。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: illustration-story\nAsset type: A single editorial thumbnail for Japanese basketball news site バスケまとめ, job 32bb71b00310d24cc2fc.\nPrimary request: Create ONE finished widescreen PNG illustration, 16:9 aspect ratio, ideally 2048x1152 pixels. Follow the approved black-and-lime ink-brush visual reference already viewed in this conversation, but use a different composition: player at LEFT, headline block at RIGHT. Only use the short article-based text specified below.\nReference roles: The viewed B-culver-black-lime-v3.png is STYLE ONLY; do not carry over that player, name, score, date or pose. The viewed official current B.LEAGUE portrait references/justyn-mutts-profile.png is LIKENESS ONLY, for the real player Justyn Mutts (ジャスティン・マッツ). The older club announcement photograph with shoulder-length locks is NOT the current appearance reference. Do not reproduce any photograph or original jersey branding.\nSubject: Exactly one real basketball player, Justyn Mutts, stylized but recognizably based on the current official portrait: long oval face, prominent cheekbones, almond-shaped eyes, relatively broad nose, full lips, thin moustache, distinct small pointed chin goatee, clean cheeks. Black close-fitting broad headband WITHOUT logo, dark hair compact above it as in current portrait (no hanging dreadlocks). Tall athletic muscular build. Render skin and clothing predominantly in ivory/gray/black ink, with enough clearly drawn facial detail to retain his likeness.\nAction: Dynamic three-quarter view of a powerful forward driving step, torso leaning diagonally, both hands visibly and naturally gripping ONE orange basketball near lower chest/waist as he gathers the ball. Face unobscured and turned slightly toward the viewer, focused neutral expression. Ball stays a prop held by the athlete. Hands must have credible fingers and joints. Show entire head, both arms, ball and upper thighs inside the canvas; lower thighs may intentionally fade into an ink brush at the bottom. This is a generic imagined basketball movement, NOT a recreation of a particular game or scoring play.\nWardrobe: Plain light jersey with dark trim, no player number, no name, no team emblem, no sponsors, no manufacturer mark; plain black headband.\nScene/backdrop: Very dark charcoal green #151A18, one broad energetic lime #CCF43B brush arc behind the athlete, sparse ink flecks. No arena, crowd, scoreboards, opponent, logos, court diagram or extra balls. Clear negative space behind the typography.\nStyle/medium: Bold hand-drawn editorial sports illustration, expressive black brush and crosshatched ink, dry-brush marks, flat high-contrast shades, limited palette, not photorealistic and not a 3D render. Similar premium impact and thick Japanese typography to approved reference.\nComposition: Wide landscape 16:9. Athlete fills left ~46%, typography right ~49%, no overlap with face/hands. Keep text and face at least 60 px inside all edges. Strong, simple, legible at small thumbnail sizes. Brand in small white bold letters at top right; date medium-large in lime; main Japanese headline huge heavy white sans-serif; secondary line medium-large lime. Footer in clearly readable white letters against dark solid background, with generous bottom padding.\nText (verbatim, no other text):\nバスケまとめ\n11/22\n試合結果\n当日のEFF\nイラスト（AI生成）\nイメージ\nText placement: Right main block reads top-to-bottom バスケまとめ / 11/22 / 試合結果 / 当日のEFF. Footer at bottom right reads イラスト（AI生成）　イメージ on a single line.\nSource boundaries: Article is the fixed source.html/source.txt for 2026-11-22 game results and same-day EFF; it covers multiple players equally. Justyn Mutts was randomly selected from named players. Therefore DO NOT write his name, individual scores, statistics, appearance, achievements, victory claims or quotes in the image. No claims of a real game moment. No fantasy card totals, ranks, new factual captions, official league logos or team logos. Preserve exact Japanese spelling and parentheses.\nOutput: One completed image only.",
+      "revision": "Use case: precise-object-edit\nEdit the first provided image, the existing black/lime basketball thumbnail, ONCE to correct subject framing and hair only. The second provided image is the current official portrait of the SAME real player Justyn Mutts, used only as a visual likeness guide, never pasted into the illustration.\nPreserve exactly: landscape 16:9, resolution at least 1000 pixels wide, black #151A18 and lime #CCF43B palette, bold ink-brush aesthetic, right-side typography, every text character and its current position: バスケまとめ / 11/22 / 試合結果 / 当日のEFF / イラスト（AI生成） / イメージ. Preserve one athlete on the left, orange basketball held naturally by both hands, plain unbranded clothing and headband, no player name or statistic.\nOnly correct these connected subject details: Scale down and reposition the left illustrated athlete enough that his full head and hair have a clear dark margin of at least 45 px below the upper edge, and his entire leftmost elbow has at least 35 px of dark margin from the left edge. Lower thighs may remain intentionally cropped by the bottom; head, hands, elbows and ball must not be cut. Keep the dynamic diagonal driving pose and the ball in the lower left. No overlap with headline or footer.\nMake hair closely match the SECOND official reference: compact short dark hair with a low silhouette behind the broad plain black headband, NOT a voluminous curly afro. Preserve the reference likeness: long oval face, almond eyes, prominent cheekbones, thin moustache, small pointed chin goatee, clean cheeks. Keep expressive hand-drawn shading, not a photo. Do not carry over logos, jersey numbers, sponsors, smile or photographic textures from the portrait.\nOne finished PNG, no new words, no new numbers, no real-match claim, no extra players."
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 2,
+      "corrective_revisions": 1,
+      "final_width": 1672,
+      "final_height": 941,
+      "format": "PNG",
+      "file_sha256": "cb577036424dcbf9444a7095ebdaa1057fa6d582d06c773c33ede0583a96be14",
+      "revision_reason": "初稿の頭頂部と左肘の見切れ、髪のボリュームを1回だけ修正。",
+      "inspection": "表示された修正版を目視し、文字と日付、当日EFFという範囲、公式資料との容姿、両手と指、頭と肘とボールの収まり、写真風でないこと、無地の服、AI注記とイメージ表記を確認。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-22T10:17:07.143751+00:00",
+  "publication_approved": false
+}

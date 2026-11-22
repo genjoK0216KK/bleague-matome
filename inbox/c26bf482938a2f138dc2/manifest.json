@@ -1,0 +1,98 @@
+{
+  "id": "c26bf482938a2f138dc2",
+  "article_path": "article-games-20261122.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261122.html",
+  "source_commit": "",
+  "source_blob_sha": "7e04ab8648b970fe17ba06f668445156ccfe1f24",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "b7c32e0908c468bbefe92870acedb48c003ba565855783deff7f5c8e82a97312",
+  "last_observed_blob_sha": "7e04ab8648b970fe17ba06f668445156ccfe1f24",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c26bf482938a2f138dc2/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c26bf482938a2f138dc2/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-22T10:08:53.053348+00:00",
+  "creation_event_id": "6abc55bd77fcc44b8b05",
+  "event_blob_sha": "7e04ab8648b970fe17ba06f668445156ccfe1f24",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/c26bf482938a2f138dc2/thumbnail.png",
+  "image_sha256": "8a2dda1e1dd30eae3372dbe3ac4c556a457590dc612cf95364771545c46b68b5",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "7e04ab8648b970fe17ba06f668445156ccfe1f24",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.22",
+      "試合結果",
+      "当日のEFF",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c26bf482938a2f138dc2/source.html",
+        "role": "本文の根拠・固定HTML",
+        "article_url": "https://basuke-matome.jp/article-games-20261122.html",
+        "verified_blob_sha": "7e04ab8648b970fe17ba06f668445156ccfe1f24"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c26bf482938a2f138dc2/source.txt",
+        "role": "本文の根拠・固定文章",
+        "evidence": "11/22 試合結果・当日のEFF。試合日 2026.11.22。複数リーグ・複数選手の一覧記事。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで実見した承認済み画風参考。既存の選手名・成績・日付は流用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "神田 壮一郎",
+        "selection": "ランダム",
+        "selection_reason": "本文は複数選手を並列に扱う試合結果とEFF一覧で、単独の主役を特定できないため。",
+        "selection_method": "source.htmlの一覧に登場する24人を出現順で重複除去し、Python random.Random('c26bf482938a2f138dc2').choiceで1人を選択。",
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c26bf482938a2f138dc2/selection.json",
+        "official_profile_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000380",
+        "official_portrait_url": "https://www.bleague.jp/files/user/roster/2728/2026-27/51000380_03.png",
+        "reference_role": "容姿のみ。公式プロフィールの画像URLを取得しview_imageで確認。修正時に本人の容姿参考として入力。公式写真自体を成果へ貼り付けていない。",
+        "observed_features": "短い黒髪、軽い分け目と自然なうねり、短い側頭部、濃い眉、切れ長の目、丸みのある鼻先、やや厚い唇、面長すぎない輪郭、小さなあごひげ。初稿より髪の長さと輪郭を修正した。",
+        "portrayal": "ボールを抱えて切り込むプレー姿のイラスト。実際の試合場面を再現したものではない。画像には氏名・背番号・成績・出場・活躍の記載なし。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, a PNG, landscape 16:9, 1536x864 or larger. It is for バスケまとめ, a daily results article dated 2026-11-22.\n\nART DIRECTION: Match the approved reference's visual language: deep almost-black #151A18 background, electric lime #CCF43B broad dry-brush diagonal gestures, warm ivory typography and ink shading, one orange basketball. Hand-drawn expressive ink and brush sports illustration, strong confident strokes and visible hatching, restrained elements, clear hierarchy. Absolutely not a photograph or photorealistic render.\n\nSUBJECT: One real basketball player, Soichiro Kanda (神田壮一郎), selected randomly from the article's players, shown in an energetic drive while gathering and protecting the basketball at his right hip in two hands. This is a generic imagined playing pose, NOT a reenactment of the actual game or a specific scoring play. No other people. The player must be recognizably based on the official B.LEAGUE 2026-27 portrait that has been inspected: a 25-year-old Japanese man, tall athletic build, broad shoulders, comparatively long neck, short black wavy hair parted loosely near the middle with a fuller tousled top and short sides, forehead partly visible, thick straight dark eyebrows, almond-shaped dark eyes, a moderately broad straight nose with rounded tip, oval-to-rectangular face with softly angular jaw and rounded chin, medium full lips, a small narrow black chin goatee immediately beneath the chin/lower lip and barely visible sparse moustache. Do not turn him into a different generic athlete. Keep his facial features clear in a three-quarter view, head held up looking in his direction of travel. Express concentration. Render his face and skin in ivory and black ink, not photo skin.\nClothing: plain sleeveless basketball uniform in ivory/black ink with limited lime edging. Completely blank: no jersey number, name, team emblem, sponsors, lettering, or league logo. Natural anatomy, exactly two arms and two hands; plausible fingers gripping one ball. No duplicate limbs. No huge outstretched hand. Keep face, hands and ball wholly inside the canvas.\n\nLAYOUT: Typography occupies the left approximately 55 percent; athlete on the right approximately 45 percent, energetic forward lean and bent knees, head in the upper-right area, orange ball at waist height toward the right edge. Broad lime brush gesture behind him from lower-center to upper-right. Three-quarter body framing can crop the lower shins at the bottom. Text and face never overlap. Generous 5 percent safe margins for all lettering; footnotes fully readable. Few elements, no boxes of stats, no scoreboard, no arena logos.\n\nTEXT, VERBATIM, and nothing else:\nAt top-left in small bold ivory: \"バスケまとめ\"\nUnder it in medium ivory: \"2026.11.22\"\nLarge main line in very heavy ivory Japanese gothic: \"試合結果\"\nNext large line in electric lime, highly readable: \"当日のEFF\"\nAt bottom-left, a clearly legible ivory small caption: \"イラスト（AI生成）\"\nBeside that caption with a generous gap: \"イメージ\"\n\nMake the main headline massive and readable on a small thumbnail. Japanese characters must be exact, no broken glyphs. EFF is Latin capital letters E F F. Keep full-width parentheses in the AI label. Do not add the player's name, individual achievements, playing-time claims, scores, rankings, numbers other than the date, invented headlines, or text copied from the old approved artwork. No official photos pasted into the picture, no team or league logos, no signatures. This image must remain clearly an AI-generated illustration.",
+      "revision_1": "Edit the first image only. It is the completed black-and-lime Japanese basketball thumbnail. The second image is the official B.LEAGUE portrait of the real player Soichiro Kanda, used ONLY as an appearance reference. Do not paste or reproduce the photograph in the output. Do not reproduce its uniform logos, text, red colors, or number.\n\nMake one targeted correction to the illustrated player's face and hair, to clearly match the man in reference image 2, while preserving the entire composition, body pose, hands, orange ball, ink illustration style, black background, lime brushwork, blank uniform, and every letter of the existing typography.\n\nLikeness corrections: His hair is SHORT black hair with closely trimmed sides around the ears and moderate loosely wavy volume on top, softly parted. Shorten the current long floppy strands and reduce the exaggerated curls and top volume. The photo has a slightly broader, softer oval face, not an elongated sharply sculpted face. Match the photo's cheekbone spacing, naturally small almond eyes, straight dark eyebrows, moderately broad nose with rounded tip, and relatively full lips. Keep the illustration's focused expression and three-quarter gaze while matching this man's actual facial proportions. Facial hair should be a SMALL NARROW chin goatee only, matching the small patch in the portrait, with clean cheeks and jaw and just a trace of sparse moustache; remove the current broad dark beard spreading along the chin/jaw. Keep natural proportions and ivory/black hand-drawn hatching; no photorealism. No other people.\n\nPreserve exactly these six text strings without additions or spelling changes:\nバスケまとめ\n2026.11.22\n試合結果\n当日のEFF\nイラスト（AI生成）\nイメージ\n\nRetain 16:9 landscape and at least 1500 px wide. Keep head, hands, ball and all letters completely within frame, moving the uppermost hair slightly down if necessary for a small margin. The intended result is a generic imagined drive by this real player, not a documented game scene. Never add player names, stats, jersey numbers, sponsor marks, team logos, league logos, watermarks, or signatures. Deliver one finished PNG."
+    },
+    "generator": {
+      "tool": "内蔵 image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 2,
+      "revisions": 1,
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "output": "generated.png",
+      "approved_output_source": "/Users/genjo/.codex/generated_images/01a202ba-e9c8-7862-b130-0eb341be2745/exec-be74917e-bd0b-47c8-af5b-b2c4ac373f7a.png",
+      "revision_reason": "初稿の髪と輪郭が公式写真より長く見えたため、本人の特徴に寄せる修正を1回実施。",
+      "visual_qa_notes": {
+        "text_and_numbers": "最終画像を実見し6つの文字列と日付が正しく、不要な名前や数値がないことを確認。",
+        "source_qualifiers": "当日のEFFという対象日集計の表現を維持。個人成績、順位、勝利、カード点の主張なし。イメージの表記を確認し、実際の試合場面や起用位置を断定していない。",
+        "likeness_or_no_named_person": "実在選手の公式写真と照合し、髪型・輪郭・目鼻・あごひげの特徴を反映したイラストであることを確認。氏名は画像に載せていない。",
+        "layout": "約16:9。文字・頭・両手・ボールの見切れなし。手指の本数とボールの持ち方に重大な破綻なし。視線・腕のつながり、文字と人物の分離を確認。チーム・リーグのロゴおよびスポンサー文字なし。",
+        "ai_label": "イラスト（AI生成）とイメージが左下に明瞭に表示されていることを確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-22T10:13:00.740395+00:00",
+  "publication_approved": false
+}
