@@ -308,6 +308,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "大阪エヴェッサの直近5試合は0勝5敗 攻撃の効率は26チーム最下位"
   },
+  "article-analysis-ryukyu-20261123.html": {
+   "article_path": "article-analysis-ryukyu-20261123.html",
+   "editorial_fingerprint": "8b17f4a24f7c3a4084ba6c238ed1172f1895f78508b497efac48d241a5438166",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-analysis-ryukyu-20261123-faa4680e5e8f.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-ryukyu-20261123-faa4680e5e8f-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "a1ecf03d7ea1322c57bb",
+   "image_sha256": "faa4680e5e8fcabd8baad5f831e607f16401acc99e9847632b9d45d4902a454f",
+   "imported_at": "2026-11-23T03:19:44.338863+00:00",
+   "prepared_at": "2026-11-23T03:18:57.476185+00:00",
+   "source_blob_sha": "78a3e4ebea9d26960e4412586628329f29c231da",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "8b17f4a24f7c3a4084ba6c238ed1172f1895f78508b497efac48d241a5438166",
+   "style": "ink-lime-portrait-v5",
+   "title": "琉球ゴールデンキングスの直近5試合 2勝3敗で速攻はリーグ最少、2Pで40点差"
+  },
   "article-analysis-saga-20261112.html": {
    "article_path": "article-analysis-saga-20261112.html",
    "editorial_fingerprint": "f18230795834dbfc31ce851b0bb9156abd24414e78880bc9aa861b51e5fff863",
@@ -3251,13 +3279,6 @@
  },
  "log": [
   {
-   "article": "article-stats-20261116.html",
-   "at": "2026-11-16T14:11:58.722377+00:00",
-   "event": "imported",
-   "id": "5027dd7c0382609c7aa3",
-   "image": "a3bda6d628d4"
-  },
-  {
    "article": "article-games-20261117.html",
    "at": "2026-11-16T19:34:18.709157+00:00",
    "event": "imported",
@@ -3809,6 +3830,13 @@
    "event": "imported",
    "id": "fabda2ad7b1d2fb89f40",
    "image": "543bb09d5f6e"
+  },
+  {
+   "article": "article-analysis-ryukyu-20261123.html",
+   "at": "2026-11-23T03:19:44.338888+00:00",
+   "event": "imported",
+   "id": "a1ecf03d7ea1322c57bb",
+   "image": "faa4680e5e8f"
   }
  ],
  "seen": {
@@ -3954,6 +3982,7 @@
   "9f2558d6277a776ef982": "imported",
   "9f757581f96bc573aa5f": "imported",
   "a080784863e72da1cb08": "imported",
+  "a1ecf03d7ea1322c57bb": "imported",
   "a2b6b2b44b3ab2922589": "superseded:896bbeb35c2a1eb9d0e1",
   "a384f66c5c633ed9bdb1": "imported",
   "a5a194dfdf4bb060673e": "superseded:faacf40f2eedbd5f216f",
