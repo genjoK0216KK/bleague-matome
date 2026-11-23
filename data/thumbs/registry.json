@@ -1288,6 +1288,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "熊本が横浜EXに2連勝、107-83と87-84の2試合を検証"
   },
+  "article-daily-20261124.html": {
+   "article_path": "article-daily-20261124.html",
+   "editorial_fingerprint": "0fc44b3c5a15eb4180678ef88608a985858c51c42f13f9ee1116151d73b06a35",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261124-416cfcf227fa.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261124-416cfcf227fa-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "0008449fe8bf896e79b4",
+   "image_sha256": "416cfcf227fab7d66b02b1b56bc0abaa6e1e6a534cb1445de5ac71e33e1a772b",
+   "imported_at": "2026-11-23T23:22:32.386483+00:00",
+   "prepared_at": "2026-11-23T23:18:54.476531+00:00",
+   "source_blob_sha": "83bb9b6608100e77ee3c28ac408d65ece04974ca",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "0fc44b3c5a15eb4180678ef88608a985858c51c42f13f9ee1116151d73b06a35",
+   "style": "ink-lime-portrait-v5",
+   "title": "B.PREMIER順位表 東は仙台・群馬・A東京が接戦、西は名古屋と広島が先行"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -2127,6 +2155,34 @@
    "stable_fingerprint": "3558df06b26639ced2c172935496791706ef53d7d2492f8906cda95dfd3fda27",
    "style": "ink-lime-portrait-v5",
    "title": "11/23 試合なし"
+  },
+  "article-games-20261124.html": {
+   "article_path": "article-games-20261124.html",
+   "editorial_fingerprint": "ab72a0f204e2bc2d1060707141d4618ff4e4ab341497ab2702c886ce72379df8",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-games-20261124-f588273703b6.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-games-20261124-f588273703b6-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "d806af6af5d014410b91",
+   "image_sha256": "f588273703b67e3264df9f046aa1bc834b917ddb2f132610ed247209f51534c3",
+   "imported_at": "2026-11-23T23:22:32.527171+00:00",
+   "prepared_at": "2026-11-23T23:21:36.950035+00:00",
+   "source_blob_sha": "f5258de70bf7ffc0f5f124a024567723e9de5e83",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "ab72a0f204e2bc2d1060707141d4618ff4e4ab341497ab2702c886ce72379df8",
+   "style": "ink-lime-portrait-v5",
+   "title": "11/24 試合なし"
   },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
@@ -3279,20 +3335,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261117.html",
-   "at": "2026-11-16T19:34:18.709157+00:00",
-   "event": "imported",
-   "id": "6884e4e9ba611c0e630e",
-   "image": "601bcab0381e"
-  },
-  {
-   "article": "article-results-one-next-20261117.html",
-   "at": "2026-11-16T22:18:51.895385+00:00",
-   "event": "imported",
-   "id": "7a38c81e81aa20bf71ec",
-   "image": "56c4ed441dd5"
-  },
-  {
    "article": "article-daily-20261117.html",
    "at": "2026-11-16T23:20:13.364394+00:00",
    "event": "imported",
@@ -3837,9 +3879,24 @@
    "event": "imported",
    "id": "a1ecf03d7ea1322c57bb",
    "image": "faa4680e5e8f"
+  },
+  {
+   "article": "article-daily-20261124.html",
+   "at": "2026-11-23T23:22:32.386504+00:00",
+   "event": "imported",
+   "id": "0008449fe8bf896e79b4",
+   "image": "416cfcf227fa"
+  },
+  {
+   "article": "article-games-20261124.html",
+   "at": "2026-11-23T23:22:32.527186+00:00",
+   "event": "imported",
+   "id": "d806af6af5d014410b91",
+   "image": "f588273703b6"
   }
  ],
  "seen": {
+  "0008449fe8bf896e79b4": "imported",
   "0289cbfa82d3e10329fb": "superseded:8926ed6e2f6c758b34aa",
   "02a6048a7bd570db2c5e": "superseded:8a37d086b2f172a45d5b",
   "03f1109abc0d7ee744f9": "superseded:5e231e28b370cb26f1f6",
@@ -4040,6 +4097,7 @@
   "d5c983c0cf4a52db9a3a": "superseded:ee9fc0eaf9e0a69a8c68",
   "d608175ea301e9836df4": "imported",
   "d751b892af758cf975ea": "superseded:faacf40f2eedbd5f216f",
+  "d806af6af5d014410b91": "imported",
   "d87a8ec3bf24b1b0559b": "superseded:81cdf284d66df1d61f20",
   "d92135f0c0d495f517b8": "imported",
   "d9bde7fe63871fad57c4": "superseded:ad6bf00b0853f0333020",
