@@ -1,0 +1,85 @@
+{
+  "id": "0008449fe8bf896e79b4",
+  "article_path": "article-daily-20261124.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261124.html",
+  "source_commit": "",
+  "source_blob_sha": "83bb9b6608100e77ee3c28ac408d65ece04974ca",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "0fc44b3c5a15eb4180678ef88608a985858c51c42f13f9ee1116151d73b06a35",
+  "last_observed_blob_sha": "83bb9b6608100e77ee3c28ac408d65ece04974ca",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/0008449fe8bf896e79b4/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/0008449fe8bf896e79b4/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-23T23:16:20.650574+00:00",
+  "creation_event_id": "2a3e20773f0366e95393",
+  "event_blob_sha": "83bb9b6608100e77ee3c28ac408d65ece04974ca",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/0008449fe8bf896e79b4/thumbnail.png",
+  "image_sha256": "416cfcf227fab7d66b02b1b56bc0abaa6e1e6a534cb1445de5ac71e33e1a772b",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "83bb9b6608100e77ee3c28ac408d65ece04974ca",
+    "text_lines": [
+      "バスケまとめ",
+      "B.PREMIER 順位表",
+      "東西の",
+      "上位争い",
+      "東は接戦／西は名古屋・広島",
+      "12月4日 再開",
+      "11/23時点・独自分析",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "source.html",
+        "role": "記事内容の唯一の根拠（source.txtと同一の固定原稿）",
+        "article_url": "https://basuke-matome.jp/article-daily-20261124.html",
+        "evidence": [
+          "h1: B.PREMIER順位表 東は仙台・群馬・A東京が接戦、西は名古屋と広島が先行",
+          "pmeta: 順位表分析 / 独自分析",
+          "lead: 次の試合は12月4日です。",
+          "出典欄: B.LEAGUE公式：B.PREMIER順位表（11/23時点）"
+        ],
+        "qualifier_review": "順位表の基準日と独自分析を画像に明記。勝敗や得失点差の数値、将来の勝敗予測は表示していない。"
+      },
+      {
+        "path": "source.txt",
+        "role": "固定本文の文章照合",
+        "evidence": "東西の上位争い・12月4日再開・11/23時点・独自分析を照合。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイルだけを参照。別記事の選手・成績・日付は転用していない。",
+        "viewed": true
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "クエンティン・ミロラ・ブラウン",
+        "latin_name": "Quentin Millora-Brown",
+        "selection": "ランダム",
+        "selection_method": "特定選手が主役ではない順位比較記事。固定原稿の出典欄に名前がある『ブラウン』『フィリップス』を候補としてPython random.SystemRandom().choiceで抽選し、『ブラウン』を選択。",
+        "reference_source": "名古屋ダイヤモンドドルフィンズ公式・選手プロフィール",
+        "profile_url": "https://nagoya-dolphins.jp/team/players/detail/id=23841?PlayerID=51000576",
+        "roster_url": "https://nagoya-dolphins.jp/team/players/",
+        "official_photo_url": "https://bleague.bl.kuroco-img.app/v=2026112219/files/user/roster/729/2026-27/51000576_01.jpg",
+        "reference_viewed": true,
+        "observed_features": "後方へなでつけた黒髪、縦長の輪郭、濃い眉、目鼻の位置、細い口ひげと尖った顎ひげを公式写真で確認。",
+        "likeness_review": "生成画像を目視し、髪型・輪郭・目鼻・口ひげ・顎ひげの特徴を確認。写真を貼り付けずインクの人物画にした。",
+        "usage_limits": "公式写真は容姿確認のみ。画像に選手名・背番号・個人成績・出場や活躍の記述はない。無地ユニフォームでチーム・リーグ・スポンサーのロゴなし。実際の試合の再現ではないプレー姿のイメージ。"
+      }
+    ],
+    "prompt": "Use case: ads-marketing.\nCreate ONE finished Japanese basketball news editorial thumbnail, landscape 2048 x 1152 pixels, approximately 16:9, opaque PNG. A new original hand-drawn ink-and-brush illustration, never a photograph.\nApproved visual direction: near-black #151A18 background, vivid lime #CCF43B brush sweeps, warm ivory typography, sparse orange on the basketball. Strong Japanese bold Gothic typography with legible exact glyphs, expressive black ink hatching and rough brush texture. Few elements, strong hierarchy, generous margins. Do not copy any names, numbers, dates, or players from previous style examples.\nSubject: exactly ONE real professional basketball player, Quentin Millora-Brown (クエンティン・ミロラ・ブラウン), drawn as a recognizable illustrated likeness based on his official Nagoya Diamond Dolphins portrait observed for this task: tall athletic solid build; dark straight hair tightly slicked straight back, close to scalp with short neat sides; medium-light warm skin; elongated oval face, straight fairly broad nose, strong dark eyebrows, slightly hooded almond-shaped eyes; narrow dark moustache and distinct pointed chin goatee, sparse jaw hair (NOT a thick full beard). Calm focused determined expression. Preserve these distinctive features; do not use a generic invented player, a curly-haired player, or the player from the style sample.\nAction: dynamic three-quarter view, torso rotating in a strong two-hand chest-pass preparation with an orange basketball held in both hands at lower chest/waist height, one knee driving forward. His face is clearly visible and fairly frontal. This is a conceptual imagined basketball pose, not a reconstruction of any documented play, match, point, or achievement.\nClothing: entirely plain ivory and black sleeveless basketball uniform, no logos, no sponsors, no names, no numbers, no team marks. Render body and uniform primarily ivory and black in hand-drawn ink; no photographic skin textures. All visible hands anatomically coherent, five fingers per hand with naturally occluded fingers, no extra limbs.\nComposition: left 60 percent for type, right 40 percent dominated by the illustrated player and held ball. A bold diagonal lime brush stroke behind the player conveys movement. Keep face, hands and ball fully visible and away from typography. Natural intentional crop below thighs is fine. No opponents, no crowd, no hoop, no scoreboard, no extra icons.\nText must be exactly the following, without extra words:\nTop-left small brand: \"バスケまとめ\"\nSmall context line: \"B.PREMIER 順位表\"\nMain oversized headline in two stacked lines: \"東西の\" and \"上位争い\"\nSupporting bold line: \"東は接戦／西は名古屋・広島\"\nSeparate short timing line: \"12月4日 再開\"\nSmall qualifying line: \"11/23時点・独自分析\"\nBottom-left clear readable disclosure: \"イラスト（AI生成）\" and \"イメージ\"\nUse warm ivory main type with lime emphasis on \"上位争い\". Make the main headline instantly readable at thumbnail size. Smaller lines must still be crisp, with safe margins of at least 60px from every edge.\nContent constraints: The article compares league standings during a break. All wording above is based solely on the supplied frozen article. The selected player is a random illustrative subject named in the supplied source list and is NOT the article's individual star. Never display his name, statistics, appearance claims, or performance claims in the image. No official photos pasted into the image, no team logo, no league logo, no sponsor lettering. \"B.PREMIER\" is plain text only, not a logo. Do not imply a real game scene. Deliver only one polished thumbnail.",
+    "generator": "image_gen.imagegen（内蔵画像生成）。生成1回、修正0回。出力PNG 1672×941px（約16:9）。元出力を加工せずコピー。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-23T23:18:54.476531+00:00",
+  "publication_approved": false
+}

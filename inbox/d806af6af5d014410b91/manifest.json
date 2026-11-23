@@ -1,0 +1,101 @@
+{
+  "id": "d806af6af5d014410b91",
+  "article_path": "article-games-20261124.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261124.html",
+  "source_commit": "",
+  "source_blob_sha": "f5258de70bf7ffc0f5f124a024567723e9de5e83",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "ab72a0f204e2bc2d1060707141d4618ff4e4ab341497ab2702c886ce72379df8",
+  "last_observed_blob_sha": "f5258de70bf7ffc0f5f124a024567723e9de5e83",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d806af6af5d014410b91/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d806af6af5d014410b91/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-23T23:16:21.213265+00:00",
+  "creation_event_id": "ee309c8e010f28a099dc",
+  "event_blob_sha": "f5258de70bf7ffc0f5f124a024567723e9de5e83",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/d806af6af5d014410b91/thumbnail.png",
+  "image_sha256": "f588273703b67e3264df9f046aa1bc834b917ddb2f132610ed247209f51534c3",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "f5258de70bf7ffc0f5f124a024567723e9de5e83",
+    "text_lines": [
+      "バスケまとめ",
+      "11/24",
+      "試合なし",
+      "B.PREMIER・B.ONE・B.NEXT",
+      "2026年11月24日 08:10 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d806af6af5d014410b91/source.html",
+        "role": "固定版HTML。記事内容の根拠。",
+        "article_url": "https://basuke-matome.jp/article-games-20261124.html",
+        "facts": [
+          "2026年11月24日はB.PREMIER・B.ONE・B.NEXTの試合なし",
+          "資料取得は2026-11-24 08:10 JST"
+        ],
+        "external_article_or_schedule_not_used": true
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d806af6af5d014410b91/source.txt",
+        "role": "固定版文章。HTMLと内容および資料取得時点の一致を確認。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイル参照のみ。view_imageで確認。選手名・成績・日付を流用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "髙比良寛治",
+        "selection": "ランダム",
+        "selection_reason": "固定原稿に選手名・チーム名がないため、B.LEAGUE現役選手から選択。",
+        "selection_method": "secrets.randbelow(39), 1 draw",
+        "candidate_count": 39,
+        "selected_index_zero_based": 3,
+        "candidate_source": "https://www.bleague.jp/roster/",
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d806af6af5d014410b91/selection.json",
+        "official_profile_url": "https://www.bleague.jp/roster_detail/?PlayerID=12605",
+        "current_player_verification": "公式プロフィールの2026-27シーズンの長崎所属表示を確認。容姿・現役確認だけに使用し、記事内容の根拠には使用していない。",
+        "official_photo_url": "https://www.bleague.jp/files/user/roster/2488/2026-27/12605_03.png",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/d806af6af5d014410b91/reference-takahira-official.png",
+        "official_photo_viewed": true,
+        "observed_features": "暗い短い刈上げ、明るい茶色の短髪トップを横へ流す髪型。幅のある輪郭・顎、直線的な眉、切れ長の目、丸みのある広い鼻、ひげのない顔、がっしりした肩。",
+        "depiction": "低い姿勢のドリブルを新規に描いたインク画。実際の試合場面ではなくイメージ。公式写真は合成せず、ロゴ・スポンサー・背番号・氏名を描かない。",
+        "image_name_or_performance_claims": false,
+        "likeness_qa": "公式写真と生成画像を実見して、髪型、輪郭、眉・目・鼻、ひげの有無がイラストとして対応していることを確認。"
+      }
+    ],
+    "prompt": "Use case: ads-marketing\nAsset type: One editorial basketball article thumbnail for バスケまとめ.\nPrimary request: Generate exactly one finished PNG illustration, landscape 16:9, 1920x1080 pixels (at least 1000px wide), with crisp accurate Japanese typography. This is an original illustrated imagined basketball action, not a photograph, not a reconstruction of any actual game.\n\nVisual references already inspected in this conversation:\n1. Approved B-culver-black-lime-v3.png: style reference ONLY. Match the dark charcoal #151A18, electric lime #CCF43B, warm ivory, bold Japanese headline, expressive hand-drawn ink and dry-brush strokes. Do NOT copy any player, name, scoring statistic, date or score from that style reference.\n2. The official B.LEAGUE portrait of real player Kanji Takahira / 髙比良寛治, https://www.bleague.jp/files/user/roster/2488/2026-27/12605_03.png: facial likeness reference ONLY. He is the sole illustrated person. Preserve his recognizable short undercut: closely clipped dark sides, short textured light brown/blond highlighted top swept to his right; broad angular/oval face, strong slightly square jaw, dark straight eyebrows, narrow almond-shaped eyes, wide rounded nose, clean-shaven cheeks and chin, athletic stocky shoulders. Translate these specific features into expressive ink illustration. Do not depict a generic fictional athlete. Do not paste, trace or composite the official photo, do not reproduce its jersey logos or photo pose.\n\nComposition: Place Takahira on the LEFT 43% in a dynamic low crossover dribbling stance, three-quarter view facing toward the right. His right palm is controlling the upper side of one orange basketball near hip/thigh height, five anatomically correct fingers; his free left hand is relaxed and naturally open. Head, face, both hands and ball stay entirely inside the canvas with generous margins; figure framed from head to bent knees, shorts may naturally exit near the lower-left edge. Strong movement in torso and shoulders, focused expression. Plain dark sleeveless basketball kit with ivory edge trim, no numbers, no names, no team marks, no sponsor marks. Black and ivory ink for skin and body, warm light brown highlight for hair; lime gestural accents. Minimal abstract brush backdrop, no literal arena, opponent, scoreboard, hoop or depicted match.\n\nTypography: RIGHT 57% clean readable text zone with ample negative space, no overlap with face, hands or ball. Large extra-bold Japanese sans-serif. Main headline split in two stacked lines: enormous lime '11/24', then enormous ivory '試合なし'. Small ivory site title at top. The three category names on one smaller readable line below headline. Beneath this, a smaller clearly readable source-time qualifier. Footer spans safe area and contains both the AI label and image disclaimer, unobscured, with sufficient contrast. Allow 5% safe margin around all text.\n\nText (verbatim, each exactly once, no other text):\nバスケまとめ\n11/24\n試合なし\nB.PREMIER・B.ONE・B.NEXT\n2026年11月24日 08:10 JST時点\nイラスト（AI生成）\nイメージ\n\nSource context: the ONLY article facts are from the supplied fixed source.html and source.txt: no games on 2026-11-24 in B.PREMIER, B.ONE and B.NEXT; data obtained at 08:10 JST that day. The player was randomly selected because the article contains no player or team names. Do not imply he played, won, scored or was scheduled that day. Do not put his name, number, team or any individual performance in the image. The words イメージ and イラスト（AI生成） must be visible. No league or team logos, no sponsor names, no official photos, no photorealism, no unrelated copy. Use few graphic elements and sharp high-impact thumbnail readability.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "attempts": 1,
+      "corrections": 0,
+      "original_output": "/Users/genjo/.codex/generated_images/01a20ab4-8d92-71a3-8e12-5e372cf41838/exec-b805f029-5a8f-4dc2-904d-ccefd83081e4.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "image_sha256": "f588273703b67e3264df9f046aa1bc834b917ddb2f132610ed247209f51534c3",
+      "visual_qa_notes": {
+        "text_and_numbers": "全7行を画像で読み、11/24、2026年11月24日、08:10、3カテゴリー名の表記を固定原稿と照合。選手の氏名・成績なし。",
+        "source_qualifiers": "08:10 JST時点を明記し、試合なしの対象3カテゴリーを表示。イメージ表記があり実試合の再現を示していない。",
+        "likeness_or_no_named_person": "公式写真と生成画像の容姿を比較。選択した実在選手1人のみ。写真風・公式写真貼付・チームロゴ・リーグロゴ・スポンサーなし。",
+        "layout": "黒×ライムの約16:9。見出し、顔、ボール、両手、注記が見える。下端で脚・ショーツが自然にフレームアウト。手指は自然で明確な余剰や破綻なし。",
+        "ai_label": "下部ライム帯にイラスト（AI生成）、右下にイメージを実見。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-23T23:21:36.950035+00:00",
+  "publication_approved": false
+}
