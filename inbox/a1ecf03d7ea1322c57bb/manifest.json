@@ -1,0 +1,94 @@
+{
+  "id": "a1ecf03d7ea1322c57bb",
+  "article_path": "article-analysis-ryukyu-20261123.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-ryukyu-20261123.html",
+  "source_commit": "",
+  "source_blob_sha": "78a3e4ebea9d26960e4412586628329f29c231da",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "8b17f4a24f7c3a4084ba6c238ed1172f1895f78508b497efac48d241a5438166",
+  "last_observed_blob_sha": "78a3e4ebea9d26960e4412586628329f29c231da",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a1ecf03d7ea1322c57bb/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a1ecf03d7ea1322c57bb/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-23T03:15:45.344259+00:00",
+  "creation_event_id": "fe3434a9997944e296fd",
+  "event_blob_sha": "78a3e4ebea9d26960e4412586628329f29c231da",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/a1ecf03d7ea1322c57bb/thumbnail.png",
+  "image_sha256": "faa4680e5e8fcabd8baad5f831e607f16401acc99e9847632b9d45d4902a454f",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "78a3e4ebea9d26960e4412586628329f29c231da",
+    "text_lines": [
+      "琉球 直近5試合",
+      "2勝3敗",
+      "2P得点差 −40点",
+      "5試合合計（11/7〜11/18）",
+      "イラスト（AI生成）",
+      "成績をもとにしたイメージ"
+    ],
+    "sources": [
+      {
+        "role": "本文の根拠（固定HTML）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a1ecf03d7ea1322c57bb/source.html",
+        "article_url": "https://basuke-matome.jp/article-analysis-ryukyu-20261123.html",
+        "verified_blob_sha": "78a3e4ebea9d26960e4412586628329f29c231da"
+      },
+      {
+        "role": "本文の根拠（固定文章）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a1ecf03d7ea1322c57bb/source.txt",
+        "used_facts": [
+          "琉球の直近5試合は2勝3敗",
+          "対象期間は11月7日から11月18日",
+          "2P得点は琉球176点・相手216点で差は−40点",
+          "クーリー選手に頼る攻撃の節を選手選定の根拠とした"
+        ],
+        "qualifiers_preserved": "2P得点差はチームの直近5試合合計と明記。1試合や個人成績としない。リーグ順位・負傷・予定は画像に表示しない。"
+      },
+      {
+        "role": "画像生成・検品ルール",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt"
+      },
+      {
+        "role": "目視確認した承認済みスタイル参照",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "黒#151A18×ライム#CCF43B、太い日本語文字、インクとブラシの表現のみ参照。選手・成績・日付・ポーズは流用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジャック・クーリー",
+        "selection": "本文の主役",
+        "reason": "固定原稿の「クーリー選手に頼る攻撃」で中心選手として独立した見出しと最も詳しい攻撃・リバウンドの記述があるため。ランダム選定ではない。",
+        "source_name": "琉球ゴールデンキングス公式 選手プロフィール",
+        "source_url": "https://goldenkings.jp/team/players/detail/id=14102?PlayerID=26914",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026112310/files/user/roster/701/2026-27/26914_01.jpg",
+        "reference_image_viewed": true,
+        "observed_features": "短い濃茶の髪を横へ流した髪型、広い額、角のある顎とやや縦長の顔、通った鼻筋、明るい目、顎・口元の短いひげ、厚い肩と腕。生成画でも特徴を目視照合した。",
+        "usage": "容姿確認のみ。公式写真の貼り付けや写真風の再現はせず、無地ユニフォームのインク画として生成。両手でボールを確保する概念的なプレー姿であり、特定試合の再現ではない。チーム・リーグ・スポンサーのロゴなし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nAsset type: one Japanese basketball editorial thumbnail, landscape 16:9, 1536×864 pixels or larger. Create exactly one finished image.\n\nDesign: approved Japanese basketball thumbnail style: near-black #151A18 background, electric lime #CCF43B dry-brush strokes, warm off-white huge bold Japanese typography, hand-drawn ink and scratchy brush illustration, high contrast, restrained information, professional editorial hierarchy. The style reference observed was B-culver-black-lime-v3.png; carry over ONLY its color/ink language, NOT its player, pose, date, names or stats.\n\nComposition: left 55% is a clean text block; right 45% a single large dynamic real-player illustration. Leave generous safe margins (at least 5%) around every word. Use a sweeping lime brush arc behind the player to evoke rebound motion, no realistic court, hoop or scoreboard. Intentional waist/thigh crop is fine, but entire head, both forearms, hands and basketball must be visible. Keep body and letters separate.\n\nSubject: Jack Cooley, the real Ryukyu Golden Kings player, based on his official club profile photo inspected for this job at https://goldenkings.jp/team/players/detail/id=14102?PlayerID=26914 . He is the most prominent offensive player in the supplied article (not a random choice).\nObserved appearance from the official portrait: light skin, short dark brown hair with short sides and a neat side sweep on top, fairly broad forehead, angular broad jaw and slightly long rectangular face, straight prominent nose, light-colored eyes, short close brown stubble around jaw/chin and upper lip (not a long or full beard), powerful stocky shoulders and thick strong arms. Preserve these identity-specific features in the expressive ink drawing. Avoid generic heroic substitute face.\nAction: three-quarter view, torso twisting in a strong basketball rebound-gather posture; both hands firmly grip one orange basketball above shoulder level slightly to the right of his head; face clearly visible, gaze focused toward the ball. Draw realistic, clean anatomy: exactly two arms and two hands with natural fingers gripping the ball. This is a conceptual sports illustration, not a reenactment of any actual game moment. No other people.\nUniform: plain off-white/light gold sleeveless basketball jersey with simple dark edging, no text, no jersey number, no patterns or emblems. Absolutely no team/league/sponsor/manufacturer logos. Do not paste or reproduce the official photograph; illustration only, coarse brush and ink hatch shading, never photorealistic.\n\nText (verbatim, only these six lines):\n\"琉球 直近5試合\"\n\"2勝3敗\"\n\"2P得点差 −40点\"\n\"5試合合計（11/7〜11/18）\"\n\"イラスト（AI生成）\"\n\"成績をもとにしたイメージ\"\n\nText hierarchy: first line bold off-white team/period heading; second line extremely large bold lime centerpiece; third line bold off-white, with −40 accented lime if useful; fourth line clearly readable below the statistic, not tiny. Fifth and sixth lines in small but legible off-white type along bottom left, clear of the body illustration. Require correct Japanese characters and correct negative sign. The −40 is the TEAM's cumulative two-point scoring difference across five games, not a player's score and not a single-game result. All claims and numbers come exclusively from supplied source.html/source.txt. Do not add league rankings, individual stats, injury news, promises, dates or text not listed.\n\nFinish: sharp thumbnail-scale legibility, lively but minimal ink/brush texture, no clutter, no badges, no logos, no photo collages, no watermarks, opaque background.\n",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "revision_count": 0,
+      "output_format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "original_output": "/Users/genjo/.codex/generated_images/01a20667-08ad-7352-8176-aca772e64ebe/exec-5ddc7455-968e-4fd4-826a-a82ea11c54bc.png",
+      "final_image_sha256": "faa4680e5e8fcabd8baad5f831e607f16401acc99e9847632b9d45d4902a454f",
+      "inspection": "生成画像を実際に表示して、文字・数値・留保・容姿・顔と両手とボールの形・文字の見切れ・AI表示を目視確認。修正なしで合格。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-23T03:18:57.476185+00:00",
+  "publication_approved": false
+}
