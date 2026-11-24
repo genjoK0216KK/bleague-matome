@@ -3331,16 +3331,37 @@
    "stable_fingerprint": "68b5c14a8d258f2c9e429de692dacdc461d4979ecd763ca1829642838f8c360c",
    "style": "ink-lime-portrait-v5",
    "title": "11月18日の貢献度ランキング 1位はスタンリー・ジョンソン（群馬）の45"
+  },
+  "article-window5-japan-20261124.html": {
+   "article_path": "article-window5-japan-20261124.html",
+   "editorial_fingerprint": "884279a78a67cf38751f3691e81769576daa9e80d1c4a4e4868854c2a4a29f03",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-window5-japan-20261124-0a39d3fe1f1e.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-window5-japan-20261124-0a39d3fe1f1e-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "93914547b56a98f20c09",
+   "image_sha256": "0a39d3fe1f1e18cd2cf4e19ca71e595b8871e8325fdca275692d40cc010a3efa",
+   "imported_at": "2026-11-24T04:03:05.821310+00:00",
+   "prepared_at": "2026-11-24T04:02:23.879188+00:00",
+   "source_blob_sha": "be05d02a840aa96c6bf445fb4c4eaf2180ccac7b",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "884279a78a67cf38751f3691e81769576daa9e80d1c4a4e4868854c2a4a29f03",
+   "style": "ink-lime-portrait-v5",
+   "title": "バスケ日本代表、W杯予選Window5のレバノン戦・カタール戦 日程と放送・合宿メンバー18名"
   }
  },
  "log": [
-  {
-   "article": "article-daily-20261117.html",
-   "at": "2026-11-16T23:20:13.364394+00:00",
-   "event": "imported",
-   "id": "83ac9a2c488698b37f01",
-   "image": "b88e9d95a47d"
-  },
   {
    "article": "article-daily-20261117.html",
    "at": "2026-11-17T03:21:54.428924+00:00",
@@ -3893,6 +3914,13 @@
    "event": "imported",
    "id": "d806af6af5d014410b91",
    "image": "f588273703b6"
+  },
+  {
+   "article": "article-window5-japan-20261124.html",
+   "at": "2026-11-24T04:03:05.821334+00:00",
+   "event": "imported",
+   "id": "93914547b56a98f20c09",
+   "image": "0a39d3fe1f1e"
   }
  ],
  "seen": {
@@ -4023,6 +4051,7 @@
   "8e8971609c980f2a3fdf": "superseded:091b3c06f77815c82f47",
   "92907f5e3191ad3e0565": "superseded:5371bea30124ef22fa57",
   "934355c9baaddd366a4c": "imported",
+  "93914547b56a98f20c09": "imported",
   "93a6897700e932a6af5a": "imported",
   "944bf2324fc374c45c83": "superseded:8a37d086b2f172a45d5b",
   "94533bc3ce9e5c246930": "superseded:e03043ccc84437ba6da0",
