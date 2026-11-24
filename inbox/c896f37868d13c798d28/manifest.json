@@ -1,0 +1,74 @@
+{
+  "id": "c896f37868d13c798d28",
+  "article_path": "article-daily-20261125.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261125.html",
+  "source_commit": "",
+  "source_blob_sha": "4ac9b5f64ac75f5a12e5d75761bdfaac43384183",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "2e6ec5f8aac632a77cb6ed226fcfb03992eb26b199c736ae3e8bbf9bed5f5496",
+  "last_observed_blob_sha": "4ac9b5f64ac75f5a12e5d75761bdfaac43384183",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c896f37868d13c798d28/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c896f37868d13c798d28/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-24T23:14:01.339752+00:00",
+  "creation_event_id": "b91dd67936daf0952f55",
+  "event_blob_sha": "4ac9b5f64ac75f5a12e5d75761bdfaac43384183",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/c896f37868d13c798d28/thumbnail.png",
+  "image_sha256": "97499af398aedf398d92bad669bb7ff0afa2f9fa97a6fc281122b573785ad431",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "4ac9b5f64ac75f5a12e5d75761bdfaac43384183",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.25",
+      "千葉ジェッツ",
+      "10勝10敗",
+      "1試合平均",
+      "得点リーグ2位",
+      "失点は2番目に多い",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c896f37868d13c798d28/source.html",
+        "role": "本文の根拠。固定HTMLのblob SHAを計算し指定値との一致を確認。記事日2026.11.25、千葉ジェッツ20試合10勝10敗、1試合平均得点リーグ2位、1試合平均失点がリーグで2番目に多い。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c896f37868d13c798d28/source.txt",
+        "role": "本文の根拠。固定HTMLと照合。チームの戦績分析であり、選手個人の得点や出場の主張に転用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ネイト・ウィリアムズ",
+        "selection": "ランダム",
+        "selection_reason": "主題は千葉ジェッツのチーム戦績。本文中の選手3名（エルジー・ギル、マット・コステロ、ネイト・ウィリアムズ）からPython secrets.choiceで1名を選択。",
+        "sources": [
+          {
+            "url": "https://chibajets.jp/team/players/detail/id=26995?PlayerID=51000641",
+            "role": "千葉ジェッツ公式プロフィール。容姿確認の参照元。本文の戦績の根拠には使用しない。"
+          },
+          {
+            "url": "https://bleague.bl.kuroco-img.app/v=2026112419/files/user/roster/704/2026-27/51000641_01.jpg",
+            "role": "公式プロフィールからリンクされた本人写真。ダウンロード後view_imageで実見し、修正生成の顔参照に使用。写真を成果画像へ貼付・転載していない。"
+          }
+        ],
+        "appearance_checked": "短く丸い黒のカーリーヘア、縦長で頬骨が明瞭な輪郭、目と鼻の形、薄い口ひげと小さなあごひげを公式写真と修正後のイラストで照合。",
+        "portrayal": "無地ユニフォームでボールをコントロールするプレー姿の手描き風イラスト。名前・背番号・個人成績・出場・活躍は画像文字に含めない。本文の負傷離脱を覆す復帰表現はしない。特定試合の実場面の再現ではなく、『イラスト（AI生成）』『イメージ』と表示。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: ads-marketing\nAsset type: Japanese basketball editorial thumbnail, single finished PNG, landscape 16:9, target 1536x864 or larger.\nPrimary request: Create ONE polished illustrated thumbnail for バスケまとめ. Follow the already viewed approved black/lime example's strong Japanese typography, hand-inked illustration and restrained brush strokes, but use a different composition: athlete on the LEFT 40%, editorial text on the RIGHT 60%.\nScene: abstract dark #151A18 backdrop, controlled diagonal lime #CCF43B brush strokes behind the athlete only, ivory ink highlights. No stadium, spectators, scoreboard, logos or extra players.\nSubject: real basketball player Nate Williams (ネイト・ウィリアムズ), whose official Chiba Jets profile portrait was inspected in this conversation. Draw him recognizably as a hand-painted black/ivory ink illustration, NOT photorealistic and NOT a pasted photo. Appearance: Black American man, athletic muscular shoulders, compact short tightly curled black afro with neatly tapered sides, high forehead, long oval angular face, defined cheekbones, straight broad nose, dark almond-shaped eyes under nearly straight brows, faint narrow moustache and a small neat chin goatee, mostly clean cheeks, medium-full lips. Preserve the distinctive face from the viewed official portrait. Plain unbranded sleeveless dark basketball jersey with ivory edging and plain shorts; no letters, names, numbers, sponsors or team marks on clothing.\nPose: dynamic low driving stance, torso leaning toward the center, three-quarter view with clear unobscured face. One orange basketball controlled in his right hand beside his hip, free left arm bent naturally. Frame from head to upper thighs so face, both hands and entire ball remain comfortably inside the canvas. Natural arm joints, normal hands and fingers. He is an illustrative subject selected at random from the article's named players; this is not a depiction of a real game and makes no claim about his current participation.\nLayout: 5% safe margins. Text never overlaps face or hands. Right-side text left aligned, confidently spaced, extremely legible Japanese heavy gothic with subtle brush character. Make the two 10 numerals large and lime and 勝/敗 ivory, keeping one line. Other text ivory except small lime accent. Footer unobstructed and readable.\nText (verbatim; no additional text):\nTop small brand: \"バスケまとめ\"\nTop small date: \"2026.11.25\"\nMain team heading: \"千葉ジェッツ\"\nLargest headline: \"10勝10敗\"\nSmall qualifier above the two stat lines: \"1試合平均\"\nSupporting line 1: \"得点リーグ2位\"\nSupporting line 2: \"失点は2番目に多い\"\nBottom footer: \"イラスト（AI生成）\"\nBottom footer adjacent: \"イメージ\"\nSource facts: the fixed manuscript says Chiba Jets have 10 wins and 10 losses after 20 games; team per-game scoring ranks second in the league; team per-game points conceded are second MOST, not second best defense. Do not imply the ranks belong to the athlete.\nConstraints: only the text listed above. No player's name, individual performance, attendance, achievements or comeback claims. No actual-game recreation. No official/team/league logos, no official photo pixels, no photorealism, no watermarks, no added decorative text, no replicated wording/numbers/player from the style reference. Few bold elements, disciplined editorial design. Deliver one image only.\n\nONE PERMITTED CORRECTION\nEdit image 1, the generated バスケまとめ thumbnail. Image 2 is ONLY the official profile photograph of real player Nate Williams for facial likeness reference. Do not paste or reproduce any photographic pixels; keep a clearly hand-drawn ink/brush illustration.\n\nMake one focused correction: improve the illustrated athlete's facial likeness to Nate Williams in image 2. Match his compact rounded short tightly curled afro (less tall and less spiky than image 1), relatively smooth forehead, long oval/angular face, cheekbone shape, eyes and nose proportions. His moustache is faint and narrow; his chin has a small neatly trimmed goatee with mostly clean cheeks. Reduce the conspicuously thick pointed black beard and heavy moustache in image 1 to match the official portrait. Keep a naturally focused expression without adding deep furrows. Preserve the original illustrated sports pose, normal hands, orange basketball, plain unbranded jersey, and artistic ink hatching.\n\nKeep all existing typography, Japanese words, numbers, date, positions, background, colors and overall composition unchanged. All these texts must remain exactly readable:\nバスケまとめ\n2026.11.25\n千葉ジェッツ\n10勝10敗\n1試合平均\n得点リーグ2位\n失点は2番目に多い\nイラスト（AI生成）\nイメージ\n\nNo player name, no jersey numbers or text, no logos, no photo collage, no claims of actual play or current participation. The photograph is only a likeness reference. Preserve landscape approximately 16:9 and resolution at least 1536 pixels wide. Return one corrected PNG only.\n\nREFERENCE INPUTS\nStyle inspected: /Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png\nCorrection image 1: /Users/genjo/.codex/generated_images/01a20fd6-706d-7271-9dfc-df18feec812a/exec-64c60914-4dc3-4d4d-85f5-62e7b07be5c3.png\nCorrection image 2: /tmp/c896f37868d13c798d28-nate-official.jpg\nApproved ivory alternative A-faison-ivory-v3.png was not present at the specified location; the inspected approved black/lime reference was used.",
+    "generator": "Built-in image_gen (image_gen__imagegen). One initial generation and one correction. Final PNG 1672x941. Actual final image visually inspected: all listed text and numerals correct; per-game qualifier and second-MOST distinction preserved; face compared with official profile; hands and ball readable; intentional upper-thigh/outer-arm framing with no cropped text, face or fingers; AI and image labels visible. No API/CLI generation, ready command, git operation, publication or external delivery performed.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-24T23:17:15.694095+00:00",
+  "publication_approved": false
+}
