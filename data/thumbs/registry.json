@@ -1290,29 +1290,29 @@
   },
   "article-daily-20261124.html": {
    "article_path": "article-daily-20261124.html",
-   "editorial_fingerprint": "0fc44b3c5a15eb4180678ef88608a985858c51c42f13f9ee1116151d73b06a35",
+   "editorial_fingerprint": "a7ecee46739642655d3d2b85c9067682dbc12ba336ad9484d1b435f21ab7fe7c",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261124-416cfcf227fa.jpg",
+     "path": "thumbs/auto/article-daily-20261124-8899177eed44.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261124-416cfcf227fa-og.jpg",
+     "path": "thumbs/auto/article-daily-20261124-8899177eed44-og.jpg",
      "width": 1200
     }
    },
-   "id": "0008449fe8bf896e79b4",
-   "image_sha256": "416cfcf227fab7d66b02b1b56bc0abaa6e1e6a534cb1445de5ac71e33e1a772b",
-   "imported_at": "2026-11-23T23:22:32.386483+00:00",
-   "prepared_at": "2026-11-23T23:18:54.476531+00:00",
-   "source_blob_sha": "83bb9b6608100e77ee3c28ac408d65ece04974ca",
+   "id": "76b7a83b8699a805bea6",
+   "image_sha256": "8899177eed44ae4f420ff6e5f797de11468d6ef8334caf6f7747c10d36e1d61a",
+   "imported_at": "2026-11-24T10:21:30.496777+00:00",
+   "prepared_at": "2026-11-24T10:17:48.707656+00:00",
+   "source_blob_sha": "1f49213fbf40d5bf2b46a9b92f49013613b85249",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "0fc44b3c5a15eb4180678ef88608a985858c51c42f13f9ee1116151d73b06a35",
+   "stable_fingerprint": "a7ecee46739642655d3d2b85c9067682dbc12ba336ad9484d1b435f21ab7fe7c",
    "style": "ink-lime-portrait-v5",
    "title": "B.PREMIER順位表 東は仙台・群馬・A東京が接戦、西は名古屋と広島が先行"
   },
@@ -3363,20 +3363,6 @@
  },
  "log": [
   {
-   "article": "article-daily-20261117.html",
-   "at": "2026-11-17T03:21:54.428924+00:00",
-   "by": "50f378a3747dbb63cef8",
-   "event": "superseded",
-   "id": "83ac9a2c488698b37f01"
-  },
-  {
-   "article": "article-daily-20261117.html",
-   "at": "2026-11-17T03:21:54.588725+00:00",
-   "event": "imported",
-   "id": "50f378a3747dbb63cef8",
-   "image": "798f71e4d5a2"
-  },
-  {
    "article": "article-analysis-alvark-20261117.html",
    "at": "2026-11-17T03:27:43.797201+00:00",
    "event": "imported",
@@ -3921,10 +3907,24 @@
    "event": "imported",
    "id": "93914547b56a98f20c09",
    "image": "0a39d3fe1f1e"
+  },
+  {
+   "article": "article-daily-20261124.html",
+   "at": "2026-11-24T10:21:30.378418+00:00",
+   "by": "76b7a83b8699a805bea6",
+   "event": "superseded",
+   "id": "0008449fe8bf896e79b4"
+  },
+  {
+   "article": "article-daily-20261124.html",
+   "at": "2026-11-24T10:21:30.496807+00:00",
+   "event": "imported",
+   "id": "76b7a83b8699a805bea6",
+   "image": "8899177eed44"
   }
  ],
  "seen": {
-  "0008449fe8bf896e79b4": "imported",
+  "0008449fe8bf896e79b4": "superseded:76b7a83b8699a805bea6",
   "0289cbfa82d3e10329fb": "superseded:8926ed6e2f6c758b34aa",
   "02a6048a7bd570db2c5e": "superseded:8a37d086b2f172a45d5b",
   "03f1109abc0d7ee744f9": "superseded:5e231e28b370cb26f1f6",
@@ -4029,6 +4029,7 @@
   "75a5c2e5b4ddddc773c3": "imported",
   "75e3bc615bf24e4df460": "superseded:8926ed6e2f6c758b34aa",
   "76b4702a5283e22a22d2": "superseded:64f8f029eda7f4608081",
+  "76b7a83b8699a805bea6": "imported",
   "78ca7844d444d221d45a": "imported",
   "799742aaad72f99536fd": "superseded:54903eab3566ffc03029",
   "7a38c81e81aa20bf71ec": "superseded:ca6cbcfdc7f7486e54e3",
