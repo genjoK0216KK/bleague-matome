@@ -1,0 +1,112 @@
+{
+  "id": "970f066e4858b015c5cd",
+  "article_path": "article-games-20261125.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261125.html",
+  "source_commit": "",
+  "source_blob_sha": "f411c425713fa1277f364bcc7e56487c0426947d",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "d6db833de3a92f1ea33ea40017c2b5dd30eb6abba9d7030a33669e51f534086f",
+  "last_observed_blob_sha": "f411c425713fa1277f364bcc7e56487c0426947d",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/970f066e4858b015c5cd/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/970f066e4858b015c5cd/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-24T22:36:30.801833+00:00",
+  "creation_event_id": "6fad6b401f8f682b3231",
+  "event_blob_sha": "f411c425713fa1277f364bcc7e56487c0426947d",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/970f066e4858b015c5cd/thumbnail.png",
+  "image_sha256": "8c7a21e6246514ec0391881638a8aab81b3fe464e4b1006e7c40e830aaffb6cc",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "f411c425713fa1277f364bcc7e56487c0426947d",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.25",
+      "試合なし",
+      "B.PREMIER・B.ONE・B.NEXT",
+      "11/25 07:30 JST 取得時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "本文の根拠（固定HTML）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/970f066e4858b015c5cd/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261125.html",
+        "source_blob_sha": "f411c425713fa1277f364bcc7e56487c0426947d"
+      },
+      {
+        "role": "本文の根拠（固定文章）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/970f066e4858b015c5cd/source.txt",
+        "article_data_acquired_at": "2026-11-25 07:30 JST",
+        "verified_content": "2026年11月25日はB.PREMIER・B.ONE・B.NEXTの試合なし。外部記事から本文情報を追加していない。"
+      },
+      {
+        "role": "承認済みスタイル参照（内容の根拠ではない）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "visual_inspection": true
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "菅野ブルース",
+        "selection": "ランダム",
+        "selection_reason": "固定原稿に選手名・チーム名がないため、公式サイトで現役掲載を確認したB.LEAGUE選手から抽選。",
+        "selection_method": {
+          "method": "secrets.randbelow(16)",
+          "roster_source": "https://chibajets.jp/team/players/",
+          "pool": [
+            "渡邊雄太",
+            "富樫勇樹",
+            "田代直希",
+            "瀬川琉久",
+            "菅野ブルース",
+            "ブランドン・ランドルフ",
+            "金近廉",
+            "深水虎太郎",
+            "佐藤巧",
+            "ネイト・ウィリアムズ",
+            "ウィリアムス ニカ",
+            "マット・コステロ",
+            "荒尾岳",
+            "エルジー・ギル",
+            "菅原佳依",
+            "原修太"
+          ],
+          "selected_index": 4,
+          "selected_name": "菅野ブルース",
+          "web_link_id": 55
+        },
+        "reference_source": "千葉ジェッツ公式選手プロフィール",
+        "profile_url": "https://chibajets.jp/team/players/detail/id=22939?PlayerID=51000431",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026112406/files/user/roster/704/2026-27/51000431_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/970f066e4858b015c5cd/references/bruce-kanno-official.jpg",
+        "appearance_verified": "公式写真を目視。後方に編み込んだ黒いコーンロウ、短く刈った側頭部、長めの輪郭、太い眉、目鼻、厚みのある唇、ひげのない顔をイラストと照合。",
+        "image_usage": "公式写真は容姿確認のみ。写真貼付なし。氏名・背番号・成績・出場・活躍の文言なし。実際の試合の再現ではなくプレー姿のイメージ。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION:\nUse case: illustration-story.\nCreate ONE finished Japanese editorial basketball article thumbnail, landscape 16:9, 1600x900 or larger, opaque PNG. Follow the approved visual direction already inspected: near-black #151A18 background, vivid lime #CCF43B brush strokes, ivory-white heavy Japanese typography, hand-drawn ink hatching and expressive brush textures, few strong elements. NOT a photo, not photorealistic, not a 3D render.\n\nEditorial source is fixed: on 2026-11-25 there are no games in B.PREMIER, B.ONE or B.NEXT, according to the manuscript's data acquisition at 07:30 JST. Do not add any claims of appearances, achievements, scores, statistics, injuries, or particular real games. The illustration is conceptual.\n\nOne real athlete, Bruce Kanno (菅野ブルース), selected randomly from the official current Chiba Jets roster. Identity/appearance was inspected from his official team profile photograph: a tall lean-athletic young adult with warm medium-brown skin, dark black hair in approximately five neat straight-back cornrow braids with a close faded haircut at the temples, long oval/angular face tapering to a firm chin, thick straight dark eyebrows, almond-shaped dark eyes, medium broad straight nose, full defined lips, no beard or mustache. Preserve these defining features in a highly recognizable ink drawing. Show his full face in a three-quarter front view, large enough to inspect. The cornrows must be visible. Do not draw the curly-haired subject of the style reference.\n\nComposition: left 55 percent has spacious large text; right 45 percent has Bruce Kanno in a dynamic low forward-driving basketball dribble, knees flexed and torso leaning diagonally, one hand contacting the top of an orange basketball, other arm naturally bent for balance. His face is clearly visible in the upper right quadrant, with no hand or ball covering it. Render the athlete in ivory, black and subtle warm-tan ink shading; orange basketball is a small secondary prop. Plain ivory sleeveless sports jersey and black shorts without name, numbers, badges, logos or sponsor text. Expressive lime dry-brush diagonal behind him. Keep head, all hands and ball safely in frame with margins; intentional crop at lower thighs is fine. Exactly one person, two arms, anatomically natural hands. No arena specifics, no opposing player, no scoreboard, no actual game depiction. This is an illustration of a real athlete, not a fictional athlete.\n\nTypography: precisely legible, professionally typeset heavy Japanese gothic headline, no pseudo-characters. Huge main Japanese headline on the left, strong hierarchy and generous safe margins. Plain text only; all names below are lettering, never graphical league logos.\n\nExact visible text, and no other text:\nSmall top left: \"バスケまとめ\"\nLarge date above main headline: \"2026.11.25\"\nMain headline, extremely large, ivory or lime: \"試合なし\"\nSupporting line below headline: \"B.PREMIER・B.ONE・B.NEXT\"\nSmaller but clearly readable qualifying line: \"11/25 07:30 JST 取得時点\"\nFooter left, easily readable on a clean dark strip: \"イラスト（AI生成）\"\nFooter adjacent: \"イメージ\"\n\nNever put the athlete name or jersey number in the image. Do not copy any names, numbers, scores, dates or sentence from the approved style reference except the generic site title and AI label above. No team/league logos, no sponsor marks, no pasted official photograph. The illustration must be an original hand-drawn ink treatment. Make the overall layout bold, clean and editorial, with crisp exact Japanese text and naturally drawn hands.\n\nONE REVISION (edit target: /Users/genjo/.codex/generated_images/01a20fb4-1945-7692-9e18-fefe946c7865/exec-ced5bdcb-7375-463d-ab91-e3e8d03ed2ef.png):\nEdit the supplied thumbnail image ONLY to fix the composition and margins. Preserve the same athlete Bruce Kanno, his defining cornrow hair and facial likeness, hand-drawn ink style, colors, pose, exactly the same Japanese text and all numbers. This is the ONE permitted revision.\n\nScale down the entire illustrated athlete AND his ball together by about 14 percent and reposition them into the right-hand area. Ensure the entire basketball is visible with at least 30 pixels below it. Keep all fingers, both hands and the athlete's whole head in the frame, with at least 30 pixels above his head and at least 30 pixels at the right edge. Intentional crop of the lower legs at the bottom is fine. The ball must be fully visible. Ensure absolutely no part of the athlete, his arms, hands or ball covers any glyph of the main headline \"試合なし\": keep its last character し completely intact and legible. Adjust the headline size very slightly if needed to give it clear separation from the athlete, but retain large strong typography. Preserve all existing text exactly, including:\nバスケまとめ\n2026.11.25\n試合なし\nB.PREMIER・B.ONE・B.NEXT\n11/25 07:30 JST 取得時点\nイラスト（AI生成）\nイメージ\n\nPreserve the black #151A18 and lime #CCF43B dry-brush design. One real athlete only. No names, team/league logos, jersey numbers, sponsor text, additional people, scores, or new claims. Keep output landscape 16:9 and at least 1600 pixels wide. Do not introduce any new text.\n",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "内蔵画像生成",
+      "generation_calls": 1,
+      "revision_calls": 1,
+      "final_source_file": "/Users/genjo/.codex/generated_images/01a20fb4-1945-7692-9e18-fefe946c7865/exec-614b6d61-c908-4670-9cf4-e44603054962.png",
+      "output_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/970f066e4858b015c5cd/generated.png",
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "sha256": "8c7a21e6246514ec0391881638a8aab81b3fe464e4b1006e7c40e830aaffb6cc",
+      "visual_qa_notes": "修正版を実際に表示して目視確認。見出しと人物の重なりなし。頭・両手・ボールに余白あり。指と腕に顕著な破綻なし。下腿は意図した画角で切れている。日付・リーグ範囲・取得時点が固定原稿と一致。人物の特徴を公式写真と照合。ロゴ・スポンサー文字・写真貼付なし。イラスト（AI生成）とイメージを確認。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-24T22:39:58.045306+00:00",
+  "publication_approved": false
+}
