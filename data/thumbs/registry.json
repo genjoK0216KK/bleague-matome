@@ -1344,6 +1344,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "B.PREMIER順位表 東は仙台・群馬・A東京が接戦、西は名古屋と広島が先行"
   },
+  "article-daily-20261125.html": {
+   "article_path": "article-daily-20261125.html",
+   "editorial_fingerprint": "2e6ec5f8aac632a77cb6ed226fcfb03992eb26b199c736ae3e8bbf9bed5f5496",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261125-97499af398ae.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261125-97499af398ae-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "c896f37868d13c798d28",
+   "image_sha256": "97499af398aedf398d92bad669bb7ff0afa2f9fa97a6fc281122b573785ad431",
+   "imported_at": "2026-11-24T23:17:54.853391+00:00",
+   "prepared_at": "2026-11-24T23:17:15.694095+00:00",
+   "source_blob_sha": "4ac9b5f64ac75f5a12e5d75761bdfaac43384183",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "2e6ec5f8aac632a77cb6ed226fcfb03992eb26b199c736ae3e8bbf9bed5f5496",
+   "style": "ink-lime-portrait-v5",
+   "title": "千葉ジェッツ10勝10敗、得点はリーグ2位でも失点が2番目に多い"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -3420,13 +3448,6 @@
  "log": [
   {
    "article": "article-daily-20261117.html",
-   "at": "2026-11-17T10:34:34.604673+00:00",
-   "by": "6b0212da2ca7a9d34810",
-   "event": "superseded",
-   "id": "50f378a3747dbb63cef8"
-  },
-  {
-   "article": "article-daily-20261117.html",
    "at": "2026-11-17T10:34:34.757346+00:00",
    "event": "imported",
    "id": "6b0212da2ca7a9d34810",
@@ -3977,6 +3998,13 @@
    "event": "imported",
    "id": "970f066e4858b015c5cd",
    "image": "8c7a21e62465"
+  },
+  {
+   "article": "article-daily-20261125.html",
+   "at": "2026-11-24T23:17:54.853415+00:00",
+   "event": "imported",
+   "id": "c896f37868d13c798d28",
+   "image": "97499af398ae"
   }
  ],
  "seen": {
@@ -4171,6 +4199,7 @@
   "c59cee10214af1d2a8c4": "superseded:f662c904491c9e820ed0",
   "c64f75eca95f7a1461d5": "superseded:9f757581f96bc573aa5f",
   "c65ae6fd90ffcf57f53b": "superseded:b54717dd6365eef30b2d",
+  "c896f37868d13c798d28": "imported",
   "ca3d5577dc3f486dd299": "imported",
   "ca69b5d16263483eb1ed": "imported",
   "ca6cbcfdc7f7486e54e3": "imported",
