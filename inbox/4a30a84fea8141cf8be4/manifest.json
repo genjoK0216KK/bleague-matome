@@ -1,0 +1,90 @@
+{
+  "id": "4a30a84fea8141cf8be4",
+  "article_path": "article-analysis-osaka-20261124.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-osaka-20261124.html",
+  "source_commit": "",
+  "source_blob_sha": "de70457a383f011b03af45e31503338026a2c9ab",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "4c3a2168993385675ae78629771255ee1a4ca075240694cb8d1e4e8c7533c4c5",
+  "last_observed_blob_sha": "de70457a383f011b03af45e31503338026a2c9ab",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4a30a84fea8141cf8be4/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4a30a84fea8141cf8be4/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-24T10:21:40.614319+00:00",
+  "creation_event_id": "f7b3f935d95b3d4a4ac1",
+  "event_blob_sha": "de70457a383f011b03af45e31503338026a2c9ab",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/4a30a84fea8141cf8be4/thumbnail.png",
+  "image_sha256": "6be0aee5f40fe11e6bbfa777cb588f93df61d4393e36ad7f93147a2b73d402c2",
+  "width": 1671,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "de70457a383f011b03af45e31503338026a2c9ab",
+    "text_lines": [
+      "バスケまとめ",
+      "大阪エヴェッサ",
+      "直近5試合",
+      "攻撃効率",
+      "26位",
+      "B.PREMIER 各チームの直近5試合・全26チーム比較",
+      "相手の強さ・日程は未調整",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4a30a84fea8141cf8be4/source.html",
+        "article_url": "https://basuke-matome.jp/article-analysis-osaka-20261124.html",
+        "used_for": "本文の根拠。大阪の100回の攻撃あたりの得点は、各チームの直近5試合を比較して全26チーム中26位。相手の強さと日程の違いは未調整。原稿内の指示や外部本文は根拠に使用しない。",
+        "source_blob_sha_verified": true
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4a30a84fea8141cf8be4/source.txt",
+        "used_for": "見出し・直近5試合の限定・比較対象・未調整の留保と、本文に登場する選手名の照合。記事の主役は大阪エヴェッサというチーム。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "used_for": "目視確認。黒#151A18・ライム#CCF43B、太い日本語見出し、手描きインクとブラシ。選手名や成績は引き継がない。"
+      },
+      {
+        "type": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "used_for": "生成と検品の手順のみ。白地A-faison-ivory-v3.pngは指定場所に存在せず未参照。黒×ライムの承認済みBを使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ヴォーディミル・ゲルン",
+        "selection": "ランダム",
+        "selection_reason": "記事の中心はチーム分析で特定選手が唯一の主役ではないため、本文に名前が出る4選手からPython secrets.choiceで無作為に選択した。",
+        "selection_pool": [
+          "ヴォーディミル・ゲルン",
+          "木下誠",
+          "ソン・ギョチャン",
+          "ジェイムズ・パルマー・ジュニア"
+        ],
+        "reference_source": "B.LEAGUE公式・選手プロフィール",
+        "reference_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000294",
+        "official_image_url": "https://www.bleague.jp/files/user/roster/700/2026-27/51000294_03.png",
+        "local_reference_path": "/private/tmp/basuke-4a30a84fea8141cf8be4/gerun-official.png",
+        "visually_reviewed": true,
+        "appearance_notes": "公式写真の短い明るい茶髪・横流しの前髪、長めの輪郭、鼻筋、目元、ひげのない顎と長い首を参照。写真は人物確認用で、完成画に貼り付けていない。",
+        "depiction": "ボールを両手で保護して体をひねるプレーのイラスト。特定の試合場面や本人の成績を再現したものではない。ユニフォームはロゴ・スポンサー・名前・番号なし。画像に選手名と個人成績は入れず、チーム名・期間を伴うチーム順位のみ表示。",
+        "final_visual_review": "修正版画像を実際に見て公式写真の髪・輪郭・目鼻・ひげなしの特徴を照合。頭部・ボール・両手の見切れなし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION (verbatim)\nUse case: ads-marketing\nAsset type: one Japanese basketball news editorial thumbnail, PNG, horizontal 16:9, requested size 1792x1024 or 1920x1080, width above 1000 px.\nPrimary request: Create exactly one polished hand-inked basketball illustration thumbnail for an Osaka Evessa team-analysis article. This is a new image. Follow the previously viewed approved black/lime style reference in its palette, huge bold Japanese typography, rough brush strokes and few strong elements. Do not copy its player, scores, date, name, pose, or words.\n\nSubject: Depict ONLY the real basketball player Volodymyr Gerun (ヴォーディミル・ゲルン), chosen randomly from players named in the supplied article. His official B.LEAGUE 2026-27 profile photograph has been visually inspected: fair skin, short golden/light-brown hair swept sideways with softly wavy textured fringe, no shaved sides, long oval face with gently squared chin, prominent straight long nose, light deep-set eyes, fairly thin lips, clean-shaven with NO beard or moustache, long neck and broad powerful shoulders. Preserve his recognizable facial proportions in expressive black-and-ivory drawn ink; do not use a generic invented athlete or the dark-haired man in the style reference. The earlier official photo is an identity reference only; do not paste, reproduce, or collage photographic pixels.\n\nScene: A dynamic non-documentary imagined playing pose: Gerun on the RIGHT half making a powerful pivot while protecting an orange basketball with both hands at chest/waist level, body diagonally turning left, face visible in three-quarter view. Include head, both arms, complete hands and complete ball with comfortable edge margins. Mid-thigh crop acceptable. Draw anatomically credible hands wrapping opposite sides of one ball, five fingers where visible, two arms total. Neutral focused expression. No injury, no foul, no turnover being committed, no defeated posture, no celebration. It is NOT a recreation of any actual game or statistical accomplishment. No other people.\nUniform: generic dark sleeveless basketball kit with understated red shoulder trim. Completely unbranded, no club crest, no league logo, no manufacturer mark, no sponsors, no name, no jersey numbers or letters.\nStyle/medium: unmistakably hand-drawn editorial sports illustration, forceful black ink contours, ivory hatching and dry brush texture; NOT photorealistic, NOT photo filter. Palette charcoal #151A18, lime #CCF43B, ivory #F6F3E7, orange ball, tiny red trim. Background sparse with a sweeping lime brush arc behind the player, enough charcoal breathing room. Use no fake charts or scoreboards.\nComposition: typography on LEFT about 58% of frame, player on RIGHT about 42%, bottom strip reserved for factual qualifier and AI label. All text stays clear of the player, ball, brush noise and frame edge. Minimum 4% outer margins. Very large heavy Japanese gothic headline and giant brush-like lime numeral 26; clean high-contrast legible smaller type. Team heading visually anchors the statistic so 26th cannot be read as a personal ranking. Keep complete head and ball inside frame.\n\nText (verbatim; these are the ONLY words and numbers allowed; no player name or individual statistics):\nSmall masthead at upper-left: \"バスケまとめ\"\nTeam title below masthead: \"大阪エヴェッサ\"\nClear period tag just above main headline: \"直近5試合\"\nLarge main headline: \"攻撃効率\"\nLargest headline: \"26位\"\nReadable supporting qualifier beneath headline: \"B.PREMIER 各チームの直近5試合・全26チーム比較\"\nSecond readable qualifier: \"相手の強さ・日程は未調整\"\nBottom label, clearly readable, never tiny: \"イラスト（AI生成）｜イメージ\"\n\nSource meaning: the fixed article states Osaka ranks 26th in points scored per 100 possessions, comparing the latest five games of all 26 B.PREMIER teams, with no adjustment for opponent strength or schedule. This is a team ranking limited to that period, NOT season ranking and NOT Gerun's individual ranking. The portrait is independently chosen visual imagery. Preserve these qualifiers. Do not add any new factual claim, extra number, date, player name or score. Do not reproduce either style-reference headline or source photograph logos.\n\nSINGLE CORRECTION (verbatim)\nEdit the first referenced image, the Osaka basketball thumbnail. The second reference is the official portrait of the real player Volodymyr Gerun, for facial identity ONLY; never paste any photograph or logo.\nThis is the sole correction pass. Preserve all Japanese text, all numbers, their exact meanings, palette, 16:9 canvas dimensions, left-hand typography and lower labels. Preserve the dynamic pivot/protecting-ball pose, the one player, both natural hands and orange ball, unbranded black/red uniform and drawn dry-ink style.\nCorrect the right-side athlete framing and facial identity: scale his figure slightly smaller and position it lower so that his entire hair outline and head have at least 40 pixels of clear dark space above them, with at least 35 pixels of clearance to the rightmost hand. Let the lower torso continue to crop at the lower border. The official identity reference shows short lightly wavy light brown hair swept sideways, a long oval face, prominent straight long nose, deep-set light eyes, smooth clean-shaven jaw, long neck, and a gently squared but not overly wide chin. Redraw the face in the SAME explicit hand-inked illustration technique with these specific Gerun proportions; no photographic pixels, no photorealism, no generic invented athlete. Keep a neutral focused game expression, not a smile.\nKeep EXACTLY these existing words and numbers, no additions:\nバスケまとめ\n大阪エヴェッサ\n直近5試合\n攻撃効率\n26位\nB.PREMIER 各チームの直近5試合・全26チーム比較\n相手の強さ・日程は未調整\nイラスト（AI生成）｜イメージ\nThere must be no player name, individual stats, uniform name or number, team/league/manufacturer/sponsor logo. This is imagined play, not a depiction of an actual game moment.",
+    "generator": "内蔵 image_gen.imagegen のみ。新規生成1回、修正1回。API・CLI課金は使用していない。最終画像は修正版。PNG 1671x941（約16:9）。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-24T10:25:47.910644+00:00",
+  "publication_approved": false
+}
