@@ -308,6 +308,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "大阪エヴェッサの直近5試合は0勝5敗 攻撃の効率は26チーム最下位"
   },
+  "article-analysis-osaka-20261124.html": {
+   "article_path": "article-analysis-osaka-20261124.html",
+   "editorial_fingerprint": "4c3a2168993385675ae78629771255ee1a4ca075240694cb8d1e4e8c7533c4c5",
+   "files": {
+    "eyecatch": {
+     "height": 721,
+     "path": "thumbs/auto/article-analysis-osaka-20261124-6be0aee5f40f.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-osaka-20261124-6be0aee5f40f-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "4a30a84fea8141cf8be4",
+   "image_sha256": "6be0aee5f40fe11e6bbfa777cb588f93df61d4393e36ad7f93147a2b73d402c2",
+   "imported_at": "2026-11-24T10:26:29.832819+00:00",
+   "prepared_at": "2026-11-24T10:25:47.910644+00:00",
+   "source_blob_sha": "de70457a383f011b03af45e31503338026a2c9ab",
+   "source_size": [
+    1671,
+    941
+   ],
+   "stable_fingerprint": "4c3a2168993385675ae78629771255ee1a4ca075240694cb8d1e4e8c7533c4c5",
+   "style": "ink-lime-portrait-v5",
+   "title": "大阪エヴェッサの直近5試合 攻撃の効率がリーグ最下位でターンオーバーも多い"
+  },
   "article-analysis-ryukyu-20261123.html": {
    "article_path": "article-analysis-ryukyu-20261123.html",
    "editorial_fingerprint": "8b17f4a24f7c3a4084ba6c238ed1172f1895f78508b497efac48d241a5438166",
@@ -3363,13 +3391,6 @@
  },
  "log": [
   {
-   "article": "article-analysis-alvark-20261117.html",
-   "at": "2026-11-17T03:27:43.797201+00:00",
-   "event": "imported",
-   "id": "5183171d8e8431a899f6",
-   "image": "b8cf7e01973c"
-  },
-  {
    "article": "article-daily-20261117.html",
    "at": "2026-11-17T10:34:34.604647+00:00",
    "by": "6b0212da2ca7a9d34810",
@@ -3921,6 +3942,13 @@
    "event": "imported",
    "id": "76b7a83b8699a805bea6",
    "image": "8899177eed44"
+  },
+  {
+   "article": "article-analysis-osaka-20261124.html",
+   "at": "2026-11-24T10:26:29.832849+00:00",
+   "event": "imported",
+   "id": "4a30a84fea8141cf8be4",
+   "image": "6be0aee5f40f"
   }
  ],
  "seen": {
@@ -3986,6 +4014,7 @@
   "49779d10a7f35fd62adf": "superseded:3f51c921b8ab1d38524a",
   "49bbacec4ae3cfcad2fa": "superseded:899945a3915a435651cc",
   "4a1cd77fbe86da6af1f2": "superseded:be964f4359fb4b535b50",
+  "4a30a84fea8141cf8be4": "imported",
   "4a6423c87dbbfdc202b9": "imported",
   "4acaa02dc6ec1401ed89": "imported",
   "4c4f1870a93c2d66f8f1": "imported",
