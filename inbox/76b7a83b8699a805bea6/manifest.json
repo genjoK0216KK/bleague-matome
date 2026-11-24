@@ -1,0 +1,71 @@
+{
+  "id": "76b7a83b8699a805bea6",
+  "article_path": "article-daily-20261124.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261124.html",
+  "source_commit": "",
+  "source_blob_sha": "1f49213fbf40d5bf2b46a9b92f49013613b85249",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "a7ecee46739642655d3d2b85c9067682dbc12ba336ad9484d1b435f21ab7fe7c",
+  "last_observed_blob_sha": "1f49213fbf40d5bf2b46a9b92f49013613b85249",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/76b7a83b8699a805bea6/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/76b7a83b8699a805bea6/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-24T10:14:06.095014+00:00",
+  "creation_event_id": "055e701ecb4e53aab7e7",
+  "event_blob_sha": "1f49213fbf40d5bf2b46a9b92f49013613b85249",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/76b7a83b8699a805bea6/thumbnail.png",
+  "image_sha256": "8899177eed44ae4f420ff6e5f797de11468d6ef8334caf6f7747c10d36e1d61a",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "1f49213fbf40d5bf2b46a9b92f49013613b85249",
+    "text_lines": [
+      "B.PREMIER 順位表",
+      "東西の",
+      "上位争い",
+      "12/4 再開",
+      "11/23時点｜独自分析",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/76b7a83b8699a805bea6/source.html",
+        "role": "本文の根拠・固定版HTML",
+        "evidence": "見出し・東西上位争い・12月4日再開・出典の順位表11/23時点。Git blob SHAをgitコマンドを使わず再計算し指定値と一致。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/76b7a83b8699a805bea6/source.txt",
+        "role": "本文の根拠・固定版文章",
+        "evidence": "順位表分析／独自分析。シェーファー選手の合宿参加・インサイドの役割・コンディションへの言及。疲労の影響は未確定であり画像でも断定しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイルのみ。view_imageで目視確認。過去記事の選手名・日付・数値は転用せず。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "シェーファー アヴィ幸樹",
+        "selection": "本文の主役",
+        "selection_reason": "記事全体は順位表比較だが、個人ではシェーファー選手が最も詳しく扱われている。合宿参加、インサイドの役割、首位維持に向けたコンディションの分析が複数段落にあるため選定。",
+        "source": "JOC（日本オリンピック委員会）公式アスリートプロフィール",
+        "url": "https://www.joc.or.jp/athletes/schaferavikoki/index.html",
+        "image_url": "https://www.joc.or.jp/sports/basketball/team/images/schaferavikoki.webp",
+        "reference_viewed": true,
+        "observed_features": "中央付近で分けた黒～濃茶の髪、面長の輪郭、太い眉、長めで通った鼻筋、茶色系の目、濃いひげのない顎。公式写真をview_imageで確認し、生成後も照合。",
+        "usage": "公式写真は容姿確認のみ。完成画像への貼付けなし。実在選手1名のインク画による一般的なプレーのイメージ。実際の試合の再現ではなく、選手名・個人成績・背番号・ロゴは画像内に記載しない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT:\nUse case: ads-marketing.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape 16:9, 1792x1024 or preferably 1920x1080 PNG (at least 1000 pixels wide). This is a newly drawn image, not a photo or photo collage.\nMatch the approved black-and-lime ink/brushed illustration style already viewed in this conversation: near-black #151A18 background, vivid lime #CCF43B brush strokes, off-white heavy Japanese gothic lettering, restrained orange basketball. Sparse, powerful editorial composition, premium sports magazine feel. Do not reuse any player, statistic, name, score or date from the style sample.\n\nThe only human is real professional basketball player Avi Koki Schafer (シェーファー アヴィ幸樹), selected because he is the most extensively discussed individual in the supplied article. The JOC official headshot was visually inspected: dark brown almost black, medium-short thick hair naturally center-parted with rounded curtain-like sides; elongated oval/angular face and narrow chin; thick fairly straight eyebrows, almond hazel-brown eyes, long straight prominent nose, slightly long neck, clean shaven with only extremely faint chin stubble. Reproduce these individual facial characteristics faithfully in expressive hand-drawn black/ivory ink illustration. No generic substitute athlete. Athletic tall broad-shouldered physique. Keep face recognizable and sufficiently large. Do not paste or imitate a photographic texture.\n\nComposition: Subject on the RIGHT 43 percent, waist/thigh-up dynamic three-quarter view. A vigorous basketball rebound/possession illustration: elbows flexed, both hands naturally gripping one orange ball near upper chest/shoulder, torso twisting and gaze alert to his left. No opponent, no extra people, no extra limbs. Both hands visibly anatomically natural with correct finger structure. The ball is only a prop held by this real athlete. Plain ivory basketball jersey with black folds and subtle lime accents, no numbers, no lettering, no team or league or sponsor logos. Energy supplied by a broad lime dry-brush sweep behind him; no specific arena or identifiable match moment. Head, face, ball and hands entirely inside canvas. Torso may naturally continue at bottom/right edge.\n\nLEFT 55 percent is a clear text area, generously spaced, no overlap with face or ball. Set the following exact text ONLY, with normal readable Japanese glyphs. Main headline extremely bold, off-white first line and lime second line; supporting copy smaller but crisp. Clear hierarchy; keep all typography 5 percent inside the edges.\nTop small heading: 「B.PREMIER 順位表」\nMain headline two lines:\n「東西の」\n「上位争い」\nBelow, an ivory or lime accent rule and medium line: 「12/4 再開」\nBelow that, smaller qualifier: 「11/23時点｜独自分析」\nBottom left mandatory readable footer: 「イラスト（AI生成）｜イメージ」\nDo not draw the quotation marks themselves. Do not add any other text, individual player name or player statistics.\n\nEditorial grounding: source.html and source.txt fixed manuscript ONLY say the league is paused, resumes December 4, and this article analyzes east/west upper-table competition using standings as of November 23. This image conveys that general topic. Do NOT claim the pictured player performed this action in an actual game. The footer explicitly labels an illustrative AI image. Do not invent results, a match score, an actual decisive play, representation selection certainty, or fatigue effects. No official photos, logos, watermark, photorealism, scoreboards, small data tables or extra visual clutter.\n\nONE ALLOWED CORRECTION PROMPT:\nEdit this single existing thumbnail with ONE layout correction only. Keep the 1672x941 landscape 16:9 canvas (or same aspect at larger resolution). Preserve EVERY text glyph verbatim, its placement, colors, typography and legibility, as well as the black #151A18 / lime #CCF43B dry-brush sports illustration style and all background design.\nKeep the same real athlete Avi Koki Schafer, the same recognizable elongated oval face, center-parted dark hair, clean-shaven features, pose, both anatomically correct hands and one ball. Do not redraw or change his identity or add any elements. Uniform stays completely plain, no numbers or logos.\nONLY scale the athlete-and-ball illustration group to about 88 percent of its current size, anchoring the bottom and moving it slightly left as needed. The ENTIRE hair silhouette needs at least 45 pixels clear dark margin from the TOP edge, and the entire right hand and ball must have at least 45 pixels margin from the RIGHT edge. The player's lower torso can naturally continue through the bottom edge. Keep the player illustration to the right of the headline with no text overlap. Preserve ball and both hands fully inside canvas.\nAll text must stay exactly:\nB.PREMIER 順位表\n東西の\n上位争い\n12/4 再開\n11/23時点｜独自分析\nイラスト（AI生成）｜イメージ\nNo additional text or people. No photo appearance, team/league/sponsor logos, or claimed actual match scene.",
+    "generator": "内蔵 image_gen.imagegen のみ使用。初回生成1回＋見切れ防止のレイアウト修正1回。API/CLI不使用。最終画像1672×941 PNG、約16:9。生成後に実画像を目視検品。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-24T10:17:48.707656+00:00",
+  "publication_approved": false
+}
