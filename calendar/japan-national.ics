@@ -1,0 +1,55 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//basuke-matome.jp//jpn-calendar//JA
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:バスケ日本代表 放送予定（バスケまとめ）
+X-WR-TIMEZONE:Asia/Tokyo
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:wc2027aq-w5-lbn@basuke-matome.jp
+DTSTAMP:20261124T000000Z
+DTSTART:20261126T184500Z
+DTEND:20261126T211500Z
+SUMMARY:🏀 バスケ日本代表 vs レバノン｜テレ朝系・ABEMA
+ ・DAZN・TVer
+DESCRIPTION:W杯予選 Window5（アウェー）\n試合開始：11月27日
+ (金) 4:00（26日 28:00）（日本時間）\nテレビ：テレビ朝日
+ 系列 3:45〜\nライブ配信：ABEMA・DAZN・TVer\n会場：Nouhad Naw
+ fal Sports Complex（レバノン）\n出典：日本バスケットボー
+ ル協会 https://fibaworldcup2027-asianqualifiers.japanbasketball.jp/outl
+ ine-win5/
+LOCATION:Nouhad Nawfal Sports Complex（レバノン）
+URL:https://fibaworldcup2027-asianqualifiers.japanbasketball.jp/outline-win
+ 5/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🏀 バスケ日本代表 vs レバノン｜テレ朝系・ABE
+ MA・DAZN・TVer
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:wc2027aq-w5-qat@basuke-matome.jp
+DTSTAMP:20261124T000000Z
+DTSTART:20261129T130000Z
+DTEND:20261129T151500Z
+SUMMARY:🏀 バスケ日本代表 vs カタール｜DAZN・TVer（日テ
+ レ系 0:55〜）
+DESCRIPTION:W杯予選 Window5（アウェー）\n試合開始：11月29日
+ (日) 22:00（日本時間）\nテレビ：日本テレビ系列 29日(日
+ ) 24:55〜\nライブ配信：DAZN・TVer\n会場：Al Janoub Stadium（
+ カタール・ドーハ）\n出典：日本バスケットボール協会
+  https://fibaworldcup2027-asianqualifiers.japanbasketball.jp/outline-win5/
+LOCATION:Al Janoub Stadium（カタール・ドーハ）
+URL:https://fibaworldcup2027-asianqualifiers.japanbasketball.jp/outline-win
+ 5/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🏀 バスケ日本代表 vs カタール｜DAZN・TVer（日
+ テレ系 0:55〜）
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

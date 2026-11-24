@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//basuke-matome.jp//jpn-calendar//JA
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:バスケ日本代表 放送予定（バスケまとめ）
+X-WR-TIMEZONE:Asia/Tokyo
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:wc2027aq-w5-qat@basuke-matome.jp
+DTSTAMP:20261124T000000Z
+DTSTART:20261129T130000Z
+DTEND:20261129T151500Z
+SUMMARY:🏀 バスケ日本代表 vs カタール｜DAZN・TVer（日テ
+ レ系 0:55〜）
+DESCRIPTION:W杯予選 Window5（アウェー）\n試合開始：11月29日
+ (日) 22:00（日本時間）\nテレビ：日本テレビ系列 29日(日
+ ) 24:55〜\nライブ配信：DAZN・TVer\n会場：Al Janoub Stadium（
+ カタール・ドーハ）\n出典：日本バスケットボール協会
+  https://fibaworldcup2027-asianqualifiers.japanbasketball.jp/outline-win5/
+LOCATION:Al Janoub Stadium（カタール・ドーハ）
+URL:https://fibaworldcup2027-asianqualifiers.japanbasketball.jp/outline-win
+ 5/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🏀 バスケ日本代表 vs カタール｜DAZN・TVer（日
+ テレ系 0:55〜）
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

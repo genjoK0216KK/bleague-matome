@@ -1,0 +1,49 @@
+{
+  "note": "バスケ男子日本代表の放送予定。カレンダー登録（scripts/jpn_calendar.py）の元データ。JBA公式で確かめたものだけを書く。時刻はすべて日本時間。",
+  "updated": "2026-11-24",
+  "feed_title": "バスケ日本代表 放送予定（バスケまとめ）",
+  "games": [
+    {
+      "id": "wc2027aq-w5-lbn",
+      "event": "W杯予選 Window5",
+      "opponent": "レバノン",
+      "home": false,
+      "tipoff": "2026-11-27T04:00",
+      "tipoff_label": "11月27日(金) 4:00（26日 28:00）",
+      "venue": "Nouhad Nawfal Sports Complex（レバノン）",
+      "tv": [
+        {
+          "name": "テレビ朝日系列",
+          "start": "2026-11-27T03:45"
+        }
+      ],
+      "live": [
+        "ABEMA",
+        "DAZN",
+        "TVer"
+      ],
+      "source": "https://fibaworldcup2027-asianqualifiers.japanbasketball.jp/outline-win5/"
+    },
+    {
+      "id": "wc2027aq-w5-qat",
+      "event": "W杯予選 Window5",
+      "opponent": "カタール",
+      "home": false,
+      "tipoff": "2026-11-29T22:00",
+      "tipoff_label": "11月29日(日) 22:00",
+      "venue": "Al Janoub Stadium（カタール・ドーハ）",
+      "tv": [
+        {
+          "name": "日本テレビ系列",
+          "start": "2026-11-30T00:55",
+          "start_label": "29日(日) 24:55〜"
+        }
+      ],
+      "live": [
+        "DAZN",
+        "TVer"
+      ],
+      "source": "https://fibaworldcup2027-asianqualifiers.japanbasketball.jp/outline-win5/"
+    }
+  ]
+}
