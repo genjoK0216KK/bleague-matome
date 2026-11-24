@@ -1,0 +1,108 @@
+{
+  "id": "93914547b56a98f20c09",
+  "article_path": "article-window5-japan-20261124.html",
+  "article_url": "https://basuke-matome.jp/article-window5-japan-20261124.html",
+  "source_commit": "",
+  "source_blob_sha": "be05d02a840aa96c6bf445fb4c4eaf2180ccac7b",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "884279a78a67cf38751f3691e81769576daa9e80d1c4a4e4868854c2a4a29f03",
+  "last_observed_blob_sha": "be05d02a840aa96c6bf445fb4c4eaf2180ccac7b",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/93914547b56a98f20c09/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/93914547b56a98f20c09/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-24T03:59:27.909696+00:00",
+  "creation_event_id": "cb5ec2d57ab3bddd6033",
+  "event_blob_sha": "be05d02a840aa96c6bf445fb4c4eaf2180ccac7b",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/93914547b56a98f20c09/thumbnail.png",
+  "image_sha256": "0a39d3fe1f1e18cd2cf4e19ca71e595b8871e8325fdca275692d40cc010a3efa",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "be05d02a840aa96c6bf445fb4c4eaf2180ccac7b",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.24",
+      "W杯予選 Window5",
+      "日本代表",
+      "日程・放送",
+      "直前合宿18名",
+      "試合出場12名は未発表",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/93914547b56a98f20c09/source.html",
+        "role": "本文根拠（固定HTMLのみ使用）",
+        "article_url": "https://basuke-matome.jp/article-window5-japan-20261124.html"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/93914547b56a98f20c09/source.txt",
+        "role": "本文根拠（固定文章のみ使用）",
+        "supported_text": [
+          "W杯予選 Window5",
+          "日程・放送",
+          "直前合宿18名",
+          "試合出場12名は未発表"
+        ]
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "アレックス・カーク",
+        "selection": "ランダム",
+        "reason": "日本代表全体の日程・合宿メンバーが主題で、特定の現参加選手が中心ではないため、本文の直前合宿招集18名から選出。",
+        "method": "Python secrets.choiceを18名のリストに対して1回実行",
+        "selection_pool": [
+          "比江島慎",
+          "アレックス・カーク",
+          "渡邊雄太",
+          "ジョシュ・ホーキンソン",
+          "齋藤拓実",
+          "馬場雄大",
+          "佐々木隆成",
+          "シェーファーアヴィ幸樹",
+          "吉井裕鷹",
+          "川真田紘也",
+          "西田優大",
+          "高島紳司",
+          "富永啓生",
+          "黒川虎徹",
+          "小川敦也",
+          "新井楽人",
+          "境アリーム",
+          "松本秦"
+        ],
+        "source_title": "川崎ブレイブサンダース 公式選手プロフィール",
+        "source_url": "https://kawasaki-bravethunders.com/team/players/detail/id=25403?PlayerID=12582",
+        "image_url": "https://kawasaki-bravethunders.bl.kuroco-img.app/v=1787897527/files/user/_/team/players/2026-2027/53.jpg",
+        "reference_use": "公式プロフィール写真を取得しview_imageで目視。容姿参照のみ。写真の貼り付け・ロゴ転用なし。",
+        "observed_features": "短い茶色の髪、後退ぎみの生え際、高い額、広い輪郭と強い顎、青みの淡い目、短い茶色のひげと口ひげ、幅広い肩。",
+        "depiction": "両手でリバウンドを確保するプレー姿のインク画。特定試合の再現ではない。画像に選手名・個人成績・出場確定表現なし。"
+      }
+    ],
+    "prompt": "Use case: ads-marketing.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, PNG, landscape 16:9, 2048x1152 preferred, at least 1000px wide. This is a new illustration, not a photo or a collage.\n\nThe fixed article is about Japan's men's national team World Cup qualifying Window5, Lebanon/Qatar schedule and broadcast information, and 18 players called to the pre-event camp. The 12 actual game participants have NOT yet been announced. Content on the image must be ONLY the exact text below. It must not imply a confirmed game appearance, a result, or a personal achievement.\n\nDesign: match the approved black-and-lime sports editorial style observed in B-culver-black-lime-v3.png: deep near-black #151A18 background, electric lime #CCF43B, warm ivory, restrained orange basketball. Bold Japanese gothic typography with hand-painted ink and dry-brush accents, angular energetic strokes, high contrast, generous negative space, very few elements. No logos at all. This is a premium readable thumbnail, not a busy infographic. Do not reuse the reference's player, score, names, or date.\n\nSubject: exactly one real basketball player, Alex Kirk / アレックス・カーク, selected randomly from the 18-player camp list. His name must NOT appear as visible text. Face is based on his official Kawasaki Brave Thunders profile portrait viewed for this task at https://kawasaki-bravethunders.com/team/players/detail/id=25403?PlayerID=12582 (portrait image https://kawasaki-bravethunders.bl.kuroco-img.app/v=1787897527/files/user/_/team/players/2026-2027/53.jpg). Appearance observed: tall powerful broad-shouldered light-skinned adult man; broad oval-to-square face, high forehead, slightly receding hairline, short light-brown hair brushed to the side with shorter temples; close-cropped light-brown stubble beard and moustache, pale blue eyes, fairly straight nose, thin lips, strong jaw. Preserve recognizable facial structure. Not an invented generic player. Render all features as expressive black and ivory ink illustration with selective hatching, never photographic skin or a pasted/cutout photograph. Plain ivory basketball jersey with dark trim, no letters, no numbers, no crest, no sponsor, no team or league logos.\n\nAction/composition: right 42% of frame contains Kirk dynamically gathering a rebound in BOTH hands above and slightly to the side of his head, torso twisting diagonally, elbows naturally bent, intense focused face in a clear three-quarter view, face unobscured. Ball firmly in the hands, complete ball within frame. Both hands anatomically plausible, five fingers per hand with natural occlusion, only two arms. Head, hands, ball and elbows fully within safe margins. Frame upper thighs upwards, allow only intentional lower-torso crop at bottom. One bold diagonal lime brush stroke behind him provides motion. No opponent, no audience, no real venue, no scoreboard or identifiable game. This is an imagined basketball motion, not a recreation of a real play.\n\nLeft 58%: strong typographic hierarchy. All visible Japanese text must be exactly spelled, undistorted, readable, high contrast. Keep text away from face/arms/ball. 70px or larger safe margin all sides. Top left small site/date line, then smaller kicker, then very large two-line headline, then medium supporting line and clear qualifier. Bottom left footer label readable, about 32px or larger at 2048px width.\n\nText (verbatim), in this order:\n\"バスケまとめ\"\n\"2026.11.24\"\n\"W杯予選 Window5\"\n\"日本代表\"\n\"日程・放送\"\n\"直前合宿18名\"\n\"試合出場12名は未発表\"\n\"イラスト（AI生成）\"\n\"イメージ\"\n\nHierarchy: 日本代表 in huge ivory, 日程・放送 in huge lime; 直前合宿18名 in bold ivory at smaller size; 試合出場12名は未発表 noticeably smaller but fully legible. The footer has イラスト（AI生成） and イメージ side by side. All text belongs to the article as a whole, never attach the 18 or 12 to the player's jersey.\nDo NOT add any player names, statistics, slogans, logos, watermarks, standings, match results, new dates, venue details, or any other text.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "内蔵画像生成",
+      "generation_count": 1,
+      "revision_count": 0,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "style_reference_observation": "view_imageで確認済み。黒#151A18×ライム#CCF43B、太字の日本語、インク・ブラシ表現を使用。A-faison-ivory-v3.pngは指定場所に存在せず、黒地の承認済みB参照で制作。",
+      "qa_observation": "生成PNGをview_imageで実確認。全文・数字5/18/12/日付を固定原稿と照合。18名は直前合宿、12名は未発表という留保を明示。顔の髪型・輪郭・ひげ・目鼻を公式写真と比較。両手・2本の腕・ボールの保持、顔・ボール・肘・文字の見切れなしを確認。下半身のみ意図的トリミング。イラスト（AI生成）とイメージの表記を確認。",
+      "original_output": "/Users/genjo/.codex/generated_images/01a20bb5-6935-7c43-9e49-635f6f617562/exec-08a5056b-dfe0-45e3-be2a-82c9273345ad.png"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-24T04:02:23.879188+00:00",
+  "publication_approved": false
+}
