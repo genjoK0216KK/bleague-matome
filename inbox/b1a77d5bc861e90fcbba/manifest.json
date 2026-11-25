@@ -1,0 +1,83 @@
+{
+  "id": "b1a77d5bc861e90fcbba",
+  "article_path": "article-analysis-hokkaido-20261125.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-hokkaido-20261125.html",
+  "source_commit": "",
+  "source_blob_sha": "1310518f34b761a5fd6796257b6e212c31e0140c",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "8f43e9b2cbd6d57c723f062371f4168962b40669f3114b4214fc49eaf4b852c8",
+  "last_observed_blob_sha": "1310518f34b761a5fd6796257b6e212c31e0140c",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b1a77d5bc861e90fcbba/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b1a77d5bc861e90fcbba/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-25T03:14:06.413163+00:00",
+  "creation_event_id": "f66a7feb0899f9ac338b",
+  "event_blob_sha": "1310518f34b761a5fd6796257b6e212c31e0140c",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/b1a77d5bc861e90fcbba/thumbnail.png",
+  "image_sha256": "4c5cf776cc05b4be3937930d81dc147d82d60d4bd74d92aec4fda283183b872e",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "1310518f34b761a5fd6796257b6e212c31e0140c",
+    "text_lines": [
+      "レバンガ北海道",
+      "直近5試合のチーム分析",
+      "ペイント内得点",
+      "26チーム1位",
+      "1試合平均50.4点",
+      "各チームの直近5試合を比較／相手・日程は未調整",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b1a77d5bc861e90fcbba/source.html",
+        "role": "本文の根拠（固定HTML）",
+        "article_url": "https://basuke-matome.jp/article-analysis-hokkaido-20261125.html",
+        "evidence": [
+          "記事全体はレバンガ北海道のチーム分析。特定個人を単独の主役としていない。",
+          "対象は11月9日〜11月18日の直近5試合。",
+          "ペイント内得点は1試合平均50.4点、26チームで1位。",
+          "順位は各チームそれぞれの直近5試合を比較。対戦相手の強さと日程の違いは未調整。"
+        ]
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b1a77d5bc861e90fcbba/source.txt",
+        "role": "本文の根拠（固定文章）",
+        "evidence": "上記のチーム名・対象期間・50.4点・26チーム1位・比較条件を照合。外部ページの成績は画像に使用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "富永啓生",
+        "selection": "ランダム",
+        "reason": "チーム分析が記事の主題のため、本文に名前が出る3選手から均等なランダム抽選で1名を選択。",
+        "selection_method": "Python random.SystemRandom().choice",
+        "candidates": [
+          "ジョン・ハーラー",
+          "マークイーズ・ボールデン",
+          "富永啓生"
+        ],
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b1a77d5bc861e90fcbba/selection.json",
+        "source": "レバンガ北海道公式・富永啓生選手プロフィール（2026-27）",
+        "reference_url": "https://www.levanga.com/team/players/detail/id=19131?PlayerID=19755",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026112512/files/user/roster/702/2026-27/19755_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/b1a77d5bc861e90fcbba/references/tominaga-official.jpg",
+        "reference_inspected": true,
+        "observed_appearance": "短い黒髪で上部に量感があり、中央から少しずれた分け目。丸みのある頬、やや幅のある卵型の輪郭、細めの目、直線的な眉、丸みのある鼻先。ひげなし。公式写真をview_imageで目視確認し、完成イラストの顔立ち・髪型と照合。",
+        "usage": "容姿の確認のみ。公式写真の貼付け・写真風描写は行わず、ロゴ・スポンサー文字・背番号のないユニフォームで新規のドライブ姿を描写。",
+        "caption_policy": "人物名・個人成績・出場・活躍に関する文字は不使用。数値はレバンガ北海道のチーム指標として表示。『イラスト（AI生成）』『イメージ』を明記し、実際の特定試合場面とはしていない。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION (verbatim):\nUse case: illustration-story\nAsset type: Japanese basketball editorial thumbnail, ONE finished image, landscape 16:9, target 2048 × 1152 pixels.\nCreate a polished hand-drawn ink-and-dry-brush sports illustration with bold, perfectly legible Japanese typography. Follow the inspected approved black/lime thumbnail style: deep charcoal #151A18, vivid lime #CCF43B, warm ivory typography, black-and-ivory ink hatching, a restrained orange basketball accent. Flat illustrated print art, absolutely no photorealism.\n\nARTICLE SUBJECT AND FACTS: This is a TEAM analysis of Levanga Hokkaido's five most recent games, not an individual-player performance report. Only the exact copy below may appear. Hokkaido's paint scoring is 50.4 points per game, ranking first among 26 teams when each team's last five games are compared. Opponent strength and schedule differences are unadjusted. Do not imply a season-wide ranking. Do not add individual statistics, player names, scores, dates, league names, sponsor text, or other claims.\n\nREAL PERSON: Depict exactly one real basketball player, Keisei Tominaga (富永啓生), randomly selected from the three named players in the frozen article. He is an illustrative representative, not the subject of the numerical headline. His official 2026-27 Levanga roster portrait was visually inspected. Draw his recognizable features faithfully in an ink illustration: young adult Japanese man, broad rounded oval face and full cheeks, gently squared jaw with rounded chin, short straight black hair with volume on top and a slightly off-center part, short uneven locks swept to either side across the upper forehead, dark straight medium brows, narrow almond-shaped dark eyes, broad low nasal bridge and softly rounded nose, closed medium-width lips with a slightly fuller lower lip. Clean shaven, no beard or mustache. Athletic but not exaggerated body. Do not depict a generic anime face or invent another player's appearance. Draw an entirely new pose, do not paste or reproduce the official photograph.\n\nPOSE AND COMPOSITION: Put the player in the LEFT approximately 43% of the canvas, medium three-quarter view, leaning forward in a dynamic drive with the orange basketball securely gathered near his waist in both hands. Face visible, eyes looking forward and slightly upward toward the open court. Natural elbows, shoulders, wrists and hands, anatomically credible five digits on each hand, no extra or fused limbs. Plain lime-and-deep-green sleeveless basketball uniform, with NO logos, NO jersey number, NO letters, NO sponsors, NO trademarks. Show upper body, arms, ball, and upper legs; framing can end naturally below the upper thighs. Keep face, hands and entire ball inside safe margins. This is a conceptual basketball action, NOT a reenactment of any real game. No other figures, no opponent silhouettes, no scoreboard, no detailed arena.\nUse a broad energetic diagonal lime brush sweep behind the figure, restrained ink splatter. Keep the RIGHT approximately 53% clean for the typographic hierarchy. No overlap of text and figure.\n\nTEXT (verbatim, Japanese, retain exactly):\nHeader at top right, ivory, bold: \"レバンガ北海道\"\nSmaller lime subheading directly below: \"直近5試合のチーム分析\"\nMain headline on right, large ivory: \"ペイント内得点\"\nLargest hero line, vivid lime: \"26チーム1位\"\nStrong secondary stat line below: \"1試合平均 50.4点\"\nFooter across the full bottom in a reserved clear charcoal strip, readable ivory, first line: \"各チームの直近5試合を比較／相手・日程は未調整\"\nFooter second line: \"イラスト（AI生成）｜イメージ\"\n\nTYPOGRAPHY: Heavy Japanese gothic sans for Japanese text, textured brush style may accent the largest number without damaging legibility. Make the header and stat group unambiguously about the TEAM, never place the number as a caption on the player's body. The qualification footer must be easy to read and not be cropped. Leave generous 5% edge margins, full-width footer strip, strong spacing and alignment, few elements. Exact punctuation and Japanese spelling, no extra text.\nDo not carry over the approved sample's player name, 38-point stat, game score, site title or date. No team or league logos and no official photograph content in the finished image. Preserve the AI-generation label and conceptual-image label exactly.\n\nONE REVISION (verbatim):\nEdit this already generated basketball thumbnail. Make ONLY a layout/safe-margin correction. Keep the exact same person (Keisei Tominaga), likeness, both hands, basketball, pose, illustration style, colors, wording, numbers, overall left-player/right-type hierarchy, and every qualification and AI label. The player's hair is too close to the top edge and the large headline is too close to the right edge. Recompose/scale the existing content slightly inward: leave at least 4% canvas-height clear background ABOVE the highest strand of hair, and at least 4% canvas-width clear charcoal beyond the rightmost headline glyph. Keep the entire head and both hands visible. Keep the lower-body intentional crop above the existing footer. Preserve the full-width two-line footer and ensure that it remains easily readable with generous margins. Do not add any element, any lettering, a jersey number, a logo or a photo. Keep the image approximately 16:9, at least 1600 pixels wide.\nExact unchanged text:\nレバンガ北海道\n直近5試合のチーム分析\nペイント内得点\n26チーム1位\n1試合平均 50.4点\n各チームの直近5試合を比較／相手・日程は未調整\nイラスト（AI生成）｜イメージ",
+    "generator": "内蔵 image_gen.imagegen。初回1回＋余白修正1回。API・CLI画像生成は不使用。最終画像1672×941 PNG。承認済みB-culver-black-lime-v3.pngをview_imageで確認しスタイル参照。A-faison-ivory-v3.pngは指定ディレクトリに存在せず未使用。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-25T03:17:56.336411+00:00",
+  "publication_approved": false
+}
