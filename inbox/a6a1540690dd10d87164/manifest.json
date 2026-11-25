@@ -1,0 +1,136 @@
+{
+  "id": "a6a1540690dd10d87164",
+  "article_path": "article-games-20261126.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261126.html",
+  "source_commit": "",
+  "source_blob_sha": "18435509e341b8b44567607a156331a273a9e60f",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "9def739ac990710caaa0a4829da63b021a50878f2df196406051dab69cb4314c",
+  "last_observed_blob_sha": "18435509e341b8b44567607a156331a273a9e60f",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a6a1540690dd10d87164/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a6a1540690dd10d87164/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-25T21:51:28.706758+00:00",
+  "creation_event_id": "3bb7eb3987edbdaa0237",
+  "event_blob_sha": "18435509e341b8b44567607a156331a273a9e60f",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/a6a1540690dd10d87164/thumbnail.png",
+  "image_sha256": "57ffbcfbe3c608c444e9f165558e8781d83cc94ee41aebbf6aa00e276b35ee49",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "18435509e341b8b44567607a156331a273a9e60f",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.26",
+      "試合なし",
+      "B.PREMIER・B.ONE・B.NEXT",
+      "資料取得 06:45 JST",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a6a1540690dd10d87164/source.html",
+        "role": "本文の根拠（固定HTMLのみ）",
+        "article_url": "https://basuke-matome.jp/article-games-20261126.html",
+        "facts": "2026.11.26はB.PREMIER・B.ONE・B.NEXTの試合なし。資料取得2026-11-26 06:45 JST。",
+        "verification": "ファイル内容のGit blob SHA-1をhashlibで計算し指定値と一致（gitコマンド不使用）。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a6a1540690dd10d87164/source.txt",
+        "role": "本文の根拠（固定文章のみ）",
+        "verification": "見出し・対象3区分・取得時刻がHTMLと一致。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みの配色・手描きインク表現の参照のみ。人物名・数値・日付は転用しない。",
+        "verification": "view_imageで目視確認。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ジェームズ・ベル（James Bell）",
+        "selection": "ランダム",
+        "selection_reason": "固定本文に選手名・チーム名がないためB.LEAGUE現役選手から選択。",
+        "selection_method": "B.LEAGUE公式選手一覧の検索取得時に表示された40人を候補としてPython secrets.randbelow(40)を1回実行。0始まり21番のジェームズ・ベルを選択。一覧の並び順は再取得で変動するため取得時の候補集合を使用。",
+        "selection_pool": [
+          "佐藤巧",
+          "テレンス・デイビス",
+          "荒谷裕秀",
+          "坂本聖芽",
+          "ギャビン・エドワーズ",
+          "山際爽吾",
+          "山口颯斗",
+          "前田怜緒",
+          "アーロン・ホワイト",
+          "ジェイデン・リディ",
+          "ソンギョチャン",
+          "大庭圭太郎",
+          "田口成浩",
+          "木村圭吾",
+          "コー・フリッピン",
+          "ケリー・ブラックシアー・ジュニア",
+          "福澤晃平",
+          "児玉ジュニア",
+          "星川開聖",
+          "荒川颯",
+          "ザック・バランスキー",
+          "ジェームズ・ベル",
+          "遠藤祐亮",
+          "永野威旺",
+          "マット・コステロ",
+          "大崎裕太",
+          "ディー・ジェイ・ホグ",
+          "内尾聡理",
+          "アンジェロ・チョル",
+          "ジョシュ・ハレルソン",
+          "ショーン・オマラ",
+          "佐取龍之介",
+          "田代直希",
+          "島谷怜",
+          "介川アンソニー翔",
+          "原修太",
+          "中山拓哉",
+          "レイ・パークスジュニア",
+          "松崎裕樹",
+          "浅井英矢"
+        ],
+        "sources": [
+          {
+            "url": "https://www.bleague.jp/roster/",
+            "purpose": "ランダム選出候補の取得"
+          },
+          {
+            "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000172",
+            "purpose": "実在・2026-27横浜BC在籍の確認"
+          },
+          {
+            "url": "https://b-corsairs.com/news/team_20261006_2/",
+            "purpose": "クラブ公式の2026-27契約情報の確認"
+          },
+          {
+            "url": "https://b-corsairs.com/team/players/detail/id=23241?PlayerID=51000172",
+            "purpose": "クラブ公式プロフィールと容姿写真の所在確認"
+          },
+          {
+            "url": "https://b-corsairs.bl.kuroco-img.app/v=1791970457/files/user/team/2026-27/31_BELL.jpg",
+            "purpose": "容姿参照のみ。写真をview_imageで実見。完成画像に写真自体は使用しない。"
+          }
+        ],
+        "observed_appearance": "ごく短い黒い巻き毛、高めの額、縦長の輪郭、濃い目眉、広めの鼻、厚めの唇、口ひげとつながる濃いあごひげ（あご下が長い）、厚い肩と腕。公式写真と最終イラストを目視照合。",
+        "depiction": "単独のドライブ動作を描いたイメージ。実際の試合の再現ではない。画像内に名前・背番号・成績・出場や活躍の記述なし。ユニフォームは無地、ロゴなし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT (verbatim)\nUse case: illustration-story.\nCreate exactly ONE finished Japanese basketball news thumbnail, a wide landscape PNG, approximately 16:9, ideally 1600 x 900 pixels, width at least 1000. It is for バスケまとめ, article date 2026-11-26.\nEditorial content is ONLY: 2026.11.26 has no scheduled games in B.PREMIER, B.ONE, or B.NEXT, according to the fixed article's material acquired 06:45 JST that morning. Do not add any score, opponent, player achievement, game result or claim of a game having taken place.\nVisual style: the approved black and lime hand-ink basketball poster style shown earlier. Nearly black #151A18 background, lime #CCF43B broad diagonal dry-brush stroke behind the player, bold off-white Japanese headline, rough ink contours, expressive brush hatching, sparse splatter. Clearly a hand-drawn editorial illustration, not a photograph or photorealistic rendering. Restrained, clean, high-impact composition with only one player, one basketball and typography.\n\nSubject: the real current B.LEAGUE player JAMES BELL / ジェームズ・ベル. He was randomly selected as a symbolic basketball image because this article names no players or teams. His OFFICIAL Yokohama B-Corsairs portrait was visually checked: https://b-corsairs.bl.kuroco-img.app/v=1791970457/files/user/team/2026-27/31_BELL.jpg . Translate his actual face into an original ink illustration: very short tightly curled black hair close to scalp, high rounded forehead, elongated oval face, dark almond-shaped eyes, moderately broad nose, full lips, connected moustache and dense black beard, with a distinctly longer rounded lower chin section. Tall strong athletic body with broad shoulders, not thin. Preserve these likeness traits. Do not substitute the short-bearded player from the approved style image.\nDepict him alone on the LEFT 42% of the canvas in a dynamic, low, bent-knee driving pose in three-quarter view, face visible and looking forward toward the center. One orange basketball held naturally near his outer hip in one hand as he gathers a dribble; the other arm flexed forward for balance with a natural hand. One anatomically coherent player with two arms, two hands, two legs; keep face, hands and ball clearly inside the canvas and unobstructed. Cropping below knees is acceptable. Plain black/off-white sleeveless basketball jersey and shorts with NO number, lettering, logos, sponsors or recognizable emblems. Arms may have simplified ink tattoo textures without lettering. This is a generic illustrative movement, not a recreation of any actual game, specific shot or event. No opponent, crowd, scoreboard or hoop required.\nComposition: illustration occupies the left, all main text occupies the RIGHT with clear separation. Enormous clean Japanese headline dominates the right center. Text entirely within comfortable safe margins, no clipping, no overlapping the face/hands/ball. Small footer sits on a calm solid dark band. Maintain rich brush texture on the drawing, but clean readable text.\nRender ONLY the following exact visible text, with correct Japanese glyphs:\nTop small branding: 「バスケまとめ」\nDate prominently above headline: 「2026.11.26」\nLargest headline, in bold lime or off-white: 「試合なし」\nBelow headline, one clean line in off-white, large enough to read: 「B.PREMIER・B.ONE・B.NEXT」\nSmaller factual qualifier directly below: 「資料取得 06:45 JST」\nBottom footer, clearly legible: 「イラスト（AI生成）」 and 「イメージ」\nThe corner brackets are delimiters, not visible text. No other wording. Do not print the player's name, team name, number, stats, source URLs or scores anywhere. No team or league logo, no copied official photograph, no watermark. The two footer labels must remain present and fully readable.\n\nONE ALLOWED CORRECTION PROMPT (verbatim)\nEdit this existing thumbnail once to fix ONLY the layout and crop problem. Preserve the same James Bell likeness, ink illustration style, black #151A18 and lime #CCF43B palette, identical illustration pose, one player and one orange basketball, plain unbranded uniform, and every existing text string without any change.\nThe player's hand holding the basketball is clipped at the LEFT canvas edge, and the headline is too close to the right edge. Recompose at the same 16:9 landscape aspect ratio by slightly reducing the illustration and moving it inward, and slightly reducing the text block as needed. Extend/reconstruct the left hand and arm naturally so the entire hand, all five fingers including thumb, the wrist, and basketball are clearly INSIDE the canvas with at least 60 pixels of empty margin. Keep head fully inside with 45 pixels above. Keep all right-side text at least 60 pixels from the right edge. Keep footer fully inside at least 35 pixels from the bottom. Cropping of the legs below knees is fine, but NO clipping of head, hands, ball or text. Maintain readable large lettering and the same overall left-player/right-headline composition. Player remains a recognizable hand-drawn James Bell with very short black hair, high forehead and long full black beard. No photos, logos, jersey numbers, extra people, extra limbs or added words.\nExact visible text must remain:\nバスケまとめ\n2026.11.26\n試合なし\nB.PREMIER・B.ONE・B.NEXT\n資料取得 06:45 JST\nイラスト（AI生成）\nイメージ\nDo not put the player's name or performance on the image. This remains a symbolic AI illustration, not an actual game scene. Return one complete PNG, approximately 16:9, width at least 1000 pixels.",
+    "generator": "内蔵 image_gen.imagegen / functions tools.image_gen__imagegen。初回生成1回、修正1回。API・CLI生成・新課金なし。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-25T21:55:02.608577+00:00",
+  "publication_approved": false
+}
