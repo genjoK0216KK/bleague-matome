@@ -168,6 +168,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "レバンガ北海道の直近5試合は4勝1敗 速攻とペイントで稼ぎ3Pは最少"
   },
+  "article-analysis-hokkaido-20261125.html": {
+   "article_path": "article-analysis-hokkaido-20261125.html",
+   "editorial_fingerprint": "8f43e9b2cbd6d57c723f062371f4168962b40669f3114b4214fc49eaf4b852c8",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-analysis-hokkaido-20261125-4c5cf776cc05.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-hokkaido-20261125-4c5cf776cc05-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "b1a77d5bc861e90fcbba",
+   "image_sha256": "4c5cf776cc05b4be3937930d81dc147d82d60d4bd74d92aec4fda283183b872e",
+   "imported_at": "2026-11-25T03:18:35.759491+00:00",
+   "prepared_at": "2026-11-25T03:17:56.336411+00:00",
+   "source_blob_sha": "1310518f34b761a5fd6796257b6e212c31e0140c",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "8f43e9b2cbd6d57c723f062371f4168962b40669f3114b4214fc49eaf4b852c8",
+   "style": "ink-lime-portrait-v5",
+   "title": "レバンガ北海道の直近5試合をスタッツで分析 ペイント内の得点はリーグ1位、3Pは最少"
+  },
   "article-analysis-kawasaki-20261122.html": {
    "article_path": "article-analysis-kawasaki-20261122.html",
    "editorial_fingerprint": "9a5a0c8bec4a908da9c00deeebbd80e0aad2c36cf7f8cf43eb5bd2f8525c02a1",
@@ -3447,13 +3475,6 @@
  },
  "log": [
   {
-   "article": "article-daily-20261117.html",
-   "at": "2026-11-17T10:34:34.757346+00:00",
-   "event": "imported",
-   "id": "6b0212da2ca7a9d34810",
-   "image": "b1baa69d6730"
-  },
-  {
    "article": "article-games-20261117.html",
    "at": "2026-11-17T10:34:34.758014+00:00",
    "by": "76b4702a5283e22a22d2",
@@ -4005,6 +4026,13 @@
    "event": "imported",
    "id": "c896f37868d13c798d28",
    "image": "97499af398ae"
+  },
+  {
+   "article": "article-analysis-hokkaido-20261125.html",
+   "at": "2026-11-25T03:18:35.759514+00:00",
+   "event": "imported",
+   "id": "b1a77d5bc861e90fcbba",
+   "image": "4c5cf776cc05"
   }
  ],
  "seen": {
@@ -4177,6 +4205,7 @@
   "af2c63bb867d413bfad4": "imported",
   "afa848da9cb4b37513f4": "superseded:68dfe1f0dced4d4c7777",
   "afc600cca296739a9413": "superseded:c422e01f21c312cd1a36",
+  "b1a77d5bc861e90fcbba": "imported",
   "b45b5e2e79d347a929b3": "superseded:9bdde677628afe3c1636",
   "b54717dd6365eef30b2d": "imported",
   "b650452644e658af9093": "superseded:c26bf482938a2f138dc2",
