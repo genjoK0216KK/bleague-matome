@@ -2296,6 +2296,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "11/25 試合なし"
   },
+  "article-games-20261126.html": {
+   "article_path": "article-games-20261126.html",
+   "editorial_fingerprint": "9def739ac990710caaa0a4829da63b021a50878f2df196406051dab69cb4314c",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-games-20261126-57ffbcfbe3c6.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-games-20261126-57ffbcfbe3c6-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "a6a1540690dd10d87164",
+   "image_sha256": "57ffbcfbe3c608c444e9f165558e8781d83cc94ee41aebbf6aa00e276b35ee49",
+   "imported_at": "2026-11-25T21:55:48.679684+00:00",
+   "prepared_at": "2026-11-25T21:55:02.608577+00:00",
+   "source_blob_sha": "18435509e341b8b44567607a156331a273a9e60f",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "9def739ac990710caaa0a4829da63b021a50878f2df196406051dab69cb4314c",
+   "style": "ink-lime-portrait-v5",
+   "title": "11/26 試合なし"
+  },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
    "editorial_fingerprint": "e19b14f8f8d94cccdae186da2df34e0edfdbee28d446a577722d48f470c2eea5",
@@ -3476,13 +3504,6 @@
  "log": [
   {
    "article": "article-games-20261117.html",
-   "at": "2026-11-17T10:34:34.758014+00:00",
-   "by": "76b4702a5283e22a22d2",
-   "event": "superseded",
-   "id": "6884e4e9ba611c0e630e"
-  },
-  {
-   "article": "article-games-20261117.html",
    "at": "2026-11-17T10:34:34.886278+00:00",
    "event": "imported",
    "id": "76b4702a5283e22a22d2",
@@ -4033,6 +4054,13 @@
    "event": "imported",
    "id": "b1a77d5bc861e90fcbba",
    "image": "4c5cf776cc05"
+  },
+  {
+   "article": "article-games-20261126.html",
+   "at": "2026-11-25T21:55:48.679712+00:00",
+   "event": "imported",
+   "id": "a6a1540690dd10d87164",
+   "image": "57ffbcfbe3c6"
   }
  ],
  "seen": {
@@ -4189,6 +4217,7 @@
   "a5a194dfdf4bb060673e": "superseded:faacf40f2eedbd5f216f",
   "a5ada266578c44560dce": "imported",
   "a61987943aaf82c9dcaa": "superseded:c1aaf417a1880194d3ac",
+  "a6a1540690dd10d87164": "imported",
   "a6af1d6804c82023ebf1": "superseded:aaf2e90765c55026bfd5",
   "a718e72ebd289b318965": "imported",
   "a763fe95d3d922e47dbc": "imported",
