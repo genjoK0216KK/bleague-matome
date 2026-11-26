@@ -1,0 +1,76 @@
+{
+  "id": "3a7112801eee0980d0cc",
+  "article_path": "article-analysis-saga-20261126.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-saga-20261126.html",
+  "source_commit": "",
+  "source_blob_sha": "9b571d171cf8f38365f1863aed5f932066311b7d",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "2161b07983e5dc8f5d0ad59be1fb3c78750e8685d9295413d3ffef175c7ec00e",
+  "last_observed_blob_sha": "9b571d171cf8f38365f1863aed5f932066311b7d",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3a7112801eee0980d0cc/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3a7112801eee0980d0cc/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-26T03:14:38.596336+00:00",
+  "creation_event_id": "4f9b57c73d49b558c63e",
+  "event_blob_sha": "9b571d171cf8f38365f1863aed5f932066311b7d",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/3a7112801eee0980d0cc/thumbnail.png",
+  "image_sha256": "ef8693349e66c66e7498498fc224ecd95437448ecf49e59336e4df97dc6da2bc",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "9b571d171cf8f38365f1863aed5f932066311b7d",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.26",
+      "佐賀バルーナーズ",
+      "直近5試合（11/1〜11/18）",
+      "0勝5敗",
+      "最大の課題は失点",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3a7112801eee0980d0cc/source.html",
+        "role": "固定原稿。見出し・日付・成績・対象期間・結論の根拠。保存前にblob SHA一致を確認。",
+        "article_url": "https://basuke-matome.jp/article-analysis-saga-20261126.html"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/3a7112801eee0980d0cc/source.txt",
+        "role": "固定原稿本文。HTMLと併読し、直近5試合が11/1から11/18、0勝5敗、最大の課題は失点という記述を確認。シーズン成績・リーグ順位・個人成績は画像へ記載していない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "実見した承認済みスタイル参照のみ。参照画像の選手・日付・成績は使用しない。"
+      },
+      {
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000517",
+        "image_url": "https://www.bleague.jp/files/user/roster/1638/2026-27/51000517_03.png",
+        "role": "公式プロフィールと実見した写真。人物の容姿確認のみに使用。本文の根拠・成績の根拠には使用せず、完成画像に写真やロゴを貼り付けていない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ナシール・リトル（Nassir Little）",
+        "selection": "本文の主役",
+        "selection_reason": "チーム分析の記事で、選手個人としては『リトル選手に頼る攻撃』の独立見出しと複数の数値で最も詳しく扱われているため選出。画像の見出しはチームについての内容に限定。",
+        "reference_source": "B.LEAGUE公式選手プロフィール",
+        "reference_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000517",
+        "reference_image_url": "https://www.bleague.jp/files/user/roster/1638/2026-27/51000517_03.png",
+        "observed_features": "短く密な黒髪と短いサイド、縦長の輪郭、頬骨、広めの鼻、厚い唇、短い口ひげとあごひげ、肩と腕の体格を公式写真で確認。",
+        "depiction": "架空の人物ではなく本人の特徴を参照したインク画のドライブ姿。特定の試合の再現ではないイメージ。名前・背番号・個人成績・実際の活躍の主張は画像に記載していない。",
+        "visual_qa": "初稿の高すぎる髪型と右手の余白を1回修正。修正版の短髪、輪郭・目鼻・ひげ、両手の形、顔・手・ボールの画面内への収まりを実見確認。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT:\nUse case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail, landscape 16:9, target 2048 x 1152 pixels, PNG, opaque background.\nAsset: バスケまとめ article about Saga Ballooners' latest five games. This is an editorial illustration and is NOT a recreation of an actual match.\nReference roles: the black/lime approved thumbnail already viewed is STYLE ONLY: near-black #151A18, acid lime #CCF43B, ivory, confident heavy Japanese headline, energetic ink and dry-brush strokes, sparse composition. Do not copy that reference's player, name, score, date or text. The official B.LEAGUE Nassir Little portrait already viewed is LIKENESS ONLY; do not paste a photo or copy logos.\nSubject: exactly ONE real basketball player, Nassir Little / ナシール・リトル. Recognizable likeness based on the official portrait: dark brown skin, short dense upright black natural hair with close sides, moderately long oval/rectangular face, strong cheekbones, broad nose, full lips, thin short moustache and small darker goatee under chin, athletic broad shoulders and arms. Stylized ink illustration, never photographic. Facial proportions and hair must resemble the reference. Face must remain clearly visible at thumbnail size.\nPose/composition: large on the RIGHT 40 percent, waist-to-upper-thigh view, leaning forward in a powerful dynamic dribble/drive, torso angled, face in readable three-quarter view, looking ahead with focused neutral expression. One hand controlling an orange basketball just outside the hip, other arm naturally bent and separated. Anatomically coherent shoulders, arms, wrists, and five fingers where visible. Keep the face, ball and hands entirely inside the image. Uniform rendered in ivory, dark ink shadows and a subtle pale-blue accent; completely blank, NO team or league logos, NO sponsors, NO numbers, NO lettering. Do not add opponents, spectators or other people.\nComposition: left 58 percent is clean, strong typography with ample breathing room. Right side has one broad diagonal lime brush stroke behind the player; sparse ink speckles. Restrained orange only on the ball. Maintain readable hierarchy and safe margins of at least 64px.\nExact Japanese text, render all characters accurately and ONLY this text:\nSmall header: 「バスケまとめ」\nSmall publication date: 「2026.11.26」\nLarge team headline: 「佐賀バルーナーズ」\nMedium scope label: 「直近5試合（11/1〜11/18）」\nLargest lime centerpiece: 「0勝5敗」\nStrong ivory conclusion below: 「最大の課題は失点」\nBottom footer clearly readable: 「イラスト（AI生成）｜イメージ」\nThe 0勝5敗 record belongs to the TEAM over those FIVE games, not to the player. Do not add the player's name, any individual performance, rankings, season totals, or invented game action claims. No official photographs, no photorealistic shading, no watermarks, no decorative English. All typography should be crisp, bold and carefully spaced; footer not tiny. Render a polished coherent sports editorial image in the approved ink-and-brush aesthetic.\n\nONE PERMITTED REVISION PROMPT:\nEdit the first image (the generated Saga thumbnail). The second image is the official B.LEAGUE portrait of Nassir Little and is a LIKENESS REFERENCE ONLY, never paste or reproduce the photograph.\nMake one focused player correction: bring his hair and face closer to the official portrait and keep the subject comfortably inside the canvas.\nHair must be SHORT, dense, close natural black hair with closely tapered sides, and a modest nearly flat top just like the official portrait; REMOVE the tall spiky / large twisted tufts in the current drawing. His forehead and actual head shape should now match the reference. Keep his broad nose, full lips, small short moustache and compact goatee, long oval/rectangular facial proportions, expressive focused eyes, athletic build. Keep the entire player unmistakably a hand-drawn INK illustration; do not turn the face into a photograph. Face remains fully visible.\nCreate clear dark space above the head and bring the ball-controlling rightmost hand and ball slightly inward so all fingers and the ball have at least 40px clear margin from the right edge. Keep the drive pose anatomically natural and both hands well formed. Do not add people.\nPRESERVE all of the Japanese text EXACTLY, preserve readability, text layout and lettering, black #151A18 and lime #CCF43B brush style, white unbranded jersey with light blue trim, no numbers, no logos, no sponsor marks. Do not change the meaning of any copy. Text remains:\nバスケまとめ\n2026.11.26\n佐賀バルーナーズ\n直近5試合（11/1〜11/18）\n0勝5敗\n最大の課題は失点\nイラスト（AI生成）｜イメージ\nKeep the 16:9 landscape composition; target high resolution 2048 x 1152 PNG. Output exactly one corrected finished thumbnail.",
+    "generator": "OpenAI built-in image_gen.imagegen; 1 initial generation + 1 revision; final output visually inspected; no image-generation API or CLI used.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-26T03:18:46.420580+00:00",
+  "publication_approved": false
+}
