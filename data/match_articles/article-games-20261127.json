@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-27",
+  "status": "pending",
+  "article_key": "article-results-one-next-20261127",
+  "games": [
+    {
+      "game_id": "507403",
+      "season": "2026-27",
+      "competition": "B1",
+      "starts_at": "2026-11-27T19:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507403",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "横浜EX",
+      "home_full": "横浜エクセレンス",
+      "home_id": "714",
+      "home_score": null,
+      "away": "岐阜",
+      "away_full": "岐阜スゥープス",
+      "away_id": "1363",
+      "away_score": null
+    },
+    {
+      "game_id": "507413",
+      "season": "2026-27",
+      "competition": "B1",
+      "starts_at": "2026-11-27T19:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507413",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "福岡",
+      "home_full": "ライジングゼファー福岡",
+      "home_id": "753",
+      "home_score": null,
+      "away": "越谷",
+      "away_full": "越谷アルファーズ",
+      "away_id": "745",
+      "away_score": null
+    }
+  ],
+  "individual_candidates": [],
+  "schedule_complete": {
+    "BP": true,
+    "B1": true,
+    "BN": true
+  },
+  "sources": [
+    "https://www.bleague.jp/schedule/?tab=1&year=2026&mon=11&day=27",
+    "https://www.bleague.jp/schedule/?tab=2&year=2026&mon=11&day=27",
+    "https://www.bleague.jp/schedule/?tab=3&year=2026&mon=11&day=27"
+  ],
+  "errors": [],
+  "lineups": {},
+  "game_day_rankings": {
+    "date": "2026-11-27",
+    "metric": "EFF",
+    "aggregation": "game_total",
+    "leagues": {
+      "B1": {
+        "error": "全試合の公式記録確定待ち"
+      }
+    }
+  },
+  "fantasy_hand": {
+    "error": "全試合の公式記録確定待ち"
+  }
+}
