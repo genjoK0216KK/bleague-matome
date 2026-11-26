@@ -56,7 +56,555 @@
     "https://www.bleague.jp/schedule/?tab=3&year=2026&mon=11&day=27"
   ],
   "errors": [],
-  "lineups": {},
+  "lineups": {
+    "B1": {
+      "teams": [
+        [
+          [
+            "PG",
+            {
+              "player_id": "51000280",
+              "name": "アンソニー・クレモンズ",
+              "team": "越谷",
+              "team_id": "745",
+              "season": "2026-27",
+              "competition": "B1",
+              "positions": [
+                "PG"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=745",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "22.4",
+              "games": 19,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+              "coverage_complete": true,
+              "rank": 1
+            }
+          ],
+          [
+            "SG",
+            {
+              "player_id": "43445",
+              "name": "トレイ・ボイド",
+              "team": "横浜EX",
+              "team_id": "714",
+              "season": "2026-27",
+              "competition": "B1",
+              "positions": [
+                "SG"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=714",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "27.3",
+              "games": 18,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+              "coverage_complete": true,
+              "rank": 1
+            }
+          ],
+          [
+            "SF",
+            {
+              "player_id": "51000723",
+              "name": "ジャック・クラーク",
+              "team": "福岡",
+              "team_id": "753",
+              "season": "2026-27",
+              "competition": "B1",
+              "positions": [
+                "SF",
+                "PF"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=753",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "19.0",
+              "games": 4,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+              "coverage_complete": true,
+              "rank": 1
+            }
+          ],
+          [
+            "PF",
+            {
+              "player_id": "46901",
+              "name": "ブレイク・プレストン",
+              "team": "岐阜",
+              "team_id": "1363",
+              "season": "2026-27",
+              "competition": "B1",
+              "positions": [
+                "PF"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=1363",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "23.0",
+              "games": 19,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+              "coverage_complete": true,
+              "rank": 1
+            }
+          ],
+          [
+            "C",
+            {
+              "player_id": "51000690",
+              "name": "キャメロン・オリバー",
+              "team": "福岡",
+              "team_id": "753",
+              "season": "2026-27",
+              "competition": "B1",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=753",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "22.9",
+              "games": 17,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+              "coverage_complete": true,
+              "rank": 1
+            }
+          ]
+        ],
+        [
+          [
+            "PG",
+            {
+              "player_id": "5100000006",
+              "name": "池田 祐一",
+              "team": "越谷",
+              "team_id": "745",
+              "season": "2026-27",
+              "competition": "B1",
+              "positions": [
+                "PG"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=745",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "16.0",
+              "games": 16,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+              "coverage_complete": true,
+              "rank": 2
+            }
+          ],
+          [
+            "SG",
+            {
+              "player_id": "30401",
+              "name": "大庭 岳輝",
+              "team": "越谷",
+              "team_id": "745",
+              "season": "2026-27",
+              "competition": "B1",
+              "positions": [
+                "SG"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=745",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "8.8",
+              "games": 19,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+              "coverage_complete": true,
+              "rank": 2
+            }
+          ],
+          [
+            "SF",
+            {
+              "player_id": "51000452",
+              "name": "長谷川 比源",
+              "team": "横浜EX",
+              "team_id": "714",
+              "season": "2026-27",
+              "competition": "B1",
+              "positions": [
+                "SF",
+                "PF"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=714",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "11.0",
+              "games": 18,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+              "coverage_complete": true,
+              "rank": 2
+            }
+          ],
+          [
+            "PF",
+            {
+              "player_id": "5100000079",
+              "name": "チェイス・フィーラー",
+              "team": "越谷",
+              "team_id": "745",
+              "season": "2026-27",
+              "competition": "B1",
+              "positions": [
+                "PF"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=745",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "21.4",
+              "games": 19,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+              "coverage_complete": true,
+              "rank": 3
+            }
+          ],
+          [
+            "C",
+            {
+              "player_id": "51000644",
+              "name": "タイラー・ワイドマン",
+              "team": "岐阜",
+              "team_id": "1363",
+              "season": "2026-27",
+              "competition": "B1",
+              "positions": [
+                "C",
+                "PF"
+              ],
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=1363",
+              "availability": "unknown",
+              "metric": "EFF",
+              "aggregation": "average",
+              "average": "18.1",
+              "games": 18,
+              "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
+              "coverage_complete": true,
+              "rank": 2
+            }
+          ]
+        ]
+      ],
+      "pool": [
+        {
+          "player_id": "51000280",
+          "name": "アンソニー・クレモンズ",
+          "team": "越谷",
+          "average": "22.4"
+        },
+        {
+          "player_id": "5100000006",
+          "name": "池田 祐一",
+          "team": "越谷",
+          "average": "16.0"
+        },
+        {
+          "player_id": "51000448",
+          "name": "野溝 利一",
+          "team": "福岡",
+          "average": "9.6"
+        },
+        {
+          "player_id": "9246",
+          "name": "髙橋 幸大",
+          "team": "岐阜",
+          "average": "8.4"
+        },
+        {
+          "player_id": "51000274",
+          "name": "大橋 大空",
+          "team": "横浜EX",
+          "average": "6.9"
+        },
+        {
+          "player_id": "32953",
+          "name": "菅原 暉",
+          "team": "越谷",
+          "average": "6.2"
+        },
+        {
+          "player_id": "8462",
+          "name": "小林 遥太",
+          "team": "福岡",
+          "average": "6.1"
+        },
+        {
+          "player_id": "51000684",
+          "name": "タイガ・フォースター",
+          "team": "岐阜",
+          "average": "5.6"
+        },
+        {
+          "player_id": "51000255",
+          "name": "杉山 裕介",
+          "team": "横浜EX",
+          "average": "5.4"
+        },
+        {
+          "player_id": "51000663",
+          "name": "オドゲレル トルガ",
+          "team": "横浜EX",
+          "average": "4.0"
+        },
+        {
+          "player_id": "36857",
+          "name": "古賀 森人",
+          "team": "横浜EX",
+          "average": "2.8"
+        },
+        {
+          "player_id": "39518",
+          "name": "山崎 玲緒",
+          "team": "岐阜",
+          "average": "2.6"
+        },
+        {
+          "player_id": "51000559",
+          "name": "中谷 麻登",
+          "team": "福岡",
+          "average": "2.6"
+        },
+        {
+          "player_id": "43445",
+          "name": "トレイ・ボイド",
+          "team": "横浜EX",
+          "average": "27.3"
+        },
+        {
+          "player_id": "30401",
+          "name": "大庭 岳輝",
+          "team": "越谷",
+          "average": "8.8"
+        },
+        {
+          "player_id": "55000957",
+          "name": "クーリバリ セリンムルタラ",
+          "team": "横浜EX",
+          "average": "7.9"
+        },
+        {
+          "player_id": "52471",
+          "name": "髙木 涼",
+          "team": "岐阜",
+          "average": "7.0"
+        },
+        {
+          "player_id": "51000588",
+          "name": "堀 陽稀",
+          "team": "越谷",
+          "average": "5.9"
+        },
+        {
+          "player_id": "8488",
+          "name": "谷口 光貴",
+          "team": "福岡",
+          "average": "3.4"
+        },
+        {
+          "player_id": "8463",
+          "name": "狩野 祐介",
+          "team": "福岡",
+          "average": "2.8"
+        },
+        {
+          "player_id": "8595",
+          "name": "加藤 寿一",
+          "team": "福岡",
+          "average": "1.7"
+        },
+        {
+          "player_id": "51000664",
+          "name": "アロン・レーガン",
+          "team": "横浜EX",
+          "average": "1.5"
+        },
+        {
+          "player_id": "15835",
+          "name": "卜部 兼慎",
+          "team": "岐阜",
+          "average": "-0.8"
+        },
+        {
+          "player_id": "51000723",
+          "name": "ジャック・クラーク",
+          "team": "福岡",
+          "average": "19.0"
+        },
+        {
+          "player_id": "51000452",
+          "name": "長谷川 比源",
+          "team": "横浜EX",
+          "average": "11.0"
+        },
+        {
+          "player_id": "5100000063",
+          "name": "ザック・モーア",
+          "team": "横浜EX",
+          "average": "9.2"
+        },
+        {
+          "player_id": "8510",
+          "name": "西川 貴之",
+          "team": "福岡",
+          "average": "9.0"
+        },
+        {
+          "player_id": "51000211",
+          "name": "ルーズベルト・アダムス",
+          "team": "福岡",
+          "average": "7.0"
+        },
+        {
+          "player_id": "51000716",
+          "name": "デモンテ・フラニガン",
+          "team": "岐阜",
+          "average": "6.8"
+        },
+        {
+          "player_id": "8657",
+          "name": "喜多川 修平",
+          "team": "越谷",
+          "average": "3.4"
+        },
+        {
+          "player_id": "32978",
+          "name": "大矢 孝太朗",
+          "team": "岐阜",
+          "average": "2.7"
+        },
+        {
+          "player_id": "10842",
+          "name": "三ツ井 利也",
+          "team": "越谷",
+          "average": "0.6"
+        },
+        {
+          "player_id": "8840",
+          "name": "寒竹 隼人",
+          "team": "福岡",
+          "average": "0.5"
+        },
+        {
+          "player_id": "9220",
+          "name": "田村 晋",
+          "team": "越谷",
+          "average": "-2.0"
+        },
+        {
+          "player_id": "46901",
+          "name": "ブレイク・プレストン",
+          "team": "岐阜",
+          "average": "23.0"
+        },
+        {
+          "player_id": "51000690",
+          "name": "キャメロン・オリバー",
+          "team": "福岡",
+          "average": "22.9"
+        },
+        {
+          "player_id": "5100000079",
+          "name": "チェイス・フィーラー",
+          "team": "越谷",
+          "average": "21.4"
+        },
+        {
+          "player_id": "51000644",
+          "name": "タイラー・ワイドマン",
+          "team": "岐阜",
+          "average": "18.1"
+        },
+        {
+          "player_id": "18442",
+          "name": "ベンジャミン・ローソン",
+          "team": "横浜EX",
+          "average": "17.9"
+        },
+        {
+          "player_id": "51000426",
+          "name": "ミッチェル・ライトフット",
+          "team": "越谷",
+          "average": "16.1"
+        },
+        {
+          "player_id": "27048",
+          "name": "ダマ ムッサ",
+          "team": "越谷",
+          "average": "11.5"
+        },
+        {
+          "player_id": "46074",
+          "name": "エライジャ・ウィリアムス",
+          "team": "横浜EX",
+          "average": "11.4"
+        },
+        {
+          "player_id": "30463",
+          "name": "ジャワラ ジョゼフ",
+          "team": "越谷",
+          "average": "2.3"
+        },
+        {
+          "player_id": "46082",
+          "name": "シェイク・ケイタ",
+          "team": "横浜EX",
+          "average": "2.3"
+        },
+        {
+          "player_id": "8489",
+          "name": "鎌田 裕也",
+          "team": "越谷",
+          "average": "1.8"
+        },
+        {
+          "player_id": "47047",
+          "name": "ジョン ヒヒョン",
+          "team": "岐阜",
+          "average": "1.5"
+        },
+        {
+          "player_id": "20022",
+          "name": "髙橋 浩平",
+          "team": "岐阜",
+          "average": "1.2"
+        },
+        {
+          "player_id": "30470",
+          "name": "増本 優太",
+          "team": "岐阜",
+          "average": "-0.1"
+        },
+        {
+          "player_id": "51000691",
+          "name": "ウィリアム・アルティノ",
+          "team": "福岡",
+          "average": "17.0"
+        }
+      ],
+      "retrieved_at": "2026-11-25T12:53:46.531697+00:00",
+      "sources": [
+        "https://www.bleague.jp/club_detail/?TeamID=1363",
+        "https://www.bleague.jp/club_detail/?TeamID=714",
+        "https://www.bleague.jp/club_detail/?TeamID=745",
+        "https://www.bleague.jp/club_detail/?TeamID=753",
+        "https://www.bleague.jp/news/injury.html",
+        "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg"
+      ]
+    }
+  },
   "game_day_rankings": {
     "date": "2026-11-27",
     "metric": "EFF",
