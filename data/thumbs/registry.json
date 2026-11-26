@@ -420,6 +420,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "佐賀バルーナーズの直近5試合は0勝5敗 前半の失点と守備の数字が重い"
   },
+  "article-analysis-saga-20261126.html": {
+   "article_path": "article-analysis-saga-20261126.html",
+   "editorial_fingerprint": "2161b07983e5dc8f5d0ad59be1fb3c78750e8685d9295413d3ffef175c7ec00e",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-analysis-saga-20261126-ef8693349e66.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-saga-20261126-ef8693349e66-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "3a7112801eee0980d0cc",
+   "image_sha256": "ef8693349e66c66e7498498fc224ecd95437448ecf49e59336e4df97dc6da2bc",
+   "imported_at": "2026-11-26T03:19:35.443256+00:00",
+   "prepared_at": "2026-11-26T03:18:46.420580+00:00",
+   "source_blob_sha": "9b571d171cf8f38365f1863aed5f932066311b7d",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "2161b07983e5dc8f5d0ad59be1fb3c78750e8685d9295413d3ffef175c7ec00e",
+   "style": "ink-lime-portrait-v5",
+   "title": "佐賀バルーナーズの直近5試合は0勝5敗 失点の多さが最大の差"
+  },
   "article-analysis-sendai-20261119.html": {
    "article_path": "article-analysis-sendai-20261119.html",
    "editorial_fingerprint": "f29434b6512324ddb5e5c5633a0ac65c6b0f41aab157c5c2b7cd96b4720a404d",
@@ -3532,13 +3560,6 @@
  "log": [
   {
    "article": "article-results-one-next-20261117.html",
-   "at": "2026-11-17T10:34:34.886881+00:00",
-   "by": "20134568717cc8260005",
-   "event": "superseded",
-   "id": "7a38c81e81aa20bf71ec"
-  },
-  {
-   "article": "article-results-one-next-20261117.html",
    "at": "2026-11-17T10:34:35.009216+00:00",
    "event": "imported",
    "id": "20134568717cc8260005",
@@ -4089,6 +4110,13 @@
    "event": "imported",
    "id": "06bd0c0214f1b3967606",
    "image": "daa80bd5472b"
+  },
+  {
+   "article": "article-analysis-saga-20261126.html",
+   "at": "2026-11-26T03:19:35.443287+00:00",
+   "event": "imported",
+   "id": "3a7112801eee0980d0cc",
+   "image": "ef8693349e66"
   }
  ],
  "seen": {
@@ -4141,6 +4169,7 @@
   "39075cc4edcf56d9d90d": "superseded:a9d34f9ead8bbf40b841",
   "3955308615847dff3136": "superseded:9f2558d6277a776ef982",
   "3a331756a5389aaef088": "superseded:505522b8e4b0159f9478",
+  "3a7112801eee0980d0cc": "imported",
   "3c626af62477fc9be507": "imported",
   "3d20be125ac18075c9b0": "superseded:9f2558d6277a776ef982",
   "3d2cc96fb28fa98a36d8": "superseded:bbd71f79d39ade3dad13",
