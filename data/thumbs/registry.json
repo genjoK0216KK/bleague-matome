@@ -3080,6 +3080,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "11/22 試合結果・当日のEFF"
   },
+  "article-results-one-next-20261127.html": {
+   "article_path": "article-results-one-next-20261127.html",
+   "editorial_fingerprint": "dd81df0837e8f9eae12407894fe6da49725212b24f68544b3cd53509b2e4932d",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-results-one-next-20261127-461086d533e8.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-results-one-next-20261127-461086d533e8-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "13056015bf2f4fee4d6c",
+   "image_sha256": "461086d533e8faf6fcd355fee553657716811fb049ca3bf7b7163a44e1feedc1",
+   "imported_at": "2026-11-26T21:48:10.513875+00:00",
+   "prepared_at": "2026-11-26T21:47:30.528464+00:00",
+   "source_blob_sha": "44c1dbed90865d2bc81b016dbef42e1e8da42f65",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "dd81df0837e8f9eae12407894fe6da49725212b24f68544b3cd53509b2e4932d",
+   "style": "ink-lime-portrait-v5",
+   "title": "11/27 出場予定選手（登録選手）のベスト5"
+  },
   "article-stats-20261026.html": {
    "article_path": "article-stats-20261026.html",
    "editorial_fingerprint": "fa8bf9395b06c6d599e33f04949ace3dd509a5381fb0af173f99fa72386c4be5",
@@ -3586,13 +3614,6 @@
   }
  },
  "log": [
-  {
-   "article": "article-games-20261117.html",
-   "at": "2026-11-17T18:29:27.442962+00:00",
-   "by": "64f8f029eda7f4608081",
-   "event": "superseded",
-   "id": "6884e4e9ba611c0e630e"
-  },
   {
    "article": "article-games-20261117.html",
    "at": "2026-11-17T18:29:27.442985+00:00",
@@ -4145,6 +4166,13 @@
    "event": "imported",
    "id": "40f75714f13588da4c2d",
    "image": "30eb3ae23971"
+  },
+  {
+   "article": "article-results-one-next-20261127.html",
+   "at": "2026-11-26T21:48:10.513902+00:00",
+   "event": "imported",
+   "id": "13056015bf2f4fee4d6c",
+   "image": "461086d533e8"
   }
  ],
  "seen": {
@@ -4160,6 +4188,7 @@
   "0dccc38884fa1a8278db": "superseded:af2c63bb867d413bfad4",
   "11dcd132a6455b225cab": "imported",
   "1237ac56ecfe95c7fd0a": "superseded:a718e72ebd289b318965",
+  "13056015bf2f4fee4d6c": "imported",
   "138edbf6e5eed71be84f": "imported",
   "13dc704824ed84d25fee": "imported",
   "15fb330be0f16d365232": "imported",
