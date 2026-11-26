@@ -1,0 +1,128 @@
+{
+  "id": "13056015bf2f4fee4d6c",
+  "article_path": "article-results-one-next-20261127.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261127.html",
+  "source_commit": "",
+  "source_blob_sha": "44c1dbed90865d2bc81b016dbef42e1e8da42f65",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "dd81df0837e8f9eae12407894fe6da49725212b24f68544b3cd53509b2e4932d",
+  "last_observed_blob_sha": "44c1dbed90865d2bc81b016dbef42e1e8da42f65",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/13056015bf2f4fee4d6c/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/13056015bf2f4fee4d6c/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-26T21:44:10.524115+00:00",
+  "creation_event_id": "e23bfed025350d53b276",
+  "event_blob_sha": "44c1dbed90865d2bc81b016dbef42e1e8da42f65",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/13056015bf2f4fee4d6c/thumbnail.png",
+  "image_sha256": "461086d533e8faf6fcd355fee553657716811fb049ca3bf7b7163a44e1feedc1",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "44c1dbed90865d2bc81b016dbef42e1e8da42f65",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.27｜B.ONE",
+      "試合前",
+      "今季平均EFFで選ぶ",
+      "登録選手",
+      "ベスト5",
+      "※出場確定ではありません",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_fixed_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/13056015bf2f4fee4d6c/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261127.html",
+        "use": "本文の根拠。試合前の今季平均EFFに基づく登録選手ベスト5。出場確定を示す選出ではなく、当日の公式結果は確定待ち。本文根拠はこの固定HTMLおよび固定TXTのみ。",
+        "verified_blob_sha": "44c1dbed90865d2bc81b016dbef42e1e8da42f65",
+        "source_as_of": "2026-11-27 06:37〜06:38 JST; 選手・平均資料取得 2026-11-25 21:53 JST"
+      },
+      {
+        "type": "article_fixed_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/13056015bf2f4fee4d6c/source.txt",
+        "use": "見出し・日付・試合前・平均EFF・登録選手・留保を照合。選手の個人成績・名前は画像に使用しない。"
+      },
+      {
+        "type": "operating_instructions",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "use": "黒×ライム、太い日本語、手描きインク、約16:9、公式容姿参照、目視検品。人物選定と注記は今回の本人指示を優先。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "visually_inspected": true,
+        "use": "配色・文字の強さ・インクとブラシのみを参照。元画像の名前・成績は転用しない。右側シュート構図から左側ドライブ構図へ変更。"
+      },
+      {
+        "type": "official_person_reference",
+        "url": "https://www.koshigaya-alphas.com/news/202627s_newsigned_chasefieler",
+        "image_url": "https://www.koshigaya-alphas.com/files/rcms_conv_webp/files/user/images/NEWS/202627s_newsigned_img_chasefieler.jpg_1782460738.webp?v=1782788412",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/13056015bf2f4fee4d6c/reference-chase-fieler.webp",
+        "visually_inspected": true,
+        "use": "チェイス・フィーラー選手の容姿だけを参照。写真は完成画像へ貼り付けず、衣装のチーム・スポンサー・リーグロゴも使用しない。外部ページの成績・本文は記事の根拠に使用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "チェイス・フィーラー",
+        "name_en": "Chase Fieler",
+        "selection": "ランダム",
+        "selection_reason": "本文ではベスト5とサブ5の10人が表で並列に扱われ、単独の主役を絞れないため。本文に名前が出ている選手を最優先に抽出。",
+        "selection_method": "Python secrets.choiceで本文記名選手10人から1人を無作為抽出。selection.jsonに結果を保存。",
+        "candidates": [
+          "アンソニー・クレモンズ",
+          "トレイ・ボイド",
+          "ジャック・クラーク",
+          "ブレイク・プレストン",
+          "キャメロン・オリバー",
+          "池田 祐一",
+          "大庭 岳輝",
+          "長谷川 比源",
+          "チェイス・フィーラー",
+          "タイラー・ワイドマン"
+        ],
+        "reference_source": "越谷アルファーズ公式・2026-27シーズン選手契約合意(新規)のお知らせ",
+        "reference_url": "https://www.koshigaya-alphas.com/news/202627s_newsigned_chasefieler",
+        "reference_image_url": "https://www.koshigaya-alphas.com/files/rcms_conv_webp/files/user/images/NEWS/202627s_newsigned_img_chasefieler.jpg_1782460738.webp?v=1782788412",
+        "observed_appearance": "短い茶髪、側頭部の短い刈り込みと立ち上がったトップ、広い額、太めの眉、明るい灰緑〜ヘーゼル系の目、まっすぐな鼻、縦長で角のある顎、口ひげと顎・頬の短いひげ。",
+        "illustration": "本人の容姿を参照したドライブ・ボール保持姿の手描きイラスト。実際の試合場面の再現ではない。名前・背番号・個人成績・出場・活躍の記述はなし。",
+        "visual_qa": "公式写真と生成画像を見比べ、髪型・眉・鼻・輪郭・ひげの特徴を確認。写真風ではなくインク画。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: illustration-story\nAsset type: Japanese basketball editorial thumbnail, exactly ONE complete image. Wide 16:9 horizontal canvas, ideally 2048×1152 pixels (at least 1000 pixels wide). Opaque PNG.\n\nCreate an original hand-drawn ink-and-brush sports illustration with bold readable Japanese typography. Approved visual direction: near-black #151A18 background, electric lime #CCF43B large dry-brush accents, warm ivory lettering, coarse ink outlines and hatching, sparse speckles, few elements, very strong thumbnail readability. This is NOT a photograph, NOT a photorealistic render.\n\nSubject: exactly one REAL professional basketball player, Chase Fieler (チェイス・フィーラー). His official portrait has been visually checked on the official Koshigaya Alphas announcement https://www.koshigaya-alphas.com/news/202627s_newsigned_chasefieler . Use that verified appearance, not a fictional or generic player: tall broad athletic build, fair skin, short dark-brown hair with very close faded sides and short upright textured spikes on top, broad forehead, strong dark eyebrows, light gray-green/hazel eyes, straight prominent nose, elongated oval-to-square jaw, light short brown beard stubble all along jaw and chin and a subtle moustache, small mouth, serious focused expression. Render his distinctive face fully as illustrated ink, recognizable but never photo-like. The portrait's blue team jersey and all logos must NOT be copied.\n\nComposition: Change from the approved example's right-side jump shooter. Put Fieler on the LEFT 43 percent, in an energetic low driving/gathering basketball motion, body leaning diagonally forward, head turned three-quarter toward the court with face clearly visible, holding one orange basketball near his hip with anatomically natural hands. His head, ball and both hands must be entirely inside the canvas; a deliberate crop at lower thigh is okay. Plain ivory and charcoal sleeveless basketball uniform, no lettering, no number, no team logo, no sponsor marks, no necklace. Exactly two arms, anatomically correct fingers, strong dynamic ink brush trails behind him. Do not add any other people, photo inserts, scoreboards, logos or official badges.\nRIGHT 54 percent: large clean Japanese text blocks on clear dark space, completely separated from his face and ball. Keep a 5 percent safe inset around all text. A huge lime brush-stroke numeral 5 integrated with bold ivory ベスト can be the main hierarchy. Use the exact Japanese wording below, no player name or individual stats anywhere.\n\nText, verbatim and legibly typeset:\nTop small: 「バスケまとめ」\nDate line: 「2026.11.27｜B.ONE」\nSmall lime category label: 「試合前」\nMedium explanatory line: 「今季平均EFFで選ぶ」\nLarge headline line: 「登録選手」\nLargest headline line: 「ベスト5」\nReadable smaller qualifier directly below headline: 「※出場確定ではありません」\nBottom footer on an uncluttered dark band: 「イラスト（AI生成）」 and 「イメージ」\n\nEditorial ground truth is ONLY the provided fixed source.html/source.txt: this is a pregame article for November 27 with a registered-player best five based on current-season average EFF, NOT the day's completed game results and NOT confirmed participation. The player was randomly chosen from the ten equally presented named players in the article, including substitutes; he is merely the illustration subject. Do not imply he is a member of the best five, confirmed to play, scored any points, or starred in today's game. No player name, no EFF number, no player ranking, no win or score, no match-up result on the image. This is a generic conceptual playing pose, NOT reconstruction of an actual game event. The two footer labels are mandatory and must be easily readable. Do not include 成績をもとにしたイメージ because the designated annotation for this randomly selected subject is exactly イメージ. Do not carry over カルバー, 38, 仙台, 神戸, any names or any numbers from the approved style example.",
+      "correction": "Edit the provided basketball thumbnail. This is the ONE allowed correction. Preserve the black #151A18 and lime #CCF43B hand-drawn ink-brush style, the real Chase Fieler identity, the dynamic ball-gathering pose, the right-side typography, every existing text line and all correct numerals verbatim.\nFix framing only: shrink the left-side player and ball together by approximately 12%, and shift them slightly right and down so his entire hair, head, both arms from shoulder to wrist, every visible fingertip, and the whole basketball are safely inside the canvas with at least a 3% border from top and left. No hair or fingers may touch or cross the canvas edge. Maintain a natural intentional lower-thigh crop at bottom. Preserve exactly two anatomically natural hands, five fingers per hand where visible, and the existing face. Do not move him into the headline area. Extend the existing black/lime background in the newly exposed margin.\nKeep all existing Japanese text, placement and spelling:\nバスケまとめ\n2026.11.27｜B.ONE\n試合前\n今季平均EFFで選ぶ\n登録選手\nベスト5\n※出場確定ではありません\nイラスト（AI生成）\nイメージ\nKeep the approximately 16:9 wide composition and resolution at least 1000 pixels wide. No logos, player name, jersey lettering or numbers, photo textures, new people, new statistics or new captions. This remains an illustrative concept, not a depiction of an actual game event."
+    },
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 2,
+      "corrections_used": 1,
+      "external_image_api_used": false,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "final_source_file": "/Users/genjo/.codex/generated_images/01a219d0-e6b0-7710-958e-f1b7fc688c2c/exec-d6d54b1c-5a39-4b9b-8cd3-08f438a0715e.png",
+      "review_method": "生成結果を実際に目視。初稿の頭頂部・左端の指の見切れを検出し、1回だけ縮小・位置調整。修正版で見切れ解消、手指とボール保持、人物と文字の非重複、全文の読みやすさを確認。",
+      "qa_notes": {
+        "text_and_numbers": "2026.11.27、B.ONE、ベスト5、今季平均EFFを固定原稿と照合。選手名・個人成績・得点・試合結果は表示していない。",
+        "source_qualifiers": "「試合前」「今季平均EFFで選ぶ」「登録選手」「※出場確定ではありません」を画像内で確認。当日結果や出場確定を示していない。",
+        "likeness_or_no_named_person": "ランダム選出した実在のチェイス・フィーラー選手の公式写真を見て、顔・髪・ひげの特徴を確認。選手名の文字表示なし。",
+        "layout": "頭・両手・ボールの見切れなし。自然な保持姿、本文文字との重なりなし。下端は意図的な太もも部分のトリミング。約16:9、長辺1000px以上。ロゴなし。",
+        "ai_label": "「イラスト（AI生成）」「イメージ」が下部に判読可能な大きさで表示されている。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-26T21:47:30.528464+00:00",
+  "publication_approved": false
+}
