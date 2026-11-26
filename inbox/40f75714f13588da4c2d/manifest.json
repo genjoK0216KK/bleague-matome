@@ -1,0 +1,119 @@
+{
+  "id": "40f75714f13588da4c2d",
+  "article_path": "article-games-20261127.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261127.html",
+  "source_commit": "",
+  "source_blob_sha": "5b247fd9b2664235cadd20c765511db70b24a7be",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "b1cf7d142d90c964bff96f6457036205b6240934f9fbb8c2ce97608691339cf6",
+  "last_observed_blob_sha": "5b247fd9b2664235cadd20c765511db70b24a7be",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/40f75714f13588da4c2d/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/40f75714f13588da4c2d/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-26T15:46:38.018482+00:00",
+  "creation_event_id": "75bf997fecb0435017b2",
+  "event_blob_sha": "5b247fd9b2664235cadd20c765511db70b24a7be",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/40f75714f13588da4c2d/thumbnail.png",
+  "image_sha256": "30eb3ae2397197dc759ab6898a8156a14ebe1fcf1661936d3bd302ea31ff2d40",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "5b247fd9b2664235cadd20c765511db70b24a7be",
+    "text_lines": [
+      "B.ONE",
+      "11/27",
+      "試合予定",
+      "19:05 開始予定",
+      "横浜EX × 岐阜",
+      "福岡 × 越谷",
+      "11/27 00:46時点・試合前",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "article_frozen_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/40f75714f13588da4c2d/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261127.html",
+        "use": "本文の根拠。2026-11-27 00:46 JST時点、B.ONEの横浜EX対岐阜と福岡対越谷はいずれも19:05開始予定・試合前。当日EFFと最高の手札は公式記録確定待ち。画像で結果・選手の成績や出場を断定しない。"
+      },
+      {
+        "type": "article_frozen_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/40f75714f13588da4c2d/source.txt",
+        "use": "固定HTMLと本文内容を照合。記事に選手名はない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで目視。黒#151A18とライム#CCF43B、太い日本語、手描きインク・ブラシ、約16:9を参照。参照元の記事名・選手名・成績は転用していない。"
+      },
+      {
+        "type": "official_roster",
+        "url": "https://www.gifu-swoops.com/team/players/",
+        "use": "本文にあるチームの現役選手候補の確認に限定。記事の本文根拠には使用しない。"
+      },
+      {
+        "type": "official_person_profile",
+        "url": "https://www.gifu-swoops.com/team/players/detail/id=62611?PlayerID=51000162",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026110415/files/user/roster/1363/2026-27/51000162_01.jpg",
+        "use": "描写対象の本人確認・容姿の参照に限定。公式写真を最終画像に貼り付けない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "エリック・マクリー",
+        "roman_name": "Erik McCree",
+        "team": "岐阜スゥープス",
+        "selection": "ランダム",
+        "selection_reason": "固定原稿に選手名はなく、4チームの試合予定が同じ扱いのため、本文に出てくるチームの公式掲載現役選手から選定。",
+        "selection_method": "Python random.Random('40f75714f13588da4c2d')。チーム候補['横浜EX','岐阜','福岡','越谷']からchoiceで岐阜。続けて公式ロスター掲載順の13名からchoiceでエリック・マクリー。",
+        "candidate_roster_order": [
+          "タイガ・フォースター",
+          "山崎玲緒",
+          "エリック・マクリー",
+          "髙橋幸大",
+          "タイラー・ワイドマン",
+          "デモンテ・フラニガン",
+          "ジョン・ヒヒョン",
+          "大矢孝太朗",
+          "髙橋浩平",
+          "髙木涼",
+          "増本優太",
+          "卜部兼慎",
+          "ブレイク・プレストン"
+        ],
+        "reference_source": "岐阜スゥープス公式プロフィール写真",
+        "profile_url": "https://www.gifu-swoops.com/team/players/detail/id=62611?PlayerID=51000162",
+        "photo_url": "https://bleague.bl.kuroco-img.app/v=2026110415/files/user/roster/1363/2026-27/51000162_01.jpg",
+        "reference_viewed": true,
+        "observed_features": "短く密な黒いアフロ、口ひげにつながる厚い黒ひげ、幅のある鼻、厚い唇、眉と目元、がっしりした肩と輪郭、両腕のタトゥー。公式写真と完成イラストを目視比較。",
+        "depiction": "本人の容姿に基づくドライブ姿の手描きイラスト。実際の試合場面の再現ではない。ロゴ・スポンサー・名前・背番号は描かない。",
+        "text_restriction": "選手名・成績・当日の出場・活躍の主張は画像に入れない。『イラスト（AI生成）』『イメージ』を表示。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story.\nAsset type: ONE Japanese basketball editorial website thumbnail, landscape 1600 x 900 pixels, approximately 16:9, opaque PNG.\nCreate a new finished thumbnail. Use the previously viewed black/lime approved thumbnail only as a STYLE REFERENCE (heavy Japanese type, hand ink, brush energy, simple editorial composition). Use the previously viewed official Erik McCree portrait only as a LIKENESS REFERENCE. These are reference images, not edit targets; do not paste either reference or recreate any previous article's names/scores.\n\nSubject: ONE real professional basketball player, Erik McCree (エリック・マクリー) of Gifu Swoops, shown in an illustrative powerful forward drive, torso leaning left into the motion, basketball controlled low in his right hand, left arm naturally bent away from the lettering, face clearly visible in three-quarter view. This is an imagined generic basketball movement, never a recreation of an actual game. His name MUST NOT appear anywhere. Identity from the official portrait: tall broad muscular build, medium-dark brown skin, broad nose, full lips, alert brown eyes with strong brow, short dense textured black afro with a slightly irregular rounded silhouette, thick full black beard connected to moustache, squared rounded jaw under beard, arm tattoos rendered as loose ink details. Preserve these distinctive features. Plain ivory basketball jersey with dark trims and plain shorts; no numbers, team or league logos, sponsor marks, branding, or writing on clothing or ball. No other people.\n\nStyle: emphatically DRAWN editorial sports illustration, expressive thick black ink contours and ivory/gray hatch strokes, not photorealistic, no pasted official photo, no 3D render. Background near black #151A18, vivid lime #CCF43B diagonal dry-brush strokes behind the player, ivory headline, orange basketball as one small warm accent. High contrast, dramatic and clean.\n\nComposition: text takes the LEFT 55%, player takes the RIGHT 45%, dynamic low dribble angle rather than overhead shooting pose. Head, face, both hands and entire ball fully inside the frame. Deliberate crop of legs around upper thigh is allowed. Nothing crosses or obscures lettering. Keep all text at least 55 pixels from outer edges, with a clear dark bottom strip for notes. Strong spacing and hierarchy, no crowded extra marks.\n\nText (render exactly, and render NO other text):\nTop small label: \"B.ONE\"\nLarge lime date: \"11/27\"\nLargest heavy ivory headline: \"試合予定\"\nMedium line: \"19:05 開始予定\"\nTwo clear smaller matchup lines:\n\"横浜EX × 岐阜\"\n\"福岡 × 越谷\"\nBottom left, readable qualifier: \"11/27 00:46時点・試合前\"\nBottom strip, clearly readable: \"イラスト（AI生成）\"\nImmediately adjacent in same strip: \"イメージ\"\n\nArticle context for factual restraint only: frozen manuscript says both listed games are scheduled for 19:05 on 2026-11-27 and still pregame as of 00:46 JST. Results, EFF and best-five are unconfirmed. Do not write results, scores, player statistics, player participation, player names, MVP claims, rankings, or best-five claims. The player is randomly selected from a team in the manuscript solely to illustrate the sport.\nEnsure Japanese glyphs and numbers are crisp, correctly spelled, and fully visible. Human anatomy should be plausible, exactly two arms/hands, natural five-finger hand forms, no fused fingers. Produce ONLY one final designed thumbnail.\n\nSINGLE PERMITTED CORRECTION\nEdit the generated basketball thumbnail. This is the single permitted revision.\nEdit target: the supplied finished black/lime thumbnail. Supporting identity reference: official Erik McCree portrait supplied as the second image, only to match the haircut; do not paste the photograph.\nMake ONE targeted correction to the HAIR AND ITS TOP CLEARANCE ONLY: change the current overly tall separated curls into Erik McCree's compact, short, dense, natural black afro seen in his official reference. Lower the highest silhouette of the hair so there is at least 40 pixels of visible background between the entire head/hair and the top border. Keep his facial features, thick beard, head position, eyes, expression, body pose, tattoos, hands, ball, jersey, and all the rest of the image unchanged. The head must be fully inside the frame with a clear top margin. Fill the newly vacated area with the existing lime/black brush background coherently.\nPreserve the drawn ink illustration style, all colors, canvas proportions and resolution. Preserve EVERY Japanese glyph, number and the text layout EXACTLY. Keep all text:\nB.ONE\n11/27\n試合予定\n19:05 開始予定\n横浜EX × 岐阜\n福岡 × 越谷\n11/27 00:46時点・試合前\nイラスト（AI生成）\nイメージ\nDo not add names, scores, logos, or any new elements. Return only one corrected PNG at the same approximately 16:9 resolution, at least 1000 pixels wide.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generated_candidates": 1,
+      "corrections": 1,
+      "correction_reason": "初回の髪が上端に近く、公式写真より高かったため、短く密な髪型と頭上の余白だけを修正。",
+      "final_output": "generated.png",
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "visual_inspection": "修正後の生成画像を実際に表示して、全文字・数字・試合前の留保・公式写真に基づく顔と髪・両手の形・頭上の余白・ボールと文字の見切れなし・ロゴなし・AI生成とイメージ表記を確認。",
+      "article_content_sources": "source.html and source.txt only",
+      "final_tool_file": "/Users/genjo/.codex/generated_images/01a21889-8fda-7152-ad2d-69314acb9fa8/exec-cfd8d502-193f-49cf-bdbf-acf5952d0972.png"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-26T15:50:39.310781+00:00",
+  "publication_approved": false
+}
