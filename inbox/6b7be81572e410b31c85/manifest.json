@@ -1,0 +1,119 @@
+{
+  "id": "6b7be81572e410b31c85",
+  "article_path": "article-daily-20261127.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261127.html",
+  "source_commit": "",
+  "source_blob_sha": "d7745b5e7e839b15df8ca7e1bfabee5bf06a21cf",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "d9c2726feff858ea506b15073f71846bb54657236f6e56283aedc12d75d801ab",
+  "last_observed_blob_sha": "d7745b5e7e839b15df8ca7e1bfabee5bf06a21cf",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6b7be81572e410b31c85/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6b7be81572e410b31c85/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-26T23:17:55.707952+00:00",
+  "creation_event_id": "e8e64ca75bda7001e1a8",
+  "event_blob_sha": "d7745b5e7e839b15df8ca7e1bfabee5bf06a21cf",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/6b7be81572e410b31c85/thumbnail.png",
+  "image_sha256": "3adaeec07a73fe99544852f951d4fd677b659b8ae9a2655ea099ef04f1786667",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "d7745b5e7e839b15df8ca7e1bfabee5bf06a21cf",
+    "text_lines": [
+      "バスケまとめ",
+      "11/27 ONE",
+      "2試合を",
+      "予測",
+      "試合前予測",
+      "福岡 vs 越谷",
+      "横浜EX vs 岐阜",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6b7be81572e410b31c85/source.html",
+        "role": "本文の根拠。固定HTMLを実読し、保存直前にGit blob形式のSHA-1を独立計算して指定値との一致を確認。gitコマンドは未使用。",
+        "article_url": "https://basuke-matome.jp/article-daily-20261127.html",
+        "used_facts": [
+          "11月27日のB.LEAGUE ONEの2試合",
+          "福岡対越谷",
+          "横浜EX対岐阜",
+          "試合前予測／独自分析"
+        ],
+        "qualifiers": "本文の試合前予測という留保を見出しとバッジで維持。勝敗・個人成績・出場・活躍の断定なし。成績や順位の数値を画像に使わないため、11月22日終了時点の成績を現在値として表示することもない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6b7be81572e410b31c85/source.txt",
+        "role": "本文の根拠。固定テキスト全文を実読してHTML本文と照合。関連記事・外部記事は本文根拠に不使用。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール。今回の本人指定を優先。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで実見した承認済みスタイル参照。黒×ライム、太い日本語見出し、手描きインク／ブラシ、約16:9のみを参照。既存の選手名・成績は転用なし。"
+      },
+      {
+        "url": "https://www.koshigaya-alphas.com/team/players/",
+        "role": "アンソニー・クレモンズの公式容姿資料を特定するためだけに参照。本文・成績の根拠には不使用。"
+      },
+      {
+        "url": "https://r-zephyr.com/team/players/detail/id=22491?PlayerID=51000690",
+        "role": "キャメロン・オリバーの公式容姿資料を特定するためだけに参照。本文・成績の根拠には不使用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "アンソニー・クレモンズ",
+        "selection": "ランダム",
+        "selection_reason": "記事の中心はチームと2カードであり、特定選手1人には絞れない。見出しの中心カード・福岡対越谷から両チーム1人ずつ描く構成を選択。越谷は本文に登場する2人（アンソニー・クレモンズ、チェイス・フィーラー）から、作業IDをseedとしたrandom.Randomのchoiceで選択。",
+        "selection_seed": "6b7be81572e410b31c85",
+        "official_source": "https://www.koshigaya-alphas.com/team/players/",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026112707/files/user/roster/745/2026-27/51000280_01.jpg",
+        "reference_local_path": "/private/tmp/thumb-6b7be815-clemmons.jpg",
+        "reference_viewed": true,
+        "observed_features": "後ろへ編み込む密着したコーンロウ、短い側頭部、縦長の顔、頬骨、幅のある鼻、厚みのある唇、口ひげにつながる整えた黒いひげ。",
+        "rendered": "手前の赤い無地ユニフォームでボールを扱う人物。公式写真の貼付けではなくインク画。画像内に選手名・背番号・個人成績・出場や活躍の断定なし。"
+      },
+      {
+        "name": "キャメロン・オリバー",
+        "selection": "ランダム",
+        "selection_reason": "同じ中心カードの福岡側として、本文に登場する福岡選手の候補集合（キャメロン・オリバー1人）から選択。実際の出場や対戦場面を根拠とした再現ではない。",
+        "official_source": "https://r-zephyr.com/team/players/detail/id=22491?PlayerID=51000690",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026112707/files/user/roster/753/2026-27/51000690_01.jpg",
+        "reference_local_path": "/private/tmp/thumb-6b7be815-oliver.jpg",
+        "reference_viewed": true,
+        "observed_features": "顔の周囲から首元へ垂れるドレッド、一部茶色がかった毛先、幅のある輪郭、口ひげにつながる顎の黒いひげ、厚みのある唇、筋肉質の肩・腕。",
+        "rendered": "奥の青い無地ユニフォームでディフェンスする人物。公式写真の貼付けではなくインク画。画像内に選手名・背番号・個人成績・出場や活躍の断定なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT\nUse case: illustration-story.\nCreate ONE finished Japanese editorial basketball thumbnail for バスケまとめ. Landscape 16:9, ideally 1536x864 or 1792x1008 PNG, width at least 1000 pixels. Opaque background.\n\nApproved visual direction: near-black #151A18 background, vivid lime #CCF43B brush strokes and accents, off-white bold Japanese typography, expressive hand-drawn black ink and scratchy dry-brush illustration. A few large elements, strong visual hierarchy. Deliberately illustrated, never photorealistic, no photographic collage.\n\nLayout: left 48 percent dedicated to clean text, right 52 percent to TWO real basketball players in a dynamic one-on-one matchup. The foreground guard Anthony Clemmons drives with an orange basketball in one hand, low athletic stance, body angled toward the viewer-left, face clear in three-quarter view. Behind and to his right Cameron Oliver is taller, defending with one arm raised and the other spread, face also clearly visible. Hands anatomically plausible, five fingers where visible, separate arms, no merging. Keep both heads and active hands inside frame; deliberate thigh crop at bottom is acceptable. Ball is a prop held or dribbled by Clemmons; no separate decorative balls. Plenty of breathing room around lettering. A diagonal lime ink sweep behind the players creates motion; sparse court-line suggestion only, no hoop, arena photo, crowd or extra people. Maintain ink-and-brush aesthetic with recognizable faces.\n\nReal-person likeness observations from official 2026-27 team roster photographs:\n- Anthony Clemmons, Koshigaya Alphas: dark brown skin, slim athletic guard build, close-to-scalp tight cornrow braids swept backward with clear straight partings, closely cut sides, long oval face, defined cheekbones, dark eyebrows, broad nose, full lips, neatly shaped medium full black beard and connected moustache. Draw him in a plain dark red basketball uniform with ivory edging; NO printed name, jersey number, team logo, manufacturer logo, sponsors, or emblems.\n- Cameron Oliver, Fukuoka: brown skin, larger muscular frame, shoulder/neck-length black dreadlocks framing his face, a few brownish lighter lock tips, broad face, full black beard along jaw and under chin with connected moustache, broad nose, full lips, strong shoulders and tattooed arms represented by abstract ink texture rather than legible symbols. Draw him in a plain royal-blue basketball uniform; NO printed name, jersey number, team logo, manufacturer logo, sponsors, or emblems.\nThese are the ONLY depicted people. Do not substitute an invented athlete or copy the player in the style example. Reference photos establish appearance only: do not paste a photo or reproduce its pose.\n\nExact text, every item once only:\nSmall brand text at upper left: \"バスケまとめ\"\nSmall date/competition line below it: \"11/27 ONE\"\nVery large left headline in two lines:\n\"2試合を\"\n\"予測\"\nUse off-white for \"2試合を\" and vivid lime for \"予測\"; confident heavyweight Japanese gothic/brush type with clean, unambiguous glyphs.\nA clear modest badge: \"試合前予測\"\nBelow headline, two concise lines, no score-like numbers:\n\"福岡 vs 越谷\"\n\"横浜EX vs 岐阜\"\nReadable footer on quiet dark area, safely inset: \"イラスト（AI生成）\" and \"イメージ\"\n\nSource semantics: this is a preview, not a game result. The frozen article covers two games on November 27: Fukuoka vs Koshigaya and Yokohama EX vs Gifu. The picture is a conceptual imagined play scene and makes no claim that this action actually happened or that these players appeared. Both players are illustrative selections from players named in the source's main matchup. Do not print player names, player statistics, scores, win claims, appearance claims, performance claims, or specific decisive play descriptions. No additional words or numbers. No official league or team logos. Keep all letterforms and AI disclosure readable. Generate the complete final artwork with text directly in the image.\n\nONE ALLOWED CORRECTION PROMPT\nEdit the supplied basketball thumbnail with ONE targeted correction: fix the framing of the two illustrated players so ALL hands, fingertips, heads and the orange basketball are completely inside the canvas with clear breathing room. Currently the raised defender hand is cut off at the top and the driving player's low outstretched fingers are cut off at the bottom. Scale the entire TWO-player-plus-ball illustration down by approximately 12 percent, positioned within the right portion of the same composition. Keep at least 35 pixels of dark or lime background around the highest raised fingertips and lowest outstretched fingertips. Keep both faces large enough and recognizable. Thigh crops at the bottom are okay; do NOT crop any head, hand, finger or ball. Keep the players' anatomy coherent with exactly two arms and hands each. Maintain the same real players and facial identity: Anthony Clemmons in unmarked burgundy with tight backward cornrows and shaped black beard, Cameron Oliver in unmarked royal blue with loose neck-length dreadlocks and full beard. Do not introduce any new player or any name or number on uniforms.\nEVERYTHING ELSE MUST STAY: exact current Japanese typography and text, same text placement and hierarchy, same black #151A18 and lime #CCF43B brush artwork and hand-drawn ink style, same wide 16:9 format and resolution, same conceptual one-on-one scene. Do not change, add, delete or misspell ANY text. Exact retained text: バスケまとめ / 11/27 ONE / 2試合を / 予測 / 試合前予測 / 福岡 vs 越谷 / 横浜EX vs 岐阜 / イラスト（AI生成） / イメージ. Keep all text readable and fully inside the frame. No logos, no photographic elements.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "total_calls": 2,
+      "generation_calls": 1,
+      "correction_calls": 1,
+      "correction_reason": "初稿で上下の指先が見切れていたため、人物とボールの縮小配置・余白確保だけを修正。",
+      "final_output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6b7be81572e410b31c85/generated.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "png_sha256": "3adaeec07a73fe99544852f951d4fd677b659b8ae9a2655ea099ef04f1786667",
+      "final_image_visually_inspected": true,
+      "inspection_notes": "修正版を実見。全テキストを読み取り照合。予測の留保とイメージ注記あり。公式容姿資料と2人の髪型・顔立ち・ひげを比較。全4手の形と指先、両頭部、ボールが画面内。本文と関係のない人物名・成績、公式ロゴ、スポンサー文字、写真貼付けなし。",
+      "ready_executed": false
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-26T23:21:36.997003+00:00",
+  "publication_approved": false
+}
