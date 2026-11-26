@@ -1,0 +1,89 @@
+{
+  "id": "06bd0c0214f1b3967606",
+  "article_path": "article-daily-20261126.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261126.html",
+  "source_commit": "",
+  "source_blob_sha": "278438ea4bdbef36ce9342940f0c7af4047cc890",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "b7950bb4aa4dbf72dfeee20e029e41926be53cd65f1144b444163f05a5ac4aff",
+  "last_observed_blob_sha": "278438ea4bdbef36ce9342940f0c7af4047cc890",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/06bd0c0214f1b3967606/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/06bd0c0214f1b3967606/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-26T01:50:43.639244+00:00",
+  "creation_event_id": "4a597c71f1138eb8fb73",
+  "event_blob_sha": "278438ea4bdbef36ce9342940f0c7af4047cc890",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/06bd0c0214f1b3967606/thumbnail.png",
+  "image_sha256": "daa80bd5472bfc0b5993298b161e56880978088684d1d87f4812b731dbd6aba7",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "278438ea4bdbef36ce9342940f0c7af4047cc890",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.26",
+      "シェーファー",
+      "日本代表へ",
+      "仙台の同僚はレバノン代表",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "frozen_article",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/06bd0c0214f1b3967606/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261126.html",
+        "use": "本文の根拠。タイトル、記事日付、仙台のシェーファーの日本代表選出、同僚セルジオ・エル ダーウィッチのレバノン代表選出。HTMLのGit blob SHAを計算し指定値との一致を確認。"
+      },
+      {
+        "type": "frozen_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/06bd0c0214f1b3967606/source.txt",
+        "use": "本文の照合。第1戦の出場メンバーと出場時間は未確認という留保を確認。画像は代表選出のみを伝え、出場・得点・勝敗を断定しない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで目視確認。黒×ライム、太い日本語見出し、手描きインク・ブラシを参照。選手名・成績・構図は引き継がない。"
+      },
+      {
+        "type": "official_appearance_only",
+        "url": "https://www.89ers.jp/roster/players/detail/id=21447?PlayerID=10820&Year=2026",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026112610/files/user/roster/692/2026-27/19956_01.jpg",
+        "use": "公式プロフィール写真の容姿だけを参照。外部ページの成績・本文情報は画像の根拠に使用しない。写真自体は完成画像に使用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "シェーファー アヴィ幸樹",
+        "selection": "本文の主役",
+        "selection_reason": "固定原稿のタイトル・メタ説明・本文の代表選出節で中心に扱われる選手。ランダム選出ではない。",
+        "official_profile_url": "https://www.89ers.jp/roster/players/detail/id=21447?PlayerID=10820&Year=2026",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026112610/files/user/roster/692/2026-27/19956_01.jpg",
+        "reference_inspection": "公式プロフィール画像をダウンロードしview_imageで実見。黒い直毛の分け目、長めで角張った顔、太い眉、まっすぐな鼻、ひげのない顔、肩幅のある体格を確認。",
+        "rendering": "本人の顔の特徴を寄せた手描きインクのプレー姿。両手でボールを保持する一般的な動作のイメージ。実際の試合場面・出場を再現したものではない。ロゴ・スポンサー・背番号なし。",
+        "likeness_qa": "生成PNGを実見し、髪の分け目、眉、鼻、輪郭、ひげなしの特徴を公式写真と比較確認。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset type: Japanese basketball news article thumbnail, one finished PNG image, landscape 16:9, 2048 x 1152 pixels.\nCreate an original editorial sports illustration in the approved black-and-lime ink-brush visual language. Matte near-black #151A18 background, vivid lime #CCF43B sweeping brush strokes, warm ivory typography, monochrome hand-inked athlete, and one orange basketball. Strong Japanese bold typography, very few elements, crisp readable composition. No photographic rendering.\n\nSubject: exactly one REAL basketball player, Avi Koki Schafer / シェーファー アヴィ幸樹, the principal player named in the supplied article. His appearance was checked against the official Sendai 89ERS roster portrait (B.LEAGUE official image 19956_01.jpg). Depict his recognizable likeness: light skin, tall broad-shouldered athletic build, long angular oval face, defined cheekbones and squared narrow jaw, straight prominent nose, thick straight dark eyebrows, almond-shaped eyes, clean-shaven, dark near-black straight hair parted around the center with a slight side bias, medium-short top swept to both sides and short tidy sides. Do not give him curls, beard, mustache, or a generic substitute face. Render all face features in confident drawn ink lines, not photo texture.\nAction and composition: athlete occupies the LEFT 43 percent, in a dynamic three-quarter stance, leaning into a forward driving/pivot motion toward the right, both hands naturally securing an orange basketball near his waist/chest, head and face clearly visible, elbows and all visible fingers anatomically correct. Plain ivory basketball jersey and shorts with black drawn shadows, completely unbranded, no lettering or numbers. Show head through thighs; intentional lower-body crop at bottom is okay, no clipped face, arms, hands or basketball. Lime diagonal brush gestures behind him convey movement. No other players or crowd.\nTypography occupies the RIGHT 54 percent, with generous safe margins and clear separation from the figure. Make the headline enormous and immediately readable on a small card. Headline first row in ivory, second row in lime. Smaller supporting line beneath. A small plain-text site label and date at upper right. Bottom footer remains legible on a quiet dark strip across the image.\n\nThe ONLY text in the image must be these exact Japanese strings, all spelled correctly:\n\"バスケまとめ\"\n\"2026.11.26\"\n\"シェーファー\"\n\"日本代表へ\"\n\"仙台の同僚はレバノン代表\"\n\"イラスト（AI生成）\"\n\"イメージ\"\n\nEditorial meaning: the frozen article states Schafer was selected for Japan, and his Sendai teammate was selected for Lebanon. This is a generic imagined playing pose that illustrates roster selection. It is NOT a depiction or reconstruction of an actual match, actual appearance, actual scoring, or a winning play. The article says match participation and minutes remain unconfirmed. Do not add claims about playing, points, victory, availability, injuries, or match results. The date is the article date. Do not import any names, statistics or text from the style reference.\nNo team logos, league logos, sponsors, national emblems, official photographs, photorealism, scoreboards, signature, watermark, or additional text. The mandatory AI label and イメージ must be fully inside the canvas and plainly readable.",
+    "generator": {
+      "name": "image_gen",
+      "mode": "built-in",
+      "attempts": 1,
+      "revisions": 0,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "generated_original": "/Users/genjo/.codex/generated_images/01a2158c-4439-72a2-9871-9ed7a5ce6b3f/exec-01baf4a0-0761-4f49-a9e1-d27b1e270ed4.png",
+      "inspection": "内蔵生成結果と保存されたPNGを目視。見出し・日付・補足文・AI注記が正しく読める。顔、両手、ボールと全テキストが確認できる。動作に合わせて左肘外側と下半身が画面端にかかる構図だが、不自然な手指・関節の破綻、文字の見切れ、重要要素の遮蔽は認めない。写真風ではなく手描きのイラスト。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-26T01:53:43.632062+00:00",
+  "publication_approved": false
+}
