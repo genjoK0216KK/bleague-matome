@@ -1400,6 +1400,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "千葉ジェッツ10勝10敗、得点はリーグ2位でも失点が2番目に多い"
   },
+  "article-daily-20261126.html": {
+   "article_path": "article-daily-20261126.html",
+   "editorial_fingerprint": "b7950bb4aa4dbf72dfeee20e029e41926be53cd65f1144b444163f05a5ac4aff",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261126-daa80bd5472b.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261126-daa80bd5472b-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "06bd0c0214f1b3967606",
+   "image_sha256": "daa80bd5472bfc0b5993298b161e56880978088684d1d87f4812b731dbd6aba7",
+   "imported_at": "2026-11-26T01:54:21.355209+00:00",
+   "prepared_at": "2026-11-26T01:53:43.632062+00:00",
+   "source_blob_sha": "278438ea4bdbef36ce9342940f0c7af4047cc890",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "b7950bb4aa4dbf72dfeee20e029e41926be53cd65f1144b444163f05a5ac4aff",
+   "style": "ink-lime-portrait-v5",
+   "title": "仙台89ERSのシェーファーが日本代表、同僚はレバノン代表"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -3503,13 +3531,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261117.html",
-   "at": "2026-11-17T10:34:34.886278+00:00",
-   "event": "imported",
-   "id": "76b4702a5283e22a22d2",
-   "image": "ba97861710ad"
-  },
-  {
    "article": "article-results-one-next-20261117.html",
    "at": "2026-11-17T10:34:34.886881+00:00",
    "by": "20134568717cc8260005",
@@ -4061,6 +4082,13 @@
    "event": "imported",
    "id": "a6a1540690dd10d87164",
    "image": "57ffbcfbe3c6"
+  },
+  {
+   "article": "article-daily-20261126.html",
+   "at": "2026-11-26T01:54:21.355231+00:00",
+   "event": "imported",
+   "id": "06bd0c0214f1b3967606",
+   "image": "daa80bd5472b"
   }
  ],
  "seen": {
@@ -4069,6 +4097,7 @@
   "02a6048a7bd570db2c5e": "superseded:8a37d086b2f172a45d5b",
   "03f1109abc0d7ee744f9": "superseded:5e231e28b370cb26f1f6",
   "063daeab6587291acbe0": "imported",
+  "06bd0c0214f1b3967606": "imported",
   "0784f83afb138807346a": "superseded:602157ba437d2c7416b9",
   "091b3c06f77815c82f47": "imported",
   "0a5c2c0f2505974f6de8": "imported",
