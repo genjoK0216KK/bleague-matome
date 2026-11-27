@@ -1458,29 +1458,29 @@
   },
   "article-daily-20261127.html": {
    "article_path": "article-daily-20261127.html",
-   "editorial_fingerprint": "d9c2726feff858ea506b15073f71846bb54657236f6e56283aedc12d75d801ab",
+   "editorial_fingerprint": "619fb04de5af1a7748272b94d6a27e898818148029715b8b5a40d6571e4ffc6b",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261127-3adaeec07a73.jpg",
+     "path": "thumbs/auto/article-daily-20261127-abfcc9b2df99.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261127-3adaeec07a73-og.jpg",
+     "path": "thumbs/auto/article-daily-20261127-abfcc9b2df99-og.jpg",
      "width": 1200
     }
    },
-   "id": "6b7be81572e410b31c85",
-   "image_sha256": "3adaeec07a73fe99544852f951d4fd677b659b8ae9a2655ea099ef04f1786667",
-   "imported_at": "2026-11-26T23:22:16.807245+00:00",
-   "prepared_at": "2026-11-26T23:21:36.997003+00:00",
-   "source_blob_sha": "d7745b5e7e839b15df8ca7e1bfabee5bf06a21cf",
+   "id": "4ab7acfe944fb0c5049f",
+   "image_sha256": "abfcc9b2df995e0c5ab4b0eabd2d2ca51c4098876103a8bb3bd3c1902f31ce13",
+   "imported_at": "2026-11-27T03:24:01.093188+00:00",
+   "prepared_at": "2026-11-27T03:20:18.914841+00:00",
+   "source_blob_sha": "f3144c34ce5c9cc707f13913b32fce0dd8a6e41d",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "d9c2726feff858ea506b15073f71846bb54657236f6e56283aedc12d75d801ab",
+   "stable_fingerprint": "619fb04de5af1a7748272b94d6a27e898818148029715b8b5a40d6571e4ffc6b",
    "style": "ink-lime-portrait-v5",
    "title": "越谷アルファーズ、首位の勢いで福岡へ ONE11/27の2試合を予測"
   },
@@ -3643,20 +3643,6 @@
  },
  "log": [
   {
-   "article": "article-games-20261117.html",
-   "at": "2026-11-17T18:29:27.613897+00:00",
-   "event": "imported",
-   "id": "64f8f029eda7f4608081",
-   "image": "ff279ab51b8a"
-  },
-  {
-   "article": "article-games-20261118.html",
-   "at": "2026-11-17T18:29:27.760443+00:00",
-   "event": "imported",
-   "id": "f17a38e3f83c904e6b04",
-   "image": "bc5483fd97e0"
-  },
-  {
    "article": "article-results-one-next-20261117.html",
    "at": "2026-11-17T18:29:27.761188+00:00",
    "by": "ca6cbcfdc7f7486e54e3",
@@ -4201,6 +4187,20 @@
    "event": "imported",
    "id": "6b7be81572e410b31c85",
    "image": "3adaeec07a73"
+  },
+  {
+   "article": "article-daily-20261127.html",
+   "at": "2026-11-27T03:24:00.978229+00:00",
+   "by": "4ab7acfe944fb0c5049f",
+   "event": "superseded",
+   "id": "6b7be81572e410b31c85"
+  },
+  {
+   "article": "article-daily-20261127.html",
+   "at": "2026-11-27T03:24:01.093216+00:00",
+   "event": "imported",
+   "id": "4ab7acfe944fb0c5049f",
+   "image": "abfcc9b2df99"
   }
  ],
  "seen": {
@@ -4272,6 +4272,7 @@
   "4a1cd77fbe86da6af1f2": "superseded:be964f4359fb4b535b50",
   "4a30a84fea8141cf8be4": "imported",
   "4a6423c87dbbfdc202b9": "imported",
+  "4ab7acfe944fb0c5049f": "imported",
   "4acaa02dc6ec1401ed89": "imported",
   "4c4f1870a93c2d66f8f1": "imported",
   "4ec5ffedaee7935f9089": "imported",
@@ -4304,7 +4305,7 @@
   "6b0212da2ca7a9d34810": "imported",
   "6b5193f033d3228b846d": "superseded:a9d34f9ead8bbf40b841",
   "6b5e1fd48ec9ce315e3d": "superseded:3c626af62477fc9be507",
-  "6b7be81572e410b31c85": "imported",
+  "6b7be81572e410b31c85": "superseded:4ab7acfe944fb0c5049f",
   "6e14b01b2117b3d326c8": "superseded:4c4f1870a93c2d66f8f1",
   "7181c496e97c8dc59d57": "superseded:7b37144d46a646e84340",
   "7229b09a7f88459f4780": "imported",
