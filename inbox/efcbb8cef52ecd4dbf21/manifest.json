@@ -1,0 +1,106 @@
+{
+  "id": "efcbb8cef52ecd4dbf21",
+  "article_path": "article-analysis-chibajets-20261127.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-chibajets-20261127.html",
+  "source_commit": "",
+  "source_blob_sha": "0354002fdaa9f80a7bc56a2564bdcc75b52ba39b",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "c6f0b6f736aec6cefcfc5fd24b983338f20492d3aef3b5ddf7d79eb4e193a45d",
+  "last_observed_blob_sha": "0354002fdaa9f80a7bc56a2564bdcc75b52ba39b",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/efcbb8cef52ecd4dbf21/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/efcbb8cef52ecd4dbf21/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-27T03:24:10.540913+00:00",
+  "creation_event_id": "7b89d622abb552c6b2c0",
+  "event_blob_sha": "0354002fdaa9f80a7bc56a2564bdcc75b52ba39b",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/efcbb8cef52ecd4dbf21/thumbnail.png",
+  "image_sha256": "ec360f70ae69aa561d3d43590e9874dc51da19793fa2cea70696c04c6f1b1454",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "0354002fdaa9f80a7bc56a2564bdcc75b52ba39b",
+    "text_lines": [
+      "千葉ジェッツ",
+      "直近5試合｜11/10〜11/18",
+      "4勝1敗",
+      "支えたのは",
+      "3Pとフリースロー",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/efcbb8cef52ecd4dbf21/source.html",
+        "role": "固定版本文。見出し・対象期間・勝敗・チーム分析の要点の根拠。HTMLのgit blob形式SHA-1を標準ライブラリで照合済み（gitコマンド不使用）。",
+        "article_url": "https://basuke-matome.jp/article-analysis-chibajets-20261127.html",
+        "evidence": [
+          "直近5試合は4勝1敗",
+          "対象は11月10日の大阪戦から11月18日の秋田戦まで",
+          "2Pでは相手に28点上回られたが、3Pとフリースローで合わせて48点多く得点"
+        ],
+        "qualifiers": "直近5試合と対象期間を画像に明記。シーズン成績ではない。成功率が高いという表現、未調整の比較順位、個人成績は画像に入れていない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/efcbb8cef52ecd4dbf21/source.txt",
+        "role": "同じ固定原稿の文章版。HTMLとともに本文の唯一の根拠として確認。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール。今回の本人指示を優先し、ready・送信・公開は実行しない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイル。view_imageで確認。黒・ライム・太字日本語・インクとブラシの参考のみ。選手名・成績は転用しない。",
+        "note": "手順書記載のA-faison-ivory-v3.pngは存在しなかったため使用せず、確認できたBの基本スタイルを採用。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ブランドン・ランドルフ",
+        "selection": "ランダム",
+        "selection_reason": "記事の主題は千葉ジェッツ全体の直近5試合分析。本文に登場する6選手からPython random.SystemRandom().choiceで1人を選択。",
+        "candidate_names": [
+          "ブランドン・ランドルフ",
+          "富樫勇樹",
+          "マット・コステロ",
+          "ルーク・メイ",
+          "ネイト・ウィリアムズ",
+          "エルジー・ギル"
+        ],
+        "reference_source": "千葉ジェッツ公式 選手プロフィール",
+        "profile_url": "https://chibajets.jp/team/players/detail/id=26997?PlayerID=51000643",
+        "photo_url": "https://bleague.bl.kuroco-img.app/v=2026112622/files/user/roster/704/2026-27/51000643_01.jpg",
+        "photo_viewed": true,
+        "observed_features": "頭に沿ったコーンロウと短い側頭部、細長い輪郭、眉と目鼻、厚みのある唇、短い口ひげと顎先のひげ、長い腕と細身の体格を公式写真で確認。生成イラストでも主要な特徴を目視確認。",
+        "usage": "容姿のみ参照。公式写真の貼付なし。個人名・背番号・個人成績は画像に表示しない。無地の赤と白のユニフォームで、チーム・リーグ・スポンサーのロゴなし。実際の試合を再現しないプレーのイメージ。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset type: バスケまとめの日本語記事サムネイル。最終画像を1枚のみ作成する。横長16:9、1792×1008px程度、幅1000px以上のPNG、透明背景なし。\nPrimary request: 千葉ジェッツの直近5試合を扱うチーム分析記事のサムネイル。本文の要点は「直近5試合（11/10〜11/18）は4勝1敗。支えたのは3Pとフリースロー」。事実はこの内容だけを使う。\nReference roles: 会話内で確認済みの黒×ライムの承認スタイル B-culver-black-lime-v3.png は色・太字日本語・手描きブラシの参考のみ。参照画像にあるカルバー、38得点、仙台・神戸、スコア、日付は絶対に持ち越さない。会話内で確認した千葉ジェッツ公式プロフィールのブランドン・ランドルフの写真は容姿の参考のみ。写真を貼り付けたり写真風に再現したりしない。\nSubject: 実在選手ブランドン・ランドルフ（Brandon Randolph）1人を、明らかに手描きのスポーツインクイラストで描く。記事はチームが主役なので、彼は本文に登場する6人からランダムに選ばれたイメージのモデル。選手の名前、個人成績、出場、活躍を画像内の文字に書かない。\nLikeness reference: 公式写真で確認した、頭に沿った整った黒いコーンロウ（中央に分け目と編み目があり、側頭部は短い）、細長い卵形の顔、しっかりした眉、暗いアーモンド形の目、やや幅のある鼻、ふっくらした唇、短い口ひげと顎先の小さく濃いあごひげ、頬と顎の縁の薄いひげ、褐色の肌、細身で長い腕と引き締まった体格を保つ。別人や架空の選手、アフロ、長い垂れ髪、厚い全面ひげに変えない。\nScene and pose: 左約40%にプレー中の本人。体を斜め右へひねり、膝を曲げてボールを両手で胸から顔の手前へ引き上げ、プルアップジャンパーに移る瞬間の躍動感ある3/4ビュー。顔が明瞭に見える。両手はボールの左右と下を自然に支え、各手の指と肘・手首を正確に描く。ボールは人物の小道具として1個だけ。選手は頭から膝上程度までの構図。実際の特定試合や決勝シュートを再現しない。ゴール、対戦相手、観客、得点板は描かない。\nClothing: 赤の無地バスケットボールジャージ、白の襟と袖縁。チームロゴ・リーグロゴ・スポンサー・ブランドマーク・背番号・名前を一切入れない。参考写真の衣装の文字とロゴを取り除き、単純な赤と白の服にする。\nStyle/medium: 黒 #151A18 の余白をしっかり残す背景、ライム #CCF43B の太い乾いた筆跡、白・暖色グレーの手描きインク陰影。ザラっとした紙と擦れの質感、顔や腕の描線は明快。写真風・3D・精密な写実画にはしない。少ない要素で強いスポーツ編集デザイン。\nComposition: 参照とは左右を変え、左に選手、右約57%に文字。人物と文字を重ねない。ライムの斜めブラシを人物の後ろに走らせる。右の数字を最大、チーム名と3P/フリースローを太字に。上下左右5%程度を安全余白とし、顔・ボール・手・文字を切らない。下端には背景と十分なコントラストのある小さい注記を読みやすく置く。\nText (verbatim; only these lines, no other words, no player name):\n千葉ジェッツ\n直近5試合｜11/10〜11/18\n4勝1敗\n支えたのは\n3Pとフリースロー\nイラスト（AI生成）\nイメージ\n\nTypography: 正確で読みやすい太い日本語ゴシック。右上「千葉ジェッツ」は白の大見出し。その下の期間は白で小さく。「4勝1敗」は極太でライムの最大文字。「支えたのは」は白で小さく、「3Pとフリースロー」は白かライムの大文字で読みやすく1行または自然な2行。下端「イラスト（AI生成）」「イメージ」は必ず省略せず同じ行に並べる。個人の実績と見えないよう、チーム名と4勝1敗を同じ文字領域でまとめる。\nConstraints: 直近5試合という対象期間を省略しない。3P成功率が高いとは書かない。比較順位・個人成績・未掲載の数値を足さない。公式写真は最終画像に使用せず、容姿を参考にしたイラストだけを新しく描く。チームとリーグのロゴなし。イラスト表記は必須。",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_count": 1,
+      "revision_count": 0,
+      "output_format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "qa_method": "生成結果を確認したうえで、保存元PNGをview_imageで再度表示して目視検品。",
+      "qa_observations": {
+        "text_and_numbers": "千葉ジェッツ、直近5試合、11/10〜11/18、4勝1敗、支えたのは、3Pとフリースローを目視で読取り、固定原稿と一致。",
+        "source_qualifiers": "5試合の対象範囲を残した。順位・成功率の優位・個人成績を追加せず、チーム成績として表示。イメージ表記があり、実際の試合場面の再現としない。",
+        "likeness_or_no_named_person": "実在選手の公式写真と描画を比較し、コーンロウ、輪郭、目鼻、口ひげと顎ひげの主要特徴を確認。ランダム選択なので画像に氏名や個人成績はない。",
+        "layout": "約16:9。選手が左、見出しが右。顔・ボール・両手・全見出し・下部注記の見切れなし。両腕・指とボールの支え方に明らかな破綻なし。下半身の意図的なフレーム外トリミングのみ。",
+        "ai_label": "下部の「イラスト（AI生成）」「イメージ」を実際に読めることを確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-27T03:27:16.283685+00:00",
+  "publication_approved": false
+}
