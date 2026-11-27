@@ -1,0 +1,110 @@
+{
+  "id": "22d24745a80124a82932",
+  "article_path": "article-results-one-next-20261128.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261128.html",
+  "source_commit": "",
+  "source_blob_sha": "5be48e30bd9b4e6460945302d6f030054e22210c",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "013232b7cf21f1b242e4a147639d2b1e4d6307a038da5891a788acc189aacb18",
+  "last_observed_blob_sha": "5be48e30bd9b4e6460945302d6f030054e22210c",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/22d24745a80124a82932/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/22d24745a80124a82932/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-27T21:30:10.196427+00:00",
+  "creation_event_id": "878845a07fdd55fa6d21",
+  "event_blob_sha": "5be48e30bd9b4e6460945302d6f030054e22210c",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/22d24745a80124a82932/thumbnail.png",
+  "image_sha256": "4d7ff83050b4139df5410aa2aa4f2bd6ee1c2fb54ab2d144354f02ba0336db75",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "5be48e30bd9b4e6460945302d6f030054e22210c",
+    "text_lines": [
+      "バスケまとめ",
+      "11/28  B.ONE / B.NEXT",
+      "今季平均EFFで選ぶ",
+      "登録選手の",
+      "ベスト5",
+      "出場確定ではありません",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/22d24745a80124a82932/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261128.html",
+        "use": "本文の根拠。内容からSHA-1 blob指紋を算出し指定値と一致確認。gitコマンド不使用。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/22d24745a80124a82932/source.txt",
+        "use": "本文の根拠。試合前の今季平均EFFに基づく登録選手のベスト5。対象日は2026-11-28。出場確定ではなく、当日の試合結果・当日EFFは全試合の公式記録確定待ち。画像に結果や個人成績を載せない。"
+      },
+      {
+        "type": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "section": "画像生成・検品ルール",
+        "use": "最新依頼の実在選手必須・ランダム時の氏名と個人成績禁止・ready実行禁止を優先。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで実見。黒×ライム、太い日本語見出し、インクとブラシの表現のみ参照。元の氏名・日付・成績は流用しない。A-faison-ivory-v3.pngは指定場所に存在せず未使用。"
+      },
+      {
+        "type": "official_appearance_reference",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=43437",
+        "image_url": "https://www.bleague.jp/files/user/roster/2728/2026-27/43437_03.png",
+        "use": "人物の容姿確認専用。公式プロフィールから画像URLを取得し画像をview_imageで実見。本文の情報源には用いず、公式写真を完成画像へ貼り付けない。"
+      }
+    ],
+    "person_reference": {
+      "selection": "ランダム",
+      "reason": "複数選手が表で同等に扱われ、本文の単独主役を絞れないため。",
+      "method": "source.htmlのstrong要素に記載された20選手を抽出し、Python secrets.choiceで1人選択。",
+      "players": [
+        {
+          "name": "ハイデン・コヴァル",
+          "latin_name": "Hayden Koval",
+          "selection": "ランダム",
+          "reference_source": "B.LEAGUE公式プロフィール",
+          "url": "https://www.bleague.jp/roster_detail/?PlayerID=43437",
+          "image_url": "https://www.bleague.jp/files/user/roster/2728/2026-27/43437_03.png",
+          "observed_appearance": "明るい肌、短い薄茶色の横流しの髪、細長く角張った輪郭、明るい目、まっすぐな鼻、目立つ耳、ひげなし、長身で細身の体格。",
+          "illustration_review": "生成画像を実見し、薄茶色の髪・明るい目・細長い輪郭・鼻・耳・ひげなしの特徴を確認。髪と陰影はインク画として誇張。無地のユニフォーム、人物名・背番号・個人成績・ロゴなし。",
+          "scene": "ボールを両手に持ち、体をひねって動き出すイメージ。実在の試合場面の再現ではない。"
+        }
+      ]
+    },
+    "prompt": "Use case: illustration-story\nAsset type: Japanese basketball editorial thumbnail, ONE finished landscape PNG, 1536x864 target (approximately 16:9, width at least 1000 px).\nPrimary request: Create a bold, highly legible thumbnail for a pre-game article about best-five selections from registered players based on season-average EFF. This is a conceptual illustration, not a depiction of an actual game or confirmed appearance.\n\nVisual style reference already inspected: the approved B-culver-black-lime-v3.png image shown earlier. Follow its near-black #151A18, electric lime #CCF43B, warm off-white, expressive hand-drawn ink and dry-brush marks, restrained splatter, very bold Japanese typography. Do not copy its player, name, date, scores, statistics, or exact pose. Not photographic. No photo collage.\n\nSubject: exactly ONE real player, Hayden Koval (ハイデン・コヴァル), randomly selected from the 20 players named in the fixed article. His official B.LEAGUE portrait has been visually checked, from https://www.bleague.jp/roster_detail/?PlayerID=43437 and image https://www.bleague.jp/files/user/roster/2728/2026-27/43437_03.png . Recreate his likeness in an original expressive ink drawing: light skin, tall lanky athletic build, short sandy/light-brown hair with side-swept fringe and slightly tousled top, long angular oval face, prominent ears, straight narrow nose, light eyes, thin light eyebrows, clean-shaven, defined jaw and chin. Do not invent a different player. Use a focused expression rather than portrait smiling. Draw face clearly, three-quarter view near frontal.\n\nComposition: left 55% is strong typography; right 45% is a large energetic illustration of Koval moving into a basketball drive, knees bent, torso twisting forward, both hands naturally gripping a SINGLE orange basketball near the right hip, face unobstructed. Show from head through upper thighs and leave both hands, elbows, ball, and full head inside the frame. Use anatomically correct arms and fingers, no extra limbs. One strong rising lime brushstroke behind the figure conveys motion. Subject rendered mainly in black/off-white ink, with subtle warm skin tone and orange ball. Plain unbranded off-white basketball jersey with dark side trim; NO player name, number, badges, team marks, sponsor lettering, or league logo. No other people or photographic insert.\n\nText, verbatim, all in Japanese/Latin as given, no additional text:\nTop-left small masthead: \"バスケまとめ\"\nDate/category below masthead: \"11/28  B.ONE / B.NEXT\"\nMedium lead-in: \"今季平均EFFで選ぶ\"\nLarge bold headline on two lines:\n\"登録選手の\"\n\"ベスト5\"\nThe ベスト5 line should be the biggest, in electric lime; other headline text warm white.\nBelow headline, clear readable qualifier: \"出場確定ではありません\"\nBottom-left readable disclosure: \"イラスト（AI生成）\"\nNext to that disclosure: \"イメージ\"\n\nText accuracy is essential. Keep all letters intact with comfortable safe margins of at least 4% from edges. No face/text overlaps. Maintain strong hierarchy and plenty of negative space. No score, performance claim, victory claim, confirmed-game action, player name, or player-specific numbers anywhere. Only the date and the general best-five headline contain numbers. Do not depict a buzzer-beater, scoreboard, actual opponent, or actual match reconstruction. Preserve the explicit qualifier and AI disclosure.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "内蔵画像生成",
+      "generation_calls": 1,
+      "correction_calls": 0,
+      "original_output": "/Users/genjo/.codex/generated_images/01a21eea-703e-70f3-8e7e-318546376197/exec-871f57b5-93a9-4d78-9b69-857ad52d963c.png",
+      "output": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/22d24745a80124a82932/generated.png",
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "postprocessing": "なし。内蔵生成のPNGをそのままコピー。",
+      "qa_evidence": {
+        "text_and_numbers": "生成画像を実見しtext_linesの全行と一致。日付11/28、見出しベスト5を確認。個人成績や得点、選手名はない。",
+        "source_qualifiers": "今季平均EFFで選ぶ・登録選手・出場確定ではありませんを明記。当日実績や確定出場を断定せず、イメージ表記あり。",
+        "likeness_or_no_named_person": "公式写真を実見後に生成。ランダムに選択した実在選手の顔の特徴を確認。画像内の選手名・個人成績はない。",
+        "layout": "約16:9。文字・顔・ボール・両手は判読でき、本文見出しとの重なりなし。腕は2本、手の形に明らかな破綻なし。下端の太腿は構図上のトリミング。黒×ライムのインク画で写真風ではなく、ロゴなし。",
+        "ai_label": "左下にイラスト（AI生成）およびイメージを確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-27T21:33:00.042722+00:00",
+  "publication_approved": false
+}
