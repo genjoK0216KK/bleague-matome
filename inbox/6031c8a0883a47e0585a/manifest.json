@@ -1,0 +1,91 @@
+{
+  "id": "6031c8a0883a47e0585a",
+  "article_path": "article-games-20261127.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261127.html",
+  "source_commit": "",
+  "source_blob_sha": "d68c1b46c8a9ca11e6d3b32f524d81ee410a3c92",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "8372cf26d4ac7fd725c1542653cbb432ceff149f161255fcb4d1e595a20311be",
+  "last_observed_blob_sha": "d68c1b46c8a9ca11e6d3b32f524d81ee410a3c92",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6031c8a0883a47e0585a/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6031c8a0883a47e0585a/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-27T10:10:57.196606+00:00",
+  "creation_event_id": "ed5969753aecb22347e0",
+  "event_blob_sha": "d68c1b46c8a9ca11e6d3b32f524d81ee410a3c92",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/6031c8a0883a47e0585a/thumbnail.png",
+  "image_sha256": "9222960c3e0039b606766f1757d65f02383fb284ed30284ad52aa69f005a2cc3",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "d68c1b46c8a9ca11e6d3b32f524d81ee410a3c92",
+    "text_lines": [
+      "バスケまとめ",
+      "11/27 試合結果",
+      "公式記録",
+      "確定待ち",
+      "2026.11.27 19:05 JST時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6031c8a0883a47e0585a/source.html",
+        "role": "記事本文の根拠（固定版HTML）",
+        "article_url": "https://basuke-matome.jp/article-games-20261127.html",
+        "verified_blob_sha": "d68c1b46c8a9ca11e6d3b32f524d81ee410a3c92",
+        "qualifier": "2026-11-27 19:05 JST時点。全試合の公式記録確定待ち。登録選手の選出は出場確定を示さない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/6031c8a0883a47e0585a/source.txt",
+        "role": "記事本文の根拠（固定版文章）"
+      },
+      {
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000644",
+        "image_url": "https://www.bleague.jp/files/user/roster/1363/2026-27/51000644_03.png",
+        "role": "タイラー・ワイドマン選手の容姿のみ参照。外部ページの数値を本文・画像の根拠にしない。公式写真は完成画像に貼り付けない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイル参照。view_imageで確認。選手・成績・文字内容は持ち越さない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "タイラー・ワイドマン",
+        "selection": "ランダム",
+        "selection_reason": "複数選手が同じ扱いで掲載され、単独の主役を絞れないため、本文に名前のある10選手から抽選。",
+        "selection_method": "Python random.Random(int('6031c8a0883a47e0585a', 16)).choice(本文掲載順の10選手)",
+        "candidate_names": [
+          "アンソニー・クレモンズ",
+          "トレイ・ボイド",
+          "ジャック・クラーク",
+          "ブレイク・プレストン",
+          "キャメロン・オリバー",
+          "池田祐一",
+          "大庭岳輝",
+          "長谷川比源",
+          "チェイス・フィーラー",
+          "タイラー・ワイドマン"
+        ],
+        "source": "B.LEAGUE公式選手プロフィール",
+        "source_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000644",
+        "image_url": "https://www.bleague.jp/files/user/roster/1363/2026-27/51000644_03.png",
+        "reference_viewed": true,
+        "observed_features": "頭に沿って後ろへまとめた短い黒い編み髪、襟足に下がる短い編み髪、口ひげと顎につながる黒いひげ、幅のある鼻と輪郭、厚い肩・腕、腕のタトゥーを参照。",
+        "depiction": "無地のユニフォームでボールを両手に持ち、体をひねるプレー姿のインク・ブラシ画。実際の試合場面の再現ではない。画像内に選手名・成績・出場・活躍の記述なし。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate ONE finished Japanese editorial basketball thumbnail, a new original image, landscape 16:9, target 1792 x 1024 or 1536 x 864 pixels, minimum width 1000 px. No alternatives or collage.\nApproved visual direction: the black-and-lime sample already viewed in this conversation, near-black #151A18 background, acid lime #CCF43B dry-brush strokes, warm ivory typography, hand-drawn sports ink illustration. Bold Japanese typography, few elements, readable at thumbnail size. Use only the style of that sample, do NOT copy its player, name, date, score, or statistics.\nSubject: ONE real basketball player, Tyler Wideman (タイラー・ワイドマン), selected randomly from the names in the article. Use the official B.LEAGUE portrait viewed in this conversation as likeness reference ONLY: https://www.bleague.jp/files/user/roster/1363/2026-27/51000644_03.png . Preserve his face: broad strong oval face, medium-dark brown skin, short black braids pulled back close to the head with a short loose braid near the nape, thick connected mustache and full black beard tapering toward chin, broad nose, dark eyes, strong shoulders and muscular stocky big-man build, visible arm tattoos interpreted as loose ink marks. Not a high afro, not a generic invented player. Do not paste or reproduce photographic pixels; create a clearly drawn ink/brush illustration, not photorealistic.\nComposition: player fills LEFT 43 percent, three-quarter angle facing slightly toward center, dynamic low driving/gather step with bent knees and torso twisting forward, both hands holding a single orange basketball near waist/chest, fingers anatomically credible. His head, face, hands, ball and elbows stay inside the canvas. Torso/upper legs can crop intentionally at bottom, above the separate footer. Plain ivory basketball jersey with black trim, no number, name, sponsor, club logo or league logo. Lime diagonal brush energy behind player, keep right text panel clear. This is an imagined basketball movement, NOT a depiction of any actual game moment, score, appearance or achievement.\nRIGHT 54 percent typography, exact Japanese text, generous separation and a safe 5 percent margin:\nSmall top brand: \"バスケまとめ\"\nLarge white upper line: \"11/27 試合結果\"\nVery large white headline: \"公式記録\"\nLargest lime headline immediately below: \"確定待ち\"\nSmall but clearly readable white time line: \"2026.11.27 19:05 JST時点\"\nFooter on solid dark clear background, fully legible and uncropped: \"イラスト（AI生成）\" and \"イメージ\"\nThese are the ONLY words/numbers in the entire image. Do not add the player's name, jersey number, score, performance, statistics, victory claim, team names, badges, logos, watermarks or extra captions.\nContent basis from fixed article only: as of 2026-11-27 19:05 JST the official records are not finalized. Therefore \"公式記録\" plus \"確定待ち\" must be the central prominent message; the image must not imply results are finalized. Render all Japanese exactly and cleanly with heavy readable sans-serif type. High contrast, restrained textured background, strong face likeness, polished final thumbnail.",
+    "generator": "内蔵 image_gen.imagegen（初回生成1枚、修正0回）",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-27T10:14:13.762996+00:00",
+  "publication_approved": false
+}

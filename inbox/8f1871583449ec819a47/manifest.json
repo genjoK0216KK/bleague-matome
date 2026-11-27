@@ -1,0 +1,112 @@
+{
+  "id": "8f1871583449ec819a47",
+  "article_path": "article-results-one-next-20261127.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261127.html",
+  "source_commit": "",
+  "source_blob_sha": "b9d08f03f920cb1cca492b2a6066cc2eec38e1f3",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "8372cf26d4ac7fd725c1542653cbb432ceff149f161255fcb4d1e595a20311be",
+  "last_observed_blob_sha": "b9d08f03f920cb1cca492b2a6066cc2eec38e1f3",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8f1871583449ec819a47/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8f1871583449ec819a47/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-27T10:10:57.729049+00:00",
+  "creation_event_id": "c01c6341b4329471df04",
+  "event_blob_sha": "b9d08f03f920cb1cca492b2a6066cc2eec38e1f3",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/8f1871583449ec819a47/thumbnail.png",
+  "image_sha256": "2aeba31aebfbfc5f59549c17f6636aa35e8c7ce5b30188edf7d3fbc0a283e558",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "b9d08f03f920cb1cca492b2a6066cc2eec38e1f3",
+    "text_lines": [
+      "バスケまとめ",
+      "11/27 B.ONE",
+      "試合結果",
+      "公式記録の確定待ち",
+      "2026.11.27 19:05 JST 時点",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8f1871583449ec819a47/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261127.html",
+        "role": "本文・日付・リーグ・留保の根拠。ライブ記事は参照していない。",
+        "as_of": "2026-11-27 19:05 JST",
+        "qualifier": "全試合の公式記録確定待ち。当日実績ランキングは未掲載。今季平均EFFによる選出は出場確定を示さない。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/8f1871583449ec819a47/source.txt",
+        "role": "固定HTMLと本文情報を照合。本文根拠はこのTXTと固定HTMLのみ。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで目視。黒・ライム・太い見出し・インク表現の参照。選手や成績は流用していない。"
+      },
+      {
+        "type": "official_player_appearance",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000280",
+        "image_url": "https://www.bleague.jp/files/user/roster/745/2026-27/51000280_03.png",
+        "role": "人物の容姿のみ参照。公式写真そのものを成果物に貼り付けていない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "アンソニー・クレモンズ",
+        "selection": "ランダム",
+        "reason": "本文は複数の登録選手を表で扱い、特定選手を主役としていないため、本文に名前のある10人から選出。",
+        "method": "Python random.Random('8f1871583449ec819a47').choice(article_players)",
+        "candidate_names": [
+          "アンソニー・クレモンズ",
+          "トレイ・ボイド",
+          "ジャック・クラーク",
+          "ブレイク・プレストン",
+          "キャメロン・オリバー",
+          "池田 祐一",
+          "大庭 岳輝",
+          "長谷川 比源",
+          "チェイス・フィーラー",
+          "タイラー・ワイドマン"
+        ],
+        "reference_source": "B.LEAGUE公式 2026-27プロフィール",
+        "reference_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000280",
+        "reference_image_url": "https://www.bleague.jp/files/user/roster/745/2026-27/51000280_03.png",
+        "appearance_inspected_with": "view_image",
+        "observed_features": "後ろに流れるコーンロウ、左右の短い髪、広い額、低い眉、鼻先・鼻翼、頬の輪郭、口ひげと顎下につながる黒いひげを確認。",
+        "depiction": "ドリブルで進む姿のイメージ。実際の試合場面の再現ではない。画像に氏名・成績・出場や活躍の断定を入れていない。"
+      }
+    ],
+    "prompt": {
+      "initial": "Use case: illustration-story.\nCreate ONE finished Japanese basketball news thumbnail as a PNG, landscape 16:9, 1600x900 or larger (prefer 1792x1024 or exact 16:9). It must be a hand-drawn sports editorial illustration, never a photograph. No variants, no panels.\nStyle reference already inspected: approved B-culver-black-lime-v3. Match its very dark green-black #151A18, acid lime #CCF43B, warm off-white, bold Japanese gothic headlines, rough ink contours, dry-brush hatching and one diagonal lime brush sweep. Do NOT copy its athlete, date, scores, name or headline.\nSubject: exactly one REAL athlete, Anthony Clemmons (アンソニー・クレモンズ). Appearance reference: official B.LEAGUE 2026-27 profile at https://www.bleague.jp/roster_detail/?PlayerID=51000280 and official portrait https://www.bleague.jp/files/user/roster/745/2026-27/51000280_03.png, visually inspected. Preserve the actual face: dark brown skin, tightly braided black cornrows running backward with narrow center parting and close sides, slightly receding temples, broad forehead, thick low eyebrows, deep brown eyes, medium broad nose with rounded nostrils, full lips, defined cheekbones and a connected full black beard and moustache, beard a little longer below the chin. Strong lean guard physique. Render the individual in expressive ink and cream shadow planes, not a generic invented athlete.\nScene is a conceptual basketball play illustration, NOT a depiction of any actual match. Show a dynamic low dribble drive, three-quarter view facing slightly left, head up, torso leaning forward, right hand controlling the basketball at knee/hip level and left arm bent naturally for balance. Anatomically correct wrists, five natural fingers per visible hand, two arms, and correct ball interaction. Head, both hands and ball fully inside image margins. Athlete on the RIGHT 43%, figure cropped intentionally below mid thighs. Orange basketball is a hand-controlled prop. No other people.\nPlain off-white sleeveless basketball jersey and shorts, no logos, no league marks, no sponsor names, no brand marks, no player name, no jersey number. Some subtle tattoos may be hinted only as abstract ink shading.\nComposition: LEFT 55% has exceptionally clean typographic negative space, no figure or brush across text. Background mostly dark. One broad lime diagonal brush behind the figure with sparse ink flecks, keep few elements and strong mobile readability. 5% safe margins.\nRender ONLY the following exact Japanese text, with precise spelling and no extra text:\nTop-left small branding: 「バスケまとめ」\nAbove main headline, medium lime: 「11/27 B.ONE」\nMain headline, very large warm-white heavy bold: 「試合結果」\nImmediately below headline, prominent lime box with black bold lettering, all on one readable line: 「公式記録の確定待ち」\nBelow that, smaller but legible white: 「2026.11.27 19:05 JST 時点」\nBottom-left, readable white annotation with comfortable margins: 「イラスト（AI生成）」\nBeside that annotation, white: 「イメージ」\nThe pending qualifier must be prominent, not tiny. Fullwidth parentheses in （AI生成）. Do not write Clemmons's name or his statistics, participation, achievements, match result, score, victory, TOP3 or best-five claims anywhere. The source manuscript is pending official records as of 2026-11-27 19:05 JST. Do not imply the image recreates an actual game moment. Text must be exactly as specified. No official photo pixels or photographic collage.",
+      "revision": "Edit this exact thumbnail with one targeted layout correction only. Preserve every existing Japanese text glyph and number, the black/lime palette, rough ink style, and the same real Anthony Clemmons likeness, cornrows, beard, white unbranded uniform and dribbling pose.\nThe basketball is clipped by the bottom edge and the head and right elbow are too close to the frame edges. Reduce the entire athlete-and-ball illustration as one coherent unit to about 84% of its current size, positioned entirely in the right-hand portion, so there is at least 5% canvas margin above the head, to the right of the elbow, and below the WHOLE basketball. Keep the same body and hands, no extra limbs. Both hands and all five fingers on each hand must remain correct and fully visible. The figure may still be intentionally cropped below the thighs, but the basketball, head, hands and elbows must be completely visible. Keep the ball as the player's controlled dribbling prop.\nDo not change, reword, add or remove ANY existing typography: バスケまとめ / 11/27 B.ONE / 試合結果 / 公式記録の確定待ち / 2026.11.27 19:05 JST 時点 / イラスト（AI生成） / イメージ.\nKeep all left-column text fully clear with no overlap. Preserve 16:9 landscape at least 1600px wide. No logos, jersey numbers, additional text, photographs or new people. This is an image illustration, never a reconstruction of an actual match."
+    },
+    "generator": {
+      "name": "image_gen.imagegen",
+      "mode": "内蔵画像生成",
+      "initial_generations": 1,
+      "revisions": 1,
+      "final_candidate": "/Users/genjo/.codex/generated_images/01a21c7f-9880-7763-be37-cc9fd5818322/exec-64090ce7-1163-4f32-b5c4-aff4e8773609.png",
+      "revision_reason": "初稿のボール下端の見切れを解消。人物・ボールを縮めて余白を確保。",
+      "visual_inspection": {
+        "text_and_numbers": "修正版を目視。11/27、B.ONE、試合結果、2026.11.27 19:05 JST 時点を固定原稿と照合。得点・勝敗の表示なし。",
+        "source_qualifiers": "『公式記録の確定待ち』を大きく明示。『イメージ』を表示。出場確定や当日の成績と誤認させる文言なし。",
+        "likeness_or_no_named_person": "公式写真と修正版を見比べ、クレモンズ選手のコーンロウ・輪郭・目鼻・ひげの特徴を確認。架空選手は追加していない。",
+        "layout": "修正版の全体を目視。文字の重なりや切れなし。頭・両手・ボールは枠内。手指・腕とボールの接触に明確な破綻なし。太もも下は意図的なイラストの切り取り。ロゴ・スポンサー文字なし。",
+        "ai_label": "『イラスト（AI生成）』と『イメージ』が判読できることを確認。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-27T10:18:20.527971+00:00",
+  "publication_approved": false
+}
