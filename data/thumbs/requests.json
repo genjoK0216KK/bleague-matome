@@ -1136,16 +1136,29 @@
   "article-games-20261127.html": {
    "article_path": "article-games-20261127.html",
    "article_url": "https://basuke-matome.jp/article-games-20261127.html",
-   "editorial_fingerprint": "8372cf26d4ac7fd725c1542653cbb432ceff149f161255fcb4d1e595a20311be",
-   "event_id": "ed5969753aecb22347e0",
-   "recorded_at": "2026-11-27T10:10:51.086787+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "d68c1b46c8a9ca11e6d3b32f524d81ee410a3c92",
-   "stable_fingerprint": "8372cf26d4ac7fd725c1542653cbb432ceff149f161255fcb4d1e595a20311be",
+   "editorial_fingerprint": "75a1034246c428085d80754c7df8aaa0b03e2fbf216ae03d7574ba508d8dc4d5",
+   "event_id": "fe3f2e74a094f1f5f782",
+   "recorded_at": "2026-11-27T15:35:40.646479+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "709c3132985cf9beef650544ad20fb1c23701758",
+   "stable_fingerprint": "75a1034246c428085d80754c7df8aaa0b03e2fbf216ae03d7574ba508d8dc4d5",
    "status": "requested",
    "target_date": "20261127",
-   "title": "11/27 試合結果（公式記録の確定待ち）"
+   "title": "11/27 試合結果・当日のEFF"
+  },
+  "article-games-20261128.html": {
+   "article_path": "article-games-20261128.html",
+   "article_url": "https://basuke-matome.jp/article-games-20261128.html",
+   "editorial_fingerprint": "208973ed1fb8010f40f2205137bd91f8ca47e1704c9e0e21fc925af47e07f7ef",
+   "event_id": "321da21ea52ab0dc07ce",
+   "recorded_at": "2026-11-27T15:35:40.646479+00:00",
+   "settled": false,
+   "source_blob_sha": "76185fa485167caa35bd7f12aa478c08c8c33ca1",
+   "stable_fingerprint": "208973ed1fb8010f40f2205137bd91f8ca47e1704c9e0e21fc925af47e07f7ef",
+   "status": "requested",
+   "target_date": "20261128",
+   "title": "11/28 出場予定選手（登録選手）のベスト5"
   },
   "article-results-one-next-20261025.html": {
    "article_path": "article-results-one-next-20261025.html",
@@ -1486,16 +1499,16 @@
   "article-results-one-next-20261127.html": {
    "article_path": "article-results-one-next-20261127.html",
    "article_url": "https://basuke-matome.jp/article-results-one-next-20261127.html",
-   "editorial_fingerprint": "8372cf26d4ac7fd725c1542653cbb432ceff149f161255fcb4d1e595a20311be",
-   "event_id": "c01c6341b4329471df04",
-   "recorded_at": "2026-11-27T10:10:51.086787+00:00",
-   "revision": 1,
-   "settled": false,
-   "source_blob_sha": "b9d08f03f920cb1cca492b2a6066cc2eec38e1f3",
-   "stable_fingerprint": "8372cf26d4ac7fd725c1542653cbb432ceff149f161255fcb4d1e595a20311be",
+   "editorial_fingerprint": "75a1034246c428085d80754c7df8aaa0b03e2fbf216ae03d7574ba508d8dc4d5",
+   "event_id": "ca1910928aa16049f696",
+   "recorded_at": "2026-11-27T15:35:40.646479+00:00",
+   "revision": 2,
+   "settled": true,
+   "source_blob_sha": "79c4ae0189dee7258946036175cccfa9935ca929",
+   "stable_fingerprint": "75a1034246c428085d80754c7df8aaa0b03e2fbf216ae03d7574ba508d8dc4d5",
    "status": "requested",
    "target_date": "20261127",
-   "title": "11/27 試合結果（公式記録の確定待ち）"
+   "title": "11/27 試合結果・当日のEFF"
   },
   "article-stats-20261026.html": {
    "article_path": "article-stats-20261026.html",
