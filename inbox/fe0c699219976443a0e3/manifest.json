@@ -1,0 +1,100 @@
+{
+  "id": "fe0c699219976443a0e3",
+  "article_path": "article-daily-20261128.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261128.html",
+  "source_commit": "",
+  "source_blob_sha": "296db1e2d12b3afe52be37fb2bfc1c6e5ef7de1e",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "3c42575dbaed52cc3180843a53e3fc8045858227fe6c2170fbc5f3ec2ee22ae2",
+  "last_observed_blob_sha": "296db1e2d12b3afe52be37fb2bfc1c6e5ef7de1e",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe0c699219976443a0e3/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe0c699219976443a0e3/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-27T23:17:17.887698+00:00",
+  "creation_event_id": "4751c74aabf8e023f8e0",
+  "event_blob_sha": "296db1e2d12b3afe52be37fb2bfc1c6e5ef7de1e",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/fe0c699219976443a0e3/thumbnail.png",
+  "image_sha256": "9f536d54e8fbf4f00f937759d1c5b5860c7eaebc1dd4b08bf15f35c8855c57b1",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "296db1e2d12b3afe52be37fb2bfc1c6e5ef7de1e",
+    "text_lines": [
+      "バスケまとめ",
+      "11/28",
+      "第2戦を",
+      "予測",
+      "11/27 結果",
+      "越谷 97-81 福岡",
+      "横浜EX 94-68 岐阜",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "role": "本文根拠（固定版のみ）",
+        "path": "source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261128.html",
+        "blob_sha": "296db1e2d12b3afe52be37fb2bfc1c6e5ef7de1e",
+        "used_facts": [
+          "11/27 越谷97対81福岡",
+          "11/27 横浜EX94対68岐阜",
+          "11/28 第2戦は試合前予測"
+        ],
+        "qualifiers_preserved": [
+          "11/27の結果と11/28の予測を別の見出しで明記",
+          "得点者・出場時間・個人成績は未確認。画像に個人の成績・出場・活躍を記載しない",
+          "選手のプレー姿は実際の試合の再現ではない"
+        ]
+      },
+      {
+        "role": "本文根拠（固定版のみ）",
+        "path": "source.txt"
+      },
+      {
+        "role": "容姿の参照のみ（本文内容の根拠に不使用）",
+        "url": "https://www.bleague.jp/roster_detail/?PlayerID=51000162",
+        "image_url": "https://www.bleague.jp/files/user/roster/1363/2026-27/51000162_03.png"
+      },
+      {
+        "role": "容姿の補助参照のみ（本文内容の根拠に不使用）",
+        "url": "https://www.gifu-swoops.com/news/detail/2-mccree-signed",
+        "image_url": "https://gifu-swoops.bl.kuroco-img.app/v=1786100521/files/user/2026/08/2-mccree.jpg"
+      },
+      {
+        "role": "承認済みスタイル参照（view_imageで確認）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "エリック・マクリー（Erik McCree）",
+        "selection": "ランダム",
+        "reason": "チームの結果と第2戦の予測が中心で、本文の主役となる個人を絞れないため、本文に名前のある4選手からPython secrets.choiceで1人を抽選。",
+        "candidates": [
+          "サゲ・トルバート三世",
+          "ルーズベルト・アダムス",
+          "四家魁人",
+          "エリック・マクリー"
+        ],
+        "source": "B.LEAGUE公式プロフィール／岐阜スゥープス公式契約発表",
+        "official_profile": "https://www.bleague.jp/roster_detail/?PlayerID=51000162",
+        "official_image": "https://www.bleague.jp/files/user/roster/1363/2026-27/51000162_03.png",
+        "appearance_verified": "公式プロフィール写真を実際に表示し、短い黒い巻き毛、濃いひげと口ひげ、鼻・眉・目・顔の輪郭、体格、両腕のタトゥーを確認。生成画像でもこれらの特徴を確認。",
+        "depiction": "無地のユニフォームでドリブルするイラスト。本人の名前・背番号・成績・出場・活躍は画像内に記載しない。ロゴ・スポンサー・公式写真の貼付なし。",
+        "context": "固定原稿では負傷者として言及されるため、当日の出場や実際の試合場面を示さない抽象背景のイメージとして描写。「イラスト（AI生成）」「イメージ」を表示。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION\nUse case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape approximately 16:9, requested 1600x900 pixels, at least 1000 pixels wide. A wholly new hand-drawn image for バスケまとめ.\nStyle: approved reference observed in the conversation, B-culver-black-lime-v3.png: dark charcoal #151A18 background, acid lime #CCF43B dry-brush strokes, ivory heavyweight Japanese gothic typography, expressive ink outlines and crosshatching, sparse high-impact editorial composition. Do not copy any player identity, name, date, score or pose from that style reference. No photography or photorealism.\nSubject: draw exactly one real basketball player, Erik McCree (エリック・マクリー), based on the official B.LEAGUE profile portrait observed in this conversation at https://www.bleague.jp/files/user/roster/1363/2026-27/51000162_03.png. His appearance: dark brown skin, broad athletic muscular build, short dense black tightly coiled afro with a softly uneven silhouette, thick full black beard rounded at the chin and connected moustache, broad nose, strong dark eyebrows, brown almond-shaped eyes, visible tattoo linework on both upper arms. Maintain his identifiable facial proportions in expressive drawn ink. Do not invent another player. The official photo is only an appearance reference; do not paste or reproduce photography, jersey graphics, sponsors, team crest, or league marks.\nPose: on the right 42 percent, a dynamic waist-to-knees three-quarter dribbling drive, torso leaning forward slightly, one hand naturally over a single orange basketball, the other arm bent naturally. Face large and readable, eyes looking toward left. Keep head, visible hands and ball fully in frame with safe margins. Anatomically coherent hands, arms, fingers. Plain unbranded ivory basketball uniform with black shadow panels, no letters, numbers, badges, sponsor text or team-specific marks. Abstract energetic lime brush sweep behind the player, no real arena, scoreboards, opponent or game-recreation cues. This is a conceptual basketball illustration, not an actual scene or an assertion that he played.\nLayout: clean and highly legible left 58 percent text with generous negative space, 5 percent safe outer margin. Small masthead at top. Date line, then huge headline in two stacked lines. Lower-left compact result area with clearly subordinate typography. Small bottom labels must remain clear.\nRender ONLY these exact Japanese text lines (do not print quote marks), verbatim, no additional text:\nバスケまとめ\n11/28\n第2戦を\n予測\n11/27 結果\n越谷 97-81 福岡\n横浜EX 94-68 岐阜\nイラスト（AI生成）\nイメージ\nUse ivory for most text and large lime for 予測. All scores are team results from 11/27, the 11/28 headline is explicitly a prediction. Do not turn prediction into certainty. Do not include the drawn player's name, any individual statistics, playing status, return from injury, or claims of his performance. The article does not confirm individual performances. The player was randomly selected from names in the frozen article and is only an image motif. Both イラスト（AI生成） and イメージ are mandatory visible labels.\nOutput one polished PNG-ready thumbnail. No logos, no official photos, no watermarks other than the requested text labels, no extra decorative information.\n\nONE ALLOWED REVISION\nUse case: precise-object-edit.\nEdit this existing basketball thumbnail with one narrowly targeted layout correction. Keep all typography, exact wording, scores, colors, dark charcoal/lime palette, ink illustration style and composition. Maintain the recognizable Erik McCree face, beard, short black coiled hair, tattoos, pose and unbranded uniform. Do not change or add text.\nCORRECTION: the top of his hair is cropped by the upper frame. Scale the entire player AND his basketball down together by approximately 12 percent, reposition slightly down and to the right as needed, keeping the full hair silhouette at least 45 pixels below the top edge; both hands and the entire basketball must also have at least 35 pixels safe margin from image edges. Reduce the height of the hair slightly to match the short coiled afro in the official portrait already observed, while keeping facial identity. Preserve the natural dribbling pose and anatomically coherent hands. Extend only the abstract dark background and lime brush behind the smaller figure. Text should stay at the original positions and stay fully readable. Do not recreate an actual game scene.\nEvery existing exact text line must remain:\nバスケまとめ\n11/28\n第2戦を\n予測\n11/27 結果\n越谷 97-81 福岡\n横浜EX 94-68 岐阜\nイラスト（AI生成）\nイメージ\nKeep approximately 16:9 landscape, at least 1000px wide. One finished image only. No logos, no photographs, no player name or individual performance claim.",
+    "generator": "内蔵 image_gen.imagegen。初回生成1回＋修正1回（頭頂部の見切れを解消）。最終PNG 1672×941 px。API/CLI課金・画像の外部送信・公開なし。最終画像をview_imageで実見し、文字・数値・留保・容姿・手・余白・AI注記の5項目を確認。初回候補は不採用。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-27T23:21:04.257382+00:00",
+  "publication_approved": false
+}
