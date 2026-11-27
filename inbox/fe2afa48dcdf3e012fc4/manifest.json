@@ -1,0 +1,127 @@
+{
+  "id": "fe2afa48dcdf3e012fc4",
+  "article_path": "article-games-20261128.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261128.html",
+  "source_commit": "",
+  "source_blob_sha": "76185fa485167caa35bd7f12aa478c08c8c33ca1",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "208973ed1fb8010f40f2205137bd91f8ca47e1704c9e0e21fc925af47e07f7ef",
+  "last_observed_blob_sha": "76185fa485167caa35bd7f12aa478c08c8c33ca1",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe2afa48dcdf3e012fc4/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe2afa48dcdf3e012fc4/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-27T15:35:47.656805+00:00",
+  "creation_event_id": "321da21ea52ab0dc07ce",
+  "event_blob_sha": "76185fa485167caa35bd7f12aa478c08c8c33ca1",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/fe2afa48dcdf3e012fc4/thumbnail.png",
+  "image_sha256": "1df40549590da214e0be108da271c36041c7e1c534d8e4ae9631f899fbdc5e8f",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "76185fa485167caa35bd7f12aa478c08c8c33ca1",
+    "text_lines": [
+      "バスケまとめ",
+      "11/28",
+      "試合予定",
+      "B.ONE・B.NEXT",
+      "公式記録は確定待ち",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe2afa48dcdf3e012fc4/source.html",
+        "role": "本文の根拠・固定HTML",
+        "article_url": "https://basuke-matome.jp/article-games-20261128.html",
+        "verified_blob_sha": "76185fa485167caa35bd7f12aa478c08c8c33ca1"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/fe2afa48dcdf3e012fc4/source.txt",
+        "role": "本文の根拠・固定文章",
+        "content_basis": "2026-11-28のB.ONE・B.NEXT試合予定。全試合が試合前で、当日EFF・TOP3・最高の手札は公式記録確定待ち。本文に選手名なし。記事タイトルのベスト5を確定済みの成績として扱わず、試合予定と確定待ちを表示。資料取得は2026-11-28 00:34〜00:35 JST。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "承認済みスタイルのみ参照。view_imageで確認。人物・日付・成績は引き継がない。"
+      },
+      {
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "role": "画像生成・検品ルール。最新の本人指示による実在選手のランダム選出と、readyを実行しない制限を優先。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "塚本智裕",
+        "team": "福井ブローウィンズ",
+        "selection": "ランダム",
+        "selection_reason": "本文に選手名がなく、特定選手を主役に絞れないため。本文掲載26チームから福井を抽選し、その公式ロスター14人から抽選。",
+        "random_method": {
+          "algorithm": "Python random.Random(seed).choice",
+          "team_seed": "fe2afa48dcdf3e012fc4",
+          "team_pool": [
+            "福島",
+            "山形",
+            "静岡",
+            "福井",
+            "香川",
+            "奈良",
+            "福岡",
+            "越谷",
+            "岩手",
+            "青森",
+            "埼玉",
+            "東京U",
+            "立川",
+            "鹿児島",
+            "横浜EX",
+            "岐阜",
+            "徳島",
+            "新潟",
+            "熊本",
+            "愛媛",
+            "八王子",
+            "東京Z",
+            "三重",
+            "品川",
+            "山口",
+            "湘南"
+          ],
+          "player_seed": "fe2afa48dcdf3e012fc4:player",
+          "player_pool": [
+            "藤永佳昭",
+            "塚本智裕",
+            "岡本飛竜",
+            "ヒシグバータル・オーギル",
+            "内藤英真",
+            "西野曜",
+            "川島聖那",
+            "ドゥシャン・リスティッチ",
+            "チョンディー・ブラウン ジュニア",
+            "常田耕平",
+            "満田丈太郎",
+            "デヴィン・ウィリアムズ",
+            "田渡修人",
+            "高橋育実"
+          ]
+        },
+        "roster_url": "https://www.fukuiblowinds.com/team/roster/",
+        "profile_url": "https://www.fukuiblowinds.com/team/players/detail/id=51418?PlayerID=51000439",
+        "official_photo_url": "https://www.fukuiblowinds.com/v=1790296089/files/user/common/3_Tsukamoto_2026-27_HP.jpg",
+        "appearance_reference": "公式プロフィールの本人写真をダウンロードしview_imageで実見。中央付近で分けた黒髪、額の中央が見える前髪、ひげなし、若い卵形の輪郭、頬から顎の形、太めの眉、目鼻と唇を参照。生成画像でも顔の特徴を照合した。",
+        "reference_scope": "公式外部資料は現役所属と容姿の確認だけに使用。記事の内容・成績・予定の根拠は固定source.html/source.txtのみ。",
+        "illustration_scope": "ロゴ・番号・名前のないユニフォームのドリブル姿。特定試合の実場面の再現ではない。公式写真の貼付なし。画像に選手名、成績、出場、活躍の記載なし。注記はイラスト（AI生成）とイメージ。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION:\nUse case: ads-marketing\nAsset type: Japanese basketball editorial thumbnail, ONE finished PNG, landscape 16:9, preferably 1920x1080, width at least 1000 px.\nCreate a brand-new, striking hand-inked sports illustration for バスケまとめ. Match the approved black/lime reference previously viewed (B-culver-black-lime-v3.png) ONLY for bold typography, ink texture, restrained palette and editorial quality; do not copy its person, name, numbers, date or composition.\nArticle basis only: the fixed article dated 2026-11-28 lists upcoming B.ONE and B.NEXT games; all official results and player rankings are pending. No player is named in the article. The depicted player was randomly selected from the current official roster of Fukui, a team in the article. Do not imply that he appeared, scored, won, or was selected in any best five that day.\nSubject: exactly ONE real basketball player, Tomohiro Tsukamoto (塚本智裕), whose official Fukui profile portrait was viewed in this conversation. Use that portrait solely to guide facial likeness; redraw everything as a visibly hand-inked illustration, do not paste or replicate the photograph. He has straight black hair parted near the center, a rounded voluminous top and side-swept curtain fringe exposing a central strip of forehead, short sides; youthful clean-shaven oval face, slightly broad cheekbones tapering to a softly squared chin, straight thick dark brows, dark almond eyes, straight medium-width nose, defined upper lip and slightly fuller lower lip. Compact athletic Japanese adult point guard, lean strong shoulders and arms. Keep these individual features recognizable rather than a generic sports face.\nPose: dynamic three-quarter view, driving forward in a low right-handed dribble, torso leaning diagonally, face clearly visible and sufficiently large for recognition. One orange basketball under the right palm at hip/lower torso height, other arm naturally bent for balance; anatomically plausible hands, wrists and elbows. Figure on the LEFT 44% of the canvas, shown from head to upper thighs. Head, hands and ball entirely within the canvas. Fictional illustrative action, not a recreation of a particular game. No other people.\nUniform: entirely plain off-white and charcoal basketball jersey and shorts, with subtle lime edge accents. Absolutely no crest, sponsor, team logo, league logo, brand, jersey number or name. Basketball also unbranded.\nStyle: energetic hand-drawn editorial ink and dry brush, strong black contours, angular hatch marks, ivory highlights, charcoal shadows. Obviously illustrated, not photorealistic or photograph-like. Minimal abstract near-black background #151A18 with a few broad lime #CCF43B brush strokes and restrained ink splatter behind the figure. Main player rendering monochrome/ivory; only orange basketball and lime accents provide color. No actual arena, no scoreboard, no hoop, no trading cards.\nComposition: LEFT player, RIGHT 52% clean typography. Clear separation between face/hands and text. Confident mobile-readable layout with few elements, generous negative space, 60px or more safe margins. Top small publication title; enormous two-line headline, supporting league line and clear pending-status note. Do not add any text beyond the following verbatim lines:\n\"バスケまとめ\"\n\"11/28\"\n\"試合予定\"\n\"B.ONE・B.NEXT\"\n\"公式記録は確定待ち\"\n\"イラスト（AI生成）\"\n\"イメージ\"\nTypography: heavy Japanese gothic / slightly brush-textured bold. Large lime 11/28 on right, very large warm-white 試合予定 below it; B.ONE・B.NEXT smaller warm-white. 公式記録は確定待ち must be readable, not tiny, in a restrained lime-outline label below. Footer イラスト（AI生成） and イメージ must be clearly readable with proper Japanese glyphs and parentheses, high contrast, and no clipping. Do not include the player's name anywhere in the image.\nDeliver only one finished thumbnail, no variants, mockup frames or additional explanatory writing.\n\nONE PERMITTED CORRECTION:\nEdit the provided thumbnail with ONE narrowly targeted layout repair. Preserve the exact existing wording, spelling, palette, ink drawing style, player identity (Tomohiro Tsukamoto), dribbling pose, jersey without logos, basketball, and overall left-player/right-text arrangement.\nThe current player's hair at the top and his rightmost fingers on the left image edge are clipped. Redraw/recompose the PLAYER GROUP about 85% of its current size with slightly more space at the top and left: show his complete natural crown/hair, the entire dribbling hand and all fingers, the entire basketball, and the other hand, all with at least 40 pixels of black background around them. Complete any missing hair/finger anatomy plausibly. Keep the head prominent and face recognizable. Upper thighs may end naturally at the lower edge, but no head, hand or ball should touch or cross an edge. Use the vacated space as dark background and sparse lime brushwork, not a frame. Do not merely shrink an already cropped cutout; complete the formerly cropped parts.\nKeep all typography fully within the canvas; preserve exactly these seven strings, with no added words:\nバスケまとめ\n11/28\n試合予定\nB.ONE・B.NEXT\n公式記録は確定待ち\nイラスト（AI生成）\nイメージ\nKeep pending-status and AI/imagination labels clearly readable. No player name, no jersey numbers, no scores, no logos, no official photos. Do not change the wording or introduce a claim about the player's participation or performance. Maintain 16:9-ish landscape PNG and width >=1000px. One corrected image only.",
+    "generator": "OpenAI built-in image_gen.imagegen; initial generation + 1 layout correction; final PNG 1672x941; no API/CLI generation. Initial candidate had cropped crown/dribbling fingers; final image visually confirmed with complete head, both hands and basketball.",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-27T15:42:59.702060+00:00",
+  "publication_approved": false
+}

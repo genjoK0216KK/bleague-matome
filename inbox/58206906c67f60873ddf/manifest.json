@@ -1,0 +1,128 @@
+{
+  "id": "58206906c67f60873ddf",
+  "article_path": "article-results-one-next-20261127.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261127.html",
+  "source_commit": "",
+  "source_blob_sha": "79c4ae0189dee7258946036175cccfa9935ca929",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "75a1034246c428085d80754c7df8aaa0b03e2fbf216ae03d7574ba508d8dc4d5",
+  "last_observed_blob_sha": "79c4ae0189dee7258946036175cccfa9935ca929",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/58206906c67f60873ddf/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/58206906c67f60873ddf/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-27T15:35:48.291236+00:00",
+  "creation_event_id": "ca1910928aa16049f696",
+  "event_blob_sha": "79c4ae0189dee7258946036175cccfa9935ca929",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/58206906c67f60873ddf/thumbnail.png",
+  "image_sha256": "82b0eb06cf3215d7fc0fc2cf10bc295ea56d081efa40272a232e13a045a70f4d",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "79c4ae0189dee7258946036175cccfa9935ca929",
+    "text_lines": [
+      "バスケまとめ",
+      "B.ONE",
+      "11/27",
+      "試合結果",
+      "当日のEFF",
+      "ポジション別TOP3",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/58206906c67f60873ddf/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261127.html",
+        "use": "本文の根拠。題名・試合日・B.ONE・当日のEFF・ポジション別TOP3を確認。HTMLのblob SHAを保存直前にも照合。",
+        "source_blob_sha": "79c4ae0189dee7258946036175cccfa9935ca929"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/58206906c67f60873ddf/source.txt",
+        "use": "本文の根拠。記事は複数選手の比較で単独の主役なし。今季平均・予想との混同を避け、個人成績やカード点数は画像に掲載しない。"
+      },
+      {
+        "type": "official_appearance_reference",
+        "url": "https://yokohama-ex.jp/team/players/detail/id=22817?PlayerID=46082",
+        "image_url": "https://bleague.bl.kuroco-img.app/v=2026112800/files/user/roster/714/2026-27/46082_01.jpg",
+        "use": "容姿の参照に限定。公式プロフィール写真をダウンロードしてview_imageで目視確認。写真の貼付・転載や外部の成績情報の採用なし。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "use": "view_imageで確認した承認済み基本スタイル。黒#151A18・ライム#CCF43B・太字日本語・手描きインクとブラシ。氏名・成績は転用なし。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Documents/Codex/2026-10-25/claude-2026-10-25/outputs/basketball-thumbnails-20261025/A-faison-ivory-v3.png",
+        "use": "view_imageで確認。手順書指定フォルダでは欠落していたため、正本Notionに記載された旧作業フォルダの同名承認済み画像を参照。"
+      },
+      {
+        "type": "operations",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/OPERATIONS.txt",
+        "use": "画像生成・検品ルールを確認。主役・ランダム選出・表記・ready禁止は今回の本人指示を優先。"
+      },
+      {
+        "type": "project_context",
+        "url": "https://app.notion.com/p/3fea07aafd1281bba76cd2e781ec5953",
+        "use": "案件の役割・承認済みv3スタイルを確認。記事本文の根拠には使っていない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "シェイク・ケイタ",
+        "latin_name": "Cheick Keita",
+        "selection": "ランダム",
+        "selection_reason": "記事は複数の試合結果とポジション別の比較で、いちばん大きく扱われる選手を1人に絞れないため。本文に名前が出る選手を優先。",
+        "selection_method": "Python random.Random('58206906c67f60873ddf').choice(candidates)：作業IDをseedとする再現可能な疑似乱数抽選。",
+        "candidates": [
+          "池田 祐一",
+          "大橋 大空",
+          "アンソニー・クレモンズ",
+          "クーリバリ セリンムルタラ",
+          "トレイ・ボイド",
+          "大庭 岳輝",
+          "ジャック・クラーク",
+          "長谷川 比源",
+          "ザック・モーア",
+          "ブレイク・プレストン",
+          "ミッチェル・ライトフット",
+          "キャメロン・オリバー",
+          "ウィリアム・アルティノ",
+          "シェイク・ケイタ",
+          "デモンテ・フラニガン"
+        ],
+        "official_profile_url": "https://yokohama-ex.jp/team/players/detail/id=22817?PlayerID=46082",
+        "official_image_url": "https://bleague.bl.kuroco-img.app/v=2026112800/files/user/roster/714/2026-27/46082_01.jpg",
+        "appearance_observed": "短い黒いツイスト状の髪、幅広の黒ヘッドバンド、縦長の輪郭、幅のある鼻、厚めの唇、薄い口ひげと短い顎ひげ、濃い肌色、長く筋肉質の腕。",
+        "rendering": "ボールを両手で抱えて切り返す架空の動作。実在選手の容姿を参照したイラストであり、実際の試合場面の再現ではない。",
+        "image_text_policy": "選手名、個人成績、出場・活躍の断定は一切画像に入れていない。注記はイラスト（AI生成）とイメージ。",
+        "visually_compared": true
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate ONE finished Japanese basketball editorial thumbnail, wide 16:9 composition, target 1920x1080 or larger, opaque PNG.\n\nUse the approved black/lime thumbnail style already viewed in this conversation only as a visual style guide: near-black #151A18 ground, electric lime #CCF43B energetic broad dry-brush marks, warm off-white heavy Japanese sans-serif headlines, black ink and hand-painted brush illustration, restrained grain, very few elements. Do not transfer any player, number, name, score, or date from those style references.\n\nContent basis: the supplied fixed article is titled 11/27 試合結果・当日のEFF and covers B.ONE games and daily position-specific EFF TOP3. This is a general article thumbnail, NOT a particular player's performance feature.\n\nLayout: left 54% is crisp readable typography with generous spacing; right 46% is an expressive athletic illustration, waist-up to upper thighs, of the REAL player Cheick Keita (シェイク・ケイタ), chosen randomly from names in the article. Use the official portrait seen in this conversation as appearance reference only. His specific appearance: dark brown skin, broad plain black headband across forehead, short black twisted locks extending just above headband and at temples, long oval face with defined jaw, broad nose, full lips, dark focused eyes, very faint moustache and small short goatee below lower lip/chin, clean cheeks. Tall muscular shoulders and arms. Preserve these recognizable features; do not invent another athlete. The face should be clearly visible with readable contours and highlights, not lost in a black silhouette.\n\nPose: dynamic three-quarter front view, knees slightly flexed and torso turning in a strong pivot, holding one orange basketball securely at upper chest/shoulder level with BOTH anatomically correct hands. Two arms only, clear natural wrists and five fingers per hand, no duplicate hands. The ball and head must be completely inside the frame. A generic imagined basketball movement, no reenactment of an actual game moment. Plain dark emerald and black sleeveless basketball jersey over a black short-sleeve compression top, with subtle ivory edge accents; absolutely NO lettering, NO team/league/sponsor logos, NO numbers, NO marks on ball, NO opponent, NO photorealism, NO photo collage. Render everything as bold expressive hand-inked sports illustration with visible brush texture, matching the approved style.\n\nExact text to render, and ONLY this text:\nTop-left small: 「バスケまとめ」\nBelow small: 「B.ONE」\nLarge left headline, two stacked lines: 「11/27」 then 「試合結果」\nBelow in lime, prominent: 「当日のEFF」\nBelow smaller off-white: 「ポジション別TOP3」\nAlong the bottom-left with clear space and comfortable margin: 「イラスト（AI生成）」 and 「イメージ」\n\nDo not render the Japanese quote brackets. All text must be exact, fully readable and unclipped, Japanese characters correct. Maintain a 5% safety margin. Do not add a player's name, player stats, a game score, an achievement claim or a claim that this illustrates his actual appearance on the date. The AI label and イメージ must remain legible on a quiet dark area. High-impact, tasteful, spare composition with the lime brush stroke sweeping diagonally behind the athlete without touching the text.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "attempts": 1,
+      "corrections": 0,
+      "format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "output_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/58206906c67f60873ddf/generated.png",
+      "original_output_path": "/Users/genjo/.codex/generated_images/01a21dac-97a0-78b3-b3ca-bc465ff19b57/exec-40224637-8e46-48db-ba23-55703c351341.png",
+      "sha256": "82b0eb06cf3215d7fc0fc2cf10bc295ea56d081efa40272a232e13a045a70f4d",
+      "inspection": "内蔵生成結果の表示を実見し、保存元PNGもview_imageで確認。文字・日付・EFFの対象範囲・本人の容姿の特徴・2本の腕とボールを抱える手・顔とボールの見切れ・下部注記を確認。写真風表現、ロゴ、スポンサー文字なし。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-27T15:45:52.096322+00:00",
+  "publication_approved": false
+}
