@@ -1,0 +1,99 @@
+{
+  "id": "4ab7acfe944fb0c5049f",
+  "article_path": "article-daily-20261127.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261127.html",
+  "source_commit": "",
+  "source_blob_sha": "f3144c34ce5c9cc707f13913b32fce0dd8a6e41d",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "619fb04de5af1a7748272b94d6a27e898818148029715b8b5a40d6571e4ffc6b",
+  "last_observed_blob_sha": "f3144c34ce5c9cc707f13913b32fce0dd8a6e41d",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4ab7acfe944fb0c5049f/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4ab7acfe944fb0c5049f/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-27T03:16:35.080624+00:00",
+  "creation_event_id": "2bc3c6bbfa5ac489aa6d",
+  "event_blob_sha": "f3144c34ce5c9cc707f13913b32fce0dd8a6e41d",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/4ab7acfe944fb0c5049f/thumbnail.png",
+  "image_sha256": "abfcc9b2df995e0c5ab4b0eabd2d2ca51c4098876103a8bb3bd3c1902f31ce13",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "f3144c34ce5c9cc707f13913b32fce0dd8a6e41d",
+    "text_lines": [
+      "バスケまとめ",
+      "11/27 ONE",
+      "2試合を",
+      "予測",
+      "試合前予測",
+      "福岡 vs 越谷",
+      "横浜EX vs 岐阜",
+      "イラスト（AI生成） イメージ"
+    ],
+    "sources": [
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4ab7acfe944fb0c5049f/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261127.html",
+        "evidence": "11月27日開催の2試合（福岡対越谷、横浜EX対岐阜）を扱う試合前予測／独自分析。本文以外の外部ページから記事内容を追加していない。"
+      },
+      {
+        "role": "article_content_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/4ab7acfe944fb0c5049f/source.txt",
+        "evidence": "固定HTMLと同じ試合日・カード・試合前予測の留保を照合。成績・順位・負傷・出場可否は画像に記載していない。"
+      },
+      {
+        "role": "approved_style_only",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "evidence": "view_imageで目視確認。黒×ライム、太い日本語、インク・ブラシの表現のみを参照。名前・成績・対戦結果・ポーズは流用していない。"
+      }
+    ],
+    "person_reference": {
+      "name": "トレイ・ボイド（Tray Boyd III）",
+      "selection": "ランダム",
+      "selection_reason": "チームと複数選手の比較を扱う記事のため、本文の分析・予測に登場する6選手からPython random.SystemRandom().choiceで1名選出。",
+      "candidate_pool": [
+        "アンソニー・クレモンズ",
+        "キャメロン・オリバー",
+        "チェイス・フィーラー",
+        "トレイ・ボイド",
+        "ブレイク・プレストン",
+        "タイラー・ワイドマン"
+      ],
+      "official_profile": "https://yokohama-ex.jp/team/players/detail/id=21601?PlayerID=43445",
+      "official_league_profile": "https://www.bleague.jp/roster_detail/?PlayerID=43445",
+      "official_photo": "https://bleague.bl.kuroco-img.app/v=2026112517/files/user/roster/714/2026-27/43445_01.jpg",
+      "reference_inspection": "公式クラブプロフィールに掲載された公式写真をダウンロードしview_imageで実見。黒い幅広ヘッドバンド、側頭部から肩近くまでの編み髪、黒い口ひげとあごひげ、眉・目・幅のある鼻・輪郭を確認。",
+      "final_inspection": "最終画像を実見し、ヘッドバンド・編み髪・ひげ・目鼻と顔の輪郭を公式写真と照合。実在選手1名の手描きイラスト。人物名、個人成績、出場・活躍の文言なし。公式写真の貼付、ロゴ、スポンサー文字、ユニフォームの背番号なし。",
+      "scene_qualification": "抽象背景のドリブル姿。実際の試合場面を再現するものではなく、「イラスト（AI生成）」「イメージ」を表示。"
+    },
+    "prompt": "INITIAL GENERATION PROMPT:\nUse case: illustration-story.\nCreate ONE final PNG basketball editorial thumbnail, landscape 16:9, preferably 1792x1024 or 1920x1080 (at least 1000px wide). This is a new original image for Japanese site バスケまとめ.\n\nVISUAL DESIGN: Use the approved black-and-lime reference image viewed earlier ONLY as a style reference: very dark charcoal #151A18, vivid lime #CCF43B, off-white text, bold Japanese typography, expressive hand-drawn ink and dry-brush marks, minimal elements, excellent small-thumbnail readability. Do NOT copy its player, name, numbers, match result, or pose. Make the composition original: real player on the LEFT 42%, large typography on the RIGHT 55%. Keep adequate 5% safe margins around all typography, hands, head and ball. Text must not overlap the face or hands.\n\nPERSON: Draw only ONE real basketball player: Tray Boyd III / トレイ・ボイド, selected randomly among players named in the supplied manuscript. Use his viewed official Yokohama Excellence portrait strictly as a visual likeness reference, NOT as a pasted photograph. He has medium-brown skin, medium-length black individual braids hanging around temples and toward his shoulders, a broad plain black headband, full dark beard and moustache, broad nose, pronounced eyebrows, relaxed almond-shaped eyes, oval face with a strong jaw, and athletic guard build. Preserve those specific facial features and hair silhouette in strong, clearly hand-drawn ink illustration. Black-and-cream hatching with subtle warm skin tones is welcome. In a low dynamic dribbling stance, three-quarter front view, leaning forward with bent knees, face fully visible, his left hand controlling an orange basketball near hip/knee height; other arm naturally balanced. Show anatomically coherent hands, five fingers on each visible hand, no extra limbs. Plain dark sleeveless basketball top over a plain dark short-sleeve base layer and dark shorts, small green accents. NO team crest, no league logo, no sponsor text, no jersey lettering, no number, no player name. Do not add any other human silhouette. This is an imagined action illustration, not a depiction of any actual game or event; use an abstract brush background, no identifiable venue, opponent, crowd, rim, scoreboard or result.\n\nARTICLE GROUNDING: Content is only the frozen source.html/source.txt. It previews two games on November 27: 福岡対越谷 and 横浜EX対岐阜. It is a pregame forecast and independent analysis, not a game result. No standings, records, player performance or availability claims in this design. Do not add statistics or promise this randomly selected player's appearance or performance.\n\nVISIBLE TEXT: Render exactly these Japanese lines, no other text:\nSmall top-right masthead: 「バスケまとめ」\nTop-right kicker: 「11/27　ONE」\nDominant bold two-line headline: 「2試合を」 then 「予測」\nThe main headline can emphasize numeral 2 and 予測 in vivid lime; all other letters off-white. Keep all characters complete and readable.\nA compact clearly visible qualifier tag: 「試合前予測」\nTwo medium-size matchup lines below headline: 「福岡 vs 越谷」 and 「横浜EX vs 岐阜」\nFooter at bottom with strong contrast and sufficient size, not microscopic: 「イラスト（AI生成）　イメージ」\n\nQUALITY: Professional sports editorial artwork, bold ink and brush textures, handmade illustration rather than photorealism. No quotation marks around rendered text. No unrelated labels, no copied text from references, no personal name, no numeric stats, no official branding, no watermark besides requested AI label. ONE image only.\n\nONE ALLOWED CORRECTION PROMPT:\nEdit the supplied basketball thumbnail. Make ONE targeted composition correction: slightly reduce and reposition the illustrated player group on the left so his ENTIRE head and all braids have a clear dark/brush background margin of at least 4% canvas height above them. Do not crop any part of his hair at the upper edge. Keep both hands, all fingers, and the full basketball clearly visible. Cropping below the thighs is acceptable for this medium action framing. Preserve the same real Tray Boyd likeness, headband, braids, beard, face, hand anatomy, dynamic dribbling pose, black ink illustration, charcoal/lime palette, shirt without any logos/numbers/text, and original 1672x941 approximate 16:9 canvas. Do NOT alter the text or typography or matchups. All exact text must stay: バスケまとめ / 11/27　ONE / 2試合を / 予測 / 試合前予測 / 福岡 vs 越谷 / 横浜EX vs 岐阜 / イラスト（AI生成）　イメージ . No extra characters, player names, scores, logos, or photographic content. This is a random real-player imagined illustration for a pregame forecast, not a real game scene. Keep the text sharply legible with all characters intact. Generate only ONE corrected final PNG.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "correction_calls": 1,
+      "final_source": "/Users/genjo/.codex/generated_images/01a21b01-3b2d-73f1-aa95-0a9f687497ce/exec-db1ca7c0-8204-4926-8e3b-1ce46b024f54.png",
+      "output_format": "PNG",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "qa_evidence": {
+        "text_and_numbers": "最終画像の全表示文字を実見。11/27、2試合、両カードが固定原稿と一致。追加の成績・数値なし。",
+        "source_qualifiers": "「予測」「試合前予測」を明示し、試合結果や確定した勝敗に変えていない。出場未確認の選手を出場確定とする記述なし。",
+        "likeness_or_no_named_person": "ランダム選出した実在のトレイ・ボイドを公式写真と照合。髪・ヘッドバンド・ひげ・目鼻を確認。選手名・個人成績は表示なし。",
+        "layout": "修正後は頭髪が上端から離れ、顔・両手・ボール・全ての文字が画面内に収まっている。両手の指と腕のつながりに目立つ破綻なし。下肢のフレーム外へのトリミングは動作を示す構図の一部。黒×ライムで文字のコントラストを確認。",
+        "ai_label": "最終画像右下に「イラスト（AI生成） イメージ」が明瞭に表示されていることを実見。"
+      }
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-27T03:20:18.914841+00:00",
+  "publication_approved": false
+}
