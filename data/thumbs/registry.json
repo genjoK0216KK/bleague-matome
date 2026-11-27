@@ -112,6 +112,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "千葉ジェッツは直近5試合で4勝1敗 平均94.8点はリーグ最多、3Pで稼ぎ2Pで失う"
   },
+  "article-analysis-chibajets-20261127.html": {
+   "article_path": "article-analysis-chibajets-20261127.html",
+   "editorial_fingerprint": "c6f0b6f736aec6cefcfc5fd24b983338f20492d3aef3b5ddf7d79eb4e193a45d",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-analysis-chibajets-20261127-ec360f70ae69.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-chibajets-20261127-ec360f70ae69-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "efcbb8cef52ecd4dbf21",
+   "image_sha256": "ec360f70ae69aa561d3d43590e9874dc51da19793fa2cea70696c04c6f1b1454",
+   "imported_at": "2026-11-27T03:28:00.143161+00:00",
+   "prepared_at": "2026-11-27T03:27:16.283685+00:00",
+   "source_blob_sha": "0354002fdaa9f80a7bc56a2564bdcc75b52ba39b",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "c6f0b6f736aec6cefcfc5fd24b983338f20492d3aef3b5ddf7d79eb4e193a45d",
+   "style": "ink-lime-portrait-v5",
+   "title": "千葉ジェッツの直近5試合 4勝1敗を支えたのは3Pとフリースロー"
+  },
   "article-analysis-gunma-20261115.html": {
    "article_path": "article-analysis-gunma-20261115.html",
    "editorial_fingerprint": "ba9cb5e525de4748f9ea6bfd810d4e0ee5ba97786cffd01500d378f7b2029e61",
@@ -3644,13 +3672,6 @@
  "log": [
   {
    "article": "article-results-one-next-20261117.html",
-   "at": "2026-11-17T18:29:27.761188+00:00",
-   "by": "ca6cbcfdc7f7486e54e3",
-   "event": "superseded",
-   "id": "7a38c81e81aa20bf71ec"
-  },
-  {
-   "article": "article-results-one-next-20261117.html",
    "at": "2026-11-17T18:29:27.761198+00:00",
    "by": "ca6cbcfdc7f7486e54e3",
    "event": "superseded",
@@ -4201,6 +4222,13 @@
    "event": "imported",
    "id": "4ab7acfe944fb0c5049f",
    "image": "abfcc9b2df99"
+  },
+  {
+   "article": "article-analysis-chibajets-20261127.html",
+   "at": "2026-11-27T03:28:00.143187+00:00",
+   "event": "imported",
+   "id": "efcbb8cef52ecd4dbf21",
+   "image": "ec360f70ae69"
   }
  ],
  "seen": {
@@ -4445,6 +4473,7 @@
   "ee9fc0eaf9e0a69a8c68": "imported",
   "eec687d5a6f5449757d4": "superseded:e03043ccc84437ba6da0",
   "efb80209060e7b3d3a49": "imported",
+  "efcbb8cef52ecd4dbf21": "imported",
   "f17a38e3f83c904e6b04": "superseded:f92afc73ed838d9cdaa0",
   "f310e7a998e8a9bdf127": "imported",
   "f4370ce664d0aaa5d148": "imported",
