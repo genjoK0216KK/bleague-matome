@@ -1512,6 +1512,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "越谷アルファーズ、首位の勢いで福岡へ ONE11/27の2試合を予測"
   },
+  "article-daily-20261128.html": {
+   "article_path": "article-daily-20261128.html",
+   "editorial_fingerprint": "3c42575dbaed52cc3180843a53e3fc8045858227fe6c2170fbc5f3ec2ee22ae2",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-daily-20261128-9f536d54e8fb.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-daily-20261128-9f536d54e8fb-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "fe0c699219976443a0e3",
+   "image_sha256": "9f536d54e8fbf4f00f937759d1c5b5860c7eaebc1dd4b08bf15f35c8855c57b1",
+   "imported_at": "2026-11-27T23:21:44.509300+00:00",
+   "prepared_at": "2026-11-27T23:21:04.257382+00:00",
+   "source_blob_sha": "296db1e2d12b3afe52be37fb2bfc1c6e5ef7de1e",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "3c42575dbaed52cc3180843a53e3fc8045858227fe6c2170fbc5f3ec2ee22ae2",
+   "style": "ink-lime-portrait-v5",
+   "title": "越谷アルファーズが福岡に97-81、ONE11/28の第2戦を予測"
+  },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
    "editorial_fingerprint": "b5e6220532721d28e781f89d556b6166617d3a28c2ac872e494b77e30af79f0e",
@@ -3727,13 +3755,6 @@
  },
  "log": [
   {
-   "article": "article-results-one-next-20261118.html",
-   "at": "2026-11-18T14:45:25.064109+00:00",
-   "event": "imported",
-   "id": "d608175ea301e9836df4",
-   "image": "ed56e0e883ab"
-  },
-  {
    "article": "article-stats-20261118.html",
    "at": "2026-11-18T14:45:25.210985+00:00",
    "event": "imported",
@@ -4285,6 +4306,13 @@
    "event": "imported",
    "id": "22d24745a80124a82932",
    "image": "4d7ff83050b4"
+  },
+  {
+   "article": "article-daily-20261128.html",
+   "at": "2026-11-27T23:21:44.509326+00:00",
+   "event": "imported",
+   "id": "fe0c699219976443a0e3",
+   "image": "9f536d54e8fb"
   }
  ],
  "seen": {
@@ -4546,6 +4574,7 @@
   "fabda2ad7b1d2fb89f40": "imported",
   "fcf33c7c4f183753d4ec": "imported",
   "fd75d53bcb2937406abe": "imported",
+  "fe0c699219976443a0e3": "imported",
   "fe1ea3cd5a175ef3ddfa": "imported",
   "fe1f2384a1e2d550107e": "superseded:c3dac2b9caaaf4c62772",
   "fe2afa48dcdf3e012fc4": "imported",
