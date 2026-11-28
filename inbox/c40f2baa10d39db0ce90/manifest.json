@@ -1,0 +1,98 @@
+{
+  "id": "c40f2baa10d39db0ce90",
+  "article_path": "article-daily-20261128.html",
+  "article_url": "https://basuke-matome.jp/article-daily-20261128.html",
+  "source_commit": "",
+  "source_blob_sha": "b4a90f78d707126fb801d2675c7853fd0185f36f",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "80f72366413981e1002dd73da8b1d1ffc8bc5f23b4239a598c9eaa688d288297",
+  "last_observed_blob_sha": "b4a90f78d707126fb801d2675c7853fd0185f36f",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c40f2baa10d39db0ce90/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c40f2baa10d39db0ce90/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-28T10:22:40.160716+00:00",
+  "creation_event_id": "160cdcd030260bc5cf6f",
+  "event_blob_sha": "b4a90f78d707126fb801d2675c7853fd0185f36f",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/c40f2baa10d39db0ce90/thumbnail.png",
+  "image_sha256": "479d04110bbd6a72b1e6ff60b2232da805e3d57ba261bc367427808f49580352",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "b4a90f78d707126fb801d2675c7853fd0185f36f",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.28",
+      "越谷 2連勝",
+      "99-72 福岡",
+      "岐阜 今季",
+      "アウェー初勝利",
+      "79-70 横浜EX",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c40f2baa10d39db0ce90/source.html",
+        "article_url": "https://basuke-matome.jp/article-daily-20261128.html",
+        "role": "本文の根拠。固定HTMLのblob SHAを生成前後に確認。外部の記事本文は参照していない。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c40f2baa10d39db0ce90/source.txt",
+        "role": "見出し・日付・数値の根拠。越谷99対72福岡、2連勝。岐阜79対70横浜EX、今季アウェー初勝利。19時更新後の結果記事であり、予測として扱わない。"
+      },
+      {
+        "type": "approved_style",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "role": "view_imageで目視確認。黒#151A18・ライム#CCF43B、太い見出し、インク・ブラシ表現だけを参照。元の選手名・日付・成績は使用しない。白地参照A-faison-ivory-v3.pngは指定場所に存在せず、使用していない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "アンソニー・クレモンズ",
+        "english_name": "Anthony Clemmons",
+        "selection": "ランダム",
+        "selection_reason": "2試合のチーム結果・比較が主題で、本文の主役を1選手に絞れないため、本文に成績の記載がある8選手からPython random.SystemRandom().choiceで1名を抽選。",
+        "candidate_pool": [
+          "クレモンズ",
+          "フィーラー",
+          "アルティノ",
+          "アダムス",
+          "プレストン",
+          "髙木涼",
+          "ワイドマン",
+          "ボイド"
+        ],
+        "official_profile_url": "https://www.koshigaya-alphas.com/team/players/detail/id=47607?PlayerID=51000280",
+        "official_league_profile_url": "https://www.bleague.jp/roster_detail/?PlayerID=51000280",
+        "official_photo_url": "https://bleague.bl.kuroco-img.app/v=2026112717/files/user/roster/745/2026-27/51000280_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/c40f2baa10d39db0ce90/references/anthony-clemmons-official.jpg",
+        "reference_inspected": "公式プロフィールからリンクされた写真を取得しview_imageで目視確認。編み込みの髪、額・輪郭、眉・目鼻、口ひげと顎・頬のひげ、肩の体格を参照。",
+        "use_boundary": "写真は容姿確認だけ。完成画像へ公式写真・ロゴ・スポンサー文字を貼り付けていない。選手名・背番号・個人成績・出場や活躍を示す文字は入れず、ドライブ姿のイメージを描写。実際の試合場面の再現ではない。",
+        "visual_qa": "生成画像の編み込みの髪、輪郭、目鼻、密なひげを公式写真と比較して確認。"
+      }
+    ],
+    "prompt": "Use case: illustration-story\nAsset type: Japanese basketball news thumbnail, one finished PNG image, landscape 16:9, target 1792x1024 or 1920x1080, width at least 1000 pixels.\nPrimary request: Create one polished editorial thumbnail for バスケまとめ using the approved black-and-lime hand-inked visual style already viewed in this conversation. It summarizes TWO different games, not a matchup between Koshigaya and Gifu. All result text below comes exclusively from the supplied fixed manuscript.\n\nStyle reference: The viewed B-culver-black-lime-v3.png is a STYLE reference only: near-black #151A18, acid lime #CCF43B, off-white bold Japanese headline, confident hand-ink and dry brush marks, very few elements, strong legibility. Do not copy its player, pose, player name, date, stats, or score.\n\nSubject: Draw exactly ONE real person, Anthony Clemmons (アンソニー・クレモンズ), as an identifiable but clearly hand-drawn sports illustration. The official Koshigaya Alphas profile portrait viewed in this conversation is an APPEARANCE reference only, not a picture to paste. Observed appearance: dark brown skin; athletic muscular shoulders; narrow cornrow braids in symmetrical straight rows following the scalp, parted on top, closely trimmed sides; tall broad forehead; moderately elongated oval face with defined cheekbones; dark thick eyebrows and focused deep-set eyes; broad nose; full lips; neat dense black beard connected to moustache, fuller along chin and lower jaw. Preserve these concrete facial and hair features in the drawing, rather than inventing a generic player. Source appearance URL: https://bleague.bl.kuroco-img.app/v=2026112717/files/user/roster/745/2026-27/51000280_01.jpg\nWardrobe: generic off-white and near-black sleeveless basketball jersey and shorts, NO logos, NO sponsor text, NO team name, NO jersey number. Render his skin and form in expressive charcoal, warm gray, ivory ink shadows, not photorealism.\n\nComposition: about left 59% typography and right 41% powerful illustrated athlete. Athlete on right in a low, forward-driving basketball stance, torso tilted, bent knees, head seen clearly at a three-quarter angle and looking across the court, one hand controlling an orange basketball at hip level and the other bent naturally for balance. Show head, both hands and ball completely inside canvas; crop legs only below mid-thigh if useful. Anatomically plausible arms, hands, joints, and fingers. Gesture and diagonal lime brush strokes give motion; no real arena, opponent, crowd, hoop, or actual game scene. This is a conceptual illustration, NOT a reconstruction of either reported game. Keep text and athlete separate, no overlaps.\nBackground: near-black with restrained texture, sweeping lime dry-brush accent behind the player, ample negative space behind text.\n\nText: Render ONLY these exact Japanese/number lines, all fully visible with generous 5% safe margins.\nSmall masthead at top left:\n「バスケまとめ」\n「2026.11.28」\nFirst result block at upper/middle left:\n「越谷 2連勝」\n「99-72 福岡」\nSecond result block below it:\n「岐阜 今季」\n「アウェー初勝利」\n「79-70 横浜EX」\nFooter at bottom left, readable and well above canvas edge:\n「イラスト（AI生成）」\n「イメージ」\nTypography hierarchy: 越谷 2連勝 and アウェー初勝利 are very bold large off-white/lime Japanese gothic display type. Keep 岐阜 今季 adjacent directly above アウェー初勝利 so 今季 unambiguously qualifies the first away win. Scores as clear secondary lines below each corresponding headline. A spare lime brush underline can separate the two result blocks. Do not add any further headings, fine print, player name, player statistics, personal achievement, claims of participation, league name/logo or team logo. No copied official photograph, no photo texture, no gradients on type, no watermarks. Correct text is paramount.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generation_calls": 1,
+      "correction_calls": 0,
+      "output_format": "PNG",
+      "width": 1672,
+      "height": 941,
+      "sha256": "479d04110bbd6a72b1e6ff60b2232da805e3d57ba261bc367427808f49580352",
+      "qa_method": "内蔵画像生成の出力を実際に表示して目視検品。文字・スコア、今季の限定、公式写真に基づく顔の特徴、両手と指、文字や頭部・ボールの見切れがないこと、AI生成注記とイメージ表記を確認。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-28T10:25:34.169174+00:00",
+  "publication_approved": false
+}
