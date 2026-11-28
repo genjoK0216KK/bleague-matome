@@ -1542,31 +1542,31 @@
   },
   "article-daily-20261128.html": {
    "article_path": "article-daily-20261128.html",
-   "editorial_fingerprint": "3c42575dbaed52cc3180843a53e3fc8045858227fe6c2170fbc5f3ec2ee22ae2",
+   "editorial_fingerprint": "80f72366413981e1002dd73da8b1d1ffc8bc5f23b4239a598c9eaa688d288297",
    "files": {
     "eyecatch": {
      "height": 720,
-     "path": "thumbs/auto/article-daily-20261128-9f536d54e8fb.jpg",
+     "path": "thumbs/auto/article-daily-20261128-479d04110bbd.jpg",
      "width": 1280
     },
     "og": {
      "height": 630,
-     "path": "thumbs/auto/article-daily-20261128-9f536d54e8fb-og.jpg",
+     "path": "thumbs/auto/article-daily-20261128-479d04110bbd-og.jpg",
      "width": 1200
     }
    },
-   "id": "fe0c699219976443a0e3",
-   "image_sha256": "9f536d54e8fbf4f00f937759d1c5b5860c7eaebc1dd4b08bf15f35c8855c57b1",
-   "imported_at": "2026-11-27T23:21:44.509300+00:00",
-   "prepared_at": "2026-11-27T23:21:04.257382+00:00",
-   "source_blob_sha": "296db1e2d12b3afe52be37fb2bfc1c6e5ef7de1e",
+   "id": "c40f2baa10d39db0ce90",
+   "image_sha256": "479d04110bbd6a72b1e6ff60b2232da805e3d57ba261bc367427808f49580352",
+   "imported_at": "2026-11-28T10:26:14.189072+00:00",
+   "prepared_at": "2026-11-28T10:25:34.169174+00:00",
+   "source_blob_sha": "b4a90f78d707126fb801d2675c7853fd0185f36f",
    "source_size": [
     1672,
     941
    ],
-   "stable_fingerprint": "3c42575dbaed52cc3180843a53e3fc8045858227fe6c2170fbc5f3ec2ee22ae2",
+   "stable_fingerprint": "80f72366413981e1002dd73da8b1d1ffc8bc5f23b4239a598c9eaa688d288297",
    "style": "ink-lime-portrait-v5",
-   "title": "越谷アルファーズが福岡に97-81、ONE11/28の第2戦を予測"
+   "title": "越谷アルファーズが福岡に99-72で2連勝、岐阜は横浜EXに79-70で今季アウェー初勝利"
   },
   "article-games-20261025.html": {
    "article_path": "article-games-20261025.html",
@@ -3783,20 +3783,6 @@
  },
  "log": [
   {
-   "article": "article-results-one-next-20261120.html",
-   "at": "2026-11-19T20:51:41.866645+00:00",
-   "event": "imported",
-   "id": "7593bd60766ec1d9f791",
-   "image": "431cd89a9b39"
-  },
-  {
-   "article": "article-daily-20261120.html",
-   "at": "2026-11-19T23:18:20.460868+00:00",
-   "event": "imported",
-   "id": "5610585c712ced4f4449",
-   "image": "7340dc677bcc"
-  },
-  {
    "article": "article-analysis-kobe-20261120.html",
    "at": "2026-11-20T03:21:21.413318+00:00",
    "event": "imported",
@@ -4341,6 +4327,20 @@
    "event": "imported",
    "id": "a1a6fe196bfab08daddf",
    "image": "2f3517e7d61e"
+  },
+  {
+   "article": "article-daily-20261128.html",
+   "at": "2026-11-28T10:26:14.038480+00:00",
+   "by": "c40f2baa10d39db0ce90",
+   "event": "superseded",
+   "id": "fe0c699219976443a0e3"
+  },
+  {
+   "article": "article-daily-20261128.html",
+   "at": "2026-11-28T10:26:14.189097+00:00",
+   "event": "imported",
+   "id": "c40f2baa10d39db0ce90",
+   "image": "479d04110bbd"
   }
  ],
  "seen": {
@@ -4546,6 +4546,7 @@
   "c3151cd8b45c0d6d80ab": "superseded:556a6a0e14555b13288a",
   "c39e144583cffda92155": "superseded:a718e72ebd289b318965",
   "c3dac2b9caaaf4c62772": "imported",
+  "c40f2baa10d39db0ce90": "imported",
   "c422e01f21c312cd1a36": "imported",
   "c59cee10214af1d2a8c4": "superseded:f662c904491c9e820ed0",
   "c64f75eca95f7a1461d5": "superseded:9f757581f96bc573aa5f",
@@ -4605,7 +4606,7 @@
   "fabda2ad7b1d2fb89f40": "imported",
   "fcf33c7c4f183753d4ec": "imported",
   "fd75d53bcb2937406abe": "imported",
-  "fe0c699219976443a0e3": "imported",
+  "fe0c699219976443a0e3": "superseded:c40f2baa10d39db0ce90",
   "fe1ea3cd5a175ef3ddfa": "imported",
   "fe1f2384a1e2d550107e": "superseded:c3dac2b9caaaf4c62772",
   "fe2afa48dcdf3e012fc4": "superseded:1216191223b6a306d7be",
