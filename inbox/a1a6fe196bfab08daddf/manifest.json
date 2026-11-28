@@ -1,0 +1,87 @@
+{
+  "id": "a1a6fe196bfab08daddf",
+  "article_path": "article-results-one-next-20261128.html",
+  "article_url": "https://basuke-matome.jp/article-results-one-next-20261128.html",
+  "source_commit": "",
+  "source_blob_sha": "fe1584f19b000ebbb775af1e7e2148578cb1722a",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "aa14aefc32c8205c9a1245d48aa1b58b91f8b96bfaa583507208474fd1f12c4a",
+  "last_observed_blob_sha": "fe1584f19b000ebbb775af1e7e2148578cb1722a",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a1a6fe196bfab08daddf/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a1a6fe196bfab08daddf/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-28T10:11:01.836941+00:00",
+  "creation_event_id": "96ce26cd723b99e66a91",
+  "event_blob_sha": "fe1584f19b000ebbb775af1e7e2148578cb1722a",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/a1a6fe196bfab08daddf/thumbnail.png",
+  "image_sha256": "2f3517e7d61e1782bd7244f6d0bd92a3bf4dfab7df5ec56ceb4e596ef3e9c214",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "fe1584f19b000ebbb775af1e7e2148578cb1722a",
+    "text_lines": [
+      "バスケまとめ",
+      "B.ONE / B.NEXT",
+      "11/28",
+      "試合結果",
+      "19:05 JST時点｜一部記録未確定",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a1a6fe196bfab08daddf/source.html",
+        "article_url": "https://basuke-matome.jp/article-results-one-next-20261128.html",
+        "source_blob_sha": "fe1584f19b000ebbb775af1e7e2148578cb1722a",
+        "evidence": "見出し11/28 試合結果・当日のEFF。試合日2026.11.28。B.ONE・B.NEXTの試合結果は19:05 JST時点。八王子－東京Zは開始・公式記録未確定。B.ONEのEFFは全試合公式記録確定待ち、B.NEXTのEFFは公式ポジション未確認。未掲載のEFF順位や選手成績は画像に入れていない。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/a1a6fe196bfab08daddf/source.txt",
+        "evidence": "HTMLと同内容を確認。本文に選手名はなく、複数チームを同等に掲載。本文根拠はこのTXTと固定HTMLのみ。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "保坂晃毅",
+        "team": "熊本ヴォルターズ",
+        "selection": "ランダム",
+        "selection_reason": "本文に選手名・特定の主役がないため、本文に登場するチームの現役選手を選出。チーム26候補から熊本、公式名簿14候補から保坂晃毅を選んだ。",
+        "selection_method": {
+          "team_seed": "a1a6fe196bfab08daddf",
+          "player_seed": "a1a6fe196bfab08daddf:player",
+          "method": "Python random.Random(seed).choice; チームはsource.htmlのsc-team出現順の重複除去、選手は公式ロスターの背番号順。"
+        },
+        "official_roster": "https://www.volters.jp/team/players/",
+        "official_profile": "https://www.volters.jp/team/players/detail/id=16185?PlayerID=51000450",
+        "official_photo": "https://bleague.bl.kuroco-img.app/v=2026110819/files/user/roster/724/2026-27/51000450_01.jpg",
+        "reference_viewed": true,
+        "observed_features": "短い黒のウェーブ髪、中央寄りの分け目、短い側頭部、楕円の輪郭、丸みのある顎、直線寄りの眉、切れ長の目、まっすぐな鼻、ひげなし。公式写真をview_imageで確認し、修正時には本人の顔の参照として使用した。",
+        "depiction": "本人の容姿を参照した、両手でボールを持って切り込むイメージイラスト。試合の実場面や当日の出場・活躍の再現ではない。画像内に選手名・成績・背番号なし。公式写真の貼付、ロゴ、スポンサー文字なし。"
+      }
+    ],
+    "prompt": "INITIAL GENERATION PROMPT:\nCreate exactly one finished Japanese basketball editorial thumbnail, a new original hand-drawn illustration, landscape 16:9, 1536 x 864 pixels or larger at the same ratio. No additional variants.\n\nUse case: illustration-story / Japanese sports-news thumbnail.\nStyle: approved basketball-summary visual direction: near-black #151A18, electric lime #CCF43B, warm off-white. Bold Japanese sans-serif headline, energetic rough ink strokes, dry brush and small ink flecks, just a few strong elements. Clearly drawn illustration, not photorealistic, no photograph pasted into artwork.\nComposition: LEFT 44 percent contains one large real basketball player's dynamic three-quarter body driving forward to the left with knees bent, torso leaning, cradling an orange basketball at hip height with both hands as he moves. Face visible in front three-quarter view; both hands have natural distinct fingers correctly resting around the ball. Head, elbows, hands and the whole ball safely inside the canvas. Crop only lower legs if necessary. Broad lime brush arc behind the player. RIGHT 52 percent has calm dark negative space for text, with ample outer margins and no collisions. This is an imagined action pose, never a reconstruction of a specific real game.\n\nSubject identity: Koki Hosaka (保坂晃毅), the real Kumamoto Volters player, randomly selected from the current official roster of a team mentioned in the fixed article. Use his inspected official portrait as the visual likeness guide: young Japanese adult male, short dense wavy black hair, gently separated near center at the front with lifted volume on top and close short sides, visible ears; oval face with a slightly squared jaw and rounded chin; straight thick dark eyebrows, almond-shaped dark brown eyes, straight medium-length nose, closed medium-width lips, clean-shaven (no beard, no mustache), light-medium warm skin, athletic lean muscular shoulders and arms. Keep his recognizable face; do not substitute a generic or fictional player. The official portrait was checked at https://www.volters.jp/team/players/detail/id=16185?PlayerID=51000450 and its official image https://bleague.bl.kuroco-img.app/v=2026110819/files/user/roster/724/2026-27/51000450_01.jpg . These are identity references only.\nRender him with rich black/ivory ink hatching and restrained skin color; plain red basketball jersey and shorts with dark trim, no lettering, no number, no logos, no sponsor marks. The orange ball is a held prop. No other people.\n\nText: render ONLY the following strings, exactly and legibly:\n- small masthead at top right: 「バスケまとめ」\n- medium lime category below masthead: 「B.ONE / B.NEXT」\n- enormous bold lime date: 「11/28」\n- enormous off-white main title: 「試合結果」\n- smaller, clearly readable qualifier below headline: 「19:05 JST時点｜一部記録未確定」\n- footer in readable off-white with generous bottom margin: 「イラスト（AI生成）」 and 「イメージ」\nDo not include the Japanese quotation marks in rendered text. Use exact Japanese characters and half-width Latin letters/digits as above.\nThe main headline should be immediately readable when reduced to a small thumbnail. Keep footer and qualifier large enough to read at full size.\n\nFactual scope: the ONLY article evidence is the supplied fixed source.html and source.txt. Their title is 11/28 試合結果・当日のEFF, dated 2026-11-28. The source reports B.ONE and B.NEXT results as of 19:05 JST, one match's official record is still unconfirmed, EFF ranking is not yet published, and B.PREMIER has no game. No player is named in the article. Therefore do not add any player name, player statistics, appearance claim, achievement claim, scores, ranking, winning claim, EFF number, or assertion that all games are complete. The randomly chosen player's illustration is only an image and does not claim he played this day. Do not copy Culver or Faison names, dates, or results from the style reference. No team or league logo, no watermark, no photorealism. Preserve the required AI label.\n\nONE PERMITTED REVISION PROMPT:\nEdit the FIRST image, the generated basketball thumbnail, once. The SECOND image is an official photographic facial identity reference of real basketball player Koki Hosaka (保坂晃毅), and must be used only to guide his drawn likeness. Do not paste the photo or use any photo pixels in the finished artwork. Final output must remain one original hand-drawn ink illustration thumbnail at the same approximately 16:9 landscape dimensions, at least 1536 pixels wide.\n\nMake these targeted corrections while preserving the existing design, palette, player pose holding the basketball, exact text, and all factual limitations:\n1. Make the illustrated player's face and hair accurately resemble the second reference. His actual hair is SHORT and compact, wavy black with a small part near the center and neatly trimmed sides, not long or wildly curly. Shorten the top hair and remove flying long tufts. Match his actual oval face with slightly broad cheekbones, narrower straight eyebrows, almond eyes, moderate straight nose, closed medium-width lips, smooth clean-shaven face and rounded chin. Keep the face looking young and recognizable. Preserve the ink-and-brush illustration technique and active concentrated expression without exaggerating the facial anatomy.\n2. Keep his entire hair silhouette inside the canvas, with at least 4% vertical dark margin above his highest hair. Use consistent safe margins around the masthead and all other text as well: the rightmost text edge and topmost text edge must have at least 3% canvas space. Scale/reposition the existing player and text slightly if needed. Lower-body crop is acceptable; no clipping of head, hands, arms, or ball.\n\nEverything else stays: LEFT player wearing a plain red jersey with dark trim, no number, no name, no logos, no sponsor marks; orange basketball held naturally by both hands with five distinct fingers; near-black #151A18 background, lime #CCF43B brush arc, warm off-white ink lines. Strong legible typography on the RIGHT.\n\nPreserve ONLY these exact text strings, unchanged, with no quotation marks:\nバスケまとめ\nB.ONE / B.NEXT\n11/28\n試合結果\n19:05 JST時点｜一部記録未確定\nイラスト（AI生成）\nイメージ\n\nThe source is a fixed 2026-11-28 multi-game results article as of 19:05 JST with incomplete official records, and no named player. This is a randomly selected real player's imagined action pose, not an actual event recreation. No claim of his appearance/performance this day. No player names, scores, stats, ranks, or claims of all matches finished. No team or league logos, no sponsor text, no watermark. The SECOND image's jersey number 12 and logos MUST NOT appear. Do not change or remove the AI label or the partial-record qualifier. Do not add any text.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "initial_generations": 1,
+      "revisions": 1,
+      "selected": "revision_1",
+      "style_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+      "style_reference_viewed": true,
+      "unavailable_style_reference": "A-faison-ivory-v3.png was not present; approved black/lime reference used.",
+      "final_original_path": "/Users/genjo/.codex/generated_images/01a221a7-c1af-75e1-85cc-475aaedfe20c/exec-7a10e117-9063-46bd-afb8-598d5f6a8adf.png",
+      "qa_notes": "修正後の画像を実表示して確認。全7文字列、日付と19:05、未確定注記、公式写真に寄せた髪・輪郭・目鼻・ひげなし、両手とボールの形、頭部と文字の見切れなし、AI表記を目視確認。人物と文字の重なりなし。下半身は意図したトリミング。"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-28T10:21:17.396020+00:00",
+  "publication_approved": false
+}

@@ -1,0 +1,99 @@
+{
+  "id": "1216191223b6a306d7be",
+  "article_path": "article-games-20261128.html",
+  "article_url": "https://basuke-matome.jp/article-games-20261128.html",
+  "source_commit": "",
+  "source_blob_sha": "a62e81e38304658ae8a2067514069838f144642f",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "aa14aefc32c8205c9a1245d48aa1b58b91f8b96bfaa583507208474fd1f12c4a",
+  "last_observed_blob_sha": "a62e81e38304658ae8a2067514069838f144642f",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1216191223b6a306d7be/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1216191223b6a306d7be/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-28T10:11:01.344414+00:00",
+  "creation_event_id": "04a6973755c40094668b",
+  "event_blob_sha": "a62e81e38304658ae8a2067514069838f144642f",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/1216191223b6a306d7be/thumbnail.png",
+  "image_sha256": "fb59a5b40aaf6bf14ebdca1f1b730a3aa5cac204847691abff7d7ad0d00b2bee",
+  "width": 1672,
+  "height": 940,
+  "brief": {
+    "source_blob_sha": "a62e81e38304658ae8a2067514069838f144642f",
+    "text_lines": [
+      "バスケまとめ",
+      "2026.11.28",
+      "11/28",
+      "試合結果",
+      "B.ONE / B.NEXT",
+      "19:05時点｜一部記録未確定",
+      "イラスト（AI生成）",
+      "イメージ"
+    ],
+    "sources": [
+      {
+        "type": "fixed_article_html",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1216191223b6a306d7be/source.html",
+        "article_url": "https://basuke-matome.jp/article-games-20261128.html",
+        "usage": "本文の根拠。試合日2026-11-28、B.ONE・B.NEXTの結果、19:05 JST時点、八王子対東京Zの公式記録未確定を確認。EFF・TOP3・最高の手札の未確定部分は確定値として画像に載せていない。"
+      },
+      {
+        "type": "fixed_article_text",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1216191223b6a306d7be/source.txt",
+        "usage": "固定HTMLと照合した本文の根拠。記事本文に選手名なし。"
+      },
+      {
+        "type": "approved_style_reference",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "view_imageで目視確認。黒・ライム配色、太い日本語見出し、手描きインク表現のみ参照。元画像の名前・日付・成績は引き継がない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "ノア・ガーリー",
+        "english_name": "Noah Gurley",
+        "team": "岩手ビッグブルズ",
+        "selection": "ランダム",
+        "selection_reason": "固定原稿に選手名なし。本文の26チームからSystemRandomで岩手を抽選し、岩手公式選手一覧の13人からSystemRandomでノア・ガーリーを抽選。本文の主役や当日の出場・活躍を示す選出ではない。",
+        "selection_record": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1216191223b6a306d7be/selection.json",
+        "official_roster_url": "https://www.bigbulls.jp/team/players/",
+        "official_profile_url": "https://www.bigbulls.jp/team/players/detail/id=19645?PlayerID=51000534",
+        "official_photo_url": "https://bleague.bl.kuroco-img.app/v=2026111916/files/user/roster/709/2026-27/51000534_01.jpg",
+        "local_reference": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/1216191223b6a306d7be/person-reference-noah-gurley.jpg",
+        "appearance_observed": "公式プロフィール写真をview_imageで目視確認。非常に短い黒髪、高めの額、縦長の輪郭、濃い眉、はっきりした目、幅のある鼻、厚めの唇、口ひげとコンパクトなあごひげ、長い手足と肩の筋肉を参照。",
+        "current_status_check": "現行のクラブ公式選手一覧とプロフィールの2026-27所属情報を確認。外部資料は現役所属と容姿の根拠だけに使用し、記事内容・試合結果の根拠に使用していない。",
+        "depiction": "実在本人を参照したドリブル姿の手描きイラスト。実試合の再現ではない。名前・背番号・個人成績・出場・勝利・活躍を示す文字なし。チーム・リーグ・スポンサーのロゴなし。公式写真の貼付けなし。",
+        "visual_qa": "生成画像を目視し、短髪、輪郭、眉と目鼻、口ひげとあごひげの特徴を公式写真と照合。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nTask: Transform the supplied approved basketball-thumbnail design into ONE finished Japanese editorial thumbnail for a different article. The first reference is a STYLE / PALETTE reference only. Replace every old word, number and the old player. The second reference is an official profile photograph of the real professional basketball player Noah Gurley (ノア・ガーリー), used ONLY to guide his facial likeness. Redraw him entirely as a hand-inked illustration, never paste or reuse photographic pixels.\n\nCanvas: horizontal 16:9, ideally 1792 x 1024 or 1920 x 1080, at least 1000 pixels wide. Opaque background.\nStyle: approved high-contrast black #151A18 and vivid lime #CCF43B editorial sports poster. Off-white bold Japanese typography, rough hand-drawn ink contours, broad dry-brush marks, restrained flecks and hatch shading, very few elements. Powerful and readable at small thumbnail size. No photorealism, no 3D, no polished anime.\n\nComposition: fresh dynamic arrangement, not the reference's raised-arm shooting pose. On the RIGHT 46% of the canvas show one real player, Noah Gurley, in a low forward-driving basketball dribble stance, leaning diagonally forward, thighs and knees included if space permits, one hand naturally contacting the top of an orange basketball by his hip/upper thigh, the other arm bent naturally for balance. Keep both hands and the complete basketball visibly inside the canvas; no extra fingers or limbs. Three-quarter face angled toward camera enough to recognize the facial features. No other people. The left 54% is uncluttered headline space. A wide curved or diagonal lime brush stroke behind the player creates motion. The pose is a generic imagined basketball action, not a reconstruction of any actual game, decisive shot, result or appearance.\n\nLikeness from the official photo: dark brown skin, extremely short closely cropped black hair, clear high forehead, elongated oval face with defined angular jaw and high cheekbones, thick gently arched eyebrows, deep-set dark eyes, fairly broad straight nose, full lips, neat thin black mustache and a compact pointed black goatee on the chin, sparse hair on cheeks. Tall athletic muscular shoulders and long limbs. Keep his individual features. No headband, no long curls, no large full beard. Wear a simple off-white basketball jersey with dark edging and matching dark shorts. Jersey absolutely blank: no team/league/manufacturer/sponsor marks, no letters, no number.\n\nRender EXACTLY these text lines and no other text:\n「バスケまとめ」 — small at upper left\n「2026.11.28」 — small date under site name\n「11/28」 — giant lime headline\n「試合結果」 — huge bold off-white Japanese headline below date\n「B.ONE / B.NEXT」 — supporting line\n「19:05時点｜一部記録未確定」 — a clearly readable qualification directly beneath supporting line\n「イラスト（AI生成）」 — footer bottom left\n「イメージ」 — footer beside the AI label\n\nTypography: heavy clean Japanese Gothic, no missing or invented glyphs. The qualifier and AI disclosure must be sufficiently large and high contrast, never crowded, cropped or overlapped by the figure. Minimum safe margin 5% all around for text; player face, hands and ball must stay inside frame. The footer occupies its own calm dark strip.\n\nContent boundaries: This is a November 28 results roundup; fixed manuscript records an as-of time of 19:05 JST and some records remain unconfirmed. Noah Gurley was randomly chosen from a named team's current official roster and is only an illustration subject. DO NOT print his name or number, DO NOT imply he played, scored, won, or was a top performer that day. No scores, no personal statistics, no rankings. Never carry over Culver, 38, 80-71 or any other old reference content. No logos, no actual photos, no watermarks beyond the required AI disclosure. Generate only one image.",
+    "generator": {
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "generated_image_original": "/Users/genjo/.codex/generated_images/01a221a3-06f7-75f3-a268-7d2ff0017e8b/exec-41e975bb-7b92-41a9-933a-d74f7453c10c.png",
+      "generation_count": 1,
+      "correction_count": 0,
+      "qa_method": "生成画像を実際に表示して目視確認。全ての文字・数値、留保、顔の特徴、左右の手と指、ボール、見切れ、AI生成表記を点検。",
+      "qa_observations": {
+        "text_and_numbers": "2026.11.28、11/28、試合結果、B.ONE / B.NEXT、19:05時点、一部記録未確定を目視照合。不要な個人成績・得点・選手名なし。",
+        "source_qualifiers": "19:05時点と一部記録未確定が読み取れる。全試合・EFF集計の確定を示す表現なし。イメージ表記あり。",
+        "likeness_or_no_named_person": "実在のノア・ガーリー本人の公式資料を参照。短髪・顔の輪郭・眉・目鼻・口ひげとあごひげを確認。写真風ではない。",
+        "layout": "約16:9。大見出しと人物が重ならず、顔・両手・ボールが枠内。指の本数と接続に明白な破綻なし。下半身の意図的なフレームアウトは許容。ロゴなし。",
+        "ai_label": "下部のイラスト（AI生成）およびイメージを目視確認。"
+      },
+      "style_reference_note": "指定のB-culver-black-lime-v3.pngを目視し使用。A-faison-ivory-v3.pngは指定場所に存在しなかったため未使用。",
+      "width": 1672,
+      "height": 940,
+      "output_format": "PNG",
+      "output_sha256": "fb59a5b40aaf6bf14ebdca1f1b730a3aa5cac204847691abff7d7ad0d00b2bee"
+    },
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-28T10:16:11.616901+00:00",
+  "publication_approved": false
+}
