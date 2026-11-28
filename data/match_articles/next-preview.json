@@ -1,194 +1,14 @@
 {
-  "date": "2026-11-28",
+  "date": "2026-11-29",
   "games": [
     {
-      "game_id": "507395",
+      "game_id": "507410",
       "season": "2026-27",
       "competition": "B1",
-      "starts_at": "2026-11-28T13:40:00+09:00",
+      "starts_at": "2026-11-29T13:05:00+09:00",
       "ended": false,
       "fixed": false,
-      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507395",
-      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-      "status": "scheduled",
-      "players": [],
-      "home": "福島",
-      "home_full": "福島ファイヤーボンズ",
-      "home_id": "711",
-      "home_score": null,
-      "away": "山形",
-      "away_full": "山形ワイヴァンズ",
-      "away_id": "710",
-      "away_score": null
-    },
-    {
-      "game_id": "507405",
-      "season": "2026-27",
-      "competition": "B1",
-      "starts_at": "2026-11-28T14:05:00+09:00",
-      "ended": false,
-      "fixed": false,
-      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507405",
-      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-      "status": "scheduled",
-      "players": [],
-      "home": "静岡",
-      "home_full": "ベルテックス静岡",
-      "home_id": "1637",
-      "home_score": null,
-      "away": "福井",
-      "away_full": "福井ブローウィンズ",
-      "away_id": "2891",
-      "away_score": null
-    },
-    {
-      "game_id": "507411",
-      "season": "2026-27",
-      "competition": "B1",
-      "starts_at": "2026-11-28T14:05:00+09:00",
-      "ended": false,
-      "fixed": false,
-      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507411",
-      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-      "status": "scheduled",
-      "players": [],
-      "home": "香川",
-      "home_full": "香川ファイブアローズ",
-      "home_id": "722",
-      "home_score": null,
-      "away": "奈良",
-      "away_full": "バンビシャス奈良",
-      "away_id": "719",
-      "away_score": null
-    },
-    {
-      "game_id": "507414",
-      "season": "2026-27",
-      "competition": "B1",
-      "starts_at": "2026-11-28T14:05:00+09:00",
-      "ended": false,
-      "fixed": false,
-      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507414",
-      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-      "status": "scheduled",
-      "players": [],
-      "home": "福岡",
-      "home_full": "ライジングゼファー福岡",
-      "home_id": "753",
-      "home_score": null,
-      "away": "越谷",
-      "away_full": "越谷アルファーズ",
-      "away_id": "745",
-      "away_score": null
-    },
-    {
-      "game_id": "507937",
-      "season": "2026-27",
-      "competition": "BN",
-      "starts_at": "2026-11-28T14:05:00+09:00",
-      "ended": false,
-      "fixed": false,
-      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507937",
-      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE NEXT リーグ戦",
-      "status": "scheduled",
-      "players": [],
-      "home": "三重",
-      "home_full": "ヴィアティン三重",
-      "home_id": "2726",
-      "home_score": null,
-      "away": "品川",
-      "away_full": "しながわシティバスケットボールクラブ",
-      "away_id": "748",
-      "away_score": null
-    },
-    {
-      "game_id": "507393",
-      "season": "2026-27",
-      "competition": "B1",
-      "starts_at": "2026-11-28T15:05:00+09:00",
-      "ended": false,
-      "fixed": false,
-      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507393",
-      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-      "status": "scheduled",
-      "players": [],
-      "home": "岩手",
-      "home_full": "岩手ビッグブルズ",
-      "home_id": "709",
-      "home_score": null,
-      "away": "青森",
-      "away_full": "青森ワッツ",
-      "away_id": "708",
-      "away_score": null
-    },
-    {
-      "game_id": "507397",
-      "season": "2026-27",
-      "competition": "B1",
-      "starts_at": "2026-11-28T15:05:00+09:00",
-      "ended": false,
-      "fixed": false,
-      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507397",
-      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-      "status": "scheduled",
-      "players": [],
-      "home": "埼玉",
-      "home_full": "さいたまブロンコス",
-      "home_id": "744",
-      "home_score": null,
-      "away": "東京U",
-      "away_full": "東京ユナイテッドバスケットボールクラブ",
-      "away_id": "2725",
-      "away_score": null
-    },
-    {
-      "game_id": "507399",
-      "season": "2026-27",
-      "competition": "B1",
-      "starts_at": "2026-11-28T15:05:00+09:00",
-      "ended": false,
-      "fixed": false,
-      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507399",
-      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-      "status": "scheduled",
-      "players": [],
-      "home": "立川",
-      "home_full": "立川ダイス",
-      "home_id": "2727",
-      "home_score": null,
-      "away": "鹿児島",
-      "away_full": "鹿児島レブナイズ",
-      "away_id": "725",
-      "away_score": null
-    },
-    {
-      "game_id": "507404",
-      "season": "2026-27",
-      "competition": "B1",
-      "starts_at": "2026-11-28T15:05:00+09:00",
-      "ended": false,
-      "fixed": false,
-      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507404",
-      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
-      "status": "scheduled",
-      "players": [],
-      "home": "横浜EX",
-      "home_full": "横浜エクセレンス",
-      "home_id": "714",
-      "home_score": null,
-      "away": "岐阜",
-      "away_full": "岐阜スゥープス",
-      "away_id": "1363",
-      "away_score": null
-    },
-    {
-      "game_id": "507409",
-      "season": "2026-27",
-      "competition": "B1",
-      "starts_at": "2026-11-28T15:05:00+09:00",
-      "ended": false,
-      "fixed": false,
-      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507409",
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507410",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
       "status": "scheduled",
       "players": [],
@@ -202,13 +22,133 @@
       "away_score": null
     },
     {
-      "game_id": "507415",
+      "game_id": "507396",
       "season": "2026-27",
       "competition": "B1",
-      "starts_at": "2026-11-28T15:05:00+09:00",
+      "starts_at": "2026-11-29T13:35:00+09:00",
       "ended": false,
       "fixed": false,
-      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507415",
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507396",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "福島",
+      "home_full": "福島ファイヤーボンズ",
+      "home_id": "711",
+      "home_score": null,
+      "away": "山形",
+      "away_full": "山形ワイヴァンズ",
+      "away_id": "710",
+      "away_score": null
+    },
+    {
+      "game_id": "507394",
+      "season": "2026-27",
+      "competition": "B1",
+      "starts_at": "2026-11-29T14:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507394",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "岩手",
+      "home_full": "岩手ビッグブルズ",
+      "home_id": "709",
+      "home_score": null,
+      "away": "青森",
+      "away_full": "青森ワッツ",
+      "away_id": "708",
+      "away_score": null
+    },
+    {
+      "game_id": "507400",
+      "season": "2026-27",
+      "competition": "B1",
+      "starts_at": "2026-11-29T14:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507400",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "立川",
+      "home_full": "立川ダイス",
+      "home_id": "2727",
+      "home_score": null,
+      "away": "鹿児島",
+      "away_full": "鹿児島レブナイズ",
+      "away_id": "725",
+      "away_score": null
+    },
+    {
+      "game_id": "507402",
+      "season": "2026-27",
+      "competition": "B1",
+      "starts_at": "2026-11-29T14:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507402",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "八王子",
+      "home_full": "東京八王子ビートレインズ",
+      "home_id": "749",
+      "home_score": null,
+      "away": "東京Z",
+      "away_full": "アースフレンズ東京Z",
+      "away_id": "715",
+      "away_score": null
+    },
+    {
+      "game_id": "507406",
+      "season": "2026-27",
+      "competition": "B1",
+      "starts_at": "2026-11-29T14:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507406",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "静岡",
+      "home_full": "ベルテックス静岡",
+      "home_id": "1637",
+      "home_score": null,
+      "away": "福井",
+      "away_full": "福井ブローウィンズ",
+      "away_id": "2891",
+      "away_score": null
+    },
+    {
+      "game_id": "507412",
+      "season": "2026-27",
+      "competition": "B1",
+      "starts_at": "2026-11-29T14:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507412",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "香川",
+      "home_full": "香川ファイブアローズ",
+      "home_id": "722",
+      "home_score": null,
+      "away": "奈良",
+      "away_full": "バンビシャス奈良",
+      "away_id": "719",
+      "away_score": null
+    },
+    {
+      "game_id": "507416",
+      "season": "2026-27",
+      "competition": "B1",
+      "starts_at": "2026-11-29T14:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507416",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
       "status": "scheduled",
       "players": [],
@@ -222,13 +162,33 @@
       "away_score": null
     },
     {
-      "game_id": "507939",
+      "game_id": "507938",
       "season": "2026-27",
       "competition": "BN",
-      "starts_at": "2026-11-28T15:05:00+09:00",
+      "starts_at": "2026-11-29T14:05:00+09:00",
       "ended": false,
       "fixed": false,
-      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507939",
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507938",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE NEXT リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "三重",
+      "home_full": "ヴィアティン三重",
+      "home_id": "2726",
+      "home_score": null,
+      "away": "品川",
+      "away_full": "しながわシティバスケットボールクラブ",
+      "away_id": "748",
+      "away_score": null
+    },
+    {
+      "game_id": "507940",
+      "season": "2026-27",
+      "competition": "BN",
+      "starts_at": "2026-11-29T14:05:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507940",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE NEXT リーグ戦",
       "status": "scheduled",
       "players": [],
@@ -242,23 +202,43 @@
       "away_score": null
     },
     {
-      "game_id": "507401",
+      "game_id": "507398",
       "season": "2026-27",
       "competition": "B1",
-      "starts_at": "2026-11-28T17:05:00+09:00",
+      "starts_at": "2026-11-29T15:05:00+09:00",
       "ended": false,
       "fixed": false,
-      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507401",
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507398",
       "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
       "status": "scheduled",
       "players": [],
-      "home": "八王子",
-      "home_full": "東京八王子ビートレインズ",
-      "home_id": "749",
+      "home": "埼玉",
+      "home_full": "さいたまブロンコス",
+      "home_id": "744",
       "home_score": null,
-      "away": "東京Z",
-      "away_full": "アースフレンズ東京Z",
-      "away_id": "715",
+      "away": "東京U",
+      "away_full": "東京ユナイテッドバスケットボールクラブ",
+      "away_id": "2725",
+      "away_score": null
+    },
+    {
+      "game_id": "507407",
+      "season": "2026-27",
+      "competition": "B1",
+      "starts_at": "2026-11-29T17:35:00+09:00",
+      "ended": false,
+      "fixed": false,
+      "source": "https://www.bleague.jp/game_detail/?ScheduleKey=507407",
+      "convention": "りそなグループ B.LEAGUE 2026-27 B.LEAGUE ONE リーグ戦",
+      "status": "scheduled",
+      "players": [],
+      "home": "岡山",
+      "home_full": "トライフープ岡山",
+      "home_id": "1639",
+      "home_score": null,
+      "away": "FE名古屋",
+      "away_full": "ファイティングイーグルス名古屋",
+      "away_id": "717",
       "away_score": null
     }
   ],
@@ -268,13 +248,13 @@
     "BN": true
   },
   "errors": [],
-  "retrieved_at": "2026-11-28T12:58:14.440261+09:00",
+  "retrieved_at": "2026-11-28T19:06:14.523563+09:00",
   "search_days": 35,
   "offline": false,
   "other_dates": {
     "BP": "2026-12-04",
-    "B1": "2026-11-28",
-    "BN": "2026-11-28"
+    "B1": "2026-11-29",
+    "BN": "2026-11-29"
   },
   "lineups": {
     "B1": {
@@ -283,21 +263,21 @@
           [
             "PG",
             {
-              "player_id": "51000280",
-              "name": "アンソニー・クレモンズ",
-              "team": "越谷",
-              "team_id": "745",
+              "player_id": "33100",
+              "name": "レイナルド・ガルシア",
+              "team": "岡山",
+              "team_id": "1639",
               "season": "2026-27",
               "competition": "B1",
               "positions": [
                 "PG"
               ],
-              "position_source": "https://www.bleague.jp/club_detail/?TeamID=745",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=1639",
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "22.4",
-              "games": 19,
+              "average": "27.6",
+              "games": 16,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -306,21 +286,22 @@
           [
             "SG",
             {
-              "player_id": "43445",
-              "name": "トレイ・ボイド",
-              "team": "横浜EX",
-              "team_id": "714",
+              "player_id": "36799",
+              "name": "アンソニー・ゲインズ・ジュニア",
+              "team": "鹿児島",
+              "team_id": "725",
               "season": "2026-27",
               "competition": "B1",
               "positions": [
-                "SG"
+                "SG",
+                "SF"
               ],
-              "position_source": "https://www.bleague.jp/club_detail/?TeamID=714",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=725",
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "27.3",
-              "games": 18,
+              "average": "22.1",
+              "games": 14,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -365,7 +346,7 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "27.1",
+              "average": "27.0",
               "games": 10,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
@@ -401,21 +382,21 @@
           [
             "PG",
             {
-              "player_id": "5100000006",
-              "name": "池田 祐一",
-              "team": "越谷",
-              "team_id": "745",
+              "player_id": "51000444",
+              "name": "山本 愛哉",
+              "team": "静岡",
+              "team_id": "1637",
               "season": "2026-27",
               "competition": "B1",
               "positions": [
                 "PG"
               ],
-              "position_source": "https://www.bleague.jp/club_detail/?TeamID=745",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=1637",
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "16.0",
-              "games": 16,
+              "average": "14.8",
+              "games": 19,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -424,22 +405,22 @@
           [
             "SG",
             {
-              "player_id": "36799",
-              "name": "アンソニー・ゲインズ・ジュニア",
-              "team": "鹿児島",
-              "team_id": "725",
+              "player_id": "10878",
+              "name": "保岡 龍斗",
+              "team": "FE名古屋",
+              "team_id": "717",
               "season": "2026-27",
               "competition": "B1",
               "positions": [
                 "SG",
                 "SF"
               ],
-              "position_source": "https://www.bleague.jp/club_detail/?TeamID=725",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=717",
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "22.1",
-              "games": 14,
+              "average": "14.9",
+              "games": 18,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -521,22 +502,16 @@
       ],
       "pool": [
         {
-          "player_id": "51000280",
-          "name": "アンソニー・クレモンズ",
-          "team": "越谷",
-          "average": "22.4"
-        },
-        {
-          "player_id": "5100000006",
-          "name": "池田 祐一",
-          "team": "越谷",
-          "average": "16.0"
+          "player_id": "33100",
+          "name": "レイナルド・ガルシア",
+          "team": "岡山",
+          "average": "27.6"
         },
         {
           "player_id": "51000444",
           "name": "山本 愛哉",
           "team": "静岡",
-          "average": "14.7"
+          "average": "14.8"
         },
         {
           "player_id": "5100000010",
@@ -593,12 +568,6 @@
           "average": "9.9"
         },
         {
-          "player_id": "51000448",
-          "name": "野溝 利一",
-          "team": "福岡",
-          "average": "9.6"
-        },
-        {
           "player_id": "51000097",
           "name": "阿部 龍星",
           "team": "山形",
@@ -614,12 +583,6 @@
           "player_id": "49593",
           "name": "小林 巧",
           "team": "香川",
-          "average": "8.5"
-        },
-        {
-          "player_id": "9246",
-          "name": "髙橋 幸大",
-          "team": "岐阜",
           "average": "8.4"
         },
         {
@@ -635,16 +598,16 @@
           "average": "8.1"
         },
         {
-          "player_id": "22403",
-          "name": "塚本 雄貴",
-          "team": "徳島",
-          "average": "8.1"
-        },
-        {
           "player_id": "46255",
           "name": "樋口 蒼生",
           "team": "山形",
           "average": "8.1"
+        },
+        {
+          "player_id": "22403",
+          "name": "塚本 雄貴",
+          "team": "徳島",
+          "average": "8.0"
         },
         {
           "player_id": "9218",
@@ -677,10 +640,10 @@
           "average": "7.1"
         },
         {
-          "player_id": "51000274",
-          "name": "大橋 大空",
-          "team": "横浜EX",
-          "average": "6.9"
+          "player_id": "51000443",
+          "name": "平松 克樹",
+          "team": "FE名古屋",
+          "average": "7.0"
         },
         {
           "player_id": "20000",
@@ -701,16 +664,10 @@
           "average": "6.3"
         },
         {
-          "player_id": "32953",
-          "name": "菅原 暉",
-          "team": "越谷",
-          "average": "6.2"
-        },
-        {
-          "player_id": "8462",
-          "name": "小林 遥太",
-          "team": "福岡",
-          "average": "6.1"
+          "player_id": "51000593",
+          "name": "月岡 熙",
+          "team": "FE名古屋",
+          "average": "5.9"
         },
         {
           "player_id": "51000110",
@@ -725,22 +682,10 @@
           "average": "5.7"
         },
         {
-          "player_id": "51000684",
-          "name": "タイガ・フォースター",
-          "team": "岐阜",
-          "average": "5.6"
-        },
-        {
           "player_id": "30347",
           "name": "笹倉 怜寿",
           "team": "熊本",
           "average": "5.5"
-        },
-        {
-          "player_id": "51000255",
-          "name": "杉山 裕介",
-          "team": "横浜EX",
-          "average": "5.4"
         },
         {
           "player_id": "10824",
@@ -752,7 +697,7 @@
           "player_id": "51000231",
           "name": "高橋 克実",
           "team": "香川",
-          "average": "4.8"
+          "average": "4.7"
         },
         {
           "player_id": "51000507",
@@ -767,10 +712,10 @@
           "average": "4.2"
         },
         {
-          "player_id": "51000663",
-          "name": "オドゲレル トルガ",
-          "team": "横浜EX",
-          "average": "4.0"
+          "player_id": "18167",
+          "name": "笠井 康平",
+          "team": "岡山",
+          "average": "3.8"
         },
         {
           "player_id": "26876",
@@ -806,19 +751,13 @@
           "player_id": "22393",
           "name": "吉田 健太郎",
           "team": "東京Z",
-          "average": "3.2"
+          "average": "3.3"
         },
         {
           "player_id": "12454",
           "name": "田渡 凌",
           "team": "愛媛",
           "average": "3.1"
-        },
-        {
-          "player_id": "36857",
-          "name": "古賀 森人",
-          "team": "横浜EX",
-          "average": "2.8"
         },
         {
           "player_id": "51000425",
@@ -845,12 +784,6 @@
           "average": "2.7"
         },
         {
-          "player_id": "39518",
-          "name": "山崎 玲緒",
-          "team": "岐阜",
-          "average": "2.6"
-        },
-        {
           "player_id": "40145",
           "name": "町井 丈太",
           "team": "立川",
@@ -863,12 +796,6 @@
           "average": "2.6"
         },
         {
-          "player_id": "51000559",
-          "name": "中谷 麻登",
-          "team": "福岡",
-          "average": "2.6"
-        },
-        {
           "player_id": "51000570",
           "name": "植田 碧羽",
           "team": "奈良",
@@ -878,7 +805,7 @@
           "player_id": "30395",
           "name": "濱田 貴流馬",
           "team": "新潟",
-          "average": "2.2"
+          "average": "2.3"
         },
         {
           "player_id": "30444",
@@ -902,7 +829,13 @@
           "player_id": "54142",
           "name": "河野 圭佑",
           "team": "徳島",
-          "average": "2.1"
+          "average": "2.0"
+        },
+        {
+          "player_id": "49611",
+          "name": "中村 瑞稀",
+          "team": "岡山",
+          "average": "1.9"
         },
         {
           "player_id": "18174",
@@ -923,15 +856,21 @@
           "average": "1.6"
         },
         {
-          "player_id": "51000375",
-          "name": "鍋田 隆征",
-          "team": "青森",
-          "average": "1.2"
+          "player_id": "15839",
+          "name": "秋山 熙",
+          "team": "岡山",
+          "average": "1.5"
         },
         {
           "player_id": "51000575",
           "name": "今野 海輝",
           "team": "静岡",
+          "average": "1.3"
+        },
+        {
+          "player_id": "51000375",
+          "name": "鍋田 隆征",
+          "team": "青森",
           "average": "1.2"
         },
         {
@@ -939,6 +878,18 @@
           "name": "関谷 間",
           "team": "静岡",
           "average": "1.2"
+        },
+        {
+          "player_id": "51000124",
+          "name": "宇都宮 陸",
+          "team": "FE名古屋",
+          "average": "1.1"
+        },
+        {
+          "player_id": "8517",
+          "name": "笹山 貴哉",
+          "team": "FE名古屋",
+          "average": "1.0"
         },
         {
           "player_id": "8645",
@@ -983,6 +934,12 @@
           "average": "0.3"
         },
         {
+          "player_id": "51000389",
+          "name": "平 寿哉",
+          "team": "FE名古屋",
+          "average": "0.2"
+        },
+        {
           "player_id": "51000687",
           "name": "黃 以喆",
           "team": "静岡",
@@ -1019,6 +976,12 @@
           "average": "-0.5"
         },
         {
+          "player_id": "51000483",
+          "name": "佐野 悠星",
+          "team": "岡山",
+          "average": "-0.6"
+        },
+        {
           "player_id": "51000613",
           "name": "高橋 昌也",
           "team": "青森",
@@ -1031,16 +994,16 @@
           "average": "-2.0"
         },
         {
-          "player_id": "43445",
-          "name": "トレイ・ボイド",
-          "team": "横浜EX",
-          "average": "27.3"
-        },
-        {
           "player_id": "36799",
           "name": "アンソニー・ゲインズ・ジュニア",
           "team": "鹿児島",
           "average": "22.1"
+        },
+        {
+          "player_id": "10878",
+          "name": "保岡 龍斗",
+          "team": "FE名古屋",
+          "average": "14.9"
         },
         {
           "player_id": "40138",
@@ -1061,12 +1024,6 @@
           "average": "9.5"
         },
         {
-          "player_id": "30401",
-          "name": "大庭 岳輝",
-          "team": "越谷",
-          "average": "8.8"
-        },
-        {
           "player_id": "51000388",
           "name": "岡部 雅大",
           "team": "青森",
@@ -1076,13 +1033,13 @@
           "player_id": "8577",
           "name": "長谷川 智伸",
           "team": "新潟",
-          "average": "8.3"
+          "average": "8.4"
         },
         {
           "player_id": "49517",
           "name": "オリバー・シュウ",
           "team": "徳島",
-          "average": "8.2"
+          "average": "8.3"
         },
         {
           "player_id": "51000275",
@@ -1091,22 +1048,10 @@
           "average": "8.0"
         },
         {
-          "player_id": "55000957",
-          "name": "クーリバリ セリンムルタラ",
-          "team": "横浜EX",
-          "average": "7.9"
-        },
-        {
           "player_id": "51000187",
           "name": "マシュー・ライト",
           "team": "埼玉",
           "average": "7.6"
-        },
-        {
-          "player_id": "52471",
-          "name": "髙木 涼",
-          "team": "岐阜",
-          "average": "7.0"
         },
         {
           "player_id": "30457",
@@ -1121,9 +1066,15 @@
           "average": "6.4"
         },
         {
-          "player_id": "51000588",
-          "name": "堀 陽稀",
-          "team": "越谷",
+          "player_id": "30512",
+          "name": "杉本 天昇",
+          "team": "FE名古屋",
+          "average": "5.9"
+        },
+        {
+          "player_id": "51000477",
+          "name": "坂口 竜也",
+          "team": "奈良",
           "average": "5.9"
         },
         {
@@ -1131,12 +1082,6 @@
           "name": "佐伯 崚介",
           "team": "岩手",
           "average": "5.9"
-        },
-        {
-          "player_id": "51000477",
-          "name": "坂口 竜也",
-          "team": "奈良",
-          "average": "5.8"
         },
         {
           "player_id": "51000362",
@@ -1163,15 +1108,15 @@
           "average": "5.3"
         },
         {
-          "player_id": "15841",
-          "name": "東 宏輝",
-          "team": "東京U",
-          "average": "5.0"
-        },
-        {
           "player_id": "51000138",
           "name": "松本 礼太",
           "team": "香川",
+          "average": "5.2"
+        },
+        {
+          "player_id": "15841",
+          "name": "東 宏輝",
+          "team": "東京U",
           "average": "5.0"
         },
         {
@@ -1229,12 +1174,6 @@
           "average": "3.6"
         },
         {
-          "player_id": "8488",
-          "name": "谷口 光貴",
-          "team": "福岡",
-          "average": "3.4"
-        },
-        {
           "player_id": "5100000044",
           "name": "遠藤 善",
           "team": "鹿児島",
@@ -1251,12 +1190,6 @@
           "name": "門馬 圭二郎",
           "team": "岩手",
           "average": "2.9"
-        },
-        {
-          "player_id": "8463",
-          "name": "狩野 祐介",
-          "team": "福岡",
-          "average": "2.8"
         },
         {
           "player_id": "9264",
@@ -1289,10 +1222,22 @@
           "average": "2.5"
         },
         {
+          "player_id": "51000549",
+          "name": "横山 悠人",
+          "team": "岡山",
+          "average": "2.5"
+        },
+        {
           "player_id": "51000251",
           "name": "米山 ジャバ 偉生",
           "team": "福島",
           "average": "2.3"
+        },
+        {
+          "player_id": "25275",
+          "name": "向井 祐介",
+          "team": "岡山",
+          "average": "2.2"
         },
         {
           "player_id": "51000122",
@@ -1319,12 +1264,6 @@
           "average": "1.9"
         },
         {
-          "player_id": "51000548",
-          "name": "福島 ハリス慈音ウチェ",
-          "team": "東京Z",
-          "average": "1.9"
-        },
-        {
           "player_id": "15824",
           "name": "新川 敬大",
           "team": "福島",
@@ -1337,16 +1276,10 @@
           "average": "1.8"
         },
         {
-          "player_id": "8595",
-          "name": "加藤 寿一",
-          "team": "福岡",
-          "average": "1.7"
-        },
-        {
-          "player_id": "51000664",
-          "name": "アロン・レーガン",
-          "team": "横浜EX",
-          "average": "1.5"
+          "player_id": "51000548",
+          "name": "福島 ハリス慈音ウチェ",
+          "team": "東京Z",
+          "average": "1.8"
         },
         {
           "player_id": "40142",
@@ -1385,9 +1318,21 @@
           "average": "0.6"
         },
         {
+          "player_id": "51000592",
+          "name": "針間 大知",
+          "team": "FE名古屋",
+          "average": "0.5"
+        },
+        {
           "player_id": "10844",
           "name": "満田 丈太郎",
           "team": "福井",
+          "average": "0.1"
+        },
+        {
+          "player_id": "51000167",
+          "name": "鍵冨 太雅",
+          "team": "FE名古屋",
           "average": "0.1"
         },
         {
@@ -1409,10 +1354,10 @@
           "average": "-0.3"
         },
         {
-          "player_id": "15835",
-          "name": "卜部 兼慎",
-          "team": "岐阜",
-          "average": "-0.8"
+          "player_id": "54143",
+          "name": "内山 晴輝",
+          "team": "岡山",
+          "average": "-0.6"
         },
         {
           "player_id": "51000720",
@@ -1451,12 +1396,6 @@
           "average": "19.9"
         },
         {
-          "player_id": "51000723",
-          "name": "ジャック・クラーク",
-          "team": "福岡",
-          "average": "19.0"
-        },
-        {
           "player_id": "5100000057",
           "name": "デビン・オリバー",
           "team": "新潟",
@@ -1473,6 +1412,12 @@
           "name": "シャキール・ハインズ",
           "team": "愛媛",
           "average": "17.7"
+        },
+        {
+          "player_id": "51000500",
+          "name": "フランシス・ロペス",
+          "team": "FE名古屋",
+          "average": "17.6"
         },
         {
           "player_id": "51000508",
@@ -1502,13 +1447,7 @@
           "player_id": "51000619",
           "name": "ジョーダン・スキッパーブラウン",
           "team": "香川",
-          "average": "15.6"
-        },
-        {
-          "player_id": "10834",
-          "name": "アンドリュー・ランダル",
-          "team": "静岡",
-          "average": "14.9"
+          "average": "15.7"
         },
         {
           "player_id": "5100000007",
@@ -1532,7 +1471,7 @@
           "player_id": "20018",
           "name": "増田 啓介",
           "team": "静岡",
-          "average": "11.9"
+          "average": "11.8"
         },
         {
           "player_id": "51000630",
@@ -1547,22 +1486,10 @@
           "average": "11.2"
         },
         {
-          "player_id": "51000452",
-          "name": "長谷川 比源",
-          "team": "横浜EX",
-          "average": "11.0"
-        },
-        {
           "player_id": "51000673",
           "name": "ジョシュ・マッセイ",
           "team": "山形",
           "average": "11.0"
-        },
-        {
-          "player_id": "5100000063",
-          "name": "ザック・モーア",
-          "team": "横浜EX",
-          "average": "9.2"
         },
         {
           "player_id": "51000525",
@@ -1571,22 +1498,10 @@
           "average": "9.1"
         },
         {
-          "player_id": "8510",
-          "name": "西川 貴之",
-          "team": "福岡",
-          "average": "9.0"
-        },
-        {
-          "player_id": "51000211",
-          "name": "ルーズベルト・アダムス",
-          "team": "福岡",
-          "average": "7.0"
-        },
-        {
-          "player_id": "51000716",
-          "name": "デモンテ・フラニガン",
-          "team": "岐阜",
-          "average": "6.8"
+          "player_id": "12613",
+          "name": "フォファナ ママドゥ",
+          "team": "岡山",
+          "average": "7.1"
         },
         {
           "player_id": "10880",
@@ -1610,7 +1525,7 @@
           "player_id": "30468",
           "name": "西野 曜",
           "team": "福井",
-          "average": "5.6"
+          "average": "5.7"
         },
         {
           "player_id": "22491",
@@ -1643,22 +1558,22 @@
           "average": "4.5"
         },
         {
+          "player_id": "51000598",
+          "name": "J.J・オブライエン",
+          "team": "FE名古屋",
+          "average": "4.5"
+        },
+        {
           "player_id": "15816",
           "name": "林 翔太郎",
           "team": "静岡",
           "average": "3.4"
         },
         {
-          "player_id": "8657",
-          "name": "喜多川 修平",
-          "team": "越谷",
-          "average": "3.4"
-        },
-        {
-          "player_id": "32978",
-          "name": "大矢 孝太朗",
-          "team": "岐阜",
-          "average": "2.7"
+          "player_id": "25272",
+          "name": "若狭 功希",
+          "team": "岡山",
+          "average": "2.8"
         },
         {
           "player_id": "51000364",
@@ -1715,22 +1630,10 @@
           "average": "0.8"
         },
         {
-          "player_id": "10842",
-          "name": "三ツ井 利也",
-          "team": "越谷",
-          "average": "0.6"
-        },
-        {
           "player_id": "51000609",
           "name": "君座 武志",
           "team": "静岡",
           "average": "0.6"
-        },
-        {
-          "player_id": "8840",
-          "name": "寒竹 隼人",
-          "team": "福岡",
-          "average": "0.5"
         },
         {
           "player_id": "37809",
@@ -1769,16 +1672,10 @@
           "average": "-0.8"
         },
         {
-          "player_id": "9220",
-          "name": "田村 晋",
-          "team": "越谷",
-          "average": "-2.0"
-        },
-        {
           "player_id": "27051",
           "name": "ユージーン・フェルプス",
           "team": "奈良",
-          "average": "27.1"
+          "average": "27.0"
         },
         {
           "player_id": "12648",
@@ -1802,7 +1699,7 @@
           "player_id": "51000272",
           "name": "ラポラス・アイヴァナーカス",
           "team": "徳島",
-          "average": "23.7"
+          "average": "23.6"
         },
         {
           "player_id": "51000615",
@@ -1811,16 +1708,10 @@
           "average": "23.5"
         },
         {
-          "player_id": "46901",
-          "name": "ブレイク・プレストン",
-          "team": "岐阜",
-          "average": "23.0"
-        },
-        {
-          "player_id": "51000690",
-          "name": "キャメロン・オリバー",
-          "team": "福岡",
-          "average": "22.9"
+          "player_id": "12631",
+          "name": "ジョシュ・スコット",
+          "team": "岡山",
+          "average": "22.6"
         },
         {
           "player_id": "51000432",
@@ -1833,6 +1724,12 @@
           "name": "ブラントン・チャットフィールド",
           "team": "東京Z",
           "average": "22.5"
+        },
+        {
+          "player_id": "51000617",
+          "name": "トレス・ティンクル",
+          "team": "FE名古屋",
+          "average": "22.1"
         },
         {
           "player_id": "51000100",
@@ -1853,10 +1750,10 @@
           "average": "21.7"
         },
         {
-          "player_id": "5100000079",
-          "name": "チェイス・フィーラー",
-          "team": "越谷",
-          "average": "21.4"
+          "player_id": "51000319",
+          "name": "キャメロン・ジャクソン",
+          "team": "岡山",
+          "average": "20.4"
         },
         {
           "player_id": "51000537",
@@ -1874,7 +1771,7 @@
           "player_id": "49494",
           "name": "ジャンピエール・ムトンボ",
           "team": "新潟",
-          "average": "19.6"
+          "average": "19.4"
         },
         {
           "player_id": "51000601",
@@ -1889,18 +1786,6 @@
           "average": "18.5"
         },
         {
-          "player_id": "51000644",
-          "name": "タイラー・ワイドマン",
-          "team": "岐阜",
-          "average": "18.1"
-        },
-        {
-          "player_id": "18442",
-          "name": "ベンジャミン・ローソン",
-          "team": "横浜EX",
-          "average": "17.9"
-        },
-        {
           "player_id": "42689",
           "name": "テイブリオン・ドーソン",
           "team": "徳島",
@@ -1911,12 +1796,6 @@
           "name": "イージェイ・モンゴメリー",
           "team": "青森",
           "average": "17.4"
-        },
-        {
-          "player_id": "51000426",
-          "name": "ミッチェル・ライトフット",
-          "team": "越谷",
-          "average": "16.1"
         },
         {
           "player_id": "51000668",
@@ -1961,16 +1840,10 @@
           "average": "11.8"
         },
         {
-          "player_id": "27048",
-          "name": "ダマ ムッサ",
-          "team": "越谷",
+          "player_id": "8522",
+          "name": "ソウ シェリフ",
+          "team": "岡山",
           "average": "11.5"
-        },
-        {
-          "player_id": "46074",
-          "name": "エライジャ・ウィリアムス",
-          "team": "横浜EX",
-          "average": "11.4"
         },
         {
           "player_id": "51000674",
@@ -2022,45 +1895,15 @@
         },
         {
           "player_id": "51000579",
-          "name": "ヒシグバータル・オーギル",
+          "name": "ヒシグバータル オーギル",
           "team": "福井",
           "average": "3.1"
-        },
-        {
-          "player_id": "30463",
-          "name": "ジャワラ ジョゼフ",
-          "team": "越谷",
-          "average": "2.3"
-        },
-        {
-          "player_id": "46082",
-          "name": "シェイク・ケイタ",
-          "team": "横浜EX",
-          "average": "2.3"
         },
         {
           "player_id": "9400",
           "name": "ファイ パプ月瑠",
           "team": "香川",
-          "average": "2.3"
-        },
-        {
-          "player_id": "8489",
-          "name": "鎌田 裕也",
-          "team": "越谷",
-          "average": "1.8"
-        },
-        {
-          "player_id": "47047",
-          "name": "ジョン ヒヒョン",
-          "team": "岐阜",
-          "average": "1.5"
-        },
-        {
-          "player_id": "20022",
-          "name": "髙橋 浩平",
-          "team": "岐阜",
-          "average": "1.2"
+          "average": "2.4"
         },
         {
           "player_id": "51000556",
@@ -2090,7 +1933,7 @@
           "player_id": "51000104",
           "name": "マシュー・アキノ",
           "team": "鹿児島",
-          "average": "0.3"
+          "average": "0.2"
         },
         {
           "player_id": "47100",
@@ -2099,16 +1942,16 @@
           "average": "0.1"
         },
         {
-          "player_id": "30470",
-          "name": "増本 優太",
-          "team": "岐阜",
-          "average": "-0.1"
-        },
-        {
           "player_id": "34423",
           "name": "島﨑 輝",
           "team": "埼玉",
           "average": "-0.1"
+        },
+        {
+          "player_id": "49518",
+          "name": "伊藤 治輝",
+          "team": "FE名古屋",
+          "average": "-0.4"
         },
         {
           "player_id": "30522",
@@ -2120,7 +1963,7 @@
           "player_id": "51000307",
           "name": "市川 真人",
           "team": "鹿児島",
-          "average": "-0.9"
+          "average": "-0.8"
         },
         {
           "player_id": "49519",
@@ -2156,7 +1999,7 @@
           "player_id": "50008",
           "name": "ジェイコブ・ポラコヴィッチ",
           "team": "岩手",
-          "average": "18.2"
+          "average": "18.3"
         },
         {
           "player_id": "8591",
@@ -2165,10 +2008,10 @@
           "average": "17.9"
         },
         {
-          "player_id": "51000691",
-          "name": "ウィリアム・アルティノ",
-          "team": "福岡",
-          "average": "17.0"
+          "player_id": "51000618",
+          "name": "マックス・フィードラー",
+          "team": "FE名古屋",
+          "average": "17.6"
         },
         {
           "player_id": "51000645",
@@ -2189,10 +2032,10 @@
           "average": "1.9"
         }
       ],
-      "retrieved_at": "2026-11-27T10:06:43.565173+00:00",
+      "retrieved_at": "2026-11-28T10:07:49.239305+00:00",
       "sources": [
-        "https://www.bleague.jp/club_detail/?TeamID=1363",
         "https://www.bleague.jp/club_detail/?TeamID=1637",
+        "https://www.bleague.jp/club_detail/?TeamID=1639",
         "https://www.bleague.jp/club_detail/?TeamID=2725",
         "https://www.bleague.jp/club_detail/?TeamID=2727",
         "https://www.bleague.jp/club_detail/?TeamID=2890",
@@ -2202,17 +2045,15 @@
         "https://www.bleague.jp/club_detail/?TeamID=709",
         "https://www.bleague.jp/club_detail/?TeamID=710",
         "https://www.bleague.jp/club_detail/?TeamID=711",
-        "https://www.bleague.jp/club_detail/?TeamID=714",
         "https://www.bleague.jp/club_detail/?TeamID=715",
+        "https://www.bleague.jp/club_detail/?TeamID=717",
         "https://www.bleague.jp/club_detail/?TeamID=719",
         "https://www.bleague.jp/club_detail/?TeamID=722",
         "https://www.bleague.jp/club_detail/?TeamID=723",
         "https://www.bleague.jp/club_detail/?TeamID=724",
         "https://www.bleague.jp/club_detail/?TeamID=725",
         "https://www.bleague.jp/club_detail/?TeamID=744",
-        "https://www.bleague.jp/club_detail/?TeamID=745",
         "https://www.bleague.jp/club_detail/?TeamID=749",
-        "https://www.bleague.jp/club_detail/?TeamID=753",
         "https://www.bleague.jp/news/injury.html",
         "https://www.bleague.jp/stats/?year=2026&tab=2&target=player-b2&value=EFFPG&o=desc&e=7&dt=avg"
       ]
@@ -2223,21 +2064,21 @@
           [
             "PG",
             {
-              "player_id": "50011",
-              "name": "新本 風河",
-              "team": "三重",
-              "team_id": "2726",
+              "player_id": "43471",
+              "name": "山根 響",
+              "team": "品川",
+              "team_id": "748",
               "season": "2026-27",
               "competition": "BN",
               "positions": [
                 "PG"
               ],
-              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=748",
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "8.2",
-              "games": 14,
+              "average": "9.2",
+              "games": 15,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -2246,20 +2087,20 @@
           [
             "SG",
             {
-              "player_id": "30441",
-              "name": "髙木 慎哉",
-              "team": "湘南",
-              "team_id": "2728",
+              "player_id": "8545",
+              "name": "山口 力也",
+              "team": "山口",
+              "team_id": "2487",
               "season": "2026-27",
               "competition": "BN",
               "positions": [
                 "SG"
               ],
-              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2728",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2487",
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "9.9",
+              "average": "9.1",
               "games": 14,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
@@ -2282,8 +2123,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "13.7",
-              "games": 14,
+              "average": "14.7",
+              "games": 15,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -2306,8 +2147,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "28.7",
-              "games": 14,
+              "average": "29.5",
+              "games": 15,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
               "rank": 1
@@ -2329,8 +2170,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "21.6",
-              "games": 14,
+              "average": "21.5",
+              "games": 15,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -2341,21 +2182,21 @@
           [
             "PG",
             {
-              "player_id": "43471",
-              "name": "山根 響",
-              "team": "品川",
-              "team_id": "748",
+              "player_id": "50011",
+              "name": "新本 風河",
+              "team": "三重",
+              "team_id": "2726",
               "season": "2026-27",
               "competition": "BN",
               "positions": [
                 "PG"
               ],
-              "position_source": "https://www.bleague.jp/club_detail/?TeamID=748",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2726",
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "8.1",
-              "games": 14,
+              "average": "8.6",
+              "games": 15,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -2364,21 +2205,21 @@
           [
             "SG",
             {
-              "player_id": "8545",
-              "name": "山口 力也",
-              "team": "山口",
-              "team_id": "2487",
+              "player_id": "30441",
+              "name": "髙木 慎哉",
+              "team": "湘南",
+              "team_id": "2728",
               "season": "2026-27",
               "competition": "BN",
               "positions": [
                 "SG"
               ],
-              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2487",
+              "position_source": "https://www.bleague.jp/club_detail/?TeamID=2728",
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "9.1",
-              "games": 14,
+              "average": "9.0",
+              "games": 15,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -2424,8 +2265,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "23.8",
-              "games": 14,
+              "average": "22.7",
+              "games": 15,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
               "rank": 2
@@ -2447,8 +2288,8 @@
               "availability": "unknown",
               "metric": "EFF",
               "aggregation": "average",
-              "average": "18.3",
-              "games": 14,
+              "average": "17.9",
+              "games": 15,
               "stats_source": "https://www.bleague.jp/stats/?year=2026&tab=3&target=player-b3&value=EFFPG&o=desc&e=15&dt=avg",
               "coverage_complete": true,
               "rank": 3
@@ -2458,80 +2299,80 @@
       ],
       "pool": [
         {
-          "player_id": "50011",
-          "name": "新本 風河",
-          "team": "三重",
-          "average": "8.2"
-        },
-        {
           "player_id": "43471",
           "name": "山根 響",
           "team": "品川",
-          "average": "8.1"
+          "average": "9.2"
         },
         {
-          "player_id": "5100000038",
-          "name": "板橋 真平",
-          "team": "山口",
-          "average": "7.3"
+          "player_id": "50011",
+          "name": "新本 風河",
+          "team": "三重",
+          "average": "8.6"
         },
         {
           "player_id": "5100000076",
           "name": "重冨 周希",
           "team": "湘南",
+          "average": "7.1"
+        },
+        {
+          "player_id": "5100000038",
+          "name": "板橋 真平",
+          "team": "山口",
           "average": "6.9"
         },
         {
           "player_id": "9234",
           "name": "伊藤 良太",
           "team": "湘南",
-          "average": "5.1"
+          "average": "5.6"
         },
         {
           "player_id": "45951",
           "name": "下田平 翔",
           "team": "山口",
-          "average": "4.8"
+          "average": "5.1"
         },
         {
           "player_id": "5100000008",
           "name": "東野 恒紀",
           "team": "品川",
-          "average": "4.4"
-        },
-        {
-          "player_id": "51000154",
-          "name": "井手 優希",
-          "team": "山口",
-          "average": "4.1"
-        },
-        {
-          "player_id": "43451",
-          "name": "田中 勇樹",
-          "team": "山口",
-          "average": "3.9"
+          "average": "4.9"
         },
         {
           "player_id": "45917",
           "name": "坂本 亮雅",
           "team": "湘南",
-          "average": "3.8"
+          "average": "4.0"
+        },
+        {
+          "player_id": "51000154",
+          "name": "井手 優希",
+          "team": "山口",
+          "average": "4.0"
+        },
+        {
+          "player_id": "43451",
+          "name": "田中 勇樹",
+          "team": "山口",
+          "average": "3.5"
         },
         {
           "player_id": "52466",
           "name": "下地 秀一郎",
           "team": "品川",
-          "average": "1.8"
-        },
-        {
-          "player_id": "34792",
-          "name": "中村 瀬那",
-          "team": "三重",
-          "average": "-0.5"
+          "average": "1.6"
         },
         {
           "player_id": "9269",
           "name": "高松 勇介",
+          "team": "三重",
+          "average": "-0.4"
+        },
+        {
+          "player_id": "34792",
+          "name": "中村 瀬那",
           "team": "三重",
           "average": "-0.5"
         },
@@ -2542,16 +2383,16 @@
           "average": "-0.9"
         },
         {
+          "player_id": "51000724",
+          "name": "佐藤 凰臥",
+          "team": "三重",
+          "average": "-2.0"
+        },
+        {
           "player_id": "51000621",
           "name": "福留 ウィリアム",
           "team": "湘南",
           "average": "-2.3"
-        },
-        {
-          "player_id": "30441",
-          "name": "髙木 慎哉",
-          "team": "湘南",
-          "average": "9.9"
         },
         {
           "player_id": "8545",
@@ -2560,28 +2401,34 @@
           "average": "9.1"
         },
         {
+          "player_id": "30441",
+          "name": "髙木 慎哉",
+          "team": "湘南",
+          "average": "9.0"
+        },
+        {
           "player_id": "51000121",
           "name": "石井 智大",
           "team": "湘南",
-          "average": "8.9"
+          "average": "8.1"
         },
         {
           "player_id": "51000380",
           "name": "神田 壮一郎",
           "team": "湘南",
-          "average": "6.6"
+          "average": "7.1"
         },
         {
           "player_id": "51000366",
           "name": "原田 大和",
           "team": "品川",
-          "average": "6.4"
+          "average": "6.9"
         },
         {
           "player_id": "51000177",
           "name": "榎田 拓真",
           "team": "山口",
-          "average": "4.1"
+          "average": "4.6"
         },
         {
           "player_id": "7482",
@@ -2593,37 +2440,37 @@
           "player_id": "40163",
           "name": "佐脇 考哉",
           "team": "三重",
-          "average": "3.0"
+          "average": "3.2"
         },
         {
           "player_id": "36420",
           "name": "野原 暉央",
           "team": "品川",
-          "average": "2.4"
+          "average": "2.0"
         },
         {
           "player_id": "26932",
           "name": "田中 翔大",
           "team": "山口",
-          "average": "2.0"
-        },
-        {
-          "player_id": "10892",
-          "name": "中野 広大",
-          "team": "湘南",
-          "average": "1.6"
+          "average": "1.9"
         },
         {
           "player_id": "50003",
           "name": "景井 武蔵",
           "team": "品川",
-          "average": "1.5"
+          "average": "1.8"
+        },
+        {
+          "player_id": "10892",
+          "name": "中野 広大",
+          "team": "湘南",
+          "average": "1.1"
         },
         {
           "player_id": "45881",
           "name": "アディリ クエルバン",
           "team": "品川",
-          "average": "0.9"
+          "average": "0.5"
         },
         {
           "player_id": "50005",
@@ -2641,7 +2488,7 @@
           "player_id": "50010",
           "name": "ジョーダン・ジャイルズ",
           "team": "品川",
-          "average": "13.7"
+          "average": "14.7"
         },
         {
           "player_id": "51000712",
@@ -2653,19 +2500,19 @@
           "player_id": "8648",
           "name": "落合 知也",
           "team": "品川",
-          "average": "7.2"
+          "average": "6.8"
         },
         {
           "player_id": "16023",
           "name": "中嶋 正尭",
           "team": "三重",
-          "average": "2.6"
+          "average": "3.9"
         },
         {
           "player_id": "43466",
           "name": "関野 日久",
           "team": "品川",
-          "average": "0.4"
+          "average": "0.3"
         },
         {
           "player_id": "50002",
@@ -2677,13 +2524,13 @@
           "player_id": "46904",
           "name": "サム・ティミンズ",
           "team": "品川",
-          "average": "28.7"
+          "average": "29.5"
         },
         {
           "player_id": "51000676",
           "name": "ジャマル・ポップラー",
           "team": "三重",
-          "average": "23.8"
+          "average": "22.7"
         },
         {
           "player_id": "49710",
@@ -2695,25 +2542,25 @@
           "player_id": "51000651",
           "name": "ベルナルド・ダ・シルバ",
           "team": "山口",
-          "average": "17.9"
+          "average": "18.0"
         },
         {
           "player_id": "51000677",
           "name": "ジェイコブ・コナー",
           "team": "三重",
-          "average": "15.0"
+          "average": "15.6"
         },
         {
           "player_id": "46907",
           "name": "ライアン・ローガン",
           "team": "湘南",
-          "average": "12.9"
+          "average": "12.5"
         },
         {
           "player_id": "54146",
           "name": "ジェヴォニー・スコット",
           "team": "三重",
-          "average": "11.5"
+          "average": "11.3"
         },
         {
           "player_id": "51000650",
@@ -2725,34 +2572,34 @@
           "player_id": "51000652",
           "name": "ヘイデン・ディークハンス",
           "team": "山口",
-          "average": "5.3"
+          "average": "7.2"
         },
         {
           "player_id": "40168",
           "name": "河井 竜",
           "team": "三重",
-          "average": "4.1"
+          "average": "3.9"
         },
         {
           "player_id": "43437",
           "name": "ハイデン・コヴァル",
           "team": "湘南",
-          "average": "21.6"
+          "average": "21.5"
         },
         {
           "player_id": "51000649",
           "name": "マイク・エドワーズ",
           "team": "山口",
-          "average": "18.3"
+          "average": "17.9"
         },
         {
           "player_id": "51000711",
           "name": "ジャック・アンドリュー",
           "team": "湘南",
-          "average": "13.6"
+          "average": "12.6"
         }
       ],
-      "retrieved_at": "2026-11-27T10:10:25.987653+00:00",
+      "retrieved_at": "2026-11-28T10:10:32.284324+00:00",
       "sources": [
         "https://www.bleague.jp/club_detail/?TeamID=2487",
         "https://www.bleague.jp/club_detail/?TeamID=2726",
