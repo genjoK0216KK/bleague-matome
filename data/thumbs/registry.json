@@ -28,6 +28,34 @@
    "style": "ink-lime-portrait-v5",
    "title": "秋田ノーザンハピネッツ 直近5試合は0勝5敗 得点は4位でも失点が26位"
   },
+  "article-analysis-altiri-20261128.html": {
+   "article_path": "article-analysis-altiri-20261128.html",
+   "editorial_fingerprint": "1a47e62c0dbc0b10e74efb16af598e40b332f5bd0f53c81563e9e918bf299f26",
+   "files": {
+    "eyecatch": {
+     "height": 720,
+     "path": "thumbs/auto/article-analysis-altiri-20261128-3545a06edb56.jpg",
+     "width": 1280
+    },
+    "og": {
+     "height": 630,
+     "path": "thumbs/auto/article-analysis-altiri-20261128-3545a06edb56-og.jpg",
+     "width": 1200
+    }
+   },
+   "id": "edec578beebcea1ad3f2",
+   "image_sha256": "3545a06edb56495eac48f69b92a5f63294bc60a9c41904a127705843b7073c51",
+   "imported_at": "2026-11-28T03:20:14.855204+00:00",
+   "prepared_at": "2026-11-28T03:19:29.619334+00:00",
+   "source_blob_sha": "b4f42d8f832006fa6188ec86bf051ecb15257b2e",
+   "source_size": [
+    1672,
+    941
+   ],
+   "stable_fingerprint": "1a47e62c0dbc0b10e74efb16af598e40b332f5bd0f53c81563e9e918bf299f26",
+   "style": "ink-lime-portrait-v5",
+   "title": "アルティーリ千葉の直近5試合は2勝3敗 守りはリーグ上位、得点は26チーム中25位"
+  },
   "article-analysis-alvark-20261117.html": {
    "article_path": "article-analysis-alvark-20261117.html",
    "editorial_fingerprint": "dcdc8c8ec55764a4ae3103546cf7c213a139b1214f62d577780fad55f8f4b139",
@@ -3755,13 +3783,6 @@
  },
  "log": [
   {
-   "article": "article-stats-20261118.html",
-   "at": "2026-11-18T14:45:25.210985+00:00",
-   "event": "imported",
-   "id": "fe35e8e879067561251c",
-   "image": "7318823209d6"
-  },
-  {
    "article": "article-games-20261119.html",
    "at": "2026-11-18T20:49:16.052469+00:00",
    "event": "imported",
@@ -4313,6 +4334,13 @@
    "event": "imported",
    "id": "fe0c699219976443a0e3",
    "image": "9f536d54e8fb"
+  },
+  {
+   "article": "article-analysis-altiri-20261128.html",
+   "at": "2026-11-28T03:20:14.855237+00:00",
+   "event": "imported",
+   "id": "edec578beebcea1ad3f2",
+   "image": "3545a06edb56"
   }
  ],
  "seen": {
@@ -4559,6 +4587,7 @@
   "ec1f89cf4982bf75312d": "superseded:896bbeb35c2a1eb9d0e1",
   "ed508c08f31b0520f4c9": "imported",
   "ed5eafb2c5a54d0b60af": "superseded:9f2558d6277a776ef982",
+  "edec578beebcea1ad3f2": "imported",
   "ee9fc0eaf9e0a69a8c68": "imported",
   "eec687d5a6f5449757d4": "superseded:e03043ccc84437ba6da0",
   "efb80209060e7b3d3a49": "imported",
