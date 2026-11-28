@@ -1,0 +1,81 @@
+{
+  "id": "edec578beebcea1ad3f2",
+  "article_path": "article-analysis-altiri-20261128.html",
+  "article_url": "https://basuke-matome.jp/article-analysis-altiri-20261128.html",
+  "source_commit": "",
+  "source_blob_sha": "b4f42d8f832006fa6188ec86bf051ecb15257b2e",
+  "style": "ink-lime-portrait-v5",
+  "editorial_fingerprint": "1a47e62c0dbc0b10e74efb16af598e40b332f5bd0f53c81563e9e918bf299f26",
+  "last_observed_blob_sha": "b4f42d8f832006fa6188ec86bf051ecb15257b2e",
+  "source_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/edec578beebcea1ad3f2/source.html",
+  "text_file": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/edec578beebcea1ad3f2/source.txt",
+  "status": "ready_unpublished",
+  "created_at": "2026-11-28T03:17:07.429525+00:00",
+  "creation_event_id": "97cdf5f1beadfc374f08",
+  "event_blob_sha": "b4f42d8f832006fa6188ec86bf051ecb15257b2e",
+  "image_path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnail-automation/ready/edec578beebcea1ad3f2/thumbnail.png",
+  "image_sha256": "3545a06edb56495eac48f69b92a5f63294bc60a9c41904a127705843b7073c51",
+  "width": 1672,
+  "height": 941,
+  "brief": {
+    "source_blob_sha": "b4f42d8f832006fa6188ec86bf051ecb15257b2e",
+    "text_lines": [
+      "バスケまとめ",
+      "アルティーリ千葉",
+      "直近5試合 2勝3敗",
+      "守りは上位",
+      "得点は25位",
+      "平均得点・26チーム中",
+      "対象：11/6〜11/16の5試合",
+      "各チーム直近5試合比較／相手の強さ・日程差は未調整",
+      "イラスト（AI生成）｜イメージ"
+    ],
+    "sources": [
+      {
+        "role": "本文の唯一の根拠（固定HTML）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/edec578beebcea1ad3f2/source.html",
+        "article_url": "https://basuke-matome.jp/article-analysis-altiri-20261128.html",
+        "verified_blob_sha": "b4f42d8f832006fa6188ec86bf051ecb15257b2e"
+      },
+      {
+        "role": "本文の唯一の根拠（固定文章）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/work/basketball-thumbnail-automation/requests/edec578beebcea1ad3f2/source.txt",
+        "evidence": "チーム分析。対象は11/6〜11/16の直近5試合、2勝3敗。平均得点75.8点は26チーム中25位。守備は上位。順位は各チームの直近5試合比較で、対戦相手の強さ・日程差は未調整。"
+      },
+      {
+        "role": "容姿確認のみ。記事の内容・数値の根拠には使用しない",
+        "url": "https://altiri.jp/club/roster-coaches/2_dj-newbill",
+        "image_url": "https://altiri.bl.kuroco-img.app/v=1788860835/files/user/images/player/26-27/2_dj-newbill.jpg"
+      },
+      {
+        "role": "承認済みスタイル参照（目視確認済み）",
+        "path": "/Users/genjo/Library/Application Support/basuke-thumb-hook/automation/outputs/basketball-thumbnails-20261025/B-culver-black-lime-v3.png",
+        "usage": "黒#151A18×ライム#CCF43B、太い日本語見出し、手描きインク・ブラシ。参照の選手・名前・成績は転用しない。"
+      }
+    ],
+    "person_reference": [
+      {
+        "name": "D.J・ニュービル",
+        "selection": "ランダム",
+        "selection_method": "チームが主役の記事のため、本文に名前が出る2選手（デレク・パードン／D.J・ニュービル）から Python random.SystemRandom().choice で1名を抽選。結果はD.J・ニュービル。",
+        "reference_source": "アルティーリ千葉公式プロフィール",
+        "reference_url": "https://altiri.jp/club/roster-coaches/2_dj-newbill",
+        "reference_image_url": "https://altiri.bl.kuroco-img.app/v=1788860835/files/user/images/player/26-27/2_dj-newbill.jpg",
+        "appearance_checked": "公式写真をダウンロードしてview_imageで目視。短く刈った黒髪、広い額、太い眉、目鼻・口元、口ひげとつながった濃いあごひげ、がっしりした肩と腕を確認。生成画像でもこれらの特徴を照合。",
+        "depiction": "右側にロゴ・番号・文字なしの濃紺ユニフォームでドリブル姿のインク画を1名。公式写真の貼り付けなし。想像上のプレー姿で実際の試合の再現ではない。",
+        "qualifiers": "選手名・個人成績・出場・活躍の記述なし。本文の負傷や欠場を否定する表現なし。表示される数値はチーム成績。注記は「イラスト（AI生成）｜イメージ」。"
+      }
+    ],
+    "prompt": "Use case: illustration-story.\nCreate exactly ONE finished Japanese basketball editorial thumbnail, landscape 16:9, preferably 1600x900 (at least 1000 pixels wide). This is a NEW illustration for バスケまとめ.\n\nSTYLE: match the already inspected approved black/lime thumbnail: nearly black #151A18 background, vivid lime #CCF43B broad dry-brush diagonal strokes and sparse splatters, warm off-white thick Japanese gothic headline typography. Strong handmade ink illustration, black/ivory/lime screenprint shading. Few elements, clean hierarchy, readable on mobile. Orange only on the basketball. No photo-realism, no pasted photographs.\n\nSUBJECT: exactly one REAL player, D.J. Newbill, in an energetic low dribbling stance, three-quarter view with head turned enough toward viewer to recognize face, torso leaning forward and ball under his right hand, left arm naturally bent. Depict from head to mid-thigh, positioned on the RIGHT 40% of the canvas. Ensure complete head, visible hands and basketball fit inside canvas. This is an imagined basketball pose, NOT a reconstruction of any actual game, and not a claim of fitness or participation.\nLikeness based on official Altiri Chiba portrait visually checked at https://altiri.bl.kuroco-img.app/v=1788860835/files/user/images/player/26-27/2_dj-newbill.jpg : close-cropped very short black hair, low rounded hairline, broad forehead, strong brows, slightly hooded dark eyes, broad nose, full lips, dense full short black beard connected to moustache with rounded squared jaw contour, broad sturdy shoulders, muscular arms, light ink indication of arm tattoos. Preserve these distinctive features as DRAWN black and ivory ink shapes. Do NOT use the person from the approved style reference. Plain dark navy-black sleeveless basketball jersey, no logos, no sponsor marks, no names, no numbers; plain shorts. Do not show any other people.\n\nLAYOUT: reserve LEFT 58% for text. Top-left a small site name, below it medium team name and a slim record line; center-left extremely bold two-line headline. Main numerals 25 can be dramatically larger. Headline is about the TEAM, never about the random pictured individual. Keep bottom 15% a clean dark footer spanning full width with two lines of qualifiers and one AI label. Right figure must not cover any text. 50px minimum safe margins on all sides.\n\nTEXT: render ONLY these exact Japanese strings, with clean correct glyphs:\nsmall top-left: 「バスケまとめ」\nteam title: 「アルティーリ千葉」\nrecord line: 「直近5試合 2勝3敗」\nlarge main headline line 1, ivory: 「守りは上位」\nlarge main headline line 2, lime emphasis: 「得点は25位」\nsmaller directly below headline: 「平均得点・26チーム中」\nfooter qualifier line 1: 「対象：11/6〜11/16の5試合」\nfooter qualifier line 2: 「各チーム直近5試合比較／相手の強さ・日程差は未調整」\nbottom label: 「イラスト（AI生成）｜イメージ」\n\nCONTENT BASIS: only the supplied fixed article source.html/source.txt. The article states Altiri Chiba went 2 wins / 3 losses over the five games Nov 6 to Nov 16; team defense ranks high, mean points rank 25 of 26. Comparisons use each team's latest five games, with no opponent-strength or schedule adjustment. These are team numbers, not individual numbers. Do not add any Newbill name, individual record, injury claim, appearance claim, win scene, date of publication, or other statistic. Do not add team/league logos, watermarks, sponsor lettering, arena advertising, photographic textures, or arbitrary small text. Hands must be anatomically plausible, five fingers per hand where visible. Final image must be polished and legible.",
+    "generator": "内蔵 image_gen.imagegen。初回生成1回、修正0回。生成結果を目視検品後、指定先generated.pngにコピー。PNG 1672×941。",
+    "qa": {
+      "text_and_numbers": true,
+      "source_qualifiers": true,
+      "likeness_or_no_named_person": true,
+      "layout": true,
+      "ai_label": true
+    }
+  },
+  "prepared_at": "2026-11-28T03:19:29.619334+00:00",
+  "publication_approved": false
+}
